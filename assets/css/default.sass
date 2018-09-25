@@ -1,0 +1,357 @@
+---
+# DEFAULT
+---
+
+@charset "utf-8"
+@import reset
+
+//-----------------------------------------------------------------------------
+
+//  Base font size, line-height, max width
+$fs: 100% !default
+$lh: (25 / 16) !default
+$mw: 30em !default
+
+// Colors
+$body-color:    #D9D9D9 !default
+$text-color:    #000 !default
+
+$mix-color:     mix($body-color, $text-color, 50%) !default
+$light-mix:     lighten($mix-color, 33%) !default
+$dark-mix:      darken($mix-color, 33%) !default
+
+$logo-color:    #F03 !default
+
+$link-color:    #0000FF !default
+$visited-color: #800080 !default
+$active-color:  #F03 !default
+
+// Fonts
+$serif: Georgia, Cambria, 'Century Schoolbook L', serif
+$sans:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
+
+//-----------------------------------------------------------------------------
+
+// Mixin to adjust margins based on page line-height
+@function mm($size: 1, $context: $lh)
+  @return ($size * $context) * 1em
+
+//-----------------------------------------------------------------------------
+
+html
+  box-sizing: border-box
+
+*, *:before, *:after
+  box-sizing: inherit
+
+@-ms-viewport
+  width: device-width
+
+body
+  font-family: $serif
+  font-size: $fs
+  line-height: $lh
+
+  background-color: $body-color
+  color: $text-color
+
+  text-rendering: optimizeSpeed
+  -ms-text-size-adjust: auto
+  -webkit-text-size-adjust: auto
+
+  padding: mm(1)
+
+ul, ol
+  margin-left: 1em
+
+ul
+  list-style-type: square
+
+a
+  text-decoration: none
+  text-decoration-skip: ink
+  &:link
+    color: $link-color
+  &:visited
+    color: $visited-color
+  &:hover
+    text-decoration: underline
+  &:active
+    color: $active-color
+
+header[role="banner"]
+  max-width: $mw
+  margin: 0 auto
+
+  .wrap
+    display: flex
+    flex-direction: row
+    align-items: center
+
+  .logo
+    position: relative
+    margin-right: 1em
+
+    svg
+      margin-left: -0.5em
+      height: mm(2.3)
+      width: mm(2.3)
+      fill: $logo-color
+      overflow: hidden
+
+    span
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      z-index: 1
+      background-image: url('../img/shim.gif')
+      background-color: transparent
+
+  hr
+    width: 100%
+
+main
+  max-width: $mw
+  margin: 0 auto
+
+  article
+    margin-top: mm(2)
+
+    h1
+      font-family: $sans
+      font-size: 150%
+      font-weight: 900
+      line-height: 1.2
+      overflow: hidden
+      a:link, a:visited
+        color: $text-color
+      a:hover
+        color: $link-color
+
+    figure
+      background-color: darken($body-color, 10%)
+      .player
+        position: relative
+        /* padding-bottom:
+          - a percentage is required for video to appear on the page
+          - default is 56.25% (16 x 9)
+          - can be overridden in YAML frontmatter (cf: media.ratio)
+          - this override will appear directly in the HTML (_includes/media.html)
+        padding-bottom: 56.25%
+
+        height: 0
+        overflow: hidden
+        max-width: 100%
+        background-color: transparent
+
+        iframe,
+        object,
+        embed
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+
+      figcaption
+        background-color: $body-color
+        p
+          margin: 0
+          padding-top: 0.7em
+          font-size: (14/16) * 1em
+
+    h2, h3, h4, h5, h6
+      font-size: 1em
+      margin-top: mm(1)
+
+    p, figure, li, hr
+      margin-top: mm(1)
+
+    blockquote
+      padding: 0 mm(1)
+      &>p:first-of-type:before
+        content: "\201C"
+      &>p:last-of-type:after
+        content: "\201D"
+
+    hr
+      margin-top: mm(1.1)
+
+    .content
+      h2 + p,
+      li + p,
+        margin-top: 0
+
+    .previous
+      margin-top: mm(2)
+      h2 + p
+        margin-top: 0
+
+    .byline
+      font-family: $sans
+      font-size: percentage(14/16)
+      font-weight: 900
+      letter-spacing: 3px
+      color: $mix-color
+      a:link, a:visited
+        text-decoration: none
+        color: $mix-color
+
+    .errorlist
+      margin-top: mm(1)
+      margin-left: 1em
+
+footer
+  width: 100%
+  max-width: $mw
+  margin: mm(2) auto 0 auto
+
+  .meta
+    margin-top: mm(1)
+    h1
+      display: inline
+      font-size: 100%
+      font-weight: 400
+      color: $mix-color
+      a:link, a:visited
+        color: $mix-color
+    p
+      display: inline
+      color: $mix-color
+      a:link, a:visited
+        color: $mix-color
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 32em)
+
+  $fs: 106.25%
+  $lh: 1.66
+  $mw: 33.882em + mm(1, $lh)
+
+  body
+    font-size: $fs
+    line-height: $lh
+    padding: mm(1, $lh)
+
+  header[role="banner"]
+    max-width: $mw
+
+    .logo svg
+        margin-left: -1em
+        height: mm(2.6, $lh)
+        width: mm(2.6, $lh)
+
+  main
+    max-width: $mw
+
+    article
+      margin-top: mm((0.8 * 3), $lh)
+
+      h1
+        font-size: 200%
+        &.lg
+          font-size: 245%
+
+      h2, h3, h4, h5, h6
+        margin-top: mm(1, $lh)
+
+      p, figure, li, hr
+        margin-top: mm(1, $lh)
+
+      ul, ol
+        margin-left: 0
+
+      blockquote
+        padding: 0 mm(1, $lh)
+
+      hr
+        margin-top: mm(1.1, $lh)
+
+      .content
+        padding-right: mm(1, $lh)
+
+      .previous
+        margin-top: mm(3, $lh)
+
+      .errorlist
+        margin-top: mm(1, $lh)
+        li
+          margin: 0
+
+  footer
+    max-width: $mw
+    margin-top: mm(3, $lh)
+
+    ul
+      margin: 0
+      list-style-type: none
+      li
+        display: inline
+        padding-right: 0.5em
+        &:not(:last-of-type)::after
+          content: "-"
+          padding-left: 0.5em
+          color: $mix-color
+
+    .meta
+      h1, p
+        display: block
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 64em)
+
+  $fs: 112.5%
+  $lh: 1.73
+  $mw: 37.389em + mm(1, $lh)
+
+  body
+    font-size: $fs
+    line-height: $lh
+    padding: mm(1, $lh)
+
+  header[role="banner"]
+    max-width: $mw
+
+    .logo svg
+        height: mm(2.8, $lh)
+        width: mm(2.8, $lh)
+
+  main
+    max-width: $mw
+
+    article
+      margin-top: mm((0.8 * 3), $lh)
+
+      h1
+        font-size: 245%
+        &.lg
+          font-size: 300%
+
+      h2, h3, h4, h5, h6
+        margin-top: mm(1, $lh)
+
+      p, figure, li, hr
+        margin-top: mm(1, $lh)
+
+      blockquote
+        padding: 0 mm(1, $lh)
+
+      hr
+        margin-top: mm(1.1, $lh)
+
+      .content
+        padding-right: mm(1, $lh)
+
+      .previous
+        margin-top: mm(3, $lh)
+
+      .errorlist
+        margin-top: mm(1, $lh)
+
+  footer
+    max-width: $mw
+    margin-top: mm(3, $lh)

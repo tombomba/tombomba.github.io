@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip }}">
+    <link rel="canonical" href="{{ page.url | default: '' | prepend: site.url }}">
+
+    <!-- icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=lk9j7qBqm8">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=lk9j7qBqm8">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=lk9j7qBqm8">
+    <link rel="manifest" href="/site.webmanifest?v=lk9j7qBqm8">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=lk9j7qBqm8" color="#ff0033">
+    <link rel="shortcut icon" href="/favicon.ico?v=lk9j7qBqm8">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="theme-color" content="#d9d9d9">
+
+    <!-- RSS feed -->
+    <link rel="alternate" title="{{ site.title }}" type="application/atom+xml" href="{{ '/feed.xml' | prepend: site.url }}" />
+
+    <!-- facebook -->
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:url" content="{{ page.url | prepend: site.url }}">
+    <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | strip }}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:type" content="blog">
+    <meta property="og:image" content="{{ page.image | default: 'default-opengraph.png' | prepend: site.img_dir | prepend: site.url }}">
+
+    <!-- twitter  -->
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:url" content="{{ page.url | default: '' | prepend: site.url }}">
+    <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | strip | truncate: 280 }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@{{ site.twitter }}">
+    <meta name="twitter:creator" content="@{{ site.twitter }}">
+    <meta name="twitter:image:src" content="{{ page.image | default: 'default-twitter.png' | prepend: site.img_dir | prepend: site.url }}">
+
+    <!-- css -->
+    <link href="{{ 'default.css' | prepend: site.css_dir | prepend: site.url }}" rel="stylesheet">
+
+    <!-- msft mobile hacks -->
+    <script>!function(){if("-ms-user-select"in document.documentElement.style&&navigator.userAgent.match(/IEMobile/)){var a=document.createElement("style");a.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")),document.getElementsByTagName("head")[0].appendChild(a)}}();</script>
+
+</head>
+
+<body>
+
+<header role="banner">
+  <div class="wrap">
+    <div class="logo"><a href="{{ site.url }}" aria-label="{{ site.title }} home page">{% include bomber-plane.svg %}<span></span></a></div>
+    <hr>
+  </div>
+
+</header>
+
+<main>
+
+  {{ content }}
+
+</main>
+
+<footer>
+
+  <ul>
+    <li><a href="{{ site.url }}">Home</a><li><a href="{{ '/archive/' | prepend: site.url }}">Archive</a></li><li><a href="{{ '/feed.xml' | prepend: site.url }}">RSS</a></li><li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="{{ site.github | prepend: 'https://github.com/' }}">Github</a></li><li><a href="{{ '/about/' | prepend: site.url }}">About</a></li>
+  </ul>
+
+  <div class="meta">
+    <h1><a href="{{ site.url }}">Troubleday.com:</a> &ldquo;{{ site.data.taglines | sample }}.&rdquo;</h1>
+    <p class="datestamp">{% if page.date %}Published <time pubdate datetime="{{ page.date | date: "%FT%T%:z" }}">{{ page.date | date_to_long_string }}</time>.{% else %}Last published <time pubdate datetime="{{ site.posts.first.date | date: "%FT%T%:z" }}">{{ site.posts.first.date | date_to_long_string }}</time>.{% endif %} New essays Monday.</p>
+    <p>Copyright &copy; by <a href="{{ '/about/' | prepend: site.url }}">{{ page.author | prepend: site.author }}.</p>
+  </div>
+
+</footer>
+
+</body>
+</html>

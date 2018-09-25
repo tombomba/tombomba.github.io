@@ -1,0 +1,52 @@
+title: Troubleday
+email: hello@troubleday.com
+description: Short notes on dark genres
+url: "http://127.0.0.1:4000/"
+
+author: Tom Bomba
+twitter: "troubleday_"
+github: tombomba
+
+# Build settings
+img_dir: /assets/img/
+css_dir: /assets/css/
+
+permalink: /:year/:month/:title:output_ext
+timezone: America/Los_Angeles
+
+collections:
+  archive-by-year:
+    output: true
+    permalink: /:year/
+  archive-by-month:
+    output: true
+    permalink: /:year/:month/
+
+incremental: false
+lsi: false
+safe: false
+
+markdown: kramdown
+kramdown:
+    auto_ids: false
+    smart_quotes: [lsquo,rsquo,ldquo,rdquo]
+
+sass:
+  style: compressed
+  sass_dir: _sass
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+include:
+  - _pages
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - _snips
+  - .gitignore
+  - .DS_Store
+  - favicon_package.zip
+  - s3_website.yml

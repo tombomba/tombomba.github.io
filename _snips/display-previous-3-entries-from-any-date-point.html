@@ -1,0 +1,15 @@
+{% if page.previous -%}
+<div class="previous">
+
+  {% assign nowunix = page.date | date: "%s" | plus: 0 -%}
+  {% assign counter = 0 -%}
+  <h2>Previously</h2>
+  {% for post in site.posts -%}
+    {% assign posttime = post.date | date: "%s" | plus: 0 -%}
+    {% if posttime < nowunix %}
+      <p><a href="{{ post.url | prepend: site.url }}">{{ post.title | smartify }}</a> &mdash; {{ post.excerpt | strip_html | smartify | strip | normalize_whitespace | truncate: 280 }}</p>
+      {% assign counter = counter | plus: 1 -%}
+    {% endif -%}
+    {% if counter >= 3 %}{% break %}{% endif -%}
+  {% endfor %}
+</div>

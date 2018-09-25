@@ -1,0 +1,43 @@
+---
+layout: default
+regenerate: true
+permalink: /index.html
+---
+
+{% assign p = site.posts.first -%}
+{% assign content = site.posts.first.content -%}
+{% assign wordcount = content | number_of_words -%}
+
+<article>
+
+  {% comment -%}
+    !! Cheap hack to prevent widows !!
+    Note that the smartify filter will strip &nbsp from string if used later
+  {% endcomment -%}
+  {% assign titlef = p.title | smartify | split: ' ' -%}
+  {% assign sub = titlef.last | prepend: '!QQ!' -%}
+  {% assign titlef = titlef | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
+
+  <h1 class="{% if page.media %}md{% else %}lg{% endif %}">{{ titlef | default: page.title }}</h1><!-- -->
+
+  {% if p.media %}{% include media.html media=p.media %}{% endif -%}
+
+  <div class="content">
+    {{ content }}
+    {% if wordcount > 500 %}<p class="byline">By <a href="{{ '/about/' | prepend: site.url }}">{{ page.author | default: site.author }}</a></p>{% endif -%}
+  </div>
+
+  <hr>
+
+  {% if p.previous -%}
+  <div class="previous">
+    <h2>Also this month</h2>
+    {% for prev in site.posts limit: 5 offset: 1 -%}
+    <p><a href="{{ prev.url | prepend: site.url }}">{{ prev.title | smartify }}</a>&nbsp;&mdash; {{ prev.excerpt | strip_html | smartify | strip | normalize_whitespace | truncate: 280 }}</p>
+    {% endfor %}
+  </div>
+
+  <hr>
+  {% endif -%}
+
+</article>

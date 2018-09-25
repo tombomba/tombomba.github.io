@@ -1,4 +1,8 @@
-_site/
-.sass-cache/
+_site
+_snips
+favicon_package.zip
+.sass-cache
 .jekyll-cache/
 .jekyll-metadata
+.s3_website.yml
+.DS_Store

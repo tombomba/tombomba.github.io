@@ -3,7 +3,7 @@ layout: post
 title: Answers to questions nobody asked
 date: 2018-09-24 12:34:56 -0700
 ---
-I'm [not a critic]({{ site.url }}/about/) but it's fun to answer questions put to them. So I cribbed this list from Chaz Ebert's ["Who's Who in Reviews"](https://www.rogerebert.com/chazs-blog/whos-who-in-reviews-table-of-contents) and gave my own responses.
+I'm [not a critic]({{ site.url }}/about/) but it's fun to answer questions put to them. So I cribbed this list from Chaz Ebert's ["Who's Who in Reviews"](https://www.rogerebert.com/chazs-blog/whos-who-in-reviews-table-of-contents) and substituted responses of my own.
 
 ## Where did you grow up, and what was it&nbsp;like?
 I grew up in a lily-white suburb exactly like every other lily-white suburb. Pick a dozen images from a typical family sitcom, add emotional accents from "American Beauty" and "The Ice Storm," mix in the aesthetic sensibility of "Pleasantville," and you got it. My hometown was pretty, clean, and---at least outwardly---dull.
@@ -36,7 +36,7 @@ I read about "Return of the Jedi" in [_Starlog_](https://archive.org/details/sta
 David Lynch's "Twin Peaks." I was excited by how subversive it was and thought, gee, maybe television isn't _all_ crap. Maybe there are possibilities! A different approach to the medium! That was 28 years ago and no one has matched its sensibility, although Donald Glover and "Atlanta" have come close.
 
 ## What book do you think about or revisit the&nbsp;most?
-"Tropic of Cancer" by Henry Miller. "A gob of spit in the face of Art"...and a leaf of grass in a Parisian gutter. I like that you can open to any chapter, any page, and hear Miller sing. It's also a huge fuck you to the Edwardians and the modernists, to class values and capitalism, and to middlebrow thought, written by a guy trying hard to escape same.
+"Tropic of Cancer" by Henry Miller. "A gob of spit in the face of Art"...and a leaf of grass in a Parisian gutter. I like that you can open to any chapter, any page, and hear Miller singing. It's also a huge fuck you to the Edwardians and the modernists, to class values and capitalism, and to middlebrow thought, written by a guy trying hard to escape same.
 
 ## What album or recording artist have you listened to the&nbsp;most?
 I listen to the [radio](http://radio.garden/). This means I'll often recognize a piece of music without knowing anything about it.

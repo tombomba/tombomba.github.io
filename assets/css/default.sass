@@ -13,10 +13,10 @@ $lh: 1.66 !default
 $mw: 32em !default
 
 // Colors
-$body-color:    #EAEAEA !default
+$body-color:    #F3F3F3 !default
 $text-color:    #222 !default
 
-$mix-color:     mix($body-color, $text-color, 50%) !default
+$mix-color:     mix($body-color, $text-color, 33%) !default
 $light-mix:     lighten($mix-color, 33%) !default
 $dark-mix:      darken($mix-color, 33%) !default
 
@@ -184,9 +184,6 @@ main
       &>p:last-of-type:after
         content: "\201D"
 
-    hr
-      margin-top: mm(1.1)
-
     .content
       h2 + p,
       li + p,
@@ -262,3 +259,4 @@ footer
     article
       h1
         font-size: 200%
+        padding: 0 1em

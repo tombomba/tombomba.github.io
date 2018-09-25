@@ -1,7 +1,8 @@
 title: Troubleday
 email: hello@troubleday.com
 description: Short notes on dark genres
-url: "http://127.0.0.1:4000/"
+# url: "http://127.0.0.1:4000/"
+url: "https://tombomba.github.io/"
 
 author: Tom Bomba
 twitter: "troubleday_"
@@ -46,6 +47,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - _snips
+  - _notes
   - .gitignore
   - .DS_Store
   - favicon_package.zip

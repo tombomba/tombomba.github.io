@@ -52,10 +52,8 @@
 
 <header role="banner">
   <div class="wrap">
-    <div class="logo"><a href="{{ site.url }}" aria-label="{{ site.title }} home page">{% include bomber-plane.svg %}<span></span></a></div>
-    <hr>
+    <div class="logo"><a href="{{ site.url }}" aria-label="{{ site.title }} home page">{% include icon.svg %}<span></span></a></div>
   </div>
-
 </header>
 
 <main>
@@ -66,15 +64,11 @@
 
 <footer>
 
-  <ul>
-    <li><a href="{{ site.url }}">Home</a><li><a href="{{ '/archive/' | prepend: site.url }}">Archive</a></li><li><a href="{{ '/feed.xml' | prepend: site.url }}">RSS</a></li><li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="{{ site.github | prepend: 'https://github.com/' }}">Github</a></li><li><a href="{{ '/about/' | prepend: site.url }}">About</a></li>
-  </ul>
+  <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
 
-  <div class="meta">
-    <h1><a href="{{ site.url }}">Troubleday.com:</a> &ldquo;{{ site.data.taglines | sample }}.&rdquo;</h1>
-    <p class="datestamp">{% if page.date %}Published <time pubdate datetime="{{ page.date | date: "%FT%T%:z" }}">{{ page.date | date_to_long_string }}</time>.{% else %}Last published <time pubdate datetime="{{ site.posts.first.date | date: "%FT%T%:z" }}">{{ site.posts.first.date | date_to_long_string }}</time>.{% endif %} New essays Monday.</p>
-    <p>Copyright &copy; by <a href="{{ '/about/' | prepend: site.url }}">{{ page.author | prepend: site.author }}.</p>
-  </div>
+  <ul>
+    <li><a href="{{ site.url }}">Home</a><li><a href="{{ '/archive/' | prepend: site.url }}">Archive</a></li><li><a href="{{ '/about/' | prepend: site.url }}">About</a></li>
+  </ul>
 
 </footer>
 

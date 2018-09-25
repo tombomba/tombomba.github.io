@@ -24,20 +24,29 @@ permalink: /index.html
 
   <div class="content">
     {{ content }}
-    {% if wordcount > 500 %}<p class="byline">By <a href="{{ '/about/' | prepend: site.url }}">{{ page.author | default: site.author }}</a></p>{% endif -%}
   </div>
 
-  <hr>
+  <div class="byline">
+    <p><em>by</em> <a href="{{ '/about/' | prepend: site.url }}">{{ page.author | default: site.author }}</a></p>
+    <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></p>
+  </div>
 
   {% if p.previous -%}
-  <div class="previous">
-    <h2>Also this month</h2>
-    {% for prev in site.posts limit: 5 offset: 1 -%}
-    <p><a href="{{ prev.url | prepend: site.url }}">{{ prev.title | smartify }}</a>&nbsp;&mdash; {{ prev.excerpt | strip_html | smartify | strip | normalize_whitespace | truncate: 280 }}</p>
+  <ul class="previous">
+    {% assign nowunix = p.date | date: "%s" | plus: 0 -%}
+    {% assign counter = 0 -%}
+    {% for prev in site.posts -%}
+      {% assign posttime = prev.date | date: "%s" | plus: 0 -%}
+      {% if posttime < nowunix %}
+      <li>
+        <p><a href="{{ prev.url | prepend: site.url }}">{{ prev.title | smartify }}</a></p>
+        <p>{{ prev.date | date_to_string }}</p>
+      </li>
+      {% assign counter = counter | plus: 1 -%}
+      {% endif -%}
+    {% if counter >= 3 %}{% break %}{% endif -%}
     {% endfor %}
-  </div>
-
-  <hr>
+  </ul>
   {% endif -%}
 
 </article>

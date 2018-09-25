@@ -13,24 +13,35 @@ layout: default
   {%- assign sub = titlef.last | prepend: '!QQ!' %}
   {%- assign titlef = titlef | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' %}
 
-  <h1 class="{% if page.media %}md{% else %}lg{% endif %}">{{ titlef | default: page.title }}</h1><!-- -->
+  <h1>{{ titlef | default: page.title }}</h1><!-- -->
 
   {%- if page.media %}{% include media.html media=page.media %}{% endif %}
 
   <div class="content">
     {{ content }}
-    {% if wordcount > 500 %}<p class="byline">By <a href="{{ '/about/' | prepend: site.url }}">{{ page.author | default: site.author }}</a></p>{% endif -%}
   </div>
 
-  <hr>
+  <div class="byline">
+    <p><em>by</em> <a href="{{ '/about/' | prepend: site.url }}">{{ page.author | default: site.author }}</a></p>
+    <p class="datestamp"><a href="{{ page.url | prepend: site.url }}" aria-label="permanent link to this entry"><time pubdate datetime="{{ page.date | date: "%FT%T%:z" }}">{{ page.date | date_to_string }}</time></a></p>
+  </div>
 
   {% if page.previous -%}
-  <div class="previous">
-    <h2>Previously</h2>
-    <p><a href="{{ page.previous.url | prepend: site.url }}">{{ page.previous.title | smartify }}</a>&nbsp;&mdash; {{ page.previous.excerpt | strip_html | smartify | strip | normalize_whitespace | truncate: 280 }}</p>
-  </div>
-
-  <hr>
+  <ul class="previous">
+    {% assign nowunix = page.date | date: "%s" | plus: 0 -%}
+    {% assign counter = 0 -%}
+    {% for post in site.posts -%}
+      {% assign posttime = post.date | date: "%s" | plus: 0 -%}
+      {% if posttime < nowunix %}
+      <li>
+        <p><a href="{{ post.url | prepend: site.url }}">{{ post.title | smartify }}</a></p>
+        <p>{{ post.date | date_to_string }}</p>
+      </li>
+      {% assign counter = counter | plus: 1 -%}
+      {% endif -%}
+    {% if counter >= 3 %}{% break %}{% endif -%}
+    {% endfor %}
+  </ul>
   {% endif -%}
 
 </article>

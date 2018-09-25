@@ -9,12 +9,12 @@
 
 //  Base font size, line-height, max width
 $fs: 100% !default
-$lh: (25 / 16) !default
-$mw: 30em !default
+$lh: 1.66 !default
+$mw: 32em !default
 
 // Colors
-$body-color:    #E2E2E2 !default
-$text-color:    #000 !default
+$body-color:    #EAEAEA !default
+$text-color:    #222 !default
 
 $mix-color:     mix($body-color, $text-color, 50%) !default
 $light-mix:     lighten($mix-color, 33%) !default
@@ -22,13 +22,13 @@ $dark-mix:      darken($mix-color, 33%) !default
 
 $logo-color:    #F03 !default
 
-$link-color:    #0000FF !default
-$visited-color: #800080 !default
+$link-color:    #36C !default
+$visited-color: #939 !default
 $active-color:  #F03 !default
 
 // Fonts
 $serif: Georgia, Cambria, 'Century Schoolbook L', serif
-$sans:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
+$sans:  -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
 
 //-----------------------------------------------------------------------------
 
@@ -89,14 +89,20 @@ header[role="banner"]
     align-items: center
 
   .logo
+    display: flex
+    align-items: center
+    justify-content: center
     position: relative
-    margin-right: 1em
+    margin: 0 auto
+    width: mm(3)
+    height: mm(3)
+    border-radius: 50%
+    background-color: $logo-color
 
     svg
-      margin-left: -0.5em
-      height: mm(2.3)
-      width: mm(2.3)
-      fill: $logo-color
+      height: mm(1.5)
+      width: mm(1.5)
+      fill: $body-color
       overflow: hidden
 
     span
@@ -117,20 +123,21 @@ main
   margin: 0 auto
 
   article
-    margin-top: mm(2)
+    margin-top: mm(3)
 
     h1
-      font-family: $sans
-      font-size: 150%
-      font-weight: 900
-      line-height: 1.2
+      font-weight: 400
+      line-height: 1.33
       overflow: hidden
+      text-align: center
       a:link, a:visited
         color: $text-color
       a:hover
         color: $link-color
 
     figure
+      margin-left: mm(-1)
+      margin-right: mm(-1)
       background-color: darken($body-color, 10%)
       .player
         position: relative
@@ -156,6 +163,7 @@ main
           height: 100%
 
       figcaption
+        padding-left: mm(1)
         background-color: $body-color
         p
           margin: 0
@@ -185,173 +193,72 @@ main
         margin-top: 0
 
     .previous
-      margin-top: mm(2)
-      h2 + p
-        margin-top: 0
+      margin: mm(2) auto 0 auto
+      max-width: 66%
+      list-style-type: none
+      text-align: center
+      &:before, &:after
+        content: "\25CF"
+        color: $logo-color
+      p
+        margin: 0
+        color: $mix-color
+      li:first-of-type
+        margin: 0
+
 
     .byline
-      font-family: $sans
-      font-size: percentage(14/16)
-      font-weight: 900
-      letter-spacing: 3px
-      color: $mix-color
-      a:link, a:visited
-        text-decoration: none
+      margin-top: mm(2)
+      p
+        margin: 0
         color: $mix-color
+        text-align: center
+        a:link, a:visited
+          text-decoration: none
+          color: $mix-color
 
     .errorlist
       margin-top: mm(1)
       margin-left: 1em
+      li
+        margin: 0
 
 footer
   width: 100%
   max-width: $mw
   margin: mm(2) auto 0 auto
+  text-align: center
 
-  .meta
-    margin-top: mm(1)
-    h1
-      display: inline
-      font-size: 100%
-      font-weight: 400
+  h1
+    font-size: 100%
+    a:link, a:visited
+      color: $text-color
+
+  p
+    color: $mix-color
+    a:link, a:visited
       color: $mix-color
-      a:link, a:visited
-        color: $mix-color
-    p
+
+  ul
+    margin: 0
+    list-style-type: none
+    li
       display: inline
-      color: $mix-color
-      a:link, a:visited
+      padding-right: 0.5em
+      &:not(:last-of-type)::after
+        content: "\2022"
+        padding-left: 0.5em
         color: $mix-color
+
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 32em)
 
-  $fs: 106.25%
-  $lh: 1.66
-  $mw: 33.882em + mm(1, $lh)
-
   body
-    font-size: $fs
-    line-height: $lh
-    padding: mm(1, $lh)
-
-  header[role="banner"]
-    max-width: $mw
-
-    .logo svg
-        margin-left: -1em
-        height: mm(2.6, $lh)
-        width: mm(2.6, $lh)
+    font-size: 106.25%
 
   main
-    max-width: $mw
-
     article
-      margin-top: mm((0.8 * 3), $lh)
-
       h1
         font-size: 200%
-        &.lg
-          font-size: 245%
-
-      h2, h3, h4, h5, h6
-        margin-top: mm(1, $lh)
-
-      p, figure, li, hr
-        margin-top: mm(1, $lh)
-
-      ul, ol
-        margin-left: 0
-
-      blockquote
-        padding: 0 mm(1, $lh)
-
-      hr
-        margin-top: mm(1.1, $lh)
-
-      .content
-        padding-right: mm(1, $lh)
-
-      .previous
-        margin-top: mm(3, $lh)
-
-      .errorlist
-        margin-top: mm(1, $lh)
-        li
-          margin: 0
-
-  footer
-    max-width: $mw
-    margin-top: mm(3, $lh)
-
-    ul
-      margin: 0
-      list-style-type: none
-      li
-        display: inline
-        padding-right: 0.5em
-        &:not(:last-of-type)::after
-          content: "-"
-          padding-left: 0.5em
-          color: $mix-color
-
-    .meta
-      h1, p
-        display: block
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 64em)
-
-  $fs: 112.5%
-  $lh: 1.73
-  $mw: 37.389em + mm(1, $lh)
-
-  body
-    font-size: $fs
-    line-height: $lh
-    padding: mm(1, $lh)
-
-  header[role="banner"]
-    max-width: $mw
-
-    .logo svg
-        height: mm(2.8, $lh)
-        width: mm(2.8, $lh)
-
-  main
-    max-width: $mw
-
-    article
-      margin-top: mm((0.8 * 3), $lh)
-
-      h1
-        font-size: 245%
-        &.lg
-          font-size: 300%
-
-      h2, h3, h4, h5, h6
-        margin-top: mm(1, $lh)
-
-      p, figure, li, hr
-        margin-top: mm(1, $lh)
-
-      blockquote
-        padding: 0 mm(1, $lh)
-
-      hr
-        margin-top: mm(1.1, $lh)
-
-      .content
-        padding-right: mm(1, $lh)
-
-      .previous
-        margin-top: mm(3, $lh)
-
-      .errorlist
-        margin-top: mm(1, $lh)
-
-  footer
-    max-width: $mw
-    margin-top: mm(3, $lh)

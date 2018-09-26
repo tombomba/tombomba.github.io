@@ -120,10 +120,9 @@ header[role="banner"]
 
 main
   max-width: $mw
-  margin: 0 auto
+  margin: mm(3) auto 0 auto
 
   article
-    margin-top: mm(3)
 
     h1
       font-size: 150%
@@ -260,4 +259,10 @@ footer
     article
       h1
         font-size: 200%
-        padding: 0 1em
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 64em)
+
+  body
+    font-size: 112.5%

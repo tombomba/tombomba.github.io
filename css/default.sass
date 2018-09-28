@@ -206,13 +206,6 @@ footer
     margin: 1em auto 0 auto
     list-style-type: none
     text-align: center
-    li
-      display: inline
-      padding-right: 0.5em
-      &:not(:last-of-type):after
-        content: "-"
-        padding-left: 0.5em
-        color: $mix-color
 
 //-----------------------------------------------------------------------------
 
@@ -221,6 +214,14 @@ footer
   main article
     img.right
       max-width: 42%
+
+  footer .nav li
+    display: inline
+    padding-right: 0.5em
+    &:not(:last-of-type):after
+      content: "-"
+      padding-left: 0.5em
+      color: $mix-color
 
 //-----------------------------------------------------------------------------
 

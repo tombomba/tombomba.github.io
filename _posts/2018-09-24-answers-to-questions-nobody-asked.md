@@ -3,7 +3,7 @@ layout: post
 title: Answers to questions nobody asked
 date: 2018-09-24 12:34:56 -0700
 ---
-I'm [not a critic]({{ site.url }}/about/) but it's fun to answer questions put to them. So I cribbed this list from Chaz Ebert's ["Who's Who in Reviews"](https://www.rogerebert.com/chazs-blog/whos-who-in-reviews-table-of-contents) and substituted responses of my own.
+I'm [not a critic]({{ '/about/' | prepend: site.url }}) but it's fun to answer questions put to them. So I cribbed this list from Chaz Ebert's ["Who's Who in Reviews"](https://www.rogerebert.com/chazs-blog/whos-who-in-reviews-table-of-contents) and substituted responses of my own.
 
 ## Where did you grow up, and what was it&nbsp;like?
 I grew up in a lily-white suburb exactly like every other lily-white suburb. Pick a dozen images from a typical family sitcom, add emotional accents from "American Beauty" and "The Ice Storm," mix in the aesthetic sensibility of "Pleasantville," and you got it. My hometown was pretty, clean, and---at least outwardly---dull.

@@ -1,0 +1,17 @@
+---
+layout: page
+title: "404!"
+excerpt: "The page you were looking for was not found on this server."
+regenerate: true
+permalink: /404.html
+---
+
+<p>That page was no good. Try another? Here's the most recent stuff:</p>
+
+<ul class="404">
+{%- for p in site.posts limit: 3 -%}
+  <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | smartify }}</a> &mdash; {{ p.excerpt | strip_html | strip | normalize_whitespace | smartify }}</li>
+{%- endfor -%}
+</ul>
+
+<p>If you're still lost, check out posts from <a href="{{ site.posts.first.date | date: '/%Y/%m/' }}">this month</a> or <a href="{{ site.posts.first.date | date: '/%Y/' }}">this year</a>. If that doesn't help, <a href="https://twitter.com/search?l=&q=troubleday&src=typd">gimme a shout</a> on social media.

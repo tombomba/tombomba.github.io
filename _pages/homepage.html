@@ -4,49 +4,8 @@ regenerate: true
 permalink: /index.html
 ---
 
-{% assign p = site.posts.first -%}
-{% assign content = site.posts.first.content -%}
-{% assign wordcount = content | number_of_words -%}
+{% for p in site.posts limit: 10 -%}
 
-<article>
+  {% include post-block.html title=p.title date=p.date content=p.content url=p.url -%}
 
-  {% comment -%}
-    !! Cheap hack to prevent widows !!
-    Note that the smartify filter will strip &nbsp from string if used later
-  {% endcomment -%}
-  {% assign titlef = p.title | smartify | split: ' ' -%}
-  {% assign sub = titlef.last | prepend: '!QQ!' -%}
-  {% assign titlef = titlef | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
-
-  <h1 class="{% if page.media %}md{% else %}lg{% endif %}">{{ titlef | default: page.title }}</h1><!-- -->
-
-  {% if p.media %}{% include media.html media=p.media %}{% endif -%}
-
-  <div class="content">
-    {{ content }}
-  </div>
-
-  <div class="byline">
-    <p><em>by</em> <a href="{{ '/about/' | prepend: site.url }}">{{ page.author | default: site.author }}</a></p>
-    <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></p>
-  </div>
-
-  {% if p.previous -%}
-  <ul class="previous">
-    {% assign nowunix = p.date | date: "%s" | plus: 0 -%}
-    {% assign counter = 0 -%}
-    {% for prev in site.posts -%}
-      {% assign posttime = prev.date | date: "%s" | plus: 0 -%}
-      {% if posttime < nowunix %}
-      <li>
-        <p><a href="{{ prev.url | prepend: site.url }}">{{ prev.title | smartify }}</a></p>
-        <p>{{ prev.date | date_to_string }}</p>
-      </li>
-      {% assign counter = counter | plus: 1 -%}
-      {% endif -%}
-    {% if counter >= 3 %}{% break %}{% endif -%}
-    {% endfor %}
-  </ul>
-  {% endif -%}
-
-</article>
+{% endfor -%}

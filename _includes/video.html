@@ -1,0 +1,23 @@
+{% if include.ratio -%}
+  {% assign aspectr = include.ratio | default: '640x360' | split: 'x' -%}
+  {% assign w = aspectr[0] | plus: 0.0 -%}
+  {% assign h = aspectr[1] | plus: 0.0 -%}
+  {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
+{% endif -%}
+
+<figure>
+
+  <div class="player"{% if include.ratio %} style="padding-bottom:{{ percent }}%"{% endif %} aria-label="media player">
+
+  {% if include.site contains 'vimeo' -%}
+  <iframe src="https://player.vimeo.com/video/{{ include.file }}?badge=0&color=FF0033&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+  {% else -%}{% comment %} !! default to youtube !! {% endcomment -%}
+  <iframe src="https://www.youtube.com/embed/{{ include.file }}?title=0&portrait=0&badge=0&byline=0&controls=2&autohide=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+  {% endif -%}
+  </div>
+
+  {% if include.caption %}<figcaption>{{ include.caption | default: 'Caption!' | strip | normalize_whitespace | truncate: 280 | markdownify | smartify }}</figcaption>{% endif -%}
+
+</figure>

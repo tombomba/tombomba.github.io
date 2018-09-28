@@ -1,6 +1,4 @@
----
-layout: default
----
+{% assign content = include.content -%}
 
 <article>
 
@@ -15,15 +13,21 @@ layout: default
     !! Hack to prevent widows !!
     Note that the smartify filter will strip &nbsp from string if used later
   {% endcomment -%}
-  {% assign titlef = page.title | smartify | split: ' ' -%}
+  {% assign titlef = include.title | smartify | split: ' ' -%}
   {% assign sub = titlef.last | prepend: '!QQ!' -%}
   {% assign titlef = titlef | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
 
   <header class="hed">
-    <h1>{{ titlef | default: page.title }}</h1>
-    <p class="datestamp"><time pubdate datetime="{{ page.date | date: "%FT%T%:z" }}">{{ page.date | date_to_string }}</time></p>
+  {% if include.url -%}
+    <h1 class="title"><a href="{{ include.url }}">{{ titlef | default: include.title }}</a></h1>
+  {% else -%}
+    <h1>{{ titlef | default: include.title }}</h1>
+  {% endif -%}
+    <p class="datestamp"><time pubdate datetime="{{ include.date | date: "%FT%T%:z" }}">{{ include.date | date_to_string }}</time></p>
   </header>
 
   {{ content }}
-  
+
+  {% if include.url %}<p class="permalink"><a href="{{ include.url }}" aria-label="Permanent link to this entry">&#9679;</a></p>{% endif -%}
+
 </article>

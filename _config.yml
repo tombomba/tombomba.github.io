@@ -7,8 +7,8 @@ twitter: "troubleday_"
 github: tombomba
 
 # Build settings
-img_dir: /assets/img/
-css_dir: /assets/css/
+img_dir: /img/
+css_dir: /css/
 
 permalink: /:year/:month/:title:output_ext
 timezone: America/Los_Angeles

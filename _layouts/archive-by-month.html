@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<article>
+
+  {% assign month = page.date | date: "%m" -%}
+  {% assign year = page.date | date: "%Y" -%}
+
+  <header>
+    <h1><a href="{{ site.url }}">Top</a> : {{ page.title | smartify }}</h1>
+  </header>
+
+  <ul class="archive">
+    {% for p in site.posts %}
+    {% assign currmo = p.date | date: "%m" -%}
+    {% assign curryr = p.date | date: "%Y" -%}
+    {% if currmo == month and curryr == year %}<li><a href="{{ p.url | prepend: site.url }}">{{ p.title | smartify }}</a> &mdash; {{ p.excerpt | strip_html | strip | normalize_whitespace | smartify }} <em>({{ p.date | date: "%d %b" }})</em></li>{% endif -%}
+    {% endfor %}
+  </ul>
+
+</article>

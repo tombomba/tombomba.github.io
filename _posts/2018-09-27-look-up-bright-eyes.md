@@ -2,7 +2,7 @@
 layout: post
 title:  Look up, Bright Eyes
 excerpt: "You've seen the original \"Planet of the Apes,\" right? Remember the ending? Then maybe you can explain something to me."
-date:   2018-09-10 17:10:48 -0700
+date:   2018-09-27 21:26:12 -0700
 ---
 
 ![Planet of the Apes poster art 1968](/img/planet-of-the-apes-poster-art-1968.jpg){: .right .tilt }

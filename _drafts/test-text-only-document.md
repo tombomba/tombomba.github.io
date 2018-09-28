@@ -1,13 +1,15 @@
 ---
 layout: post
 title:  Look up, Bright Eyes
-excerpt: "You've seen the original \"Planet of the Apes,\" right? Remember the ending? Okay, good. Then maybe you can explain something to me."
+excerpt: "You've seen the original \"Planet of the Apes,\" right? Remember the ending? Then maybe you can explain something to me."
 date:   2018-09-10 17:10:48 -0700
 ---
 
+![Planet of the Apes poster art 1968](/img/planet-of-the-apes-poster-art-1968.jpg){: .right .tilt }
+
 You've seen the original "Planet of the Apes," right? Remember the ending? Okay, good. So maybe you can tell me how Taylor, the astronaut played by Charlton Heston, didn't realize where he was from the start. Because he should have.
 
-"Planet" is a cultural touchstone; everyone knows it even if they've never seen it. A group of astronauts travel to a distant galaxy and crash land on an alien planet. Apes rule, humans drool. Taylor alone escapes the upside-down civilization with the help of a couple of sympathetic chimpanzees. By the end, he faces a terrible truth: he's not where he thought he was. Cue Heston sobbing on the beach and one of the most famous images in American movie history.
+"Planet" is a cultural touchstone; everyone knows it even if they've never seen it. A group of astronauts travel to a distant galaxy and crash land on an alien planet. Apes rule, humans drool. Taylor alone escapes the upside-down civilization with the help of a couple of sympathetic chimpanzees. By the end, he faces a terrible truth: he's not where he thought he was. Cue Heston sobbing on the beach and one of the most famous images in American movies.
 
 To get to that payoff, the filmmakers had to be sneaky.
 

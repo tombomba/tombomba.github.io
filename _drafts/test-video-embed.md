@@ -1,11 +1,13 @@
 ---
-layout: post
+layout: video
 title: "Rebels. Empires. Death Stars. Haven't we seen this movie before?"
 excerpt: "The \"Rogue One\" trailer dropped last night during the Rio Olympics coverage. I watched, I sighed, I shrugged."
+media:
+  youtube: frdj1zb9sMY
+  ratio: 640x360
+  caption: "Pew! Pew pew pew! Pew pew!"
 date: 2016-08-12 21:45:12 -0700
 ---
-
-{% include video.html file='frdj1zb9sMY' site='youtube' ratio='640x360' caption='Pew! Pew pew pew! Pew Pew!' -%}
 
 The "Rogue One" [trailer](https://www.youtube.com/watch?v=frdj1zb9sMY) dropped last night during the Rio Olympics coverage. A few shots contain material from last May's [teaser](https://www.youtube.com/watch?v=Wji-BZ0oCwg), but there's also new character-based dialogue and close-ups. Some moments hint at gritty action and dark violence. The payoff is a single shot of Darth Vader, breathing over the soundtrack.
 

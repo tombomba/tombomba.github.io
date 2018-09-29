@@ -28,7 +28,7 @@
   {{ content }}
 
   {% if include.url -%}
-  <p class="permalink"><a href="{{ include.url | prepend: site.url }}" aria-label="Permanent link to this entry">&#9679;</a></p>
+  <p class="permalink"><a href="{{ include.url | prepend: site.url }}" title="Permanent link to this entry">&#9679;</a></p>
 
   {% else -%}
   <p class="datestamp"><time pubdate datetime="{{ include.date | date: "%FT%T%:z" }}">{{ include.date | date_to_string }}</time></p>

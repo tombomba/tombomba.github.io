@@ -2,7 +2,7 @@
 layout: post
 title: "Rebels. Empires. Death Stars. Haven't we seen this movie before?"
 excerpt: "The \"Rogue One\" trailer dropped last night during the Rio Olympics coverage. I watched, I sighed, I shrugged."
-date: 2018-09-12 06:45:12 -0700
+date: 2016-08-12 21:45:12 -0700
 ---
 
 {% include video.html file='frdj1zb9sMY' site='youtube' ratio='640x360' caption='Pew! Pew pew pew! Pew Pew!' -%}

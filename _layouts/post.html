@@ -2,28 +2,4 @@
 layout: default
 ---
 
-<article>
-
-  {% comment -%}
-    !! Remove kramdown's extra markup around image files !!
-  {% endcomment -%}
-  {% if content contains 'img src=' -%}
-    {% assign content = content | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
-  {% endif -%}
-
-  {% comment -%}
-    !! Hack to prevent widows !!
-    Note that the smartify filter will strip &nbsp from string if used later
-  {% endcomment -%}
-  {% assign titlef = page.title | smartify | split: ' ' -%}
-  {% assign sub = titlef.last | prepend: '!QQ!' -%}
-  {% assign titlef = titlef | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
-
-  <header class="hed">
-    <h1>{{ titlef | default: page.title }}</h1>
-    <p class="datestamp"><time pubdate datetime="{{ page.date | date: "%FT%T%:z" }}">{{ page.date | date_to_string }}</time></p>
-  </header>
-
-  {{ content }}
-  
-</article>
+{% include post-block.html title=page.title date=page.date content=content -%}

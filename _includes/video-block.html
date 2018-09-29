@@ -38,9 +38,11 @@
     !! Format the page title inside a header tag !!
   {% endcomment -%}
 
+  {% assign raw_headline = include.title | strip | normalize_whitespace | smartify -%}
+
   {% capture punc -%}{% unless include.title contains '.' or include.title contains '!' or include.title contains '?' -%}<span class="punc"></span>{% endunless -%}{% endcapture -%}
 
-  {% capture titlef -%}{% if include.url -%}<h1 class="linktitle"><a href="{{ include.url | prepend: site.url }}">{{ include.title | strip | normalize_whitespace }}</a>{% else -%}<h1>{{ include.title | strip | normalize_whitespace }}{% endif -%}{{ punc }}</h1>&#32;{% endcapture -%}
+  {% capture titlef -%}{% if include.url -%}<h1 class="linktitle"><a href="{{ include.url | prepend: site.url }}">{{ raw_title }}</a>{% else -%}<h1>{{ raw_title }}{% endif -%}{{ punc }}</h1>&#32;{% endcapture -%}
 
   {% assign headline = titlef | prepend: '<header class="lede">' | append: '<p>' -%}
 

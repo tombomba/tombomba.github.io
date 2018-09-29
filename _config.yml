@@ -14,12 +14,8 @@ permalink: /:year/:month/:title:output_ext
 timezone: America/Los_Angeles
 
 collections:
-  archive-by-year:
+  archive:
     output: true
-    permalink: /:year/
-  archive-by-month:
-    output: true
-    permalink: /:year/:month/
 
 incremental: false
 lsi: false

@@ -42,7 +42,7 @@
 
   {% capture punc -%}{% unless include.title contains '.' or include.title contains '!' or include.title contains '?' -%}<span class="punc"></span>{% endunless -%}{% endcapture -%}
 
-  {% capture titlef -%}{% if include.url -%}<h1 class="linktitle"><a href="{{ include.url | prepend: site.url }}">{{ raw_title }}</a>{% else -%}<h1>{{ raw_title }}{% endif -%}{{ punc }}</h1>&#32;{% endcapture -%}
+  {% capture titlef -%}{% if include.url -%}<h1 class="linktitle"><a href="{{ include.url | prepend: site.url }}">{{ raw_headline}}</a>{% else -%}<h1>{{ raw_headline }}{% endif -%}{{ punc }}</h1>&#32;{% endcapture -%}
 
   {% assign headline = titlef | prepend: '<header class="lede">' | append: '<p>' -%}
 

@@ -10,16 +10,13 @@ github: tombomba
 img_dir: /img/
 css_dir: /css/
 
+future: false
 permalink: /:year/:month/:title:output_ext
 timezone: America/Los_Angeles
 
 collections:
   archive:
     output: true
-
-incremental: false
-lsi: false
-safe: false
 
 markdown: kramdown
 kramdown:

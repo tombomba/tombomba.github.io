@@ -7,13 +7,13 @@ media:
   alt: "Still from Mandy with Nicolas Cage"
 ---
 
+![Mandy 2018 Nicolas Cage film still]({{ '/mandy-2018-nicolas-cage-film-still.jpg' | prepend: site.img_dir | prepend: site.url }}){: .middle .center }
+
 "Mandy" is a technicolor geek show. We pays our money and we takes our chances to see Nicolas Cage, fanboy favorite and former actor, bite the head off a cinematic chicken. It's trash-action, a gonzo wannabe. Colorful, kooky, and---at least for the first half---languid. It succeeds as the antithesis to corporate junk playing elsewhere at the multiplex, but not on its own, as, ya know, _a movie._
 
 It left me wondering if Cage has paid back the I.R.S. If he has, then why does he choose these projects? If he hasn't,  how much farther does he have to go? Each time out, his audience doesn't watch a film as much as donate to the cause. Making Cage whole with the federal government, 9 dollars a time.
 
 The film's barker is Cosmatos, who also wrote and directed the dream-infused "Beyond the Black Rainbow."
-
--------
 
 - I was never sure if I was meant to laugh _at_ it or _with_ it or whether I was meant to be laughing at all.
 

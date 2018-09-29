@@ -114,18 +114,17 @@ main
     margin-top: 4em
     @extend .clearfix
 
-    header
-      h1
-        font-size: 125%
-        line-height: 1.3
-        letter-spacing: -0.1px
-        overflow: hidden
-        &.title
-          a:link, a:visited
-            color: $text-color
-            text-decoration: none
-          &:hover
-            text-decoration: underline
+    h1
+      font-size: 125%
+      line-height: 1.3
+      letter-spacing: -0.1px
+      overflow: hidden
+      &.linktitle
+        a:link, a:visited
+          color: $text-color
+          text-decoration: none
+        &:hover
+          text-decoration: underline
       p
         margin: 0
         color: $mix-color
@@ -248,7 +247,7 @@ footer
       &:not(:last-of-type)
         padding-bottom: 2em
 
-      header h1
+      h1
         font-size: 150%
 
       img.right

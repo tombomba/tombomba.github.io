@@ -39,7 +39,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - _snips
-  - _notes
   - .gitignore
   - .DS_Store
   - favicon_package.zip

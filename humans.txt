@@ -12,25 +12,26 @@ Github: {{ site.github }}
 
 Last update: {{ site.posts.first.date | date: "%Y/%m/%d" }}
 Standards: HTML5, CSS3
-Software: Atom, Pixelmator, Git
+Software: Atom, Pixelmator, Jekyll, Git
 
 /* INFLUENCES */
 
 - "Boys Don't Cry" by The Cure
 - Richard Nixon's "Checkers" speech
 - "Mrs Dalloway" by Virginia Woolf
-- The Paris Review's Art of Comics, Volume 1, 2012
+- The Paris Review's Art of Comics, Volume 1, 2012, featuring R.Crumb
 - Banksy.co.uk/manifesto, ca. 2006
 - Edna St Vincent Millay's ___"If I Should Learn, in some quite casual way."
 - "Alone in San Francisco" by Thelonious Monk
 - "Attack Force Z," dir. Tim Burstall, 1981
-- Dorothy Parker's "Big Blonde"
+- "Big Blonde" by Dorothy Parker
 - Hotwired, ca. 1996
-- Sassy Magazine
+- "Factotum" by Charles Bukowski
 - Rachel Whiteread's "House," 1993
 - "How to Tell a True War Story" from Tim O'Brien's "The Things They Carried"
 - Tom Spurgeon's Comics Reporter
 - Jessa Crispin's Book Slut
+- Rookie magazine
 - "song (did you see me walking by the Buick repairs?)" by Frank O'Hara
 - Cinema Village, 22 E 12th St, New York
 - John Berger's "Ways of Seeing," 1972
@@ -40,4 +41,4 @@ Software: Atom, Pixelmator, Git
 - "David Boring" by Daniel Clowes
 - KCRW Radio, Los Angeles
 - The 1961 season of the New York Yankees
-- Jubilee, dir. Derek Jarman, 1978
+- "Jubilee," dir. Derek Jarman, 1978

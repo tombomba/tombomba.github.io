@@ -10,7 +10,8 @@
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">
 
     <base href="{{ site.url }}">
-    <link rel="canonical" href="{{ page.url | default: '' | prepend: site.url }}">
+    {% if page.url %}<link rel="canonical" href="{{ page.url | default: '' | prepend: site.url }}">{% endif -%}
+    <link type="text/plain" rel="author" href="{{ '/humans.txt' | prepend: site.url }}">
 
     <!-- icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png?v=lk9j7qBqm8' | prepend: site.url }}">

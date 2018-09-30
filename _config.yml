@@ -3,7 +3,7 @@ description: Short notes on dark genres
 url: "https://www.troubleday.com"
 
 author: Tom Bomba
-twitter: "troubleday_"
+twitter: troubleday_
 github: tombomba
 
 # Build settings
@@ -11,6 +11,7 @@ img_dir: /img/
 css_dir: /css/
 
 future: false
+
 permalink: /:year/:month/:title:output_ext
 timezone: America/Los_Angeles
 

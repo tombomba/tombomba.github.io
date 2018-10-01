@@ -63,7 +63,7 @@ Maureen O'Hara, because she punched John Ford in the face. Emily Blunt, because 
 Ben Wheatley. He gives no quarter. He doesn't pander. I like that I don't always like him and that he doesn't care.
 
 ## Least favorite?
-I'm tired of Quentin Tarantino. He developed his style so narrowly it's turned to schtick. A definite mean streak appeared after "Kill Bill," and his characters became more cartoonish as his movies became more violent.
+I'm tired of Quentin Tarantino. He developed his style so narrowly it's turned to schtick. A definite mean streak appeared after "Jackie Brown," and his characters became more cartoonish as his movies became more violent.
 
 ## What film do you love that most people seem to&nbsp;hate?
 "Alien 3," a bad movie with good ideas. The more you travel through its history, from discarded screenplays to assembly cuts, the more interesting it becomes.

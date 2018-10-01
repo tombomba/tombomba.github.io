@@ -48,7 +48,7 @@ I listen to the [radio](http://radio.garden/). This means I'll often recognize a
 In my twenties I'd come home from a job I hated and watch "Get Shorty," "Goodfellas," or "Tin Men." One of those, every few days, for months. Which makes rough sense to me now---on one level, they're movies about work as a form of identity, about people conflicted between who they are and what they&nbsp;do.
 
 ## What was your first R-rated movie?
-It would have been something like "Scanners" or "Driller Killer" on VHS or HBO. My friends and I watched horror movies as a sorta right-of-passage. Somebody would host a sleepover, we'd wait until the parents went to bed, and then we'd put on the craziest thing we could find.
+It would have been something like "Scanners" or "Driller Killer" on VHS or HBO. My friends and I watched horror movies as a sorta rite-of-passage. Somebody would host a sleepover, we'd wait until the parents went to bed, and then we'd put on the craziest thing we could find.
 
 ## What's the most visually beautiful film you've ever&nbsp;seen?
 "Ju Dou," from Zhang Yimou, and one of the last three-strip technicolor films. His "Raise the Red Lantern" is nearly as pretty but of course the colors don't pop in the same way.

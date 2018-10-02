@@ -19,10 +19,9 @@ main article
     line-height: 1.33
     letter-spacing: -0.1px
     overflow: hidden
-    &.linktitle
-      a:link, a:visited
-        color: $text-color
-        text-decoration: none
+    a:link, a:visited
+      color: $text-color
+      text-decoration: none
       &:hover
         text-decoration: underline
 
@@ -89,6 +88,10 @@ main article
     line-height: (30/18)
 
   main article
+
+    h1
+      font-size: 150%
+
     img.right
       max-width: 42%
 
@@ -99,9 +102,6 @@ main article
   main article
     &:not(:last-of-type)
       padding-bottom: 2em
-
-    h1
-      font-size: 150%
 
     img.right
       max-width: 42%

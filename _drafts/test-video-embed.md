@@ -1,5 +1,5 @@
 ---
-layout: video
+layout: post
 title: "Rebels. Empires. Death Stars. Haven't we seen this movie before?"
 excerpt: "The \"Rogue One\" trailer dropped last night during the Rio Olympics coverage. I watched, I sighed, I shrugged."
 media:

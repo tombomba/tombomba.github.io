@@ -1,5 +1,5 @@
 ---
-layout: text
+layout: post
 title: Answers to questions nobody asked
 date: 2018-09-24 12:34:56 -0700
 ---

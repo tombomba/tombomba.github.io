@@ -1,17 +1,18 @@
 ---
-layout: page
-title: "404!"
+layout: default
+title: "Sorry, the page you requested was not found"
 excerpt: "The page you were looking for was not found on this server."
 permalink: /404.html
 ---
 
-<p>That page was no good. Try another?</p>
+<article>
 
-<ul class="404">
-{% assign random_list = site.posts | sample: 3 -%}
-{% for p in random_list -%}
-  <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | smartify }}</a> &mdash; {{ p.excerpt | strip_html | strip | normalize_whitespace | smartify }}</li>
-{% endfor -%}
-</ul>
+  <h1>{{ page.title }}</h1>
 
-<p>If you're still lost, check out posts from <a href="{{ site.posts.first.date | date: '/%Y/%m/' }}">this month</a> or <a href="{{ site.posts.first.date | date: '/%Y/' }}">this year</a>. If that doesn't help, <a href="https://twitter.com/search?l=&q=troubleday&src=typd">gimme a shout</a> on social media.
+  <p>Please check the URL for proper spelling and capitalization. If you're having trouble, visit the <a href="{{ site.url}}">home page</a> or browse posts from [this month or this year.</p>
+
+  <!-- Search box! -->
+
+  <p>If you need additional help, <a href="https://twitter.com/{{ site.twitter }}">gimme a shout</a> on social media.</p>
+
+</article>

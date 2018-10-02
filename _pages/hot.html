@@ -1,16 +1,25 @@
 ---
 layout: default
+style: hot.css
 permalink: /hot/
 ---
 
-{% for p in site.posts limit: 10 -%}
+{% for p in site.data.stream limit: 7 -%}
 
-  {% if p.layout == 'text' -%}
-    {% include text-block.html title=p.title date=p.date content=p.content url=p.url -%}
+  {% assign filef = p.file | split: '-' -%}
+  {% capture slug %}/{{ filef[0 ]}}/{{ filef[1] }}/{{filef | shift | shift | shift | join: '-' }}.html{% endcapture -%}
+  {% capture sluglink %}<a href="{{ slug | prepend: site.url }}">{% endcapture -%}
 
-  {% elsif p.layout == 'video' -%}
-    {% include video-block.html title=p.title date=p.date media=p.media content=p.content url=p.url -%}
-
+  {% assign linkf = p.link | smartify -%}
+  {% if linkf contains '[' -%}
+    {% assign linkf = linkf | replace: '[', sluglink | replace: ']', '</a>' -%}
+  {% else -%}
+    {% assign linkf = linkf | replace_first: ' ', '</a> ' | prepend: sluglink -%}
   {% endif -%}
+
+  <article>
+    <h1>{{ sluglink }}{{ p.title | smartify }}</a></h1>
+    <p>{{ linkf }}</p>
+  </article>
 
 {% endfor -%}

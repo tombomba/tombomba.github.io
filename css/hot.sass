@@ -1,0 +1,54 @@
+---
+# HOT SASS
+---
+
+@charset "utf-8"
+@import reset, base
+
+//-----------------------------------------------------------------------------
+
+body
+  font-family: $serif
+  font-size: 100%
+  line-height: (26/17)
+
+main article
+  &:not(:first-of-type)
+    margin-top: 2em
+  h1
+    font-size: 1rem
+    font-weight: 400
+    letter-spacing: 1px
+    text-transform: uppercase
+    overflow: hidden
+    a:link, a:visited
+      color: $text-color
+      text-decoration: none
+    a:hover
+      text-decoration: underline
+
+  p
+    margin-top: 0
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 32em)
+
+  body
+    font-size: 112.5%
+    line-height: (30/18)
+
+  main article
+    font-size: 1.4375rem
+    line-height: (34/23)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 84em)
+
+  body
+    font-size: 125%
+
+  main article
+    font-size: 1.5625rem
+    line-height: (36/25)

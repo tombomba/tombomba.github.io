@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: text
 title: "Look up, Bright Eyes"
 excerpt: "You've seen the original \"Planet of the Apes,\" right? Remember the ending? Good. So maybe you can explain something to me."
 date:   2018-09-27 21:26:12 -0700

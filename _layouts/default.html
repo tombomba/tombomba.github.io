@@ -43,7 +43,7 @@
     <meta name="twitter:image:src" content="{{ page.image | default: 'default-twitter.png' | prepend: site.img_dir | prepend: site.url }}">
 
     <!-- css -->
-    <link rel="stylesheet" href="{{ 'default.css' | prepend: site.css_dir | prepend: site.url }}" >
+    <link rel="stylesheet" href="{{ page.style | default: 'post.css' | prepend: site.css_dir | prepend: site.url }}" >
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee+Shade&text={{ site.title | upcase }}">
 
     <!-- msft mobile hacks -->

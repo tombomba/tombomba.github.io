@@ -46,6 +46,10 @@
 
   {% assign headline = titlef | prepend: '<header class="lede">' | append: '<p>' -%}
 
+  {% comment -%}
+    !! Display the content (finally) !!
+  {% endcomment -%}
+
   {{ content | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' }}
 
   {% if include.url -%}

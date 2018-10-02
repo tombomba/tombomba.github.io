@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: text
 title: Has Nicolas Cage paid back the I.R.S. yet?
 excerpt: "\"Mandy\" is a technicolor geek show. We pays our money and we takes our chances to see Nicolas Cage, fanboy favorite and former actor, bite the head off a cinematic chicken."
-date: 2018-10-01 12:34:56 -0700
+date: 2018-10-03 12:34:56 -0700
 ---
 
 ![Mandy 2018 Nicolas Cage film still]({{ '/mandy-2018-nicolas-cage-film-still.jpg' | prepend: site.img_dir | prepend: site.url }}){: .middle .extend }

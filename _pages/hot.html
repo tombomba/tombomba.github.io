@@ -1,0 +1,16 @@
+---
+layout: default
+permalink: /hot/
+---
+
+{% for p in site.posts limit: 10 -%}
+
+  {% if p.layout == 'text' -%}
+    {% include text-block.html title=p.title date=p.date content=p.content url=p.url -%}
+
+  {% elsif p.layout == 'video' -%}
+    {% include video-block.html title=p.title date=p.date media=p.media content=p.content url=p.url -%}
+
+  {% endif -%}
+
+{% endfor -%}

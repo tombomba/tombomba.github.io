@@ -12,23 +12,33 @@ body
   font-size: 100%
   line-height: (26/17)
 
-main article
-  &:not(:first-of-type)
-    margin-top: 2em
-  h1
-    font-size: 1rem
-    font-weight: 400
-    letter-spacing: 1px
-    text-transform: uppercase
-    overflow: hidden
-    a:link, a:visited
-      color: $text-color
-      text-decoration: none
-    a:hover
-      text-decoration: underline
+main
+  max-width: 35em
 
-  p
-    margin-top: 0
+  article
+    &:not(:first-of-type)
+      margin-top: 2em
+    h1
+      font-size: 0.95rem
+      font-weight: 400
+      letter-spacing: 1px
+      text-transform: uppercase
+      overflow: hidden
+      a:link, a:visited
+        color: $text-color
+        text-decoration: none
+      a:hover
+        text-decoration: underline
+
+    p
+      margin-top: 0
+
+    img
+      max-width: 30%
+      border-radius: 50%
+      &.right
+        float: right
+        margin: 0 0 0.5em 0.5em
 
 //-----------------------------------------------------------------------------
 
@@ -38,9 +48,22 @@ main article
     font-size: 112.5%
     line-height: (30/18)
 
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40em)
+
   main article
-    font-size: 1.4375rem
-    line-height: (34/23)
+    font-size: 1.375rem
+    line-height: (32/22)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 64em)
+
+  main article
+
+    img.right
+      margin-right: -1em
 
 //-----------------------------------------------------------------------------
 
@@ -50,5 +73,5 @@ main article
     font-size: 125%
 
   main article
-    font-size: 1.5625rem
-    line-height: (36/25)
+    font-size: 1.5rem
+    line-height: (35/24)

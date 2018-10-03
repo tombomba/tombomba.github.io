@@ -19,7 +19,7 @@ main article
     line-height: 1.33
     letter-spacing: -0.1px
     overflow: hidden
-    &.titlelink
+    &.link
       a:link, a:visited
         color: $text-color
         text-decoration: none
@@ -118,7 +118,9 @@ main article
   main article
 
     h1
-      font-size: 200%
+      &.post,
+      &.home
+        font-size: 200%
 
     figure, img.right
       margin-right: -1em

@@ -18,10 +18,10 @@
   {% assign titlef = titlef | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
 
   {% if include.url -%}
-  <h1 class="titlelink"><a href="{{ include.url | prepend: site.url }}">{{ titlef | default: include.title }}</a></h1>
+  <h1 class="home link"><a href="{{ include.url | prepend: site.url }}">{{ titlef | default: include.title }}</a></h1>
 
   {% else -%}
-  <h1>{{ titlef | default: include.title }}</h1>
+  <h1 class="post">{{ titlef | default: include.title }}</h1>
 
   {% endif -%}
 

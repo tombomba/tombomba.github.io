@@ -1,5 +1,4 @@
 ---
-layout: page
 title: About
 excerpt: "My name is Tom Bomba."
 permalink: /about/

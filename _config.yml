@@ -19,6 +19,30 @@ collections:
   archive:
     output: true
 
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: "post"
+      is_post: true
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      is_page: true
+  -
+    scope:
+      path: ""
+      type: "archive"
+    values:
+      layout: "index-by-date"
+      is_index: true
+
+
 markdown: kramdown
 kramdown:
     auto_ids: false

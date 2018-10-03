@@ -72,10 +72,11 @@ a
 
 header[role="banner"]
   max-width: 100%
-  padding: 1em 0
+  padding: 1em 0 0 0
 
   .logo
     h1
+      font-size: percentage(30/18)
       font-family: 'Bungee Shade', $sans
       font-weight: 900
       line-height: 1
@@ -93,10 +94,7 @@ header[role="banner"]
     text-transform: uppercase
 
   .homelink
-    p
-      text-align: center
-      a:link, a:visited
-        text-decoration: none
+    display: none
 
   hr
     margin-top: 1em
@@ -117,25 +115,20 @@ footer
     margin: 1em auto 0 auto
     list-style-type: none
     text-align: center
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 32em)
-
-  footer .nav li
-    display: inline
-    padding-right: 0.5em
-    &:not(:last-of-type):after
-      content: "-"
-      padding-left: 0.5em
-      color: $mix-color
-
+    li
+      display: inline
+      padding-right: 0.5em
+      &:not(:last-of-type):after
+        content: "-"
+        padding-left: 0.5em
+        color: $mix-color
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40em)
 
   header[role="banner"]
+    padding: 1em 0
 
     .wrap
       display: flex
@@ -151,5 +144,10 @@ footer
       margin: 0
 
     .homelink
+      display: block
       order: 1
       margin: 0
+      p
+        text-align: center
+        a:link, a:visited
+          text-decoration: none

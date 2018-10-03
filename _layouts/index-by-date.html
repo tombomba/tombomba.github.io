@@ -32,13 +32,13 @@ style: page.css
       {% assign current_year = p.date | date: "%Y" -%}
 
       {% if is_month_index and current_month == page_month and current_year == page_year -%}
-          <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | smartify }}</a> &mdash; {{ p.excerpt | strip_html | strip | normalize_whitespace | smartify }} <em>({{ p.date | date: "%d %b" }})</em></li>
+          <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | smartify }}</a> &mdash; {{ p.excerpt | strip_html | strip | normalize_whitespace | smartify | truncate: 280 }} <em>({{ p.date | date: "%d %b" }})</em></li>
       {% elsif is_year_index and current_year == page_year -%}
-          <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | smartify }}</a> &mdash; {{ p.excerpt | strip_html | strip | normalize_whitespace | smartify }} <em>({{ p.date | date: "%d %b" }})</em></li>
+          <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | smartify }}</a> &mdash; {{ p.excerpt | strip_html | strip | normalize_whitespace | smartify | truncate: 280 }} <em>({{ p.date | date: "%d %b" }})</em></li>
       {% endif -%}
 
     {% endfor -%}
 
   </ul>
-
+  
 </article>

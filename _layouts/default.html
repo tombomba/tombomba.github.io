@@ -46,8 +46,13 @@
 <body>
 
 <header role="banner">
-  <div class="logo">
-    <h1><a href="{{ site.url }}">{{ site.title | upcase }}</a></h1>
+  <div class="wrap">
+    <div class="logo"><h1><a href="{{ site.url }}">{{ site.title | upcase }}</a></h1></div>
+    <div class="datelink">
+      {% if page.date %}{% assign banner_dt = page.date %}{% else %}{% assign banner_dt = site.posts.first.date %}{% endif -%}
+      <p><a href="{{ banner_dt | date: '/%Y/%m/' | prepend: site.url }}">{{ banner_dt | date: "%b %Y" }}</a></p>
+    </div>
+    <div class="homelink"><p><a href="{{ site.url }}" title="Back to homepage">&#9679;</a></p></div>
   </div>
   <hr>
 </header>

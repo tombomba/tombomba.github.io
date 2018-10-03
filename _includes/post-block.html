@@ -1,6 +1,6 @@
 {% assign content = include.content -%}
 
-<article class="text">
+<article class="{% if include.url %}home{% else %}post{% endif %}">
 
   {% comment -%}
     !! Remove kramdown's extra markup around image files !!

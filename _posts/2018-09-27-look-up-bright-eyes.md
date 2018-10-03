@@ -4,7 +4,7 @@ excerpt: "You've seen the original \"Planet of the Apes,\" right? Remember the e
 date:   2018-09-27 21:26:12 -0700
 ---
 
-![Planet of the Apes poster art 1968]({{ '/planet-of-the-apes-1968-poster-art.jpg' | prepend: site.img_dir | prepend: site.url }}){: .right .tilt }
+![Planet of the Apes poster art 1968]({{ '/planet-of-the-apes-1968-poster-art.jpg' | prepend: site.img_dir | prepend: site.url }}){: .top .right .tilt }
 
 You've seen the original "Planet of the Apes," right? Remember the ending? Okay, good. So maybe you can tell me how Taylor, the astronaut played by Charlton Heston, didn't realize where he was from the start. Because he should have.
 

@@ -43,17 +43,17 @@
 
 </head>
 
-<body>
+<body>{% if page.layout %}<!-- {{ page.layout }} -->{% endif %}
 
 <header role="banner">
   <div class="wrap">
     <div class="logo"><h1><a href="{{ site.url }}">{{ site.title | upcase }}</a></h1></div>
     <div class="datelink">
-      {% if page.date -%}
+      {% if page.date -%}<!-- page date -->
         <p><a href="{{ page.date | date: '/%Y/%m/' | prepend: site.url }}">{{ page.date | date: "%b %Y" }}</a></p>
-      {% elsif page.is_index -%}
+      {% elsif page.is_index -%}<!-- is_index -->
         <p><a href="{{ site.posts.first.date | date: '/%Y/' | prepend: site.url }}">{{ site.posts.first.date | date: "%Y" }}</a></p>
-      {% else -%}
+      {% else -%}<!-- default: site.posts.first.date -->
         <p><a href="{{ site.posts.first.date | date: '/%Y/%m/' | prepend: site.url }}">{{ site.posts.first.date | date: "%b %Y" }}</a></p>
       {% endif -%}
     </div>

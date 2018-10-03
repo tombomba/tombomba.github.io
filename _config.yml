@@ -15,10 +15,6 @@ future: false
 permalink: /:year/:month/:title:output_ext
 timezone: America/Los_Angeles
 
-collections:
-  archive:
-    output: true
-
 defaults:
   -
     scope:
@@ -36,8 +32,8 @@ defaults:
       is_page: true
   -
     scope:
-      path: ""
-      type: "archive"
+      path: "archive"
+      type: "pages"
     values:
       layout: "index-by-date"
       is_index: true

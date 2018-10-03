@@ -20,7 +20,7 @@ style: page.css
   {% assign title_string = page_year -%}
 {% endif -%}
 
-<article>{% if page.date %}<!-- wtf {{ page.date }} -->{% endif %}
+<article>{% if page.date %}<!-- {{ page.date }} -->{% endif %}
 
   <h1 class="index">{{ title_string }}</h1>
 

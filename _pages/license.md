@@ -1,5 +1,6 @@
 ---
 title: License
+is_copyright: true
 permalink: /license/
 ---
 

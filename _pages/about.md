@@ -1,6 +1,7 @@
 ---
 title: About
 excerpt: "My name is Tom Bomba."
+is_bio: true
 permalink: /about/
 ---
 

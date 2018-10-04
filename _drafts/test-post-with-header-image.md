@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "The quick brown fox jumps over the lazy dog"
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed venenatis justo. Aenean vitae vehicula lacus. Phasellus molestie purus in risus sodales, nec dapibus nibh viverra."
 date: 2018-9-23 12:34:56 -0700

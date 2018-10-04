@@ -1,13 +1,10 @@
 ---
-layout: post
 title: "Hello, baby, hello!"
 media:
-  #vimeo: 288759859
   vimeo: 207842411
 date: 2018-09-30 12:45:32 -0700
-via: https://www.itsnicethat.com/articles/nassos-vakalis-dinner-for-few-animation-190918
 ---
-Simeon Kondev's "Hair Baby" is four odd minutes filled with nervous energy, shimmering lines, and propulsive characters. You kinda just have to watch it.
+Simeon Kondev's ["Hair Baby"](https://vimeo.com/207842411) is four odd minutes filled with nervous energy, shimmering lines, and propulsive characters. You kinda just have to watch it.
 
 The film is like underground comix mixed with mainstream weird; its style evokes _RAW_ magazine, _Liquid Television,_ _Zap Comix,_ and hand-printed zines.
 

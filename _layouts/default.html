@@ -13,6 +13,14 @@
     {% if page.id %}<link rel="canonical" href="{{ page.url | default: '' | prepend: site.url }}">{% endif %}
 
     <!-- icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=7ko9ydmaGq">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=7ko9ydmaGq">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=7ko9ydmaGq">
+    <link rel="manifest" href="/site.webmanifest?v=7ko9ydmaGq">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=7ko9ydmaGq" color="#ff0033">
+    <link rel="shortcut icon" href="/favicon.ico?v=7ko9ydmaGq">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#d9d9d9">
 
     <!-- RSS feed -->
     <link rel="alternate" title="{{ site.title }}" type="application/atom+xml" href="{{ '/feed.xml' | prepend: site.url }}">

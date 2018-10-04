@@ -65,5 +65,5 @@ exclude:
   - _snips
   - .gitignore
   - .DS_Store
-  - favicon_package.zip
+  - favicon-package.zip
   - s3_website.yml

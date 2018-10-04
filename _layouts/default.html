@@ -13,12 +13,12 @@
     {% if page.id %}<link rel="canonical" href="{{ page.url | default: '' | prepend: site.url }}">{% endif %}
 
     <!-- icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=7ko9ydmaGq">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=7ko9ydmaGq">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=7ko9ydmaGq">
-    <link rel="manifest" href="/site.webmanifest?v=7ko9ydmaGq">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=7ko9ydmaGq" color="#ff0033">
-    <link rel="shortcut icon" href="/favicon.ico?v=7ko9ydmaGq">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=coooooooool">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=coooooooool">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=coooooooool">
+    <link rel="manifest" href="/site.webmanifest?v=coooooooool">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=coooooooool" color="#ff0033">
+    <link rel="shortcut icon" href="/favicon.ico?v=coooooooool">
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#d9d9d9">
 
@@ -79,7 +79,7 @@
 <footer>
   <hr>
   <ul class="nav">
-    <li><a href="{{ '/about/' | prepend: site.url }}" aria-label="background on this website">About</a></li><li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="{{ site.github | prepend: 'https://github.com/' }}">Github</a></li><li><a href="{{ '/feed.xml' | prepend: site.url }}">RSS</a></li><li><a href="{{ '/license/' | prepend: site.url }}" aria-label="licensing information">&copy;</a></li>
+    <li><a href="{{ site.url }}">{{ site.url | remove: 'https://' | remove:'http://' | remove: 'www' | split:'/' | first | capitalize }}</a></li><li><a href="{{ '/about/' | prepend: site.url }}" aria-label="background on this website">About</a></li><li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="{{ site.github | prepend: 'https://github.com/' }}">Github</a></li><li><a href="{{ '/feed.xml' | prepend: site.url }}">RSS</a></li><li><a href="{{ '/license/' | prepend: site.url }}" aria-label="licensing information">&copy;</a></li>
   </ul>
 </footer>
 

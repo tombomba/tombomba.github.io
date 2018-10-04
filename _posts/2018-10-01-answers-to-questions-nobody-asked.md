@@ -1,6 +1,6 @@
 ---
 title: Answers to questions nobody asked
-date: 2018-09-24 12:34:56 -0700
+date: 2018-10-01 12:34:56 -0700
 ---
 I'm [not a critic]({{ '/about/' | prepend: site.url }}) but it's sometimes fun to answer questions put to them. So I cribbed this interview from [Who's Who in Reviews](https://www.rogerebert.com/chazs-blog/whos-who-in-reviews-table-of-contents) and substituted my own responses.
 

@@ -4,17 +4,7 @@ is_home: true
 permalink: /index.html
 ---
 
-{% for p in site.posts limit: 10 -%}
+{% assign p = site.posts.first %}
+{% assign content = p.content %}
 
-  {% case p.layout -%}
-
-    {{ p.title | inspect }}
-
-    {{ p.media | inspect }}
-
-    {% when 'post' -%}
-      {% include post-block.html title=p.title date=p.date media=p.media content=p.content url=p.url -%}
-
-  {% endcase -%}
-
-{% endfor -%}
+{% include post-block.html title=p.title date=p.date media=p.media content=p.content url=p.url -%}

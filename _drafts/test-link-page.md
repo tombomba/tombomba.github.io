@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Sed quis aliquet enim"
 date: 2018-10-02 02:37:01 -0700
 ---

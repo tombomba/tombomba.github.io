@@ -1,8 +1,12 @@
 ---
-title: "Eat the rich"
+layout: video
+title: "Eat the rich before they eat you"
 media:
   vimeo: 288759859
-  caption: "Video: \"Dinner for Few.\" Directed by Nassos Vakalis. 2018."
+  title: "Dinner for Few"
+  author: Nassos Vakalis
+  year: 2018
+  #caption: "Video: \"Dinner for Few.\" Directed by Nassos Vakalis. 2018."
 via: https://www.itsnicethat.com/articles/nassos-vakalis-dinner-for-few-animation-190918
 date: 2018-10-16 19:10:44 -0700
 ---

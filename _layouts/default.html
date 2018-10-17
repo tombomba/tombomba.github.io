@@ -78,7 +78,7 @@
   <aside>
     <hr>
     <div class="prev">
-      <h2 class="index">Previously</h1>
+      <h2 class="index">Also this month</h1>
       <ul class="recent">
         {% for p in site.posts limit: 5 offset: 1 %}
         <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | smartify }}</a> &mdash; {{ p.excerpt | strip_html | strip | normalize_whitespace | smartify | truncate: 280 }}</li>

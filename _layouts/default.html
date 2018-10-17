@@ -105,7 +105,7 @@
 <footer class="{% if page.is_post or page.is_home %}post{% else %}page{% endif %}">
   <hr>
   <ul class="nav">
-    {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_bio %}<li><a href="{{ '/about/' | prepend: site.url }}" aria-label="background on this website">About</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="{{ site.github | prepend: 'https://github.com/' }}">Github</a></li><li><a href="{{ '/feed.xml' | prepend: site.url }}">RSS</a></li>{% unless page.is_copyright %}<li><a href="{{ '/license/' | prepend: site.url }}" aria-label="licensing information">&copy;</a></li>{% endunless %}
+    {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_bio %}<li><a href="{{ '/about/' | prepend: site.url }}" aria-label="background on this website">About</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="{{ site.arena | prepend: 'https://are.na/' }}">Are.na</a></li><li><a href="{{ site.github | prepend: 'https://github.com/' }}">Github</a></li><li><a href="{{ '/feed.xml' | prepend: site.url }}">RSS</a></li>{% unless page.is_copyright %}<li><a href="{{ '/license/' | prepend: site.url }}" aria-label="licensing information">&copy;</a></li>{% endunless %}
   </ul>
 </footer>
 

@@ -14,20 +14,20 @@ body
 
 main article
 
-  h1
-    font-size: 125%
-    line-height: 1.22
-    letter-spacing: -0.1px
-    overflow: hidden
-    &.link
+  header.hed
+    h1
+      font-size: 125%
+      line-height: 1.22
+      letter-spacing: -0.1px
+      overflow: hidden
       a:link, a:visited
         color: $text-color
         text-decoration: none
         &:hover
           text-decoration: underline
 
+
   header.lede
-    margin-top: 1em
     h1
       font-size: 100%
       a:link, a:visited
@@ -79,6 +79,10 @@ main article
     a:hover
       text-decoration: underline
 
+  .permalink
+    a:link, a:visited
+      text-decoration: none
+
   .archive
     em
       color: $mix-color
@@ -117,13 +121,12 @@ aside
     &:not(:last-of-type)
       padding-bottom: 2em
 
-    h1
+    header.hed h1
       font-size: 150%
 
     img.right
       max-width: 42%
-      margin: 0.5em 0 1em 2em
-
+      margin: 1em 0 1em 2em
       &.tilt
         transform: rotate(3deg)
 
@@ -133,6 +136,9 @@ aside
 
   main article
 
+    header.hed h1
+      font-size: 200%
+
     img.middle
       &.extend
         width: calc(100% + 1em)
@@ -141,6 +147,9 @@ aside
 
     img.right
       margin-right: -1em
+      &.top
+        margin-top: -0.5em
+
 
 //-----------------------------------------------------------------------------
 

@@ -4,11 +4,33 @@ is_home: true
 permalink: /index.html
 ---
 
-{% assign p = site.posts.first %}
-{% assign content = p.content %}
-
 {% for p in site.posts limit: 20 -%}
 
-    <p>{{ page.title }}</p>
+  {% assign copy = p.content -%}
+  {% if p.tags contains 'feature' %}{% assign is_feature=true %}{% endif %}
+
+  <article>
+
+    {% if copy contains 'img src=' -%}
+      {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
+    {% endif -%}
+
+    {% if is_feature -%}
+      {% include hed.html -%}
+
+    {% else -%}
+      {% include lede.html -%}
+
+    {% endif -%}
+
+    {% if p.media %}
+      {% include figure.html media=p.media fat=is_feature %}
+    {% endif -%}
+
+    {{ copy }}
+
+    <p class="permalink"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}">&#9679;</a></time></p>
+
+  </article>
 
 {% endfor %}

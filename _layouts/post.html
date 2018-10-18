@@ -2,22 +2,30 @@
 layout: default
 ---
 
+{% assign p = page -%}
+{% assign copy = content -%}
+{% if p.tags contains 'feature' %}{% assign is_feature=true %}{% endif -%}
+
 <article>
 
-  {% assign raw_headline = page.title | strip | normalize_whitespace | smartify -%}
+  {% if copy contains 'img src=' -%}
+    {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
+  {% endif -%}
 
-  {% capture punc -%}{% unless page.title contains '.' or page.title contains '!' or page.title contains '?' -%}<span class="punc"></span>{% endunless -%}{% endcapture -%}
+  {% if is_feature -%}
+    {% include hed.html -%}
 
-  {% capture titlef -%}{% if page.url -%}<h1><a href="{{ page.url | prepend: site.url }}">{{ raw_headline}}</a>{% else -%}<h1>{{ raw_headline }}{% endif -%}{{ punc }}</h1>&#32;{% endcapture -%}
+  {% else -%}
+    {% include lede.html -%}
 
-  {% assign headline = titlef | prepend: '<header class="lede">' | append: '<p>' -%}
+  {% endif -%}
 
-  {% comment -%}
-    !! Display the content (finally) !!
-  {% endcomment -%}
+  {% if p.media %}
+    {% include figure.html media=p.media fat=is_feature %}
+  {% endif -%}
 
-  {{ content | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' }}
+  {{ copy }}
 
-  <p class="datestamp"><time pubdate datetime="{{ page.date | date: "%FT%T%:z" }}">{{ page.date | date_to_string }}</time></p>
+  <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></p>
 
 </article>

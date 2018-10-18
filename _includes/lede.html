@@ -1,0 +1,7 @@
+{% assign raw_headline = p.title | strip | normalize_whitespace | smartify -%}
+
+{% capture punc -%}{% unless p.title contains '.' or p.title contains '!' or p.title contains '?' -%}<span class="punc"></span>{% endunless -%}{% endcapture -%}
+
+{% capture headline -%}<header class="lede"><h1>{% if page.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ raw_headline }}</a>{% else %}{{ raw_headline }}{% endif %}{{ punc }}</h1>&#32;<p>{% endcapture -%}
+
+{% assign copy = copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' %}

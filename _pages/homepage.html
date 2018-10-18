@@ -9,8 +9,8 @@ permalink: /index.html
 
 {% case p.layout -%}
 
-{% when 'video' -%}
-  {% include video-block.html title=p.title date=p.date media=p.media content=p.content url=p.url -%}
+  {% when 'video' -%}
+    {% include video-block.html title=p.title date=p.date media=p.media content=p.content url=p.url -%}
 
   {% when 'text' -%}
     {% include text-block.html title=p.title date=p.date content=p.content url=p.url -%}

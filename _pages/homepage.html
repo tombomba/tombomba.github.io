@@ -7,12 +7,8 @@ permalink: /index.html
 {% assign p = site.posts.first %}
 {% assign content = p.content %}
 
-{% case p.layout -%}
+{% for p in site.posts limit: 20 -%}
 
-  {% when 'video' -%}
-    {% include video-block.html title=p.title date=p.date media=p.media content=p.content url=p.url -%}
+    <p>{{ page.title }}</p>
 
-  {% when 'text' -%}
-    {% include text-block.html title=p.title date=p.date content=p.content url=p.url -%}
-
-{% endcase -%}
+{% endfor %}

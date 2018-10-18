@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<article>
+
+  {% assign raw_headline = page.title | strip | normalize_whitespace | smartify -%}
+
+  {% capture punc -%}{% unless page.title contains '.' or page.title contains '!' or page.title contains '?' -%}<span class="punc"></span>{% endunless -%}{% endcapture -%}
+
+  {% capture titlef -%}{% if page.url -%}<h1><a href="{{ page.url | prepend: site.url }}">{{ raw_headline}}</a>{% else -%}<h1>{{ raw_headline }}{% endif -%}{{ punc }}</h1>&#32;{% endcapture -%}
+
+  {% assign headline = titlef | prepend: '<header class="lede">' | append: '<p>' -%}
+
+  {% comment -%}
+    !! Display the content (finally) !!
+  {% endcomment -%}
+
+  {{ content | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' }}
+
+  <p class="datestamp"><time pubdate datetime="{{ page.date | date: "%FT%T%:z" }}">{{ page.date | date_to_string }}</time></p>
+
+</article>

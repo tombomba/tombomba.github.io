@@ -19,7 +19,11 @@
   </div>
 
   {% elsif include.media.picture -%}
-  <a href="{{ p.url | prepend: site.url }}"><img src="{{ include.media.picture | prepend: site.img_dir }}" alt="{{ include.media.alt }}"></a>
+    {% if page.is_home -%}
+      <a href="{{ p.url | prepend: site.url }}"><img src="{{ include.media.picture | prepend: site.img_dir }}" alt="{{ include.media.alt }}" class="homelink"></a>
+    {% else -%}
+      <img src="{{ include.media.picture | prepend: site.img_dir }}" alt="{{ include.media.alt }}" class="postlink"></a>
+    {% endif -%}
 
   {% endif -%}
 

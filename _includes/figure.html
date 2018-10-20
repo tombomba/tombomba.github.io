@@ -20,13 +20,13 @@
 
   {% elsif include.media.picture -%}
     {% if page.is_home -%}
-      <a href="{{ p.url | prepend: site.url }}"><img src="{{ include.media.picture | prepend: site.img_dir }}" alt="{{ include.media.alt }}" class="homelink"></a>
+      <a href="{{ p.url | prepend: site.url }}"><img src="{{ include.media.picture | prepend: site.img_dir }}" alt="{{ include.media.alt }}"></a>
     {% else -%}
-      <img src="{{ include.media.picture | prepend: site.img_dir }}" alt="{{ include.media.alt }}" class="postlink"></a>
+      <img src="{{ include.media.picture | prepend: site.img_dir }}" alt="{{ include.media.alt }}">
     {% endif -%}
 
   {% endif -%}
 
-  {% if include.media.caption %}<figcaption>{{ include.media.caption | default: 'Caption!' | strip | normalize_whitespace | truncate: 280 | smartify | markdownify }}</figcaption>{% endif %}
+  {% if include.media.caption -%}<figcaption>{{ include.media.caption | default: 'Caption!' | strip | normalize_whitespace | truncate: 280 | smartify | markdownify }}</figcaption>{% endif -%}
 
 </figure>

@@ -12,7 +12,8 @@ permalink: /index.html
   <article>
 
     {% if copy contains 'img src=' -%}
-      {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
+      {% capture img_swap %}<a href="{{ p.url | prepend: site.url }}"><img{% endcapture -%}
+      {% assign copy = copy | replace: '<p><img', img_swap | replace: ' /></p>', '></a>' -%}
     {% endif -%}
 
     {% if is_feature -%}

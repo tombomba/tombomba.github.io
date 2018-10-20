@@ -4,7 +4,7 @@ excerpt: "Remember the ending? Good. Maybe you can explain something to me."
 date:   2018-10-07 21:26:12 -0700
 ---
 
-![Planet of the Apes 1968 1968]({{ '/img/planet-of-the-apes-1968-poster-art.jpg' }}){: .top .right .tilt }
+![Planet of the Apes 1968 poster art]({{ '/img/planet-of-the-apes-1968-poster-art.jpg' }}){: .top .right .tilt }
 
 Remember the ending? Okay, good. So maybe you can tell me how Taylor, the astronaut played by Charlton Heston, didn't realize where he was from the start. Because he should have.
 

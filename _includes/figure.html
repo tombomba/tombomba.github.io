@@ -19,7 +19,7 @@
   </div>
 
   {% elsif include.media.picture -%}
-  <img src="{{ include.media.picture | prepend: site.img_dir }}" alt="{{ include.media.alt }}">
+  <a href="{{ p.url | prepend: site.url }}"><img src="{{ include.media.picture | prepend: site.img_dir }}" alt="{{ include.media.alt }}"></a>
 
   {% endif -%}
 

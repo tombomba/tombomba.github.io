@@ -4,6 +4,7 @@ layout: default
 
 {% assign p = page -%}
 {% assign copy = content -%}
+{% assign wordcount = copy | number_of_words -%}
 {% if p.tags contains 'feature' %}{% assign is_feature=true %}{% endif -%}
 
 <article>
@@ -26,6 +27,9 @@ layout: default
 
   {{ copy }}
 
-  <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></p>
+  <div class="byline">
+    {% if wordcount >= 500 %}<p>{{ page.author | default: site.author | strip | normalize_whitespace | smartify }}</p>{% endif -%}
+    <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></p>
+  </div>
 
 </article>

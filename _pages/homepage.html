@@ -4,7 +4,7 @@ is_home: true
 permalink: /index.html
 ---
 
-{% for p in site.posts limit: 20 -%}
+{% for p in site.posts limit: 10 -%}
 
   {% assign copy = p.content -%}
   {% if p.tags contains 'feature' %}{% assign is_feature=true %}{% endif %}
@@ -33,5 +33,7 @@ permalink: /index.html
     <p class="permalink"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}">&#9679;</a></time></p>
 
   </article>
+
+  {% assign is_feature = false %}
 
 {% endfor %}

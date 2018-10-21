@@ -1,6 +1,6 @@
 ---
 title: "Jason Blum is the debbil now"
-date: 2018-10-20 13:34:56 -0700
+date: 2018-10-21 12:34:56 -0700
 ---
 
 

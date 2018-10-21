@@ -1,6 +1,6 @@
 ---
 title: "Barbara Kruger returns to MOCA Los Angeles"
-date: 2018-10-20 14:51:01 -0700
+date: 2018-10-21 18:19:20 -0700
 media:
   picture: gary-leonard-los-angeles-1992.jpg
   alt: "Photo: Gary Leonard. Los Angeles. 1992."

@@ -2,7 +2,7 @@
 title: "Banksy really, really wants you to watch this video"
 media:
   youtube: vxkwRNIZgdY
-  caption: "Video: Banksy. \"Shredding the Girl and Balloon.\" 2018."
+  caption: "Video: Banksy. \"Shred the Love: Director's Cut.\" 2018."
 date: 2018-10-20 23:11:20 -0700
 ---
 

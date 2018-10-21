@@ -1,6 +1,15 @@
 {% assign raw_headline = p.title | strip | normalize_whitespace | smartify -%}
 
-{% capture punc -%}{% unless p.title contains '.' or p.title contains '!' or p.title contains '?' -%}<span class="punc"></span>{% endunless -%}{% endcapture -%}
+{% capture punc -%}
+  {% unless p.title contains '.' or p.title contains '!' or p.title contains '?' -%}
+    {% assign last_char = p.title | slice: -1, 1 -%}
+    {% if last_char == '"' or last_char == "'" -%}
+      <span class="dash"></span>
+    {% else -%}
+      <span class="punc"></span>
+    {% endif %}
+  {% endunless -%}
+{% endcapture -%}
 
 {% capture headline -%}<header class="lede"><h1>{% if page.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ raw_headline }}</a>{% else %}{{ raw_headline }}{% endif %}{{ punc }}</h1>&#32;<p>{% endcapture -%}
 

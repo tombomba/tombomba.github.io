@@ -6,6 +6,7 @@ media:
   alt: "Photo: Gary Leonard. Los Angeles. 1992."
   caption: "Photo: Gary Leonard. Los Angeles, 1992."
 via: http://www.latimes.com/entertainment/arts/miranda/la-et-cam-barbara-kruger-moca-mural-20181018-story.html
+published: false
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum pulvinar viverra. Pellentesque viverra luctus faucibus. Quisque vitae augue sed augue vulputate suscipit. Nam id ex blandit, ornare nunc sed, facilisis eros. Nunc eu lacus nisl. In fermentum vehicula augue, eget ultricies felis fermentum at. Phasellus id vulputate lectus, in rutrum dui. Nullam tellus libero, sollicitudin nec accumsan tempus, tempus id ante. Ut semper enim sit amet nulla tempus lobortis.

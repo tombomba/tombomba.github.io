@@ -2,7 +2,7 @@
 title: "Rebels. Empires. Death Stars. Haven't we seen this movie before?"
 excerpt: "The \"Rogue One\" trailer dropped last night during the Rio Olympics coverage. I watched, I sighed, I shrugged."
 media:
-  youtube: frdj1zb9sMY
+  video: https://www.youtube.com/embed/frdj1zb9sMY
   ratio: 640x360
   caption: "Pew! Pew pew pew! Pew pew!"
 date: 2016-08-12 21:45:12 -0700

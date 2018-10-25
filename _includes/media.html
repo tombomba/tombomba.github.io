@@ -4,29 +4,38 @@
   {% assign h = aspectr[1] | plus: 0.0 -%}
   {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
 {% endif -%}
-{% capture player-tag %}<div class="player"{% if percent %} style="padding-bottom:{{ percent }}%"{% endif %} aria-label="media player">{% endcapture -%}
 
-<figure class="{% if include.fat %}fat{% else %}thin{% endif %}">
+{% if include.media.video contains 'youtube' -%}
+  {% assign vflags = "title=0&portrait=0&badge=0&byline=0&controls=2&autohide=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0" -%}
+{% elsif include.media.video contains 'vimeo' -%}
+  {% assign vflags = "badge=0&color=0000FF&title=0&byline=0&portrait=0" -%}
+{% endif -%}
 
-  {% if include.media.vimeo -%}
-  {{ player-tag }}
-  <iframe src="https://player.vimeo.com/video/{{ include.media.vimeo }}?badge=0&color=0000FF&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen  allowfullscreen></iframe>
+{% if include.media.caption -%}{% capture caption -%}<figcaption>{{ include.media.caption | default: 'Caption!' | strip | normalize_whitespace | truncate: 280 | smartify | markdownify }}</figcaption>{% endcapture -%}{% endif -%}
+
+{% if include.media.video -%}
+<figure>
+  <div class="player"{% if percent %} style="padding-bottom:{{ percent }}%"{% endif %} aria-label="media player">
+    <iframe src="{{ include.media.video }}?{{ vflags }}" frameborder="0" webkitallowfullscreen mozallowfullscreen  allowfullscreen></iframe>
   </div>
+  {{ caption }}
+</figure>
 
-  {% elsif include.media.youtube -%}
-  {{ player-tag }}
-  <iframe src="https://www.youtube.com/embed/{{ include.media.youtube | strip | normalize_whitespace }}?title=0&portrait=0&badge=0&byline=0&controls=2&autohide=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-  </div>
+{% elsif include.media.image -%}
 
-  {% elsif include.media.picture -%}
-    {% if page.is_home -%}
-      <a href="{{ p.url | prepend: site.url }}"><img src="{{ include.media.picture | prepend: site.img_dir }}" alt="{{ include.media.alt }}"></a>
-    {% else -%}
-      <img src="{{ include.media.picture | prepend: site.img_dir }}" alt="{{ include.media.alt }}">
-    {% endif -%}
+  {% capture img -%}
+    <img src="{{ include.media.image | prepend: site.img_dir }}" alt="{{ include.media.alt }}" {% if include.media.style %}class="{{ include.media.style }}"{% endif %}>
+  {% endcapture -%}
+
+  {% if include.media.style %}
+    {% if page.is_home -%}<a href="{{ p.url | prepend: site.url }}">{{ img }}</a>{% else %}{{ img }}{% endif %}
+
+  {% else -%}
+    <figure>
+      {% if page.is_home -%}<a href="{{ p.url | prepend: site.url }}">{{ img }}</a>{% else -%}{{ img }}{% endif %}
+      {{ caption }}
+    </figure>
 
   {% endif -%}
 
-  {% if include.media.caption -%}<figcaption>{{ include.media.caption | default: 'Caption!' | strip | normalize_whitespace | truncate: 280 | smartify | markdownify }}</figcaption>{% endif -%}
-
-</figure>
+{% endif -%}

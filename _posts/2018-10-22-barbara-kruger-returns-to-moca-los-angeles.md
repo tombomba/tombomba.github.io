@@ -1,7 +1,7 @@
 ---
 title: "Barbara Kruger returns to MOCA Los Angeles"
 media:
-  picture: gary-leonard-los-angeles-1992.jpg
+  image: gary-leonard-los-angeles-1992.jpg
   alt: "Photo: Gary Leonard. Los Angeles. 1992."
   caption: "Photo: Gary Leonard. Los Angeles, 1992."
 via: http://www.latimes.com/entertainment/arts/miranda/la-et-cam-barbara-kruger-moca-mural-20181018-story.html

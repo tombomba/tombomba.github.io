@@ -3,33 +3,16 @@ layout: default
 ---
 
 {% assign p = page -%}
-{% assign copy = content -%}
-{% assign wordcount = copy | number_of_words -%}
-{% if p.tags contains 'feature' %}{% assign is_feature=true %}{% endif -%}
+{% include init.html -%}
 
 <article>
 
-  {% if copy contains 'img src=' -%}
-    {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
-  {% endif -%}
+  <h1 class="{% if is_feature %}lg{% else %}md{% endif %}">{{ titlef | default: p.title }}</h1>
 
-  {% if is_feature -%}
-    {% include hed.html -%}
-
-  {% else -%}
-    {% include lede.html -%}
-
-  {% endif -%}
-
-  {% if p.media %}
-    {% include figure.html media=p.media fat=is_feature %}
-  {% endif -%}
+  {% if p.media %}{% include media.html media=p.media %}{% endif -%}
 
   {{ copy }}
 
-  <div class="byline">
-    {% if wordcount >= 500 %}<p>{{ page.author | default: site.author | strip | normalize_whitespace | smartify }}</p>{% endif -%}
-    <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></p>
-  </div>
+  {% include byline.html -%}
 
 </article>

@@ -1,0 +1,94 @@
+---
+# DEFAULT
+---
+
+@charset "utf-8"
+@import reset, base, figure, img
+
+//-----------------------------------------------------------------------------
+
+body
+  font-family: $serif
+  font-size: 100%
+  line-height: (27/16)
+
+main article
+
+  h1
+    font-size: 125%
+    &.lg
+      font-size: 150%
+    line-height: 1.4
+    a:link, a:visited
+      color: $text-color
+      text-decoration: none
+    a:hover
+      text-decoration: underline
+
+  h2, h3, h4, h5, h6
+    font-size: 1em
+    margin-top: 1em
+
+  p, li, hr
+    margin-top: 1em
+
+  li + p,
+    margin-top: 0
+
+  blockquote
+    padding: 0 2em
+    &>p:first-of-type:before
+      content: "\201C"
+    &>p:last-of-type:after
+      content: "\201D"
+
+  a img
+    border-width: 1px
+    border-style: solid
+    border-color: inherit
+
+  .byline
+    margin-top: 1em
+    p
+      margin: 0
+      color: $mix-color
+      a:link, a:visited
+        color: $mix-color
+        text-decoration: none
+      a:hover
+        text-decoration: underline
+
+  .permalink
+    a:link, a:visited
+      text-decoration: none
+
+  .archive
+    img
+      margin: 0 3px 1.5px 3px
+      vertical-align: baseline
+    em
+      color: $mix-color
+      white-space: nowrap
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 32em)
+
+  body
+    font-size: 112.5%
+    line-height: (30/18)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40em)
+
+  main article
+    &:not(:last-of-type)
+      padding-bottom: 2em
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 90em)
+
+  body
+    font-size: 125%

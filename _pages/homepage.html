@@ -24,9 +24,7 @@ permalink: /index.html
 
     {% endif -%}
 
-    {% if p.media %}
-      {% include figure.html media=p.media fat=is_feature %}
-    {% endif -%}
+    {% if p.media %}{% include media.html media=p.media %}{% endif -%}
 
     {{ copy }}
 

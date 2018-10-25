@@ -43,15 +43,14 @@
     <meta name="twitter:image:src" content="{{ page.media.opengraph | default: 'default-opengraph.png' | prepend: site.img_dir | prepend: site.url }}">
 
     <!-- css -->
-    <link rel="stylesheet" href="{{ page.style | default: 'post.css' | prepend: site.css_dir | prepend: site.url }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee+Shade&text={{ site.title | upcase }}">
+    <link rel="stylesheet" href="{{ 'default.css' | prepend: site.css_dir | prepend: site.url }}">
 
     <!-- msft mobile hacks -->
     <script>!function(){if("-ms-user-select"in document.documentElement.style&&navigator.userAgent.match(/IEMobile/)){var a=document.createElement("style");a.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")),document.getElementsByTagName("head")[0].appendChild(a)}}();</script>
 
 </head>
 
-<body>{% if page.layout %}<!-- {{ page.layout }} -->{% endif %}
+<body>
 
 <header role="banner">
   <div class="wrap">

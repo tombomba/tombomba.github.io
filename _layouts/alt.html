@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+{% assign p = page -%}
+{% include init.html -%}
+
+<article>
+
+  {% if p.media.image %}{% include media.html media=p.media %}{% endif -%}
+
+  <h1 class="{% if is_feature %}lg{% else %}md{% endif %}">{{ titlef | default: p.title }}</h1>
+
+  {{ copy }}
+
+  {% include byline.html %}
+
+</article>

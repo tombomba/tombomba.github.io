@@ -1,10 +1,10 @@
 ---
 title: "Look up, Chuck"
-excerpt: "Remember the ending? Good. Maybe you can explain something to me."
+excerpt: "You've seen the original \"Planet of the Apes,\" right? Remember the ending? Good. Maybe you can explain something to me."
 date:   2018-10-07 21:26:12 -0700
 ---
 
-![Planet of the Apes 1968 poster art]({{ '/img/planet-of-the-apes-1968-poster-art.jpg' }}){: .top .right .tilt }
+![poster art]({{ '/img/planet-of-the-apes-1968-poster-art.jpg' }}){: .top .right .tilt }
 
 You've seen the original 'Planet of the Apes,' right? Remember the ending? Okay, good. So maybe you can tell me how Taylor, the astronaut played by Charlton Heston, didn't realize where he was from the start. Because he should have.
 

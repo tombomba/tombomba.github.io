@@ -10,16 +10,22 @@ layout: default
 {% endif -%}
 
 <article>
+  
+  {% if inline_images -%}
+    {% include lede.html -%}
 
-  {% assign wc = p.content | number_of_words -%}
-
-  {% if wc <= 100 -%}
-    {% include note.html -%}
   {% else -%}
-    {% include hed.html -%}
-    {% if p.media %}{% include media.html media=p.media %}{% endif -%}
-  {% endif -%}
 
+    {% assign wc = p.content | number_of_words -%}
+
+    {% if wc <= 100 -%}
+      {% include note.html -%}
+    {% else -%}
+      {% include hed.html -%}
+      {% if p.media %}{% include media.html media=p.media %}{% endif -%}
+    {% endif -%}
+
+  {% endif -%}
   {{ copy }}
 
   <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></p>

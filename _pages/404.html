@@ -11,7 +11,7 @@ permalink: /404.html
   {% assign sub = titlef.last | prepend: '!QQ!' -%}
   {% assign titlef = titlef | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
 
-  <h1>{{ titlef | default: page.title }}</h1>
+  <h1 class="md">{{ titlef | default: page.title }}</h1>
 
   <p>Please check the URL for proper spelling and capitalization. If you’re having trouble locating a destination on the site, visit the <a href="{{ site.url}}">home page</a> or browse posts from <a href="{{ site.posts.first.date | date: '/%Y/%m/' }}">this month</a> or <a href="{{ site.posts.first.date | date: '/%Y/' }}">this&nbsp;year</a>.</p>
 

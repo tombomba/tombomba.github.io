@@ -54,7 +54,7 @@
 
 <header role="banner">
   <div class="wrap">
-    <div class="logo"><h1><a href="{{ site.url }}">{{ site.title | upcase }}</a></h1></div>
+    <div class="logo"><a href="{{ site.url }}"><img src="{{ 'troubleday.gif' | prepend: site.img_dir }}" alt="Troubleday"></a></div>
     <div class="datelink">
       {% if page.is_post -%}
         <p><a href="{{ page.date | date: '/%Y/%m/' | prepend: site.url }}">{{ page.date | date: "%b %Y" }}</a></p>

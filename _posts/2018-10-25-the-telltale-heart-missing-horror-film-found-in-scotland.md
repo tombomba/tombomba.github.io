@@ -1,6 +1,6 @@
 ---
 title: "Missing horror film found in Scotland"
-date: 2018-10-26 10:42:11 -0700
+date: 2018-10-25 10:42:11 -0700
 via: https://www.bbc.com/news/uk-scotland-south-scotland-45951333
 ---
 

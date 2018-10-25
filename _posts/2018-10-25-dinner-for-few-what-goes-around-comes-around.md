@@ -1,5 +1,6 @@
 ---
 title: "What goes around comes around in 'Dinner for Few'"
+excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac tincidunt erat, vitae scelerisque enim."
 media:
   video: https://player.vimeo.com/video/288759859
   caption: "Video: Nassos Vakalis. \"Dinner for Few.\" 2018."
@@ -7,4 +8,6 @@ via: https://www.itsnicethat.com/articles/nassos-vakalis-dinner-for-few-animatio
 date: 2018-10-25 11:12:44 -0700
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac tincidunt erat, vitae scelerisque enim. Nullam est turpis, convallis vel ante ac, sagittis fringilla dui. Vestibulum maximus dolor ipsum, eget sollicitudin massa interdum tempus. Integer congue sodales viverra. Nullam condimentum non ipsum ultricies tincidunt. Morbi semper mauris ante, vitae faucibus orci venenatis non. Sed vitae posuere nisi. Vivamus in consectetur lectus. Mauris lacinia, nibh a feugiat elementum, mi tellus congue turpis, et consectetur justo purus sed odio. Donec vitae hendrerit lectus. Etiam malesuada purus tortor, tincidunt tincidunt tortor sollicitudin et. Curabitur pulvinar nec nisi volutpat volutpat. Mauris vel sagittis nisi. Duis.
+Nassos Vakalis' ["Dinner for Few"](https://www.itsnicethat.com/articles/nassos-vakalis-dinner-for-few-animation-190918) is a bald political allegory and a good one. The film begins at dilapidated seaside hotel during a storm. Inside, a sounder of pigs, each of them walking upright and wearing formal attire, gather around a table, demanding to be fed. A manservant works an odd machine; he shovels raw materials into one end and fresh food comes out the other side. Below is a clowder of cats, fighting over the scraps. As the pigs become more voracious, the cats more aggressive. What happens when there's nothing left to eat?
+
+"Dinner for Few" isn't a traditional narrative. The characters are symbols, the conflict obvious, and there is no dialogue. The music and foley effects set my teeth on edge and the visuals  repulsed me. Yet I couldn't take my eyes off it. It's all the trappings of a good horror film but in a 10 minute cartoon. The tension builds and Vakalis dips lightly into surreal fantasy on top of his running allegory. The payoff is cynical without being nihilistic. The result is a film that is grotesque, pointed, and beautifully done.

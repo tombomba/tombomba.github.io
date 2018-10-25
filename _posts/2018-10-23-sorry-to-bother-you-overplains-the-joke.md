@@ -6,6 +6,7 @@ media:
   image: sorry-to-bother-you-2018-poster-art.jpg
   alt: "Sorry to Bother You 2018 poster art"
   style: "top left tilt"
+  float: true
 date: 2018-10-23 18:19:20 -0700
 ---
 

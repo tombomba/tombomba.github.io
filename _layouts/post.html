@@ -3,24 +3,25 @@ layout: default
 ---
 
 {% assign p = page -%}
-{% include init.html -%}
+{% assign copy = p.content -%}
+{% if copy contains 'img src=' -%}
+  {% assign inline_images = true -%}
+  {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
+{% endif -%}
 
 <article>
 
-  {% if p.media.float -%}
-
-    {% include media.html media=p.media %}
-    <h1 class="{% if is_feature %}lg{% else %}md{% endif %}">{{ titlef | default: p.title }}</h1>
+  {% if inline_images -%}
+    {% include lede.html -%}
 
   {% else -%}
-
-    <h1 class="{% if is_feature %}lg{% else %}md{% endif %}">{{ titlef | default: p.title }}</h1>
+    {% include hed.html -%}
     {% if p.media %}{% include media.html media=p.media %}{% endif -%}
 
   {% endif -%}
 
   {{ copy }}
 
-  {% include byline.html -%}
+  <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></p>
 
 </article>

@@ -7,24 +7,22 @@ permalink: /index.html
 {% for p in site.posts limit: 10 -%}
 
   {% assign copy = p.content -%}
-  {% if p.tags contains 'feature' %}{% assign is_feature=true %}{% endif %}
+  {% if copy contains 'img src=' -%}
+    {% assign inline_images = true -%}
+    {% capture img_swap %}<a href="{{ p.url | prepend: site.url }}"><img{% endcapture -%}
+    {% assign copy = copy | replace: '<p><img', img_swap | replace: ' /></p>', '></a>' -%}
+  {% endif -%}
 
   <article>
 
-    {% if copy contains 'img src=' -%}
-      {% capture img_swap %}<a href="{{ p.url | prepend: site.url }}"><img{% endcapture -%}
-      {% assign copy = copy | replace: '<p><img', img_swap | replace: ' /></p>', '></a>' -%}
-    {% endif -%}
-
-    {% if is_feature -%}
-      {% include hed.html -%}
-
-    {% else -%}
+    {% if inline_images -%}
       {% include lede.html -%}
 
-    {% endif -%}
+    {% else -%}
+      {% include hed.html -%}
+      {% if p.media %}{% include media.html media=p.media %}{% endif -%}
 
-    {% if p.media %}{% include media.html media=p.media %}{% endif -%}
+    {% endif -%}
 
     {{ copy }}
 
@@ -32,6 +30,6 @@ permalink: /index.html
 
   </article>
 
-  {% assign is_feature = false %}
+  {% assign inline_images = false %}
 
 {% endfor %}

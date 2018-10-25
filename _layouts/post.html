@@ -11,13 +11,13 @@ layout: default
 
 <article>
 
-  {% if inline_images -%}
-    {% include lede.html -%}
+  {% assign wc = p.content | number_of_words -%}
 
+  {% if wc <= 100 -%}
+    {% include note.html -%}
   {% else -%}
     {% include hed.html -%}
     {% if p.media %}{% include media.html media=p.media %}{% endif -%}
-
   {% endif -%}
 
   {{ copy }}

@@ -59,6 +59,18 @@ main article
     a:link, a:visited
       text-decoration: none
 
+  .note
+    h1
+      font-size: 100%
+      line-height: (27/16)
+    h1, p
+      display: inline
+      margin: 0
+    .punc::after
+      content: "."
+    .dash::after
+      content: "\2014"
+
   .archive
     em
       color: $mix-color
@@ -71,6 +83,10 @@ main article
   body
     font-size: 112.5%
     line-height: (30/18)
+
+  main article
+    .note h1
+      line-height: (30/18)
 
 //-----------------------------------------------------------------------------
 

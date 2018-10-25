@@ -1,0 +1,32 @@
+{% if include.media.ratio -%}
+  {% assign aspectr = include.media.ratio | default: '640x360' | split: 'x' -%}
+  {% assign w = aspectr[0] | plus: 0.0 -%}
+  {% assign h = aspectr[1] | plus: 0.0 -%}
+  {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
+{% endif -%}
+{% capture player-tag %}<div class="player"{% if percent %} style="padding-bottom:{{ percent }}%"{% endif %} aria-label="media player">{% endcapture -%}
+
+<figure class="{% if include.fat %}fat{% else %}thin{% endif %}">
+
+  {% if include.media.vimeo -%}
+  {{ player-tag }}
+  <iframe src="https://player.vimeo.com/video/{{ include.media.vimeo }}?badge=0&color=0000FF&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen  allowfullscreen></iframe>
+  </div>
+
+  {% elsif include.media.youtube -%}
+  {{ player-tag }}
+  <iframe src="https://www.youtube.com/embed/{{ include.media.youtube | strip | normalize_whitespace }}?title=0&portrait=0&badge=0&byline=0&controls=2&autohide=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </div>
+
+  {% elsif include.media.picture -%}
+    {% if page.is_home -%}
+      <a href="{{ p.url | prepend: site.url }}"><img src="{{ include.media.picture | prepend: site.img_dir }}" alt="{{ include.media.alt }}"></a>
+    {% else -%}
+      <img src="{{ include.media.picture | prepend: site.img_dir }}" alt="{{ include.media.alt }}">
+    {% endif -%}
+
+  {% endif -%}
+
+  {% if include.media.caption -%}<figcaption>{{ include.media.caption | default: 'Caption!' | strip | normalize_whitespace | truncate: 280 | smartify | markdownify }}</figcaption>{% endif -%}
+
+</figure>

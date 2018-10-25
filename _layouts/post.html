@@ -10,7 +10,7 @@ layout: default
 {% endif -%}
 
 <article>
-  
+
   {% if inline_images -%}
     {% include lede.html -%}
 
@@ -18,7 +18,7 @@ layout: default
 
     {% assign wc = p.content | number_of_words -%}
 
-    {% if wc <= 100 -%}
+    {% if wc <= 75 -%}
       {% include note.html -%}
     {% else -%}
       {% include hed.html -%}

@@ -21,8 +21,8 @@ permalink: /index.html
     {% else -%}
 
       {% assign wc = p.content | number_of_words -%}
-      
-      {% if wc <= 100 -%}
+
+      {% if wc <= 75 -%}
         {% include note.html -%}
       {% else -%}
         {% include hed.html -%}

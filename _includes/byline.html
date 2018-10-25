@@ -1,0 +1,4 @@
+<div class="byline">
+  {% if wordcount >= 500 %}<p>{{ p.author | default: site.author | strip | normalize_whitespace | smartify }}</p>{% endif -%}
+  <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></p>
+</div>

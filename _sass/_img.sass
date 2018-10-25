@@ -1,0 +1,70 @@
+main article
+
+  img.middle
+    display: inline-block
+    margin-top: 1.22em
+    padding-bottom: 0.22em
+    &.center
+      margin-left: auto
+      margin-right: auto
+
+  img.left
+    max-width: 36%
+    float: left
+    margin: 0.5em 1em 1em 0
+    &.top
+      margin-top: -0.5em
+
+  img.right
+    max-width: 36%
+    float: right
+    margin: 0.5em 0.0em 0.5em 0.5em
+    &.top
+      margin-top: -0.5em
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 32em)
+
+  main article
+
+    img.left, img.right
+      max-width: 42%
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40em)
+
+  main article
+
+    img.left
+      margin: 1em 2em 1em 0
+      &.tilt
+        transform: rotate(-3deg)
+
+    img.right
+      margin: 1em 0 1em 2em
+      &.tilt
+        transform: rotate(3deg)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 64em)
+
+  main article
+
+    img.middle
+      &.extend
+        width: calc(100% + 1em)
+        max-width: calc(100% + 1em)
+        margin-right: calc(-1em)
+
+    img.left
+      margin-left: -1em
+      &.top
+        margin-top: -0.5em
+
+    img.right
+      margin-right: -1em
+      &.top
+        margin-top: -0.5em

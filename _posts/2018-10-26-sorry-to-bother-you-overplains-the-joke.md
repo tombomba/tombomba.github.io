@@ -1,8 +1,7 @@
 ---
 title: "'Sorry to Bother You' over explains the joke"
 excerpt: "Cras rutrum sit amet nisl a dignissim. Aenean posuere purus ac ligula lobortis, ut bibendum tellus eleifend."
-date: 2018-10-23 18:19:20 -0700
-published: false
+date: 2018-10-26 18:19:20 -0700
 ---
 
 ![poster art]({{ '/img/sorry-to-bother-you-2018-poster-art.jpg' }}){: .top .left .tilt }

@@ -5,8 +5,8 @@
 
 <header class="hed">
   {% if page.is_home -%}
-    <h1 class="{{ hedsize | default: 'md' }}"><a href="{{ p.url | prepend: site.url }}">{{ titlef | default: include.title }}</a></h1>
+    <h1><a href="{{ p.url | prepend: site.url }}">{{ titlef | default: include.title }}</a></h1>
   {% else -%}
-    <h1 class="{{ hedsize | default: 'md' }}">{{ titlef | default: include.title }}</h1>
+    <h1>{{ titlef | default: include.title }}</h1>
   {% endif -%}
 </header>

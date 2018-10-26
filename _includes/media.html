@@ -27,15 +27,9 @@
     <img src="{{ include.media.image | prepend: site.img_dir }}" alt="{{ include.media.alt }}" {% if include.media.style %}class="{{ include.media.style }}"{% endif %}>
   {% endcapture -%}
 
-  {% if include.media.style %}
-    {% if page.is_home -%}<a href="{{ p.url | prepend: site.url }}">{{ img }}</a>{% else %}{{ img }}{% endif %}
-
-  {% else -%}
-    <figure>
-      {% if page.is_home -%}<a href="{{ p.url | prepend: site.url }}">{{ img }}</a>{% else -%}{{ img }}{% endif %}
-      {{ caption }}
-    </figure>
-
-  {% endif -%}
+  <figure>
+    {% if page.is_home -%}<a href="{{ p.url | prepend: site.url }}">{{ img }}</a>{% else -%}{{ img }}{% endif %}
+    {{ caption }}
+  </figure>
 
 {% endif -%}

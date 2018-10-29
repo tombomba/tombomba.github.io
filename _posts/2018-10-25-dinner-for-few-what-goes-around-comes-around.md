@@ -1,6 +1,6 @@
 ---
 title: "What goes around comes around in 'Dinner for Few'"
-excerpt: "Nassos Vakalis' animated short film is a bald political allegory, and a good one."
+excerpt: "Nassos Vakalis' animated short film is a bald political allegory and a good one."
 media:
   video: https://player.vimeo.com/video/288759859
   caption: "Video: Nassos Vakalis. \"Dinner for Few.\" 2018."

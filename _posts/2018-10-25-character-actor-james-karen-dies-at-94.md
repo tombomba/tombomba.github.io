@@ -1,5 +1,6 @@
 ---
 title: "Character actor James Karen dies at 94"
+excerpt: "You might remember him from such films as \"Poltergeist\" and \"Return of the Living Dead.\""
 date: 2018-10-25 18:19:20 -0700
 via: http://www.latimes.com/entertainment/movies/la-et-mn-james-karen-appreciation-leonard-maltin-20181025-story.html
 ---

@@ -4,9 +4,12 @@
     - footer
     - most margins
 
+// Max column width
+$max-width: 34em
+
 // Colors
-$body-color:    #E2E2E2 !default
-$text-color:    #000 !default
+$body-color:    #F3F3F3 !default
+$text-color:    #222 !default
 
 $mix-color:     mix($body-color, $text-color, 35%) !default
 $light-mix:     lighten($mix-color, 25%) !default
@@ -104,7 +107,7 @@ header[role="banner"]
 
 main article
   margin: 4em auto 0 auto
-  max-width: 37em
+  max-width: $max-width
   @extend .clearfix
 
 footer

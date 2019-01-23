@@ -66,7 +66,6 @@
     </div>
     <div class="homelink"><p><a href="{{ site.url }}" title="Back to homepage">&#9679;</a></p></div>
   </div>
-  <hr>
 </header>
 
 <main>
@@ -76,7 +75,6 @@
 </main>
 
 <footer class="{% if page.is_post or page.is_home %}post{% else %}page{% endif %}">
-  <hr>
   <ul class="nav">
     {% unless page.is_bio %}<li><a href="/about/" aria-label="background on this website">About</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li>{% unless page.is_copyright %}<li><a href="/license/" aria-label="licensing information">&copy;</a></li>{% endunless %}
   </ul>

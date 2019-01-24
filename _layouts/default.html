@@ -57,14 +57,14 @@
   <div class="wrap">
 
     <div class="logo">
-      <a href="{{ site.url }}">&nbsp;</a>
+      <a href="{{ site.url }}"><img src="{{ 'default-logo.jpg' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.title }} logo"></a>
     </div>
 
     <div class="meta">
       <h1 class="brand"><a href="{{ site.url }}">{{ site.title }}</a></h1>
       <p class="tagline">{{ site.data.taglines | sample: 1 | smartify }}</p>
-      <p class="datestamp">{{ page.date | date: "%d %b %Y" }}</p>
-    </div>
+      <p class="datestamp">{% if page.is_post -%}<a href="{{ page.date | date: '/%Y/%m/' | prepend: site.url }}">{{ page.date | date: "%b %Y" }}</a>{% elsif page.is_index -%}{% if page.permalink and page.permalink.size > 6 %}<a href="{{ site.posts.first.date | date: '/%Y/' | prepend: site.url }}">{{ site.posts.first.date | date: "%Y" }}</a>{% else %}{{ site.posts.first.date | date: "%Y" }}{% endif %}{% else -%}<a href="{{ site.posts.first.date | date: '/%Y/%m/' | prepend: site.url }}">{{ site.posts.first.date | date: "%b %Y" }}</a>{% endif -%}</p>
+    </div><!--- hello -->
 
   </div>
 

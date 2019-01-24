@@ -91,12 +91,14 @@ header[role="banner"]
     align-items: center
 
   .logo
-    width: bem(4)
-    height: bem(4)
-    min-width: bem(4)
+    width: bem(3.5)
+    height: bem(3.5)
+    min-width: bem(3.5)
     flex-grow: 0
-    border-radius: 50%
-    background-color: $light-mix
+    img
+      //border: bem(0.25) solid $dark-mix
+      border-radius: 50%
+      background-color: $dark-mix
 
   .meta
     margin-left: bem(0.5)
@@ -110,7 +112,7 @@ header[role="banner"]
       display: inline
 
       &.tagline
-        color: $dark-mix
+        color: $light-mix
 
       &.datestamp
         color: $light-mix

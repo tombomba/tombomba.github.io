@@ -10,7 +10,7 @@
 body
   font-family: $serif
   font-size: 100%
-  line-height: (27/16)
+  line-height: $line-height
 
 main article
 
@@ -24,17 +24,17 @@ main article
       text-decoration: underline
 
   h2, h3, h4, h5, h6
-    font-size: 1em
-    margin-top: 1em
+    font-size: 100%
+    margin-top: bem(1)
 
   p, li, hr
-    margin-top: 1em
+    margin-top: bem(1)
 
   li + p,
     margin-top: 0
 
   blockquote
-    padding: 0 2em
+    padding: 0 bem(1)
     &>p:first-of-type:before
       content: "\201C"
     &>p:last-of-type:after
@@ -81,11 +81,10 @@ main article
 
   body
     font-size: 112.5%
-    line-height: (30/18)
 
   main article
     .note h1
-      line-height: (30/18)
+      line-height: $line-height
 
 //-----------------------------------------------------------------------------
 
@@ -93,7 +92,7 @@ main article
 
   main article
     &:not(:last-of-type)
-      padding-bottom: 1em
+      padding-bottom: bem(1)
 
 //-----------------------------------------------------------------------------
 

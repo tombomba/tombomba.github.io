@@ -18,7 +18,7 @@ layout: default
 
     {% assign wc = p.content | number_of_words -%}
 
-    {% if wc <= 75 -%}
+    {% if wc <= 1000 -%}
       {% include note.html -%}
     {% else -%}
       {% include hed.html -%}

@@ -6,10 +6,11 @@
 
 // Max column width
 $max-width: 34em
+$line-height: (30/18)
 
 // Colors
 $body-color:    #F3F3F3 !default
-$text-color:    #222 !default
+$text-color:    #111 !default
 
 $mix-color:     mix($body-color, $text-color, 35%) !default
 $light-mix:     lighten($mix-color, 25%) !default
@@ -25,6 +26,15 @@ $select-color:  #FFC !default
 // Fonts
 $serif: Georgia, Cambria, 'Century Schoolbook L', serif
 $sans:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
+
+
+// Mixins
+@function bem($size: 1, $context: $line-height)
+  @return ($size * $context) * 1em
+
+@mixin font-ratio($size: 1, $context: $line-height)
+    font-size: percentage($size)
+    line-height: $context / $size
 
 //-----------------------------------------------------------------------------
 
@@ -45,26 +55,23 @@ body
   -ms-text-size-adjust: auto
   -webkit-text-size-adjust: auto
 
-  padding: 0 1em
+  padding: bem(1)
 
 ul, ol
-  margin-left: 1em
+  margin-left: bem(1)
 
 ul
   list-style-type: disc
 
-hr
-  margin: 0
-
 a
-  text-decoration: underline
+  text-decoration: none
   text-decoration-skip-ink: auto
   &:link
     color: $link-color
   &:visited
     color: $visited-color
   &:hover
-    text-decoration: none
+    text-decoration: underline
   &:active
     color: $active-color
 
@@ -74,90 +81,69 @@ a
     background: $select-color
 
 header[role="banner"]
-  max-width: 100%
-  padding: 1em 0 0 0
+  max-width: ($max-width * 1.5)
+  margin: 0 auto
+
+  .wrap
+    display: flex
+    flex-direction: row
+    justify-content: space-evenly
+    align-items: center
 
   .logo
+    width: bem(4)
+    height: bem(4)
+    min-width: bem(4)
+    flex-grow: 0
+    border-radius: 50%
+    background-color: $light-mix
 
-    h1
-      font-size: percentage(30/18)
+  .meta
+    margin-left: bem(0.5)
+    flex-grow: 1
+    h1, p
       font-family: $sans
+      font-size: bem(1)
       font-weight: 900
       line-height: 1
-      text-align: center
-      a:link, a:visited
-        color: $logo-color
-        text-decoration: none
-    img
-      display: block
-      margin: 0 auto
-      height: 24px
+      text-transform: uppercase
+      display: inline
 
-  .datelink
-    margin: 1em 0 0 0
-    text-align: center
-    font-size: percentage(14/16)
-    color: $mix-color
+      &.tagline
+        color: $dark-mix
 
-  .homelink
-    display: none
-
-  hr
-    margin-top: 1em
+      &.datestamp
+        color: $light-mix
 
 main article
-  margin: 4em auto 0 auto
+  margin: bem(2) auto 0 auto
   max-width: $max-width
   @extend .clearfix
 
 footer
-  margin-top: 4em
-  margin-bottom: 1em
+  margin-top: bem(3)
   max-width: 100%
 
   .nav
-    margin: 1em auto 0 auto
+    margin: bem(3) auto 0 auto
     list-style-type: none
     text-align: center
     li
       display: inline
       font-size: percentage(14/16)
-      padding-right: 0.5em
+      padding-right: bem(0.25)
       color: $mix-color
       &:not(:last-of-type):after
         content: "-"
-        padding-left: 0.5em
+        padding-left: bem(0.25)
         color: $mix-color
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40em)
 
-  header[role="banner"]
+  //header[role="banner"]
 
-    .wrap
-      display: flex
-      justify-content: space-between
-      align-items: center
-
-    .logo
-      order: 2
-      flex: 1
-
-    .datelink
-      order: 3
-      margin: 0
-      flex-basis: 15%
-      text-align: right
-
-    .homelink
-      display: block
-      order: 1
-      margin: 0
-      flex-basis: 15%
-      text-align: left
-      p a:link, a:visited
-        text-decoration: none
 
 //-----------------------------------------------------------------------------
 

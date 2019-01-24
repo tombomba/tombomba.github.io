@@ -62,7 +62,7 @@
 
     <div class="meta">
       <h1 class="brand"><a href="{{ site.url }}">{{ site.title }}</a></h1>
-      <p class="tagline">{{ page.tagline | default: "All outta bubblegum" | smartify }}</p>
+      <p class="tagline">{{ site.data.taglines | sample: 1 | smartify }}</p>
       <p class="datestamp">{{ page.date | date: "%d %b %Y" }}</p>
     </div>
 

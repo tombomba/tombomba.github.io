@@ -13,14 +13,12 @@ $body-color:    #F3F3F3 !default
 $text-color:    #111 !default
 
 $mix-color:     mix($body-color, $text-color, 35%) !default
-$light-mix:     lighten($mix-color, 25%) !default
+$light-mix:     lighten($mix-color, 35%) !default
 $dark-mix:      darken($mix-color, 25%) !default
 
-$logo-color:    #F03 !default
-
-$link-color:    #00F !default
-$visited-color: #800080 !default
-$active-color:  #F60 !default
+$link-color:    #06F !default
+$visited-color: #939 !default
+$active-color:  #FC0 !default
 $select-color:  #FFC !default
 
 // Fonts
@@ -81,7 +79,7 @@ a
     background: $select-color
 
 header[role="banner"]
-  max-width: ($max-width * 1.5)
+  max-width: ($max-width * $line-height)
   margin: 0 auto
 
   .wrap
@@ -91,30 +89,28 @@ header[role="banner"]
     align-items: center
 
   .logo
+    display: flex
+    align-items: center
+    justify-content: center
     width: bem(3.5)
     height: bem(3.5)
     min-width: bem(3.5)
     flex-grow: 0
     img
-      //border: bem(0.25) solid $dark-mix
       border-radius: 50%
-      background-color: $dark-mix
 
   .meta
     margin-left: bem(0.5)
     flex-grow: 1
     h1, p
+      display: inline
       font-family: $sans
       font-size: bem(1)
       font-weight: 900
       line-height: 1
       text-transform: uppercase
-      display: inline
 
       &.tagline
-        color: $light-mix
-
-      &.datestamp
         color: $light-mix
 
 main article
@@ -123,22 +119,29 @@ main article
   @extend .clearfix
 
 footer
-  margin-top: bem(3)
-  max-width: 100%
+  margin: bem(4) auto 0 auto
+  max-width: $max-width
+
+  p
+    font-family: $sans
+    font-size: percentage(14/16)
+    text-align: center
 
   .nav
-    margin: bem(3) auto 0 auto
     list-style-type: none
     text-align: center
     li
       display: inline
+      font-family: $sans
       font-size: percentage(14/16)
+      font-weight: 900
+      text-transform: uppercase
       padding-right: bem(0.25)
       color: $mix-color
       &:not(:last-of-type):after
-        content: "-"
+        content: "\2022"
         padding-left: bem(0.25)
-        color: $mix-color
+        color: $light-mix
 
 //-----------------------------------------------------------------------------
 

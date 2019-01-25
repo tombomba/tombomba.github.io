@@ -10,7 +10,7 @@
 body
   font-family: $serif
   font-size: 100%
-  line-height: $line-height
+  line-height: (30/18)
 
 main article
 
@@ -24,17 +24,17 @@ main article
       text-decoration: underline
 
   h2, h3, h4, h5, h6
-    font-size: 100%
-    margin-top: bem(1)
+    font-size: 1em
+    margin-top: 1em
 
   p, li, hr
-    margin-top: bem(1)
+    margin-top: 1em
 
   li + p,
     margin-top: 0
 
   blockquote
-    padding: 0 bem(1)
+    padding: 0 2em
     &>p:first-of-type:before
       content: "\201C"
     &>p:last-of-type:after
@@ -55,7 +55,7 @@ main article
 
   .permalink
     a:link, a:visited
-      color: $logo-color
+      color: $mix-color
       text-decoration: none
 
   .note
@@ -81,22 +81,4 @@ main article
 
   body
     font-size: 112.5%
-
-  main article
-    .note h1
-      line-height: $line-height
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40em)
-
-  main article
-    &:not(:last-of-type)
-      padding-bottom: bem(1)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 90em)
-
-  body
-    font-size: 125%
+    line-height: $line-height

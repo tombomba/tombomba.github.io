@@ -1,6 +1,6 @@
-Can You Ever Forgive Me?
-TKTK
-2018
+# Can You Ever Forgive Me? (2018)
+# dir. TKTK
+# 25 Jan 2019 
 ---
 
 - Slight but effective movie abou urban lonliness, midlife regret, and the writing life that occasionally hit a little too close to home

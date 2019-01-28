@@ -9,6 +9,7 @@ github: tombomba
 img_dir: /assets/img/
 css_dir: /aseets/css/
 
+safe: true
 future: false
 
 permalink: /:year/:month/:title:output_ext

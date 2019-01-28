@@ -21,7 +21,7 @@ $body-color:    #F3F3F3 !default
 $text-color:    #111 !default
 
 $mix-color:     mix($body-color, $text-color, 35%) !default
-$light-mix:     lighten($mix-color, 35%) !default
+$light-mix:     lighten($mix-color, 30%) !default
 $dark-mix:      darken($mix-color, 25%) !default
 
 $link-color:    #06F !default
@@ -109,6 +109,7 @@ header[role="banner"]
       font-weight: 900
       line-height: 1
       text-transform: uppercase
+      letter-spacing: 0.66px
 
       &.tagline
         color: $light-mix
@@ -136,6 +137,7 @@ footer
       @include font-ratio(12/16)
       font-weight: 900
       text-transform: uppercase
+      letter-spacing: 0.17px
       padding-right: bem(0.66)
       color: $mix-color
 

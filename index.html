@@ -1,0 +1,42 @@
+---
+layout: default
+is_home: true
+permalink: /index.html
+---
+
+{% for p in site.posts limit: 10 -%}
+
+  {% assign copy = p.content -%}
+  {% if copy contains 'img src=' -%}
+    {% assign inline_images = true -%}
+    {% capture img_swap %}<a href="{{ p.url | prepend: site.url }}"><img{% endcapture -%}
+    {% assign copy = copy | replace: '<p><img', img_swap | replace: ' /></p>', '></a>' -%}
+  {% endif -%}
+
+  <article>
+
+    {% if inline_images -%}
+      {% include lede.html -%}
+
+    {% else -%}
+
+      {% assign wc = p.content | number_of_words -%}
+
+      {% if wc <= 75 -%}
+        {% include note.html -%}
+      {% else -%}
+        {% include hed.html -%}
+        {% if p.media %}{% include media.html media=p.media %}{% endif -%}
+      {% endif -%}
+
+    {% endif -%}
+
+    {{ copy }}
+
+    <p class="permalink"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}">&#9679;</a></time></p>
+
+  </article>
+
+  {% assign inline_images = false %}
+
+{% endfor %}

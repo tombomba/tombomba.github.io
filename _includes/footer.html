@@ -1,0 +1,5 @@
+<footer class="{% if page.is_post or page.is_home %}post{% else %}page{% endif %}">
+  <ul class="nav">
+    {% unless page.is_bio %}<li><a href="/about/" aria-label="background on this website">About</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li>
+  </ul>
+</footer>

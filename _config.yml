@@ -7,7 +7,7 @@ twitter: troubleday_
 github: tombomba
 
 img_dir: /assets/img/
-css_dir: /aseets/css/
+css_dir: /assets/css/
 
 safe: true
 future: false

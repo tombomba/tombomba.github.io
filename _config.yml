@@ -5,11 +5,9 @@ url: "https://www.troubleday.com"
 author: Tom Bomba
 twitter: troubleday_
 github: tombomba
-arena: tom-bomba
 
-# Build settings
-img_dir: /img/
-css_dir: /css/
+img_dir: /assets/img/
+css_dir: /aseets/css/
 
 future: false
 

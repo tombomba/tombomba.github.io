@@ -14,21 +14,15 @@ body
 
 main article
 
-  header.lede
-    h1
-      display: inline
-      font-size: 100%
-    p
-      display: inline
-
   h1
-    font-size: 125%
-    line-height: 1.4
+    font-size: 100%
+    line-height: 1.33
     a:link, a:visited
       color: $text-color
-      text-decoration: none
-    a:hover
-      text-decoration: underline
+
+  header
+    h1, p
+      display: inline
 
   h2, h3, h4, h5, h6
     font-size: 100%
@@ -52,37 +46,22 @@ main article
     border-style: solid
     border-color: inherit
 
-  .datestamp
-    font-family: $sans
-    font-size: percentage(14/16)
-    font-weight: 900
-    text-transform: uppercase
-    letter-spacing: 0.17px
-    color: $light-mix
-    a:link, a:visited
-      color: $light-mix
+  .punc::after
+    content: ".\20"
 
-  .permalink
-    a:link, a:visited
-      color: $mix-color
-      text-decoration: none
-
-  .note
-    h1
-      font-size: 100%
-      line-height: (27/16)
-    h1, p
+  .meta
+    margin-top: bem(1)
+    p
       display: inline
-      margin: 0
-    .punc::after
-      content: "."
-    .dash::after
-      content: "\20\2014"
-
-  .archive
-    em
-      color: $mix-color
-      white-space: nowrap
+      padding-right: 0.5em
+      font-family: $sans
+      @include font-ratio(12/16)
+      font-weight: 900
+      text-transform: uppercase
+      letter-spacing: 0.17px
+      color: $light-mix
+      a:link, a:visited
+        color: $light-mix
 
 //-----------------------------------------------------------------------------
 

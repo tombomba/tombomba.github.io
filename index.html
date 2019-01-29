@@ -4,7 +4,11 @@ is_home: true
 permalink: /index.html
 ---
 
-{% for p in site.posts limit: 10 -%}
+{% for p in site.posts limit: 20 -%}
+
+<div class="pagebreak">
+
+  <article>
 
   {% assign copy = p.content -%}
   {% if copy contains 'img src=' -%}
@@ -13,30 +17,25 @@ permalink: /index.html
     {% assign copy = copy | replace: '<p><img', img_swap | replace: ' /></p>', '></a>' -%}
   {% endif -%}
 
-  <article>
-
-    {% if inline_images -%}
-      {% include lede.html -%}
-
-    {% else -%}
-
-      {% assign wc = p.content | number_of_words -%}
-
-      {% if wc <= 75 -%}
-        {% include note.html -%}
-      {% else -%}
-        {% include hed.html -%}
-        {% if p.media %}{% include media.html media=p.media %}{% endif -%}
-      {% endif -%}
-
-    {% endif -%}
-
+  {% if p.media -%}
+    {% include media.html media=p.media -%}
+    <h1><a href="{{ p.url | prepend: site.url }}">{% include widont.html string=p.title %}</a></h1>
     {{ copy }}
 
-    <p class="permalink"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}">&#9679;</a></time></p>
+  {% else -%}
+    {% include note.html -%}
+    {{ copy }}
+
+  {% endif -%}
+
+  <div class="meta">
+    <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}" title="permalink">{{ p.date | date: '%a %d %b' }}</a></time></p>
+  </div>
 
   </article>
 
-  {% assign inline_images = false %}
+</div>
+
+  {% assign inline_images = false -%}
 
 {% endfor %}

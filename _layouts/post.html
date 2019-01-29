@@ -11,23 +11,26 @@ layout: default
 
 <article>
 
-  {% if inline_images -%}
-    {% include lede.html -%}
+{% assign copy = p.content -%}
+{% if copy contains 'img src=' -%}
+  {% assign inline_images = true -%}
+  {% capture img_swap %}<a href="{{ p.url | prepend: site.url }}"><img{% endcapture -%}
+  {% assign copy = copy | replace: '<p><img', img_swap | replace: ' /></p>', '></a>' -%}
+{% endif -%}
 
-  {% else -%}
-
-    {% assign wc = p.content | number_of_words -%}
-
-    {% if wc <= 1000 -%}
-      {% include note.html -%}
-    {% else -%}
-      {% include hed.html -%}
-      {% if p.media %}{% include media.html media=p.media %}{% endif -%}
-    {% endif -%}
-
-  {% endif -%}
+{% if p.media -%}
+  {% include media.html media=p.media -%}
+  <h1><a href="{{ p.url | prepend: site.url }}">{% include widont.html string=p.title %}</a></h1>
   {{ copy }}
 
-  <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></p>
+{% else -%}
+  {% include note.html -%}
+  {{ copy }}
+
+{% endif -%}
+
+<div class="meta">
+  <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}" title="permalink">{{ p.date | date: '%a %d %b %Y' }}</a></time></p>
+</div>
 
 </article>

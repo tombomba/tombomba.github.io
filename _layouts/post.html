@@ -5,18 +5,10 @@ layout: default
 {% assign p = page -%}
 {% assign copy = p.content -%}
 {% if copy contains 'img src=' -%}
-  {% assign inline_images = true -%}
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
 {% endif -%}
 
 <article>
-
-{% assign copy = p.content -%}
-{% if copy contains 'img src=' -%}
-  {% assign inline_images = true -%}
-  {% capture img_swap %}<a href="{{ p.url | prepend: site.url }}"><img{% endcapture -%}
-  {% assign copy = copy | replace: '<p><img', img_swap | replace: ' /></p>', '></a>' -%}
-{% endif -%}
 
 {% if p.media -%}
   {% include media.html media=p.media -%}

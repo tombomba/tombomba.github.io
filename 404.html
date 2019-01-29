@@ -1,22 +1,22 @@
 ---
 layout: default
-title: "Sorry, the page you requested was not found"
-excerpt: "The page you were looking for was not found on this server."
+title: "Oops"
+tagline: "404 error"
+excerpt: "The page you requested was not found."
 permalink: /404.html
 ---
 
+{% assign p = page -%}
+
 <article>
 
-  {% assign titlef = page.title | smartify | split: ' ' -%}
-  {% assign sub = titlef.last | prepend: '!QQ!' -%}
-  {% assign titlef = titlef | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
+{% capture copy -%}
+The page you requested was not found. Please check the URL for proper spelling and capitalization. If you're having trouble locating a destination on the site, visit the [home page]({{ site.url }}) or browse posts from [this month]({{ site.posts.first.date | date: '/%Y/%m/' }}) or [this&nbsp;year]({{ site.posts.first.date | date: '/%Y/' }}).
+{% endcapture -%}
 
-  <h1 class="md">{{ titlef | default: page.title }}</h1>
+{% assign copy = copy | smartify | markdownify -%}
+{% include note.html -%}
 
-  <p>Please check the URL for proper spelling and capitalization. If you’re having trouble locating a destination on the site, visit the <a href="{{ site.url}}">home page</a> or browse posts from <a href="{{ site.posts.first.date | date: '/%Y/%m/' }}">this month</a> or <a href="{{ site.posts.first.date | date: '/%Y/' }}">this&nbsp;year</a>.</p>
-
-  <!-- Search box! -->
-
-  <p>If you need additional help, <a href="https://twitter.com/{{ site.twitter }}">gimme a shout</a> on social&nbsp;media.</p>
+{{ copy }}
 
 </article>

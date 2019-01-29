@@ -1,6 +1,6 @@
 ---
 title: "Dinner for Few (Vakalis, 2018)"
-tagline: "Where we live high on the hog"
+tagline: "High on the hog"
 excerpt: "Nassos Vakalis' animated short film is a bald political allegory and a good one."
 media:
   video: https://player.vimeo.com/video/288759859

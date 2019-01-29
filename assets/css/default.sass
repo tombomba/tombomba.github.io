@@ -49,19 +49,16 @@ main article
   .punc::after
     content: ".\20"
 
-  .meta
-    margin-top: bem(1)
-    p
-      display: inline
-      padding-right: 0.5em
-      font-family: $sans
-      @include font-ratio(12/16)
-      font-weight: 900
-      text-transform: uppercase
-      letter-spacing: 0.17px
+  .datestamp
+    font-family: $sans
+    @include font-ratio(12/16)
+    font-weight: 900
+    text-transform: uppercase
+    letter-spacing: 0.17px
+    color: $light-mix
+    a:link, a:visited
       color: $light-mix
-      a:link, a:visited
-        color: $light-mix
+
 
 //-----------------------------------------------------------------------------
 

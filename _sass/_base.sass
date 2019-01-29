@@ -3,6 +3,7 @@
     - header
     - footer
     - most margins
+    - pagebreak delimiter for homepage
 
 // Mixins
 @function bem($size: 1, $context: $line-height)
@@ -78,29 +79,23 @@ a
     background: $select-color
 
 header[role="banner"]
+
   max-width: ($max-width + bem(7))
-  margin: bem(1) auto 0 auto
+  margin: 1em auto bem(2) auto
 
   .wrap
-    display: flex
-    flex-direction: row
-    justify-content: space-evenly
-    align-items: center
-    overflow: hidden
+    margin: 0 auto
 
   .logo
-    display: flex
-    align-items: center
-    justify-content: center
     width: bem(3)
     height: bem(3)
     min-width: bem(3)
     flex-grow: 0
     img
-      border-radius: 50%
+      border-radius: 5%
 
   .meta
-    margin-left: bem(0.5)
+    margin-top: bem(0.5)
     flex-grow: 1
     h1, p
       display: inline
@@ -110,6 +105,8 @@ header[role="banner"]
       line-height: 1
       text-transform: uppercase
       letter-spacing: 0.66px
+      a:link, a:visited
+        color: $link-color
 
       &.tagline
         color: $light-mix
@@ -117,21 +114,21 @@ header[role="banner"]
 main
 
   article
-    margin: bem(2) auto 0 auto
+    margin: bem(1) auto 0 auto
     max-width: $max-width
     @extend .clearfix
 
   .pagebreak
-    margin: bem(2) auto 0 auto
     max-width: ($max-width + bem(7))
+    margin: bem(1) auto 0 auto
     &:not(:first-of-type)
       border-top: 1px dashed $light-mix
 
 footer
   display: flex
-  justify-content: center
+  justify-content: flex-start
   align-items: center
-  margin: bem(3) auto 0 auto
+  margin: bem(2) auto 0 auto
   height: bem(2)
   border-top: 1px dashed $light-mix
   max-width: ($max-width + bem(7))
@@ -148,6 +145,56 @@ footer
       letter-spacing: 0.17px
       padding-right: bem(0.66)
       color: $mix-color
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40em)
+
+  header[role="banner"]
+
+    margin-top: bem(1)
+
+    .wrap
+      margin-left: -0.5em
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+
+    .logo
+      display: flex
+      align-items: center
+      justify-content: center
+      width: bem(3)
+      height: bem(3)
+      min-width: bem(3)
+      flex-grow: 0
+      img
+        border-radius: 50%
+
+    .meta
+      margin-top: 0
+      margin-left: bem(0.5)
+
+  main article, main .pagebreak
+      margin: bem(2) auto 0 auto
+
+  footer
+    justify-content: center
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50em)
+
+  header[role="banner"]
+
+    margin-bottom: 0
+
+    .wrap
+      margin-left: 0
+
+  footer
+    margin-top: bem(3)
 
 //-----------------------------------------------------------------------------
 

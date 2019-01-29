@@ -8,7 +8,7 @@
 {% if include.media.video contains 'youtube' -%}
   {% assign vflags = "title=0&portrait=0&badge=0&byline=0&controls=2&autohide=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0" -%}
 {% elsif include.media.video contains 'vimeo' -%}
-  {% assign vflags = "badge=0&color=0000FF&title=0&byline=0&portrait=0" -%}
+  {% assign vflags = "badge=0&color=06F&title=0&byline=0&portrait=0" -%}
 {% endif -%}
 
 {% if include.media.caption -%}{% capture caption -%}<figcaption>{{ include.media.caption | default: 'Caption!' | strip | normalize_whitespace | truncate: 280 | smartify | markdownify }}</figcaption>{% endcapture -%}{% endif -%}

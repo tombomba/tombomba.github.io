@@ -35,7 +35,7 @@ $active-color:  orange !default
 // Fonts
 $serif: Georgia, Cambria, 'Century Schoolbook L', serif
 $sans:  Verdana, Geneva, sans-serif
-$system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
+$system: 'Libre Franklin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
 
 //-----------------------------------------------------------------------------
 
@@ -105,7 +105,7 @@ header[role="banner"]
     h1, p
       display: inline
       font-family: $system
-      font-size: bem(1)
+      font-size: bem(0.95)
       font-weight: 900
       line-height: 1
       text-transform: uppercase
@@ -131,7 +131,7 @@ main
     max-width: ($max-width + bem(7))
     margin: bem(1) auto 0 auto
     &:not(:first-of-type)
-      border-top: 1px dashed rgba($text-color, 0.33) 
+      border-top: 1px dashed rgba($text-color, 0.33)
 
 footer
   display: flex

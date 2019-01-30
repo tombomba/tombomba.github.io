@@ -1,6 +1,5 @@
 ---
 title: "You've seen the original, right?"
-tagline: "Human see, human do"
 excerpt: "\"Planet of the Apes,\" 1968. Remember the ending? Good. Maybe you can explain something to me."
 date:   2018-10-07 21:26:12 -0700
 ---

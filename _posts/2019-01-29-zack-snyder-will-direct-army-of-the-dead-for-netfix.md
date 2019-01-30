@@ -1,5 +1,5 @@
 ---
-title: "Zack Snyder will direct 'Army of the Dead' for Netflix
+title: "Zack Snyder will direct 'Army of the Dead' for Netflix"
 date: 2019-01-29 22:58 -0800
 ---
 

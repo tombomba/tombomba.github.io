@@ -50,15 +50,12 @@ main article
     content: ".\20"
 
   .datestamp
-    font-family: $sans
-    @include font-ratio(13/16)
+    font-family: $system
+    @include font-ratio(14/16)
     font-weight: 900
     text-transform: uppercase
     letter-spacing: 0.17px
-    color: $light-mix
-    a:link, a:visited
-      color: $light-mix
-
+    color: rgba($text-color, 0.33)
 
 //-----------------------------------------------------------------------------
 
@@ -69,7 +66,7 @@ main article
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 80em)
+@media screen and (min-width: 90em)
 
   body
     font-size: 120%

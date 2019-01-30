@@ -18,21 +18,24 @@ $max-width: 34em
 $line-height: (30/18)
 
 // Colors
-$body-color:    #EAEAEA !default
-$text-color:    #111 !default
+$body-color:    #E2E2E2 !default
+$text-color:    #161616 !default
 
-$mix-color:     mix($body-color, $text-color, 35%) !default
-$light-mix:     lighten($mix-color, 30%) !default
-$dark-mix:      darken($mix-color, 25%) !default
+$logo-color:    #00F
+$select-color:  #FFC
 
-$link-color:    #06F !default
-$visited-color: #939 !default
-$active-color:  #FC0 !default
-$select-color:  #FFC !default
+$mix-color:     mix($body-color, $text-color, 50%) !default
+$light-mix:     lighten($mix-color, 20%) !default
+$dark-mix:      darken($mix-color, 20%) !default
+
+$link-color:    blue !default
+$visited-color: purple !default
+$active-color:  orange !default
 
 // Fonts
 $serif: Georgia, Cambria, 'Century Schoolbook L', serif
-$sans:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
+$sans:  Verdana, Geneva, sans-serif
+$system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
 
 //-----------------------------------------------------------------------------
 
@@ -93,23 +96,29 @@ header[role="banner"]
     flex-grow: 0
     img
       border-radius: 5%
+      background-color: $logo-color
 
   .meta
     margin-top: bem(0.5)
     flex-grow: 1
+
     h1, p
       display: inline
-      font-family: $sans
+      font-family: $system
       font-size: bem(1)
       font-weight: 900
       line-height: 1
       text-transform: uppercase
-      letter-spacing: 0.66px
-      a:link, a:visited
-        color: $link-color
+      letter-spacing: -0.1px
+
+      &.title
+        a:link, a:visited
+          color: $text-color
+        a:hover
+          color: $link-color
 
       &.tagline
-        color: $light-mix
+        color: rgba($text-color, 0.33)
 
 main
 
@@ -130,7 +139,7 @@ footer
   align-items: center
   margin: bem(2) auto 0 auto
   height: bem(2)
-  border-top: 1px dashed $light-mix
+  border-top: 1px dashed rgba($text-color, 0.33)
   max-width: ($max-width + bem(7))
 
   .nav
@@ -138,13 +147,12 @@ footer
     list-style-type: none
     li
       display: inline
-      font-family: $sans
-      @include font-ratio(13/16)
+      font-family: $system
+      @include font-ratio(14/16)
       font-weight: 900
       text-transform: uppercase
       letter-spacing: 0.17px
       padding-right: bem(0.66)
-      color: $mix-color
 
 //-----------------------------------------------------------------------------
 

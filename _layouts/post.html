@@ -15,12 +15,15 @@ layout: default
   <h1><a href="{{ p.url | prepend: site.url }}">{% include widont.html string=p.title %}</a></h1>
   {{ copy }}
 
-{% else -%}
+{% else %}
+
   {% include post-detail.html -%}
   {{ copy }}
 
 {% endif -%}
 
-  <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}" title="permalink">{{ p.date | date: '%a %d %b %Y' }}</a></time></p>
+  <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: '%d %b %Y' }}</time></p>
 
 </article>
+
+<!--  -->

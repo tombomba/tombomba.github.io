@@ -13,8 +13,7 @@ permalink: /index.html
   {% assign copy = p.content -%}
   {% if copy contains 'img src=' -%}
     {% assign inline_images = true -%}
-    {% capture img_swap %}<a href="{{ p.url | prepend: site.url }}"><img{% endcapture -%}
-    {% assign copy = copy | replace: '<p><img', img_swap | replace: ' /></p>', '></a>' -%}
+    {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
   {% endif -%}
 
   {% if p.media -%}

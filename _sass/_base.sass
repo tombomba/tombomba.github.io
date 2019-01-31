@@ -109,7 +109,7 @@ header[role="banner"]
       font-weight: 700
       line-height: 1
       text-transform: uppercase
-      letter-spacing: -0.1px
+      letter-spacing: -0.33px
 
       &.title
         a:link, a:visited
@@ -119,6 +119,10 @@ header[role="banner"]
 
       &.tagline
         color: rgba($text-color, 0.33)
+
+    h1
+      padding-right: 0.33em
+
 
 main
 
@@ -150,7 +154,7 @@ footer
     li
       display: inline
       font-family: $sans
-      @include font-ratio(14/16)
+      @include font-ratio(12/16)
       font-weight: 700
       text-transform: uppercase
       letter-spacing: 0.17px
@@ -212,3 +216,8 @@ footer
 
   ul, ol
     margin-left: 0
+
+  header[role="banner"]
+
+    .wrap .meta
+      margin-right: bem(-2)

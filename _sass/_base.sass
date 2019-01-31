@@ -34,8 +34,8 @@ $active-color:  orange !default
 
 // Fonts
 $serif: Georgia, Cambria, 'Century Schoolbook L', serif
-$sans:  Verdana, Geneva, sans-serif
-$system: 'Libre Franklin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
+$sans:  Verdana, 'Bitstream Vera Sans', Geneva, sans-serif
+$system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
 
 //-----------------------------------------------------------------------------
 
@@ -104,9 +104,9 @@ header[role="banner"]
 
     h1, p
       display: inline
-      font-family: $system
+      font-family: $sans
       font-size: bem(0.95)
-      font-weight: 900
+      font-weight: 700
       line-height: 1
       text-transform: uppercase
       letter-spacing: -0.1px
@@ -149,9 +149,9 @@ footer
     list-style-type: none
     li
       display: inline
-      font-family: $system
+      font-family: $sans
       @include font-ratio(14/16)
-      font-weight: 900
+      font-weight: 700
       text-transform: uppercase
       letter-spacing: 0.17px
       padding-right: bem(0.66)

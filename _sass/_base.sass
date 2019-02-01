@@ -34,8 +34,8 @@ $active-color:  orange !default
 
 // Fonts
 $serif: Georgia, Cambria, 'Century Schoolbook L', serif
-$sans:  Verdana, Geneva, sans-serif
-$system: 'Libre Franklin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
+$sans:  Verdana, 'Bitstream Vera Sans', Geneva, sans-serif
+$system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
 
 //-----------------------------------------------------------------------------
 
@@ -83,7 +83,7 @@ a
 
 header[role="banner"]
 
-  max-width: ($max-width + bem(7))
+  max-width: ($max-width + bem(10))
   margin: 1em auto bem(2) auto
 
   .wrap
@@ -104,12 +104,12 @@ header[role="banner"]
 
     h1, p
       display: inline
-      font-family: $system
-      font-size: bem(0.95)
-      font-weight: 900
+      font-family: $sans
+      font-size: bem(1)
+      font-weight: 700
       line-height: 1
       text-transform: uppercase
-      letter-spacing: -0.1px
+      letter-spacing: -0.33px
 
       &.title
         a:link, a:visited
@@ -120,6 +120,9 @@ header[role="banner"]
       &.tagline
         color: rgba($text-color, 0.33)
 
+    h1
+      padding-right: 0.20em
+
 main
 
   article
@@ -128,10 +131,12 @@ main
     @extend .clearfix
 
   .pagebreak
-    max-width: ($max-width + bem(7))
+    max-width: ($max-width + bem(10))
     margin: bem(1) auto 0 auto
     &:not(:first-of-type)
       border-top: 1px dashed rgba($text-color, 0.33)
+      figure
+        padding-top: 0.66em
 
 footer
   display: flex
@@ -140,16 +145,16 @@ footer
   margin: bem(2) auto 0 auto
   height: bem(2)
   border-top: 1px dashed rgba($text-color, 0.33)
-  max-width: ($max-width + bem(7))
+  max-width: ($max-width + bem(10))
 
   .nav
     margin: 0
     list-style-type: none
     li
       display: inline
-      font-family: $system
-      @include font-ratio(14/16)
-      font-weight: 900
+      font-family: $sans
+      @include font-ratio(12/16)
+      font-weight: 700
       text-transform: uppercase
       letter-spacing: 0.17px
       padding-right: bem(0.66)
@@ -169,15 +174,7 @@ footer
       align-items: center
       justify-content: center
 
-    .logo
-      display: flex
-      align-items: center
-      justify-content: center
-      width: bem(3)
-      height: bem(3)
-      min-width: bem(3)
-      flex-grow: 0
-      img
+    .logo img
         border-radius: 50%
 
     .meta

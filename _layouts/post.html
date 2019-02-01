@@ -4,6 +4,7 @@ layout: default
 
 {% assign p = page -%}
 {% assign copy = p.content -%}
+{% assign wc = copy | number_of_words -%}
 {% if copy contains 'img src=' -%}
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
 {% endif -%}
@@ -24,6 +25,4 @@ layout: default
 
   <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: '%d %b %Y' }}</time></p>
 
-</article>
-
-<!--  -->
+</article><!-- {{ wc }} words -->

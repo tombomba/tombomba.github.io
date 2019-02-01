@@ -16,7 +16,7 @@ Lee Alexander McQueen was a broken kid from a working class family, who grew up 
 
 There's an appeal and an easy arc in the Alger-ish, rags-to-riches qualities of his life story. More appealing is his obvious genius. This comes through again and again when the film cuts to footage of McQueen's fashion shows in London and Paris. When we can see the clothes, how women moved in them, how easily he played with silhouette and color.
 
-Early shows had titles such as "Jack the Ripper Stalking His Victims" and "The Highland Rape." His staging and execution were operatic and theatrical. (One of his models noted that McQueen had the eye of a film director.) The combined effects overwhelm, even in file footage. Fifteen, twenty years on and the work retains boldness and daring.
+Early shows had titles such as "Jack the Ripper Stalks His Victims" and "Highland Rape." His staging and execution were operatic and theatrical. (One of his models noted that McQueen had the eye of a film director.) The combined effects overwhelm, even in file footage. Fifteen, twenty years on and the work retains boldness and daring.
 
 Filmmakers Ian Bonhôte and Peter Ettedgui are clever enough not to compete, presenting new material in a conservative form. During interviews with McQueen's contemporaries, we pay attention to the words, not the images. Their skill lies in structure, in the ways they contrast and complement McQueen's private and professional lives. This was a man who put his raw self on display, expressing his inner world through cloth, and who did it at the center of a multi-billion dollar industry.
 

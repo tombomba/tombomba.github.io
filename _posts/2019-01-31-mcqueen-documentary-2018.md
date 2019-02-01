@@ -10,7 +10,7 @@ media:
 
 Because of McQueen's untimely death, the movie can't boast much in the way of primary sources. We see a lotta home movies, old interviews, press clippings. Talking head interviews with past loves, mentors and collaborators, some family.
 
-What the film does have is a great subject.
+What the film does have is a great subject. I am left not wanting to talk about this film as a film, but about Alexander McQueen and what he achieved.
 
 Lee Alexander McQueen was a broken kid from a working class family, who grew up on the wrong side of the wrong town, who turned himself into a something of a fashion protégé, shocked the industry, and became the head of two international couture houses while managing his own line. He did all this before the age of 30.
 

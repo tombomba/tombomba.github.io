@@ -1,6 +1,7 @@
 ---
 title: "Missing horror film found in Scotland"
-excerpt: "\"The Telltale Heart,\" from 1953, has been digitally restored and will be available on BFI Player in time for Halloween."
+dek: "A copy of 'The Telltale Heart,' from 1953, has been discovered in Scotland"
+image: telltale-heart-1953-og.jpg
 date: 2018-10-25 10:42:11 -0700
 via: https://www.bbc.com/news/uk-scotland-south-scotland-45951333
 ---

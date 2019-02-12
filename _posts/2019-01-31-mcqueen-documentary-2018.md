@@ -1,6 +1,7 @@
 ---
-title: "McQueen (Bonhôte, Ettedgui, 2018)"
+title: "'McQueen' is an ordinary film about an extraordinary man"
 date: 2019-01-31 23:40 -0800
+image: default-opengraph.png
 media:
   image: mcqueen-bonhote-ettedgui-2018.jpg
   alt: "Alexander McQueen fashion show still photo"

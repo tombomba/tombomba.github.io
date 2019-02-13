@@ -1,6 +1,6 @@
 ---
 title: "You've seen the original, right?"
-hook: "The sneaky payoff to 'Planet of the Apes'"
+dek: "The sneaky payoff to 'Planet of the Apes'"
 excerpt: "Remember the ending to 'Planet of the Apes'? Then maybe you can explain something to me."
 image: og-planet-of-the-apes-1968.jpg
 date:   2018-10-07 21:26:12 -0700

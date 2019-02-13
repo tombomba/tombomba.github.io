@@ -1,5 +1,6 @@
 ---
-title: "'McQueen' is an ordinary film about an extraordinary man"
+title: "The king of yob couture"
+dek: "'McQueen' is an ordinary film about an extraordinary man"
 date: 2019-01-31 23:40 -0800
 image: default-opengraph.png
 media:

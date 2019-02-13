@@ -1,5 +1,6 @@
 ---
-title: "Eat the rich, exploit the poor at a 'Dinner for Few'"
+title: "Eat the rich"
+dek: "Nassos Vakalis' latest short is a bald political allegory and a good one"
 image: dinner-for-few.jpg
 media:
   video: https://player.vimeo.com/video/288759859
@@ -7,6 +8,6 @@ via: https://www.itsnicethat.com/articles/nassos-vakalis-dinner-for-few-animatio
 date: 2018-10-26 20:19:20 -0700
 ---
 
-Nassos Vakalis' latest animated short is a bald political allegory and a good one. "Dinner for Few" begins at dilapidated seaside hotel during a storm. Inside, a sounder of pigs, each of them walking upright and wearing formal attire, gather around a table for dinner. A manservant works an odd machine; he shovels raw materials into one end and fresh food comes out the other. Below, a clowder of cats fight over scraps. As the pigs become more voracious, the cats more aggressive. What happens when there's nothing left to eat?
+Nassos Vakalis' latest animated short begins at dilapidated seaside hotel during a storm. Inside, a sounder of pigs, each of them walking upright and wearing formal attire, gather around a table for dinner. A manservant works an odd machine; he shovels raw materials into one end and fresh food comes out the other. Below, a clowder of cats fight over scraps. As the pigs become more voracious, the cats more aggressive. What happens when there's nothing left to eat?
 
 "Dinner for Few" isn't a traditional narrative. The characters are symbols, the conflict obvious, and there is no dialogue. The music and foley effects set my teeth on edge and the visuals repulsed me. Yet I couldn't take my eyes off it. It has all the trappings of a good horror feature but in a 10 minute cartoon. The tension builds and Vakalis dips lightly into surreal fantasy, and he delivers a payoff that is cynical without being nihilistic.

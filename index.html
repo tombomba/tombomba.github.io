@@ -28,20 +28,13 @@ permalink: /index.html
 
 </article>
 
-<aside arial-label="Also this month">
+<aside>
 
   <hr>
 
-  {% for x in site.posts limit: 7 offset: 1 -%}
+  {% for recent in site.posts limit: 7 offset: 1 -%}
   <div class="wrap">
-
-    <div class="meta">
-      <h2><a href="{{ x.url | prepend: site.url }}">{{ x.title | default: x.excerpt | strip_html | smartify | truncate: 120 }}</a></h2>
-      <p><a href="{{ x.url | prepend: site.url }}">{{ x.date | date: '%-d %b. %Y' }}</a></p>
-    </div>
-
-    <div class="image"{% if x.image %}style="background-image: url({{ x.image | prepend: site.img_dir | prepend: site.url }})"{% endif %}>{% if x.image %}<a href="{{ x.url | prepend: site.url }}"><span></span></a>{% endif %}</div>
-
+    {% include aside-detail.html item=recent -%}
   </div>
   {% endfor -%}
 

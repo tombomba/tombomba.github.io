@@ -1,0 +1,6 @@
+<div class="meta">
+  <h2><a href="{{ include.item.url | prepend: site.url }}">{{ include.item.dek | default: include.item.title | strip_html | smartify | truncate: 120 }}</a></h2>
+  <p><a href="{{ include.item.url | prepend: site.url }}">{{ include.item.date | date: '%-d %b. %Y' }}</a></p>
+</div>
+
+<div class="image"{% if include.item.image %}style="background-image: url({{ include.item.image | prepend: site.img_dir | prepend: site.url }})"{% endif %}>{% if include.item.image %}<a href="{{ include.item.url | prepend: site.url }}"><span></span></a>{% endif %}</div>

@@ -26,3 +26,21 @@ layout: default
   <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: '%-d %b. %Y' }}</time></p>
 
 </article><!-- {{ wc }} words -->
+
+<aside>
+
+  <hr>
+
+  {% if page.previous -%}
+  <div class="wrap">
+    {% include aside-detail.html item=page.previous -%}
+  </div>
+  {% endif -%}
+
+  {% if page.next -%}
+  <div class="wrap">
+    {% include aside-detail.html item=page.next -%}
+  </div>
+  {% endif -%}
+
+</aside>

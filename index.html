@@ -4,33 +4,45 @@ is_home: true
 permalink: /index.html
 ---
 
-{% for p in site.posts limit: 20 -%}
+{% assign p = site.posts.first -%}
+{% assign copy = site.posts.first.content -%}
+{% if copy contains 'img src=' -%}
+  {% assign inline_images = true -%}
+  {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
+{% endif -%}
 
-<div class="pagebreak">
+<article>
 
-  <article>
+{% if p.media -%}
+  {% include media.html media=p.media -%}
+  <h1><a href="{{ p.url | prepend: site.url }}">{% include widont.html string=p.title %}</a></h1>
+  {{ copy }}
 
-  {% assign copy = p.content -%}
-  {% if copy contains 'img src=' -%}
-    {% assign inline_images = true -%}
-    {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
-  {% endif -%}
+{% else -%}
+  {% include post-detail.html -%}
+  {{ copy }}
 
-  {% if p.media -%}
-    {% include media.html media=p.media -%}
-    <h1><a href="{{ p.url | prepend: site.url }}">{% include widont.html string=p.title %}</a></h1>
-    {{ copy }}
+{% endif -%}
 
-  {% else -%}
-    {% include post-detail.html -%}
-    {{ copy }}
+  <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}" title="permalink">{{ p.date | date: '%d %b. %Y' }}</a></time></p>
 
-  {% endif -%}
+</article>
 
-  </article>
+<aside arial-label="Also this month">
 
-</div>
+  <hr>
 
-  {% assign inline_images = false -%}
+  {% for x in site.posts limit: 7 offset: 1 -%}
+  <div class="wrap">
 
-{% endfor %}
+    <div class="meta">
+      <h2><a href="{{ x.url | prepend: site.url }}">{{ x.title | default: x.excerpt | strip_html | smartify | truncate: 120 }}</a></h2>
+      <p><a href="{{ x.url | prepend: site.url }}">{{ x.date | date: '%-d %b. %Y' }}</a></p>
+    </div>
+
+    <div class="image"{% if x.image %}style="background-image: url({{ x.image | prepend: site.img_dir | prepend: site.url }})"{% endif %}>{% if x.image %}<a href="{{ x.url | prepend: site.url }}"><span></span></a>{% endif %}</div>
+
+  </div>
+  {% endfor -%}
+
+</aside>

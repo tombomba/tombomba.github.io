@@ -16,13 +16,9 @@ main article
 
   h1
     font-size: 100%
-    line-height: 1.33
+    line-height: 1.4
     a:link, a:visited
       color: $text-color
-
-  header
-    h1, p
-      display: inline
 
   h2, h3, h4, h5, h6
     font-size: 100%
@@ -46,15 +42,11 @@ main article
     border-style: solid
     border-color: inherit
 
-  .punc::after
-    content: ".\20"
-
-  .dash::after
-    content: "\00A0\2014\20"
-
   .datestamp
-    font-family: $serif
+    white-space: nowrap
     color: $mix-color
+    a:link, a:visited
+      color: $mix-color
 
 //-----------------------------------------------------------------------------
 

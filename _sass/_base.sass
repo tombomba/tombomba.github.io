@@ -21,7 +21,10 @@ $line-height: (30/18)
 $body-color:    #E2E2E2 !default
 $text-color:    #161616 !default
 
-$logo-color:    #00F
+$border-dark:   #C8C8C8 !default
+$border-light:  #F3F3F3 !default
+
+$logo-color:    #F03
 $select-color:  #FFC
 
 $mix-color:     mix($body-color, $text-color, 50%) !default
@@ -36,6 +39,7 @@ $active-color:  orange !default
 $serif: Georgia, Cambria, 'Century Schoolbook L', serif
 $sans:  Verdana, 'Bitstream Vera Sans', Geneva, sans-serif
 $system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
+$titlef: 'Bungee', $sans
 
 //-----------------------------------------------------------------------------
 
@@ -81,83 +85,114 @@ a
 ::selection
     background: $select-color
 
+hr
+  margin: 0
+  padding: 0
+  width: 100%
+  border-top: 1px solid $border-dark
+  border-bottom: 1px solid $border-light
+
 header[role="banner"]
 
-  max-width: ($max-width + bem(7))
-  margin: 1em auto bem(2) auto
-
   .wrap
-    margin: 0 auto
+    height: bem(2)
+    display: flex
+    align-items: center
+    justify-content: space-between
 
-  .logo
-    width: bem(3)
-    height: bem(3)
-    min-width: bem(3)
-    flex-grow: 0
-    img
-      border-radius: 5%
-      background-color: $logo-color
+  .homelink
+    order: 1
+    display: none
+    @include font-ratio(18/16)
 
-  .meta
-    margin-top: bem(0.5)
-    flex-grow: 1
+  .titlelink
+    order: 2
+    flex: 1 1 60%
+    font-size: bem(1)
+    font-family: 'Bungee Shade', $system
+    color: $logo-color
+    text-align: center
+    a:link, a:visited
+      color: $logo-color
+    a:hover
+      text-decoration: none
 
-    h1, p
-      display: inline
-      font-family: $sans
-      font-size: bem(1)
-      font-weight: 700
-      line-height: 1
-      text-transform: uppercase
-      letter-spacing: -0.33px
-
-      &.title
-        a:link, a:visited
-          color: $text-color
-        a:hover
-          color: $link-color
-
-      &.tagline
-        color: rgba($text-color, 0.33)
-
-    h1
-      padding-right: 0.20em
+  .datelink
+    order: 3
+    @include font-ratio(14/16)
+    display: none
 
 main
 
   article
-    margin: bem(1) auto 0 auto
+    margin: bem(2) auto 0 auto
     max-width: $max-width
     @extend .clearfix
 
-  .pagebreak
-    max-width: ($max-width + bem(7))
-    margin: bem(1) auto 0 auto
-    &:not(:first-of-type)
-      border-top: 1px dashed rgba($text-color, 0.33)
-      figure
-        padding-top: 0.66em
+  aside
+    margin-top: bem(2)
+    @extend .clearfix
+
+    .wrap
+      display: flex
+      align-items: center
+      margin-top: bem(1)
+      &:first-of-type
+        margin-top: bem(2)
+      margin-left: auto
+      margin-right: auto
+      max-width: $max-width
+
+    .meta
+      flex: 1
+      padding-right: bem(1)
+      h2
+        font-size: 100%
+        font-weight: 400
+        a:link, a:visited
+          color: $text-color
+      p
+        @include font-ratio(14/16)
+        //font-weight: 700
+        white-space: nowrap
+        a:link, a:visited
+          color: $mix-color
+
+      h2, p
+        display: inline
+
+    .image
+      position: relative
+      width: 165px
+      height: 110px
+      background-repeat: no-repeat
+      background-size: contain
+      span
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        z-index: 1
+        background-image: url('/assets/img/shim.gif')
 
 footer
-  display: flex
-  justify-content: flex-start
-  align-items: center
-  margin: bem(2) auto 0 auto
-  height: bem(2)
-  border-top: 1px dashed rgba($text-color, 0.33)
-  max-width: ($max-width + bem(7))
+  margin-top: bem(2)
+
+  .wrap
+    max-width: $max-width
+    margin: bem(0.5) auto
 
   .nav
-    margin: 0
     list-style-type: none
+    text-align: center
     li
       display: inline
-      font-family: $sans
-      @include font-ratio(12/16)
-      font-weight: 700
-      text-transform: uppercase
-      letter-spacing: 0.17px
-      padding-right: bem(0.66)
+      padding-right: 0.5em
+      &:not(:last-of-type):after
+        content: "-"
+        padding-left: 0.5em
+        color: rgba($text-color, 0.4)
 
 //-----------------------------------------------------------------------------
 
@@ -165,41 +200,14 @@ footer
 
   header[role="banner"]
 
-    margin-top: bem(1)
+    .homelink
+      display: block
+      flex-basis: 20%
 
-    .wrap
-      margin-left: -0.5em
-      display: flex
-      flex-direction: row
-      align-items: center
-      justify-content: center
-
-    .logo img
-        border-radius: 50%
-
-    .meta
-      margin-top: 0
-      margin-left: bem(0.5)
-
-  main article, main .pagebreak
-      margin: bem(2) auto 0 auto
-
-  footer
-    justify-content: center
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 50em)
-
-  header[role="banner"]
-
-    margin-bottom: 0
-
-    .wrap
-      margin-left: 0
-
-  footer
-    margin-top: bem(3)
+    .datelink
+      display: block
+      flex-basis: 20%
+      text-align: right
 
 //-----------------------------------------------------------------------------
 

@@ -44,6 +44,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="{{ 'default.css' | prepend: site.css_dir | prepend: site.url }}">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade&text={{ site.title | upcase }}" rel="stylesheet">
 
     <!-- msft mobile hacks -->
     <script>!function(){if("-ms-user-select"in document.documentElement.style&&navigator.userAgent.match(/IEMobile/)){var a=document.createElement("style");a.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")),document.getElementsByTagName("head")[0].appendChild(a)}}();</script>
@@ -55,17 +56,12 @@
 <header role="banner">
 
   <div class="wrap">
-
-    <div class="logo">
-      <a href="{{ site.url }}"><img src="{{ 'default-icon.png' | prepend: site.img_dir | prepend: site.url }}" alt="logo"></a>
-    </div>
-
-    <div class="meta">
-      <h1 class="title"><a href="{{ site.url }}">{{ site.title }}</a></h1>
-      <p class="tagline">{% assign tagstring = page.tagline | default: site.description %}{% include widont.html string=tagstring %}</p>
-    </div>
-
+    <h1 class="titlelink"><a href="{{ site.url }}">{{ site.title | upcase }}</a></h1>
+    <p class="homelink"><a href="{{ site.url }}">&bull;</a></p>
+    <p class="datelink"><a href="{{ page.date | default: site.posts.first.date | date: '/%Y/%m/' | prepend: site.url }}">{{ page.date | default: site.posts.first.date | date: '%b. %Y' }}</a></p>
   </div>
+
+  <hr>
 
 </header>
 
@@ -75,10 +71,18 @@
 
 </main>
 
-<footer class="{% if page.is_post or page.is_home %}post{% else %}page{% endif %}">
-  <ul class="nav">
-    {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}<!-- {% unless page.is_index %}<li><a href="{{ page.date | default: site.posts.first.date | date: '/%Y/' | prepend: site.url }}">Archive</a></li>{% endunless %} -->{% unless page.is_bio %}<li><a href="/about/" aria-label="About this website">About</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li>
-  </ul>
+<footer>
+
+  <hr>
+
+  <div class="wrap">
+
+    <ul class="nav">
+      {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}<!-- {% unless page.is_index %}<li><a href="{{ page.date | default: site.posts.first.date | date: '/%Y/' | prepend: site.url }}">Archive</a></li>{% endunless %} -->{% unless page.is_bio %}<li><a href="/about/" aria-label="About this website">About</a></li>{% endunless %}{% if page.is_page or page.is_home %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li>{% endif %}
+    </ul>
+
+  </div>
+
 </footer>
 
 </body>

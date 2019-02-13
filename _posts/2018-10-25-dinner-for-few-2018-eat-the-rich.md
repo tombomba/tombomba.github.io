@@ -1,5 +1,5 @@
 ---
-title: "Eat the rich"
+title: "Eat the rich at a 'Dinner for Few'"
 dek: "Nassos Vakalis' latest short is a bald political allegory and a good one"
 image: dinner-for-few.jpg
 media:

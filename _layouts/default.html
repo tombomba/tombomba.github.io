@@ -56,7 +56,13 @@
 <header role="banner">
 
   <div class="wrap">
+    {% if page.media or p.media -%}
+    <div class="iconlink"><a href="{{ site.url }}"><img src="{{ 'default-icon-cool.gif' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.title | capitalize }}"></a></div>
+    {% elsif page.is_home and site.posts.first.media -%}
+    <div class="iconlink"><a href="{{ site.url }}"><img src="{{ 'default-icon-cool.gif' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.title | capitalize }}"></a></div>
+    {% else -%}
     <h1 class="titlelink"><a href="{{ site.url }}">{{ site.title | upcase }}</a></h1>
+    {% endif -%}
     <p class="homelink"><a href="{{ site.url }}">&bull;</a></p>
     <p class="datelink"><a href="{{ page.date | default: site.posts.first.date | date: '/%Y/%m/' | prepend: site.url }}">{{ page.date | default: site.posts.first.date | date: '%b. %Y' }}</a></p>
   </div>

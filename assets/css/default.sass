@@ -19,6 +19,18 @@ main article
     line-height: 1.4
     a:link, a:visited
       color: $text-color
+      text-decoration: none
+    a:hover
+      text-decoration: underline
+
+  header
+    h1, p
+      display: inline
+      line-height: $line-height
+    .punc::after
+      content: "."
+    .dash::after
+      content: "\20\2014\20"
 
   h2, h3, h4, h5, h6
     font-size: 100%
@@ -47,6 +59,9 @@ main article
     color: $mix-color
     a:link, a:visited
       color: $mix-color
+      text-decoration: none
+    a:hover
+      text-decoration: underline
 
 //-----------------------------------------------------------------------------
 

@@ -18,11 +18,11 @@ $max-width: 34em
 $line-height: (30/18)
 
 // Colors
-$body-color:    #E2E2E2 !default
+$body-color:    #EAEAEA !default
 $text-color:    #161616 !default
 
-$border-dark:   #C8C8C8 !default
-$border-light:  #F3F3F3 !default
+$border-dark:   #D1D1D1 !default
+$border-light:  #FFF !default
 
 $logo-color:    #F03
 $select-color:  #FFC
@@ -69,14 +69,14 @@ ul
   list-style-type: disc
 
 a
-  text-decoration: none
+  text-decoration: underline
   text-decoration-skip-ink: auto
   &:link
     color: $link-color
   &:visited
     color: $visited-color
   &:hover
-    text-decoration: underline
+    text-decoration: none
   &:active
     color: $active-color
 
@@ -104,16 +104,20 @@ header[role="banner"]
     order: 1
     display: none
     @include font-ratio(18/16)
+    a:link, a:visited
+      text-decoration: none
 
   .titlelink
     order: 2
     flex: 1 1 60%
     font-size: bem(1)
     font-family: 'Bungee Shade', $system
+    font-weight: 900
     color: $logo-color
     text-align: center
     a:link, a:visited
       color: $logo-color
+      text-decoration: none
     a:hover
       text-decoration: none
 
@@ -131,40 +135,36 @@ main
 
   aside
     margin-top: bem(2)
-    @extend .clearfix
 
     .wrap
       display: flex
-      align-items: center
       margin-top: bem(1)
       &:first-of-type
         margin-top: bem(2)
       margin-left: auto
       margin-right: auto
       max-width: $max-width
+      @extend .clearfix
 
     .meta
       flex: 1
-      padding-right: bem(1)
+      padding-right: 1em
       h2
         font-size: 100%
         font-weight: 400
-        a:link, a:visited
-          color: $text-color
-      p
+      .datestamp
         @include font-ratio(14/16)
-        //font-weight: 700
         white-space: nowrap
         a:link, a:visited
           color: $mix-color
-
-      h2, p
-        display: inline
+          text-decoration: none
+        a:hover
+          text-decoration: underline
 
     .image
       position: relative
-      width: 165px
-      height: 110px
+      width: 120px
+      height: 80px
       background-repeat: no-repeat
       background-size: contain
       span
@@ -178,11 +178,9 @@ main
 
 footer
   margin-top: bem(2)
-
   .wrap
     max-width: $max-width
     margin: bem(0.5) auto
-
   .nav
     list-style-type: none
     text-align: center

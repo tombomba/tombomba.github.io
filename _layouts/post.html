@@ -13,7 +13,7 @@ layout: default
 
 {% if p.media -%}
   {% include media.html media=p.media -%}
-  <h1 class="sm"><a href="{{ p.url | prepend: site.url }}">{% include widont.html string=p.title %}</a></h1>
+  <h1 class="lg"><a href="{{ p.url | prepend: site.url }}">{% include widont.html string=p.title %}</a></h1>
   {{ copy }}
 
 {% else %}

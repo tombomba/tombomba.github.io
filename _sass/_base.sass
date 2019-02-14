@@ -18,11 +18,11 @@ $max-width: 34em
 $line-height: (30/18)
 
 // Colors
-$body-color:    #EAEAEA !default
+$body-color:    #E2E2E2 !default
 $text-color:    #161616 !default
 
 $border-dark:   #D1D1D1 !default
-$border-light:  #FFF !default
+$border-light:  #F3F3F3 !default
 
 $logo-color:    #F03
 $select-color:  #FFC
@@ -89,6 +89,8 @@ hr
   margin: 0
   padding: 0
   width: 100%
+  line-height: 1
+  border: 0
   border-top: 1px solid $border-dark
   border-bottom: 1px solid $border-light
 
@@ -107,6 +109,14 @@ header[role="banner"]
     a:link, a:visited
       text-decoration: none
 
+  .iconlink
+    order: 2
+    flex: 1 1 60%
+    img
+      display: block
+      margin: 0 auto
+      height: 24px
+
   .titlelink
     order: 2
     flex: 1 1 60%
@@ -123,7 +133,6 @@ header[role="banner"]
 
   .datelink
     order: 3
-    @include font-ratio(14/16)
     display: none
 
 main

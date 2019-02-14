@@ -1,9 +1,9 @@
 {% comment -%}
   // A cheap hack to prevent widows in page titles
 {% endcomment -%}
-{% assign titlef = include.string | default: 'Empty string, what?!' | smartify | split: ' ' -%}
-{% if titlef.size > 1 -%}
-  {% assign sub = titlef.last | prepend: '!QQ!' -%}
-  {% assign titlef = titlef | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
+{% assign t = include.string | default: 'Empty string, what?!' | smartify | split: ' ' -%}
+{% if t.size > 1 -%}
+  {% assign sub = t.last | prepend: '!QQ!' -%}
+  {% assign t = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
 {% endif -%}
-{{ titlef }}
+{{ t }}

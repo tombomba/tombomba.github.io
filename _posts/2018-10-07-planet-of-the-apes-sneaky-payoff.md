@@ -1,6 +1,8 @@
 ---
 title: "You've seen the original, right?"
-excerpt: "\"Planet of the Apes,\" 1968. Remember the ending? Good. Maybe you can explain something to me."
+dek: "The sneaky payoff to 'Planet of the Apes'"
+excerpt: "Maybe you can explain something to me."
+image: og-planet-of-the-apes-1968.jpg
 date:   2018-10-07 21:26:12 -0700
 ---
 

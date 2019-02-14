@@ -28,7 +28,7 @@
   {% endcapture -%}
 
   <figure>
-    {% if page.is_home -%}<a href="{{ p.url | prepend: site.url }}">{{ img }}</a>{% else -%}{{ img }}{% endif %}
+    {{ img }}
     {{ caption }}
   </figure>
 

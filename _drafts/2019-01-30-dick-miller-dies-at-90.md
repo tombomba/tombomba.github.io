@@ -1,5 +1,6 @@
 ---
 title: "Dick Miller dies at 90"
+excerpt: "180 screen credits over a 60 year career. A helluva run."
 date: 2019-01-30 21:49 -0800
 ---
 

@@ -13,7 +13,7 @@ layout: default
 
 {% if p.media -%}
   {% include media.html media=p.media -%}
-  <h1><a href="{{ p.url | prepend: site.url }}">{% include widont.html string=p.title %}</a></h1>
+  <h1 class="sm"><a href="{{ p.url | prepend: site.url }}">{% include widont.html string=p.title %}</a></h1>
   {{ copy }}
 
 {% else %}
@@ -23,6 +23,24 @@ layout: default
 
 {% endif -%}
 
-  <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: '%d %b %Y' }}</time></p>
+  <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: '%-d %b. %Y' }}</time></p>
 
 </article><!-- {{ wc }} words -->
+
+<aside>
+
+  <hr>
+
+  {% if page.previous -%}
+  <div class="wrap">
+    {% include aside-detail.html item=page.previous -%}
+  </div>
+  {% endif -%}
+
+  {% if page.next -%}
+  <div class="wrap">
+    {% include aside-detail.html item=page.next -%}
+  </div>
+  {% endif -%}
+
+</aside>

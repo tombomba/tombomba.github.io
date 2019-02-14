@@ -11,12 +11,12 @@ main article
   img.left
     max-width: 36%
     float: left
-    margin: 0.5em 1em 1em 0
+    margin: 0.125em 1em 1em 0
 
   img.right
     max-width: 36%
     float: right
-    margin: 0.5em 0.0em 0.5em 0.5em
+    margin: 0.125em 0.0em 0.5em 0.5em
 
 //-----------------------------------------------------------------------------
 
@@ -39,7 +39,7 @@ main article
         transform: rotate(-3deg)
 
     img.right
-      margin: 0 0 bem(1) bem(1)
+      margin: 0 0 bem(1) bem(1.25)
       &.tilt
         transform: rotate(3deg)
 
@@ -60,3 +60,15 @@ main article
 
     img.right
       margin-right: bem(-1)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 72em)
+
+  main article
+
+    img.left
+      margin-left: bem(-2)
+
+    img.right
+      margin-right: bem(-2)

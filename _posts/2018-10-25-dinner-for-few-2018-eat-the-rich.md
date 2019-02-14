@@ -1,6 +1,6 @@
 ---
 title: "Eat the rich at a 'Dinner for Few'"
-dek: "Nassos Vakalis' latest short is a bald political allegory and a good one"
+excerpt: "What goes around comes around in this animated short."
 image: dinner-for-few.jpg
 media:
   video: https://player.vimeo.com/video/288759859

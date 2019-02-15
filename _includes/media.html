@@ -21,6 +21,13 @@
   {{ caption }}
 </figure>
 
+{% elsif include.media.gif -%}
+<figure>
+  <div class="player"{% if percent %} style="padding-bottom:{{ percent }}%"{% endif %} aria-label="media player">
+  <iframe src="{{ include.media.gif }}" frameBorder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </div>
+</figure>
+
 {% elsif include.media.image -%}
 
   {% capture img -%}

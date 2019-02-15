@@ -1,7 +1,8 @@
 {% assign titlef = include.item.dek | default: include.item.title | strip_html | smartify | truncate: 120 -%}
+{% assign excerptf = include.item.excerpt | strip_html | smartify | truncate: 140 -%}
 <div class="meta">
   <h2><a href="{{ include.item.url | prepend: site.url }}">{% include widont.html string=titlef %}</a></h2>
-  <p class="excerpt">{{ include.item.excerpt | strip_html | smartify | truncate: 140 }}</p>
+  <p class="excerpt">{% include widont.html string=excerptf %}</p>
   <p class="datestamp"><a href="{{ include.item.url | prepend: site.url }}">{{ include.item.date | date: '%-d %b. %Y' }}</a></p>
 </div>
 

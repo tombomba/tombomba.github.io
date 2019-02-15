@@ -31,7 +31,7 @@
     <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:type" content="blog">
-    <meta property="og:image" content="{{ page.media.opengraph | default: 'default-opengraph.png' | prepend: site.img_dir | prepend: site.url }}">
+    <meta property="og:image" content="{{ page.image | default: '/assets/img/default-opengraph.png' | prepend: site.url }}">
 
     <!-- twitter  -->
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
@@ -40,11 +40,11 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@{{ site.twitter }}">
     <meta name="twitter:creator" content="@{{ site.twitter }}">
-    <meta name="twitter:image:src" content="{{ page.media.opengraph | default: 'default-opengraph.png' | prepend: site.img_dir | prepend: site.url }}">
+    <meta name="twitter:image:src" content="{{ page.image | default: '/assets/img/default-opengraph.png' | prepend: site.url }}">
 
     <!-- css -->
     <link rel="stylesheet" href="{{ 'default.css' | prepend: site.css_dir | prepend: site.url }}">
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade&text={{ site.title | upcase }}" rel="stylesheet">
+    {% unless page.tags contains 'cool' %}<link href="https://fonts.googleapis.com/css?family=Bungee+Shade&text={{ site.title | upcase }}" rel="stylesheet">{% endunless -%}
 
     <!-- msft mobile hacks -->
     <script>!function(){if("-ms-user-select"in document.documentElement.style&&navigator.userAgent.match(/IEMobile/)){var a=document.createElement("style");a.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")),document.getElementsByTagName("head")[0].appendChild(a)}}();</script>

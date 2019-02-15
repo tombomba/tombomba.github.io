@@ -15,23 +15,23 @@
 
 {% if include.media.video -%}
 <figure>
-  <div class="player"{% if percent %} style="padding-bottom:{{ percent }}%"{% endif %} aria-label="media player">
+  <div class="wrap"><div class="player"{% if percent %} style="padding-bottom:{{ percent }}%"{% endif %} aria-label="media player">
     <iframe src="{{ include.media.video }}?{{ vflags }}" frameborder="0" webkitallowfullscreen mozallowfullscreen  allowfullscreen></iframe>
-  </div>
+  </div></div>
   {{ caption }}
 </figure>
 
 {% elsif include.media.gif -%}
 <figure>
-  <div class="player"{% if percent %} style="padding-bottom:{{ percent }}%"{% endif %} aria-label="media player">
+  <div class="wrap"><div class="player"{% if percent %} style="padding-bottom:{{ percent }}%"{% endif %} aria-label="media player">
   <iframe src="{{ include.media.gif }}" frameBorder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-  </div>
+  </div></div>
 </figure>
 
 {% elsif include.media.image -%}
 
   {% capture img -%}
-    <img src="{{ include.media.image | prepend: site.img_dir }}" alt="{{ include.media.alt }}" {% if include.media.style %}class="{{ include.media.style }}"{% endif %}>
+    <div class="wrap"><img src="{{ include.media.image | prepend: site.img_dir }}" alt="{{ include.media.alt }}" {% if include.media.style %}class="{{ include.media.style }}"{% endif %}></div>
   {% endcapture -%}
 
   <figure>

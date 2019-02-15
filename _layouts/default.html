@@ -44,7 +44,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="{{ 'default.css' | prepend: site.css_dir | prepend: site.url }}">
-    {% unless page.tags contains 'cool' %}<link href="https://fonts.googleapis.com/css?family=Bungee+Shade&text={{ site.title | upcase }}" rel="stylesheet">{% endunless %}
+    {% if page.is_home or page.is_page %}<link href="https://fonts.googleapis.com/css?family=Bungee+Shade&text={{ site.title | upcase }}" rel="stylesheet">{% endif %}
 
     <!-- msft mobile hacks -->
     <script>!function(){if("-ms-user-select"in document.documentElement.style&&navigator.userAgent.match(/IEMobile/)){var a=document.createElement("style");a.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")),document.getElementsByTagName("head")[0].appendChild(a)}}();</script>
@@ -56,10 +56,10 @@
 <header role="banner">
 
   <div class="wrap">
-    {% if page.tags contains 'cool' -%}
-    <div class="iconlink"><a href="{{ site.url }}"><img src="{{ 'default-icon-cool.gif' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.title | capitalize }}"></a></div>
-    {% else -%}
+    {% if page.is_home or page.is_page -%}
     <h1 class="titlelink"><a href="{{ site.url }}">{{ site.title | upcase }}</a></h1>
+    {% else -%}
+    <div class="iconlink"><a href="{{ site.url }}"><img src="{{ 'default-icon-cool.gif' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.title | capitalize }}"></a></div>
     {% endif -%}
     <p class="homelink"><a href="{{ site.url }}">&bull;</a></p>
     <p class="datelink"><a href="{{ page.date | default: site.posts.first.date | date: '/%Y/%m/' | prepend: site.url }}">{{ page.date | default: site.posts.first.date | date: '%b. %Y' }}</a></p>

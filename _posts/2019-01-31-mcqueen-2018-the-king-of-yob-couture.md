@@ -6,6 +6,7 @@ image: /assets/img/mcqueen-documentary-2018-og.jpg
 media:
   gif: https://giphy.com/embed/dErL18MhS4oLu
   ratio: 480x336
+tags: [cool]
 ---
 
 "McQueen," a documentary about fashion designer Alexander McQueen, who committed suicide at the height of his career, is a conventional film about an extraordinary man.

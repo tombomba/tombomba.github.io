@@ -2,10 +2,10 @@
 title: "The king of yob couture"
 excerpt: "'McQueen' is an ordinary film about an extraordinary man."
 date: 2019-01-31 23:40 -0800
-image: default-opengraph.png
+image: mcqueen-documentary-2018-og.jpg
 media:
-  image: mcqueen-bonhote-ettedgui-2018.jpg
-  alt: "Alexander McQueen fashion show still photo"
+  gif: https://giphy.com/embed/dErL18MhS4oLu
+  ratio: 480x336
 ---
 
 "McQueen," a documentary about fashion designer Alexander McQueen, who committed suicide at the height of his career, is a conventional film about an extraordinary man.

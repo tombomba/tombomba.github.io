@@ -31,15 +31,15 @@ layout: default
 
   <hr>
 
-  {% if page.previous -%}
-  <div class="wrap">
-    {% include aside-detail.html item=page.previous -%}
-  </div>
-  {% endif -%}
-
   {% if page.next -%}
   <div class="wrap">
     {% include aside-detail.html item=page.next -%}
+  </div>
+  {% endif -%}
+
+  {% if page.previous -%}
+  <div class="wrap">
+    {% include aside-detail.html item=page.previous -%}
   </div>
   {% endif -%}
 

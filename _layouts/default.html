@@ -44,7 +44,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="{{ 'default.css' | prepend: site.css_dir | prepend: site.url }}">
-    {% unless page.tags contains 'cool' %}<link href="https://fonts.googleapis.com/css?family=Bungee+Shade&text={{ site.title | upcase }}" rel="stylesheet">{% endunless -%}
+    {% unless page.tags contains 'cool' %}<link href="https://fonts.googleapis.com/css?family=Bungee+Shade&text={{ site.title | upcase }}" rel="stylesheet">{% endunless %}
 
     <!-- msft mobile hacks -->
     <script>!function(){if("-ms-user-select"in document.documentElement.style&&navigator.userAgent.match(/IEMobile/)){var a=document.createElement("style");a.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")),document.getElementsByTagName("head")[0].appendChild(a)}}();</script>

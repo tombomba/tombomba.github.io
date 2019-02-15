@@ -1,6 +1,6 @@
 ---
 title: "Are movies too long these days?"
-image: popcorn-og.jpg
+image: /assets/img/popcorn-og.jpg
 excerpt: "Of course they are. But let's make a few distinctions."
 date: 2018-10-22 19:49:12 -0700
 ---

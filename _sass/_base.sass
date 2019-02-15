@@ -18,14 +18,20 @@ $max-width: 34em
 $line-height: (30/18)
 
 // Colors
-$body-color:    #EAEAEA !default
+$body-color:    #F3F3F3 !default
 $text-color:    #161616 !default
 
-$border-dark:   #D1D1D1 !default
+$border-dark:   #D9D9D9 !default
 $border-light:  #FFF !default
 
-$logo-color:    #F03
-$select-color:  #FFC
+$key: random(6)
+$one-color: #06f, #c06, #393, #f30, #09f, #099
+$two-color: #6ff, #fc0, #9f0, #fc0, #9f3, #fc0
+
+$logo-color: nth($one-color, $key)
+$shock-color:   nth($two-color, $key)
+$select-color:  $shock-color
+// foo!
 
 $mix-color:     mix($body-color, $text-color, 50%) !default
 $light-mix:     lighten($mix-color, 20%) !default

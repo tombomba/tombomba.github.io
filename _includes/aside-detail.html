@@ -6,4 +6,4 @@
   <p class="datestamp"><a href="{{ include.item.url | prepend: site.url }}">{{ include.item.date | date: '%-d %b. %Y' }}</a></p>
 </div>
 
-<div class="image"{% if include.item.image %}style="background-image: url({{ include.item.image | prepend: site.img_dir | prepend: site.url }})"{% endif %}>{% if include.item.image %}<a href="{{ include.item.url | prepend: site.url }}"><span></span></a>{% endif %}</div>
+<div class="image"{% if include.item.image %}style="background-image: url({{ include.item.image | prepend: site.url }})"{% endif %}>{% if include.item.image %}<a href="{{ include.item.url | prepend: site.url }}"><span></span></a>{% endif %}</div>

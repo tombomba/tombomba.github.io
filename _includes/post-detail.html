@@ -11,6 +11,6 @@
   {% endunless -%}
 {% endcapture -%}
 
-{% capture headline -%}<header><h1 class="sm">{% if page.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ raw_headline }}</a>{% else %}{{ raw_headline }}{% endif %}{{ punc }}</h1>&#32;<p>{% endcapture -%}
+{% capture headline -%}<header><h1 class="sm">{% if page.is_home %}<a href="{{ p.url | prepend: site.url }}">{% include widont.html string=raw_headline -%}</a>{% else %}{% include widont.html string=raw_headline -%}{% endif %}{{ punc }}</h1>&#32;<p>{% endcapture -%}
 
 {% assign copy = copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' %}

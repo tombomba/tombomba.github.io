@@ -4,29 +4,36 @@ is_home: true
 permalink: /index.html
 ---
 
-{% assign p = site.posts.first -%}
-{% assign copy = site.posts.first.content -%}
-{% if copy contains 'img src=' -%}
-  {% assign inline_images = true -%}
-  {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
-{% endif -%}
+{% for p in site.posts limit: 10 -%}
 
-<article>
+  {% assign copy = p.content -%}
+  {% if copy contains 'img src=' -%}
+    {% assign inline_images = true -%}
+    {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
+  {% endif -%}
 
-{% if p.media -%}
-  {% include media.html media=p.media -%}
-  <h1 class="lg"><a href="{{ p.url | prepend: site.url }}">{% include widont.html string=p.title %}</a></h1>
-  {{ copy }}
+  {% unless forloop.first %}<hr class="pagebreak">{% endunless %}
 
-{% else -%}
-  {% include post-detail.html -%}
-  {{ copy }}
+  <article>
 
-{% endif -%}
+    {% if p.media -%}
+    {% include media.html media=p.media -%}
+    <h1 class="lg"><a href="{{ p.url | prepend: site.url }}">{% include widont.html string=p.title %}</a></h1>
+    {{ copy }}
 
-  <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}" title="permalink">{{ p.date | date: '%d %b. %Y' }}</a></time></p>
+    {% else -%}
+    {% include post-detail.html -%}
+    {{ copy }}
 
-</article>
+    {% endif -%}
+
+    <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}" title="permalink">{{ p.date | date: '%d %b. %Y' }}</a></time></p>
+
+  </article>
+
+  {% assign inline_images = false -%}
+
+{% endfor -%}
 
 <aside>
 

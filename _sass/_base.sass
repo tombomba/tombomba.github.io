@@ -100,6 +100,8 @@ hr
   border-top: 1px solid $border-dark
   border-bottom: 1px solid $border-light
   background-color: $body-color
+  &.pagebreak
+    margin-top: bem(2)
 
 header[role="banner"]
 
@@ -148,6 +150,9 @@ main
     margin: bem(2) auto 0 auto
     max-width: $max-width
     @extend .clearfix
+    &:not(:first-of-type)
+      figure
+        padding-top: 0.66em
 
   aside
     margin-top: bem(2)

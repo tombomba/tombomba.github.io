@@ -1,7 +1,8 @@
 ---
 title: "Eat the rich at a 'Dinner for Few'"
 excerpt: "What goes around comes around in this animated short."
-image: /assets/img/dinner-for-few-2018-og.jpg
+image:
+  path: /assets/img/dinner-for-few-2018-og.jpg
 media:
   video: https://player.vimeo.com/video/288759859
 via: https://www.itsnicethat.com/articles/nassos-vakalis-dinner-for-few-animation-190918

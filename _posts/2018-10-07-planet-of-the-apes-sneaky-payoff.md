@@ -2,7 +2,9 @@
 title: "You've seen the original, right?"
 dek: "The sneaky payoff to 'Planet of the Apes'"
 excerpt: "Maybe you can explain something to me."
-image: /assets/img/planet-of-the-apes-1968-og.jpg
+image:
+  file: planet-of-the-apes-1968-og.jpg
+  path: /assets/img/planet-of-the-apes-1968-og.jpg
 date:   2018-10-07 21:26:12 -0700
 ---
 

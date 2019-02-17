@@ -34,15 +34,3 @@ permalink: /index.html
   {% assign inline_images = false -%}
 
 {% endfor -%}
-
-<aside>
-
-  <hr>
-
-  {% for recent in site.posts limit: 7 offset: 1 -%}
-  <div class="wrap">
-    {% include aside-detail.html item=recent -%}
-  </div>
-  {% endfor -%}
-
-</aside>

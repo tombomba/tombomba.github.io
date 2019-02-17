@@ -2,7 +2,7 @@ _site
 _snips
 _notes
 favicon-package.zip
-img/test-*
+/assets/img/test*
 .sass-cache
 .jekyll-cache/
 .jekyll-metadata

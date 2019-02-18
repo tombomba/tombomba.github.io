@@ -1,0 +1,42 @@
+header[role="banner"]
+
+  .wrap
+    height: bem(2)
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  .homelink
+    order: 1
+    @extend .hidden
+    @include font-ratio(20/16)
+    a:link, a:visited
+      text-decoration: none
+
+  .iconlink
+    order: 2
+    flex: 1 1 60%
+    max-width: 64px
+    margin: 0 auto
+    img
+      height: 24px
+
+  .datelink
+    order: 3
+    @extend .hidden
+    @include font-ratio(14/16)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40em)
+
+  header[role="banner"]
+
+    .homelink
+      display: block
+      flex-basis: 20%
+
+    .datelink
+      display: block
+      flex-basis: 20%
+      text-align: right

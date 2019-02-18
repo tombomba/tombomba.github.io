@@ -34,19 +34,19 @@ layout: default
   {% if p.id == site.posts.first.id -%}
     {% for recent in site.posts limit: 7 offset: 1 -%}
     <div class="wrap">
-      {% include aside-detail.html item=recent -%}
+      {% include aside.html item=recent -%}
     </div>
     {% endfor -%}
 
   {% else -%}
     {% if page.next -%}
     <div class="wrap">
-      {% include aside-detail.html item=page.next -%}
+      {% include aside.html item=page.next -%}
     </div>
     {% endif -%}
     {% if page.previous -%}
     <div class="wrap">
-      {% include aside-detail.html item=page.previous -%}
+      {% include aside.html item=page.previous -%}
     </div>
     {% endif -%}
 

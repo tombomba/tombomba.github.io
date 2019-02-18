@@ -95,47 +95,6 @@ hr
   &.pagebreak
     margin-top: bem(2)
 
-header[role="banner"]
-
-  .wrap
-    height: bem(2)
-    display: flex
-    align-items: center
-    justify-content: space-between
-
-  .homelink
-    order: 1
-    display: none
-    @include font-ratio(20/16)
-    a:link, a:visited
-      text-decoration: none
-
-  .iconlink
-    order: 2
-    flex: 1 1 60%
-    max-width: 64px
-    margin: 0 auto
-    img
-      height: 24px
-
-  .titlelink
-    order: 2
-    flex: 1 1 60%
-    font-size: bem(1)
-    font-family: 'Bungee Shade', $system
-    font-weight: 900
-    //color: $logo-color
-    text-align: center
-    a:link, a:visited
-      //color: $logo-color
-      text-decoration: none
-    a:hover
-      text-decoration: none
-
-  .datelink
-    order: 3
-    display: none
-    @include font-ratio(14/16)
 
 main
 
@@ -192,41 +151,9 @@ main
         z-index: 1
         background-image: url('/assets/img/shim.gif')
 
-footer
-  margin-top: bem(2)
-
-  .wrap
-    height: bem(2)
-    display: flex
-    align-items: center
-    justify-content: center
-
-  .nav
-    margin: 0
-    max-width: $max-width
-    list-style-type: none
-    li
-      display: inline
-      padding-right: 0.5em
-      &:not(:last-of-type):after
-        content: "-"
-        padding-left: 0.5em
-        color: rgba($text-color, 0.4)
-
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40em)
-
-  header[role="banner"]
-
-    .homelink
-      display: block
-      flex-basis: 20%
-
-    .datelink
-      display: block
-      flex-basis: 20%
-      text-align: right
 
   main aside .image
     width: 120px

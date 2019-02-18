@@ -2,12 +2,10 @@
 title: "Eat the rich at a 'Dinner for Few'"
 excerpt: "What goes around comes around in this animated short."
 image:
+  file: dinner-for-few-2018-og.jpg
   path: /assets/img/dinner-for-few-2018-og.jpg
-media:
-  video: https://player.vimeo.com/video/288759859
-via: https://www.itsnicethat.com/articles/nassos-vakalis-dinner-for-few-animation-190918
+layout: text
 date: 2018-10-26 20:19:20 -0700
-tags: [cool]
 ---
 
 Nassos Vakalis' [latest animated short](https://www.itsnicethat.com/articles/nassos-vakalis-dinner-for-few-animation-190918) begins at dilapidated seaside hotel during a storm. Inside, a sounder of pigs, each of them walking upright and wearing formal attire, gather around a table for dinner. A manservant works an odd machine; he shovels raw materials into one end and fresh food comes out the other. Below, a clowder of cats fight over scraps. As the pigs become more voracious, the cats more aggressive. What happens when there's nothing left to eat?

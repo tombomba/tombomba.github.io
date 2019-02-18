@@ -1,0 +1,29 @@
+
+{% assign p = include.item -%}
+{% assign copy = include.item.content -%}
+{% assign wc = copy | number_of_words -%}
+
+{% if copy contains 'img src=' -%}
+  {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
+{% endif -%}
+
+<article class="text"><!-- {{ wc }} words -->
+
+  {% if p.image.file -%}
+  <figure>
+    <img src="{{ p.image.file | prepend: site.img_dir }}" alt="{{ p.image.alt }}">
+    {% if p.image.caption %}<figcaption><p>{{ p.image.caption | smartify }}</p></figcaption>{% endif -%}
+  </figure>
+  {% endif -%}
+
+  {% assign raw_headline = p.title | strip | normalize_whitespace | smartify -%}
+
+  {% capture headline -%}<header><h1>{% if p.is_home %}<a href="{{ p.url | prepend: site.url }}">{% include widont.html string=raw_headline -%}</a>{% else %}{% include widont.html string=raw_headline -%}{% endif %}</h1>&#32;<p>{% endcapture -%}
+
+  {% assign copy = copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' %}
+
+  {{ copy }}
+
+  <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: '%-d %b. %Y' }}</time></p>
+
+</article>

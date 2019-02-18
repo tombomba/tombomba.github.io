@@ -2,8 +2,8 @@
 title: "The king of yob couture"
 excerpt: "'McQueen' is an ordinary film about an extraordinary man."
 image:
-  file: fbog-mcqueen-2018-docu.jpg
-  path: /assets/img/fbog-mcqueen-2018-docu.jpg
+  file: mcqueen-2018-docu-promo-still.jpg
+  path: /assets/img/mcqueen-2018-docu-promo-still.jpg
   alt: "McQueen, 2018. Film still."
 date: 2019-01-31 23:40 -0800
 ---

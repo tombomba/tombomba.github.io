@@ -12,6 +12,15 @@ css_dir: /assets/css/
 safe: true
 future: false
 
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "text"
+      is_post: true
+
 permalink: /:year/:month/:title:output_ext
 timezone: America/Los_Angeles
 

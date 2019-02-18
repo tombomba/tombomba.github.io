@@ -1,0 +1,22 @@
+
+{% assign p = include.item -%}
+{% assign copy = include.item.content -%}
+{% assign wc = copy | number_of_words -%}
+
+<article class="link"><!-- {{ wc }} words -->
+
+  {% if p.image.file -%}
+  <figure>
+    <img src="{{ p.image.file | prepend: site.img_dir }}" alt="{{ p.image.alt }}">
+  </figure>
+  {% endif -%}
+
+  <div class="copy">
+
+    <h1>{{ p.title | smartify }}</h1>
+
+    {{ copy }}
+
+  </div>
+
+</article>

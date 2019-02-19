@@ -8,7 +8,7 @@
 {% endif -%}
 
 <article class="text"><!-- {{ wc }} words -->
-
+  
   {% if p.image.file -%}
   <figure>
     <img src="{{ p.image.file | prepend: site.img_dir }}" alt="{{ p.image.alt }}">
@@ -16,14 +16,26 @@
   </figure>
   {% endif -%}
 
-  {% assign raw_headline = p.title | strip | normalize_whitespace | smartify -%}
+  {% comment -%} !! hack to avoid widows !! {% endcomment -%}
+  {% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' '-%}
+  {% if t.size > 1 -%}
+    {% assign sub = t.last | prepend: '!QQ!' -%}
+    {% assign t = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
+  {% endif -%}
 
-  {% capture headline -%}<header><h1>{% if p.is_home %}<a href="{{ p.url | prepend: site.url }}">{% include widont.html string=raw_headline -%}</a>{% else %}{% include widont.html string=raw_headline -%}{% endif %}</h1>&#32;<p>{% endcapture -%}
+  {% capture headline -%}
+  <header>
+    {% if include.is_home -%}<h1><a href="{{ p.url | prepend: site.url }}">{{ t }}</a></h1>{% else -%}<h1>{{ t }}</h1>{% endif -%}
+    <p>{% endcapture -%}
 
   {% assign copy = copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' %}
 
-  {{ copy }}
+  <div class="copy">
 
-  <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: '%-d %b. %Y' }}</time></p>
+    {{ copy }}
+
+    <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}" title="permalink">{{ p.date | date: '%-d %b. %Y' }}</a></time></p>
+
+  </div>
 
 </article>

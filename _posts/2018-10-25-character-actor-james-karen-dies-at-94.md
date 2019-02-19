@@ -1,6 +1,6 @@
 ---
 title: "Character actor James Karen dies at 94"
-excerpt: "You might remember him from such films as \"Poltergeist\" and \"Return of the Living Dead.\""
+excerpt: "You might remember him from such films as 'Poltergeist' and 'Return of the Living Dead.'"
 image:
   path: /assets/img/poltergeist-1982-james-karen.jpg
 layout: link

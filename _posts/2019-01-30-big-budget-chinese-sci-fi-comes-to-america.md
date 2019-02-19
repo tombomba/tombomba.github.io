@@ -1,6 +1,6 @@
 ---
 title: "Big budget Chinese sci-fi comes to America"
-excerpt: "\"The Wandering Earth\" gets an international release during the Lunar New Year holiday."
+excerpt: "'The Wandering Earth' will enjoy an international release during the Lunar New Year holiday."
 image:
   path: /assets/img/wandering-earth-2019-link-film-still.jpg
 layout: link

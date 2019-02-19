@@ -1,6 +1,9 @@
 ---
 title: "Missing horror film found in Scotland"
-dek: "A copy of 'The Telltale Heart,' from 1953, has been discovered in Scotland"
+excerpt: "It's an adaptation of Edgar Allen Poe's 'The Telltale Heart.'"
+image:
+  file: telltale-heart-1953-link-film-still.jpg
+  path: /assets/img/telltale-heart-1953-link-film-still-reverse.jpg
 layout: link
 date: 2018-10-25 10:42:11 -0700
 ---

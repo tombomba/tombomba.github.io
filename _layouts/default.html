@@ -55,7 +55,7 @@
 <header role="banner">
 
   <div class="wrap">
-    <div class="iconlink"><a href="{{ site.url }}"><img src="{{ 'default-icon-cool.gif' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.title | capitalize }}"></a></div>
+    <div class="iconlink"><a href="{{ site.url }}"><img src="{{ 'cool-dot-gif.gif' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.title | capitalize }}"></a></div>
     <p class="datelink"><a href="{{ page.date | default: site.posts.first.date | date: '/%Y/%m/' | prepend: site.url }}">{{ page.date | default: site.posts.first.date | date: '%b. %Y' }}</a></p>
     <p class="homelink"><a href="{{ site.url }}" title="home">&bull;</a></p>
   </div>
@@ -64,7 +64,7 @@
 
 </header>
 
-<main>
+<main role="main">
 
   {{ content }}
 

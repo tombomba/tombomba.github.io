@@ -6,10 +6,18 @@ permalink: /index.html
 
 {% for p in site.posts limit: 10 -%}
 
-  {% unless forloop.first %}<hr class="pagebreak">{% endunless %}
+  {% unless forloop.first %}<hr class="pagebreak">{% endunless -%}
 
-  {% if p.layout == 'text' -%}
+  {% case p.layout -%}
+
+  {% when 'photo' -%}
+    {% include photo-detail.html item=p is_home=true -%}
+
+  {% when 'link' -%}
+    {% include link-detail.html item=p is_home=true -%}
+
+  {% else -%}
     {% include text-detail.html item=p is_home=true -%}
-  {% endif -%}
+  {% endcase -%}
 
 {% endfor -%}

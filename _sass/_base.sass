@@ -51,6 +51,10 @@ html
   width: device-width
 
 body
+  font-family: $serif
+  font-size: 100%
+  line-height: (30/18)
+
   background-color: $body-color
   color: $text-color
 
@@ -59,12 +63,6 @@ body
   -webkit-text-size-adjust: auto
 
   padding: 0 1em
-
-ul, ol
-  margin-left: bem(1)
-
-ul
-  list-style-type: disc
 
 a
   text-decoration: underline
@@ -95,6 +93,14 @@ hr
   &.pagebreak
     margin-top: bem(2)
 
+.permalink
+  white-space: nowrap
+  color: $mix-color
+  a:link, a:visited
+    color: $mix-color
+    text-decoration: none
+  a:hover
+    text-decoration: underline
 
 main
 
@@ -102,66 +108,70 @@ main
     margin: bem(2) auto 0 auto
     max-width: $max-width
     @extend .clearfix
-    &:not(:first-of-type)
-      figure
-        padding-top: 0.66em
 
-  aside
-    margin-top: bem(2)
+    h1
+      font-size: 100%
+      a:link, a:visited
+        color: $text-color
+        text-decoration: none
+      a:hover
+        text-decoration: underline
 
-    .wrap
-      display: flex
+    h2, h3, h4, h5, h6
+      font-size: 100%
       margin-top: bem(1)
-      &:first-of-type
-        margin-top: bem(2)
-      margin-left: auto
-      margin-right: auto
+
+    p, li, hr
+      margin-top: bem(1)
+
+    li + p,
+      margin-top: 0
+
+    figure
+      margin-bottom: bem(1)
+      padding-bottom: 0.66em
+      figcaption
+        background-color: $body-color
+        p
+          margin: 0
+          font-size: percentage(12/16)
+          line-height: 1.4
+
+    blockquote
+      padding: 0 bem(1)
+      &>p:first-of-type:before
+        content: "\201C"
+      &>p:last-of-type:after
+        content: "\201D"
+
+    ul, ol
+      margin-left: bem(1)
+
+    ul
+      list-style-type: disc
+
+    .copy
       max-width: $max-width
-      @extend .clearfix
-
-    .meta
-      flex: 1
-      padding-right: 1em
-      h2
-        font-size: 100%
-        font-weight: 400
-      .datestamp
-        @include font-ratio(14/16)
-        white-space: nowrap
-        a:link, a:visited
-          color: $mix-color
-          text-decoration: none
-        a:hover
-          text-decoration: underline
-
-    .image
-      position: relative
-      width: 80px
-      height: 60px
-      border-radius: 3px
-      background-position: center center
-      background-repeat: no-repeat
-      background-size: cover
-      span
-        position: absolute
-        width: 100%
-        height: 100%
-        top: 0
-        left: 0
-        z-index: 1
-        background-image: url('/assets/img/shim.gif')
+      margin: 0 auto
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 40em)
+@media screen and (min-width: 32em)
 
-  main aside .image
-    width: 120px
-    height: 80px
+  body
+    font-size: 112.5%
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 64em)
 
-  ul, ol
-    margin-left: 0
+  main article
+    ul, ol
+      margin-left: 0
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 90em)
+
+  body
+    font-size: 120%

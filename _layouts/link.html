@@ -2,31 +2,4 @@
 layout: default
 ---
 
-{% include text-detail.html item=page -%}
-
-<aside>
-
-  <hr>
-
-  {% if page.id == site.posts.first.id -%}
-    {% for recent in site.posts limit: 7 offset: 1 -%}
-    <div class="wrap">
-      {% include aside.html item=recent -%}
-    </div>
-    {% endfor -%}
-
-  {% else -%}
-    {% if page.next -%}
-    <div class="wrap">
-      {% include aside.html item=page.next -%}
-    </div>
-    {% endif -%}
-    {% if page.previous -%}
-    <div class="wrap">
-      {% include aside.html item=page.previous -%}
-    </div>
-    {% endif -%}
-
-  {% endif -%}
-
-</aside>
+{% include link-detail.html item=page -%}

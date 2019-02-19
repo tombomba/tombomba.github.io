@@ -1,19 +1,38 @@
 
 {% assign p = include.item -%}
-{% assign copy = include.item.content -%}
-{% assign wc = copy | number_of_words -%}
+{% assign copy = include.item.content | strip | normalize_whitespace -%}
+{% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify -%}
 
-<article class="link"><!-- {{ wc }} words -->
+{% capture datef -%}&nbsp;<span class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">(<a href="{{ p.url | prepend: site.url }}" title="permalink">{{ p.date | date: '%-d %b.' }}</a>)</time></span>{% endcapture -%}
 
-  {% if p.image.file -%}
-  <figure>
-    <img src="{{ p.image.file | prepend: site.img_dir }}" alt="{{ p.image.alt }}">
-  </figure>
-  {% endif -%}
+{% assign copysize = copy | size | minus: 4 %}
+{% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
+
+{% capture punc -%}
+  {% unless p.title contains '.' or p.title contains '!' or p.title contains '?' -%}
+    {% assign last_char = p.title | slice: -1, 1 -%}
+    {% if last_char == '"' or last_char == "'" -%}
+      <span class="dash"></span>
+    {% else -%}
+      <span class="punc"></span>
+    {% endif %}
+  {% endunless -%}
+{% endcapture -%}
+
+{% if p.image.file -%}
+<article class="link wide">
+  <div class="thumb">
+    <a href="{{ p.url | prepend: site.url }}"><img src="{{ p.image.file | prepend: site.img_dir }}" alt="{{ p.image.alt }}"></a>
+  </div>
+
+{% else -%}
+<article class="link">
+
+{% endif -%}
 
   <div class="copy">
 
-    <h1>{{ p.title | smartify }}</h1>
+    <h1>{% if include.is_home -%}<a href="{{ p.url | prepend: site.url }}">{{ t }}</a>{% else -%}{{ t }}{% endif -%}{{ punc }}</h1>&#32;
 
     {{ copy }}
 

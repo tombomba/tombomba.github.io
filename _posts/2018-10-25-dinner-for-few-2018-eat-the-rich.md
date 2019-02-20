@@ -3,7 +3,7 @@ title: "Eat the rich at a 'Dinner for Few'"
 excerpt: "What goes around comes around in this animated short from Nasso Vakalis."
 image:
   file: dinner-for-few-2018-film-still.jpg
-  path: /assets/img/dinner-for-few-2018-film-still-3.jpg
+  path: /assets/img/dinner-for-few-2018-film-still.jpg
   alt: "Dinner for Few, 2018. Film still."
 date: 2018-10-26 20:19:20 -0700
 ---

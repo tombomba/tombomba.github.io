@@ -21,7 +21,7 @@
 
 {% if p.image.file -%}
 <article class="link wide">
-  <div class="thumb">
+  <div class="thumb {{ p.image.style | default: 'left' }}">
     <a href="{{ p.url | prepend: site.url }}"><img src="{{ p.image.file | prepend: site.img_dir }}" alt="{{ p.image.alt }}"></a>
   </div>
 

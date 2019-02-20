@@ -71,7 +71,7 @@ main article
 
     .copy
       h1::after
-        content: "\20\2014\20"
+        content: "\00A0\2014\20"
       h1, p:first-of-type
         display: inline
       .datestamp
@@ -79,11 +79,16 @@ main article
 
   &.link
     .thumb
-      float: left
       max-width: 33%
       height: auto
-      margin-right: 1em
       margin-bottom: 0.5em
+      @extend .clearfix
+      &.right
+        float: right
+        margin-left: 1em
+      &.left
+        float: left
+        margin-right: 1em
       img
         border-radius: 3px
         max-width: 100%
@@ -120,9 +125,13 @@ main article
   main article
 
     &.link .thumb
-      margin-right: bem(1)
-      margin-left: bem(-1)
       margin-bottom: bem(0.5)
+      &.right
+        margin-left: bem(1)
+        margin-right: bem(-1)
+      &.left
+        margin-left: bem(-1)
+        margin-right: bem(1)
 
 //-----------------------------------------------------------------------------
 
@@ -131,4 +140,7 @@ main article
   main article
 
     &.link .thumb
-      margin-left: bem(-2)
+      &.right
+        margin-right: bem(-2)
+      &.left
+        margin-left: bem(-2)

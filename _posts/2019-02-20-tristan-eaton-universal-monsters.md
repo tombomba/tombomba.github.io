@@ -5,7 +5,7 @@ image:
   file: triston-eaton-universal-monsters.jpg
   path: /assets/img/triston-eaton-universal-monsters.jpg
   alt: "Frankenstein's monster by Tristan Eaton, 2019"
-layout: photo
+layout: link
 date: 2019-02-20 05:32 -800
 ---
 

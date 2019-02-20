@@ -32,7 +32,10 @@ main article
     figure
       width: 100%
       max-width: 100%
-      padding-bottom: 0.33em
+      &.single
+        padding-bottom: 0.66em
+      &.photoset
+        padding-bottom: 0.33em
 
     .container
       width: 100%
@@ -101,8 +104,6 @@ main article
         content: "."
       .dash::after
         content: "\20\2014"
-      &.wide
-        padding-top: 0.66em
 
   .datestamp
     @extend .permalink

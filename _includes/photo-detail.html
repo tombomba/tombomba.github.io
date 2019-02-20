@@ -10,13 +10,13 @@
 <article class="photo">
 
   {% if p.image.file -%}
-  <figure class="wide">
+  <figure class="single">
     <img src="{{ p.image.file | prepend: site.img_dir }}" alt="{{ p.image.alt }}">
     {% if p.image.caption %}<figcaption><p>{{ p.image.caption | smartify }}</p></figcaption>{% endif -%}
   </figure>
 
   {% elsif p.collage -%}
-  <figure>
+  <figure class="photoset">
     <div class="container">
       <div class="flex collage">
       {% for hash in p.collage -%}

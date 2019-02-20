@@ -4,7 +4,7 @@ excerpt: "The work features iconic movie monsters from the 1930s and 40s."
 image:
   file: triston-eaton-universal-monsters.jpg
   path: /assets/img/triston-eaton-universal-monsters.jpg
-  alt: "Frankenstein's monster mural by Tristan Eaton, 2019"
+  alt: "Frankenstein's monster by Tristan Eaton, 2019"
 layout: photo
 date: 2019-02-20 05:32 -800
 ---

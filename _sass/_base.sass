@@ -106,7 +106,10 @@ main
 
   article
     margin: bem(2) auto 0 auto
-    max-width: $max-width
+    &.post
+      max-width: $max-width + bem(4)
+    &.page
+      max-width: $max-width
     @extend .clearfix
 
     h1

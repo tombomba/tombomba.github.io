@@ -16,14 +16,14 @@
 
 <article class="page">
 
-  {% if p.image.file -%}
+  {% if p.image.file %}
   <figure>
     <img src="{{ p.image.file | prepend: site.img_dir }}" alt="{{ p.image.alt }}">
     {% if p.image.caption %}<figcaption><p>{{ p.image.caption | smartify }}</p></figcaption>{% endif -%}
   </figure>
   {% endif -%}
 
-  {% capture headline -%}<header><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ t }}</a>{% else %}{{ t }}{% endif -%}</h1><p>{% endcapture -%}
+  {% capture headline %}<header><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ t }}</a>{% else %}{{ t }}{% endif %}</h1><p>{% endcapture -%}
 
   {% assign copy = copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' %}
 

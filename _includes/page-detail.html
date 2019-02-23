@@ -1,0 +1,17 @@
+
+{% assign p = include.item -%}
+{% assign copy = include.item.content | strip | normalize_whitespace -%}
+{% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify -%}
+
+{% capture datef -%}&nbsp;<span class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">(<a href="{{ p.url | prepend: site.url }}" title="permalink">{{ p.date | date: '%-d %b.' }}</a>)</time></span>{% endcapture -%}
+
+{% assign copysize = copy | size | minus: 4 %}
+{% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
+
+<article class="page">
+
+    <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ t }}</a>{% else %}{{ t }}{% endif -%}</h1>
+
+    {{ copy }}
+
+</article>

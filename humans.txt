@@ -11,7 +11,7 @@ Github: {{ site.github }}
 
 /* SITE */
 
-Last update: {{ site.posts.first.date | date: "%Y/%m/%d" }}
+Last update: {{ site.time | date: "%Y/%m/%d" }}
 Standards: HTML5, CSS3
 Software: Atom, Pixelmator, Jekyll, Git
 

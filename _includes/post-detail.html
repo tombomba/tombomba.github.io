@@ -1,16 +1,55 @@
-{% assign raw_headline = p.title | strip | normalize_whitespace | smartify -%}
+{% assign p = include.item -%}
+{% assign copy = include.item.content -%}
+{% assign wc = copy | number_of_words -%}
 
-{% capture punc -%}
-  {% unless p.title contains '.' or p.title contains '!' or p.title contains '?' -%}
-    {% assign last_char = p.title | slice: -1, 1 -%}
-    {% if last_char == '"' or last_char == "'" -%}
-      <span class="dash"></span>
-    {% else -%}
-      <span class="punc"></span>
-    {% endif %}
-  {% endunless -%}
-{% endcapture -%}
+{% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' '-%}
+{% if t.size > 1 -%}
+  {% assign sub = t.last | prepend: '!QQ!' -%}
+  {% assign t = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
+{% endif -%}
 
-{% capture headline -%}<header><h1 class="sm">{% if page.is_home %}<a href="{{ p.url | prepend: site.url }}">{% include widont.html string=raw_headline -%}</a>{% else %}{% include widont.html string=raw_headline -%}{% endif %}{{ punc }}</h1>&#32;<p>{% endcapture -%}
+{% if copy contains 'img src=' -%}
+  {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
+{% endif -%}
 
-{% assign copy = copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' %}
+<article class="post"><!-- {{ wc }} words -->
+
+  {% if p.image.file %}
+  <figure class="single">
+    <img src="{{ p.image.file | prepend: site.img_dir }}" alt="{{ p.image.alt }}">
+    {% if p.image.caption %}<figcaption><p>{{ p.image.caption | smartify }}</p></figcaption>{% endif -%}
+  </figure>
+
+  {% elsif p.collage %}
+  <figure class="photoset">
+    <div class="container">
+      <div class="flex collage">
+      {% for hash in p.collage %}
+        {% for photo in hash %}
+          {% case photo[0] %}
+            {% when 50 %}{% assign photosize = 'image--2' %}
+            {% when 33 %}{% assign photosize = 'image--3' %}
+            {% when 25 %}{% assign photosize = 'image--4' %}
+            {% when 60 %}{% assign photosize = 'image--3-of-5' %}
+            {% when 40 %}{% assign photosize = 'image--2-of-5' %}
+            {% else %}{% assign photosize = 'image--1' %}
+          {% endcase -%}
+          <div class="photo {{ photosize }}"><img src="{{ photo[1] | prepend: site.img_dir | prepend: site.url }}" alt=""><!-- {{ photo[0] }} --></div>
+        {% endfor -%}
+      {% endfor -%}
+      </div>
+    </div>
+    {% if p.image.caption %}<figcaption><p>{{ p.image.caption | smartify }}</p></figcaption>{% endif -%}
+  </figure>
+
+  {% endif -%}
+
+  <div class="copy">
+
+    <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ t }}</a>{% else %}{{ t }}{% endif -%}</h1>
+
+    {{ copy }}
+
+  </div>
+
+</article>

@@ -46,7 +46,8 @@
 
   <div class="copy">
 
-    <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ t }}</a>{% else %}{{ t }}{% endif -%}</h1>
+    {% capture headline %}<header><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ t }}</a>{% else %}{{ t }}{% endif %}</h1><p>{% endcapture -%}
+    {% assign copy = copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' %}
 
     {{ copy }}
 

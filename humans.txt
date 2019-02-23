@@ -18,7 +18,6 @@ Software: Atom, Pixelmator, Jekyll, Git
 /* INFLUENCES */
 
 - "Boys Don't Cry" by The Cure
-- Richard Nixon's "Checkers" speech
 - "Mrs Dalloway" by Virginia Woolf
 - The Paris Review's Art of Comics, Volume 1, 2012, featuring R.Crumb
 - Banksy.co.uk/manifesto, ca. 2006
@@ -33,6 +32,7 @@ Software: Atom, Pixelmator, Jekyll, Git
 - Tom Spurgeon's Comics Reporter
 - Jessa Crispin's Book Slut
 - Rookie magazine
+- Richard Nixon's "Checkers" speech
 - "song (did you see me walking by the Buick repairs?)" by Frank O'Hara
 - Cinema Village, 22 E 12th St, New York
 - John Berger's "Ways of Seeing," 1972

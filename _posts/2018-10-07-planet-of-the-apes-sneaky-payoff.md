@@ -1,6 +1,5 @@
 ---
-title: "You've seen the original, right?"
-dek: "The sneaky payoff to 'Planet of the Apes'"
+title: "The sneaky payoff to 'Planet of the Apes'"
 excerpt: "Maybe you can explain something to me."
 image:
   path: /assets/img/planet-of-the-apes-1968-charlton-heston-film-still.jpg
@@ -9,7 +8,7 @@ date:   2018-10-07 21:26:12 -0700
 
 ![Planet of the Apes 1968 poster art]({{ site.img_dir }}planet-of-the-apes-1968-poster-art.jpg){: .top .right .tilt }
 
-"Planet of the Apes," 1968. Remember the ending? Okay, good. So maybe you can tell me how Taylor, the astronaut played by Charlton Heston, didn't realize where he was from the start. Because he should have.
+You've seen the original, right? "Planet of the Apes," 1968. Remember the ending? Okay, good. So maybe you can tell me how Taylor, the astronaut played by Charlton Heston, didn't realize where he was from the start. Because he should have.
 
 "Planet" is a cultural touchstone; everyone knows it even if they've never seen it. A group of astronauts travel to a distant galaxy and crash land on an alien planet. Apes rule, humans drool. Taylor alone escapes the upside-down civilization with the help of a couple of sympathetic chimpanzees. By the end, he faces a terrible truth: he's not where he thought he was. Cue Heston sobbing on the beach and one of the most famous images in American movies.
 

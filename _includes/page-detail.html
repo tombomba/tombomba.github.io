@@ -1,12 +1,18 @@
 
-{% assign p = include.item -%}
-{% assign copy = include.item.content | strip | normalize_whitespace -%}
+{% assign p = include.page -%}
+{% assign copy = include.content | strip | normalize_whitespace -%}
 {% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify -%}
 
-{% capture datef -%}&nbsp;<span class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">(<a href="{{ p.url | prepend: site.url }}" title="permalink">{{ p.date | date: '%-d %b.' }}</a>)</time></span>{% endcapture -%}
+{% if p.date %}
 
-{% assign copysize = copy | size | minus: 4 %}
-{% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
+  {% capture datef %}
+    &nbsp;<span class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">(<a href="{{ p.url | prepend: site.url }}" title="permalink">{{ p.date | date: '%-d %b.' }}</a>)</time></span>
+  {% endcapture -%}
+
+  {% assign copysize = copy | size | minus: 4 %}
+  {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
+
+{% endif -%}
 
 <article class="page">
 

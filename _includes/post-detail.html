@@ -1,5 +1,5 @@
-{% assign p = include.item -%}
-{% assign copy = include.item.content -%}
+{% assign p = include.page -%}
+{% assign copy = include.content | strip | normalize_whitespace -%}
 {% assign wc = copy | number_of_words -%}
 
 {% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' '-%}

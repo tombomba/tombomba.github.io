@@ -12,14 +12,26 @@ css_dir: /assets/css/
 safe: true
 future: false
 
+include:
+  - _pages
+  - _archives
+
 defaults:
   -
     scope:
       path: ""
       type: "posts"
     values:
-      layout: "text"
+      layout: "post"
       is_post: true
+  -
+    scope:
+      path: "_pages"
+      type: "pages"
+    values:
+      layout: "page"
+      is_page: true
+
 
 permalink: /:year/:month/:title:output_ext
 timezone: America/Los_Angeles

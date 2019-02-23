@@ -2,8 +2,6 @@
 title: "Hello"
 excerpt: "About the site."
 is_bio: true
-is_page: true
-layout: page
 permalink: /about/
 ---
 

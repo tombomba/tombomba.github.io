@@ -2,15 +2,15 @@
 title: "Warhol hamburger test"
 excerpt: "Integer auctor turpis eu lectus lacinia, sed sagittis lorem semper."
 image:
-  path: /assets/img/warhol-hamburger-test-detail.jpg
-collage:
+  path: /assets/img/wandering-earth-2019-link-film-still.jpg
+photoset:
   - 33: wandering-earth-2019-link-film-still.jpg
   - 33: wandering-earth-2019-link-film-still.jpg
   - 33: wandering-earth-2019-link-film-still.jpg
   - 100: wandering-earth-2019-link-film-still.jpg
   - 40: wandering-earth-2019-link-film-still.jpg
   - 60: wandering-earth-2019-link-film-still.jpg
-layout: photo
+layout: post
 date: 2019-02-17 20:10 -0800
 ---
 

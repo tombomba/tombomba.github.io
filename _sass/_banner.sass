@@ -1,44 +1,43 @@
 header[role="banner"]
 
+  max-width: $max-width
+  margin-left: auto
+  margin-right: auto
+
   .wrap
     height: bem(2)
     display: flex
     align-items: center
     justify-content: space-between
 
-  .homelink
-    order: 1
-    display: none
-    margin: 0
-    @include font-ratio(20/16)
-    a:link, a:visited
-      text-decoration: none
+  .logolink
+    margin-right: 1em
+    margin-left: -1em
+    background-color: darken($body-color, 5%)
+    border-top-right-radius: 5px
+    border-bottom-right-radius: 5px
+    padding: 0 1em
+    h1
+      font-family: 'Bungee', $sans
+      font-size: bem(1)
+      font-weight: 700
+      text-transform: uppercase
+      letter-spacing: 0.5px
+      a:link, a:visited
+        color: $logo-color
+        text-decoration: none
+      a:hover
+        text-decoration: underline
 
-  .iconlink
-    order: 2
-    flex: 1 1 60%
-    max-width: 64px
-    margin: 0 auto
-    img
-      height: 24px
-
-  .datelink
-    order: 3
-    display: none
-    margin: 0
-    @include font-ratio(14/16)
+  .shim
+    flex: 1
+    hr
+      width: 100%
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 40em)
+@media screen and (min-width: 41em)
 
   header[role="banner"]
-
-    .homelink
-      display: block
-      flex-basis: 20%
-
-    .datelink
-      display: block
-      flex-basis: 20%
-      text-align: right
+    .logolink
+      border-radius: 5px

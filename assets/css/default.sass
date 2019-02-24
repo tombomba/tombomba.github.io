@@ -9,164 +9,57 @@
 
 main article
 
-  &.post
-    h1
-      font-size: 112.5%
-      line-height: 1.4
-    figure
-      margin-left: -1em
-      margin-right: -1em
-      padding-bottom: 0.66em
-      img
-        max-width: 100%
-        border-radius: 3px
-
-  &.page
-    header
-      h1
-        font-size: 100%
-        &::after
-          content: ".\20"
-      h1, p
-        display: inline
-    .datestamp
-      font-style: italic
-
-  &.text
-    max-width: $max-width + bem(4)
-    h1
-      font-size: 112.5%
-      line-height: 1.33333
-    figure
-      margin-left: -1em
-      margin-right: -1em
-      padding-bottom: 0.66em
-      img
-        max-width: 100%
-        border-radius: 3px
-    &:not(:first-of-type) figure
-      padding-top: 0.66em
-
-  &.photo
-
-    $margin-size: 1%
-    max-width: $max-width + bem(4)
-
-    figure
-      width: 100%
+  h1
+    font-size: 112.5%
+    line-height: 1.4
+    &.lg
+      font-size: 125%
+  figure
+    width: 100%
+    max-width: 100%
+    &.single
       max-width: 100%
-      &.single
-        padding-bottom: 0.66em
-        img
-          border-radius: 3px
-      &.photoset
-        padding-bottom: 0.33em
-
-    .container
-      width: 100%
-
-    .flex
-      display: flex
-      flex-wrap: wrap
-
-    img
-      display: block
-      width: 100%
-
-    .photo
-      flex: 1 0 100px
-      margin: 0 $margin-size $margin-size 0
-
-    .collage
-      .image--1
-        flex-basis: 100 - $margin-size
-      .image--2
-        flex-basis: 50 - $margin-size
-      .image--3
-        flex-basis: 33 - $margin-size
-      .image--4
-        flex-basis: 25 - $margin-size
-      .image--3-of-5
-        flex-basis: 60 - $margin-size
-      .image--2-of-5
-        flex-basis: 40 - $margin-size
-        position: relative
-        overflow: hidden
-        img
-          position: absolute
-          height: 100%
-          width: auto
-
-    .copy
-      h1::after
-        content: "\00A0\2014\20"
-      h1, p:first-of-type
-        display: inline
-      .datestamp
-        font-style: italic
-
-  &.link
-    .thumb
-      max-width: 33%
-      height: auto
-      margin-bottom: 0.5em
-      @extend .clearfix
-      &.right
-        float: right
-        margin-left: 1em
-      &.left
-        float: left
-        margin-right: 1em
+      padding-bottom: 0.66em
       img
-        border-radius: 3px
         max-width: 100%
-    .copy
-      h1, p
-        display: inline
-      .datestamp
-        font-style: italic
-      .punc::after
-        content: "."
-      .dash::after
-        content: "\20\2014"
+        border-radius: 5px
+    &.photoset
+      padding-bottom: 0.33em
+      .container
+        width: 100%
+      .flex
+        display: flex
+        flex-wrap: wrap
+      img
+        display: block
+        width: 100%
+      .photo
+        flex: 1 0 100px
+        margin: 0 $margin-size $margin-size 0
+      .collage
+        .image--1
+          flex-basis: 100 - $margin-size
+        .image--2
+          flex-basis: 50 - $margin-size
+        .image--3
+          flex-basis: 33 - $margin-size
+        .image--4
+          flex-basis: 25 - $margin-size
+        .image--3-of-5
+          flex-basis: 60 - $margin-size
+        .image--2-of-5
+          flex-basis: 40 - $margin-size
+          position: relative
+          overflow: hidden
+          img
+            position: absolute
+            height: 100%
+            width: auto
 
   .datestamp
     @extend .permalink
 
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40em)
-
-  main article
-
-    &.text figure
-      margin-left: 0
-      margin-right: 0
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 64em)
-
-  main article
-
-    &.link .thumb
-      margin-bottom: bem(0.5)
-      &.right
-        margin-left: bem(1)
-        margin-right: bem(-1)
-      &.left
-        margin-left: bem(-1)
-        margin-right: bem(1)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 72em)
-
-  main article
-
-    &.link .thumb
-      &.right
-        margin-right: bem(-2)
-      &.left
-        margin-left: bem(-2)
+  .error
+    margin-top: bem(1)
+    li
+      margin: 0

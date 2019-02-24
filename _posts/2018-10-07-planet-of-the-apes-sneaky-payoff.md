@@ -1,6 +1,6 @@
 ---
 title: "The sneaky payoff to 'Planet of the Apes'"
-excerpt: "Maybe you can explain something to me."
+excerpt: "Remember the ending? Then maybe you can explain something to me."
 image:
   path: /assets/img/planet-of-the-apes-1968-charlton-heston-film-still.jpg
 date:   2018-10-07 21:26:12 -0700

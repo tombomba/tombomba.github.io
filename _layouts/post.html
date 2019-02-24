@@ -4,3 +4,20 @@ layout: default
 
 <!--- c-c-c-content! --->
 {% include post-detail.html page=page content=content -%}
+
+<aside>
+
+  <hr>
+
+  {% if page.next -%}
+  <div class="wrap">
+    {% include aside.html item=page.next -%}
+  </div>
+  {% endif -%}
+  {% if page.previous -%}
+  <div class="wrap">
+    {% include aside.html item=page.previous -%}
+  </div>
+  {% endif -%}
+
+</aside>

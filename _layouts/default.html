@@ -82,7 +82,7 @@
       <h1 class="title">{{ site.title }}</h1>
       {% if page.date %}
         <p class="tagline">&ldquo;{{ site.data.taglines | sample: 1 | smartify }}&rdquo;</p>
-        <p class="datestamp"><em>for</em> {{ site.posts.first.date | date: '%A, %-d %B, %Y' }}. Updated&nbsp;weekly.</p>
+        <p class="datestamp"><em>for</em> {{ page.date | date: '%A, %-d %B, %Y' }}. Updated&nbsp;weekly.</p>
         <p class="copylong">Copyright &copy;&nbsp;{{ site.posts.first.date | date: '%Y' }} by {{ site.author }}.</p>
       {% else %}
         <p class="modstamp">Last updated {{ site.posts.first.date | date: '%-d %B, %Y' }}.</p>

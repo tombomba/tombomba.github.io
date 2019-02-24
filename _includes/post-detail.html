@@ -20,11 +20,11 @@
     {% if p.image.caption %}<figcaption><p>{{ p.image.caption | smartify }}</p></figcaption>{% endif -%}
   </figure>
 
-  {% elsif p.collage %}
+  {% elsif p.photoset %}
   <figure class="photoset">
     <div class="container">
       <div class="flex collage">
-      {% for hash in p.collage %}
+      {% for hash in p.photoset %}
         {% for photo in hash %}
           {% case photo[0] %}
             {% when 50 %}{% assign photosize = 'image--2' %}
@@ -44,15 +44,9 @@
 
   {% endif -%}
 
-  <div class="copy">
+  {% capture headline %}<header><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ t }}</a>{% else %}{{ t }}{% endif %}</h1><p>{% endcapture -%}
+  {% assign copy = copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' %}
 
-    {% capture headline %}<header><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ t }}</a>{% else %}{{ t }}{% endif %}</h1><p>{% endcapture -%}
-    {% assign copy = copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' %}
-
-    {{ copy }}
-
-    <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}" title="permalink">{{ p.date | date: '%-d %b. %Y' }}</a></time></p>
-
-  </div>
+  {{ copy }}
 
 </article>

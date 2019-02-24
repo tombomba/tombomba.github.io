@@ -1,15 +1,17 @@
 footer
+  max-width: $max-width
   margin-top: bem(2)
+  margin-left: auto
+  margin-right: auto
 
   .wrap
-    height: bem(2)
-    display: flex
-    align-items: center
-    justify-content: center
+    max-width: $max-width
+    margin-top: bem(1)
+    margin-left: auto
+    margin-right: auto
 
   .nav
     margin: 0
-    max-width: $max-width
     list-style-type: none
     li
       display: inline
@@ -18,3 +20,19 @@ footer
         content: "-"
         padding-left: 0.5em
         color: rgba($text-color, 0.4)
+
+  .meta
+    margin-top: bem(1)
+    display: inline-block
+    h1
+      display: inline
+      @include font-ratio(14/16)
+      color: $mix-color
+      &::after
+        content: ":\20"
+    p
+      @include font-ratio(14/16)
+      display: inline
+      color: $mix-color
+      &::after
+        content: "\20"

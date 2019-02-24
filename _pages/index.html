@@ -7,7 +7,7 @@ permalink: /index.html
 {% assign p = site.posts.first -%}
 {% assign copy = site.posts.first.content -%}
 
-{% include post-detail.html page=p content=copy -%}
+{% include post-detail.html page=p content=copy is_home=true -%}
 
 <aside>
   <hr>

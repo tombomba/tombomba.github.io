@@ -3,7 +3,6 @@
 <div class="meta">
   <h2><a href="{{ include.item.url | prepend: site.url }}">{% include widont.html string=titlef %}</a></h2>
   <p class="excerpt">{% include widont.html string=excerptf %}</p>
-  <p class="datestamp"><a href="{{ include.item.url | prepend: site.url }}">{{ include.item.date | date: '%-d %b. %Y' }}</a></p>
 </div>
 
 <div class="image"{% if include.item.image.path %}style="background-image: url({{ include.item.image.path }})"{% endif %}>{% if include.item.image.path %}<a href="{{ include.item.url | prepend: site.url }}"><span></span></a>{% endif %}</div>

@@ -44,6 +44,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="{{ 'default.css' | prepend: site.css_dir | prepend: site.url }}">
+    <link href="https://fonts.googleapis.com/css?family=Bungee&type={{ site.title | upcase }}" rel="stylesheet">
 
     <!-- msft mobile hacks -->
     <script>!function(){if("-ms-user-select"in document.documentElement.style&&navigator.userAgent.match(/IEMobile/)){var a=document.createElement("style");a.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")),document.getElementsByTagName("head")[0].appendChild(a)}}();</script>
@@ -55,12 +56,9 @@
 <header role="banner">
 
   <div class="wrap">
-    <div class="iconlink"><a href="{{ site.url }}"><img src="{{ 'cool-dot-gif.gif' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.title | capitalize }}"></a></div>
-    <p class="datelink"><a href="{{ page.date | default: site.posts.first.date | date: '/%Y/%m/' | prepend: site.url }}">{{ page.date | default: site.posts.first.date | date: '%b. %Y' }}</a></p>
-    <p class="homelink"><a href="{{ site.url }}" title="home">&bull;</a></p>
+    <div class="logolink"><h1><a href="{{ site.url }}">{{ site.title | upcase }}</a></h1></div>
+    <div class="shim"><hr></div>
   </div>
-
-  <hr>
 
 </header>
 
@@ -77,8 +75,21 @@
   <div class="wrap">
 
     <ul class="nav">
-      {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}<!-- {% unless page.is_index %}<li><a href="{{ page.date | default: site.posts.first.date | date: '/%Y/' | prepend: site.url }}">Archive</a></li>{% endunless %} -->{% unless page.is_bio %}<li><a href="/about/" aria-label="About this website">About</a></li>{% endunless %}{% if page.is_page or page.is_home %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li>{% endif %}
+      {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}<!-- {% unless page.is_index %}<li><a href="{{ page.date | default: site.posts.first.date | date: '/%Y/' | prepend: site.url }}">Archive</a></li>{% endunless %} -->{% unless page.is_bio %}<li><a href="/about/" aria-label="About this website">About</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li>
     </ul>
+
+    <div class="meta">
+      <h1 class="title">{{ site.title }}</h1>
+      {% if page.date %}
+        <p class="tagline">&ldquo;{{ site.data.taglines | sample: 1 | smartify }}&rdquo;</p>
+        <p class="datestamp"><em>for</em> {{ site.posts.first.date | date: '%A, %-d %B, %Y' }}. Updated&nbsp;weekly.</p>
+        <p class="copylong">Copyright &copy;&nbsp;{{ site.posts.first.date | date: '%Y' }} by {{ site.author }}.</p>
+      {% else %}
+        <p class="modstamp">Last updated {{ site.posts.first.date | date: '%-d %B, %Y' }}.</p>
+        <p class="copyshort"> New essays weekly. &copy;&nbsp;{{ site.posts.first.date | date: '%Y' }}</p>
+      {% endif -%}
+
+    </div>
 
   </div>
 

@@ -1,6 +1,6 @@
 ---
 title: "Eat the rich at a 'Dinner for Few'"
-excerpt: "What goes around comes around in this animated short from Nasso Vakalis."
+excerpt: "What goes around comes around in this animated short from Nassos Vakalis."
 image:
   file: dinner-for-few-2018-film-still.jpg
   path: /assets/img/dinner-for-few-2018-film-still.jpg

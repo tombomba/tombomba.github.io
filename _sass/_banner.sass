@@ -10,13 +10,7 @@ header[role="banner"]
     align-items: center
     justify-content: space-between
 
-  .logolink
-    margin-right: 1em
-    margin-left: -1em
-    background-color: darken($body-color, 5%)
-    border-top-right-radius: 5px
-    border-bottom-right-radius: 5px
-    padding: 0.5em 1em
+  .logo
     h1
       font-family: 'Bungee', $sans
       font-size: bem(1)
@@ -30,6 +24,14 @@ header[role="banner"]
       a:hover
         text-decoration: none
 
+  .bg-box
+    margin-right: 1em
+    margin-left: -1em
+    background-color: darken($body-color, 5%)
+    border-top-right-radius: 5px
+    border-bottom-right-radius: 5px
+    padding: 0.5em 1em
+
   .shim
     flex: 1
     hr
@@ -40,5 +42,5 @@ header[role="banner"]
 @media screen and (min-width: 41em)
 
   header[role="banner"]
-    .logolink
+    .bg-box
       border-radius: 5px

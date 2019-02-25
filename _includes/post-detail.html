@@ -2,6 +2,9 @@
 {% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify -%}
 {% assign copy = include.content | strip | normalize_whitespace -%}
 {% assign wc = copy | number_of_words -%}
+{% if copy contains 'img src=' -%}
+  {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
+{% endif -%}
 
 <article class="post"><!-- {{ wc }} words -->
 

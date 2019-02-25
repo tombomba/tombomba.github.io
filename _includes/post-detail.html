@@ -1,26 +1,19 @@
 {% assign p = include.page -%}
+{% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify -%}
 {% assign copy = include.content | strip | normalize_whitespace -%}
 {% assign wc = copy | number_of_words -%}
-
-{% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' '-%}
-{% if t.size > 1 -%}
-  {% assign sub = t.last | prepend: '!QQ!' -%}
-  {% assign t = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
-{% endif -%}
-
-{% if copy contains 'img src=' -%}
-  {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
-{% endif -%}
 
 <article class="post"><!-- {{ wc }} words -->
 
   {% if p.image.file %}
+    {% assign hedsize = 'media' -%}
   <figure class="single">
     <img src="{{ p.image.file | prepend: site.img_dir }}" alt="{{ p.image.alt }}">
     {% if p.image.caption %}<figcaption><p>{{ p.image.caption | smartify }}</p></figcaption>{% endif -%}
   </figure>
 
   {% elsif p.photoset %}
+    {% assign hedsize = 'media' -%}
   <figure class="photoset">
     <div class="container">
       <div class="flex collage">
@@ -44,7 +37,7 @@
 
   {% endif -%}
 
-  {% capture headline %}<header><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ t }}</a>{% else %}{{ t }}{% endif %}</h1><p>{% endcapture -%}
+  {% capture headline %}<header><h1 class="{{ hedsize | default: 'norm' }}">{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% include widont.html string=t -%}</a>{% else %}{% include widont.html string=t -%}{% endif %}</h1><p>{% endcapture -%}
   {% assign copy = copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' %}
 
   {{ copy }}

@@ -7,9 +7,10 @@ permalink: /404.html
 
 <article class="post">
 
-  <h1 class="norm">{{ page.title }}</h1>
-
-  <p>That page was no good. Try another?</p>
+  <header class="norm">
+    <h1>{{ page.title }}</h1>
+    <p>That page was no good. Try another?</p>
+  </header>
 
   <ul class="error">
     {% for rela in site.posts limit: 5 %}<li><a href="{{ rela.url | prepend: site.url }}">{{ rela.title | strip | normalize_whitespace | smartify }}</a></li>{% endfor %}

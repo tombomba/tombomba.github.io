@@ -74,21 +74,15 @@
 
   <div class="wrap">
 
-    <ul class="nav">
-      {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}<!-- {% unless page.is_index %}<li><a href="{{ page.date | default: site.posts.first.date | date: '/%Y/' | prepend: site.url }}">Archive</a></li>{% endunless %} -->{% unless page.is_bio %}<li><a href="/about/" aria-label="About this website">About</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li>
-    </ul>
+    <div class="nav">
+      <h1><a href="{{ site.url }}">{{ site.domain | capitalize }}</a></h1>
+      <ul>
+        {% unless page.is_bio %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li>
+      </ul>
+    </div>
 
     <div class="meta">
-      <h1 class="title">{{ site.title }}</h1>
-      {% if page.date %}
-        <p class="tagline">&ldquo;{{ site.data.taglines | sample: 1 | smartify }}&rdquo;</p>
-        <p class="datestamp"><em>for</em> {{ page.date | date: '%A, %-d %B, %Y' }}. Updated&nbsp;weekly.</p>
-        <p class="copylong">Copyright &copy;&nbsp;{{ site.posts.first.date | date: '%Y' }} by {{ site.author }}.</p>
-      {% else %}
-        <p class="modstamp">Last updated {{ site.posts.first.date | date: '%-d %B, %Y' }}.</p>
-        <p class="copyshort"> New essays weekly. &copy;&nbsp;{{ site.posts.first.date | date: '%Y' }}</p>
-      {% endif -%}
-
+      <p class="modstamp">{% if page.date %}This page published {{ page.date | date: '%A, %-d&nbsp;%B, %Y'}}.{% else %}Last updated {{ site.posts.first.date | date: '%A, %-d&nbsp;%B, %Y' }}.{% endif %} Copyright &copy;&nbsp;{{ site.author }}. </p>
     </div>
 
   </div>

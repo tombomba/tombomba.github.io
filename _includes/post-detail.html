@@ -4,6 +4,7 @@
 {% assign wc = copy | number_of_words -%}
 {% if copy contains 'img src=' -%}
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
+  {% assign hedsize = 'inline' -%}
 {% endif -%}
 
 <article class="post"><!-- {{ wc }} words -->
@@ -40,7 +41,7 @@
 
   {% endif -%}
 
-  {% capture headline %}<header><h1 class="{{ hedsize | default: 'norm' }}">{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% include widont.html string=t -%}</a>{% else %}{% include widont.html string=t -%}{% endif %}</h1><p>{% endcapture -%}
+  {% capture headline %}<header class="{{ hedsize | default: 'norm' }}"><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% include widont.html string=t -%}</a>{% else %}{% include widont.html string=t -%}{% endif %}</h1><p>{% endcapture -%}
   {% assign copy = copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' %}
 
   {{ copy }}

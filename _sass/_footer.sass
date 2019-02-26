@@ -1,6 +1,8 @@
 footer
   max-width: $max-width
-  margin-top: bem(2)
+  margin-top: bem(1)
+  margin-bottom: 0.66em
+  padding-top: 0.66em
   margin-left: auto
   margin-right: auto
 
@@ -10,29 +12,32 @@ footer
     margin-left: auto
     margin-right: auto
 
-  .nav
-    margin: 0
-    list-style-type: none
-    li
-      display: inline
-      padding-right: 0.5em
-      &:not(:last-of-type):after
-        content: "-"
-        padding-left: 0.5em
-        color: rgba($text-color, 0.4)
-
   .meta
-    margin-top: bem(1)
-    display: inline-block
+    p
+      @include font-ratio(14/16)
+      color: $mix-color
+
+  .nav
+    display: inline
     h1
       display: inline
       @include font-ratio(14/16)
-      color: $mix-color
+      a:link, a:visited
+        color: $mix-color
       &::after
-        content: ":\20"
-    p
-      @include font-ratio(14/16)
+        content: ":"
+        padding-right: 0.5em
+        color: $mix-color
+    ul
       display: inline
-      color: $mix-color
-      &::after
-        content: "\20"
+      margin: 0
+      li
+        display: inline
+        @include font-ratio(14/16)
+        padding-right: 0.5em
+        a:link, a:visited
+          color: $mix-color
+        &:not(:last-of-type)::after
+          content: "|"
+          padding-left: 0.5em
+          color: $light-mix

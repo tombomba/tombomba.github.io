@@ -27,14 +27,16 @@ main article
   main article
 
     img.left
-      margin: 0 2em 1em 0
+      margin: 0 bem(1) 1em 0
       &.tilt
         transform: rotate(-3deg)
+        margin-left: -1em
 
     img.right
       margin: 0 0 bem(1) bem(1.25)
       &.tilt
         transform: rotate(3deg)
+        margin-right: -1em
 
 //-----------------------------------------------------------------------------
 
@@ -49,9 +51,7 @@ main article
         margin-right: calc(-1em)
 
     img.left
-      margin-left: -1em
       max-width: 40%
 
     img.right
-      margin-right: -1em
       max-width: 40%

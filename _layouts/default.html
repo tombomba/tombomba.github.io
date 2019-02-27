@@ -74,14 +74,14 @@
   <div class="wrap">
 
     <div class="nav">
-      <h1><a href="{{ site.url }}">{{ site.domain | capitalize }}</a></h1>
+      <h1>{% if page.is_home %}{{ site.domain | capitalize }}{% else %}<a href="{{ site.url }}">{{ site.domain | capitalize }}</a>{% endif %}</h1>
       <ul>
         {% unless page.is_bio %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li>
       </ul>
     </div>
 
     <div class="meta">
-      <p class="modstamp">Last updated {{ site.posts.first.date | date: '%-d&nbsp;%B, %Y' }}. Copyright &copy;&nbsp;<a href="/about/">{{ site.author }}</a>.</p>
+      <p class="modstamp">Last updated {{ site.posts.first.date | date: '%-d&nbsp;%B, %Y' }}. Copyright &copy;&nbsp;{% if page.is_bio %}{{ site.author }}{% else %}<a href="/about/">{{ site.author }}</a>{% endif %}.</p>
     </div>
 
   </div>

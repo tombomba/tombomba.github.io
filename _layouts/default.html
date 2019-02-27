@@ -81,7 +81,7 @@
     </div>
 
     <div class="meta">
-      <p class="modstamp">{% if page.date %}This page published {{ page.date | date: '%A, %-d&nbsp;%B, %Y'}}.{% else %}Last updated {{ site.posts.first.date | date: '%A, %-d&nbsp;%B, %Y' }}.{% endif %} Copyright &copy;&nbsp;{{ site.author }}. </p>
+      <p class="modstamp">Last updated {{ site.posts.first.date | date: '%-d&nbsp;%B, %Y' }}. Copyright &copy;&nbsp;<a href="/about/">{{ site.author }}</a>.</p>
     </div>
 
   </div>

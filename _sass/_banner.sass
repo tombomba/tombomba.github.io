@@ -10,6 +10,7 @@ header[role="banner"]
     justify-content: space-between
 
   .logo
+    padding: 0 1em
     h1
       font-family: 'Bungee', $system
       font-size: percentage($line-height)
@@ -23,15 +24,30 @@ header[role="banner"]
       a:hover
         text-decoration: none
 
-  .bg-box
-    height: bem(1.5)
+  .mark
     display: flex
     align-items: center
     justify-content: center
+    position: relative
+    height: bem(2)
+    width: bem(2)
+    svg
+      width: auto
+      height: bem(1)
+      fill: $shock-color
+    span
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      z-index: 1
+      background-image: url('/assets/img/shim.gif')
+
+  .bg-box
     margin-right: 1em
     margin-left: -1em
-    padding: 0 1em
-    background-color: darken($body-color, 5%)
+    background-color: $logo-color
     border-top-right-radius: 5px
     border-bottom-right-radius: 5px
 
@@ -46,4 +62,4 @@ header[role="banner"]
 
   header[role="banner"]
     .bg-box
-      border-radius: 5px
+      border-radius: 50%

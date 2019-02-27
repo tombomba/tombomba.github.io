@@ -11,7 +11,7 @@ permalink: /index.html
 
 <aside>
   <hr>
-{% for recent in site.posts limit: 5 offset: 1 %}
+{% for recent in site.posts limit: 10 offset: 1 %}
   <div class="wrap">
     {% include aside.html item=recent %}
   </div>

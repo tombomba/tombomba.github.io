@@ -20,9 +20,14 @@ $line-height: (30/18)
 // Colors
 $body-color:    #F3F3F3 !default
 $text-color:    #161616 !default
-$select-color:  #FFC !default
 
-$logo-color:    #F03 !default
+$key:           random(6)
+$one-color:     #06f, #c06, #393, #f30, #09f, #099
+$two-color:     #6ff, #fc0, #9f0, #fc0, #9f3, #fc0
+
+$logo-color:    nth($one-color, $key) !default
+$shock-color:   nth($two-color, $key) !default
+$select-color:  $shock-color !default
 
 $mix-color:     mix($body-color, $text-color, 50%) !default
 $light-mix:     lighten($mix-color, 20%) !default

@@ -101,7 +101,8 @@ hr
   border-bottom: 1px solid $border-light
   background-color: $body-color
   &.pagebreak
-    margin-top: bem(2)
+    max-width: $max-width
+    margin: bem(2) auto 0 auto
 
 .permalink
   color: $mix-color
@@ -115,7 +116,8 @@ main
 
   article
     margin: bem(1) auto 0 auto
-    padding-top: 0.66em
+    &:not(:first-of-type)
+      margin-top: bem(2)
     &.post
       max-width: $max-width
     &.page

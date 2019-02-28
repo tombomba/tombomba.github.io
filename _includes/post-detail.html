@@ -5,14 +5,11 @@
 {% if copy contains 'img src=' -%}
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
 {% endif -%}
-{% if p.image.file or p.photoset -%}
-  {% assign hedsize = 'media' -%}
-{% endif -%}
 
 <article class="post"><!-- {{ wc }} words -->
 
   <header>
-    <h1 class="{{ hedsize | default: 'plain' }}">{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% include widont.html string=t -%}</a>{% else %}{% include widont.html string=t -%}{% endif %}</h1>
+    <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% include widont.html string=t -%}</a>{% else %}{% include widont.html string=t -%}{% endif %}</h1>
     {% if p.date %}
     <ul>
       <li><a href="/about/">{{ p.author | default: site.author }}</a></li>

@@ -6,7 +6,7 @@
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
 {% endif -%}
 
-<article class="post"><!-- {{ wc }} words -->
+<article><!-- {{ wc }} words -->
 
   <header>
     <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% include widont.html string=t -%}</a>{% else %}{% include widont.html string=t -%}{% endif %}</h1>

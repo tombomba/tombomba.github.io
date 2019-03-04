@@ -30,7 +30,7 @@ defaults:
       path: "_pages"
       type: "pages"
     values:
-      layout: "page"
+      layout: "default"
       is_page: true
 
 

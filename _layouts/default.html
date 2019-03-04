@@ -81,7 +81,7 @@
     </div>
 
     <div class="meta">
-      <p class="modstamp">Last updated {{ site.posts.first.date | date: '%-d&nbsp;%B, %Y' }}. Copyright &copy;&nbsp;{% if page.is_bio %}{{ site.author }}{% else %}<a href="/about/">{{ site.author }}</a>{% endif %}.</p>
+      <p class="modstamp">Last updated {% if page.is_home %}{{ site.posts.first.date | date: '%A, %-d&nbsp;%B, %Y' }}{% else %}{{ site.posts.first.date | date: '%-d&nbsp;%B, %Y' }}{% endif %}. Copyright &copy;&nbsp;{% if page.is_bio %}{{ site.author }}{% else %}<a href="/about/">{{ site.author }}</a>{% endif %}.</p>
     </div>
 
   </div>

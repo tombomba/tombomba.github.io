@@ -12,8 +12,12 @@
     <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% include widont.html string=t -%}</a>{% else %}{% include widont.html string=t -%}{% endif %}</h1>
     {% if p.date %}
     <ul>
-      <li><a href="/about/">{{ p.author | default: site.author }}</a></li>
+      {% if include.is_home %}
+      <li><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: '%A, %-d&nbsp;%B' }}</time></li>
+      {% else %}
+      {% if wc >= 300 %}<li><a href="/about/">{{ p.author | default: site.author }}</a></li>{% endif -%}
       <li><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: '%-d&nbsp;%B, %Y' }}</time></li>
+      {% endif %}
     </ul>
     {% endif -%}
   </header>

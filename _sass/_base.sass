@@ -102,7 +102,7 @@ hr
   background-color: $body-color
   &.pagebreak
     max-width: $max-width
-    margin: bem(2) auto 0 auto
+    margin: bem(1.5) auto 0 auto
   &.buffer
     margin-bottom: 0.33em
 
@@ -117,13 +117,8 @@ hr
 main
 
   article
-    margin: bem(1) auto 0 auto
-    &:not(:first-of-type)
-      margin-top: bem(2)
-    &.post
-      max-width: $max-width
-    &.page
-      max-width: $max-width
+    max-width: $max-width
+    margin: bem(1.5) auto 0 auto
     @extend .clearfix
 
     h1

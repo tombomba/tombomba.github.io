@@ -3,3 +3,22 @@ layout: default
 ---
 
 {% include post-detail.html page=page content=content -%}
+
+{% if page.next or page.prev -%}
+<aside>
+
+  <hr>
+
+  {% if page.next -%}
+  <div class="wrap">
+    {% include aside.html item=page.next -%}
+  </div>
+  {% endif -%}
+  {% if page.previous -%}
+  <div class="wrap">
+    {% include aside.html item=page.previous -%}
+  </div>
+  {% endif -%}
+
+</aside>
+{% endif -%}

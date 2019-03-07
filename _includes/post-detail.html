@@ -10,12 +10,6 @@
 
   <header>
     <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% include widont.html string=t -%}</a>{% else %}{% include widont.html string=t -%}{% endif %}</h1>
-    {% if p.date %}
-    <ul>
-      {% if wc >= 300 %}<li><a href="/about/">{{ p.author | default: site.author }}</a></li>{% endif -%}
-      <li><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: '%-d&nbsp;%B, %Y' }}</time></li>
-    </ul>
-    {% endif -%}
   </header>
 
   {% if p.image.file %}
@@ -49,5 +43,7 @@
   {% endif -%}
 
   {{ copy }}
+
+  <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></p>
 
 </article>

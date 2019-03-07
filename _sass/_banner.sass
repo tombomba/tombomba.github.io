@@ -5,7 +5,7 @@ header[role="banner"]
   margin-right: auto
 
   hr
-    margin-top: bem(1)
+    margin-top: 1em
 
   .wrap
     display: flex
@@ -36,3 +36,10 @@ header[role="banner"]
     margin-right: 1em
     background-color: $logo-color
     border-radius: 4px
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40em)
+
+  header[role="banner"] hr
+    margin-top: bem(1)

@@ -98,7 +98,7 @@ hr
   background-color: $body-color
   &.pagebreak
     max-width: $max-width
-    margin: bem(2) auto 0 auto
+    margin: 4em auto 0 auto
   &.buffer
     margin-bottom: 0.33em
 
@@ -114,7 +114,7 @@ main
 
   article
     max-width: $max-width
-    margin: bem(1) auto 0 auto
+    margin: 4em auto 0 auto
     @extend .clearfix
 
     h1
@@ -126,40 +126,29 @@ main
 
     h2, h3, h4, h5, h6
       font-size: 100%
-      margin-top: bem(1)
+      margin-top: 1em
 
     p, li, hr
-      margin-top: bem(1)
+      margin-top: 1em
+
+    ul, ol
+      margin-left: 1em
+
+    ul
+      list-style-type: disc
 
     li + p,
       margin-top: 0
 
     figure
-      margin-bottom: bem(1)
-      padding-bottom: 0.66em
-      figcaption
-        background-color: $body-color
-        p
-          margin: 0
-          font-size: percentage(12/16)
-          line-height: 1.4
+      margin-bottom: 1em
 
     blockquote
-      padding: 0 bem(1)
+      padding: 0 1em
       &>p:first-of-type:before
         content: "\201C"
       &>p:last-of-type:after
         content: "\201D"
-
-    ul, ol
-      margin-left: bem(1)
-
-    ul
-      list-style-type: disc
-
-    .copy
-      max-width: $max-width
-      margin: 0 auto
 
 //-----------------------------------------------------------------------------
 

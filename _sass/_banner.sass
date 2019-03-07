@@ -4,62 +4,35 @@ header[role="banner"]
   margin-left: auto
   margin-right: auto
 
+  hr
+    margin-top: 1em
+
   .wrap
     display: flex
     align-items: center
     justify-content: space-between
 
-  .logo
-    padding: 0 1em
+  .title
+    flex: 1
     h1
-      font-family: 'Bungee', $system
-      font-size: percentage($line-height)
-      line-height: 1
-      font-weight: 900
-      text-transform: uppercase
-      letter-spacing: 0.75px
+      font-size: 100%
       a:link, a:visited
-        color: $logo-color
         text-decoration: none
-      a:hover
-        text-decoration: none
+        color: $text-color
+    h1, p
+      font-size: percentage(14/16)
+      line-height: 1.3
 
   .mark
     display: flex
     align-items: center
     justify-content: center
-    position: relative
-    height: bem(2)
-    width: bem(2)
-    svg
+
+    img
       width: auto
-      height: bem(1)
-      fill: $shock-color
-    span
-      position: absolute
-      width: 100%
-      height: 100%
-      top: 0
-      left: 0
-      z-index: 1
-      background-image: url('/assets/img/shim.gif')
+      height: 4em
 
   .bg-box
     margin-right: 1em
-    margin-left: -1em
     background-color: $logo-color
-    border-top-right-radius: 5px
-    border-bottom-right-radius: 5px
-
-  .shim
-    flex: 1
-    hr
-      width: 100%
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 41em)
-
-  header[role="banner"]
-    .bg-box
-      border-radius: 50%
+    border-radius: 4px

@@ -8,10 +8,6 @@
 
 <article><!-- {{ wc }} words -->
 
-  <header>
-    <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% include widont.html string=t -%}</a>{% else %}{% include widont.html string=t -%}{% endif %}</h1>
-  </header>
-
   {% if p.image.file %}
   <figure class="single">
     <img src="{{ p.image.file | prepend: site.img_dir }}" alt="{{ p.image.alt }}">
@@ -41,6 +37,10 @@
   </figure>
 
   {% endif -%}
+
+  {% capture headline -%}<div class="hed"><h1 class="sm">{% if page.is_home %}<a href="{{ p.url | prepend: site.url }}">{% include widont.html string=t -%}</a>{% else %}{% include widont.html string=t -%}{% endif %}{{ punc }}</h1>&#32;<p>{% endcapture -%}
+
+  {% assign copy = copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></div>' %}
 
   {{ copy }}
 

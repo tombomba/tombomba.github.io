@@ -9,24 +9,10 @@
 
 main article
 
-  header
+  .hed
     h1
       font-size: percentage(23/18)
       line-height: (($line-height - 1) / 2) + 1
-    ul
-      margin: 0
-      list-style-type: none
-      li
-        display: inline
-        @include font-ratio(14/16)
-        color: $mix-color
-        a:link, a:visited
-          color: $mix-color
-          text-decoration: none
-        a:hover
-          text-decoration: underline
-        &:nth-child(2)::before
-          content: "\20\2022\20"
 
   figure
     &.single

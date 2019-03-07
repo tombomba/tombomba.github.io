@@ -43,7 +43,7 @@
     <meta name="twitter:image:src" content="{{ page.image.path | default: '/assets/img/default-opengraph.png' | prepend: site.url }}">
 
     <!-- css -->
-    <link rel="stylesheet" href="{{ 'default.css' | prepend: site.css_dir | prepend: site.url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/default.css' | prepend: site.url }}">
 
     <!-- msft mobile hacks -->
     <script>!function(){if("-ms-user-select"in document.documentElement.style&&navigator.userAgent.match(/IEMobile/)){var a=document.createElement("style");a.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")),document.getElementsByTagName("head")[0].appendChild(a)}}();</script>
@@ -55,9 +55,13 @@
 <header role="banner">
 
   <div class="wrap">
-    <div class="mark bg-box"><a href="{{ site.url }}">{% include default-icon.svg -%}<span></span></a></div><!-- foo!-->
-    <div class="shim"><hr></div>
+    <div class="mark bg-box"><a href="{{ site.url }}"><img src="/assets/img/default-icon.png" alt="{{ site.title }}"></a></div>
+    <div class="title">
+      <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+      <p>{{ site.description }}</p>
   </div>
+
+  <hr>
 
 </header>
 

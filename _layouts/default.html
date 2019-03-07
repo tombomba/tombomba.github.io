@@ -86,7 +86,7 @@
     </div>
 
     <div class="meta">
-      <p class="modstamp">Last updated {{ site.posts.first.date | date: '%-d&nbsp;%B, %Y' }}. Copyright &copy;&nbsp;{% if page.is_bio %}{{ site.author }}{% else %}<a href="/about/">{{ site.author }}</a>{% endif %}.</p>
+      <p class="modstamp">Last updated {{ site.posts.first.date | date_to_string }}. Copyright &copy;&nbsp;{{ site.author }}.</p>
     </div>
 
   </div>

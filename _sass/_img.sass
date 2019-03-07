@@ -1,8 +1,8 @@
 main article
 
-  img
+  &>img
     max-width: 36%
-    margin-top: 1em
+    margin-top: bem(1)
     margin-bottom: 1em
     &.top
       margin-top: 0
@@ -24,7 +24,7 @@ main article
 
   main article
 
-    img.left, img.right
+    &>img.left, img.right
       max-width: 33%
 
 //-----------------------------------------------------------------------------
@@ -33,17 +33,17 @@ main article
 
   main article
 
-    img.left
-      margin-right: 1.5em
+    &>img.left
+      margin-right: bem(1)
       &.tilt
         transform: rotate(-3deg)
-        margin-left: -1em
+        margin-left: bem(-1)
 
-    img.right
-      margin-left: 1.5em
+    &>img.right
+      margin-left: bem(1)
       &.tilt
         transform: rotate(3deg)
-        margin-right: -1em
+        margin-right: bem(-1)
 
 //-----------------------------------------------------------------------------
 
@@ -51,14 +51,8 @@ main article
 
   main article
 
-    img.middle
-      &.extend
-        width: calc(100% + 1em)
-        max-width: calc(100% + 1em)
-        margin-right: calc(-1em)
-
-    img.left
+    &>img.left
       max-width: 40%
 
-    img.right
+    &>img.right
       max-width: 40%

@@ -5,4 +5,4 @@
   <p class="excerpt">{% include widont.html string=excerptf %}</p>
 </div>
 
-<div class="image"{% if include.item.image.path %}style="background-image: url({{ include.item.image.path }})"{% endif %}>{% if include.item.image.path %}<a href="{{ include.item.url | prepend: site.url }}"><span></span></a>{% endif %}</div>
+<div class="image"{% if include.item.image.path %}style="background-image: url({{ include.item.image.path }})"{% endif %}>{% if include.item.image.path %}<a href="{{ include.item.url | prepend: site.url }}" aria-label="thumbnail image"><span></span></a>{% endif %}</div>

@@ -8,39 +8,7 @@
 
 <article><!-- {{ wc }} words -->
 
-  {% if p.image.file %}
-  <figure class="single">
-    <img src="{{ p.image.file | prepend: site.img_dir }}" alt="{{ p.image.alt }}">
-    {% if p.image.caption %}<figcaption><p>{{ p.image.caption | smartify }}</p></figcaption>{% endif -%}
-  </figure>
-
-  {% elsif p.photoset %}
-  <figure class="photoset">
-    <div class="container">
-      <div class="flex collage">
-      {% for hash in p.photoset %}
-        {% for photo in hash %}
-          {% case photo[0] %}
-            {% when 50 %}{% assign photosize = 'image--2' %}
-            {% when 33 %}{% assign photosize = 'image--3' %}
-            {% when 25 %}{% assign photosize = 'image--4' %}
-            {% when 60 %}{% assign photosize = 'image--3-of-5' %}
-            {% when 40 %}{% assign photosize = 'image--2-of-5' %}
-            {% else %}{% assign photosize = 'image--1' %}
-          {% endcase -%}
-          <div class="photo {{ photosize }}"><img src="{{ photo[1] | prepend: site.img_dir | prepend: site.url }}" alt=""><!-- {{ photo[0] }} --></div>
-        {% endfor -%}
-      {% endfor -%}
-      </div>
-    </div>
-    {% if p.image.caption %}<figcaption><p>{{ p.image.caption | smartify }}</p></figcaption>{% endif -%}
-  </figure>
-
-  {% endif -%}
-
-  {% capture headline -%}<div class="hed"><h1 class="sm">{% if page.is_home %}<a href="{{ p.url | prepend: site.url }}">{% include widont.html string=t -%}</a>{% else %}{% include widont.html string=t -%}{% endif %}{{ punc }}</h1>&#32;<p>{% endcapture -%}
-
-  {% assign copy = copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></div>' %}
+  <h1>{% if page.is_home %}<a href="{{ p.url | prepend: site.url }}">{% include widont.html string=t -%}</a>{% else %}{% include widont.html string=t -%}{% endif %}</h1>
 
   {{ copy }}
 

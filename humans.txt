@@ -20,18 +20,19 @@ Software: Atom, Pixelmator, Jekyll, Git
 - "Boys Don't Cry" by The Cure
 - "Mrs Dalloway" by Virginia Woolf
 - The Paris Review's Art of Comics, Volume 1, 2012, featuring R.Crumb
-- Banksy.co.uk/manifesto, ca. 2006
+- http://banksy.co.uk/manifesto, ca. 2006
 - Edna St Vincent Millay's ___"If I Should Learn, in some quite casual way."
 - "Alone in San Francisco" by Thelonious Monk
 - "Attack Force Z," dir. Tim Burstall, 1981
 - "Big Blonde" by Dorothy Parker
-- Hotwired, ca. 1996
+- http://hotwired.com, ca. 1996
 - "Factotum" by Charles Bukowski
 - Rachel Whiteread's "House," 1993
 - "How to Tell a True War Story" from Tim O'Brien's "The Things They Carried"
 - Tom Spurgeon's Comics Reporter
 - Jessa Crispin's Book Slut
 - Rookie magazine
+- MTV's "Liquid Television"
 - Richard Nixon's "Checkers" speech
 - "song (did you see me walking by the Buick repairs?)" by Frank O'Hara
 - Cinema Village, 22 E 12th St, New York
@@ -41,5 +42,6 @@ Software: Atom, Pixelmator, Jekyll, Git
 - Dogen's "Shobogenza"
 - "David Boring" by Daniel Clowes
 - KCRW Radio, Los Angeles
+- http://suck.com, ca. 1999
 - The 1961 season of the New York Yankees
 - "Jubilee," dir. Derek Jarman, 1978

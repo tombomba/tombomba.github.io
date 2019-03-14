@@ -21,14 +21,6 @@ $line-height: (30/18)
 $body-color:    #F3F3F3 !default
 $text-color:    #161616 !default
 
-$key:           random(6)
-$one-color:     #06f, #c06, #393, #f30, #09f, #099
-$two-color:     #6ff, #fc0, #9f0, #fc0, #9f3, #fc0
-
-$logo-color:    nth($one-color, $key) !default
-$shock-color:   nth($two-color, $key) !default
-$select-color:  $shock-color !default
-
 $mix-color:     mix($body-color, $text-color, 50%) !default
 $light-mix:     lighten($mix-color, 20%) !default
 $dark-mix:      darken($mix-color, 20%) !default
@@ -74,6 +66,30 @@ body
 
   padding: 1em
 
+  &.mon
+    ::moz-selection
+      background: #6FF
+    ::selection
+      background: #6FF
+  &.wed
+    ::moz-selection
+      background: #9F0
+    ::selection
+      background: #9F0
+  &.fri
+    ::moz-selection
+      background: #9F3
+    ::selection
+      background: #9F3
+  &.tue,
+  &.thu,
+  &.sat,
+  &.sun
+    ::moz-selection
+      background: #FC0
+    ::selection
+      background: #FC0
+
 a
   text-decoration: underline
   text-decoration-skip-ink: auto
@@ -85,11 +101,6 @@ a
     text-decoration: none
   &:active
     color: $active-color
-
-::-moz-selection
-    background: $select-color
-::selection
-    background: $select-color
 
 hr
   width: 100%

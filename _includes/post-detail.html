@@ -8,8 +8,10 @@
 
 <article><!-- {{ wc }} words -->
 
-  <h1>{% if page.is_home %}<a href="{{ p.url | prepend: site.url }}">{% include widont.html string=t -%}</a>{% else %}{% include widont.html string=t -%}{% endif %}</h1>
+  <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% include widont.html string=t -%}</a>{% else %}{% include widont.html string=t -%}{% endif %}</h1>
 
   {{ copy }}
+
+  <p class="datestamp">{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}" aria-label="permanent link to this entry"><time pubdate datetime="{{ p.date | default: site.time | date: "%FT%T%:z" }}">{{ p.date | default: site.time | date_to_string }}</time></a>{% else %}<time pubdate datetime="{{ p.date | default: site.time | date: "%FT%T%:z" }}">{{ p.date | default: site.time | date_to_string }}</time>{% endif %}</p>
 
 </article>

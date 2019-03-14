@@ -7,7 +7,10 @@ permalink: /index.html
 
 <aside>
   <hr>
-{% for recent in site.posts limit: 7 offset: 1 %}
+  <div class="subhed">
+    <h2>Also this week</h2>
+  </div>
+{% for recent in site.posts limit: 5 offset: 1 %}
   <div class="wrap">
     {% include aside.html item=recent %}
   </div>

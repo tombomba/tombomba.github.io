@@ -3,56 +3,39 @@
 ---
 
 @charset "utf-8"
-@import reset, base, banner, footer, aside, img
+@import reset, base, banner, footer, aside
 
 //-----------------------------------------------------------------------------
 
 main article
 
-  .hed
-    h1
-      font-size: percentage(23/18)
-      line-height: (($line-height - 1) / 2) + 1
+  h1
+    font-size: percentage(29/18)
+    line-height: (($line-height - 1) / 2) + 1
 
-  figure
-    &.single
-      margin-top: bem(1)
-      padding: 0.33em 0
-      img
-        max-width: 100%
-        height: auto
-    &.photoset
-      padding-bottom: 0.33em
-      .container
-        width: 100%
-      .flex
-        display: flex
-        flex-wrap: wrap
-      img
-        display: block
-        width: 100%
-      .photo
-        flex: 1 0 100px
-        margin: 0 $margin-size $margin-size 0
-      .collage
-        .image--1
-          flex-basis: 100 - $margin-size
-        .image--2
-          flex-basis: 50 - $margin-size
-        .image--3
-          flex-basis: 33 - $margin-size
-        .image--4
-          flex-basis: 25 - $margin-size
-        .image--3-of-5
-          flex-basis: 60 - $margin-size
-        .image--2-of-5
-          flex-basis: 40 - $margin-size
-          position: relative
-          overflow: hidden
-          img
-            position: absolute
-            height: 100%
-            width: auto
+  &>img
+    max-width: 36%
+    margin-top: bem(1)
+    margin-bottom: 1em
+    &.left
+      float: left
+      margin-left: 0
+      margin-right: 1em
+    &.right
+      float: right
+      margin-left: 1em
+      margin-right: 0
+    &.center
+      display: block
+      max-width: $max-width - bem(4)
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 0
+    &.wide
+      max-width: 100%
+      margin-bottom: 0
+    &.curved
+      border-radius: 4px
 
   .datestamp
     font-style: italic
@@ -64,7 +47,43 @@ main article
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 41em)
+@media screen and (min-width: 32em)
 
-  main article figure.single img
-    border-radius: 5px
+  main article
+
+    &>img.left, img.right
+      max-width: 33%
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50em)
+
+  main article
+
+    &>img.left
+      margin-right: bem(1)
+      &.tilt
+        transform: rotate(-3deg)
+        margin-left: -1em
+
+    &>img.right
+      margin-left: bem(1)
+      &.tilt
+        transform: rotate(3deg)
+        margin-right: -1em
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 64em)
+
+  main article
+
+    &>img.left
+      max-width: 40%
+      &.tilt
+        margin-left: bem(-1)
+
+    &>img.right
+      max-width: 40%
+      &.tilt
+        margin-right: bem(-1)

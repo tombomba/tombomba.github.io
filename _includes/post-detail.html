@@ -1,6 +1,6 @@
 {% assign p = include.page -%}
+{% assign copy = include.content -%}
 {% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify -%}
-{% assign copy = include.content | strip | normalize_whitespace -%}
 {% assign wc = copy | number_of_words -%}
 {% if copy contains 'img src=' -%}
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
@@ -8,10 +8,10 @@
 
 <article><!-- {{ wc }} words -->
 
-  <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% include widont.html string=t -%}</a>{% else %}{% include widont.html string=t -%}{% endif %}</h1>
+  <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{% if t.size > 1 -%}{% assign sub = t.last | prepend: '!QQ!' -%}{% assign t = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}{% endif -%}{{ t | strip | normalize_whitespace }}{% if include.is_home %}</a>{% endif %}</h1>
 
   {{ copy }}
 
-  <p class="datestamp">{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}" aria-label="permanent link to this entry"><time pubdate datetime="{{ p.date | default: site.time | date: "%FT%T%:z" }}">{{ p.date | default: site.time | date_to_string }}</time></a>{% else %}<time pubdate datetime="{{ p.date | default: site.time | date: "%FT%T%:z" }}">{{ p.date | default: site.time | date_to_string }}</time>{% endif %}</p>
+  <p class="datestamp">{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}" aria-label="permanent link to this entry"><time pubdate datetime="{{ p.date | default: site.time | date: "%FT%T%:z" }}">{% endif %}{{ p.date | default: site.time | date_to_string }}</time>{% if include.is_home %}</a>{% endif %}</p>
 
 </article>

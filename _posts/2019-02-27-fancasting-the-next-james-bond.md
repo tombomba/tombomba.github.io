@@ -1,5 +1,5 @@
 ---
-title: "Who should be the next person to play 007?"
+title: "Fancasting the next James Bond"
 excerpt: "A few sticking points on who plays the most famous spy in the world."
 image:
   path: /assets/img/hoagy-carmichael.jpg

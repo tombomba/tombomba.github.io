@@ -14,23 +14,26 @@
     line-height: $context / $size
 
 // Max column width
-$max-width: 34em
-$line-height: (30/18)
+$max-width: 37.389em
+$line-height: 1.73
 
 // Colors
-$body-color:    #F3F3F3 !default
+$body-color:    #E2E2E2 !default
 $text-color:    #161616 !default
+
+$logo-color:    #F03 !default
+$shock-color:   #FFC !default
 
 $mix-color:     mix($body-color, $text-color, 50%) !default
 $light-mix:     lighten($mix-color, 20%) !default
 $dark-mix:      darken($mix-color, 20%) !default
 
-$border-dark:   #D1D1D1 !default
-$border-light:  #FFF !default
+$border-dark:   #AFAFAF !default
+$border-light:  #EAEAEA !default
 
-$link-color:    #36C !default
-$visited-color: #939 !default
-$active-color:  #F30 !default
+$link-color:    blue !default
+$visited-color: purple !default
+$active-color:  orange !default
 
 // Fonts
 $serif: Georgia, Cambria, 'Century Schoolbook L', serif
@@ -52,6 +55,11 @@ html
 @-ms-viewport
   width: device-width
 
+::-moz-selection
+  background: $shock-color
+::selection
+  background: $shock-color
+
 body
   font-family: $serif
   font-size: 100%
@@ -65,30 +73,6 @@ body
   -webkit-text-size-adjust: auto
 
   padding: 1em
-
-  &.mon
-    ::moz-selection
-      background: #6FF
-    ::selection
-      background: #6FF
-  &.wed
-    ::moz-selection
-      background: #9F0
-    ::selection
-      background: #9F0
-  &.fri
-    ::moz-selection
-      background: #9F3
-    ::selection
-      background: #9F3
-  &.tue,
-  &.thu,
-  &.sat,
-  &.sun
-    ::moz-selection
-      background: #FC0
-    ::selection
-      background: #FC0
 
 a
   text-decoration: underline
@@ -118,12 +102,8 @@ hr
     margin-bottom: 0.33em
 
 .permalink
-  color: $mix-color
-  a:link, a:visited
-    color: $mix-color
+  a:link, a:visited, a:hover
     text-decoration: none
-  a:hover
-    text-decoration: underline
 
 main
 
@@ -156,7 +136,7 @@ main
       margin-top: 0
 
     blockquote
-      padding: 0 bem(1)
+      padding: 0 1em
       &>p:first-of-type:before
         content: "\201C"
       &>p:last-of-type:after

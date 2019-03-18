@@ -2,45 +2,20 @@ footer
   max-width: 100%
   margin: bem(2) auto 0 auto
 
-  hr
+  .wrap
     max-width: $max-width
     margin: 0 auto
 
-  .wrap
-    max-width: $max-width
-    margin: bem(1) auto 0 auto
-
-  .meta
-    p
-      font-family: $sans
-      @include font-ratio(12/16)
-      &.modstamp
-        color: $mix-color
-
-  .nav
-    display: inline
-    h1
+  .nav ul
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0
+    height: bem(2)
+    li
       display: inline
-      font-family: $sans
-      @include font-ratio(12/16)
-      color: $mix-color
-      a:link, a:visited
+      padding-right: 0.5em
+      &:not(:last-of-type)::after
+        content: "-"
+        padding-left: 0.5em
         color: $mix-color
-      &::after
-        content: ":"
-        padding-right: 0.5em
-        color: $mix-color
-    ul
-      display: inline
-      margin: 0
-      li
-        display: inline
-        font-family: $sans
-        @include font-ratio(12/16)
-        a:link, a:visited
-          color: $mix-color
-        padding-right: 0.5em
-        &:not(:last-of-type)::after
-          content: "|"
-          padding-left: 0.5em
-          color: $light-mix

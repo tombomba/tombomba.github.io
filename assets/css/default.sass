@@ -10,13 +10,21 @@
 main article
 
   h1
-    font-size: percentage(23/18)
-    line-height: (($line-height - 1) / 2) + 1
+    font-size: 100%
+
+  figure
+    margin-left: -1em
+    margin-right: -1em
+    margin-bottom: bem(1) + 0.66em
+    img
+      max-width: 100%
 
   &>img
     max-width: 36%
     margin-top: bem(1)
     margin-bottom: 1em
+    &.top
+      margin-top: 0
     &.left
       float: left
       margin-left: 0
@@ -27,7 +35,7 @@ main article
       margin-right: 0
     &.center
       display: block
-      max-width: $max-width - bem(4)
+      max-width: $max-width - 6em
       margin-left: auto
       margin-right: auto
       margin-bottom: 0
@@ -39,9 +47,14 @@ main article
 
   .datestamp
     font-style: italic
+    a:link, a:visited
+      color: $text-color
+      text-decoration: none
+    a:hover
+      text-decoration: underline
 
   .error
-    margin-top: bem(1)
+    margin-top: 1em
     li
       margin: 0
 
@@ -53,6 +66,18 @@ main article
 
     &>img.left, img.right
       max-width: 33%
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40em)
+
+  main article
+
+    figure
+      margin-left: 0
+      margin-right: 0
+      img
+        border-radius: 4px
 
 //-----------------------------------------------------------------------------
 

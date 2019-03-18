@@ -11,10 +11,10 @@ main article
 
   header
     &.block h1
-      font-size: percentage(23/18)
-      line-height: (($line-height - 1) / 2) + 1
+      font-size: 100%
+      line-height: $line-height
     &.inline h1
-      font-size: percentage(29/18)
+      font-size: percentage(23/18)
       line-height: (($line-height - 1) / 2) + 1
 
   figure
@@ -89,6 +89,13 @@ main article
 @media screen and (min-width: 50em)
 
   main article
+
+    header
+      &.block h1
+        font-size: percentage(23/18)
+        line-height: (($line-height - 1) / 2) + 1
+      &.inline h1
+        font-size: percentage(29/18)
 
     &>img.left
       margin-right: bem(1)

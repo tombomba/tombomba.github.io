@@ -55,14 +55,12 @@
 <header role="banner">
 
   <div class="wrap">
-    <div class="mark bg-box {{ site.time | date: '%a' | downcase }}"><a href="{{ site.url }}"><img src="/assets/img/default-icon.png" alt="{{ site.title }}"></a></div>
     <div class="title">
-      <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
-      <p>{{ site.description }}</p>
+      {% if page.is_home %}<h1 class="lg">{{ site.title }}</h1>
+      {% else %}<h1 class="sm"><a href="{{ site.url }}">{{ site.title }}</a></h1>
+      {% endif -%}
     </div>
   </div>
-
-  <hr>
 
 </header>
 
@@ -74,7 +72,7 @@
 
 <footer>
 
-  <hr>
+  {% if page.is_home %}<hr>{% endif -%}
 
   <div class="wrap">
 

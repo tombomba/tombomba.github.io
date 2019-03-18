@@ -2,23 +2,14 @@ header[role="banner"]
 
   max-width: 100%
 
-  .title
-    max-width: $max-width
-    margin: 0 auto
-    h1
-      font-family: $sans
-      &.lg
-        font-size: percentage(37/18)
-      &.sm
-        font-size: percentage(29/18)
-      line-height: 1
-      font-weight: 900
-      text-transform: uppercase
-      letter-spacing: 0.4px
-      &::first-letter
-        border-bottom: 0.2em solid $logo-color
-      a:link, a:visited
-        text-decoration: none
-        color: $text-color
-      a:hover
-        color: $logo-color
+  hr
+    width: 100%
+
+  .icon
+    display: flex
+    align-items: center
+    justify-content: center
+    height: bem(2)
+    img
+      width: auto
+      height: 24px

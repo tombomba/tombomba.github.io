@@ -1,17 +1,38 @@
 {% assign p = include.page -%}
 {% assign copy = include.content -%}
-{% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify -%}
+{% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
 {% assign wc = copy | number_of_words -%}
 {% if copy contains 'img src=' -%}
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
 {% endif -%}
+{% capture headline %}<h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{% if t.size > 1 -%}{% assign sub = t.last | prepend: '!QQ!' -%}{% assign t = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}{% endif -%}{{ t }}{% if include.is_home %}</a>{% endif %}</h1>{% endcapture -%}
 
 <article><!-- {{ wc }} words -->
 
-  <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{% if t.size > 1 -%}{% assign sub = t.last | prepend: '!QQ!' -%}{% assign t = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}{% endif -%}{{ t | strip | normalize_whitespace }}{% if include.is_home %}</a>{% endif %}</h1>
+  {% if p.image.file %}
+  <figure>
+    <img src="{{ p.image.file | prepend: site.img_dir | prepend: site.url }}" alt="p.media.alt" class="top wide curved">
+    {% if p.video.caption %}<figcaption>{{ p.video.caption | strip | normalize_whitespace | truncate: 140 | smartify | markdownify }}</figcaption>{% endif -%}
+  </figure>
+
+  <header class="block">
+    {{ headline }}
+  </header>
+
+  {% else -%}
+    {% assign headline = headline | prepend: '<header class="inline">' | append: '<p>' %}
+    {% assign copy = copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' %}
+
+  {% endif -%}
 
   {{ copy }}
 
-  <p class="datestamp">{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}" aria-label="permanent link to this entry"><time pubdate datetime="{{ p.date | default: site.time | date: "%FT%T%:z" }}">{% endif %}{{ p.date | default: site.time | date_to_string }}</time>{% if include.is_home %}</a>{% endif %}</p>
+  {% if include.is_home %}
+    <p class="datestamp"><time pubdate datetime="{{ p.date | default: site.time | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}" title="permanent link to this entry">{{ p.date | default: site.time | date_to_string }}</a></time>
+
+  {% else -%}
+    <p class="datestamp"><time pubdate datetime="{{ p.date | default: site.time | date: "%FT%T%:z" }}">{{ p.date | default: site.time | date_to_string }}</time>
+      
+  {% endif -%}
 
 </article>

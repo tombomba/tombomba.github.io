@@ -1,28 +1,28 @@
 footer
-  max-width: $max-width
-  margin-top: bem(1)
-  padding-top: 0.33em
-  margin-left: auto
-  margin-right: auto
+  max-width: 100%
+  margin: bem(2) auto 0 auto
+
+  hr
+    max-width: $max-width
+    margin: 0 auto
 
   .wrap
     max-width: $max-width
-    margin-top: bem(1)
-    padding-top: 0.33em
-    margin-left: auto
-    margin-right: auto
+    margin: bem(1) auto 0 auto
 
   .meta
     p
-      @include font-ratio(14/16)
+      font-family: $sans
+      @include font-ratio(12/16)
       &.modstamp
-        @extend .permalink
+        color: $mix-color
 
   .nav
     display: inline
     h1
       display: inline
-      @include font-ratio(14/16)
+      font-family: $sans
+      @include font-ratio(12/16)
       color: $mix-color
       a:link, a:visited
         color: $mix-color
@@ -35,7 +35,8 @@ footer
       margin: 0
       li
         display: inline
-        @include font-ratio(14/16)
+        font-family: $sans
+        @include font-ratio(12/16)
         a:link, a:visited
           color: $mix-color
         padding-right: 0.5em

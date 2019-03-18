@@ -9,8 +9,13 @@
 
 main article
 
-  h1
-    font-size: 100%
+  header
+    &.block h1
+      font-size: percentage(23/18)
+      line-height: (($line-height - 1) / 2) + 1
+    &.inline h1
+      font-size: percentage(29/18)
+      line-height: (($line-height - 1) / 2) + 1
 
   figure
     margin-left: -1em

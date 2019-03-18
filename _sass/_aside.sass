@@ -25,18 +25,13 @@ main aside
     flex: 1
     align-self: center
     padding-right: bem(1)
+    h2, p
+      margin: 0
     h2
       font-size: 100%
       font-weight: 400
-      //a:link,
-      //a:visited
-        font-weight: 700
-        color: $text-color
-        text-decoration: none
-      //a:hover
-        text-decoration: underline
-    h2, p
-      margin: 0
+    p
+      display: none
 
   .image
     position: relative
@@ -59,14 +54,18 @@ main aside
 
 @media screen and (min-width: 40em)
 
-  main aside .image
-    width: 135px
-    height: 90px
+  main aside
+    .meta p
+      display: block
+    .image
+      width: 135px
+      height: 90px
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 64em)
 
-  main aside .image
-    width: 150px
-    height: 100px
+  main aside
+    .image
+      width: 150px
+      height: 100px

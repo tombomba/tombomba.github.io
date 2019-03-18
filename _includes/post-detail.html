@@ -31,8 +31,8 @@
     <p class="datestamp"><time pubdate datetime="{{ p.date | default: site.time | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}" title="permanent link to this entry">{{ p.date | default: site.time | date_to_string }}</a></time>
 
   {% else -%}
-    <p class="datestamp"><time pubdate datetime="{{ p.date | default: site.time | date: "%FT%T%:z" }}">{{ p.date | default: site.time | date_to_string }}</time>
-      
+    <p class="datestamp"><time pubdate datetime="{{ p.date | default: site.time | date: "%FT%T%:z" }}">{{ p.date | default: site.time | date_to_string }}</time></p>
+
   {% endif -%}
 
 </article>

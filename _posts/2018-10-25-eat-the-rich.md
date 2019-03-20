@@ -5,6 +5,7 @@ image:
   file: dinner-for-few-2018-film-still-3.jpg
   path: /assets/img/dinner-for-few-2018-film-still-3.jpg
   alt: "Dinner for Few, 2018. Film still."
+  ratio: '675x450'
 date: 2018-10-26 20:19:20 -0700
 ---
 

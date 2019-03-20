@@ -10,9 +10,17 @@
 <article><!-- {{ wc }} words -->
 
   {% if p.image.file %}
+    {% if p.image.ratio -%}
+      {% assign aspectr = p.image.ratio | default: '640x360' | split: 'x' -%}
+      {% assign w = aspectr[0] | plus: 0.0 -%}
+      {% assign h = aspectr[1] | plus: 0.0 -%}
+      {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
+    {% endif -%}
   <figure>
-    <img src="{{ p.image.file | prepend: site.img_dir | prepend: site.url }}" alt="p.media.alt" class="top wide curved">
-    {% if p.video.caption %}<figcaption>{{ p.video.caption | strip | normalize_whitespace | truncate: 140 | smartify | markdownify }}</figcaption>{% endif -%}
+    <div class="wrap" style="padding-bottom:{{ percent | default: '56.25%' }}%">
+      <img src="{{ p.image.file | prepend: site.img_dir | prepend: site.url }}" alt="{{ p.media.alt }}">
+    </div>
+    {% if p.image.caption %}<figcaption>{{ p.image.caption | strip | normalize_whitespace | truncate: 140 | smartify | markdownify }}</figcaption>{% endif -%}
   </figure>
 
   <header class="block">

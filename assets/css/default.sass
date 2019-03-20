@@ -21,8 +21,27 @@ main article
     margin-left: -1em
     margin-right: -1em
     margin-bottom: bem(1) + 0.66em
-    img
+    .wrap
+      position: relative
+      padding-bottom: 56.25%
+      height: 0
+      overflow: hidden
       max-width: 100%
+      background-color: darken($body-color, 5%)
+      iframe,
+      object,
+      embed,
+      img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+    figcaption
+      background-color: $body-color
+      p
+        margin: 0
+        @include font-ratio(14/16)
 
   &>img
     display: block

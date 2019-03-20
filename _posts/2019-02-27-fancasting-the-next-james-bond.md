@@ -10,7 +10,7 @@ Critics fancast Idris Elba, Henry Golding, Daniel Kaluuya, Shazad Latif, Dev Pat
 
 These are surprisingly [good picks](https://www.indiewire.com/2019/02/actors-next-james-bond-dev-patel-idris-elba-henry-golding-1202047287/). I never would have thought of half these actors, especially Shazad Latif, lately appearing on "Star Trek: Discovery." Henry Fielding, too. He has something of a lighter persona, as seen in "Crazy Rich Asians," and I can imagine him approaching the role the way Roger Moore and Pierce Brosnan did.
 
-![Photo: Hoagy Carmichael]({{ page.image.path }}){: height="225" width="300" .left .curved }
+![Photo: Hoagy Carmichael]({{ page.image.path }}){: height="210" width="280" .left .curved }
 
 That said, I'm something of a 007 traditionalist. I have a few sticking points on who plays him. One is that the actor needs to be a subject of the Queen, or the next best equivalent, a citizen of the Commonwealth. Bond is an icon and, when he first appeared, a point of pride for a country with a fading Empire and numerous espionage-driven scandals. Casting outside the realm would be unseemly, like having a Brit play Superman... _ahem_.
 

@@ -14,7 +14,7 @@ main article
       font-size: 100%
       line-height: $line-height
     &.inline h1
-      font-size: percentage(23/18)
+      font-size: percentage(29/18)
       line-height: (($line-height - 1) / 2) + 1
 
   figure
@@ -25,19 +25,10 @@ main article
       max-width: 100%
 
   &>img
-    max-width: 36%
-    margin-top: bem(1)
-    margin-bottom: 1em
+    display: block
+    margin: bem(1) auto
     &.top
       margin-top: 0
-    &.left
-      float: left
-      margin-left: 0
-      margin-right: 1em
-    &.right
-      float: right
-      margin-left: 1em
-      margin-right: 0
     &.center
       display: block
       max-width: $max-width - 6em
@@ -47,6 +38,12 @@ main article
     &.wide
       max-width: 100%
       margin-bottom: 0
+    &.left
+      &.tilt
+        transform: rotate(-3deg)
+    &.right
+      &.tilt
+        transform: rotate(3deg)
     &.curved
       border-radius: 4px
 
@@ -61,19 +58,20 @@ main article
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 32em)
-
-  main article
-
-    &>img.left, img.right
-      max-width: 33%
-
-//-----------------------------------------------------------------------------
-
 @media screen and (min-width: 40em)
 
   main article
 
+    &>img.left
+      float: left
+      display: inline
+      margin-right: bem(1)
+      margin-bottom: 1em
+    &>img.right
+      float: right
+      display: inline
+      margin-left: bem(1)
+      margin-bottom: 1em
     figure
       margin-left: 0
       margin-right: 0
@@ -90,19 +88,13 @@ main article
       &.block h1
         font-size: percentage(23/18)
         line-height: (($line-height - 1) / 2) + 1
-      &.inline h1
-        font-size: percentage(29/18)
 
     &>img.left
-      margin-right: bem(1)
-      &.tilt
-        transform: rotate(-3deg)
+      &.pull
         margin-left: -1em
 
     &>img.right
-      margin-left: bem(1)
-      &.tilt
-        transform: rotate(3deg)
+      &.pull
         margin-right: -1em
 
 //-----------------------------------------------------------------------------
@@ -112,11 +104,9 @@ main article
   main article
 
     &>img.left
-      max-width: 40%
-      &.tilt
+      &.pull
         margin-left: bem(-1)
 
     &>img.right
-      max-width: 40%
-      &.tilt
+      &.pull
         margin-right: bem(-1)

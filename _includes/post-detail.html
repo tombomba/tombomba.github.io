@@ -5,33 +5,10 @@
 {% if copy contains 'img src=' -%}
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
 {% endif -%}
-{% capture headline %}<h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{% if t.size > 1 -%}{% assign sub = t.last | prepend: '!QQ!' -%}{% assign t = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}{% endif -%}{{ t }}{% if include.is_home %}</a>{% endif %}</h1>{% endcapture -%}
 
 <article><!-- {{ wc }} words -->
 
-  {% if p.image.file %}
-    {% if p.image.ratio -%}
-      {% assign aspectr = p.image.ratio | default: '640x360' | split: 'x' -%}
-      {% assign w = aspectr[0] | plus: 0.0 -%}
-      {% assign h = aspectr[1] | plus: 0.0 -%}
-      {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
-    {% endif -%}
-  <figure>
-    <div class="wrap" style="padding-bottom:{{ percent | default: '56.25%' }}%">
-      <img src="{{ p.image.file | prepend: site.img_dir | prepend: site.url }}" alt="{{ p.media.alt }}">
-    </div>
-    {% if p.image.caption %}<figcaption>{{ p.image.caption | strip | normalize_whitespace | truncate: 140 | smartify | markdownify }}</figcaption>{% endif -%}
-  </figure>
-
-  <header class="block">
-    {{ headline }}
-  </header>
-
-  {% else -%}
-    {% assign headline = headline | prepend: '<header class="inline">' | append: '<p>' %}
-    {% assign copy = copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' %}
-
-  {% endif -%}
+  <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{% if t.size > 1 -%}{% assign sub = t.last | prepend: '!QQ!' -%}{% assign t = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}{% endif -%}{{ t }}{% if include.is_home %}</a>{% endif %}</h1>
 
   {{ copy }}
 

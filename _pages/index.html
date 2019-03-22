@@ -3,22 +3,18 @@ is_home: true
 permalink: /index.html
 ---
 
-{% include post-detail.html page=site.posts.first content=site.posts.first.content is_home=true -%}
+{% for p in site.posts limit: 10 -%}
 
-<aside>
+  {% unless forloop.first %}<hr class="pagebreak">{% endunless %}
 
-  <hr>
+  {% if p.layout == 'video' %}
+    {% include video-detail.html page=p content=p.content is_home=true -%}
 
-  <div class="subhed">
-    <h2>Also this week</h2>
-  </div>
-  {% for recent in site.posts limit: 7 offset: 1 %}
-  <div class="wrap">
-  {% include aside.html item=recent %}
-  </div>
-  {% endfor -%}
+  {% else %}
+    {% include post-detail.html page=p content=p.content is_home=true -%}
+  {% endif %}
 
-</aside>
+{% endfor -%}
 
 {% comment %} // plain blog style
 {% for p in site.posts limit: 10 -%}
@@ -33,6 +29,23 @@ permalink: /index.html
 {% endfor -%}
 {% endcomment -%}
 
-{% comment -%} // suck style homepage
+{% comment -%} // good blonde style homepage
 {% include post-detail.html page=site.posts.first content=site.posts.first.content is_home=true -%}
+{% endcomment -%}
+
+{% comment -%} // recent posts
+<aside>
+
+  <hr>
+
+  <div class="subhed">
+    <h2>Also this week</h2>
+  </div>
+  {% for recent in site.posts limit: 7 offset: 1 %}
+  <div class="wrap">
+  {% include aside.html item=recent %}
+  </div>
+  {% endfor -%}
+
+</aside>
 {% endcomment -%}

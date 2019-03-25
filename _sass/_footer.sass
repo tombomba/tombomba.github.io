@@ -1,21 +1,45 @@
 footer
   max-width: 100%
-  margin: bem(2) auto 0 auto
+  margin: bem(2) 0 0 0
+  padding: 0 1em 1em 1em
 
-  .wrap
-    max-width: $max-width
-    margin: 0 auto
+  //.wrap
+    margin-top: 1em
+
+  .nav ul li,
+  .meta p
+    @include font-ratio(14/16)
+    color: $mix-color
+    a:link, a:visited
+      color: $mix-color
 
   .nav ul
-    display: flex
-    align-items: center
-    justify-content: center
     margin: 0
-    height: bem(2)
     li
       display: inline
       padding-right: 0.5em
       &:not(:last-of-type)::after
-        content: "-"
+        content: "|"
         padding-left: 0.5em
-        color: $mix-color
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30em)
+
+  footer
+    h1,
+    .nav,
+    .nav ul,
+    .meta p
+      display: inline
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50em)
+
+  footer
+    margin-top: bem(4)
+    margin-bottom: bem(0.83)
+    padding: 0 8%
+    .wrap
+      max-width: 84%

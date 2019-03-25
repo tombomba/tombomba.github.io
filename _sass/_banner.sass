@@ -1,15 +1,80 @@
 header[role="banner"]
 
+  height: bem(3)
   max-width: 100%
+  padding: 0 1em
+  display: flex
+  align-items: flex-end
+  background-color: #FFF
 
   hr
-    width: 100%
+    margin-top: 1em
 
-  .icon
+  .wrap
+    width: 100%
     display: flex
-    align-items: center
-    justify-content: center
-    height: bem(2)
-    img
-      width: auto
-      height: 24px
+    align-items: baseline
+    //justify-content: space-between
+
+  .title
+    display: flex
+    align-items: baseline
+    margin-bottom: 0.5em
+    h1
+      font-size: percentage(37/18)
+      line-height: 1
+      text-transform: lowercase
+      &::after
+        content: "."
+        color: $logo-color
+      a:link, a:visited
+        color: $logo-color
+        text-decoration: none
+      a:hover
+        text-decoration: underline
+    p
+      display: none
+      padding-left: 0.25em
+      font-size: percentage(29/18)
+      font-weight: 700
+      line-height: 1
+      text-transform: lowercase
+      color: $light-mix
+      &::after
+        content: "."
+
+  .stamp p
+    padding-left: 0.5em
+    font-size: percentage(18/18)
+    font-weight: 700
+    line-height: 1
+    text-transform: lowercase
+    color: $light-mix
+    a:visited, a:link
+      text-decoration: none
+    a:hover
+      text-decoration: underline
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50em)
+
+  header[role="banner"]
+    padding: 0 8%
+    .title
+      max-width: 84%
+      h1
+        font-size: percentage(47/18)
+      p
+        display: block
+        font-size: percentage(37/18)
+    .stamp
+      font-size: percentage(23/18)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 70em)
+
+  header[role="banner"]
+    .wrap
+      max-width: 84%

@@ -13,12 +13,33 @@ main article
     font-size: percentage(23/18)
     line-height: (($line-height - 1) / 2) + 1
 
+  figure
+    max-width: $max-width + bem(1)
+    margin: bem(1) -1em 0 -1em
+    background: $bg-color url(/assets/img/default-image-icon.png) no-repeat center center
+    .player
+      position: relative
+      padding-bottom: 56.25%
+      height: 0
+      overflow: hidden
+      max-width: 100%
+      background-color: transparent
+      iframe,
+      object,
+      embed,
+      img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+
   &>img
     display: block
-    margin: bem(1) auto
+    margin: bem(.83) auto
     background: $bg-color url(/assets/img/default-image-icon.png) no-repeat center center
     &.top
-      margin-top: bem(1)
+      margin-top: bem(.83)
     &.center
       display: block
       max-width: $max-width - 6em
@@ -38,11 +59,13 @@ main article
       border-radius: 4px
 
   .datestamp
-    font-style: italic
+    margin-top: 0
     @extend .permalink
+    &.small
+      @include font-ratio(14/16)
 
   .error
-    margin-top: 1em
+    margin-top: bem(1)
     li
       margin: 0
 
@@ -65,12 +88,19 @@ main article
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 50em)
+@media screen and (min-width: 42em)
 
   main article
 
-    h1
-      font-size: percentage(29/18)
+    figure
+      margin-left: 0
+      margin-right: 0
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50em)
+
+  main article
 
     &>img.left
       &.pull
@@ -82,9 +112,12 @@ main article
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 64em)
+@media screen and (min-width: 70em)
 
   main article
+
+    h1
+      font-size: percentage(29/18)
 
     &>img.left
       &.pull

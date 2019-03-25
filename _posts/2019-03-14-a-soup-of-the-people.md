@@ -1,6 +1,7 @@
 ---
 title: "A soup of the people"
-excerpt: "Umami's 'The Cycle of Life' is the strangest thing I've seen this year."
+media:
+  youtube: uraG-z0grkc
 image:
   file: cycle-of-life-umami-2019.jpg
   path: /assets/img/cycle-of-life-umami-2019.jpg

@@ -1,6 +1,5 @@
 ---
 title: "The king of yob couture"
-excerpt: "'McQueen' is an ordinary film about an extraordinary man."
 image:
   file: mcqueen-2018-docu-promo-still.jpg
   path: /assets/img/mcqueen-2018-docu-promo-still.jpg

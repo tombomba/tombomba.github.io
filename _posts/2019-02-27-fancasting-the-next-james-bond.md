@@ -1,6 +1,5 @@
 ---
 title: "Fancasting the next James Bond"
-excerpt: "A few sticking points on who plays the most famous spy in the world."
 image:
   path: /assets/img/hoagy-carmichael.jpg
 date: 2019-02-27 21:35 -0800

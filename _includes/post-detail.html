@@ -8,16 +8,41 @@
 
 <article><!-- {{ wc }} words -->
 
-  <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{% if t.size > 1 -%}{% assign sub = t.last | prepend: '!QQ!' -%}{% assign t = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}{% endif -%}{{ t }}{% if include.is_home %}</a>{% endif %}</h1>
+  <header>
+    <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{% assign sub = t.last | prepend: '!QQ!' -%}{% assign t = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}{{ t }}{% if include.is_home %}</a>{% endif %}</h1>
+    <p class="datestamp small"><time pubdate datetime="{{ p.date | default: page.date | date: "%FT%T%:z" }}"><a href="xo.html">{{ p.date | default: page.date | date: "%d %b %Y" }}</a></time></p>
+  </header>
 
-  {{ copy }}
+  {% if p.media %}
+    {% if p.media.ratio %}
+      {% assign aspectr = p.media.ratio | default: '640x360' | split: 'x' %}
+      {% assign w = aspectr[0] | times: 1.0 %}
+      {% assign h = aspectr[1] | times: 1.0 %}
+      {% assign percent = h | divided_by: w | times: 100 | round: 2 %}
+    {% endif -%}
 
-  {% if include.is_home %}
-    <p class="datestamp"><time pubdate datetime="{{ p.date | default: site.time | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}" title="permanent link to this entry">{{ p.date | default: site.time | date_to_string }}</a></time>
+  <!-- <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/uraG-z0grkc?controls=2&rel=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
-  {% else -%}
-    <p class="datestamp"><time pubdate datetime="{{ p.date | default: site.time | date: "%FT%T%:z" }}">{{ p.date | default: site.time | date_to_string }}</time></p>
+  <figure>
+    <div class="player" style="padding-bottom:{{ percent }}%" aria-label="media player">
+
+    {% if p.media.youtube %}
+        <iframe src="https://www.youtube-nocookie.com/embed/{{ p.media.youtube }}?controls=2&modestbranding=1&rel=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    {% elsif p.media.vimeo %}
+        <iframe src="https://player.vimeo.com/video/{{ p.media.vimeo }}?badge=0&color=FF0033&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+    {% elsif p.media.image %}
+      <img src="{{ p.media.image | prepend: site.img_dir | prepend: site.url }}" alt="{{ p.media.alt | default: '' | strip_html | strip | normalize_whitespace | truncate: 140 }}">
+    {% endif -%}
+    </div>
+
+    {% if p.media.caption -%}<figcaption>{{ p.media.caption | default: 'Caption!' | markdownify | widont | amp | smartypants }}</figcaption>{% endif -%}
+
+  </figure>
 
   {% endif -%}
+
+  {{ copy }}
 
 </article>

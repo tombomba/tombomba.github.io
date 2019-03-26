@@ -24,17 +24,19 @@
   <!-- <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/uraG-z0grkc?controls=2&rel=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
   <figure>
-    <div class="player" style="padding-bottom:{{ percent }}%" aria-label="media player">
+    <div class="wrap">
+      <div class="player" style="padding-bottom:{{ percent }}%" aria-label="media player">
 
     {% if p.media.youtube %}
         <iframe src="https://www.youtube-nocookie.com/embed/{{ p.media.youtube }}?controls=2&modestbranding=1&rel=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
     {% elsif p.media.vimeo %}
-        <iframe src="https://player.vimeo.com/video/{{ p.media.vimeo }}?badge=0&color=3366CC&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/{{ p.media.vimeo }}?badge=0&color=3366CC&title=0&byline=0&portrait=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
     {% elsif p.media.image %}
       <img src="{{ p.media.image | prepend: site.img_dir | prepend: site.url }}" alt="{{ p.media.alt | default: '' | strip_html | strip | normalize_whitespace | truncate: 140 }}">
     {% endif -%}
+      </div>
     </div>
 
     {% if p.media.caption -%}<figcaption>{{ p.media.caption | default: 'Caption!' | markdownify | widont | amp | smartypants }}</figcaption>{% endif -%}

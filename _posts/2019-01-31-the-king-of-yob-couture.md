@@ -1,8 +1,11 @@
 ---
 title: "The king of yob couture"
+media:
+  image: mcqueen-documentary-2018.jpg
+  ratio: 800x450
+  alt: "Alexander McQueen"
 image:
-  file: mcqueen-2018-docu-promo-still.jpg
-  path: /assets/img/mcqueen-2018-docu-promo-still.jpg
+  path: /assets/img/alexander-mcqueen-promo-shot.jpg
   alt: "McQueen, 2018. Film still."
 date: 2019-01-31 23:40 -0800
 ---

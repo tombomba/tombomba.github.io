@@ -30,7 +30,7 @@
         <iframe src="https://www.youtube-nocookie.com/embed/{{ p.media.youtube }}?controls=2&modestbranding=1&rel=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
     {% elsif p.media.vimeo %}
-        <iframe src="https://player.vimeo.com/video/{{ p.media.vimeo }}?badge=0&color=FF0033&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/{{ p.media.vimeo }}?badge=0&color=3366CC&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
     {% elsif p.media.image %}
       <img src="{{ p.media.image | prepend: site.img_dir | prepend: site.url }}" alt="{{ p.media.alt | default: '' | strip_html | strip | normalize_whitespace | truncate: 140 }}">

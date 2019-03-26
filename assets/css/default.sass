@@ -16,7 +16,9 @@ main article
   figure
     max-width: $max-width + bem(1)
     margin: bem(1) -1em 0 -1em
-    background: $bg-color url(/assets/img/default-image-icon.png) no-repeat center center
+    padding-bottom: 0.66em
+    .wrap
+      background: $bg-color url(/assets/img/default-image-icon.png) no-repeat center center
     .player
       position: relative
       padding-bottom: 56.25%
@@ -36,10 +38,8 @@ main article
 
   &>img
     display: block
-    margin: bem(.83) auto
+    margin: bem(1) auto
     background: $bg-color url(/assets/img/default-image-icon.png) no-repeat center center
-    &.top
-      margin-top: bem(.83)
     &.center
       display: block
       max-width: $max-width - 6em
@@ -59,7 +59,7 @@ main article
       border-radius: 4px
 
   .datestamp
-    margin-top: 0
+    margin: 0
     @extend .permalink
     &.small
       @include font-ratio(14/16)
@@ -115,9 +115,6 @@ main article
 @media screen and (min-width: 70em)
 
   main article
-
-    h1
-      font-size: percentage(29/18)
 
     &>img.left
       &.pull

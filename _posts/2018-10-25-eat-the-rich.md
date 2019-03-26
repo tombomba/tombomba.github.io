@@ -1,5 +1,7 @@
 ---
 title: "Eat the rich"
+media:
+  vimeo: 288759859
 image:
   file: dinner-for-few-2018-film-still-3.jpg
   path: /assets/img/dinner-for-few-2018-film-still-3.jpg

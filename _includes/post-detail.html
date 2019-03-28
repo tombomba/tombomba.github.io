@@ -10,7 +10,7 @@
 
   <header>
     <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{% assign sub = t.last | prepend: '!QQ!' -%}{% assign t = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}{{ t }}{% if include.is_home %}</a>{% endif %}</h1>
-    <p class="datestamp small"><time pubdate datetime="{{ p.date | default: page.date | date: "%FT%T%:z" }}"><a href="xo.html">{{ p.date | default: page.date | date: "%d %b %Y" }}</a></time></p>
+    <p class="datestamp small"><time pubdate datetime="{{ p.date | default: page.date | date: "%FT%T%:z" }}">{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ p.date | default: page.date | date: "%d %b %Y" }}{% if include.is_home %}</a>{% endif %}</time></p>
   </header>
 
   {% if p.media %}

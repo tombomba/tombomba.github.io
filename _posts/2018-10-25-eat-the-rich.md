@@ -1,5 +1,6 @@
 ---
 title: "Eat the rich"
+excerpt: "What goes around comes around in this animated short by Nassos Vakalis."
 media:
   vimeo: 288759859
 image:

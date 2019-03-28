@@ -1,6 +1,5 @@
 ---
 layout: default
-style: page.css
 ---
 
 {% comment -%}
@@ -32,9 +31,9 @@ style: page.css
       {% assign current_year = p.date | date: "%Y" -%}
 
       {% if is_month_index and current_month == page_month and current_year == page_year -%}
-        <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip_html | strip | normalize_whitespace | smartify }}</a> {% if p.tags contains 'cool' %}<img src="{{ 'cool.gif' | prepend: site.img_dir }}" alt="coooool">{% endif %} &mdash; {{ p.excerpt | strip_html | strip | normalize_whitespace | smartify | truncate: 280 }}</li>
+        <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip_html | strip | normalize_whitespace | smartify }}</a> &mdash; {{ p.excerpt | strip_html | strip | normalize_whitespace | smartify }}</li>
       {% elsif is_year_index and current_year == page_year -%}
-          <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip_html | strip | normalize_whitespace | smartify }}</a> {% if p.tags contains 'cool' %}<img src="{{ 'cool.gif' | prepend: site.img_dir }}" alt="coooool">{% endif %} &mdash; {{ p.excerpt | strip_html | strip | normalize_whitespace | smartify | truncate: 280 }} <em>({{ p.date | date: "%d %b" }})</em></li>
+          <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip_html | strip | normalize_whitespace | smartify }}</a> &mdash; {{ p.excerpt | strip_html | strip | normalize_whitespace | smartify }} <em class="permalink">(<a href="{{ p.url | prepend: site.url }}">{{ p.date | date: "%d %b" }}</a>)</em></li>
       {% endif -%}
 
     {% endfor -%}

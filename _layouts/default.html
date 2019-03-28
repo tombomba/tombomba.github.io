@@ -78,7 +78,7 @@
   <hr>
 
   <ul>
-    {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a>{% endunless %}{% unless page.is_bio %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li>
+    {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_bio %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li>
   </ul>
 
 </footer>

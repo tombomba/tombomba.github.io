@@ -1,5 +1,5 @@
 ---
-title: "The king of yob couture"
+title: "McQueen is dead, long live McQueen"
 media:
   image: mcqueen-documentary-2018.jpg
   ratio: 800x450

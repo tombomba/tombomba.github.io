@@ -18,23 +18,23 @@ $max-width: 37.389em
 $line-height: 1.83
 
 // Colors
-$body-color:    #F3F3F3 !default
+$body-color:    #EAEAEA !default
 $text-color:    #161616 !default
 $bg-color:      darken($body-color, 5%) !default
 
-$logo-color:    #F03 !default
+$logo-color:    #00F !default
 $shock-color:   #FFC !default
 
 $mix-color:     mix($body-color, $text-color, 50%) !default
 $light-mix:     lighten($mix-color, 20%) !default
 $dark-mix:      darken($mix-color, 20%) !default
 
-$border-dark:   #C8C8C8 !default
-$border-light:  #FFF !default
+$border-dark:   #C0C0C0 !default
+$border-light:  #FBFBFB !default
 
-$link-color:    #36C !default
-$visited-color: #939 !default
-$active-color:  #F90 !default
+$link-color:    blue !default
+$visited-color: purple !default
+$active-color:  orange !default
 
 // Fonts
 $serif: Georgia, Cambria, 'Century Schoolbook L', serif
@@ -76,14 +76,14 @@ body
   padding: 1em
 
 a
-  text-decoration: none
+  text-decoration: underline
   text-decoration-skip-ink: auto
   &:link
     color: $link-color
   &:visited
     color: $visited-color
   &:hover
-    text-decoration: underline
+    text-decoration: none
   &:active
     color: $active-color
 
@@ -109,10 +109,8 @@ hr
 
 main
 
-  margin: 0 auto
-  max-width: $max-width
-
   article
+    max-width: $max-width + bem(1)
     margin-top: bem(2)
     @extend .clearfix
 
@@ -156,3 +154,18 @@ main
 
   body
     font-size: 112.5%
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 48em)
+
+  body
+    padding: bem(1) 8%
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 80em)
+
+  body
+    padding-left: 12.5%
+    padding-right: 12.5%

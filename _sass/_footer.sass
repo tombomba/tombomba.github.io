@@ -1,13 +1,20 @@
 footer
-  max-width: $max-width
-  margin: bem(2) auto 0 auto
+  margin-top: bem(2)
+
   ul
-    margin: 1em 0 0 0
+    margin: 0
     li
       display: inline
       padding-right: 0.5em
       color: $mix-color
       &:not(:last-of-type)::after
-        content: "-"
+        content: "|"
         padding-left: 0.5em
         color: $mix-color
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 48em)
+
+  footer
+    margin-top: bem(4)

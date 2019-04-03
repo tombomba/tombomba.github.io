@@ -1,33 +1,43 @@
 {% assign p = include.page -%}
 {% assign copy = include.content | strip | normalize_whitespace -%}
+
 {% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
-{% assign wc = copy | number_of_words -%}
+{% assign sub = t.last | prepend: '!QQ!' -%}
+{% assign t = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
+
+{% if p.image.file -%}
+  {% assign hedf = 'media' -%}
+{% endif -%}
+
 {% if copy contains 'img src=' -%}
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
 {% endif -%}
 
-<article><!-- {{ wc }} words -->
-
-  {% if p.image.file %}
-    {% assign hedf = 'media' %}
-    {% assign aspectr = p.image.ratio | default: '640x360' | split: 'x' %}
-    {% assign w = aspectr[0] | times: 1.0 %}
-    {% assign h = aspectr[1] | times: 1.0 %}
-    {% assign percent = h | divided_by: w | times: 100 | round: 2 %}
-  <figure>
-    <div class="wrap" style="padding-bottom:{{ percent }}%">{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}<img src="{{ p.image.file | prepend: site.img_dir }}" alt="{{ p.image.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}">{% if include.is_home %}</a>{% endif %}</div>
-    {% if p.media.caption -%}<figcaption>{{ p.media.caption | strip | normalize_whitespace | smartify | markdownify }}</figcaption>{% endif -%}
-  </figure>
-  {% endif -%}
+<article><!-- {{ copy | number_of_words }} words -->
 
   <header class="{{ hedf | default: 'text' }}">
-    <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{% assign sub = t.last | prepend: '!QQ!' -%}{% assign t = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}{{ t }}{% if include.is_home %}</a>{% endif %}</h1>
+    <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ t }}{% if include.is_home %}</a>{% endif %}</h1>
     <ul>
-      <li>{{ p.author | default: site.author }}</li>
+      {% unless include.is_home %}<li><a href="/about/">{{ p.author | default: site.author }}</a></li>{% endunless -%}
       <li><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></li>
     </ul>
   </header>
 
+  {% if p.image.file -%}
+    {% assign aspectr = p.image.ratio | default: '640x360' | split: 'x' -%}
+    {% assign w = aspectr[0] | times: 1.0 -%}
+    {% assign h = aspectr[1] | times: 1.0 -%}
+    {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
+  <figure>
+    <div class="wrap" style="padding-bottom:{{ percent }}%"><img src="{{ p.image.file | prepend: site.img_dir }}" alt="{{ p.image.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}"></div>
+    {% if p.media.caption -%}<figcaption>{{ p.media.caption | strip | normalize_whitespace | smartify | markdownify }}</figcaption>{% endif -%}
+  </figure>
+  {% endif %}
+
   {{ copy }}
+
+  {% if include.is_home %}
+    <p class="morelink"><a href="{{ p.url | prepend: site.url }}" title="permalink">+</a></p>
+  {% endif -%}
 
 </article>

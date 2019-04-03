@@ -15,21 +15,20 @@ main article
 
   header
     max-width: $max-width + bem(1)
-    &.media,
-    &.text
-      h1
-        font-size: percentage(23/18)
-        line-height: (($line-height - 1) / 2) + 1
-        @extend .titlelink
-      ul
-        margin: 0
-        list-style-type: none
-        li
-          display: inline
-          @include font-ratio(14/16)
-          @extend .permalink
-          &:nth-child(2):before
-            content: "\20/\20"
+    h1
+      font-size: percentage(23/18)
+      line-height: (($line-height - 1) / 2) + 1
+      @extend .titlelink
+    ul
+      margin: 0
+      list-style-type: none
+      li
+        display: inline
+        @include font-ratio(14/16)
+        @extend .permalink
+        &:nth-child(2):before
+          content: "\20/\20"
+
 
   h2, h3, h4, h5, h6
     font-size: 100%

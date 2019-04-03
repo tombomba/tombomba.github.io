@@ -3,22 +3,3 @@ layout: default
 ---
 
 {% include post-detail.html page=page content=content -%}
-
-{% if page.previous or page.next %}
-<aside>
-  {% if page.previous %}
-  <div class="prev">
-    <h2>Previously</h2>
-    <h3 class="title"><a href="{{ page.previous.url | prepend: site.url }}">{{ page.previous.title | strip | normalize_whitespace | smartify }}</a></h3>
-    <p class="datestamp">[{{ page.previous.date | date_to_string }}]</p>
-  </div>
-  {% endif -%}
-  {% if page.next %}
-  <div class="next">
-    <h2>Next</h2>
-    <h3 class="title"><a href="{{ page.next.url | prepend: site.url }}">{{ page.next.title | strip | normalize_whitespace | smartify }}</a></h3>
-    <p class="datestamp">[{{ page.next.date | date_to_string }}]</p>
-  </div>
-  {% endif %}
-</aside>
-{% endif -%}

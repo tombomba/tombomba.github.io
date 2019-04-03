@@ -1,9 +1,12 @@
 ---
 title: "Fancasting the next James Bond"
+excerpt: "A few sticking points as to who plays the world's most famous spy."
 image:
   path: /assets/img/hoagy-carmichael.jpg
 date: 2019-02-27 21:35 -0800
 ---
+
+![Hoagy Carmichael](/assets/img/hoagy-carmichael-280x363.jpg){: width="280" height="363" .right .tilt }
 
 [Critics imagine](https://www.indiewire.com/2019/02/actors-next-james-bond-dev-patel-idris-elba-henry-golding-1202047287/) Idris Elba, Henry Golding, Daniel Kaluuya, Shazad Latif, Dev Patel, Robert Pattinson, and Colin Salmon in the role of the world's most famous spy.
 

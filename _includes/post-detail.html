@@ -38,6 +38,7 @@
 
   {% if include.is_home %}
     <p class="morelink"><a href="{{ p.url | prepend: site.url }}" title="permalink">+</a></p>
+    {% assign hedf = false -%}
   {% endif -%}
 
 </article>

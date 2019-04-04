@@ -1,14 +1,12 @@
 ---
 title: "McQueen is dead, long live McQueen"
-media:
-  image: mcqueen-documentary-2018.jpg
-  ratio: 800x450
-  alt: "Alexander McQueen"
+excerpt: "'McQueen' is a conventional documentary about an extraordinary man."
 image:
-  path: /assets/img/alexander-mcqueen-promo-shot.jpg
-  alt: "McQueen, 2018. Film still."
+  path: /assets/img/alexander-mcqueen-280x359.jpg
 date: 2019-01-31 23:40 -0800
 ---
+
+![Alexander McQueen](/assets/img/alexander-mcqueen-280x359.jpg){: .left }
 
 "McQueen," a documentary about fashion designer Alexander McQueen, who committed suicide at the height of his career, is a conventional film about an extraordinary man.
 

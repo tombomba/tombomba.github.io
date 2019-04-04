@@ -4,7 +4,7 @@ excerpt: "'Planet of the Apes,' 1968. Remember the ending? Okay, good. So maybe 
 date: 2018-10-07 21:26:12 -0700
 ---
 
-![Planet of the Apes movie poster](/assets/img/planet-of-the-apes-1968-poster-art.jpg){: width="280" height="418" .top .right .tilt .border }
+![Planet of the Apes movie poster](/assets/img/planet-of-the-apes-1968-poster-art.jpg){: width="280" height="418" .top .left .tilt .border .pull }
 
 You've seen the original, right? "Planet of the Apes," 1968. Remember the ending? Okay, good. So maybe you can tell me how Taylor, the astronaut played by Charlton Heston, didn't realize where he was from the start. Because he should have.
 

@@ -1,13 +1,10 @@
 ---
 title: "The sneaky payoff to 'Planet of the Apes'"
 excerpt: "'Planet of the Apes,' 1968. Remember the ending? Okay, good. So maybe you can tell me how Taylor, the astronaut played by Charlton Heston, didn't realize where he was from the start. Because he should have."
-image:
-  file: charlton-heston-800x450.jpg
-  path: /assets/img/charlton-heston-800x450.jpg
-  alt: "Charlton Heston in Planet of the Apes 1968"
-  ratio: 800x450
 date: 2018-10-07 21:26:12 -0700
 ---
+
+![Planet of the Apes movie poster](/assets/img/planet-of-the-apes-1968-poster-art.jpg){: width="280" height="418" .top .right .tilt .border }
 
 You've seen the original, right? "Planet of the Apes," 1968. Remember the ending? Okay, good. So maybe you can tell me how Taylor, the astronaut played by Charlton Heston, didn't realize where he was from the start. Because he should have.
 

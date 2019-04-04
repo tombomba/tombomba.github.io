@@ -5,9 +5,16 @@
 {% assign sub = t.last | prepend: '!QQ!' -%}
 {% assign t = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
 
-{% if p.image.file -%}
-  {% assign hedf = 'media' -%}
-{% endif -%}
+{% capture titlef %}
+  <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ t }}{% if include.is_home %}</a>{% endif %}</h1>
+{% endcapture -%}
+
+{% capture byline %}
+  <ul>
+    {% unless include.is_home %}<li><a href="/about/">{{ p.author | default: site.author }}</a></li>{% endunless -%}
+    <li><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></li>
+  </ul>
+{% endcapture -%}
 
 {% if copy contains 'img src=' -%}
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
@@ -15,26 +22,31 @@
 
 <article><!-- {{ copy | number_of_words }} words -->
 
-  <header class="{{ hedf | default: 'text' }}">
-    <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ t }}{% if include.is_home %}</a>{% endif %}</h1>
-    <ul>
-      {% unless include.is_home %}<li><a href="/about/">{{ p.author | default: site.author }}</a></li>{% endunless -%}
-      <li><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></li>
-    </ul>
-  </header>
-
   {% if p.image.file -%}
+
     {% assign aspectr = p.image.ratio | default: '640x360' | split: 'x' -%}
     {% assign w = aspectr[0] | times: 1.0 -%}
     {% assign h = aspectr[1] | times: 1.0 -%}
     {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
-  <figure>
-    <div class="wrap" style="padding-bottom:{{ percent }}%"><img src="{{ p.image.file | prepend: site.img_dir }}" alt="{{ p.image.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}"></div>
-    {% if p.media.caption -%}<figcaption>{{ p.media.caption | strip | normalize_whitespace | smartify | markdownify }}</figcaption>{% endif -%}
-  </figure>
-  {% endif %}
 
-  {{ copy }}
+    <figure>
+      <div class="wrap" style="padding-bottom:{{ percent }}%"><img src="{{ p.image.file | prepend: site.img_dir }}" alt="{{ p.image.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}"></div>
+      {% if p.media.caption -%}<figcaption>{{ p.media.caption | strip | normalize_whitespace | smartify | markdownify }}</figcaption>{% endif -%}
+    </figure>
+
+    <header class="media">
+      {{ titlef }}
+      {{ byline }}
+    </header>
+
+    {{ copy }}
+
+  {% else %}
+
+    {% capture headline %}<header class="text">{{ titlef }}{{ byline }}<p>{% endcapture -%}
+    {{ copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' }}
+
+  {% endif -%}
 
   {% if include.is_home %}
     <p class="morelink"><a href="{{ p.url | prepend: site.url }}" title="permalink">+</a></p>

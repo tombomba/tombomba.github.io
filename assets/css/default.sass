@@ -10,17 +10,15 @@
 main article
 
   max-width: $max-width + bem(2)
-  margin-top: bem(2)
+  margin-top: bem(3)
   @extend .clearfix
 
   header
     max-width: $max-width + bem(1)
-    &.text,
-    &.media
-      h1
-        font-size: percentage(23/18)
-        line-height: (($line-height - 1) / 2) + 1
-        @extend .titlelink
+    h1
+      font-size: percentage(23/18)
+      line-height: (($line-height - 1) / 2) + 1
+      @extend .titlelink
     ul
       margin: 0
       list-style-type: none
@@ -30,7 +28,8 @@ main article
         @extend .permalink
         &:nth-child(2):before
           content: "\20/\20"
-
+    &.media
+      margin-top: bem(1)
 
   h2, h3, h4, h5, h6
     font-size: 100%
@@ -38,8 +37,8 @@ main article
 
   figure
     max-width: $max-width + bem(1)
-    margin: bem(1) -1em 0 -1em
-    padding-bottom: 0.33em
+    margin: 0 -1em
+    padding-bottom: 0.83em
     .wrap
       position: relative
       padding-bottom: 56.25%
@@ -58,13 +57,21 @@ main article
   &>img
     display: block
     margin: bem(1) auto 1em auto
+    background: $shock-color
     overflow: hidden
+    &.top
+      margin-top: 0
+      margin-bottom: bem(1) + 0.66em
     &.saturate
-      filter: saturate(2)
+      filter: saturate(4)
+    &.sepia
+      filter: sepia(50%)
     &.curved
       border-radius: 4px
-    &.shadow
-      box-shadow: 10px 10px 0px 1px $bg-color
+    &.border
+      border-width: thin
+      border-style: solid
+      border-color: inherit
 
   p, li, hr
     margin-top: bem(1)
@@ -104,22 +111,17 @@ main article
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 32em)
+@media screen and (min-width: 36em)
 
   main article>img
     &.left
       float: left
       margin-left: 0
       margin-right: bem(1)
-      &.tilt
-        transform: rotate(-3deg)
-        margin-left: -1em
     &.right
       float: right
       margin-left: bem(1)
       margin-right: 0
-      &.tilt
-        transform: rotate(3deg)
 
 //-----------------------------------------------------------------------------
 
@@ -140,16 +142,22 @@ main article
 
   main article
     margin-top: bem(3)
-    header
-      &.text
-        h1
-          font-size: percentage(29/18)
+    &>img.top
+      margin-bottom: bem(1)
+    &>img.left
+      &.tilt
+        transform: rotate(-3deg)
+        margin-left: -1em
+    &>img.right
+      &.tilt
+        transform: rotate(3deg)
+      &.shadow
+        box-shadow: 10px 10px 0px 1px $bg-color
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 60em)
 
-  main article>img
-    &.left
-      &.pull
-        margin-left: bem(-2)
+  main article>img.left
+    &.pull
+      margin-left: bem(-2)

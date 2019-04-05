@@ -22,7 +22,7 @@
 
 <article><!-- {{ copy | number_of_words }} words -->
 
-  {% if p.image.file -%}
+  {% if p.image.file %}
 
     {% assign aspectr = p.image.ratio | default: '640x360' | split: 'x' -%}
     {% assign w = aspectr[0] | times: 1.0 -%}
@@ -40,6 +40,20 @@
     </header>
 
     {{ copy }}
+
+  {% elsif p.via.link %}
+
+    <header class="link">
+      {{ titlef }}
+      {{ byline }}
+    </header>
+
+    {{ copy }}
+
+    <aside class="via">
+      <h2><a href="{{ p.via.link }}">{{ p.via.title }}</a></h2>
+      <p>{{ p.via.link | remove:'http://' | remove: 'https://' | remove: 'www' | split:'/' | first }}
+    </aside>
 
   {% else %}
 

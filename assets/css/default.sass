@@ -92,8 +92,22 @@ main article
     max-width: $max-width
 
   blockquote
+    padding-left: 1em
+    border-left: bem(0.125) solid darken($bg-color, 2.5%)
+
+  //blockquote
     max-width: $max-width
-    padding: 0 bem(1)
+    margin-top: bem(1)
+    padding: bem(1)
+    background-color: $bg-color
+    border-radius: 4px
+    quotes: '\201C' '\201D'
+    p:first-of-type
+      margin-top: 0
+      &::before
+        content: open-quote
+    p:last-of-type::after
+      content: close-quote
 
   .datestamp
     margin: 0
@@ -101,11 +115,26 @@ main article
     @extend .permalink
 
   .morelink
-    @include font-ratio(20/18)
     font-weight: 700
     a:link, a:visited, a:hover
       color: $logo-color
       text-decoration: none
+
+  .via
+    max-width: $max-width + bem(1)
+    margin-top: bem(1)
+    padding: bem(0.5) bem(1)
+    background-color: $bg-color
+    border-radius: 4px
+    h2, p
+      display: inline
+      margin: 0
+      font-weight: 400
+    p
+      padding-left: 0.25em
+      @include font-ratio(14/16)
+      font-style: italic
+      color: $mix-color
 
   .error
     margin-top: bem(1)
@@ -137,6 +166,10 @@ main article
       margin-right: 0
       .wrap
         border-radius: 4px
+
+    blockquote
+      margin: 0 bem(0.875)
+      padding-left: bem(1)
 
     &>img
       margin-bottom: bem(1)

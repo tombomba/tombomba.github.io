@@ -92,22 +92,9 @@ main article
     max-width: $max-width
 
   blockquote
+    max-width: $max-width
     padding-left: 1em
     border-left: bem(0.125) solid darken($bg-color, 2.5%)
-
-  //blockquote
-    max-width: $max-width
-    margin-top: bem(1)
-    padding: bem(1)
-    background-color: $bg-color
-    border-radius: 4px
-    quotes: '\201C' '\201D'
-    p:first-of-type
-      margin-top: 0
-      &::before
-        content: open-quote
-    p:last-of-type::after
-      content: close-quote
 
   .datestamp
     margin: 0
@@ -123,7 +110,7 @@ main article
   .via
     max-width: $max-width + bem(1)
     margin-top: bem(1)
-    padding: bem(0.5) bem(1)
+    padding: 1em
     background-color: $bg-color
     border-radius: 4px
     h2, p
@@ -173,6 +160,9 @@ main article
 
     &>img
       margin-bottom: bem(1)
+
+    .via
+      padding: bem(0.5) bem(1)
 
 //-----------------------------------------------------------------------------
 

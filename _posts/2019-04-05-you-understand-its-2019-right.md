@@ -1,5 +1,6 @@
 ---
 title: "You understand it's 2019, right?"
+excerpt: "BREAKING: Little White Lies discovers the American Western is no longer a popular genre."
 date: 2019-04-05 14:54 -0800
 via:
   title: "Have film audiences fallen out of love with the western?"

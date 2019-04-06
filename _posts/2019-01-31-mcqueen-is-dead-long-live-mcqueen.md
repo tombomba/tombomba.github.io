@@ -1,5 +1,5 @@
 ---
-title: "McQueen is dead, long live McQueen"
+title: "McQueen is dead, long live 'McQueen'"
 excerpt: "'McQueen' is a conventional documentary about an extraordinary man."
 image:
   file: alexander-mcqueen-show.jpg

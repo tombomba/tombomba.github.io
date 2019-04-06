@@ -1,6 +1,6 @@
 ---
 title: "Turek's weird flex on #HorrorTwitter"
-date: 2019-04-05 17:22 -0800
+date: 2019-04-06 17:22 -0800
 quote:
   title: "Ryan Turek"
   link: https://twitter.com/_RyanTurek/status/1110711736301043712

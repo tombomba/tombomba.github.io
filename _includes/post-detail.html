@@ -10,10 +10,7 @@
 {% endcapture -%}
 
 {% capture byline %}
-  <ul>
-    {% unless include.is_home %}<li><a href="/about/">{{ p.author | default: site.author }}</a></li>{% endunless -%}
-    <li><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></li>
-  </ul>
+  <ul>{% unless include.is_home %}<li><a href="/about/">{{ p.author | default: site.author }}</a></li>{% endunless -%}<li><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></li></ul>
 {% endcapture -%}
 
 {% if copy contains 'img src=' -%}
@@ -43,17 +40,38 @@
 
   {% elsif p.via.link %}
 
+    {% capture citef %}<blockquote class="link" cite="{{ p.via.link | strip | normalize_whitespace }}">{% endcapture %}
+
     <header class="link">
       {{ titlef }}
       {{ byline }}
     </header>
 
-    {{ copy }}
+    {{ copy | replace_first: '<blockquote>', citef }}
 
     <aside class="via">
       <h2><a href="{{ p.via.link }}">{{ p.via.title }}</a></h2>
-      <p>{{ p.via.link | remove:'http://' | remove: 'https://' | remove: 'www' | split:'/' | first }}
+      <p>{{ p.via.link | remove:'http://' | remove: 'https://' | remove: 'www' | split:'/' | first }}</p>
     </aside>
+
+  {% elsif p.quote.link %}
+
+    {% capture citef %}
+      <blockquote class="quote" cite="{{ p.quote.link | strip | normalize_whitespace }}">
+      <img class="icon" src="{{ 'default-quote-icon.png' | prepend: site.img_dir | prepend: site.url }}" alt="">
+    {% endcapture %}
+    {% capture sourcef %}
+      <p class="source"><a href="{{ p.quote.link }}">&mdash;{{ p.quote.title }}</a></p></blockquote>
+    {% endcapture %}
+
+    <header class="link">
+      {{ titlef }}
+      {{ byline }}
+    </header>
+
+    {% assign copy = copy | replace_first: '<blockquote>', citef | replace_first: '</blockquote>', sourcef %}
+
+    {{ copy }}
 
   {% else %}
 

@@ -93,21 +93,26 @@ main article
 
   blockquote
     max-width: $max-width
-    padding-left: 1em
-    border-left: bem(0.125) solid darken($bg-color, 2.5%)
+    &.link
+      padding-left: 0.75em
+      border-left: 0.25em solid $bg-color
+    &.quote
+      position: relative
+      margin-top: bem(1)
+      padding: 1em
+      background-color: $bg-color
+      border-radius: 4px
+      img.icon
+        display: block
+        width: bem(1)
+        height: bem(1)
+      p
+        &:first-of-type
+          margin-top: bem(0.5)
+        &.source
+          color: $mix-color
 
-  .datestamp
-    margin: 0
-    @include font-ratio(14/16)
-    @extend .permalink
-
-  .morelink
-    font-weight: 700
-    a:link, a:visited, a:hover
-      color: $logo-color
-      text-decoration: none
-
-  .via
+  aside.via
     max-width: $max-width + bem(1)
     margin-top: bem(1)
     padding: 1em
@@ -122,6 +127,18 @@ main article
       @include font-ratio(14/16)
       font-style: italic
       color: $mix-color
+
+
+  .datestamp
+    margin: 0
+    @include font-ratio(14/16)
+    @extend .permalink
+
+  .morelink
+    font-weight: 700
+    a:link, a:visited, a:hover
+      color: $logo-color
+      text-decoration: none
 
   .error
     margin-top: bem(1)
@@ -155,27 +172,49 @@ main article
         border-radius: 4px
 
     blockquote
-      margin: 0 bem(0.875)
-      padding-left: bem(1)
+      &.link
+        margin: 0
+        border-left-width: bem(0.125)
+        padding-left: bem(0.875)
+      &.quote
+        padding: bem(1)
+        img.icon
+          width: bem(2)
+          height: bem(2)
 
     &>img
       margin-bottom: bem(1)
 
-    .via
-      padding: bem(0.5) bem(1)
+    aside.via
+      padding: 1em bem(1)
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 48em)
 
   main article
+
     margin-top: bem(3)
+
+    blockquote
+      &.quote
+        max-width: $max-width + bem(1)
+        padding: bem(1) bem(2)
+        img.icon
+          position: absolute
+          top: bem(0.5)
+          left: bem(-0.5)
+        p:first-of-type
+          margin-top: 0
+
     &>img.top
       margin-bottom: bem(1)
+
     &>img.left
       &.tilt
         transform: rotate(-3deg)
         margin-left: -1em
+
     &>img.right
       &.tilt
         transform: rotate(3deg)
@@ -186,6 +225,13 @@ main article
 
 @media screen and (min-width: 72em)
 
-  main article>img.left
-    &.pull
-      margin-left: bem(-2)
+  main article
+
+    blockquote
+      &.quote
+        max-width: $max-width + bem(2)
+        margin-left: bem(-1)
+
+    &>img.left
+      &.pull
+        margin-left: bem(-2)

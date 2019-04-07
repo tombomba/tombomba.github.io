@@ -5,11 +5,14 @@ footer
     margin: 0
     li
       display: inline
-      padding-right: 0.5em
-      &:not(:last-of-type)::after
-        content: "\2022"
-        color: $light-mix
-        padding-left: 0.5em
+      padding-right: 1em
+      a:link, a:visited
+        color: $logo-color
+        font-weight: 700
+        text-transform: lowercase
+      &::after
+        content: "."
+        color: $logo-color
 
 //-----------------------------------------------------------------------------
 

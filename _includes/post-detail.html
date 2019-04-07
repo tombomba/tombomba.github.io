@@ -51,7 +51,7 @@
 
     <aside class="via">
       <h2><a href="{{ p.via.link }}">{{ p.via.title }}</a></h2>
-      <p>{{ p.via.link | remove:'http://' | remove: 'https://' | remove: 'www' | split:'/' | first }}</p>
+      <p>{{ p.via.link | remove:'http://' | remove: 'https://' | remove: 'www.' | split:'/' | first }}</p>
     </aside>
 
   {% elsif p.quote.link %}

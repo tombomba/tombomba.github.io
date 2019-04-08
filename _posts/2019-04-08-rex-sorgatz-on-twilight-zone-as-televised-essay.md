@@ -1,10 +1,10 @@
 ---
 title: "Rex Sorgatz on 'Twilight Zone' as televised essay"
 excerpt: "\"What if you are more interested in writing an essay than in telling a story?\""
-date: 2019-04-08 04:45:00 -0800
 via:
   title: "Recs (Issue 7)"
   link: https://mailchi.mp/8e03ff0f6e65/recs-issue-007
+date: 2019-04-08 4:45:01 -0800  
 ---
 
 I don't agree with the premise---there are good reasons why early television was loud, dumb, and stagebound---but as short takes go, this is well articulated and worth considering:

@@ -1,6 +1,6 @@
 ---
 title: "Rex Sorgatz on 'Twilight Zone' as televised essay"
-date: 2019-04-08 05:01:01 -0800
+date: 2019-04-08 5:01:01 -0800
 via:
   title: "Recs (Issue 7)"
   link: https://mailchi.mp/8e03ff0f6e65/recs-issue-007

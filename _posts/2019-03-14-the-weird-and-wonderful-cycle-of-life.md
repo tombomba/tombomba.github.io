@@ -5,7 +5,7 @@ media:
 image:
   file: cycle-of-life-umami-2019.jpg
   path: /assets/img/cycle-of-life-umami-2019.jpg
-date: 2019-03-14 02:15 -0800
+date: 2019-03-14 02:15 -0700
 ---
 
 "Across the globe and throughout time, I have stoked the fires of hungry appetites. And for it, I have become a soup of the people, a soup of honor, a soup of great fame."

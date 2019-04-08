@@ -6,7 +6,11 @@ image:
 date: 2019-02-27 21:35 -0800
 ---
 
+<<<<<<< HEAD
 ![Hoagy Carmichael](/assets/img/hoagy-carmichael-280x334.png){: width="280" height="334" .top .right .tilt .transparent }
+=======
+![Hoagy Carmichael](/assets/img/hoagy-carmichael-280x343.png){: width="280" height="334" .top .right .tilt .transparent }
+>>>>>>> 0660c3852b1e23db9a7dfe453d9605c338823848
 
 [Critics imagine](https://www.indiewire.com/2019/02/actors-next-james-bond-dev-patel-idris-elba-henry-golding-1202047287/) Idris Elba, Henry Golding, Daniel Kaluuya, Shazad Latif, Dev Patel, Robert Pattinson, and Colin Salmon in the role of the world's most famous spy.
 

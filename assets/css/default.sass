@@ -38,20 +38,55 @@ main article
   figure
     max-width: $max-width + bem(1)
     margin: 0 -1em
-    padding-bottom: 0.83em
-    .wrap
-      position: relative
-      padding-bottom: 56.25%
-      height: 0
-      overflow: hidden
-      max-width: 100%
-      background: $bg-color url(/assets/img/default-image-icon.png) no-repeat center center
-      img
-        position: absolute
-        top: 0
-        left: 0
+    &.single
+      padding-bottom: 0.83em
+      .wrap
+        position: relative
+        padding-bottom: 56.25%
+        height: 0
+        overflow: hidden
+        max-width: 100%
+        background: $bg-color url(/assets/img/default-image-icon.png) no-repeat center center
+        img
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+    &.photoset
+      $margin-size: 1%
+      padding-bottom: 0.33em
+      .container
         width: 100%
-        height: 100%
+      .flex
+        display: flex
+        flex-wrap: wrap
+      img
+        display: block
+        width: 100%
+        background: $bg-color url(/assets/img/default-image-icon.png) no-repeat center center
+      .photo
+        flex: 1 0 100px
+        margin: 0 $margin-size $margin-size 0
+      .collage
+        .image--1
+          flex-basis: 100 - $margin-size
+        .image--2
+          flex-basis: 50 - $margin-size
+        .image--3
+          flex-basis: 33 - $margin-size
+        .image--4
+          flex-basis: 25 - $margin-size
+        .image--3-of-5
+          flex-basis: 60 - $margin-size
+        .image--2-of-5
+          flex-basis: 40 - $margin-size
+          position: relative
+          overflow: hidden
+          img
+            position: absolute
+            height: 100%
+            width: auto
 
   &>img
     display: block

@@ -19,14 +19,14 @@
 
 <article><!-- {{ copy | number_of_words }} words -->
 
-  {% if p.image.file %}
+  {% if p.image.file %}<!-- Image post -->
 
     {% assign aspectr = p.image.ratio | default: '640x360' | split: 'x' -%}
     {% assign w = aspectr[0] | times: 1.0 -%}
     {% assign h = aspectr[1] | times: 1.0 -%}
     {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
 
-    <figure>
+    <figure class="single">
       <div class="wrap" style="padding-bottom:{{ percent }}%"><img src="{{ p.image.file | prepend: site.img_dir }}" alt="{{ p.image.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}"></div>
       {% if p.media.caption -%}<figcaption>{{ p.media.caption | strip | normalize_whitespace | smartify | markdownify }}</figcaption>{% endif -%}
     </figure>
@@ -38,7 +38,37 @@
 
     {{ copy }}
 
-  {% elsif p.via.link %}
+  {% elsif p.photoset %}<!-- Photoset post -->
+
+    <figure class="photoset">
+      <div class="container">
+        <div class="flex collage">
+        {% for hash in p.photoset %}
+          {% for photo in hash %}
+            {% case photo[0] %}
+              {% when 50 %}{% assign photosize = 'image--2' %}
+              {% when 33 %}{% assign photosize = 'image--3' %}
+              {% when 25 %}{% assign photosize = 'image--4' %}
+              {% when 60 %}{% assign photosize = 'image--3-of-5' %}
+              {% when 40 %}{% assign photosize = 'image--2-of-5' %}
+              {% else %}{% assign photosize = 'image--1' %}
+            {% endcase -%}
+            <div class="photo {{ photosize }}"><img src="{{ photo[1] | prepend: site.img_dir | prepend: site.url }}" alt=""><!-- {{ photo[0] }} --></div>
+          {% endfor -%}
+        {% endfor -%}
+        </div>
+      </div>
+      {% if p.image.caption %}<figcaption><p>{{ p.image.caption | smartify }}</p></figcaption>{% endif -%}
+    </figure>
+
+    <header class="media">
+      {{ titlef }}
+      {{ byline }}
+    </header>
+
+    {{ copy }}
+
+  {% elsif p.via.link %}<!-- Link post -->
 
     {% capture citef %}<blockquote class="link" cite="{{ p.via.link | strip | normalize_whitespace }}">{% endcapture %}
 
@@ -54,7 +84,7 @@
       <p>{{ p.via.link | remove:'http://' | remove: 'https://' | remove: 'www.' | split:'/' | first }}</p>
     </aside>
 
-  {% elsif p.quote.link %}
+  {% elsif p.quote.link %}<!-- Quote post -->
 
     {% capture citef %}
       <blockquote class="quote" cite="{{ p.quote.link | strip | normalize_whitespace }}">
@@ -73,7 +103,7 @@
 
     {{ copy }}
 
-  {% else %}
+  {% else %}<!-- Text post -->
 
     {% capture headline %}<header class="text">{{ titlef }}{{ byline }}<p>{% endcapture -%}
     {{ copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' }}

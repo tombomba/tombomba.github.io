@@ -1,7 +1,7 @@
 ---
 title: "'Twilight Zone' as essay over narrative"
 excerpt: "Rex Sorgatz imagines the new 'Twilight Zone' as a television essay."
-date: 2019-04-09 12:34 -0800
+date: 2019-04-10 12:34 -0800
 via:
   title: "Recs (Issue 7)"
   link: https://mailchi.mp/8e03ff0f6e65/recs-issue-007

@@ -3,7 +3,7 @@ title: "Weird flex but okay"
 quote:
   title: "Ryan Turek"
   link: https://twitter.com/_RyanTurek/status/1110711736301043712
-date: 2019-04-10 17:22 -0800
+date: 2019-04-09 12:34 -0800
 ---
 
 > Horror twitter: "A reboot? Are there no original ideas out there to make?!"

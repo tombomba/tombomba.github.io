@@ -1,7 +1,7 @@
 ---
 title: "Rex Sorgatz on 'Twilight Zone' as televised essay"
 excerpt: "\"What if you are more interested in writing an essay than in telling a story?\""
-date: 2019-04-08 02:38:00 -0800
+date: 2019-04-08 04:45:00 -0800
 via:
   title: "Recs (Issue 7)"
   link: https://mailchi.mp/8e03ff0f6e65/recs-issue-007

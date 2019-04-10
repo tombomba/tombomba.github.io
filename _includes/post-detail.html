@@ -1,46 +1,118 @@
 {% assign p = include.page -%}
-{% assign copy = include.content -%}
+{% assign copy = include.content | strip | normalize_whitespace -%}
+
 {% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
-{% assign wc = copy | number_of_words -%}
+{% assign sub = t.last | prepend: '!QQ!' -%}
+{% assign t = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
+
+{% capture titlef %}
+  <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ t }}{% if include.is_home %}</a>{% endif %}</h1>
+{% endcapture -%}
+
+{% capture byline %}
+  <ul>{% unless include.is_home %}<li><a href="/about/">{{ p.author | default: site.author }}</a></li>{% endunless -%}<li><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></li></ul>
+{% endcapture -%}
+
 {% if copy contains 'img src=' -%}
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
 {% endif -%}
 
-<article><!-- {{ wc }} words -->
+<article><!-- {{ copy | number_of_words }} words -->
 
-  <header>
-    <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{% assign sub = t.last | prepend: '!QQ!' -%}{% assign t = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}{{ t }}{% if include.is_home %}</a>{% endif %}</h1>
-    <p class="datestamp"><time pubdate datetime="{{ p.date | default: page.date | date: "%FT%T%:z" }}">{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ p.date | default: page.date | date: "%d %b %Y" }}{% if include.is_home %}</a>{% endif %}</time></p>
-  </header>
+  {% if p.image.file %}<!-- Image post -->
 
-  {% if p.media %}
-    {% assign aspectr = p.media.ratio | default: '640x360' | split: 'x' %}
-    {% assign w = aspectr[0] | times: 1.0 %}
-    {% assign h = aspectr[1] | times: 1.0 %}
-    {% assign percent = h | divided_by: w | times: 100 | round: 2 %}
+    {% assign aspectr = p.image.ratio | default: '640x360' | split: 'x' -%}
+    {% assign w = aspectr[0] | times: 1.0 -%}
+    {% assign h = aspectr[1] | times: 1.0 -%}
+    {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
 
-    <figure>
-      <div class="wrap">
-        <div class="player" style="padding-bottom:{{ percent }}%" aria-label="media player">
+    <figure class="single">
+      <div class="wrap" style="padding-bottom:{{ percent }}%"><img src="{{ p.image.file | prepend: site.img_dir }}" alt="{{ p.image.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}"></div>
+      {% if p.media.caption -%}<figcaption>{{ p.media.caption | strip | normalize_whitespace | smartify | markdownify }}</figcaption>{% endif -%}
+    </figure>
 
-      {% if p.media.youtube %}
-          <iframe src="https://www.youtube-nocookie.com/embed/{{ p.media.youtube }}?controls=2&modestbranding=1&rel=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <header class="media">
+      {{ titlef }}
+      {{ byline }}
+    </header>
 
-      {% elsif p.media.vimeo %}
-          <iframe src="https://player.vimeo.com/video/{{ p.media.vimeo }}?badge=0&color=3366CC&title=0&byline=0&portrait=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    {{ copy }}
 
-      {% elsif p.media.image %}
-        <img src="{{ p.media.image | prepend: site.img_dir | prepend: site.url }}" alt="{{ p.media.alt | default: '' | strip_html | strip | normalize_whitespace | truncate: 140 }}">
-      {% endif -%}
+  {% elsif p.photoset %}<!-- Photoset post -->
+
+    <figure class="photoset">
+      <div class="container">
+        <div class="flex collage">
+        {% for hash in p.photoset %}
+          {% for photo in hash %}
+            {% case photo[0] %}
+              {% when 50 %}{% assign photosize = 'image--2' %}
+              {% when 33 %}{% assign photosize = 'image--3' %}
+              {% when 25 %}{% assign photosize = 'image--4' %}
+              {% when 60 %}{% assign photosize = 'image--3-of-5' %}
+              {% when 40 %}{% assign photosize = 'image--2-of-5' %}
+              {% else %}{% assign photosize = 'image--1' %}
+            {% endcase -%}
+            <div class="photo {{ photosize }}"><img src="{{ photo[1] | prepend: site.img_dir | prepend: site.url }}" alt=""><!-- {{ photo[0] }} --></div>
+          {% endfor -%}
+        {% endfor -%}
         </div>
       </div>
-
-      {% if p.media.caption -%}<figcaption>{{ p.media.caption | default: 'Caption!' | markdownify | widont | amp | smartypants }}</figcaption>{% endif -%}
-
+      {% if p.image.caption %}<figcaption><p>{{ p.image.caption | smartify }}</p></figcaption>{% endif -%}
     </figure>
+
+    <header class="media">
+      {{ titlef }}
+      {{ byline }}
+    </header>
+
+    {{ copy }}
+
+  {% elsif p.via.link %}<!-- Link post -->
+
+    {% capture citef %}<blockquote class="link" cite="{{ p.via.link | strip | normalize_whitespace }}">{% endcapture %}
+
+    <header class="link">
+      {{ titlef }}
+      {{ byline }}
+    </header>
+
+    {{ copy | replace_first: '<blockquote>', citef }}
+
+    <aside class="via">
+      <h2><a href="{{ p.via.link }}">{{ p.via.title }}</a></h2>
+      <p>{{ p.via.link | remove:'http://' | remove: 'https://' | remove: 'www.' | split:'/' | first }}</p>
+    </aside>
+
+  {% elsif p.quote.link %}<!-- Quote post -->
+
+    {% capture citef %}
+      <blockquote class="quote" cite="{{ p.quote.link | strip | normalize_whitespace }}">
+      <img class="icon" src="{{ 'default-quote-icon.png' | prepend: site.img_dir | prepend: site.url }}" alt="">
+    {% endcapture %}
+    {% capture sourcef %}
+      <p class="source"><a href="{{ p.quote.link }}">&mdash;{{ p.quote.title }}</a></p></blockquote>
+    {% endcapture %}
+
+    <header class="link">
+      {{ titlef }}
+      {{ byline }}
+    </header>
+
+    {% assign copy = copy | replace_first: '<blockquote>', citef | replace_first: '</blockquote>', sourcef %}
+
+    {{ copy }}
+
+  {% else %}<!-- Text post -->
+
+    {% capture headline %}<header class="text">{{ titlef }}{{ byline }}<p>{% endcapture -%}
+    {{ copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' }}
 
   {% endif -%}
 
-  {{ copy }}
+  {% if include.is_home %}
+    <p class="morelink"><a href="{{ p.url | prepend: site.url }}" title="permalink">+</a></p>
+    {% assign hedf = false -%}
+  {% endif -%}
 
 </article>

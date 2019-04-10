@@ -1,17 +1,17 @@
 ---
-title: "Warhol hamburger test"
+title: "Photoset: The quick brown fox jumps over the lazy dog"
 excerpt: "Integer auctor turpis eu lectus lacinia, sed sagittis lorem semper."
 image:
-  path: /assets/img/wandering-earth-2019-link-film-still.jpg
+  path: /assets/img/test-photoset.jpg
 photoset:
-  - 33: wandering-earth-2019-link-film-still.jpg
-  - 33: wandering-earth-2019-link-film-still.jpg
-  - 33: wandering-earth-2019-link-film-still.jpg
-  - 100: wandering-earth-2019-link-film-still.jpg
-  - 40: wandering-earth-2019-link-film-still.jpg
-  - 60: wandering-earth-2019-link-film-still.jpg
-layout: post
-date: 2019-02-17 20:10 -0800
+  - 33: test-photoset.jpg
+  - 33: test-photoset.jpg
+  - 33: test-photoset.jpg
+  - 100: test-photoset.jpg
+  - 40: test-photoset.jpg
+  - 60: test-photoset.jpg
+date: 2000-08-12 12:34 -0800
+published: false
 ---
 
 Integer auctor turpis eu lectus lacinia, sed sagittis lorem semper. Fusce condimentum nunc in mi convallis, ut sagittis neque tincidunt. Proin ac purus sollicitudin, fringilla odio convallis, viverra mi. Sed non odio lacinia, gravida libero eget, bibendum diam. Pellentesque eleifend faucibus sem, et rutrum risus varius id. Sed tellus urna, ultrices sed congue et, volutpat et lorem. Ut eros ante, finibus id mauris id, finibus pretium lacus. Quisque metus ligula, euismod in augue vitae, ornare dapibus diam. Ut hendrerit blandit erat, vel commodo risus porttitor sed.

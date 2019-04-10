@@ -43,8 +43,7 @@
     <meta name="twitter:image:src" content="{{ page.image.path | default: '/assets/img/default-opengraph.png' | prepend: site.url }}">
 
     <!-- css -->
-    <link rel="stylesheet" href="{{ '/assets/css/default.css' | prepend: site.url }}">
-    <link href="https://fonts.googleapis.com/css?family=Bungee&text={{ site.title | upcase }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css_dir | prepend: site.url | append: '.css' }}">
 
     <!-- msft mobile hacks -->
     <script>!function(){if("-ms-user-select"in document.documentElement.style&&navigator.userAgent.match(/IEMobile/)){var a=document.createElement("style");a.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")),document.getElementsByTagName("head")[0].appendChild(a)}}();</script>
@@ -54,17 +53,9 @@
 <body>
 
 <header role="banner">
-
-  <div class="wrap">
-
-    <div class="title">
-      <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
-    </div>
-
-    <hr>
-
+  <div class="title">
+    <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
   </div>
-
 </header>
 
 <main role="main">
@@ -75,11 +66,11 @@
 
 <footer>
 
-  <hr>
-
-  <ul>
-    {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_bio %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li>
-  </ul>
+  <nav>
+    <ul>
+      {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_bio %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li>
+    </ul>
+  </nav>
 
 </footer>
 

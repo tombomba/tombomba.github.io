@@ -17,20 +17,24 @@
 $max-width: 37.389em
 $line-height: 1.83
 
-// Colors
+// Colors #ECEBEC
 $body-color:    #F3F3F3 !default
 $text-color:    #161616 !default
 $bg-color:      darken($body-color, 5%) !default
 
-$logo-color:    #F03 !default
-$shock-color:   #FFC !default
+$key:           random(6)
+$one-color:     #06f, #c06, #393, #f30, #09f, #099
+$two-color:     #6ff, #fc0, #9f0, #fc0, #9f3, #fc0
 
-$mix-color:     mix($body-color, $text-color, 50%) !default
+$logo-color:    nth($one-color, $key) !default
+$shock-color:   nth($two-color, $key) !default
+
+$mix-color:     mix($body-color, $text-color, 36%) !default
 $light-mix:     lighten($mix-color, 20%) !default
 $dark-mix:      darken($mix-color, 20%) !default
 
-$border-dark:   #C8C8C8 !default
-$border-light:  #FFF !default
+$border-dark:   #C0C0C0 !default
+$border-light:  #FBFBFB !default
 
 $link-color:    #36C !default
 $visited-color: #939 !default
@@ -87,68 +91,22 @@ a
   &:active
     color: $active-color
 
-hr
-  width: 100%
-  margin: 0
-  padding: 0
-  height: 0
-  border: 0
-  border-top: 1px solid $border-dark
-  border-bottom: 1px solid $border-light
-  background-color: $body-color
-  &.pagebreak
-    margin: bem(2) auto 0 auto
+.permalink,
+.titlelink
+  a:link, a:visited
+    text-decoration: none
+  a:hover
+    text-decoration: underline
 
 .permalink
   color: $mix-color
   a:link, a:visited
     color: $mix-color
-    text-decoration: none
-  a:hover
-    text-decoration: underline
 
-main
-
-  margin: 0 auto
-  max-width: $max-width
-
-  article
-    margin-top: bem(2)
-    @extend .clearfix
-
-    h1
-      a:link, a:visited
-        color: $text-color
-        text-decoration: none
-      a:hover
-        text-decoration: underline
-
-    h2, h3, h4, h5, h6
-      font-size: 100%
-      margin-top: bem(1)
-
-    p, li, hr
-      margin-top: bem(1)
-      max-width: $max-width
-
-    ul, ol
-      margin-left: bem(1)
-      max-width: $max-width
-
-    ul
-      list-style-type: disc
-
-    li + p,
-      margin-top: 0
-      max-width: $max-width
-
-    blockquote
-      max-width: $max-width
-      padding: 0 1em
-      &>p:first-of-type:before
-        content: "\201C"
-      &>p:last-of-type:after
-        content: "\201D"
+.titlelink
+  color: $text-color
+  a:link, a:visited
+    color: $text-color
 
 //-----------------------------------------------------------------------------
 
@@ -156,3 +114,18 @@ main
 
   body
     font-size: 112.5%
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 48em)
+
+  body
+    padding: bem(1) 8%
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 80em)
+
+  body
+    padding-left: 12.5%
+    padding-right: 12.5%

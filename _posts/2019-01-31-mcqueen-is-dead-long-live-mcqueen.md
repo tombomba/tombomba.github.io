@@ -1,12 +1,11 @@
 ---
-title: "The king of yob couture"
-media:
-  image: mcqueen-documentary-2018.jpg
-  ratio: 800x450
-  alt: "Alexander McQueen"
+title: "McQueen is dead, long live 'McQueen'"
+excerpt: "'McQueen' is a conventional documentary about an extraordinary man."
 image:
-  path: /assets/img/alexander-mcqueen-promo-shot.jpg
-  alt: "McQueen, 2018. Film still."
+  file: alexander-mcqueen-show.jpg
+  alt: "Alexander McQueen fashion show"
+  ratio: 800x400
+  path: /assets/img/alexander-mcqueen-280x359.jpg
 date: 2019-01-31 23:40 -0800
 ---
 

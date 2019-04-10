@@ -50,9 +50,9 @@
 
 </head>
 
-<body>
+<body class="{{ site.time | date: '%a' | downcase }}">
 
-<header role="banner">
+<header role="banner" class="{{ site.time | date: '%a' | downcase }}">
   <div class="title">
     <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
   </div>
@@ -64,7 +64,7 @@
 
 </main>
 
-<footer>
+<footer class="{{ site.time | date: '%a' | downcase }}">
 
   <nav>
     <ul>

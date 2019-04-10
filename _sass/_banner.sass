@@ -1,25 +1,16 @@
 header[role="banner"]
 
-  .title
-    h1
-      font-size: percentage(37/18)
-      font-weight: 700
-      line-height: 1
-      text-transform: lowercase
-      &::after
-        content: "."
-        color: $logo-color
-      a:link, a:visited
-        color: $logo-color
-        text-decoration: none
-      a:hover
-        text-decoration: underline
+  @include set-logo-color()
+
+  .title h1
+    font-size: percentage(37/18)
+    line-height: 1
+    &::after
+      content: "."
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 48em)
 
-  header[role="banner"]
-
-    .title h1
-      font-size: percentage(47/18)
+  header[role="banner"] .title h1
+    font-size: percentage(47/18)

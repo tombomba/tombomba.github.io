@@ -171,10 +171,7 @@ main article
 
   .morelink
     margin-left: -5px
-    font-weight: 700
-    a:link, a:visited, a:hover
-      color: $logo-color
-      text-decoration: none
+    @include set-logo-color()
 
   .error
     margin-top: bem(1)

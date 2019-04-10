@@ -13,6 +13,45 @@
     font-size: percentage($size)
     line-height: $context / $size
 
+@mixin set-select-color($color: #FFC)
+  ::-moz-selection
+    background: $color
+  ::selection
+    background: $color
+
+@mixin set-link-color($color: #0000FF)
+  font-weight: 700
+  text-transform: lowercase
+  color: $color
+  a:link, a:visited
+    color: $color
+  &::after
+    color: $color
+
+@mixin set-color($color: #0000FF)
+  color: $color
+  a:link, a:visited
+    color: $color
+  &::after
+    color: $color
+
+@mixin set-logo-color()
+  font-weight: 700
+  text-transform: lowercase
+  &.mon
+    @include set-color(#06F)
+  &.tue
+    @include set-color(#C06)
+  &.wed
+    @include set-color(#393)
+  &.thu
+    @include set-color(#F30)
+  &.fri
+    @include set-color(#09F)
+  &.sat,
+  &.sun
+    @include set-color(#099)
+
 // Max column width
 $max-width: 37.389em
 $line-height: 1.83
@@ -60,11 +99,6 @@ html
 @-ms-viewport
   width: device-width
 
-::-moz-selection
-  background: $shock-color
-::selection
-  background: $shock-color
-
 body
   font-family: $serif
   font-size: 100%
@@ -78,6 +112,18 @@ body
   -webkit-text-size-adjust: auto
 
   padding: 1em
+
+  $one-color:     #06f, #c06, #393, #f30, #09f, #099
+  $two-color:     #6ff, #fc0, #9f0, #fc0, #9f3, #fc0
+
+  &.mon
+    @include set-select-color(#6FF)
+  &.tue, &.thu, &.sat, &.sun
+    @include set-select-color(#FC0)
+  &.wed
+    @include set-select-color(#9F0)
+  &.fri
+    @include set-select-color(#9F3)
 
 a
   text-decoration: none

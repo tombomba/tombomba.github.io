@@ -1,8 +1,8 @@
 ---
-title: "So like an adventure game from 1982"
+title: "So then like an adventure game from 1982"
 date: 2019-04-10 06:50 -0700
 via:
-    title: "YouTube is developing Choose-Your-Own-Adventure Programs"
+    title: "YouTube is developing Choose-Your-Own-Adventure programs"
     link: https://www.bloomberg.com/news/articles/2019-04-09/youtube-is-developing-choose-your-own-adventure-programs
 ---
 

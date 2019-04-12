@@ -152,12 +152,11 @@ main article
     background-color: $bg-color
     border-radius: 4px
     h2, p
-      display: inline
       margin: 0
       font-weight: 400
+    h2
+      line-height: (($line-height - 1) / 2) + 1
     p
-      padding-left: 0.25em
-      @include font-ratio(14/16)
       font-style: italic
       color: $mix-color
 
@@ -217,7 +216,9 @@ main article
       margin-bottom: bem(1)
 
     aside.via
-      padding: 1em bem(1)
+      padding: 0.9em bem(1) 0.5em bem(1)
+      p
+        @include font-ratio(14/16)
 
 //-----------------------------------------------------------------------------
 

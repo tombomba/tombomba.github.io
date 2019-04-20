@@ -3,8 +3,7 @@ is_home: true
 permalink: /index.html
 ---
 
-
-
 {% for p in site.posts limit: 20 %}
   {% include post-detail.html page=p content=p.content is_home=true %}
-{% endfor -%}
+
+{% endfor %}

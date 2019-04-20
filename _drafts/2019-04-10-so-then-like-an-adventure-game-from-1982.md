@@ -1,10 +1,11 @@
 ---
 title: "So then like an adventure game from 1982"
 excerpt: "YouTube will develop Choose Your Own Adventure-style programs."
-date: 2019-04-10 06:50 -0700
 via:
     title: "YouTube is developing Choose-Your-Own-Adventure programs"
     link: https://www.bloomberg.com/news/articles/2019-04-09/youtube-is-developing-choose-your-own-adventure-programs
+layout: link
+date: 2019-04-10 06:50 -0700    
 ---
 > YouTube is developing choose-your-own-adventure-style shows, exploring a new storytelling format that could increase viewers and ad sales for the world's largest video website. [...]
 >

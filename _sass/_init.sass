@@ -1,0 +1,152 @@
+/*
+  - Global Mixins
+  - Global vars for page width and color
+  - Global font stacks
+  - HTML reset
+
+//-----------------------------------------------------------------------------
+
+// Mixins
+@function bem($size: 1, $context: $line-height)
+  @return ($size * $context) * 1em
+
+@mixin font-ratio($size: 1, $context: $line-height)
+    font-size: percentage($size)
+    line-height: $context / $size
+
+@mixin set-color($color: blue)
+  color: $color
+  a:link, a:visited
+    color: $color
+    text-decoration: none
+  a:hover
+    text-decoration: underline
+  &::after
+    color: $color
+
+//-----------------------------------------------------------------------------
+
+// Max column width
+$max-width: 37.389em
+$line-height: 1.83
+
+// Colors #ECEBEC
+$body-color:    #FBFBFB !default
+$text-color:    #161616 !default
+$bg-color:      darken($body-color, 5%) !default
+
+$key:           random(6)
+$one-color:     #06f, #c06, #393, #f30, #09f, #099
+$two-color:     #6ff, #fc0, #9f0, #fc0, #9f3, #fc0
+
+$logo-color:    nth($one-color, $key) !default
+$shock-color:   nth($two-color, $key) !default
+
+$mix-color:     mix($body-color, $text-color, 36%) !default
+$light-mix:     lighten($mix-color, 20%) !default
+$dark-mix:      darken($mix-color, 20%) !default
+
+$link-color:    #36C !default
+$visited-color: #939 !default
+$active-color:  #F90 !default
+
+// Fonts
+$serif: Georgia, Cambria, 'Century Schoolbook L', serif
+$sans:  Verdana, 'Bitstream Vera Sans', Geneva, sans-serif
+$system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
+
+//-----------------------------------------------------------------------------
+
+// a mix of eric meyer and html5 boilerplate
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  vertical-align: baseline
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary
+  display: block
+
+audio, canvas,iframe, img, svg, video
+  vertical-align: middle
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+b, strong
+  font-weight: 700
+
+audio, canvas, iframe, img, svg, video
+  vertical-align: middle
+
+video
+  max-width: 100%
+  height: auto
+
+iframe, embed, object
+  max-width: 100%
+
+sub,sup
+  font-size: 75%
+  line-height: 0
+  position: relative
+  vertical-align: baseline
+
+sup
+  top: -0.5em
+
+sub
+  bottom: -0.25em
+
+.hidden
+  display: none !important
+
+.invisible
+  visibility: hidden
+
+.visuallyhidden
+  border: 0
+  clip: rect(0 0 0 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus
+  clip: auto
+  height: auto
+  margin: 0
+  overflow: visible
+  position: static
+  width: auto
+
+.clearfix:before, .clearfix:after
+    content: " "
+    display: table
+
+.clearfix:after
+    clear: both

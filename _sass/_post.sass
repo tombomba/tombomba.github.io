@@ -1,0 +1,125 @@
+main article
+
+  header
+    max-width: $max-width
+    margin-top: bem(1)
+
+    h1
+      font-size: percentage(23/18)
+      line-height: (($line-height - 1) / 2) + 1
+      @extend .titlelink
+
+    ul
+      margin: 0
+      list-style-type: none
+      li
+        display: inline
+        @include font-ratio(14/16)
+        @extend .permalink
+        &:nth-child(2):before
+          content: "\20/\20"
+
+  figure
+    max-width: $max-width + bem(1)
+    margin: 0 -1em
+    padding-bottom: 0.83em
+    .wrap
+      position: relative
+      padding-bottom: 56.25%
+      height: 0
+      overflow: hidden
+      max-width: 100%
+      background: $bg-color url(/assets/img/default-image-icon.png) no-repeat center center
+      img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+
+  & > img
+    display: block
+    margin: bem(1) auto 1em auto
+    background-color: $bg-color
+    overflow: hidden
+    &.top
+      margin-top: 0
+      margin-bottom: bem(1) + 0.66em
+    &.saturate
+      filter: saturate(4)
+    &.sepia
+      filter: sepia(50%)
+    &.curved
+      border-radius: 4px
+    &.border
+      border-width: thin
+      border-style: solid
+      border-color: inherit
+    &.transparent
+      background-color: $body-color
+
+  .plus
+    margin-left: -5px
+    font-weight: 700
+    @extend .logolink
+
+  .error
+    margin-top: bem(1)
+    li
+      margin: 0
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 36em)
+
+  main article > img
+    &.left
+      float: left
+      margin-left: 0
+      margin-right: bem(1)
+    &.right
+      float: right
+      margin-left: bem(1)
+      margin-right: 0
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40em)
+
+  main article
+
+    figure
+      margin-left: 0
+      margin-right: 0
+      .wrap
+        border-radius: 4px
+
+    & > img
+      margin-bottom: bem(1)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 48em)
+
+  main article > img
+    &.top
+      margin-top: bem(1)
+      margin-bottom: bem(1)
+    &.left
+      &.tilt
+        transform: rotate(-3deg)
+        margin-left: -1em
+    &.right
+      &.tilt
+        transform: rotate(3deg)
+      &.shadow
+        box-shadow: 10px 10px 0px 1px $bg-color
+
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 72em)
+
+  main article > img.left
+    &.pull
+      margin-left: bem(-2)

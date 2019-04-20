@@ -1,81 +1,4 @@
 /*
-  Base styles for every page:
-    - header
-    - footer
-    - most margins
-    - pagebreak delimiter for homepage
-
-// Mixins
-@function bem($size: 1, $context: $line-height)
-  @return ($size * $context) * 1em
-
-@mixin font-ratio($size: 1, $context: $line-height)
-    font-size: percentage($size)
-    line-height: $context / $size
-
-@mixin set-color($color: #0000FF)
-  color: $color
-  a:link, a:visited
-    color: $color
-    text-decoration: none
-  a:hover
-    text-decoration: underline
-  &::after
-    color: $color
-
-@mixin set-logo-color()
-  font-weight: 700
-  text-transform: lowercase
-  &.mon
-    @include set-color(#06F)
-  &.tue
-    @include set-color(#C06)
-  &.wed
-    @include set-color(#393)
-  &.thu
-    @include set-color(#F30)
-  &.fri
-    @include set-color(#09F)
-  &.sat,
-  &.sun
-    @include set-color(#099)
-
-@mixin set-select-color($color: #FFC)
-  ::-moz-selection
-    background: $color
-  ::selection
-    background: $color
-
-//-----------------------------------------------------------------------------
-
-// Max column width
-$max-width: 37.389em
-$line-height: 1.83
-
-// Colors #ECEBEC
-$body-color:    #FBFBFB !default
-$text-color:    #161616 !default
-$bg-color:      darken($body-color, 5%) !default
-
-$mix-color:     mix($body-color, $text-color, 36%) !default
-$light-mix:     lighten($mix-color, 20%) !default
-$dark-mix:      darken($mix-color, 20%) !default
-
-$border-dark:   #C0C0C0 !default
-$border-light:  #F3F3F3 !default
-
-$link-color:    #36C !default
-$visited-color: #939 !default
-$active-color:  #F90 !default
-
-// Fonts
-$serif: Georgia, Cambria, 'Century Schoolbook L', serif
-$sans:  Verdana, 'Bitstream Vera Sans', Geneva, sans-serif
-$system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
-$titlef: 'Bungee', $sans
-
-// Photoset margins - see /assets/css/default.sass
-$margin-size: 1% !default
 
 //-----------------------------------------------------------------------------
 
@@ -87,6 +10,12 @@ html
 
 @-ms-viewport
   width: device-width
+
+::selection
+  background: $shock-color
+
+::-moz-selection
+  background: $shock-color
 
 body
   font-family: $serif
@@ -102,18 +31,6 @@ body
 
   padding: 1em
 
-  $one-color:     #06f, #c06, #393, #f30, #09f, #099
-  $two-color:     #6ff, #fc0, #9f0, #fc0, #9f3, #fc0
-
-  &.mon
-    @include set-select-color(#6FF)
-  &.tue, &.thu, &.sat, &.sun
-    @include set-select-color(#FC0)
-  &.wed
-    @include set-select-color(#9F0)
-  &.fri
-    @include set-select-color(#9F3)
-
 a
   text-decoration: underline
   text-decoration-skip-ink: auto
@@ -126,22 +43,64 @@ a
   &:active
     color: $active-color
 
-.permalink,
-.titlelink
-  a:link, a:visited
-    text-decoration: none
-  a:hover
-    text-decoration: underline
+header[role="banner"]
 
+  .title h1
+    font-size: percentage(37/18)
+    font-weight: 700
+    line-height: 1
+    text-transform: lowercase
+    @extend .logolink
+    &::after
+      content: "."
+
+main article
+  max-width: $max-width + bem(2)
+  margin-top: bem(2)
+  @extend .clearfix
+
+  h2, h3, h4, h5, h6
+    font-size: 100%
+    margin-top: bem(1)
+
+  p, li, hr
+    margin-top: bem(1)
+    max-width: $max-width
+
+  ul, ol
+    margin-left: bem(1)
+    max-width: $max-width
+
+  blockquote
+    padding-left: 0.75em
+    border-left: 0.25em solid $bg-color
+
+  blockquote,
+  li + p,
+    margin-top: 0
+    max-width: $max-width
+
+footer
+  margin-top: bem(3)
+
+  nav ul
+    margin: 0
+    li
+      display: inline
+      font-weight: 700
+      line-height: 1
+      text-transform: lowercase
+      padding-right: 1em
+      @extend .logolink
+      &::after
+        content: "."
+
+.logolink
+  @include set-color($logo-color)
+.titlelink
+  @include set-color($text-color)
 .permalink
-  color: $mix-color
-  a:link, a:visited
-    color: $mix-color
-
-.titlelink
-  color: $text-color
-  a:link, a:visited
-    color: $text-color
+  @include set-color($mix-color)
 
 //-----------------------------------------------------------------------------
 
@@ -156,6 +115,19 @@ a
 
   body
     padding: bem(1) 8%
+
+  header[role="banner"] .title h1
+    font-size: percentage(47/18)
+
+  main article
+    margin-top: bem(3)
+
+    blockquote
+      border-left-width: bem(0.125)
+      padding-left: bem(0.875)
+
+  footer
+    margin-top: bem(6)
 
 //-----------------------------------------------------------------------------
 

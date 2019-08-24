@@ -49,13 +49,17 @@ header[role="banner"]
     h1
       font-size: percentage(37/18)
       font-weight: 700
+      @extend .logolink
+    p
+      display: none
+      font-size: percentage(29/18)
+      font-weight: 400
+      color: $light-mix
+    h1, p
       line-height: 1
       text-transform: lowercase
       &::after
         content: ".\20"
-      @extend .logolink
-    p
-      display: hidden
 
 main article
   max-width: $max-width + bem(2)
@@ -121,18 +125,10 @@ footer
 
   header[role="banner"]
     .title
-      h1, p
-        &::after
-          content: ".\20"
       h1
         font-size: percentage(47/18)
-      p
-        display: none
-        font-size: percentage(29/18)
-        font-weight: 400
-        line-height: 1
-        text-transform: lowercase
-        color: $light-mix
+      h1, p
+        display: inline
 
   main article
     margin-top: bem(3)

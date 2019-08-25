@@ -58,6 +58,8 @@ header[role="banner"]
 main article
   max-width: $max-width + bem(2)
   margin-top: bem(2)
+  &:last-of-type
+    margin-bottom: bem(4)
   @extend .clearfix
 
   h2, h3, h4, h5, h6
@@ -81,20 +83,17 @@ main article
     margin-top: 0
     max-width: $max-width
 
-footer
-  margin-top: bem(4)
-
-  nav ul
-    margin: 0
-    li
-      display: inline
-      font-weight: 700
-      line-height: 1
-      text-transform: lowercase
-      padding-right: 1em
-      @extend .logolink
-      &::after
-        content: "."
+footer nav ul
+  margin: 0
+  li
+    display: inline
+    font-weight: 700
+    line-height: 1
+    text-transform: lowercase
+    padding-right: 1em
+    @extend .logolink
+    &::after
+      content: "."
 
 .logolink
   @include set-color($logo-color)
@@ -122,13 +121,12 @@ footer
 
   main article
     margin-top: bem(3)
+    &:last-of-type
+      margin-bottom: bem(6)
 
     blockquote
       border-left-width: bem(0.125)
       padding-left: bem(0.875)
-
-  footer
-    margin-top: bem(6)
 
 //-----------------------------------------------------------------------------
 

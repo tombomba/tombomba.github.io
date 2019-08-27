@@ -3,7 +3,14 @@ is_home: true
 permalink: /index.html
 ---
 
+{% assign p = site.posts.first -%}
+{% assign copy = site.posts.first.content -%}
+
+{% include post-detail.html page=p content=copy is_home=true -%}
+
+{% comment %}
 {% for p in site.posts limit: 20 %}
   {% include post-detail.html page=p content=p.content is_home=true %}
 
 {% endfor %}
+{% endcomment %}

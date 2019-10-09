@@ -29,7 +29,7 @@ body
   -ms-text-size-adjust: auto
   -webkit-text-size-adjust: auto
 
-  padding: 1em
+  padding: 0 1em
 
 a
   text-decoration: underline
@@ -53,30 +53,22 @@ hr
   border-bottom: 1px solid $shim-light
   background-color: $body-color
 
+//-----------------------------------------------------------------------------
+
 header[role="banner"]
+  max-width: 100%
 
-  max-width: $max-width
-  margin: 0 auto
+  hr
+    width: 100%
 
-  .wrap
+  .icon
     display: flex
     align-items: center
-    justify-content: space-between
-
-  .logo-text
-    margin-right: 1em
-    h1
-      font-family: 'Bungee Shade', $sans
-      font-size: percentage(29/18)
-      font-weight: 900
-      line-height: 1
-      @extend .logolink
-
-  .shim
-    flex: 1
-    hr
-      width: 100%
-
+    justify-content: center
+    height: bem(2)
+    img
+      width: auto
+      height: 24px
 
 main article
   max-width: $max-width + bem(2)
@@ -107,24 +99,33 @@ main article
     max-width: $max-width
 
 footer
-  max-width: $max-width
-  margin: 0 auto
-  nav ul
-    margin: bem(1) 0 0 0
+  max-width: 100%
+  margin: bem(2) auto 0 auto
+
+  .wrap
+    max-width: $max-width
+    margin: 0 auto
+
+  .nav ul
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0
+    height: bem(2)
     li
       display: inline
-      font-weight: 700
-      line-height: 1
-      text-transform: lowercase
-      padding-right: 1em
-      @extend .logolink
-      &::after
-        content: "."
+      padding-right: 0.5em
+      &:not(:last-of-type)::after
+        content: "-"
+        padding-left: 0.5em
+        color: $mix-color
 
 .logolink
   @include set-color($logo-color)
+
 .titlelink
   @include set-color($text-color)
+
 .permalink
   @include set-color($mix-color)
 
@@ -140,12 +141,7 @@ footer
 @media screen and (min-width: 48em)
 
   body
-    padding: bem(1) 0
-
-  header[role="banner"] .logo-text
-    margin-right: bem(1)
-    h1
-      font-size: percentage(37/18)
+    padding: 0 bem(1)
 
   main article
     margin-top: bem(2)

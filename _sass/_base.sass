@@ -45,15 +45,16 @@ a
 
 header[role="banner"]
 
-  max-width: $max-width + bem(2)
+  max-width: $max-width
   margin: 0 auto
 
-  display: flex
-  flex-direction: row
+  .wrap
+    display: flex
+    align-items: center
+    justify-content: space-between
 
-  border: 1px dotted green
-
-  .title
+  .logo-text
+    margin-right: 1em
     h1
       font-family: 'Bungee Shade', $sans
       font-size: percentage(29/18)
@@ -61,8 +62,14 @@ header[role="banner"]
       line-height: 1
       @extend .logolink
 
+  .shim
+    flex: 1
+    hr
+      width: 100%
+
+
 main article
-  max-width: $max-width + bem(2)
+  max-width: $max-width
   margin: bem(1) auto 0 auto
   &:last-of-type
     margin-bottom: bem(2)
@@ -90,10 +97,10 @@ main article
     max-width: $max-width
 
 footer
-  max-width: $max-width + bem(2)
+  max-width: $max-width
   margin: 0 auto
   nav ul
-    margin: 0
+    margin: bem(1) 0 0 0
     li
       display: inline
       font-weight: 700
@@ -125,13 +132,13 @@ footer
   body
     padding: bem(1) 0
 
-  header[role="banner"] .title h1
-    font-size: percentage(37/18)
+  header[role="banner"] .logo-text
+    margin-right: bem(1)
+    h1
+      font-size: percentage(37/18)
 
   main article
     margin-top: bem(2)
-    &:last-of-type
-      margin-bottom: bem(4)
 
     blockquote
       border-left-width: bem(0.125)

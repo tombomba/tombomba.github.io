@@ -21,11 +21,6 @@
 
 <article><!-- {{ copy | number_of_words }} words -->
 
-  <header {% if hedpad %}class="inline"{% endif -%}>
-    {{ titlef }}
-    {{ byline }}
-  </header>
-
   {% if p.image.file %}
     {% assign aspectr = p.image.ratio | default: '640x360' | split: 'x' -%}
     {% assign w = aspectr[0] | times: 1.0 -%}
@@ -38,7 +33,8 @@
     </figure>
   {% endif -%}
 
-  {{ copy }}
+  {% capture headline %}<header {% if hedpad %}class="inline"{% endif -%}>{{ titlef }}{{ byline }}<p>{% endcapture -%}
+  {{ copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' }}
 
   {% if include.is_home %}<p class="plus"><a href="{{ include.url | prepend: site.url }}" title="permalink">+</a></p>{% endif -%}
 

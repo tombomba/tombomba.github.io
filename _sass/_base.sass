@@ -45,21 +45,27 @@ a
 
 header[role="banner"]
 
+  max-width: $max-width + bem(2)
+  margin: 0 auto
+
+  display: flex
+  flex-direction: row
+
+  border: 1px dotted green
+
   .title
     h1
-      font-size: percentage(37/18)
-      font-weight: 700
-      line-height: 1.2
-      text-transform: lowercase
-      &::after
-        content: ".\20"
+      font-family: 'Bungee Shade', $sans
+      font-size: percentage(29/18)
+      font-weight: 900
+      line-height: 1
       @extend .logolink
 
 main article
   max-width: $max-width + bem(2)
-  margin-top: bem(2)
+  margin: bem(1) auto 0 auto
   &:last-of-type
-    margin-bottom: bem(4)
+    margin-bottom: bem(2)
   @extend .clearfix
 
   h2, h3, h4, h5, h6
@@ -83,17 +89,20 @@ main article
     margin-top: 0
     max-width: $max-width
 
-footer nav ul
-  margin: 0
-  li
-    display: inline
-    font-weight: 700
-    line-height: 1
-    text-transform: lowercase
-    padding-right: 1em
-    @extend .logolink
-    &::after
-      content: "."
+footer
+  max-width: $max-width + bem(2)
+  margin: 0 auto
+  nav ul
+    margin: 0
+    li
+      display: inline
+      font-weight: 700
+      line-height: 1
+      text-transform: lowercase
+      padding-right: 1em
+      @extend .logolink
+      &::after
+        content: "."
 
 .logolink
   @include set-color($logo-color)
@@ -114,24 +123,16 @@ footer nav ul
 @media screen and (min-width: 48em)
 
   body
-    padding: bem(1) 8%
+    padding: bem(1) 0
 
   header[role="banner"] .title h1
-    font-size: percentage(47/18)
+    font-size: percentage(37/18)
 
   main article
-    margin-top: bem(3)
+    margin-top: bem(2)
     &:last-of-type
-      margin-bottom: bem(6)
+      margin-bottom: bem(4)
 
     blockquote
       border-left-width: bem(0.125)
       padding-left: bem(0.875)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 80em)
-
-  body
-    padding-left: 12.5%
-    padding-right: 12.5%

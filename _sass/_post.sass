@@ -58,10 +58,20 @@ main article
     &.transparent
       background-color: $body-color
 
-  .plus
-    margin-left: -5px
-    font-weight: 700
-    @extend .logolink
+  .homepage
+    margin-left: 1em
+    li
+      margin-top: bem(1)
+      &:first-of-type
+        margin-top: 0
+      h1
+        display: inline
+        font-size: 100%
+        font-weight: 400
+        &::after
+          content: "\00A0\2014\20"
+      p
+        display: inline
 
   .error
     margin-top: bem(1)
@@ -93,6 +103,9 @@ main article
       margin-right: 0
       .wrap
         border-radius: 4px
+
+    .homepage
+      margin-left: 0
 
     & > img
       margin-bottom: bem(1)

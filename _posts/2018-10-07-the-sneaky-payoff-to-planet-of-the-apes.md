@@ -1,6 +1,6 @@
 ---
 title: "The sneaky payoff to 'Planet of the Apes'"
-excerpt: "'Planet of the Apes,' 1968. Remember the ending? Okay, good. So maybe you can tell me how Taylor, the astronaut played by Charlton Heston, didn't realize where he was from the start. Because he should have."
+excerpt: "You've seen the original, right? Heston. 20th Century Fox. 1968. Remember the ending? Good. Maybe can explain something to me."
 date: 2018-10-07 21:26:12 -0700
 ---
 

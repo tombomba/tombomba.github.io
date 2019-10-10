@@ -44,7 +44,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css_dir | prepend: site.url | append: '.css' }}?v={{ site.time | date: '%a' | downcase }}">
-    <link href="https://fonts.googleapis.com/css?family=Bungee&display=swap&text={{ site.title | upcase }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap&text={{ site.title | upcase }}" rel="stylesheet">
 
     <!-- msft mobile hacks -->
     <script>!function(){if("-ms-user-select"in document.documentElement.style&&navigator.userAgent.match(/IEMobile/)){var a=document.createElement("style");a.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")),document.getElementsByTagName("head")[0].appendChild(a)}}();</script>
@@ -77,7 +77,7 @@
 
     <div class="nav">
       <ul>
-        <li><a href="{{ site.url }}">Home</a></li>{% unless page.is_bio %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li>
+        {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_bio %}<li><a href="/about/">About</a></li>{% endunless %}{% unless page.is_post %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li>{% endunless %}
       </ul>
     </div>
 

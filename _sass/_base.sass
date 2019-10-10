@@ -58,21 +58,32 @@ hr
 header[role="banner"]
   max-width: 100%
 
+
   hr
     width: 100%
 
-  .icon
+  .icon,
+  .logo-text
     display: flex
     align-items: center
     justify-content: center
     height: bem(2)
-    img
-      width: auto
-      height: 24px
+
+  .icon img
+    width: auto
+    height: 24px
+
+  .logo-text h1
+    font-family: 'Bungee', $system
+    font-size: percentage(37/18)
+    font-weight: 900
+    line-height: 1
+    text-transform: uppercase
+    @extend .logolink
 
 main article
-  max-width: $max-width + bem(2)
-  margin: bem(1) auto 0 auto
+  max-width: $max-width
+  margin: bem(2) auto 0 auto
   &:last-of-type
     margin-bottom: bem(2)
   @extend .clearfix
@@ -144,8 +155,6 @@ footer
     padding: 0 bem(1)
 
   main article
-    margin-top: bem(2)
-
     blockquote
       border-left-width: bem(0.125)
       padding-left: bem(0.875)

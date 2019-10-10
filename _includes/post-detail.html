@@ -1,6 +1,5 @@
 {% assign p = include.page -%}
 {% assign copy = include.content | strip | normalize_whitespace -%}
-{% assign hedpad = false -%}
 
 {% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
 {% assign sub = t.last | prepend: '!QQ!' -%}
@@ -15,7 +14,6 @@
 {% endcapture -%}
 
 {% if copy contains 'img src=' %}
-  {% assign hedpad = true %}
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}
 {% endif -%}
 
@@ -33,9 +31,7 @@
     </figure>
   {% endif -%}
 
-  {% capture headline %}<header {% if hedpad %}class="inline"{% endif -%}>{{ titlef }}{{ byline }}<p>{% endcapture -%}
+  {% capture headline %}<header>{{ titlef }}{{ byline }}<p>{% endcapture -%}
   {{ copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' }}
-
-  {% if include.is_home %}<p class="plus"><a href="{{ include.url | prepend: site.url }}" title="permalink">+</a></p>{% endif -%}
 
 </article>

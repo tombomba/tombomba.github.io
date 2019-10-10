@@ -2,8 +2,17 @@
 is_home: true
 permalink: /index.html
 ---
+<article>
+<ul class="homepage">
+{% for p in site.posts %}
+  {% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
+  {% assign sub = t.last | prepend: '!QQ!' -%}
+  {% assign t = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
+  <li>
+    <h1><a href="{{ p.url | prepend: site.url }}">{{ t }}</a></h1>
+    <p>{{ p. excerpt | strip_html | normalize_whitespace | smartify }}</p>
+  </li>
 
-{% for p in site.posts limit: 20 %}
-  {% include post-detail.html page=p content=p.content is_home=true %}
-
-{% endfor %}
+{% endfor -%}
+</ul>
+</article>

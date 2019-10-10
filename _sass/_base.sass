@@ -84,8 +84,6 @@ header[role="banner"]
 main article
   max-width: $max-width
   margin: bem(2) auto 0 auto
-  &:last-of-type
-    margin-bottom: bem(2)
   @extend .clearfix
 
   h2, h3, h4, h5, h6
@@ -109,9 +107,17 @@ main article
     margin-top: 0
     max-width: $max-width
 
+main aside
+  margin-top: bem(2)
+
 footer
   max-width: 100%
-  margin: bem(2) auto 0 auto
+  margin-left: auto
+  margin-right: auto
+  &.post
+    margin-top: bem(1)
+  &.page
+    margin-top: bem(2)
 
   .wrap
     max-width: $max-width

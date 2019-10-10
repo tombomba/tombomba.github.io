@@ -74,7 +74,7 @@ header[role="banner"]
     height: 24px
 
   .logo-text h1
-    font-family: 'Bungee', $system
+    font-family: 'Bungee Shade', $system
     font-size: percentage(37/18)
     font-weight: 900
     line-height: 1
@@ -140,6 +140,16 @@ footer
 .permalink
   @include set-color($mix-color)
 
+.toc
+  margin-left: 1em
+  li
+    margin-top: bem(1)
+
+.error
+  margin-top: bem(1)
+  li
+    margin: 0
+
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 32em)
@@ -158,3 +168,5 @@ footer
     blockquote
       border-left-width: bem(0.125)
       padding-left: bem(0.875)
+    .toc
+      margin-left: 0

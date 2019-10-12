@@ -77,7 +77,7 @@
 
     <div class="nav">
       <ul>
-        {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_bio %}<li><a href="/about/">About</a></li>{% endunless %}{% unless page.is_post %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li>{% endunless %}
+        {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_toc %}<li><a href="/archive/">Archive</a></li>{% endunless %}{% unless page.is_bio %}<li><a href="/about/">About</a></li>{% endunless %}{% unless page.is_post %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li>{% endunless %}
       </ul>
     </div>
 

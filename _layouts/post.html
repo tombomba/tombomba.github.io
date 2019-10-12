@@ -28,7 +28,6 @@ layout: default
     {% assign w = aspectr[0] | times: 1.0 -%}
     {% assign h = aspectr[1] | times: 1.0 -%}
     {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
-    {% assign hedstyle = 'figure' -%}
     <figure>
       <div class="wrap" style="padding-bottom:{{ percent }}%"><img src="{{ p.image.file | prepend: site.img_dir }}" alt="{{ p.image.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}"></div>
       {% if p.media.caption %}<figcaption>{{ p.media.caption | strip | normalize_whitespace | smartify | markdownify }}</figcaption>{% endif -%}

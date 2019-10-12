@@ -7,15 +7,7 @@ layout: default
 
 {% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
 {% assign sub = t.last | prepend: '!QQ!' -%}
-{% assign t = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
-
-{% capture titlef %}
-  <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ t }}{% if include.is_home %}</a>{% endif %}</h1>
-{% endcapture -%}
-
-{% capture byline %}
-  <ul>{% unless include.is_home %}<li><a href="/about/">{{ p.author | default: site.author }}</a></li>{% endunless -%}<li><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></li></ul>
-{% endcapture -%}
+{% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
 
 {% if copy contains 'img src=' %}
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}
@@ -34,7 +26,7 @@ layout: default
     </figure>
   {% endif -%}
 
-  {% capture headline %}<header>{{ titlef }}{{ byline }}<p>{% endcapture -%}
+  {% capture headline %}<header><h1>{{ titlef }}</h1><ul><li><a href="/about/">{{ p.author | default: site.author }}</a></li><li><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></li></ul><p>{% endcapture -%}
   {{ copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' }}
 
 </article>

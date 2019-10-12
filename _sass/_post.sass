@@ -7,7 +7,6 @@ main article
     h1
       font-size: percentage(23/18)
       line-height: (($line-height - 1) / 2) + 1
-      @extend .titlelink
 
     ul
       margin: 0
@@ -15,7 +14,12 @@ main article
       li
         display: inline
         @include font-ratio(14/16)
-        @extend .permalink
+        color: $mix-color
+        a:link, a:visited
+          color: $mix-color
+          text-decoration: none
+        a:hover
+          text-decoration: underline
         &:nth-child(2):before
           content: "\20/\20"
 
@@ -59,6 +63,7 @@ main article
       background-color: $body-color
 
 main aside
+  margin-top: bem(2)
   .related
     max-width: $max-width
     margin: 0 auto

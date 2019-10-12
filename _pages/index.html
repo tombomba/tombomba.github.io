@@ -2,7 +2,7 @@
 is_home: true
 permalink: /index.html
 ---
-{% assign scope = 1209600 -%}
+{% assign scope = 2629743 -%}
 {% assign today = site.posts.first.date | date: '%s' -%}
 {% assign lastdt = today -%}
 
@@ -12,10 +12,19 @@ permalink: /index.html
     {% assign current = p.date | date: '%s' -%}
     {% assign range = today | times: 1 |  minus: current -%}
 
+    {% if p.id == site.posts.first.id %}
+      {% capture iconf %}&nbsp;<img src="{{ '/assets/img/icon-new.gif' | prepend: site.url }}" width="25" alt="new!">{% endcapture -%}
+    {% elsif p.tags contains 'cool' %}
+      {% capture iconf %}&nbsp;<img src="{{ '/assets/img/icon-cool.gif' | prepend: site.url }}" width="21" alt="cool!">{% endcapture -%}
+    {% elsif p.tags contains 'review' %}
+        {% capture iconf %}&nbsp;<img src="{{ '/assets/img/icon-review.gif' | prepend: site.url }}" width="52" alt="review!">{% endcapture -%}
+    {% endif -%}
+
     {% if range < scope %}
-      <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip_html | normalize_whitespace | smartify }}</a>&nbsp;&mdash; {{ p. excerpt | strip_html | normalize_whitespace | smartify }}</li>
+      <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip_html | normalize_whitespace | smartify }}</a>{{ iconf }}&nbsp;&mdash; {{ p. excerpt | strip_html | normalize_whitespace | smartify }}</li>
 
       {% assign lastdt = p.date | date: '%s' -%}
+      {% assign iconf = nil -%}
 
     {% else -%}
       {% break -%}
@@ -24,15 +33,14 @@ permalink: /index.html
   {% endfor -%}
 {% endcapture -%}
 
-{% assign firstdtmo = today | date: '%b' -%}
-{% assign firstdtyr = today | date: '%Y' -%}
-{% assign lastdtmo = lastdt | date: '%b' -%}
-{% assign lastdtyr = lastdt | date: '%Y' -%}
+
+{% assign firstmo = today | date: '%b' -%}
+{% assign lastmo = lastdt | date: '%b' -%}
 
 <article>
 
   <header>
-      <h1>{% if lastdtmo != firstdtmo %}{{ lastdtmo }}&ndash;{% endif %}{% if lastdtyr != firstdtyr %}&nbsp;{{ lastdtyr }}{% endif %}{{ firstdtmo }} {{ firstdtyr }}</h1>
+      <h1>{% if lastmo != firstmo %}{{ lastdt | date: '%b' }}&ndash;{% endif %}{{ today | date: '%b %Y' }}</h1>
   </header>
 
   <ul class="toc">

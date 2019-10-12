@@ -58,7 +58,6 @@ hr
 header[role="banner"]
   max-width: 100%
 
-
   hr
     width: 100%
 
@@ -78,8 +77,12 @@ header[role="banner"]
     font-size: percentage(37/18)
     font-weight: 900
     line-height: 1
-    text-transform: uppercase
-    @extend .logolink
+    color: $logo-color
+    a:link, a:visited
+      color: $logo-color
+      text-decoration: none
+    a:hover
+      text-decoration: none
 
 main article
   max-width: $max-width
@@ -107,9 +110,6 @@ main article
     margin-top: 0
     max-width: $max-width
 
-main aside
-  margin-top: bem(2)
-
 footer
   max-width: 100%
   margin-left: auto
@@ -136,15 +136,6 @@ footer
         content: "-"
         padding-left: 0.5em
         color: $mix-color
-
-.logolink
-  @include set-color($logo-color)
-
-.titlelink
-  @include set-color($text-color)
-
-.permalink
-  @include set-color($mix-color)
 
 .toc
   margin-left: 1em

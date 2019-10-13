@@ -1,0 +1,14 @@
+<aside>
+
+  <hr>
+
+  <div class="related">
+  {% if include.previous %}
+    <p><strong>Previous:</strong> <a href="{{ include.previous.url | prepend: site.url }}">{{ include.previous.title | strip_html | normalize_whitespace | smartify }}</a></p>
+  {% endif -%}
+  {% if include.next %}
+    <p><strong>Next:</strong> <a href="{{ include.next.url | prepend: site.url }}">{{ include.next.title | strip_html | normalize_whitespace | smartify }}</a></p>
+  {% endif -%}
+  </div>
+
+</aside>

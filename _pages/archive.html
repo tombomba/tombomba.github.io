@@ -1,6 +1,6 @@
 ---
 title: "Archive"
-excerpt: "A place in which public records or historical materials (such as documents) are preserved."
+excerpt: "ARCHIVE (n.): A place in which public records or historical materials (such as documents) are preserved."
 is_toc: true
 permalink: /archive/
 ---
@@ -12,15 +12,7 @@ permalink: /archive/
 
   <ul class="toc">
   {% for p in site.posts %}
-    {% if p.id == site.posts.first.id %}
-      {% capture iconf %}&nbsp;<img src="{{ '/assets/img/icon-new.gif' | prepend: site.url }}" width="25" alt="new!">{% endcapture -%}
-    {% elsif p.tags contains 'cool' %}
-      {% capture iconf %}&nbsp;<img src="{{ '/assets/img/icon-cool.gif' | prepend: site.url }}" width="21" alt="cool!">{% endcapture -%}
-    {% elsif p.tags contains 'review' %}
-        {% capture iconf %}&nbsp;<img src="{{ '/assets/img/icon-review.gif' | prepend: site.url }}" width="52" alt="review!">{% endcapture -%}
-    {% endif -%}
-    <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip_html | normalize_whitespace | smartify }}</a>{{ iconf }}&nbsp;&mdash; {{ p. excerpt | strip_html | normalize_whitespace | smartify }}</li>
-    {% assign iconf = nil -%}
+    {% include toc.html title=p.title excerpt=p.excerpt tags=p.tags url=p.url %}
   {% endfor -%}
   </ul>
 

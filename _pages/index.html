@@ -12,20 +12,9 @@ permalink: /index.html
     {% assign current = p.date | date: '%s' -%}
     {% assign range = today | times: 1 |  minus: current -%}
 
-    {% if p.id == site.posts.first.id %}
-      {% capture iconf %}&nbsp;<img src="{{ '/assets/img/icon-new.gif' | prepend: site.url }}" width="25" alt="new!">{% endcapture -%}
-    {% elsif p.tags contains 'cool' %}
-      {% capture iconf %}&nbsp;<img src="{{ '/assets/img/icon-cool.gif' | prepend: site.url }}" width="21" alt="cool!">{% endcapture -%}
-    {% elsif p.tags contains 'review' %}
-        {% capture iconf %}&nbsp;<img src="{{ '/assets/img/icon-review.gif' | prepend: site.url }}" width="52" alt="review!">{% endcapture -%}
-    {% endif -%}
-
-    {% if range < scope %}
-      <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip_html | normalize_whitespace | smartify }}</a>{{ iconf }}&nbsp;&mdash; {{ p. excerpt | strip_html | normalize_whitespace | smartify }}</li>
-
+    {% if scope > range %}
+      {% include toc.html title=p.title excerpt=p.excerpt tags=p.tags url=p.url %}
       {% assign lastdt = p.date | date: '%s' -%}
-      {% assign iconf = nil -%}
-
     {% else -%}
       {% break -%}
     {% endif -%}

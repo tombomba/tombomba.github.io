@@ -4,24 +4,37 @@ main article
     max-width: $max-width
     margin-top: 0
 
-    h1
-      font-size: percentage(23/18)
-      line-height: (($line-height - 1) / 2) + 1
-
-    ul
-      margin: 0
-      list-style-type: none
-      li
-        display: inline
-        @include font-ratio(14/16)
-        color: $mix-color
-        a:link, a:visited
+    &.post
+      h1
+        font-size: percentage(23/18)
+        line-height: (($line-height - 1) / 2) + 1
+      ul
+        margin: 0
+        list-style-type: none
+        li
+          display: inline
+          @include font-ratio(14/16)
           color: $mix-color
-          text-decoration: none
-        a:hover
-          text-decoration: underline
-        &:nth-child(2):before
-          content: "\20/\20"
+          a:link, a:visited
+            color: $mix-color
+            text-decoration: none
+          a:hover
+            text-decoration: underline
+          &:nth-child(2):before
+            content: "\20/\20"
+
+    &.note
+      h1, p
+        display: inline
+      h1
+        font-size: 100%
+        line-height: $line-height
+        &::after
+          content: "\20"
+      .punc::after
+        content: "."
+      .dash::after
+        content: "\20\2014"
 
   figure
     max-width: $max-width
@@ -49,18 +62,16 @@ main article
     &.top
       margin-top: 0
       margin-bottom: bem(1) + 0.66em
-    &.saturate
-      filter: saturate(4)
-    &.sepia
-      filter: sepia(50%)
-    &.curved
-      border-radius: 4px
     &.border
       border-width: thin
       border-style: solid
       border-color: inherit
     &.transparent
       background-color: $body-color
+
+  .dateout
+    font-style: italic
+    color: $mix-color
 
 main aside
   margin-top: bem(2)
@@ -113,9 +124,7 @@ main aside
     &.right
       &.tilt
         transform: rotate(3deg)
-      &.shadow
-        box-shadow: 10px 10px 0px 1px $bg-color
-
+        margin-right: -1em
 
 //-----------------------------------------------------------------------------
 

@@ -26,7 +26,7 @@ layout: default
     </figure>
   {% endif -%}
 
-  {% capture headline %}<header><h1>{{ titlef }}</h1><ul><li><a href="/about/">{{ p.author | default: site.author }}</a></li><li><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></li></ul><p>{% endcapture -%}
+  {% capture headline %}<header class="post"><h1>{{ titlef }}</h1><ul><li><a href="/about/">{{ p.author | default: site.author }}</a></li><li><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></li></ul><p>{% endcapture -%}
   {{ copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' }}
 
 </article>

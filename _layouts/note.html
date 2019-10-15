@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+{% assign p = page -%}
+{% assign copy = content | strip | normalize_whitespace -%}
+
+{% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
+{% assign sub = t.last | prepend: '!QQ!' -%}
+{% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
+
+{% if copy contains 'img src=' %}
+  {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}
+{% endif -%}
+
+{% capture datef %}&nbsp;<span class="dateout"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">({{ p.date | date_to_string }})</time></span>{% endcapture -%}
+
+{% assign copysize = copy | size | minus: 4 %}
+{% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
+
+{% capture punc -%}
+  {% unless p.title contains '.' or p.title contains '!' or p.title contains '?' -%}
+    {% assign last_char = p.title | slice: -1, 1 -%}
+    {% if last_char == '"' or last_char == "'" -%}
+      <span class="dash"></span>
+    {% else -%}
+      <span class="punc"></span>
+    {% endif %}
+  {% endunless -%}
+{% endcapture -%}
+
+<article><!-- {{ copy | number_of_words }} words -->
+
+  {% capture headline %}<header class="note"><h1>{{ titlef }}{{ punc }}</h1><p>{% endcapture -%}
+  {{ copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' | strip | normalize_whitespace }}
+
+</article>
+
+{% include nextprev.html next=p.next previous=p.previous %}

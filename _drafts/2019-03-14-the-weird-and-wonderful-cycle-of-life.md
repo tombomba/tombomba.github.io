@@ -1,7 +1,6 @@
 ---
-title: "The weird and wonderful 'Cycle of Life'"
-media:
-  youtube: uraG-z0grkc
+title: "Cycle of Life (Umami, 2019)"
+layout: note
 image:
   file: cycle-of-life-umami-2019.jpg
   path: /assets/img/cycle-of-life-umami-2019.jpg

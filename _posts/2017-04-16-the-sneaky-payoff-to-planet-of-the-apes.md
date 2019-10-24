@@ -1,7 +1,8 @@
 ---
 title: "The sneaky payoff to 'Planet of the Apes'"
+layout: post
 excerpt: "You've seen the original, right? Heston. 20th Century Fox. 1968. Remember the ending? Good. Maybe can explain something to me."
-date: 2019-10-07 21:26:12 -0700
+date: 2017-04-16 21:26:12 -0700
 ---
 
 ![Planet of the Apes movie poster](/assets/img/planet-of-the-apes-1968-poster-art.jpg){: width="280" height="418" .top .left .tilt .border .pull }

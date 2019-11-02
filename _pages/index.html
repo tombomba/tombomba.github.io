@@ -2,36 +2,44 @@
 is_home: true
 permalink: /index.html
 ---
-{% assign scope = 2629743 -%}
+
+{% for p in site.posts limit: 10 %}
+  {% unless forloop.first %}<hr class="pagebreak">{% endunless -%}
+  {% case p.layout -%}
+    {% when 'note' %}{% include note-block.html page=p content=p.content is_home=true %}
+    {% else %}{% include post-block.html page=p content=p.content is_home=true %}
+  {% endcase -%}
+{% endfor -%}
+
+{% comment %}
+{% assign p = site.posts.first -%}
+{% case p.layout %}
+  {% when 'note' %}{% include note-block.html page=p content=p.content is_home=true %}
+  {% else %}{% include post-block.html page=p content=p.content is_home=true %}
+{% endcase -%}
+
+<hr class="pagebreak">
+
+{% assign scope = 604800 -%}<!-- 1 week -->
 {% assign today = site.posts.first.date | date: '%s' -%}
-{% assign lastdt = today -%}
 
-{% capture list-block %}
-  {% for p in site.posts %}
+<aside>
 
-    {% assign current = p.date | date: '%s' -%}
-    {% assign range = today | times: 1 |  minus: current -%}
+  <div class="recent">
+    <h2>More from this week:</h2>
+    <ul class="ul-toc">
+      {% for p in site.posts %}
+        {% if p.id == site.posts.first.id %}{% continue %}{% endif -%}
+        {% assign current = p.date | date: '%s' -%}
+        {% assign range = today | times: 1 |  minus: current -%}
+        {% if scope > range %}
+          {% include toc.html title=p.title excerpt=p.excerpt tags=p.tags url=p.url %}
+        {% else -%}
+          {% break -%}
+        {% endif -%}
+      {% endfor -%}
+    </ul>
+  </div>
 
-    {% if scope > range %}
-      {% include toc.html title=p.title excerpt=p.excerpt tags=p.tags url=p.url %}
-      {% assign lastdt = p.date | date: '%s' -%}
-    {% else -%}
-      {% break -%}
-    {% endif -%}
-
-  {% endfor -%}
-{% endcapture -%}
-
-{% assign firstmo = today | date: '%b' -%}
-{% assign lastmo = lastdt | date: '%b' -%}
-
-<article>
-
-  <header>
-      <h1>{% if lastmo != firstmo %}{{ lastdt | date: '%b' }}&ndash;{% endif %}{{ today | date: '%b %Y' }}</h1>
-  </header>
-
-  <ul class="toc">
-    {{ list-block }}
-  </ul>
-</article>
+</aside>
+{% endcomment -%}

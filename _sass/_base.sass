@@ -52,6 +52,8 @@ hr
   border-top: 1px solid $shim-dark
   border-bottom: 1px solid $shim-light
   background-color: $body-color
+  &.pagebreak
+    margin-top: bem(2)
 
 //-----------------------------------------------------------------------------
 
@@ -73,7 +75,7 @@ header[role="banner"]
     height: 24px
 
   .logo-text h1
-    font-family: 'Bungee Shade', $system
+    font-family: 'Bungee', $system
     font-size: percentage(37/18)
     font-weight: 900
     line-height: 1
@@ -98,7 +100,7 @@ main article
     max-width: $max-width
 
   ul, ol
-    margin-left: bem(1)
+    margin-left: 1em
     max-width: $max-width
 
   blockquote
@@ -137,7 +139,7 @@ footer
         padding-left: 0.5em
         color: $mix-color
 
-.toc
+.ul-toc
   margin-left: 1em
   li
     margin-top: bem(1)
@@ -145,7 +147,8 @@ footer
       vertical-align: middle
       padding-bottom: 1px
 
-.error
+.ul-plain-condensed
+  margin-left: bem(1)
   margin-top: bem(1)
   li
     margin: 0
@@ -168,5 +171,6 @@ footer
     blockquote
       border-left-width: bem(0.125)
       padding-left: bem(0.875)
-    .toc
-      margin-left: 0
+
+  .ul-toc
+    margin-left: 0

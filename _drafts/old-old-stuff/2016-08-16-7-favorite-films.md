@@ -1,6 +1,6 @@
 ---
 title: "7 favorite films"
-tags: [bio]
+tags: [about]
 date: 2016-08-16 12:34 -0700
 ---
 

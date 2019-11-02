@@ -1,9 +1,9 @@
 ---
 title: Answers to questions nobody asked
 date: 2018-10-01 12:34:56 -0700
-tag: [bio]
+tag: [about]
 ---
-I'm [not a critic]({{ '/about/' }}) but it's sometimes fun to answer questions put to them. So I cribbed this interview from [Who's Who in Reviews](https://www.rogerebert.com/chazs-blog/whos-who-in-reviews-table-of-contents) and substituted my own responses.
+I'm [not a critic]({{ '/about/' }}) but it's sometimes fun to answer questions put to them. So I cribbed this interview format from [Who's Who in Reviews](https://www.rogerebert.com/chazs-blog/whos-who-in-reviews-table-of-contents) and substituted my own responses.
 
 ## Where did you grow up, and what was it like?
 I grew up in a lily-white suburb exactly like every other lily-white suburb. Pick a dozen images from a typical family sitcom, add emotional accents from "American Beauty" and "The Ice Storm," mix in the aesthetic sensibility of "Pleasantville," and you got it. My hometown was pretty, clean, and---at least outwardly---dull.
@@ -57,7 +57,7 @@ It would have been something like "Scanners" or "Driller Killer" or "Friday the 
 John Wayne, because he's John Wayne. Guy Pearce, because he's good at playing characters who are out of their depth but not reduced by their circumstance.
 
 ## Favorite leading women?
-Maureen O'Hara, because she punched John Ford in the face. Emily Blunt, because she's versatile.  
+Maureen O'Hara, because she was a great on the screen and she punched John Ford in real life. Emily Blunt, because she has a versatility that few of her contemporaries can match.  
 
 ## Who's your favorite modern filmmaker?
 Ben Wheatley. He gives no quarter. He doesn't pander. I like that I don't always like him and that he doesn't care.

@@ -10,7 +10,7 @@ permalink: /404.html
     <h1>That page was no good. Try another?</h1>
   </header>
 
-  <ul class="error">
+  <ul class="ul-plain-condensed">
     {% for rela in site.posts limit: 5 %}<li><a href="{{ rela.url | prepend: site.url }}">{{ rela.title | strip | normalize_whitespace | smartify }}</a></li>{% endfor %}
   </ul>
 

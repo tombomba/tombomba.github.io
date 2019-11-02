@@ -14,17 +14,19 @@ permalink: /about/
 
   <p>My name is Tom Bomba. I knocked around NYU’s cinema studies program before I “dropped out of college to get an education.” I’ve spent my time since producing digital media.</p>
 
-  <p>I’ve never won any prizes. I’ve never been published. I don’t have a byline to show you. But I read and write passably well, and I watch and think a little too much, and maybe that's something. We'll see.</p>
+  <p>I’ve never won any prizes. I’ve never been published. I don’t have a byline to show you. But I read and write passably well, and I watch and think a little too much, and maybe that’s something. We’ll see.</p>
 
   <p><em>{{ site.title }}</em> was created on a Macintosh using Jekyll, Atom, and Pixelmator while listening to KCRW Los&nbsp;Angeles.</p>
 
-  <p>For a little more biography, by way of the movies, take a look at these posts:</p>
+  {% if site.tags.about.size > 2 %}
+    <p>For a little more biography, by way of the movies, take a look at these posts:</p>
 
-  <ul class="error">
-  {% for p in site.tags.bio %}
-    <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip | normalize_whitespace | smartify }}</a></li>
-  {% endfor %}
-  </ul>
+    <ul class="ul-plain-condensed">
+    {% for p in site.tags.about limit: 10 %}
+      <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip | normalize_whitespace | smartify }}</a></li>
+    {% endfor -%}
+    </ul>
+  {% endif -%}
 
   <p>If you need to get in touch, email “hello” at this domain.</p>
 

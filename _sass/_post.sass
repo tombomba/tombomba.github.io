@@ -29,17 +29,32 @@ main article
       h1
         font-size: 100%
         line-height: $line-height
-        &::after
-          content: "\20"
       .punc::after
         content: "."
       .dash::after
         content: "\20\2014"
 
+    &.page
+      h1
+        font-size: percentage(29/18)
+        line-height: (($line-height - 1) / 2) + 1
+
+    &.home
+      h1
+        color: $text-color
+        a:link, a:visited
+          color: $text-color
+          text-decoration: none
+        a:hover
+          text-decoration: underline
+
+  h2 + p
+    margin-top: 0
+
   figure
     max-width: $max-width
     margin: 0 -1em bem(1) -1em
-    padding-bottom: 0.415em
+    padding: 0.415em 0
     .wrap
       position: relative
       padding-bottom: 56.25%
@@ -60,7 +75,7 @@ main article
     background-color: $bg-color
     overflow: hidden
     &.top
-      margin-top: 0
+      margin-top: 0.415em
       margin-bottom: bem(1) + 0.66em
     &.border
       border-width: thin
@@ -80,12 +95,19 @@ main aside
     margin: 0 auto
     p:first-of-type
       margin-top: bem(1)
+  .recent
+    max-width: $max-width
+    margin: 0 auto
+    h2
+      font-size: 100%
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 36em)
 
   main article > img
+    &.top
+      margin-top: 0
     &.left
       float: left
       margin-left: 0

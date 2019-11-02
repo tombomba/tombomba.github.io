@@ -7,7 +7,6 @@ permalink: /humans.txt
 Author: {{ site.author }}
 Site: {{ site.url }}
 Twitter: {{ site.twitter }}
-Github: {{ site.github }}
 
 /* SITE */
 

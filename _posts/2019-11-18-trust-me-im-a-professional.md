@@ -10,8 +10,10 @@ tags: [about]
 date: 2019-11-18 20:40 -0800
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae odio sit amet neque euismod dictum id hendrerit nisi. Nam dolor turpis, volutpat et felis sed, consectetur tincidunt leo. Donec ut dolor non purus elementum pulvinar quis in quam. Mauris ligula justo, cursus ac elit quis, lacinia ullamcorper ipsum. Nulla quis eleifend mauris. Quisque urna neque, luctus ut velit a, sodales varius est. Aenean ac efficitur ipsum. Cras consectetur nunc eu quam suscipit sodales. Etiam finibus, nulla et bibendum euismod, mi est condimentum magna, sit amet condimentum purus turpis ut orci. Pellentesque ac interdum turpis, eget elementum nisl. Etiam varius vulputate augue in pretium. Nulla tincidunt rhoncus ultricies. Sed ultrices fringilla justo, et venenatis massa dapibus id. Nullam non aliquam ipsum. Donec vel ipsum sit amet urna scelerisque dapibus sit amet nec justo. Morbi molestie augue sit amet justo pulvinar, non tempus ex blandit.
+On one hand, there's a desire to be a serious critic of serious films, the perfect reviewer of mainstream pap, ready with a good tweet that hovers between insight and #hottake.
 
-Aenean venenatis pharetra est. Aliquam erat volutpat. Mauris at nibh ligula. Mauris ac hendrerit enim, faucibus pretium mi. Donec ut ipsum neque. Donec auctor quam mauris. Fusce tristique est lorem, ultrices gravida arcu pharetra eu. Vestibulum euismod lacus eu rutrum aliquam. Donec vehicula turpis eu enim ornare pellentesque. Suspendisse molestie purus ac ante iaculis pharetra. Aliquam ac purus erat. Vivamus viverra lectus dolor, id lacinia arcu venenatis nec. Quisque facilisis tortor justo, ac cursus erat suscipit at. Morbi quis massa ac odio faucibus iaculis.
+On the other, there's an impish thought that says: the hell with all that. The media landscape is so fractured and ugly, the capture of trade and pubs by studios so complete, there really isn't any point to reviews and profiles. In 2019, criticism is no longer a job but publicity sure is.
 
-Etiam vel nulla id ex commodo porta. Vivamus quam nibh, eleifend sit amet aliquam eu, dapibus ac enim. Aenean quis volutpat turpis.
+Why not binge watch "Frasier" instead, stopping only to screen cap every moment where Kelsey Grammer appears pantsless? Call it an 'art project' to assuage yourself. Tell people, with absurd confidence, that it's a form of media criticism. Coming soon to an Insta near you.
+
+But no, of course you wouldn't do that. Don't be ridculous. It would be juvenile and bizarre. You want to be a serious critic of serious films, if only in your own mind.

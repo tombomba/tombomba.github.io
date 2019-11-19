@@ -11,7 +11,7 @@ tags: [about]
 date: 2019-11-18 20:40 -0800
 ---
 
-On one hand, there's a desire to be a serious critic of serious films, the perfect reviewer of mainstream pap, ready with a good tweet that hovers between insight and #hottake.
+On one hand, there's a desire to be a serious critic of serious films, the perfect reviewer of mainstream pap, ready with a good tweet, always hovering between insight and #hottake.
 
 On the other, an impish thought says: the hell with that. The media landscape is so fractured and ugly, the capture of trades and pubs by studios so complete, there isn't a point to reviews and profiles.
 

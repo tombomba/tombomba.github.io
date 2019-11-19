@@ -4,24 +4,29 @@ main article
     max-width: $max-width
     margin-top: 0
 
+    ul
+      margin: 0
+      list-style-type: none
+      li
+        display: inline
+        @include font-ratio(14/16)
+        color: $mix-color
+        a:link, a:visited
+          color: $mix-color
+          text-decoration: none
+        a:hover
+          text-decoration: underline
+        &:nth-child(2):before
+          content: "\20/\20"
+
     &.post
       h1
         font-size: percentage(23/18)
         line-height: (($line-height - 1) / 2) + 1
-      ul
-        margin: 0
-        list-style-type: none
-        li
-          display: inline
-          @include font-ratio(14/16)
-          color: $mix-color
-          a:link, a:visited
-            color: $mix-color
-            text-decoration: none
-          a:hover
-            text-decoration: underline
-          &:nth-child(2):before
-            content: "\20/\20"
+
+    &.link
+      h1
+        font-size: 100%
 
     &.note
       h1, p
@@ -29,10 +34,12 @@ main article
       h1
         font-size: 100%
         line-height: $line-height
+        &::after
+          content: "\20"
       .punc::after
         content: "."
       .dash::after
-        content: "\20\2014"
+        content: "\2014"
 
     &.page
       h1

@@ -6,6 +6,7 @@ image:
   path: /assets/img/frasier-crane.jpg
   ratio: 800x600
   alt: "Frasier Season 5 Episode 1, 23 September 1997"
+tags: [about]
 date: 2019-11-18 20:40 -0800
 ---
 

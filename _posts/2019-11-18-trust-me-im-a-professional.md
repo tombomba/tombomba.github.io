@@ -1,7 +1,12 @@
 ---
-title: "The quick brown fox jumps over the lazy dog"
+title: "Trust me. I'm a professional."
 layout: note
-date: 2019-11-03 17:23 -0800
+image:
+  file: frasier-crane.jpg
+  path: /assets/img/frasier-crane.jpg
+  ratio: 800x600
+  alt: "Frasier Season 5 Episode 1, 23 September 1997"
+date: 2019-11-18 20:40 -0800
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae odio sit amet neque euismod dictum id hendrerit nisi. Nam dolor turpis, volutpat et felis sed, consectetur tincidunt leo. Donec ut dolor non purus elementum pulvinar quis in quam. Mauris ligula justo, cursus ac elit quis, lacinia ullamcorper ipsum. Nulla quis eleifend mauris. Quisque urna neque, luctus ut velit a, sodales varius est. Aenean ac efficitur ipsum. Cras consectetur nunc eu quam suscipit sodales. Etiam finibus, nulla et bibendum euismod, mi est condimentum magna, sit amet condimentum purus turpis ut orci. Pellentesque ac interdum turpis, eget elementum nisl. Etiam varius vulputate augue in pretium. Nulla tincidunt rhoncus ultricies. Sed ultrices fringilla justo, et venenatis massa dapibus id. Nullam non aliquam ipsum. Donec vel ipsum sit amet urna scelerisque dapibus sit amet nec justo. Morbi molestie augue sit amet justo pulvinar, non tempus ex blandit.

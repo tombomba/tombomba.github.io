@@ -1,5 +1,6 @@
 ---
 title: "Boba Fett, Junior"
+excerpt: "Phasellus dapibus sem id lacus facilisis, ac accumsan lacus finibus."
 image:
   path: /assets/img/boba-fett-junior-the-tv-show.png
 date: 2019-11-19 12:34 -0800

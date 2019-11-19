@@ -17,6 +17,6 @@ On the other, there's an impish thought says: the hell with that. The media land
 
 In 2019, criticism is no longer a job but publicity sure is. Online culture is like basic cable with a busted remote, the T.V. permanently stuck on QVC or the Home Shopping Network. Everything is a sales pitch for something else, regardless of context.
 
-Why not binge watch "Frasier" instead, stopping only to screen cap every moment Kelsey Grammer appears pantsless? Call it an 'art project' to assuage yourself. Tell people, with absurd confidence, that it's a form of media criticism, coming soon to an insta near you.
+Why not binge "Frasier" instead, stopping only to screen cap every moment Kelsey Grammer appears pantsless? Call it an 'art project' to assuage yourself. Tell people, with absurd confidence, that it's a form of media criticism, coming soon to an insta near you.
 
 But no, of course you wouldn't do that. Don't be ridculous. It would be juvenile and bizarre. You want to be a serious critic of serious films, if only in your own mind.

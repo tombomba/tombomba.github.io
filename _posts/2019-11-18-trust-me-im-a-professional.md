@@ -11,11 +11,11 @@ tags: [about]
 date: 2019-11-18 20:40 -0800
 ---
 
-On one hand, there's a desire to be a serious critic of serious films, the perfect reviewer of mainstream pap, ready with a good tweet, always hovering between insight and #hottake.
+On one hand, there's a desire to be a serious critic of serious films, the perfect reviewer of mainstream pop, ready with a good tweet, always hovering between insight and #hottake.
 
 On the other, an impish thought says: the hell with that. The media landscape is so fractured and ugly, the capture of trades and pubs by studios so complete, there isn't a point to reviews and profiles.
 
-Culture writing is like basic cable with a busted remote, the television permanently stuck on the Home Shopping Network. Everything is a pitch for something else, regardless of context. In 2019, criticism is no longer a job but publicity sure is.
+Culture writing is like basic cable with a busted remote, the television permanently stuck on the Home Shopping Network, everything a pitch for something else. Criticism is no longer a job in 2019 but publicity sure is.
 
 Forget it. Why not binge "Frasier" instead, stopping only to screen cap each moment Kelsey Grammer appears without pants? Call it an 'art project,' if you will. Tell people, with absurd confidence, it's a form of media criticism, coming soon to an insta near you.
 

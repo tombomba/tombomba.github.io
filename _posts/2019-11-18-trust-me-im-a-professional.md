@@ -13,7 +13,9 @@ date: 2019-11-18 20:40 -0800
 
 On one hand, there's a desire to be a serious critic of serious films, the perfect reviewer of mainstream pap, ready with a good tweet that hovers between insight and #hottake.
 
-On the other, there's an impish thought says: the hell with that. The media landscape is so fractured and ugly, the capture of trade and pubs by studios so complete, there isn't a point to reviews and profiles. In 2019, criticism is no longer a job but publicity sure is.
+On the other, there's an impish thought says: the hell with that. The media landscape is so fractured and ugly, the capture of trade and pubs by studios so complete, there isn't a point to reviews and profiles.
+
+In 2019, criticism is no longer a job but publicity sure is. Online culture is like basic cable with a busted remote, the T.V. permanently stuck on QVC or the Home Shopping Network. Everything is a sales pitch for something else, regardless of context.
 
 Why not binge watch "Frasier" instead, stopping only to screen cap every moment Kelsey Grammer appears pantsless? Call it an 'art project' to assuage yourself. Tell people, with absurd confidence, that it's a form of media criticism, coming soon to an insta near you.
 

@@ -13,7 +13,7 @@ date: 2019-11-18 20:40 -0800
 
 On one hand, there's a desire to be a serious critic of serious films, the perfect reviewer of mainstream pap, ready with a good tweet that hovers between insight and #hottake.
 
-On the other, an impish thought says: the hell with that. The media landscape is so fractured and ugly, the capture of trade and pubs by studios so complete, there isn't a point to reviews and profiles.
+On the other, an impish thought says: the hell with that. The media landscape is so fractured and ugly, the capture of trades and pubs by studios so complete, there isn't a point to reviews and profiles.
 
 Culture writing is like basic cable with a busted remote, the television permanently stuck on the Home Shopping Network. Everything is a pitch for something else, regardless of context. In 2019, criticism is no longer a job but publicity sure is.
 

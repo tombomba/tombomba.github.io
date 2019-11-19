@@ -2,13 +2,21 @@
 is_home: true
 permalink: /index.html
 ---
+{% assign scope = 604800 -%}<!-- 1 week -->
+{% assign today = site.posts.first.date | date: '%s' -%}
 
-{% for p in site.posts limit: 10 %}
+{% for p in site.posts %}
   {% unless forloop.first %}<hr class="pagebreak">{% endunless -%}
-  {% case p.layout -%}
-    {% when 'note' %}{% include note-block.html page=p content=p.content is_home=true %}
-    {% else %}{% include post-block.html page=p content=p.content is_home=true %}
-  {% endcase -%}
+  {% assign current = p.date | date: '%s' -%}
+  {% assign range = today | times: 1 |  minus: current -%}
+  {% if scope > range %}
+    {% case p.layout -%}
+      {% when 'note' %}{% include note-block.html page=p content=p.content is_home=true %}
+      {% else %}{% include post-block.html page=p content=p.content is_home=true %}
+    {% endcase -%}
+  {% else -%}
+    {% break -%}
+  {% endif -%}
 {% endfor -%}
 
 {% comment %}

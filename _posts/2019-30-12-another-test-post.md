@@ -1,5 +1,6 @@
 ---
 title: "The quick brown fox jumps over the lazy dog"
+excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 layout: note
 date: 2019-12-30 13:45 -0800
 ---

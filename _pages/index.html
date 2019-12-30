@@ -23,15 +23,3 @@ permalink: /index.html
     </ul>
   </div>
 </aside>
-
-{% comment % } B L O G ~ S T Y L E ( U N U S ED )
-
-{% for p in site.posts limit: 10 %}
-{% unless forloop.first %}<hr class="pagebreak">{% endunless -%}
-{% case p.layout %}
-  {% when 'note' %}{% include note-block.html page=p content=p.content is_home=true %}
-  {% else %}{% include post-block.html page=p content=p.content is_home=true %}
-{% endcase -%}
-{% endfor -%}
-
-{% endcomment -%}

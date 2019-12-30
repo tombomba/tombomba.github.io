@@ -3,7 +3,7 @@ is_home: true
 permalink: /index.html
 ---
 
-{% comment %} S U C K ~ S T Y L E {% endcomment -%}
+{% comment %} S U C K ~ S T Y L E ~ U N U S E D
 
 {% assign p = site.posts.first -%}
 {% case p.layout %}
@@ -24,7 +24,7 @@ permalink: /index.html
   </div>
 </aside>
 
-{% comment % } B L O G ~ S T Y L E ( U N U S ED )
+{% endcomment -%}
 
 {% for p in site.posts limit: 10 %}
 {% unless forloop.first %}<hr class="pagebreak">{% endunless -%}
@@ -33,5 +33,3 @@ permalink: /index.html
   {% else %}{% include post-block.html page=p content=p.content is_home=true %}
 {% endcase -%}
 {% endfor -%}
-
-{% endcomment -%}

@@ -13,9 +13,11 @@
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}
 {% endif -%}
 
+{% unless include.is_home %}
 {% capture datef %}&nbsp;<span class="dateout"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">({{ p.date | date_to_string }})</time></span>{% endcapture -%}
 {% assign copysize = copy | size | minus: 4 %}
 {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' | strip | normalize_whitespace %}
+{% endunless -%}
 
 {% capture punc -%}
   {% unless p.title contains '.' or p.title contains '!' or p.title contains '?' -%}

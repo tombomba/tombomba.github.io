@@ -7,6 +7,7 @@ permalink: /humans.txt
 Author: {{ site.author }}
 Site: {{ site.url }}
 Twitter: {{ site.twitter }}
+Letterboxd: {{ site.letterboxd }}
 
 /* SITE */
 

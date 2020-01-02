@@ -11,7 +11,7 @@ date: 2020-01-02 2:53 -0800
 tags: [reviews]
 ---
 
-I once drove over the hills of San Francisco, at night, in a beat-up Porsche Carrera, with a 25 year old French girl in the passenger seat, and that experience told me everything I needed to know about why men love powerful machines.
+I once raced over the hills of San Francisco, at night, in a beat-up Porsche Carrera, with a 25 year old French girl in the passenger seat, and that experience told me everything I needed to know about why men love powerful machines.
 
 I didn't get that from "Ford v Ferrari," the new studio picture from James Mangold about the 1966 Le Mans road race. I mean, I didn't get that sense. The joy and freedom of a good car on the right road, everything coming at you point blank, passing in a flick, the satisfying downshifts, the blood pounding and the silly grin.
 

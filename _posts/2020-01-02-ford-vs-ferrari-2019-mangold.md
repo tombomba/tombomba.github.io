@@ -11,12 +11,12 @@ date: 2020-01-02 2:53 -0800
 tags: [reviews]
 ---
 
-I once raced over the hills of San Francisco in a beat-up Porsche Carrera, at night, with a 25 year old French girl in the passenger seat, and the experience told me everything I needed to know about why men love powerful machines.
+I once raced over the hills of San Francisco in a beat-up Porsche Carrera, at night, with a 25 year old French girl in the passenger seat. That experience told me everything I needed to know about why men love powerful machines.
 
 I didn't get that from "Ford v Ferrari," the new studio picture from James Mangold about the 1966 Le Mans road race. I mean, I didn't get that sense. The freedom of a good car on the right road, the world fired at you point blank, passing in a flick, moments filled with pounding blood and silly grins.
 
 A sports movie needs to communicate why the participants love the sport. Hell, in a film about a car and a race, it should tell you why anybody likes _driving._
 
-A movie about boxing might make you wanna run up the stairs at the Philadelphia Museum of Art. After one about baseball, you'll wanna follow an obscure minor league team out of North Carolina. Another about cycling and you picture yourself on a bike, or doing something crazy, like shaving your legs and yelling nonsense Italian phrases in the middle of Indiana. You see? A great sports movie will get in your bones, because it will relay the joy of the sport, which is also the joy of being alive.
+A movie about boxing might make you wanna run up the stairs at the Philadelphia Museum of Art. After one about baseball, you'll wanna follow an obscure minor league team out of North Carolina. Another about cycling and you picture yourself on a bike, or doing something crazy, like shaving your legs and yelling nonsense Italian phrases in the middle of Indiana. You see? A great sports movie will get in your bones. It will relay the joy of the sport, which is also the joy of being alive.
 
 "Ford v Ferrari," meanwhile, is like a well illustrated diagram in an encyclopedia of engineering. There's a glossy beauty to it but not a memorable moment. Watching, a new spin on an old line occurred to me: It's possible for a movie to have no bad scenes, but no good ones, either.

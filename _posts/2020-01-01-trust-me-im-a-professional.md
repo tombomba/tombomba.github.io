@@ -1,5 +1,5 @@
 ---
-title: "Trust me. I'm a professional."
+title: "Trust me, I'm a professional"
 layout: note
 excerpt: "Of course I'm a serious critic of serious films. What else would I be?"
 image:

@@ -2,14 +2,18 @@
 title: "'Portrait of a Lady on Fire' is your first love"
 layout: note
 excerpt: "And Céline Sciamma's fourth effort is a marvel of craft."
+image:
+  file: portrait-of-a-lady-on-fire-still.jpg
+  path: /assets/img/portrait-of-a-lady-on-fire-still.jpg
+  ratio: 800x450
+  alt: "Still image from Portrait of a Lady on Fire"
 date: 2020-01-03 22:59 -0800
+pubished: false
+# portrait-of-a-lady-on-fire-still.jpg
 ---
+And all first loves end. It is their ending that defines them and makes them individual. So I only wanna talk about the final minutes of this, director Céline Sciamma's remarkable gothic romance.
 
-![Helene Delmaire. "Eyeless."](/assets/img/helene-delmaire-eyeless-painting.jpg){: .top .left .tilt .pull }
-
-And all first loves end. It is their ending that defines them and makes them individual. So I only wanna talk about the ending to this, director Céline Sciamma's fourth effort.
-
-That should be alright, shouldn't it? We know the ending from the beginning. The film is bookended by a scene where XXX, a painter, gives her students a lesson in life drawing.
+That should be alright, shouldn't it? We know the ending from the beginning. The film is bookended by a scene where XXX, a painter, gives students a lesson in life drawing.
 
 Aenean rhoncus sagittis auctor. Donec tempus vestibulum velit a auctor. Proin sit amet enim elit. Fusce sed ex vitae est fringilla tincidunt sit amet vel nibh. Suspendisse blandit, augue quis vestibulum finibus, dui urna ultrices dui, ut aliquam nibh nibh nec risus. Suspendisse eu semper diam. Sed non elementum nisl. Aenean cursus ac mauris vitae efficitur.
 

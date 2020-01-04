@@ -8,7 +8,7 @@ image:
   ratio: 800x450
   alt: "Still image from Portrait of a Lady on Fire"
 date: 2020-01-03 22:59 -0800
-pubished: false
+published: false
 # portrait-of-a-lady-on-fire-still.jpg
 ---
 And all first loves end. It is their ending that defines them and makes them individual. So I only wanna talk about the final minutes of this, director Céline Sciamma's remarkable gothic romance.

@@ -1,7 +1,7 @@
 ---
 title: "'Ford v Ferrari' goes put-put-put"
 layout: note
-excerpt: "A movie with no bad scenes, but no good ones, either."
+excerpt: "Like a well illustrated diagram in an encyclopedia of engineering."
 image:
   file: ford-v-ferrari-2019-mangold.jpg
   path: /assets/img/ford-v-ferrari-2019-mangold.jpg

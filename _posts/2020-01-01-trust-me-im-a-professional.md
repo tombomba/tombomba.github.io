@@ -18,5 +18,3 @@ On the other, an impish thought says: the hell with that. The media landscape is
 Culture writing today is like basic cable with a busted remote, the television permanently stuck on the Home Shopping Network. Everything is a pitch for something else because criticism is no longer a job but publicity sure is.
 
 So forget it. Why not binge "Frasier" instead, stopping only to screen cap each moment Kelsey Grammer appears without pants? Call it an 'art project,' if you will. Tell people, with absurd confidence, it's a form of media commentary, coming soon to an insta near you.
-
-But no, of course you wouldn't do that. Don't be ridiculous. It would be juvenile and bizarre. You want to be a serious critic of serious films, if nowhere else than in your own mind.

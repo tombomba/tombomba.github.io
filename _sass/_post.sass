@@ -19,12 +19,12 @@ main article
         &:nth-child(2):before
           content: "\20/\20"
 
-    &.post
+    &.feature
       h1
         font-size: percentage(23/18)
         line-height: (($line-height - 1) / 2) + 1
 
-    &.note
+    &.post
       h1, p
         display: inline
       h1
@@ -57,7 +57,6 @@ main article
   figure
     max-width: $max-width
     margin: 0 -1em bem(1) -1em
-    padding: 0.415em 0
     .wrap
       position: relative
       padding-bottom: 56.25%
@@ -71,6 +70,13 @@ main article
         left: 0
         width: 100%
         height: 100%
+    figcaption
+      margin: 0 1em
+      padding: 0
+      p
+        margin: 0
+        padding: 0
+        @include font-ratio(12/16)
 
   & > img
     display: block
@@ -113,6 +119,18 @@ main aside
 
 //-----------------------------------------------------------------------------
 
+@media screen and (min-width: 32em)
+
+  main article figure
+    margin-left: 0
+    margin-right: 0
+    figcaption
+      margin: 0
+    .wrap
+      border-radius: 4px
+
+//-----------------------------------------------------------------------------
+
 @media screen and (min-width: 36em)
 
   main article > img
@@ -131,16 +149,8 @@ main aside
 
 @media screen and (min-width: 40em)
 
-  main article
-
-    figure
-      margin-left: 0
-      margin-right: 0
-      .wrap
-        border-radius: 4px
-
-    & > img
-      margin-bottom: bem(1)
+  main article > img
+    margin-bottom: bem(1)
 
 //-----------------------------------------------------------------------------
 

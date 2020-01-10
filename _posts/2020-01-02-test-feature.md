@@ -3,8 +3,8 @@ layout: feature
 title: "This is a test page for features doncha know"
 excerpt: "The quick brown fox jumps over the lazy dog."
 image:
-  file: test-alexander-mcqueen-show.jpg
-  path: /assets/img/test-alexander-mcqueen-show.jpg
+  file: alexander-mcqueen-show.jpg
+  path: /assets/img/alexander-mcqueen-show.jpg
   ratio: 800x400
   alt: "McQueen"
   caption: "A very good caption that everyone will read."

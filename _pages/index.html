@@ -3,11 +3,9 @@ is_home: true
 permalink: /index.html
 ---
 
-{% comment -%} S U C K ~ S T Y L E ~ U N U S E D
-
 {% assign p = site.posts.first -%}
 {% case p.layout %}
-  {% when 'note' %}{% include note-block.html page=p content=p.content is_home=true %}
+  {% when 'feature' %}{% include feature-block.html page=p content=p.content is_home=true %}
   {% else %}{% include post-block.html page=p content=p.content is_home=true %}
 {% endcase -%}
 
@@ -18,18 +16,19 @@ permalink: /index.html
     <h2>More from this month:</h2>
     <ul class="ul-toc">
     {% for p in site.posts offset: 1 limit: 7 %}
-      {% include toc.html title=p.title excerpt=p.excerpt tags=p.tags url=p.url %}
+      {% include _toc.html title=p.title excerpt=p.excerpt tags=p.tags url=p.url %}
     {% endfor -%}
     </ul>
   </div>
 </aside>
 
-{% endcomment -%}
-
+{% comment -%} T R A D ~ S T Y L E ~ U N U S E D
 {% for p in site.posts limit: 20 %}
 {% unless forloop.first %}<hr class="pagebreak">{% endunless -%}
 {% case p.layout %}
   {% when 'note' %}{% include note-block.html page=p content=p.content is_home=true %}
+  {% when 'photo' %}{% include photo-block.html page=p content=p.content is_home=true %}
   {% else %}{% include post-block.html page=p content=p.content is_home=true %}
 {% endcase -%}
 {% endfor -%}
+{% endcomment -%}

@@ -126,18 +126,11 @@ footer
     margin: 0 auto
 
   .nav ul
-    display: flex
-    align-items: center
-    justify-content: center
-    margin: 0
-    height: bem(2)
-    li
-      display: inline
-      padding-right: 0.5em
-      &:not(:last-of-type)::after
-        content: "-"
-        padding-left: 0.5em
-        color: $mix-color
+    padding-top: bem(1)
+    padding-bottom: bem(1)
+    margin: auto
+    list-style-type: none
+    text-align: center
 
 .ul-toc
   margin-left: 1em
@@ -159,6 +152,22 @@ footer
 
   body
     font-size: 112.5%
+
+  footer .nav ul
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0
+    padding: 0
+    text-align: left
+    height: bem(2)
+    li
+      display: inline
+      padding-right: 0.5em
+      &:not(:last-of-type)::after
+        content: "-"
+        padding-left: 0.5em
+        color: $mix-color
 
 //-----------------------------------------------------------------------------
 

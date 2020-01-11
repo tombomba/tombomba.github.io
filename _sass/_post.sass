@@ -55,7 +55,6 @@ main article
     margin-top: 0
 
   figure
-    max-width: $max-width
     margin: 0 -1em bem(1) -1em
     .wrap
       position: relative
@@ -77,6 +76,7 @@ main article
         margin: 0
         padding: 0
         @include font-ratio(12/16)
+        color: lighten($text-color, 15%)
 
   & > img
     display: block
@@ -151,6 +151,11 @@ main aside
 
 @media screen and (min-width: 48em)
 
+  main article figure
+    width: calc(100% + bem(2))
+    margin-left: bem(-1)
+    margin-right: bem(-1)
+
   main article > img
     margin-bottom: bem(1)
     &.top
@@ -173,6 +178,11 @@ main aside
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 72em)
+
+  main article figure
+    width: calc(100% + bem(4))
+    margin-left: bem(-2)
+    margin-right: bem(-2)
 
   main article > img.left
     &.pull

@@ -3,6 +3,7 @@ _snips
 _notes
 favicon-package.zip
 /assets/img/test*
+/assets/img/drafts
 .sass-cache
 .jekyll-cache/
 .jekyll-metadata

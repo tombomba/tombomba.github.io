@@ -81,8 +81,13 @@ main article
   & > img
     display: block
     margin: bem(1) auto 1em auto
+    max-width: 100%
     background-color: $bg-color
     overflow: hidden
+    &.half
+      max-width: ($max-width / 2)
+    &.third
+      max-width: ($max-width / 3)
     &.top
       margin-top: 0.415em
       margin-bottom: bem(1) + 0.66em
@@ -90,6 +95,10 @@ main article
       border-width: thin
       border-style: solid
       border-color: inherit
+    &.saturate
+      filter: saturate(8)
+    &.rounded
+      border-radius: 4px
     &.transparent
       background-color: $body-color
 
@@ -121,13 +130,14 @@ main aside
 
 @media screen and (min-width: 32em)
 
-  main article figure
-    margin-left: 0
-    margin-right: 0
-    figcaption
-      margin: 0
-    .wrap
-      border-radius: 4px
+  main article
+    figure
+      margin-left: 0
+      margin-right: 0
+      figcaption
+        margin: 0
+      .wrap
+        border-radius: 4px
 
 //-----------------------------------------------------------------------------
 

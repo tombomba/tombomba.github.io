@@ -141,39 +141,31 @@ main aside
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 36em)
+@media screen and (min-width: 40em)
 
   main article > img
     &.top
       margin-top: 0
-    &.left
-      float: left
-      margin-left: 0
-      margin-right: bem(1)
-    &.right
-      float: right
-      margin-left: bem(1)
-      margin-right: 0
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40em)
-
-  main article > img
-    margin-bottom: bem(1)
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 48em)
 
   main article > img
+    margin-bottom: bem(1)
     &.top
       margin-bottom: bem(1)
     &.left
+      float: left
+      margin-left: 0
+      margin-right: bem(1)
       &.tilt
         transform: rotate(-3deg)
         margin-left: -1em
     &.right
+      float: right
+      margin-left: bem(1)
+      margin-right: 0
       &.tilt
         transform: rotate(3deg)
         margin-right: -1em

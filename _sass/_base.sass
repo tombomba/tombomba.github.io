@@ -64,7 +64,7 @@ header[role="banner"]
     width: 100%
 
   .icon,
-  .logo-text
+  .text
     display: flex
     align-items: center
     justify-content: center
@@ -74,17 +74,17 @@ header[role="banner"]
     width: auto
     height: 24px
 
-  .logo-text h1
-    font-family: 'Bungee', $system
+  .text h1
+    font-family: 'Bungee Shade', $system
     font-size: percentage(37/18)
     font-weight: 900
     line-height: 1
     color: $logo-color
-    a:link, a:visited
-      color: $logo-color
+    a
       text-decoration: none
-    a:hover
-      text-decoration: none
+      &:link,
+      &:visited
+        color: $logo-color
 
 main article
   max-width: $max-width

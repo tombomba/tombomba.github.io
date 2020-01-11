@@ -56,6 +56,7 @@ main article
 
   figure
     margin: 0 -1em bem(1) -1em
+    padding-bottom: 0.415em
     .wrap
       position: relative
       padding-bottom: 56.25%
@@ -73,10 +74,9 @@ main article
       margin: 0 1em
       padding: 0
       p
+        display: none
         margin: 0
         padding: 0
-        @include font-ratio(12/16)
-        color: lighten($text-color, 15%)
 
   & > img
     display: block
@@ -136,6 +136,10 @@ main aside
       margin-right: 0
       figcaption
         margin: 0
+        p
+          display: block
+          @include font-ratio(12/16)
+          color: lighten($text-color, 10%)
       .wrap
         border-radius: 4px
 

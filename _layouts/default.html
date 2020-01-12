@@ -54,18 +54,16 @@
 <body>
 
 <header role="banner">
-
+    {% if page.is_page or page.image.path %}
     <div class="text">
       <h1><a href="{{ site.url }}">{{ site.title | upcase }}</a></h1>
     </div>
-
-    <!--
+    {% else %}
     <div class="icon">
       <a href="{{ site.url }}"><img src="/assets/img/cool.gif" alt="{{ site.description }}"></a>
     </div>
-    -->
+    {% endif %}
     <hr>
-
 </header>
 
 <main role="main">

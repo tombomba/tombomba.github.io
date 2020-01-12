@@ -1,13 +1,13 @@
 ---
 layout: feature
-title: "This is a test page for features doncha know"
-excerpt: "The quick brown fox jumps over the lazy dog."
+title: "Sure, Bong, but lemme see your house first"
+excerpt: "Bong Joon-ho's satire is a great movie and a weak criticism."
 image:
-  file: alexander-mcqueen-show.jpg
-  path: /assets/img/alexander-mcqueen-show.jpg
-  ratio: 800x400
-  alt: "McQueen"
-  caption: "A very good caption that everyone will read."
+  file: parasite-bong-960x540.jpg
+  path: /assets/img/parasite-bong-960x540.jpg
+  ratio: 960x540
+  alt: "Film still from Parasite, 2019"
+  caption: "\"Parasite\" (CJ Entertainment, 2019)"
 date: 2020-01-02 14:40 -0800
 ---
 

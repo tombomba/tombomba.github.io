@@ -80,16 +80,17 @@ main article
 
   & > img
     display: block
-    margin: bem(1) auto 1em auto
+    margin: 0 auto bem(1) auto
     max-width: 100%
     background-color: $bg-color
+    vertical-align: top
     overflow: hidden
     &.half
       max-width: ($max-width / 2)
     &.third
       max-width: ($max-width / 3)
     &.top
-      margin-top: 0
+      margin-top: bem(1) + 0.415em
       margin-bottom: bem(1) + 0.415em
     &.border
       border-width: thin
@@ -144,20 +145,10 @@ main aside
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 40em)
-
-  main article > img
-    &.top
-      margin-top: 0
-
-//-----------------------------------------------------------------------------
-
 @media screen and (min-width: 48em)
 
   main article > img
-    margin-bottom: bem(1)
-    &.top
-      margin-bottom: bem(1)
+    margin-bottom: 1em
     &.left
       float: left
       margin-left: 0

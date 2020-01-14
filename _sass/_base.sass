@@ -32,14 +32,14 @@ body
   padding: 0 1em
 
 a
-  text-decoration: underline
+  text-decoration: none
   text-decoration-skip-ink: auto
   &:link
     color: $link-color
   &:visited
     color: $visited-color
   &:hover
-    text-decoration: none
+    text-decoration: underline
   &:active
     color: $active-color
 
@@ -75,16 +75,15 @@ header[role="banner"]
     height: 24px
 
   .text h1
-    font-family: 'Bungee Shade', $system
+    font-family: $sans
     font-size: percentage(37/18)
     font-weight: 900
     line-height: 1
-    color: $logo-color
-    a
-      text-decoration: none
-      &:link,
-      &:visited
-        color: $logo-color
+    letter-spacing: -1px
+    color: $link-color
+    a:link,
+    a:visited
+      color: $link-color
 
 main article
   max-width: $max-width

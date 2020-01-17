@@ -90,7 +90,7 @@ main article
     &.third
       max-width: ($max-width / 3)
     &.top
-      margin-top: bem(1) + 0.415em
+      margin-top: 0
       margin-bottom: bem(1) + 0.415em
     &.border
       border-width: thin
@@ -138,8 +138,11 @@ main aside
       figcaption
         margin: 0
         p
+          max-width: 100%
           display: block
-          @include font-ratio(12/16)
+          margin-top: 0.83em
+          font-size: percentage(12/16)
+          line-height: (($line-height - 1) / 2) + 1
       .wrap
         border-radius: 4px
 

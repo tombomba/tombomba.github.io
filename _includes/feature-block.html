@@ -26,10 +26,9 @@
     </figure>
   {% endif -%}
 
-  {% if include.is_home %}<header class="home feature"><h1><a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a></h1>{% else %}<header class="feature"><h1>{{ titlef }}</h1>{% endif %}
-  <ul><li><a href="/about/">{{ p.author | default: site.author }}</a></li><li><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></li></ul>
-  </header>
+  {% capture headline %}{% if include.is_home %}<header class="home feature"><h1><a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a></h1>{% else %}<header class="feature"><h1>{{ titlef }}</h1>{% endif %}
+  <ul><li><a href="/about/">{{ p.author | default: site.author }}</a></li><li><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></li></ul></header><p>{% endcapture -%}
 
-  {{ copy }}
+  {{ copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' | strip | normalize_whitespace }}
 
 </article>

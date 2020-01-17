@@ -2,7 +2,6 @@
 is_home: true
 permalink: /index.html
 ---
-
 {% assign p = site.posts.first -%}
 {% case p.layout %}
   {% when 'feature' %}{% include feature-block.html page=p content=p.content is_home=true %}
@@ -13,7 +12,7 @@ permalink: /index.html
 
 <aside>
   <div class="recent">
-    <h2>More from this month:</h2>
+    <h2>More bombast:</h2>
     <ul class="ul-toc">
     {% for p in site.posts offset: 1 limit: 7 %}
       {% include _toc.html title=p.title excerpt=p.excerpt tags=p.tags url=p.url %}
@@ -22,11 +21,11 @@ permalink: /index.html
   </div>
 </aside>
 
-{% comment -%} T R A D ~ S T Y L E ~ U N U S E D
+{% comment -%} S U C K ~ S T Y L E ~ U N U S E D
 {% for p in site.posts limit: 20 %}
 {% unless forloop.first %}<hr class="pagebreak">{% endunless -%}
 {% case p.layout %}
-  {% when 'note' %}{% include note-block.html page=p content=p.content is_home=true %}
+  {% when 'feature' %}{% include feature-block.html page=p content=p.content is_home=true %}
   {% when 'photo' %}{% include photo-block.html page=p content=p.content is_home=true %}
   {% else %}{% include post-block.html page=p content=p.content is_home=true %}
 {% endcase -%}

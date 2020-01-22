@@ -1,5 +1,6 @@
 ---
-title: "Tarantino wants to direct television (again)"
+layout: feature
+title: "Tarantino wants to do television (again)"
 excerpt: "Quentin claims to have written episodes of an old-style western show."
 image:
   file: tarantino-once-upon-a-time-673x379.jpg

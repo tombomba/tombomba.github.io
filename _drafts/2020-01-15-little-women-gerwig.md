@@ -1,6 +1,7 @@
 ---
 layout: feature
 title: "Scattered thoughts on 'Little Women' by an ignorant man"
+excerpt: "Greta Gerwig's \"Little Women\" left confused me for the first hour, and by the end of the second, disappointed."
 image:
   file: little-women-gerwig-960x540.jpg
   path: /assets/img/little-women-gerwig-960x540.jpg

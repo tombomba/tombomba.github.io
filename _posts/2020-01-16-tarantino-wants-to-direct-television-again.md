@@ -3,9 +3,9 @@ layout: feature
 title: "Tarantino wants to do television (again)"
 excerpt: "Quentin claims to have written episodes of an old-style western show."
 image:
-  file: tarantino-once-upon-a-time-673x379.jpg
-  path: /assets/img/tarantino-once-upon-a-time-673x379.jpg
-  ratio: 673x379
+  file: tarantino-once-upon-a-time-960x540.jpg
+  path: /assets/img/tarantino-once-upon-a-time-960x540.jpg
+  ratio: 960x540
   alt: "Film still from Once Upon a Time in Hollywood"
 date: 2020-01-16 20:54 -0800
 ---

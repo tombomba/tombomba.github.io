@@ -1,7 +1,7 @@
 ---
 layout: feature
 title: "Oscars 2019: Death by snub snub"
-excerpt: "the quick brown fox jumps over the lazy dog"
+excerpt: "They were spoiled for choice and still made some of the dumbest, blandest selections possible."
 date: 2020-01-14 22:44 -0800
 ---
 

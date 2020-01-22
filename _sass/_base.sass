@@ -63,20 +63,17 @@ header[role="banner"]
   hr
     width: 100%
 
-  .icon,
-  .text
+  .flexwrap
+    height: bem(2)
     display: flex
     align-items: center
-    justify-content: center
-    height: bem(2)
+    justify-content: space-between
 
-  .icon img
-    width: auto
-    height: 24px
-
-  .text h1
+  .title h1,
+  .home p,
+  .archive p,
     font-family: $sans
-    font-size: percentage(37/18)
+    font-size: percentage(29/18)
     font-weight: 900
     line-height: 1
     letter-spacing: -1px
@@ -84,6 +81,16 @@ header[role="banner"]
     a:link,
     a:visited
       color: $link-color
+
+  .home
+    order: 2
+
+  .title
+    flex: 1
+    order: 1
+
+  .archive
+    order: 3
 
 main article
   max-width: $max-width
@@ -152,9 +159,6 @@ footer
   body
     font-size: 112.5%
 
-  header[role="banner"] .text h1
-    font-size: percentage(37/18)
-
   footer .nav ul
     display: flex
     align-items: center
@@ -170,6 +174,27 @@ footer
         content: "-"
         padding-left: 0.5em
         color: $mix-color
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40em)
+
+  header[role="banner"]
+
+    .title h1,
+    .home p,
+    .archive p,
+      font-size: percentage(37/18)    
+
+    .home
+      order: 1
+
+    .title
+      order: 2
+      text-align: center
+
+    .archive
+      order: 3
 
 //-----------------------------------------------------------------------------
 

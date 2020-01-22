@@ -71,7 +71,7 @@ header[role="banner"]
     justify-content: space-between
 
   .title
-    flex: 1 1 80%
+    flex: 1 1 70%
     order: 2
     align-self: center
     h1
@@ -87,16 +87,19 @@ header[role="banner"]
         color: $link-color
 
   .home
-    flex: 0 1 10%
+    flex: 0 1 15%
     order: 1
     align-self: center
     p
       font-family: $sans
       font-size: percentage(29/18)
       line-height: 1
+      a:link,
+      a:visited
+        color: $link-color
 
   .archive
-    flex: 0 1 10%
+    flex: 0 1 15%
     order: 3
     align-self: center
     p

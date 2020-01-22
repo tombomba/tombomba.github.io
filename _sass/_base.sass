@@ -67,7 +67,13 @@ header[role="banner"]
     height: bem(2)
     display: flex
     align-items: center
+    align-content: center
     justify-content: space-between
+
+  .title,
+  .home,
+  .archive
+    align-self: center
 
   .title h1
     font-family: $sans
@@ -80,7 +86,15 @@ header[role="banner"]
     a:visited
       color: $link-color
 
+  .home p
+    display: none
+    font-family: $sans
+    font-size: percentage(29/18)
+    font-weight: 900
+    line-height: 1
+
   .archive p
+    padding-top: 5px
     line-height: 1
 
 main article
@@ -172,8 +186,24 @@ footer
 
   header[role="banner"]
 
-    .title h1
-      font-size: percentage(37/18)
+    .title
+      flex: 1 1 60%
+      order: 2
+      h1
+        font-size: percentage(37/18)
+        text-align: center
+
+    .home
+      flex: 0 1 20%
+      order: 1
+      p
+        display: block
+        text-align: left
+
+    .archive
+      flex: 0 1 20%
+      order: 3
+      text-align: right
 
 //-----------------------------------------------------------------------------
 

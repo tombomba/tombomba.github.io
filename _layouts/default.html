@@ -61,7 +61,7 @@
         <p><a href="{{ site.url }}" aria-label="home">&#9737;</a></p>
       </div>
       <div class="archive">
-        <p><a href="{{ site.posts.first.date | date: '/%Y/' | prepend: site.url }}" aria-label="this month's posts">{{ site.posts.first.date | date: "%b %Y" }}</a></p>
+        <p><a href="{{ site.posts.first.date | date: '/%Y/%m/' | prepend: site.url }}" aria-label="this month's posts">{{ site.posts.first.date | date: "%b %Y" }}</a></p>
       </div>
     </div>
     <hr>

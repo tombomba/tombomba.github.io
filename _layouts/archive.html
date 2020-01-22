@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+{% comment -%}
+  !! Cobble together a datestring based on front matter permalink /:year/:month/ !!
+  !! shift removes dead space at the start of array (caused by initial permalink slash) !!
+{% endcomment -%}
+{% assign rawdate = page.permalink | split: '/' | shift -%}
+
+{% assign page_year = rawdate[0] -%}
+{% assign page_month = rawdate[1] -%}
+
+{% if page_month and page_month !='' and page_month != nil -%}
+  {% assign is_month_index = true -%}
+  {% assign title_string = rawdate | push: '01' | join: '-' | date: '%b %Y' -%}
+{% else -%}
+  {% assign is_year_index = true -%}
+  {% assign title_string = page_year -%}
+{% endif -%}
+
+<article>{% if page.date %}<!-- {{ page.date }} -->{% endif %}
+
+  <header class="page">
+    <h1>{{ title_string }}</h1>
+  </header>
+
+  <ul class="ul-toc">
+
+    {% for p in site.posts -%}
+
+      {% assign current_month = p.date | date: "%m" -%}
+      {% assign current_year = p.date | date: "%Y" -%}
+
+      {% if is_month_index and current_month == page_month and current_year == page_year -%}
+        {% include _toc.html title=p.title excerpt=p.excerpt tags=p.tags url=p.url %}
+      {% elsif is_year_index and current_year == page_year -%}
+        {% include _toc.html title=p.title excerpt=p.excerpt tags=p.tags url=p.url %}
+      {% endif -%}
+
+    {% endfor -%}
+
+  </ul>
+
+</article>

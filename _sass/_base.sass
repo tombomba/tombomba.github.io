@@ -69,28 +69,19 @@ header[role="banner"]
     align-items: center
     justify-content: space-between
 
-  .title h1,
-  .home p,
-  .archive p,
+  .title h1
     font-family: $sans
-    letter-spacing: -1px
     font-size: percentage(29/18)
     font-weight: 900
     line-height: 1
+    letter-spacing: -1px
     color: $link-color
     a:link,
     a:visited
       color: $link-color
 
-  .home
-    order: 2
-
-  .title
-    flex: 1
-    order: 1
-
-  .archive
-    order: 3
+  .archive p
+    line-height: 1
 
 main article
   max-width: $max-width
@@ -181,20 +172,8 @@ footer
 
   header[role="banner"]
 
-    .title h1,
-    .home p,
-    .archive p,
+    .title h1
       font-size: percentage(37/18)
-
-    .home
-      order: 1
-
-    .title
-      order: 2
-      text-align: center
-
-    .archive
-      order: 3
 
 //-----------------------------------------------------------------------------
 

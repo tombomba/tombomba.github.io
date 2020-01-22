@@ -2,6 +2,8 @@
 is_home: true
 permalink: /index.html
 ---
+
+
 {% assign p = site.posts.first -%}
 {% case p.layout %}
   {% when 'feature' %}{% include feature-block.html page=p content=p.content is_home=true %}
@@ -21,13 +23,26 @@ permalink: /index.html
   </div>
 </aside>
 
-{% comment -%} S U C K ~ S T Y L E ~ U N U S E D
-{% for p in site.posts limit: 20 %}
-{% unless forloop.first %}<hr class="pagebreak">{% endunless -%}
-{% case p.layout %}
-  {% when 'feature' %}{% include feature-block.html page=p content=p.content is_home=true %}
-  {% when 'photo' %}{% include photo-block.html page=p content=p.content is_home=true %}
-  {% else %}{% include post-block.html page=p content=p.content is_home=true %}
-{% endcase -%}
+{% comment %} B L O G ~ S T Y L E ~ U N U S E D
+{% assign timeframe = 604800 -%}<!-- one week -->
+{% for p in site.posts %}
+
+  {% assign post_in_seconds = p.date | date: "%s" | plus: 0 -%}
+  {% assign recent_posts = "now" | date: "%s" | minus: timeframe -%}
+
+  {% if post_in_seconds > recent_posts %}
+    {% unless forloop.first %}<hr class="pagebreak">{% endunless -%}
+    {% case p.layout %}
+      {% when 'feature' %}{% include feature-block.html page=p content=p.content is_home=true %}
+      {% when 'photo' %}{% include photo-block.html page=p content=p.content is_home=true %}
+      {% else %}{% include post-block.html page=p content=p.content is_home=true %}
+    {% endcase -%}
+
+  {% else %}
+    {% break %}
+
+  {% endif -%}
+
 {% endfor -%}
+
 {% endcomment -%}

@@ -3,27 +3,17 @@ is_home: true
 permalink: /index.html
 ---
 
+{% for p in site.posts limit: 10 %}
 
-{% assign p = site.posts.first -%}
-{% case p.layout %}
-  {% when 'feature' %}{% include feature-block.html page=p content=p.content is_home=true %}
-  {% else %}{% include post-block.html page=p content=p.content is_home=true %}
-{% endcase -%}
+  {% case p.layout %}
+    {% when 'feature' %}{% include feature-block.html page=p content=p.content is_home=true %}
+    {% when 'photo' %}{% include photo-block.html page=p content=p.content is_home=true %}
+    {% else %}{% include post-block.html page=p content=p.content is_home=true %}
+  {% endcase -%}
 
-<hr class="pagebreak">
+{% endfor -%}
 
-<aside>
-  <div class="recent">
-    <h2>More bombast:</h2>
-    <ul class="ul-toc">
-    {% for p in site.posts offset: 1 limit: 7 %}
-      {% include _toc.html title=p.title excerpt=p.excerpt tags=p.tags url=p.url %}
-    {% endfor -%}
-    </ul>
-  </div>
-</aside>
-
-{% comment %} B L O G ~ S T Y L E ~ U N U S E D
+{% comment %}
 {% assign timeframe = 604800 -%}<!-- one week -->
 {% for p in site.posts %}
 
@@ -44,5 +34,4 @@ permalink: /index.html
   {% endif -%}
 
 {% endfor -%}
-
 {% endcomment -%}

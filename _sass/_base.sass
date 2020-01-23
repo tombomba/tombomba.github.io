@@ -29,7 +29,7 @@ body
   -ms-text-size-adjust: auto
   -webkit-text-size-adjust: auto
 
-  padding: 0 1em
+  padding: 1em
 
 a
   text-decoration: none
@@ -43,59 +43,24 @@ a
   &:active
     color: $active-color
 
-hr
-  width: 100%
-  margin: 0
-  padding: 0
-  height: 0
-  border: 0
-  border-top: 1px solid $shim-dark
-  border-bottom: 1px solid $shim-light
-  background-color: $body-color
-  &.pagebreak
-    margin-top: bem(2)
-
 //-----------------------------------------------------------------------------
 
 header[role="banner"]
-  max-width: 100%
 
-  hr
-    width: 100%
-
-  .flexwrap
-    height: bem(2)
-    display: flex
-    align-items: center
-    align-content: center
-    justify-content: space-between
-
-  .title
-    flex: 1
-    h1
-      font-family: $sans
-      font-size: percentage(37/18)
-      font-weight: 900
-      line-height: 1
-      letter-spacing: -1px
+  h1
+    font-size: percentage(37/18)
+    font-weight: 700
+    line-height: 1
+    &::after
+      content: "."
       color: $link-color
-      a:link,
-      a:visited
-        color: $link-color
-
-  .home
-    display: none
-
-  .archive
-    align-self: center
-    p
-      padding-top: 3px
-      line-height: 1
-      text-align: right
+    a:link,
+    a:visited
+      color: $link-color
 
 main article
   max-width: $max-width
-  margin: bem(2) auto 0 auto
+  margin-top: bem(2)
   @extend .clearfix
 
   h2, h3, h4, h5, h6
@@ -159,6 +124,7 @@ footer
 
   body
     font-size: 112.5%
+    padding: bem(1)
 
   footer .nav ul
     display: flex
@@ -180,38 +146,9 @@ footer
 
 @media screen and (min-width: 48em)
 
-  body
-    padding: 0 bem(1)
-
   header[role="banner"]
-
-    .title
-      flex: 1 1 70%
-      order: 2
-      align-self: center
-      h1
-        text-align: center
-
-    .home
-      display: block
-      flex: 0 1 15%
-      order: 1
-      align-self: center
-      p
-        font-family: $sans
-        font-size: percentage(29/18)
-        font-weight: 900
-        line-height: 1
-        a:link,
-        a:visited
-          color: $link-color
-
-    .archive
-      flex: 0 1 15%
-      order: 3
-      align-self: center
-      p
-        padding-top: 0
+    h1
+      font-size: percentage(47/18)
 
   main article
     blockquote
@@ -220,3 +157,10 @@ footer
 
   .ul-toc
     margin-left: 0
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 64em)
+
+  body
+    padding: 5% 10%

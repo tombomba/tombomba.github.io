@@ -31,4 +31,10 @@
 
   {{ copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' | strip | normalize_whitespace }}
 
+  {% if include.is_home %}
+  <div class="permalink">
+    <p><a href="{{ p.url | prepend: site.url }}" aria-label="permalink">+</a></p>
+  </div>
+  {% endif -%}
+
 </article>

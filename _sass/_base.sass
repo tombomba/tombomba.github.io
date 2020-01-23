@@ -71,38 +71,25 @@ header[role="banner"]
     justify-content: space-between
 
   .title
-    flex: 1 1 70%
-    order: 2
-    align-self: center
+    flex: 1
     h1
       font-family: $sans
-      font-size: percentage(29/18)
+      font-size: percentage(37/18)
       font-weight: 900
       line-height: 1
       letter-spacing: -1px
-      text-align: center
       color: $link-color
       a:link,
       a:visited
         color: $link-color
 
   .home
-    flex: 0 1 15%
-    order: 1
-    align-self: center
-    p
-      font-family: $sans
-      font-size: percentage(29/18)
-      line-height: 1
-      a:link,
-      a:visited
-        color: $link-color
+    display: none
 
   .archive
-    flex: 0 1 15%
-    order: 3
     align-self: center
     p
+      padding-top: 3px
       line-height: 1
       text-align: right
 
@@ -191,19 +178,37 @@ footer
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 40em)
-
-  header[role="banner"]
-
-    .title h1
-      font-size: percentage(37/18)
-
-//-----------------------------------------------------------------------------
-
 @media screen and (min-width: 48em)
 
   body
     padding: 0 bem(1)
+
+  header[role="banner"]
+
+    .title
+      flex: 1 1 70%
+      order: 2
+      align-self: center
+      h1
+        text-align: center
+
+    .home
+      display: block
+      flex: 0 1 15%
+      order: 1
+      align-self: center
+      p
+        font-family: $sans
+        font-size: percentage(29/18)
+        font-weight: 900
+        line-height: 1
+
+    .archive
+      flex: 0 1 15%
+      order: 3
+      align-self: center
+      p
+        padding-top: 0
 
   main article
     blockquote

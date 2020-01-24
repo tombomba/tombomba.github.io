@@ -1,5 +1,4 @@
 ---
-layout: feature
 title: "Trust me, I'm a professional"
 excerpt: "Of course I'm a serious critic of serious films. What else would I be?"
 tags: [about]

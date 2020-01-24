@@ -1,5 +1,4 @@
 ---
-layout: feature
 title: "Tarantino wants to do television (again)"
 excerpt: "Quentin claims to have written episodes of an old-style western show."
 image:

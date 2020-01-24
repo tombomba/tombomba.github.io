@@ -59,13 +59,14 @@ header[role="banner"]
       color: $link-color
 
 main article
-  max-width: $max-width + bem(2)
+  max-width: $max-width + bem(1)
   margin-top: bem(2)
   &:last-of-type
     margin-bottom: bem(4)
   @extend .clearfix
 
   h2, h3, h4, h5, h6
+    max-width: $max-width
     font-size: 100%
     margin-top: bem(1)
 

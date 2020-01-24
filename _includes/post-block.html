@@ -13,26 +13,6 @@
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}
 {% endif -%}
 
-{% if include.is_home %}
-{% capture datelink %}<a href="{{ p.url | prepend: site.url }}">{{ p.date | date: "%d %b" }}</a>{% endcapture %}
-{% else %}
-{% assign datelink = p.date | date_to_string %}
-{% endif -%}
-{% capture datef %}&nbsp;<span class="dateout"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">({{ datelink }})</time></span>{% endcapture -%}
-{% assign copysize = copy | size | minus: 4 -%}
-{% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' | strip | normalize_whitespace -%}
-
-{% capture punc -%}
-  {% unless p.title contains '.' or p.title contains '!' or p.title contains '?' -%}
-    {% assign last_char = p.title | slice: -1, 1 -%}
-    {% if last_char == '"' or last_char == "'" -%}
-      <span class="dash"></span>
-    {% else -%}
-      <span class="punc"></span>
-    {% endif -%}
-  {% endunless -%}
-{% endcapture -%}
-
 <article><!-- {{ copy | number_of_words }} words -->
 
   {% if p.image.file %}
@@ -40,14 +20,21 @@
     {% assign w = aspectr[0] | times: 1.0 -%}
     {% assign h = aspectr[1] | times: 1.0 -%}
     {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
-    <figure class="post">
+    <figure class="feature">
       <div class="wrap" style="padding-bottom:{{ percent }}%"><img src="{{ p.image.file | prepend: site.img_dir }}" alt="{{ p.image.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}"></div>
       {% if p.image.caption %}<figcaption>{{ p.image.caption | strip | smartify | markdownify | normalize_whitespace }}</figcaption>{% endif -%}
     </figure>
   {% endif -%}
 
-  {% capture headline %}{% if include.is_home %}<header class="home post"><h1><a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a>{{ punc }}</h1>{% else %}<header class="post"><h1>{{ titlef }}{{ punc }}</h1>{% endif -%}<p>{% endcapture -%}
+  {% capture headline %}{% if include.is_home %}<header class="home feature"><h1><a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a></h1>{% else %}<header class="feature"><h1>{{ titlef }}</h1>{% endif %}
+  <ul><li><a href="/about/">{{ p.author | default: site.author }}</a></li><li><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></li></ul></header><p>{% endcapture -%}
 
   {{ copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' | strip | normalize_whitespace }}
+
+  {% if include.is_home %}
+  <div class="permalink">
+    <p><a href="{{ p.url | prepend: site.url }}" aria-label="permalink">+</a></p>
+  </div>
+  {% endif -%}
 
 </article>

@@ -1,9 +1,8 @@
 ---
 title: "'Ford v Ferrari' goes put-put-put"
-layout: note
 excerpt: "A movie with no bad scenes but no good ones,&nbsp;either."
 image:
-  file: ford-v-ferrari-2019-mangold.jpg
+  file: ford-v-ferrari-800x450.jpg
   path: /assets/img/ford-v-ferrari-800x450.jpg
   ratio: 800x450
   alt: "Photo still from Ford v Ferrari 2019"

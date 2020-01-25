@@ -1,5 +1,6 @@
 ---
 title: "The quick brown fox jumps over the lazy dog"
+excerpt: "Aenean dui ex, commodo in scelerisque eu, suscipit id dolor. Nulla non porttitor mauris, a interdum nibh."
 date: 2020-01-30 12:34 -0800
 ---
 

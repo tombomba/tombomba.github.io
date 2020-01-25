@@ -1,7 +1,10 @@
 ---
-title: "This is a post in the future"
+title: "The quick brown fox jumps over the lazy dog"
 date: 2020-01-30 12:34 -0800
 ---
+
+![attack helicopter animation]({{ site.img_dir }}attack-helicopter-291x209.gif){: .top .right .pull .transparent }
+
 Aenean dui ex, commodo in scelerisque eu, suscipit id dolor. Nulla non porttitor mauris, a interdum nibh. Suspendisse nisi dolor, sagittis id posuere ac, porttitor ut augue. Sed nibh tellus, pretium eu neque sit amet, eleifend porttitor nisl. In hac habitasse platea dictumst. Nam ornare ultrices orci, viverra ullamcorper lacus commodo at. Suspendisse tempor neque nulla, ut posuere metus pharetra nec. Nunc orci dui, ornare eget enim sed, dignissim aliquet lorem. Mauris at dapibus urna, id consectetur erat. Pellentesque lorem metus, pretium ac pellentesque id, accumsan et neque. Donec fermentum gravida velit, vitae aliquam nulla auctor vitae.
 
 Maecenas quis volutpat est, vitae sagittis ex. Fusce sed ligula vel nisi tincidunt condimentum. In hac habitasse platea dictumst. Maecenas sed velit risus. Praesent vitae nisl sed turpis egestas tristique. Cras ut porta sapien. Donec vitae eleifend turpis. Vestibulum massa eros, commodo at quam tincidunt, accumsan malesuada nisi. Phasellus at ipsum consectetur, imperdiet libero eget, ultrices odio. Phasellus venenatis libero ut convallis placerat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.

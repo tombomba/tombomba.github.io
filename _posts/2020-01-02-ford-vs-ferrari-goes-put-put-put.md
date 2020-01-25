@@ -4,7 +4,7 @@ layout: note
 excerpt: "A movie with no bad scenes but no good ones,&nbsp;either."
 image:
   file: ford-v-ferrari-2019-mangold.jpg
-  path: /assets/img/ford-v-ferrari-2019-mangold.jpg
+  path: /assets/img/ford-v-ferrari-800x450.jpg
   ratio: 800x450
   alt: "Photo still from Ford v Ferrari 2019"
 date: 2020-01-02 2:53 -0800

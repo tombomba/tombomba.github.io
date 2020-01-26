@@ -1,10 +1,13 @@
 ---
-title: "The quick brown fox jumps over the lazy dog"
+title: "Star Trek: Old notes on a dubious future"
 excerpt: "Aenean dui ex, commodo in scelerisque eu, suscipit id dolor. Nulla non porttitor mauris, a interdum nibh."
-date: 2020-01-30 12:34 -0800
+image:
+  file: jean-luc-picard-960x420.jpg
+  path: /assets/img/jean-luc-picard-960x420.jpg
+  ratio: 960x420
+  alt: "Patrick Stewart in Star Trek Picard"
+date: 2020-01-27 12:34 -0800
 ---
-
-![attack helicopter animation]({{ site.img_dir }}attack-helicopter-291x209.gif){: .top .right .pull .transparent }
 
 Aenean dui ex, commodo in scelerisque eu, suscipit id dolor. Nulla non porttitor mauris, a interdum nibh. Suspendisse nisi dolor, sagittis id posuere ac, porttitor ut augue. Sed nibh tellus, pretium eu neque sit amet, eleifend porttitor nisl. In hac habitasse platea dictumst. Nam ornare ultrices orci, viverra ullamcorper lacus commodo at. Suspendisse tempor neque nulla, ut posuere metus pharetra nec. Nunc orci dui, ornare eget enim sed, dignissim aliquet lorem. Mauris at dapibus urna, id consectetur erat. Pellentesque lorem metus, pretium ac pellentesque id, accumsan et neque. Donec fermentum gravida velit, vitae aliquam nulla auctor vitae.
 

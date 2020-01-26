@@ -7,7 +7,6 @@ image:
   ratio: 960x541
   alt: "Photo still from Ford v Ferrari 2019"
 date: 2020-01-02 2:53 -0800
-tags: [reviews, cool]
 ---
 
 I once raced over the hills of San Francisco in a beat-up Porsche Carrera, at night, with a 25 year old French girl in the passenger seat. That experience told me everything I needed to know about why men love powerful machines.

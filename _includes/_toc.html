@@ -1,8 +1,6 @@
 {% if include.url == site.posts.first.url %}
-  {% capture iconf %}<img src="{{ '/assets/img/icon-new.gif' | prepend: site.url }}" width="25" alt="new!">{% endcapture %}
+  {% capture iconf %}<img src="{{ '/assets/img/icon-emo-new.png' | prepend: site.url }}" width="16" height="16" alt="new!">{% endcapture %}
 {% elsif include.tags contains 'cool' %}
-  {% capture iconf %}<img src="{{ '/assets/img/icon-cool.gif' | prepend: site.url }}" width="21" alt="cool!">{% endcapture %}
-{% elsif include.tags contains 'review' %}
-  {% capture iconf %}<img src="{{ '/assets/img/icon-review.gif' | prepend: site.url }}" width="52" alt="review!">{% endcapture %}
+  {% capture iconf %}<img src="{{ '/assets/img/icon-emo-cool.png' | prepend: site.url }}" width="16" height="16" alt="cool!">{% endcapture %}
 {% endif -%}
 <li><a href="{{ include.url | prepend: site.url }}">{{ include.title | strip_html | normalize_whitespace | smartify }}</a>{% if iconf %}&nbsp;{{ iconf }}{% endif %}&nbsp;&mdash; {{ include.excerpt | strip_html | normalize_whitespace | smartify }}</li>{% assign iconf = nil -%}

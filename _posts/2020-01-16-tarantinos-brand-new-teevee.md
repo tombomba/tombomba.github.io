@@ -1,5 +1,5 @@
 ---
-title: "Tarantino's old teevee"
+title: "Tarantino's brand new teevee"
 excerpt: "Quentin claims to have written episodes of an old-style western show."
 date: 2020-01-16 20:54 -0800
 ---

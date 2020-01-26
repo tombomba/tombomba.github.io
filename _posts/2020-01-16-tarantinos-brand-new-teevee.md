@@ -4,7 +4,7 @@ excerpt: "Quentin claims to have written episodes of an old-style western show."
 date: 2020-01-16 20:54 -0800
 ---
 
-![Tarantino TV]({{ site.img_dir}}tarantino-teevee-302x302.jpg){: width="302" height="302" .top .left .tilt .pull }
+![Tarantino TV]({{ site.img_dir}}tarantino-teevee-302x302.jpg){: width="302" height="302" .top .left .tilt .pull .rounded }
 
 [Quentin says](https://deadline.com/2020/01/quentin-tarantino-oscar-nominations-once-upon-a-time-in-hollywood-star-trek-bounty-law-tv-series-1202829629/) he wrote 5 episodes of "Bounty Law," the fictional show featured in his recent film "Once Upon a Time ... in Hollywood," and plans to direct them. Where and when remain to be seen.
 

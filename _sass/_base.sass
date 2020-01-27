@@ -76,7 +76,6 @@ main article
 
   ul, ol
     margin-left: 1em
-    max-width: $max-width
 
   blockquote
     padding-left: 0.75em
@@ -95,6 +94,8 @@ footer
   ul
     list-style-type: none
     li
+      //&.nav
+        margin-top: bem(1)
       display: inline
       font-weight: 700
       margin-right: 1em
@@ -106,8 +107,21 @@ footer
       a:visited
         color: $link-color
 
-    //&.nav
-      margin-top: bem(1)
+.ul-toc
+  margin-left: 1em
+  li
+    max-width: $max-width + bem(1)
+    margin-top: bem(1)
+    img
+      vertical-align: middle
+      padding-bottom: 1px
+
+.ul-plain-condensed
+  margin-left: bem(1)
+  margin-top: bem(1)
+  li
+    max-width: $max-width + bem(1)
+    margin: 0
 
 //-----------------------------------------------------------------------------
 

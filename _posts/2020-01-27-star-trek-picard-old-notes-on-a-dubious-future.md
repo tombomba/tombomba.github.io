@@ -1,22 +1,28 @@
 ---
-title: "Star Trek: Old notes on a dubious future"
-excerpt: "Aenean dui ex, commodo in scelerisque eu, suscipit id dolor. Nulla non porttitor mauris, a interdum nibh."
+title: "'Picard': Old notes on a dubious future"
+excerpt: "The show doesn't give you much to think about, but then it doesn’t try to, either."
 image:
   file: jean-luc-picard-960x420.jpg
   path: /assets/img/jean-luc-picard-960x420.jpg
   ratio: 960x420
-  alt: "Patrick Stewart in Star Trek Picard"
+  alt: "Star Trek: Picard"
+  caption: "Patrick Stewart in 'Star Trek: Picard' (CBS All Access, 2020)."
 date: 2020-01-27 12:34 -0800
 ---
+The showrunners swore, in various interviews, they pitched Patrick Stewart a great concept. "Star Trek: Picard" would be a fresh chapter and a new direction. No one was interested in making "Next Generation 2."
 
-Aenean dui ex, commodo in scelerisque eu, suscipit id dolor. Nulla non porttitor mauris, a interdum nibh. Suspendisse nisi dolor, sagittis id posuere ac, porttitor ut augue. Sed nibh tellus, pretium eu neque sit amet, eleifend porttitor nisl. In hac habitasse platea dictumst. Nam ornare ultrices orci, viverra ullamcorper lacus commodo at. Suspendisse tempor neque nulla, ut posuere metus pharetra nec. Nunc orci dui, ornare eget enim sed, dignissim aliquet lorem. Mauris at dapibus urna, id consectetur erat. Pellentesque lorem metus, pretium ac pellentesque id, accumsan et neque. Donec fermentum gravida velit, vitae aliquam nulla auctor vitae.
+Imagine my surprise when "Picard" begins with a cameo by a "Next Generation" cast member and ends with a shot of an iconic "Next Generation" spaceship. While I expect a level of continuity---this is a fictional universe from the 60s, with a protagonist from the 80s---I didn't anticipate gratuitous callbacks and cameos.
 
-Maecenas quis volutpat est, vitae sagittis ex. Fusce sed ligula vel nisi tincidunt condimentum. In hac habitasse platea dictumst. Maecenas sed velit risus. Praesent vitae nisl sed turpis egestas tristique. Cras ut porta sapien. Donec vitae eleifend turpis. Vestibulum massa eros, commodo at quam tincidunt, accumsan malesuada nisi. Phasellus at ipsum consectetur, imperdiet libero eget, ultrices odio. Phasellus venenatis libero ut convallis placerat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+"Star Trek: Picard" is a pot luck of reboot ideas, playing on nostalgia and working over dated sci-fi concepts. While it looks good, with production values at a feature film level, the story is so insular and convoluted I doubt newcomers will make sense of it.
 
-Cras consequat nibh quam, eget ultrices lacus pulvinar nec. Aenean aliquam sagittis risus, in eleifend massa sollicitudin non. Quisque quis elit augue. In vel arcu nibh. Aliquam erat volutpat. Integer ullamcorper mi in nulla sollicitudin laoreet. Vivamus nisl justo, vehicula vitae egestas nec, gravida ut nisl.
+The show was created by Akiva Goldsman, Alex Kurtzman, and Michael Chabon, three people who shouldn't be near genre television, much less a franchise like "Star Trek." Kurtzman wrote "The Amazing Spider-Man 2" and produced the "Mummy" reboot. Chabon is an award winning novelist but still managed to attach himself to "John Carter." The less said about Goldsman's credits, the better.
 
-Praesent at sagittis orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed interdum eros massa, eu commodo justo rhoncus non. Proin at nulla nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris scelerisque augue ac elit posuere, eget ultrices massa sollicitudin. Morbi pellentesque molestie egestas. Phasellus porttitor dui id ornare aliquet. Etiam aliquet est eget odio elementum, non volutpat turpis sodales. Vestibulum libero nisi, sodales sed sodales at, accumsan vitae dolor. Sed commodo posuere mauris sit amet facilisis. Morbi nibh lorem, tristique at ligula a, ullamcorper ultricies sem. Etiam eu tortor interdum, interdum orci in, placerat velit. Vestibulum sed venenatis dolor.
+"Picard's" first episode consists mostly of urgent conversations and a few new characters. A young woman named Dahj is attacked by a group of rogue agents who kill her boyfriend and send her on the run. She has visions of Picard and seeks him out. Naturally, he agrees to help and turns to Dr. Agnes Jurati. Because of a few other plot bumps, he needs information on Starfleet's research into artificial intelligence, which she dutifully supplies.
 
-Praesent pharetra, est vel iaculis venenatis, dui arcu tincidunt ex, a pellentesque eros elit ac quam. Ut auctor mattis scelerisque. Phasellus sed tellus et lacus convallis feugiat. Sed sed est ac felis hendrerit mattis quis vel augue. Maecenas eget sagittis enim. Nulla malesuada justo sit amet commodo viverra. Vestibulum vitae eleifend odio, ut efficitur elit. Mauris nec massa dictum, porta ante quis, consectetur nisl. Praesent pulvinar tempus felis at mattis. Aliquam erat volutpat. Vivamus sodales placerat ante a viverra. Donec egestas tortor ligula. Suspendisse dictum tempor purus at varius. Duis libero eros, consequat at quam maximus, dapibus eleifend ipsum.
+Most of this is for the benefit of the audience, to relate what's what over the last twenty years and kickstart a rather creaky plot. As when Picard agrees to a futuristic TV news interview, in a scene where characters sit across from one another and explain recent galactic history. (When the moment turns hostile, it's only to lend a sense a drama to otherwise flat dialogue.)
 
-Aenean eget neque sem. In hac habitasse platea dictumst. Cras non erat a odio dapibus malesuada sed in lacus. Integer suscipit placerat tortor, consequat accumsan est accumsan nec. Nullam quis tempus nulla. Ut venenatis ipsum massa, vel tempor diam mollis in. Proin tincidunt sapien at porttitor pretium. Pellentesque iaculis mi ac ex maximus, eget consectetur eros iaculis. Curabitur tristique molestie efficitur. Quisque ut massa nec sem commodo venenatis. Cras sit.
+The use of Space CNN is an awkward narrative device but, more than that, the presence of mass media also demonstrates how "Star Trek's" idea of itself has changed. Traditionally, this was a franchise that eschewed bland representations of contemporary life.
+
+Likewise the scattered references to a cataclysmic event on Romulus, and one to environmental tragedy on Mars.
+
+<!-- The first episode of "Star Trek: Picard" is a pot luck of contemporary reboot ideas, slickly produced and playing on nostalgia and affection. It doesn't give you much to think about, but then it doesn't try to, either. -->

@@ -8,7 +8,6 @@ image:
   alt: "Star Trek: Picard"
   caption: "Patrick Stewart in 'Star Trek: Picard' (CBS All Access, 2020)."
 date: 2020-01-27 12:34 -0800
-published: false
 ---
 The showrunners swore, in various interviews, they pitched Patrick Stewart a great concept. "Star Trek: Picard" would be a fresh chapter and a new direction. No one was interested in making "Next Generation 2."
 

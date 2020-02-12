@@ -3,7 +3,7 @@ title: "'The Wes Anderson Movie, Part IX'"
 excerpt: "With Anderson, as with all franchisors, successful repetition is the goal."
 date: 2020-02-12 10:49 -0800
 ---
-![French Dispatch movie poster]({{ site.img_dir }}french-dispatch-anderson-2020-poster-art-333x500.jpg){: .top .right .tilt .pull }
+![French Dispatch movie poster]({{ site.img_dir }}french-dispatch-anderson-2020-poster-art-260x390.jpg){: .top .right .tilt .pull }
 
 Everyone on the internet is required to have an opinion about [the trailer for "The French Dispatch"](https://www.youtube.com/watch?v=TcPk2p0Zaw4) so here's mine:
 

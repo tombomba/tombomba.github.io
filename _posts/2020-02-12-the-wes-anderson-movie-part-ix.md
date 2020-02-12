@@ -17,4 +17,4 @@ This places Anderson in an odd position: an auteurist who is more craftsman than
 
 David Ehrlich, film critic and apparent stan, isn't wrong when he [says](https://twitter.com/davidehrlich/status/1227660182555123713), "Complaining that Wes Anderson has made another Wes Anderson movie is like being mad at a bagel for having a hole in the middle."
 
-But then I can't think of anything more boring than walking into a movie theater knowing exactly what I will see.
+But then I can't think of anything more boring than walking into a new movie by a named director and knowing exactly what I will see.

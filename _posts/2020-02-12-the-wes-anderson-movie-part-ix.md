@@ -9,7 +9,7 @@ Everyone on the internet is required to have an opinion about [the trailer for "
 
 It's an ad for a Wes Anderson movie.
 
-I don't know what "The French Dispatch" is about but what it's about doesn't matter. Anderson lives in his own cinematic universe, sole proprietor of an arthouse franchise. This one will find the audience and achieve the success as the one before, and the one before that.
+I don't know what "The French Dispatch" is about and I still don't after viewing the clip. It doesn't matter. Anderson lives in his own cinematic universe, sole proprietor of an arthouse franchise. This new one will find the audience and achieve the success as the one before, and the one before that.
 
 Years past, critics and audiences thrashed directors for repeating themselves. Not so much anymore. Today, there's comfort in the same again. Anderson succeeds inside the niche he created (cf: this trailer, with its familiar beats, gentle voiceovers, quirky characters, and obsessive design). As with all franchisors, repetition is the goal.
 

@@ -11,7 +11,7 @@ It's an ad for a Wes Anderson movie.
 
 I don't know what "The French Dispatch" is about and I still don't after viewing the clip. It doesn't matter. Anderson lives in his own cinematic universe, sole proprietor of an arthouse franchise. This new one will find the audience and achieve the success as the one before, and the one before that, and the one before that.
 
-Years past, critics and audiences thrashed directors for repeating themselves. Not so much anymore. Today, there's comfort in the same again. Anderson succeeds inside the niche he created. To watch the trailer is to experience his familiar beats, gentle voiceovers, quirky characters, and obsessive design. As with all franchisors, repetition is the goal.
+Years past, critics and audiences thrashed directors for repeating themselves. Not so much anymore. Today, there's comfort in the same again. Anderson succeeds inside the niche he created. As with all franchisors, repetition is the goal. To watch the trailer is to experience his familiar beats, gentle voiceovers, quirky characters, and obsessive design. 
 
 This places Anderson in an odd position: an auteurist who is more craftsman than artist, who never grew as a writer or director. Once he defined himself with "Rushmore," there was no substantive change to the look and feel of his movies, to the why and how of his stories. This places his work in an odd position: there's little reason to debate the merits of one picture over another, to talk about "Moonrise Kingdom" versus "Grand Budapest," and even his rabid followers stretch to do it.
 

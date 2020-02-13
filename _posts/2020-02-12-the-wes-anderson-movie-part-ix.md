@@ -17,4 +17,4 @@ This places him in an odd position: an auteur who is more craftsman than artist.
 
 David Ehrlich, film critic and apparent stan, isn't wrong when he [says](https://twitter.com/davidehrlich/status/1227660182555123713), "Complaining that Wes Anderson has made another Wes Anderson movie is like being mad at a bagel for having a hole in the middle."
 
-It's true. It's silly. Anderson's films are of a very specific piece. But then I can't think of anything more boring than walking into a new movie by a named director and knowing exactly what I'm about to see.
+It's true. It's silly. Anderson's films are of a very specific piece. Either you embrace that or you don't. But then I can't think of anything more boring than walking into a new movie by a named director and knowing exactly what I'm about to see.

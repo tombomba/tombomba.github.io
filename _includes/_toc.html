@@ -3,4 +3,7 @@
 {% elsif include.tags contains 'cool' %}
   {% capture iconf %}<img src="{{ '/assets/img/icon-emo-cool.png' | prepend: site.url }}" width="16" height="16" alt="cool!">{% endcapture %}
 {% endif -%}
-<li><a href="{{ include.url | prepend: site.url }}">{{ include.title | strip_html | normalize_whitespace | smartify }}</a>{% if iconf %}&nbsp;{{ iconf }}{% endif %}&nbsp;&mdash; {{ include.excerpt | strip_html | normalize_whitespace | smartify }}</li>{% assign iconf = nil -%}
+<li>
+  <h2><a href="{{ include.url | prepend: site.url }}">{{ include.title | strip_html | normalize_whitespace | smartify }}{% if iconf %}&nbsp;{{ iconf }}{% endif %}</a></h2>
+  <p>{{ include.excerpt | strip_html | normalize_whitespace | smartify }}</p>
+</li>{% assign iconf = nil -%}

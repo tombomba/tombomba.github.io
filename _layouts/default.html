@@ -13,10 +13,12 @@
     {% if page.id %}<link rel="canonical" href="{{ page.url | default: '' | prepend: site.url }}">{% endif %}
 
     <!-- icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=pop2pop">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=pop2pop">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=pop2pop">
-    <link rel="manifest" href="/site.webmanifest?v=pop2pop">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=boo">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=boo">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=boo">
+    <link rel="manifest" href="/site.webmanifest?v=boo">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=boo" color="#553885">
+    <link rel="shortcut icon" href="/favicon.ico?v=boo">
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="theme-color" content="#eaeaea">
 
@@ -64,12 +66,12 @@
 
   {% if page.is_page %}
   <ul class="archive">
-    <li><a href="/2020/">2020</a></li><li><a href="/2020/01/">Jan</a></li><li><a href="/2020/02/">Feb</a></li>
+    <li><a href="/2020/">2020.</a></li><li><a href="/2020/01/">Jan.</a></li><li><a href="/2020/02/">Feb.</a></li>
   </ul>
   {% endif -%}
 
   <ul class="nav">
-    {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_bio %}<li><a href="/about/">About</a></li>{% endunless %}<!-- <li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">@{{ site.twitter }}</a></li> --><li><a href="/feed.xml">RSS</a></li>
+    {% unless page.is_home %}<li><a href="{{ site.url }}">Home.</a></li>{% endunless %}{% unless page.is_bio %}<li><a href="/about/">About.</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">@{{ site.twitter }}.</a></li><li><a href="/feed.xml">RSS.</a></li>
   </ul>
 
 </footer>

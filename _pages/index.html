@@ -2,6 +2,13 @@
 is_home: true
 permalink: /index.html
 ---
+
+{% for p in site.posts limit: 7 %}
+  {% include post-block.html page=p content=p.content is_home=true %}
+{% endfor -%}
+
+{% comment %} defunct rolling 30 days --->
+
 {% assign scope = 2629743 -%}<!-- 1 month -->
 {% assign today = site.posts.first.date | date: '%s' -%}
 {% for p in site.posts %}
@@ -11,3 +18,5 @@ permalink: /index.html
     {% include post-block.html page=p content=p.content is_home=true %}
   {% endif -%}
 {% endfor -%}
+
+{% endcomment -%}

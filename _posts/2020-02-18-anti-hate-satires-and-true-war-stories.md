@@ -5,7 +5,7 @@ image:
   file: jojo-rabbit-800x450.jpg
   path: /assets/img/jojo-rabbit-800x450.jpg
   ratio: 800x450
-  caption: "Roman Griffin Davis, Taika Waititi, and Scarlett Johansson in \"Jojo Rabbit\" (Fox Searchlight, 2019)."
+  caption: "Roman Griffin Davis, Taika Waititi, and Scarlett Johansson in 'Jojo Rabbit' (Fox Searchlight, 2019)."
   alt: "Photo still: Jojo Rabbit, 2019"
 date: 2020-02-18 12:34 -0800
 ---

@@ -90,7 +90,6 @@ main article
     &.third
       max-width: ($max-width / 3)
     &.top
-      margin-top: bem(1)
       margin-bottom: bem(1) + 0.415em
     &.border
       border-width: thin
@@ -116,16 +115,18 @@ main article
 
 main aside
   margin-top: bem(2)
-  .related
-    max-width: $max-width
-    margin: 0 auto
-    p:first-of-type
+  h2
+    font-size: 100%
+  ul.home
+    list-style-type: none
+    li
+      max-width: $max-width
       margin-top: bem(1)
-  .recent
-    max-width: $max-width
-    margin: 0 auto
-    h2
-      font-size: 100%
+      h3
+        font-size: 100%
+        font-weight: 400
+      .datestamp
+        color: $mix-color
 
 //-----------------------------------------------------------------------------
 
@@ -165,6 +166,9 @@ main aside
       &.tilt
         transform: rotate(3deg)
 
+  main aside
+    margin-top: bem(3)
+
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 64em)
@@ -175,7 +179,7 @@ main aside
 
 //-----------------------------------------------------------------------------
 
-//@media screen and (min-width: 72em)
+@media screen and (min-width: 72em)
 
   main article > img.left
     &.pull
@@ -183,7 +187,7 @@ main aside
 
 //-----------------------------------------------------------------------------
 
-//@media screen and (min-width: 90em)
+@media screen and (min-width: 90em)
 
   main article > img.left
     &.pull

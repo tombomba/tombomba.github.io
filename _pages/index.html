@@ -3,9 +3,25 @@ is_home: true
 permalink: /index.html
 ---
 
-{% for p in site.posts limit: 7 %}
+{% assign p = site.posts.first %}
+
+{% case p.layout %}
+  {% when 'feature' %}
+    {% include feature-block.html page=p content=p.content is_home=true %}
+  {% when 'note' %}
+    {% include note-block.html page=p content=p.content is_home=true %}
+  {% else %}
+    {% include inline-block.html page=p content=p.content is_home=true %}
+{% endcase -%}
+
+{% comment %} defunct last 7 posts standard loop --->
+
+{% for p in site.posts limit:7 %}
   {% include post-block.html page=p content=p.content is_home=true %}
 {% endfor -%}
+
+{% endcomment -%}
+
 
 {% comment %} defunct rolling 30 days --->
 
@@ -20,3 +36,21 @@ permalink: /index.html
 {% endfor -%}
 
 {% endcomment -%}
+
+<aside class="home">
+
+  <h2>More bombast</h2>
+
+  <ul class="home">
+
+    {% for p in site.posts offset:1 limit:7 %}
+    <li>
+      <h3><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip_html | normalize_whitespace | smartify }}</a></h3>
+      <p>{{ p.excerpt | strip_html | normalize_whitespace | smartify }}</p>
+      <p class="datestamp">{{ p.date | date: "%d %b %Y" }}</p>
+    </li>
+    {% endfor -%}
+
+  </ul>
+
+</aside>

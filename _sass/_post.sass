@@ -19,12 +19,13 @@ main article
         &:nth-child(2):before
           content: "\20/\20"
 
-    &.feature
+    &.feature,
+    &.inline
       h1
         font-size: percentage(23/18)
         line-height: (($line-height - 1) / 2) + 1
 
-    &.post
+    &.note
       h1, p
         display: inline
       h1

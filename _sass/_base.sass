@@ -61,7 +61,7 @@ header[role="banner"]
 main article
   max-width: $max-width + bem(1)
   margin-top: bem(2)
-  &:last-of-type
+  //&:last-of-type
     margin-bottom: bem(4)
   @extend .clearfix
 
@@ -91,6 +91,7 @@ main article
     font-weight: 700
 
 footer
+  margin-top: bem(4)
   ul
     display: flex
     align-items: center
@@ -105,7 +106,9 @@ footer
   li
     max-width: $max-width
     margin-top: bem(1)
-    h2
+    h2,
+    h3
+      font-size: 100%
       font-weight: 400
     img
       vertical-align: middle
@@ -140,7 +143,7 @@ footer
 
   main article
     margin-top: bem(3)
-    &:last-of-type
+    //&:last-of-type
       margin-bottom: bem(6)
     blockquote
       border-left-width: bem(0.125)
@@ -148,6 +151,9 @@ footer
 
   .ul-toc
     margin-left: 0
+
+  footer
+    margin-top: bem(6)
 
 //-----------------------------------------------------------------------------
 
@@ -157,12 +163,12 @@ footer
     padding-left: 12.5%
     padding-right: 12.5%
 
-  //main article
+  main article
     max-width: $max-width + bem(2)
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 90em)
 
-  //main article
+  main article
     max-width: $max-width + bem(3)

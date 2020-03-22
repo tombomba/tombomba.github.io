@@ -1,12 +1,13 @@
 ---
 title: "'Ford v Ferrari' goes put-put-put"
+layout: feature
 excerpt: "A movie with no bad scenes but no good ones,&nbsp;either."
 image:
   file: ford-v-ferrari-2-960x541.jpg
   path: /assets/img/ford-v-ferrari-2-960x541.jpg
   ratio: 960x541
   alt: "Photo still from Ford v Ferrari 2019"
-  caption: Christian Bale in 'Ford v Ferrari' (20th Century Fox, 2019).
+  caption: Christian Bale in 'Ford v Ferrari' (20th Century Fox, 2019)
 date: 2020-01-02 2:53 -0800
 ---
 

@@ -204,7 +204,7 @@ GEM
       jekyll-seo-tag (~> 2.1)
     minitest (5.14.0)
     multipart-post (2.1.1)
-    nokogiri (1.10.7)
+    nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
     octokit (4.15.0)
       faraday (>= 0.9)
@@ -245,6 +245,7 @@ DEPENDENCIES
   github-pages (= 204)
   jekyll-feed (~> 0.6)
   jekyll-sitemap (~> 1.2)
+  nokogiri (>= 1.10.8)
 
 BUNDLED WITH
    1.16.4

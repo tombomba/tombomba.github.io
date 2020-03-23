@@ -30,14 +30,12 @@
       <div class="wrap" style="padding-bottom:{{ percent }}%"><img src="{{ p.image.file | prepend: site.img_dir }}" alt="{{ p.image.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}"></div>
       {% if p.image.caption %}<figcaption>{{ p.image.caption | strip | smartify | markdownify | normalize_whitespace }}</figcaption>{% endif -%}
     </figure>
-  {% endif -%}  
+  {% endif -%}
 
   {{ copy | strip | normalize_whitespace }}
 
-  {% if include.is_home %}
   <div class="permalink">
-    <p><a href="{{ p.url | prepend: site.url }}" aria-label="permalink">+</a></p>
+    <p><a href="{{ p.url | prepend: site.url }}" aria-label="permanent link to this page">+</a></p>
   </div>
-  {% endif -%}
 
 </article>

@@ -1,0 +1,17 @@
+<aside class="home">
+
+  <h2>Recent bombast</h2>
+
+  <ul class="home">
+
+    {% for p in site.posts offset:1 limit:7 %}
+    <li>
+      <h3><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip_html | normalize_whitespace | smartify }}</a></h3>
+      <p>{{ p.excerpt | strip_html | normalize_whitespace | smartify }}</p>
+      <p class="datestamp">{{ p.date | date: "%d %b %Y" }}</p>
+    </li>
+    {% endfor -%}
+
+  </ul>
+
+</aside>

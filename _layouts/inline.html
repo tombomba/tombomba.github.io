@@ -3,10 +3,6 @@ layout: default
 ---
 {% include inline-block.html page=page content=content %}
 
-{% if page.id == site.posts.first.id %}
-  {% include _recent.html %}
-
-{% elsif page.previous or page.next %}
+{% if page.previous or page.next %}
   {% include _nextprev.html previous=page.previous next=page.next %}
-
 {% endif -%}

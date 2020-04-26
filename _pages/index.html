@@ -3,8 +3,21 @@ is_home: true
 permalink: /index.html
 ---
 
-<!--- rolling 30 days --->
+<!--- suck style single post -->
+{% assign p = site.posts.first %}
 
+{% case p.layout %}
+  {% when 'feature' %}
+    {% include feature-block.html page=p content=p.content is_home=true %}
+  {% when 'note' %}
+    {% include note-block.html page=p content=p.content is_home=true %}
+  {% else %}
+    {% include inline-block.html page=p content=p.content is_home=true %}
+{% endcase -%}
+
+{% include _recent.html %}
+
+{% comment %} <!--- rolling 30 days --->
 {% assign scope = 31556926 -%}
 {% assign today = site.posts.first.date | date: '%s' -%}
 {% for p in site.posts %}
@@ -21,17 +34,4 @@ permalink: /index.html
     {% endcase -%}
   {% endif -%}
 {% endfor -%}
-
-{% comment %} <!--- suck style single post -->
-{% assign p = site.posts.first %}
-
-{% case p.layout %}
-  {% when 'feature' %}
-    {% include feature-block.html page=p content=p.content is_home=true %}
-  {% when 'note' %}
-    {% include note-block.html page=p content=p.content is_home=true %}
-  {% else %}
-    {% include inline-block.html page=p content=p.content is_home=true %}
-{% endcase -%}
-
 {% endcomment -%}

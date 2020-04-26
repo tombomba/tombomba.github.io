@@ -15,6 +15,12 @@
 
 <article><!-- {{ copy | number_of_words }} words -->
 
+  {% if include.is_home %}<header class="home feature"><h1><a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a></h1>{% else %}<header class="feature"><h1>{{ titlef }}</h1>{% endif -%}
+
+  <ul><li><a href="/about/">{{ p.author | default: site.author }}</a></li><li><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></li></ul>
+
+  </header>
+
   {% if p.image.file %}
     {% assign aspectr = p.image.ratio | default: '640x360' | split: 'x' -%}
     {% assign w = aspectr[0] | times: 1.0 -%}
@@ -25,12 +31,6 @@
       {% if p.image.caption %}<figcaption>{{ p.image.caption | strip | smartify | markdownify | normalize_whitespace }}</figcaption>{% endif -%}
     </figure>
   {% endif -%}
-
-  {% if include.is_home %}<header class="home feature"><h1><a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a></h1>{% else %}<header class="feature"><h1>{{ titlef }}</h1>{% endif -%}
-
-  <ul><li><a href="/about/">{{ p.author | default: site.author }}</a></li><li><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></li></ul>
-
-  </header>
 
   {{ copy | strip | normalize_whitespace }}
 

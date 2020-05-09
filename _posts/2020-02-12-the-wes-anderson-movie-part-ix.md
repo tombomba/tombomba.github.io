@@ -5,7 +5,7 @@ date: 2020-02-12 10:49 -0800
 ---
 ![French Dispatch movie poster]({{ site.img_dir }}french-dispatch-260x390.jpg){: width="260" height="390" .top .right .tilt .pull }
 
-Everyone on the internet is required to have an opinion about [the trailer for "The French Dispatch"](https://www.youtube.com/watch?v=TcPk2p0Zaw4) so here's mine:
+Everyone on the internet is required to have an opinion about the ["French Dispatch" trailer](https://www.youtube.com/watch?v=TcPk2p0Zaw4) so here's mine:
 
 It's an ad for the Wes Anderson movie.
 
@@ -17,4 +17,6 @@ Once Anderson defined himself with "Rushmore," there was no substantive change t
 
 David Ehrlich, film critic and apparent stan, isn't wrong when he [says](https://twitter.com/davidehrlich/status/1227660182555123713), "Complaining that Wes Anderson has made another Wes Anderson movie is like being mad at a bagel for having a hole in the middle."
 
-It's true. It's silly. Anderson's films are of a very specific piece. Either you embrace that or you don't. But then I can't think of anything more boring than walking into a new movie by a named director and knowing exactly what I'm about to see.
+He's right. It's silly. Anderson's films are of a very specific piece. Either you embrace that or you don't.
+
+But then I can't think of anything more boring than walking into a new movie by a named director and knowing exactly what I'm about to see.

@@ -19,4 +19,4 @@ David Ehrlich, film critic and apparent stan, isn't wrong when he [says](https:/
 
 He's right. It's silly. Anderson's films are of a very specific piece. Either you embrace that or you don't.
 
-But then I can't think of anything more boring than walking into a new movie by a named director and knowing exactly what I'm about to see.
+But then I can't think of anything more boring than walking into a new movie and knowing exactly what I'm about to see.

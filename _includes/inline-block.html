@@ -15,10 +15,11 @@
 
 <article><!-- {{ copy | number_of_words }} words -->
 
-  {% capture headline %}{% if include.is_home %}<header class="home inline"><h1><a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a></h1>{% else %}<header class="inline"><h1>{{ titlef }}</h1>{% endif %}
-  <ul><li><a href="/about/">{{ p.author | default: site.author }}</a></li><li><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></li></ul></header><p>{% endcapture -%}
+  {% capture headline %}{% if include.is_home %}<header class="home inline"><h1><a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a></h1>{% else %}<header class="inline"><h1>{{ titlef }}</h1>{% endif %}<p>{% endcapture -%}
 
   {{ copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' | strip | normalize_whitespace }}
+
+  <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></p>
 
   <div class="permalink">
     <p><a href="{{ p.url | prepend: site.url }}" aria-label="permanent link to this page">+</a></p>

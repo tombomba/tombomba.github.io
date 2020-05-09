@@ -7,7 +7,7 @@ image:
   path: /assets/img/invisible-man-800x450.jpg
   ratio: 800x450
   alt: "Photo still from the Invisible Man 2020"
-  caption: Elisabeth Moss in the trailer for 'The Invisible Man' (Universal, 2020)
+  #caption: Elisabeth Moss in the trailer for 'The Invisible Man' (Universal, 2020)
 date: 2020-03-24 12:34 -0700
 ---
 

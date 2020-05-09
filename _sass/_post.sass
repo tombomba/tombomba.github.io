@@ -19,11 +19,14 @@ main article
         &:nth-child(2):before
           content: "\20/\20"
 
-    &.feature
+    //&.feature
       h1
-        font-size: percentage(23/18)
-        line-height: (($line-height - 1) / 2) + 1
+        font-size: 100%
+        line-height: $line-height
+        //font-size: percentage(23/18)
+        //line-height: (($line-height - 1) / 2) + 1
 
+    &.feature,
     &.inline
       h1
         display: inline
@@ -67,7 +70,7 @@ main article
 
   figure
     max-width: $max-width + bem(1)
-    margin: bem(1) -1em
+    margin: 0 -1em bem(1) -1em
     padding-bottom: 0.415em
     .wrap
       position: relative

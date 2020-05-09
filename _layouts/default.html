@@ -64,7 +64,7 @@
 <footer class="{% if page.is_post %}post{% else %}page{% endif %}">
 
   <ul class="nav">
-    {% unless page.is_home %}<li><a href="{{ site.url }}">Home.</a></li>{% endunless %}{% unless page.is_bio %}<li><a href="/about/">About.</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">@{{ site.twitter }}.</a></li><li><a href="/feed.xml">RSS.</a></li>
+    {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_bio %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">@{{ site.twitter }}</a></li><li><a href="/feed.xml">RSS</a></li>
   </ul>
 
 </footer>

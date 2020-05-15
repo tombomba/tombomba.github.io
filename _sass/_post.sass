@@ -19,24 +19,11 @@ main article
         &:nth-child(2):before
           content: "\20/\20"
 
-    //&.feature
-      h1
-        font-size: 100%
-        line-height: $line-height
-        //font-size: percentage(23/18)
-        //line-height: (($line-height - 1) / 2) + 1
-
     &.feature,
     &.inline
       h1
-        display: inline
-        font-size: 100%
-        line-height: $line-height
-        &::after
-          content: "\20\2014\20"
-
-      p:first-of-type
-        display: inline
+        font-size: percentage(23/18)
+        line-height: (($line-height - 1) / 2) + 1
 
     &.note
       h1, p
@@ -105,6 +92,7 @@ main article
     &.third
       max-width: ($max-width / 3)
     &.top
+      margin-top: bem(1)
       margin-bottom: bem(1) + 0.415em
     &.border
       border-width: thin

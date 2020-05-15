@@ -50,27 +50,32 @@ header[role="banner"]
   display: flex
   align-items: center
   justify-content: space-between
+  max-width: $max-width + bem(1)
+  margin: 0 auto
 
   .logobox
     display: flex
     justify-content: center
     align-items: center
+    margin-left: bem(-0.5)
     height: bem(2)
     width: bem(2)
-    background: $text-color
+    background: $logo-color
     border-radius: 50%
     svg
       width: bem(1)
       height: bem(1.25)
-      fill: white
+      fill: $shock-color
 
   .shim
+    flex: 1
     hr
-      width: 100%  
+      margin-left: 1em
+      width: 100%
 
 main article
   max-width: $max-width + bem(1)
-  margin-top: bem(1)
+  margin-top: bem(1.5)
   //&:last-of-type
     margin-bottom: bem(4)
   @extend .clearfix
@@ -161,7 +166,6 @@ footer
     margin: 0 auto
 
   main article
-    margin-top: bem(1)
     blockquote
       border-left-width: bem(0.125)
       padding-left: bem(0.875)

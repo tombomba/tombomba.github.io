@@ -1,10 +1,11 @@
 ---
-title: "Everyone on the internet is required to have an opinion about the 'French Dispatch' trailer so here's mine"
-#title: "'The Wes Anderson Movie, Part IX'"
+title: "'The Wes Anderson Movie, Part IX'"
 excerpt: "With Anderson, as with all franchisors, successful repetition is the goal."
 date: 2020-02-12 10:49 -0800
 ---
 ![French Dispatch movie poster]({{ site.img_dir }}french-dispatch-260x390.jpg){: width="260" height="390" .top .right .tilt .pull }
+
+Everyone on the internet is required to have an opinion about the "French Dispatch" trailer so here's mine:
 
 It's an ad for the Wes Anderson movie.
 

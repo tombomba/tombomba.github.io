@@ -47,20 +47,30 @@ a
 
 header[role="banner"]
 
-  h1
-    font-size: percentage(37/18)
-    font-weight: 700
-    line-height: 1
-    &::after
-      content: "."
-      color: $logo-color
-    a:link,
-    a:visited
-      color: $logo-color
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+  .logobox
+    display: flex
+    justify-content: center
+    align-items: center
+    height: bem(2)
+    width: bem(2)
+    background: $text-color
+    border-radius: 50%
+    svg
+      width: bem(1)
+      height: bem(1.25)
+      fill: white
+
+  .shim
+    hr
+      width: 100%  
 
 main article
   max-width: $max-width + bem(1)
-  margin-top: bem(2)
+  margin-top: bem(1)
   //&:last-of-type
     margin-bottom: bem(4)
   @extend .clearfix
@@ -101,7 +111,7 @@ main article
 
 
 footer
-  margin-top: bem(4)
+  margin-top: bem(1)
   ul
     display: flex
     align-items: center
@@ -142,22 +152,16 @@ footer
     font-size: 112.5%
     padding: bem(1)
 
-
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 48em)
 
-  body
-    padding: bem(1) 8%
-
-  header[role="banner"]
-    h1
-      font-size: percentage(47/18)
+  main
+    max-width: $max-width + bem(1)
+    margin: 0 auto
 
   main article
-    margin-top: bem(3)
-    //&:last-of-type
-      margin-bottom: bem(6)
+    margin-top: bem(1)
     blockquote
       border-left-width: bem(0.125)
       padding-left: bem(0.875)
@@ -166,26 +170,7 @@ footer
     margin-left: 0
 
   footer
+    margin-left: auto
+    margin-right: auto
+    max-width: $max-width
     margin-top: bem(6)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 72em)
-
-  body
-    padding-left: 12.5%
-    padding-right: 12.5%
-
-  main article
-    max-width: $max-width + bem(2)
-    //margin-top: bem(4)
-
-  //footer
-    margin-top: bem(8)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 90em)
-
-  main article
-    max-width: $max-width + bem(3)

@@ -43,6 +43,18 @@ a
   &:active
     color: $active-color
 
+hr
+  width: 100%
+  margin: 0
+  padding: 0
+  height: 0
+  border: 0
+  border-top: 1px solid $border-dark
+  border-bottom: 1px solid $border-light
+  background-color: $body-color
+  &.pagebreak
+    margin-top: bem(2)
+
 //-----------------------------------------------------------------------------
 
 header[role="banner"]
@@ -66,6 +78,14 @@ header[role="banner"]
       width: bem(1)
       height: bem(1.25)
       fill: $shock-color
+    span
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      z-index: 1
+      background-image: url('/assets/img/shim.gif')
 
   .shim
     flex: 1

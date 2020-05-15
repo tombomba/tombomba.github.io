@@ -62,10 +62,11 @@ header[role="banner"]
   display: flex
   align-items: center
   justify-content: space-between
-  max-width: $max-width + bem(1)
+  max-width: $max-width
   margin: 0 auto
 
   .logobox
+    position: relative
     display: flex
     justify-content: center
     align-items: center
@@ -89,15 +90,13 @@ header[role="banner"]
 
   .shim
     flex: 1
+    margin-left: 1em
     hr
-      margin-left: 1em
       width: 100%
 
 main article
-  max-width: $max-width + bem(1)
+  max-width: $max-width
   margin-top: bem(1.5)
-  //&:last-of-type
-    margin-bottom: bem(4)
   @extend .clearfix
 
   h2, h3, h4, h5, h6
@@ -182,7 +181,7 @@ footer
 @media screen and (min-width: 48em)
 
   main
-    max-width: $max-width + bem(1)
+    max-width: $max-width
     margin: 0 auto
 
   main article

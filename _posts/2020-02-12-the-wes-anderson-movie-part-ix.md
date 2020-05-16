@@ -3,13 +3,13 @@ title: "'The Wes Anderson Movie, Part IX'"
 excerpt: "With Anderson, as with all franchisors, successful repetition is the goal."
 date: 2020-02-12 10:49 -0800
 ---
-![French Dispatch movie poster]({{ site.img_dir }}french-dispatch-260x390.jpg){: width="260" height="390" .top .right .tilt .pull }
+![French Dispatch movie poster]({{ site.img_dir }}french-dispatch-poster.jpg){: width="220" height="330" .top .right .tilt .pull }
 
-Everyone on the internet is required to have an opinion about the "French Dispatch" trailer so here's mine:
+Everyone on the internet is required to have an opinion about [the "French Dispatch" trailer](https://www.youtube.com/watch?v=TcPk2p0Zaw4) so here's mine:
 
 It's an ad for the Wes Anderson movie.
 
-I don't know what "The French Dispatch" is about and I still don't after viewing [the clip](https://www.youtube.com/watch?v=TcPk2p0Zaw4). It doesn't matter. Anderson lives in his own cinematic universe, sole proprietor of an arthouse franchise. This new one will find the same audience and achieve the same success as the one before, and the one before that, and the one before that.
+I don't know what "The French Dispatch" is about and I still don't after viewing the clip. It doesn't matter. Anderson lives in his own cinematic universe, sole proprietor of an arthouse franchise. This new one will find the same audience and achieve the same success as the one before, and the one before that, and the one before that.
 
 To watch this trailer is to experience familiar beats, gentle voiceovers, quirky characters, and obsessive design. Anderson can only continue inside the niche he made for himself twenty years ago. He has become both franchisor and franchisee of the Wes Anderson House Style. Almost a genre unto himself. Perfect repetition is now the goal, I think. It's what draws the crowd back.
 

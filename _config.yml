@@ -23,7 +23,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: inline
+      layout: post
       is_post: true
   -
     scope:

@@ -1,0 +1,11 @@
+---
+layout: default
+---
+{% include post-block.html page=page content=content %}
+
+{% if site.posts.first.id == page.id %}
+  {% include _recent.html %}
+
+{% elsif page.previous or page.next %}
+  {% include _nextprev.html previous=page.previous next=page.next %}
+{% endif -%}

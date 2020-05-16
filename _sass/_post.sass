@@ -30,12 +30,9 @@ main article
         &:nth-child(2):before
           content: "\20/\20"
 
-  h2 + p
-    margin-top: 0
-
   figure
-    max-width: $max-width + bem(1)
-    margin: 0 -1em bem(1) -1em
+    max-width: $max-width
+    margin: bem(1) 0
     padding-bottom: 0.415em
     .wrap
       position: relative
@@ -50,6 +47,7 @@ main article
         left: 0
         width: 100%
         height: 100%
+        border-radius: 4px
     figcaption
       margin: 0 1em
       padding: 0
@@ -65,95 +63,30 @@ main article
     background-color: $bg-color
     vertical-align: top
     overflow: hidden
+    border-radius: 4px
+    &.top
+      margin-top: bem(1)
     &.half
       max-width: ($max-width / 2)
     &.third
       max-width: ($max-width / 3)
-    &.top
-      margin-top: bem(1)
-      margin-bottom: bem(1) + 0.415em
     &.border
       border-width: thin
       border-style: solid
       border-color: inherit
-    &.saturate
-      filter: saturate(8)
-    &.rounded
-      border-radius: 4px
     &.transparent
       background-color: $body-color
-
-  .byline
-    margin-top: bem(1)
-    p
-      margin: 0
-      color: $mix-color
-      a:link,
-      a:visited
-        color: $mix-color
-
-  .dateout
-    font-style: italic
-    color: $mix-color
-    white-space: nowrap
-    a:link,
-    a:visited
-      color: $mix-color
-      text-decoration: none
-    a:hover
-      text-decoration: underline
-
-main aside
-  margin-top: bem(1)
-  h2,
-  h3
-    font-size: 100%
-  ul
-    list-style-type: none
-    li
-      max-width: $max-width
-      margin-top: bem(1)
-      h3
-        font-size: 100%
-        font-weight: 400
-      .datestamp
-        color: $mix-color
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 32em)
-
-  main article
-    figure
-      margin-left: 0
-      margin-right: 0
-      figcaption
-        margin: 0
-        p
-          max-width: 100%
-          display: block
-          margin-top: 0.83em
-          font-size: percentage(12/16)
-          line-height: (($line-height - 1) / 2) + 1
-      .wrap
-        border-radius: 4px
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 48em)
 
-  main article
-    header
-      text-align: left
-      //h1
-        font-size: percentage(29/18)
-    //& > p:first-of-type
-      margin-top: bem(1.5)
+  main article header,
+  footer
+    text-align: left
 
   main article > img
     margin-bottom: bem(1)
-    //&.top
-      margin-top: bem(1.5)
     &.left
       float: left
       margin-left: 0

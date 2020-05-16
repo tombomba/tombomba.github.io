@@ -1,13 +1,10 @@
 ---
 title: "'Invisible Man' is a bad film from a good filmmaker"
-layout: feature
-excerpt: "Leigh Whannell's interpretation of an old Universal monster is a rote domestic violence thriller."
 image:
   file: invisible-man-800x450.jpg
-  path: /assets/img/invisible-man-800x450.jpg
-  ratio: 800x450
-  alt: "Photo still from the Invisible Man 2020"
-  #caption: Elisabeth Moss in the trailer for 'The Invisible Man' (Universal, 2020)
+  width: 800
+  height: 450
+  alt: "Invisible Man Whannell 2020"
 date: 2020-03-24 12:34 -0700
 ---
 

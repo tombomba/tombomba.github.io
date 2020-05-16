@@ -34,8 +34,6 @@
 
   <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></p>
 
-  <div class="permalink">
-    <p><a href="{{ p.url | prepend: site.url }}" aria-label="permanent link to this page">+</a></p>
-  </div>
+  <hr>
 
 </article>

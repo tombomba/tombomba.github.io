@@ -29,7 +29,7 @@ body
   -ms-text-size-adjust: auto
   -webkit-text-size-adjust: auto
 
-  padding: 1em
+  padding: bem(1) 1em 1em 1em
 
 a
   text-decoration: none
@@ -52,10 +52,6 @@ hr
   border-top: 1px solid $border-dark
   border-bottom: 1px solid $border-light
   background-color: $body-color
-  &.break
-    margin-top: bem(1)
-  &.superbreak
-    margin-top: bem(1.5)
 
 .mix-link
   color: $mix-color
@@ -115,18 +111,15 @@ header[role="banner"]
     margin-top: bem(1)
 
 main article
-  max-width: $max-width
   margin-top: bem(1.5)
   @extend .clearfix
 
   h2, h3, h4, h5, h6
-    max-width: $max-width
     font-size: 100%
     margin-top: bem(1)
 
   p, li, hr
     margin-top: bem(1)
-    max-width: $max-width
 
   ul, ol
     margin-left: 1em
@@ -138,14 +131,14 @@ main article
   blockquote,
   li + p,
     margin-top: 0
-    max-width: $max-width
 
   .datestamp
     @extend .mix-link
 
 
 footer
-  margin-top: bem(1)
+  max-width: $max-width
+  margin-top: bem(1.5)
   text-align: center
   .nav
     margin-top: bem(1)
@@ -178,7 +171,6 @@ footer
   margin: 0
   list-style-type: none
   li
-    max-width: $max-width
     margin-top: bem(1)
     h2,
     h3
@@ -198,7 +190,6 @@ footer
   margin-left: bem(1)
   margin-top: bem(1)
   li
-    max-width: $max-width + bem(1)
     margin: 0
 
 //-----------------------------------------------------------------------------
@@ -208,6 +199,10 @@ footer
   body
     font-size: 112.5%
     padding: bem(1)
+
+  main
+    max-width: $max-width
+    margin: 0 auto
 
 //-----------------------------------------------------------------------------
 
@@ -228,10 +223,6 @@ footer
       margin-top: 0
       margin-left: 1em
 
-  main
-    max-width: $max-width
-    margin: 0 auto
-
   main article
     blockquote
       border-left-width: bem(0.125)
@@ -243,4 +234,3 @@ footer
   footer
     margin-left: auto
     margin-right: auto
-    max-width: $max-width

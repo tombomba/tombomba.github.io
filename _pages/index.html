@@ -2,36 +2,18 @@
 is_home: true
 permalink: /index.html
 ---
+<article>
 
-<!--- suck style single post -->
-{% assign p = site.posts.first %}
+  <!--
+  <header>
+    <h1>{{ site.title }}, {{ site.description | downcase }}</h1>
+  </header>
+  -->
 
-{% case p.layout %}
-  {% when 'feature' %}
-    {% include feature-block.html page=p content=p.content is_home=true %}
-  {% when 'note' %}
-    {% include note-block.html page=p content=p.content is_home=true %}
-  {% else %}
-    {% include inline-block.html page=p content=p.content is_home=true %}
-{% endcase -%}
+  <ul class="ul-toc home">
+    {% for p in site.posts limit:10 %}
+    {% include toc.html title=p.title excerpt=p.excerpt date=p.date tags=p.tags url=p.url %}
+    {% endfor %}
+  </ul>
 
-{% include _recent.html %}
-
-{% comment %} <!--- rolling 30 days --->
-{% assign scope = 31556926 -%}
-{% assign today = site.posts.first.date | date: '%s' -%}
-{% for p in site.posts %}
-  {% assign current = p.date | date: '%s' -%}
-  {% assign range = today | times: 1 |  minus: current -%}
-  {% if scope > range %}
-    {% case p.layout %}
-      {% when 'feature' %}
-        {% include feature-block.html page=p content=p.content is_home=true %}
-      {% when 'note' %}
-        {% include note-block.html page=p content=p.content is_home=true %}
-      {% else %}
-        {% include inline-block.html page=p content=p.content is_home=true %}
-    {% endcase -%}
-  {% endif -%}
-{% endfor -%}
-{% endcomment -%}
+</article>

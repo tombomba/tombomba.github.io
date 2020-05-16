@@ -3,6 +3,17 @@ main article
   header
     max-width: $max-width
     margin-top: 0
+    text-align: center
+
+    h1
+      font-size: percentage(23/18)
+      line-height: (($line-height - 1) / 2) + 1
+      color: $text-color
+      a:link, a:visited
+        color: $text-color
+        text-decoration: none
+      a:hover
+        text-decoration: underline
 
     ul
       margin: 0
@@ -18,39 +29,6 @@ main article
           text-decoration: underline
         &:nth-child(2):before
           content: "\20/\20"
-
-    &.feature,
-    &.inline
-      h1
-        font-size: percentage(23/18)
-        line-height: (($line-height - 1) / 2) + 1
-
-    &.note
-      h1, p
-        display: inline
-      h1
-        font-size: 100%
-        line-height: $line-height
-        &::after
-          content: "\20"
-      .punc::after
-        content: "."
-      .dash::after
-        content: "\2014"
-
-    &.page
-      h1
-        font-size: percentage(23/18)
-        line-height: (($line-height - 1) / 2) + 1
-
-    &.home
-      h1
-        color: $text-color
-        a:link, a:visited
-          color: $text-color
-          text-decoration: none
-        a:hover
-          text-decoration: underline
 
   h2 + p
     margin-top: 0
@@ -105,6 +83,15 @@ main article
     &.transparent
       background-color: $body-color
 
+  .byline
+    margin-top: bem(1)
+    p
+      margin: 0
+      color: $mix-color
+      a:link,
+      a:visited
+        color: $mix-color
+
   .dateout
     font-style: italic
     color: $mix-color
@@ -117,7 +104,7 @@ main article
       text-decoration: underline
 
 main aside
-  margin-top: bem(2)
+  margin-top: bem(1)
   h2,
   h3
     font-size: 100%
@@ -155,8 +142,18 @@ main aside
 
 @media screen and (min-width: 48em)
 
+  main article
+    header
+      text-align: left
+      //h1
+        font-size: percentage(29/18)
+    //& > p:first-of-type
+      margin-top: bem(1.5)
+
   main article > img
     margin-bottom: bem(1)
+    //&.top
+      margin-top: bem(1.5)
     &.left
       float: left
       margin-left: 0
@@ -169,30 +166,3 @@ main aside
       margin-right: 0
       &.tilt
         transform: rotate(3deg)
-
-  main aside
-    margin-top: bem(3)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 64em)
-
-  main article > img.left
-    &.pull
-      margin-left: bem(-1)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 72em)
-
-  main article > img.left
-    &.pull
-      margin-left: bem(-2)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 90em)
-
-  main article > img.left
-    &.pull
-      margin-left: bem(-3)

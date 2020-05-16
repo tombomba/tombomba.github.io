@@ -1,5 +1,6 @@
 ---
 title: "'Invisible Man' is a bad film from a good filmmaker"
+excerpt: "Whannell's latest is a rote thriller with only a splash of sci-fi and horror."
 image:
   file: invisible-man-800x450.jpg
   width: 800

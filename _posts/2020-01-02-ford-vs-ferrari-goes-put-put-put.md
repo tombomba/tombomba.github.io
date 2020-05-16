@@ -1,6 +1,6 @@
 ---
 title: "'Ford v Ferrari' goes put-put-put"
-excerpt: "\"Ford v Ferrari,\" is like a well illustrated diagram in an encyclopedia of engineering. There's a glossy beauty to it but not a memorable moment. Watching, a new spin on an old line occurred to me: It's possible for a movie to have no bad scenes, but no good ones, either."
+excerpt: "It's possible for a movie to have no bad scenes, but no good ones, either."
 image:
   file: ford-v-ferrari-2-960x541.jpg
   width: 960

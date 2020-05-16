@@ -57,6 +57,14 @@ hr
   &.superbreak
     margin-top: bem(1.5)
 
+.mix-link
+  color: $mix-color
+  a:link,
+  a:visited
+    color: $mix-color
+  a:hover
+    text-decoration: underline
+
 //-----------------------------------------------------------------------------
 
 header[role="banner"]
@@ -87,8 +95,25 @@ header[role="banner"]
       z-index: 1
       background-image: url('/assets/img/shim.gif')
 
+  .textbox
+      background-color: darken($body-color, 5%)
+      padding: 0.5em
+      border-radius: 4px
+      h1
+        font-family: 'Bungee', $sans
+        font-weight: 700
+        font-size: percentage(37/18)
+        line-height: 1
+        text-align: center
+        color: $logo-color
+        a:link,
+        a:visited
+          color: $logo-color
+        a:hover
+          text-decoration: none
+
   .shim
-    margin-top: bem(1)
+    display: none
 
 main article
   max-width: $max-width
@@ -117,46 +142,58 @@ main article
     max-width: $max-width
 
   .datestamp
-    color: $mix-color
-    a:link,
-    a:visited
-      color: $mix-color
-
-  .permalink
-    @include font-ratio(23/18)
-    font-weight: 700
-    a:link,
-    a:visited
-      color: $logo-color
+    @extend .mix-link
 
 
 footer
   margin-top: bem(1)
-  ul
+  text-align: center
+  .nav
     margin-top: bem(1)
-    display: flex
-    align-items: center
-    list-style-type: none
-    li
-      font-weight: 700
-      margin-right: 1em
-      text-transform: lowercase
-      a:link,
-      a:visited
-        color: $logo-color
+    h1
+      display: inline
+      margin-right: 0.5em
+      @include font-ratio(14/16)
+      @extend .mix-link
+      &::after
+        content: ":"
+    ul
+      display: inline
+      list-style-type: none
+      margin-top: bem(1)
+      li
+        display: inline
+        padding-right: 0.5em
+        @include font-ratio(14/16)
+        @extend .mix-link
+        &:not(:last-of-type)::after
+          content: "|"
+          padding-left: 0.5em
+          color: $mix-color
+  .meta p
+    margin: 0
+    @include font-ratio(14/16)
+    @extend .mix-link
 
 .ul-toc
-  margin-left: 1em
+  margin: 0
+  list-style-type: none
   li
     max-width: $max-width
     margin-top: bem(1)
     h2,
     h3
+      margin: 0
       font-size: 100%
       font-weight: 400
-    img
+    p
+      margin: 0
+    img.icon
       vertical-align: middle
-      padding-bottom: 1px
+      padding-bottom: 2px
+  &.home
+    li:first-of-type
+      margin-top: 0
 
 .ul-plain-condensed
   margin-left: bem(1)
@@ -186,7 +223,12 @@ footer
       justify-content: center
       align-items: center
       margin-left: bem(-0.5)
+    .textbox
+      margin-left: -0.5em
+      h1
+        text-align: left
     .shim
+      display: block
       flex: 1
       margin-top: 0
       margin-left: 1em

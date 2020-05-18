@@ -20,7 +20,7 @@ layout: default
 
   <header>
     <h1>{{ titlef }}</h1>
-    <ul><li><a href="{{ '/about.html' | prepend: site.url }}">{{ p.author | default: site.author }}</a></li><li><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}">{{ p.date | date: "%-d %B %Y" }}</a></time></li></ul>
+    <ul><li><a href="{{ '/about/' | prepend: site.url }}">{{ p.author | default: site.author }}</a></li><li><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}">{{ p.date | date: "%-d %B %Y" }}</a></time></li></ul>
   </header>
 
   {% if p.image.file %}

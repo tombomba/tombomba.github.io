@@ -31,7 +31,7 @@ main article
 
   figure
     margin: bem(1) 0
-    padding-bottom: 0.2075em
+    //padding-bottom: 0.2075em
     .wrap
       position: relative
       padding-bottom: 56.25%
@@ -79,7 +79,7 @@ main article
   footer
     text-align: left
 
-  //main article figure
+  main article figure
     figcaption p
       @include font-ratio(14/16)
 
@@ -97,3 +97,10 @@ main article
       margin-right: 0
       &.tilt
         transform: rotate(3deg)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 72em)
+
+  main article figure figcaption p
+    @include font-ratio(14/16)

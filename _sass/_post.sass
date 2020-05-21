@@ -31,7 +31,7 @@ main article
 
   figure
     margin: bem(1) 0
-    padding-bottom: 0.415em
+    padding-bottom: 0.2075em
     .wrap
       position: relative
       padding-bottom: 56.25%
@@ -46,13 +46,9 @@ main article
         width: 100%
         height: 100%
         border-radius: 4px
-    figcaption
-      margin: 0 1em
-      padding: 0
-      p
-        display: none
-        margin: 0
-        padding: 0
+    figcaption p
+      margin: 0
+      @include font-ratio(12/16)
 
   & > img
     display: block
@@ -82,6 +78,10 @@ main article
   main article header,
   footer
     text-align: left
+
+  //main article figure
+    figcaption p
+      @include font-ratio(14/16)
 
   main article > img
     margin-bottom: bem(1)

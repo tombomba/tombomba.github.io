@@ -15,7 +15,7 @@ future: false
 
 include:
   - _pages
-  - _archives
+  - _toc
 
 defaults:
   -

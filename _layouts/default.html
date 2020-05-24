@@ -70,12 +70,12 @@
   <div class="nav">
     <h1><a href="{{ site.url }}">{{ site.domain | capitalize }}</a></h1>
     <ul>
-      {% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li>
+      {% unless page.is_archive %}<li><a href="/archive/">Archive</a></li>{% endunless %}{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li>
     </ul>
   </div>
 
   <div class="meta">
-    <p>Last updated {{ site.posts.first.date | date: "%B %Y" }}. Copyright &copy; <a href="/about/">{{ site.author }}</a>.</p>
+    <p>Copyright &copy; <a href="/about/">{{ site.author }}</a>. Last updated {{ site.posts.first.date | date: "%B %Y" }}.</p>
   </div>
 
 </footer>

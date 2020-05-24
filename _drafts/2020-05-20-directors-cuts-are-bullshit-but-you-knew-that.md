@@ -3,7 +3,7 @@ title: "Director's cuts are bullshit, but you knew that"
 excerpt: "The quick brown fox jumps over the lazy dog."
 image:
   file: justice-league-2017.jpg
-  caption: "Gal Gadot in 'Justice League' (Warner Bros., 2017)"
+  #caption: "Gal Gadot in 'Justice League' (Warner Bros., 2017)"
 date: 2020-05-20 22:11 -0800
 ---
 

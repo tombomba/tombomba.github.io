@@ -52,6 +52,8 @@ hr
   border-top: 1px solid $border-dark
   border-bottom: 1px solid $border-light
   background-color: $body-color
+  &.pagebreak
+    margin-top: bem(1.5)
 
 .mix-link
   color: $mix-color
@@ -60,6 +62,9 @@ hr
     color: $mix-color
   a:hover
     text-decoration: underline
+
+.datestamp
+  @extend .mix-link
 
 //-----------------------------------------------------------------------------
 
@@ -132,9 +137,8 @@ main article
   li + p,
     margin-top: 0
 
-  .datestamp
-    @extend .mix-link
-
+main aside
+  margin-top: bem(1.5)
 
 footer
   max-width: $max-width
@@ -184,7 +188,7 @@ footer
       padding-bottom: 2px
   &.home
     li:first-of-type
-      margin-top: 0
+      margin-top: bem(1.5)
 
 .ul-plain-condensed
   margin-left: bem(1)

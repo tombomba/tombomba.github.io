@@ -2,6 +2,29 @@
 is_home: true
 permalink: /index.html
 ---
+
+{% include post-block.html page=site.posts.first content=site.posts.first.content is_home=true %}
+
+<aside>
+
+  <hr>
+
+  <ul class="ul-toc home">
+    {% for p in site.posts limit:7 offset:1 %}
+      {% include toc.html title=p.title excerpt=p.excerpt date=p.date tags=p.tags url=p.url %}
+    {% endfor %}
+  </ul>
+
+</aside>
+
+{% comment %}
+{% for p in site.posts limit: 10 %}
+  {% unless forloop.first %}<hr class="pagebreak">{% endunless %}
+  {% include post-block.html page=p content=p.content is_home=true %}
+{% endfor %}
+{% endcomment %}
+
+{% comment %}
 <article>
 
   <ul class="ul-toc home"><!-- 30 day scope -->
@@ -17,3 +40,4 @@ permalink: /index.html
   </ul>
 
 </article>
+{% endcomment -%}

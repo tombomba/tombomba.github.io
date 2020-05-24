@@ -20,17 +20,14 @@ main article
       li
         display: inline
         @include font-ratio(14/16)
+        @extend .mix-link
         color: $mix-color
-        a:link, a:visited
-          color: $mix-color
-          text-decoration: none
-        a:hover
-          text-decoration: underline
         &:nth-child(2):before
           content: "\20/\20"
 
   figure
-    margin: bem(1) 0
+    margin-bottom: bem(1)
+    //margin: bem(1) 0
     padding-bottom: 0.415em
     .wrap
       position: relative
@@ -71,6 +68,16 @@ main article
       border-color: inherit
     &.transparent
       background-color: $body-color
+
+  .byline
+    margin-top: bem(1)
+    p
+      display: inline
+      @extend .mix-link
+      &:first-of-type::after
+        content: "\20/\20"
+        color: $mix-color
+
 
 //-----------------------------------------------------------------------------
 

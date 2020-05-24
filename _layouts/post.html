@@ -18,21 +18,21 @@ layout: default
 
 <article><!-- {{ copy | number_of_words }} words --><!-- revert? -->
 
-  <header>
-    <h1>{{ titlef }}</h1>
-    <ul><li><a href="{{ '/about/' | prepend: site.url }}">{{ p.author | default: site.author }}</a></li><li><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}">{{ p.date | date: "%-d %B %Y" }}</a></time></li></ul>
-  </header>
-
   {% if p.image.file %}
     {% assign w = p.image.width | default: 800 | times: 1.0 -%}
     {% assign h = p.image.height | default: 450 | times: 1.0 -%}
     {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
     <figure class="feature"><!-- {{ w }} x {{ h }} | {{ percent }}% -->
       <div class="wrap" style="padding-bottom:{{ percent }}%"><img src="{{ p.image.file | prepend: site.img_dir }}" alt="{{ p.image.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}"></div>
-      {% if p.image.caption %}<figcaption>{{ p.image.caption | strip | smartify | markdownify | normalize_whitespace }}</figcaption>{% endif -%}
+      {% if p.image.caption %}<figcaption>{{ p.image.caption | strip | smartify | markdownify | normalize_whitespace }}</figcaption>{% endif %}
     </figure>
   {% endif -%}
 
-  {{ copy }}
+  {% capture headline %}<header>
+    <h1>{{ titlef }}</h1>
+    <ul><li><a href="{{ '/about/' | prepend: site.url }}">{{ p.author | default: site.author }}</a></li><li><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}">{{ p.date | date: "%-d %B %Y" }}</a></time></li></ul>
+  </header><p>{% endcapture -%}
+
+  {{ copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' | strip | normalize_whitespace }}
 
 </article>

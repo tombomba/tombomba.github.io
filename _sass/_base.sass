@@ -82,7 +82,7 @@ header[role="banner"]
     display: flex
     align-items: center
     justify-content: center
-    order: 1
+    order: 2
     h1
       font-family: 'Oswald', $system
       font-weight: 700
@@ -96,16 +96,16 @@ header[role="banner"]
         text-decoration: none
 
   .home,
-  .nextprev
+  .archive
     img
       width: 37px
       height: 37px
   .home
-    order: 2
-    padding-left: 1em
-  .nextprev
-    display: none
+    order: 1
+    padding-right: 18px
+  .archive
     order: 3
+    padding-left: 18px
 
   .shim
     margin-top: 1em
@@ -210,19 +210,15 @@ footer
       height: bem(2)
     .textbox
       flex: 1 1 50%
-      order: 2
     .home,
-    .nextprev
+    .archive
       display: flex
       flex: 1 1 25%
-      //padding-top: 0.415em
     .home
-      order: 1
-      padding-left: 0
-    .nextprev
-      order: 3
-      align-items: center
+      padding-right: 0
+    .archive
       justify-content: flex-end
+      padding-left: 0
     .shim
       margin-top: 0
 

@@ -28,7 +28,7 @@ main article
   figure
     margin-bottom: bem(1)
     //margin: bem(1) 0
-    padding: 0.415em 0
+    padding-bottom: 0.415em
     .wrap
       position: relative
       padding-bottom: 56.25%
@@ -84,8 +84,7 @@ main article
 
 @media screen and (min-width: 48em)
 
-  main article header,
-  footer
+  main article header
     text-align: left
 
   main article figure
@@ -106,6 +105,16 @@ main article
       margin-right: 0
       &.tilt
         transform: rotate(3deg)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 64em)
+
+  main article > img
+    &.left
+      margin-left: bem(-1)
+    &.right
+      margin-right: bem(-1)
 
 //-----------------------------------------------------------------------------
 

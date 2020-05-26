@@ -9,6 +9,7 @@ letterboxd: t__bomba
 
 img_dir: /assets/img/
 css_dir: /assets/css/
+emo_dir: /assets/img/emo/
 
 safe: true
 future: false

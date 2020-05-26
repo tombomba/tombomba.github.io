@@ -95,17 +95,14 @@ header[role="banner"]
       a:hover
         text-decoration: none
 
-  .home,
-  .archive
+  .home
+    order: 1
+    padding-right: 0.5em
     img
       width: 37px
       height: 37px
-  .home
-    order: 1
-    padding-right: 18px
   .archive
-    order: 3
-    padding-left: 18px
+    display: none
 
   .shim
     margin-top: 1em
@@ -218,7 +215,11 @@ footer
       padding-right: 0
     .archive
       justify-content: flex-end
+      order: 3
       padding-left: 0
+      img
+        width: 29px
+        height: 29px
     .shim
       margin-top: 0
 

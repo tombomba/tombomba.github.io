@@ -2,17 +2,29 @@ main article
 
   header
     margin-top: 0
-    text-align: center
 
     h1
-      font-size: percentage(23/18)
-      line-height: (($line-height - 1) / 2) + 1
       color: $text-color
       a:link, a:visited
         color: $text-color
         text-decoration: none
       a:hover
         text-decoration: underline
+
+    &.post
+      text-align: center
+      h1
+        font-size: percentage(23/18)
+        line-height: (($line-height - 1) / 2) + 1
+
+    &.note
+      h1,
+      p
+        display: inline
+        font-size: 100%
+        line-height: $line-height
+      h1::after
+        content: "\20\2014\20"
 
     ul
       margin: 0
@@ -23,7 +35,7 @@ main article
         @extend .mix-link
         color: $mix-color
         &:nth-child(2):before
-          content: "\20/\20"
+          content: "\00A0/\00A0"
 
     p
       margin: 0
@@ -87,7 +99,7 @@ main article
 
 @media screen and (min-width: 48em)
 
-  main article header
+  main article header.post
     text-align: left
 
   main article figure

@@ -71,7 +71,6 @@ main article
     background-color: $bg-color
     vertical-align: top
     overflow: hidden
-    border-radius: 4px
     &.top
       margin-top: bem(1)
     &.half
@@ -82,6 +81,8 @@ main article
       border-width: thin
       border-style: solid
       border-color: inherit
+    &.rounded
+      border-radius: 4px
     &.transparent
       background-color: $body-color
 
@@ -114,12 +115,16 @@ main article
       margin-right: bem(1)
       &.tilt
         transform: rotate(-3deg)
+      &.shadow
+        box-shadow: -4px 4px 4px $mix-color
     &.right
       float: right
       margin-left: bem(1)
       margin-right: 0
       &.tilt
         transform: rotate(3deg)
+      &.shadow
+        box-shadow: 4px 4px 4px $mix-color
 
 //-----------------------------------------------------------------------------
 

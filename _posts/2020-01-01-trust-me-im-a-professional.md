@@ -1,11 +1,12 @@
 ---
+layout: note
 title: "Trust me, I'm a professional"
 excerpt: "Of course I'm a serious critic of serious films. What else would I be?"
 tags: [about]
 date: 2020-01-01 20:40 -0800
 ---
 
-![Frasier Season 5 Episode 1, 23 September 1997]({{ site.img_dir }}frasier-crane-300x300.jpg){: width="240" height="240" .top .right .pull .tilt .rounded }
+![Frasier Season 5 Episode 1, 23 September 1997]({{ site.img_dir }}frasier-crane-300x300.jpg){: width="300" height="300" .right .pull .tilt .rounded }
 
 On one hand, there's a desire to be a serious critic of serious films, the perfect reviewer of mainstream pop, ready with a good tweet, always hovering between insight and #hottake.
 

@@ -56,7 +56,21 @@
   <div class="nav">
     <div class="textbox"><h1><a href="{{ site.url }}">{{ site.title | upcase }}</a></h1></div>
     <div class="home"><a href="{{ site.url }}"><img src="{{ 'alien-monster.png' | prepend: site.emo_dir | prepend: site.url }}" alt="homepage"></a></div>
-    <div class="nextprev">{% if page.is_post %}<p>{% if page.next %}<a href="{{ page.next.url | prepend: site.url }}"><img src="{{ 'backhand-index-pointing-left.png' | prepend: site.emo_dir | prepend: site.url }}" alt="previous page"></a>{% endif %}{% if page.previous %}&nbsp;<a href="{{ page.previous.url | prepend: site.url }}"><img src="{{ 'backhand-index-pointing-right.png' | prepend: site.emo_dir | prepend: site.url }}" alt="next page"></a>{% endif %}</p>{% else %}<a href="{{ site.posts.first.date | date: '/%Y/%m/' | prepend: site.url }}"><img src="{{ 'victory-hand.png' | prepend: site.emo_dir | prepend: site.url }}" alt="archive"></a>{% endif %}</div>
+    <div class="nextprev">
+    {% capture next-prev-icons %}
+    {% if page.is_post %}
+      {% if page.next %}
+      <a href="{{ page.next.url | prepend: site.url }}"><img src="{{ 'backhand-index-pointing-left.png' | prepend: site.emo_dir | prepend: site.url }}" alt="previous page"></a>
+      {% endif %}
+      {% if page.previous %}
+      &nbsp;<a href="{{ page.previous.url | prepend: site.url }}"><img src="{{ 'backhand-index-pointing-right.png' | prepend: site.emo_dir | prepend: site.url }}" alt="next page"></a>
+      {% endif %}
+    {% else %}
+      <a href="{{ '/archive/' | prepend: site.url }}"><img src="{{ 'victory-hand.png' | prepend: site.emo_dir | prepend: site.url }}" alt="archive"></a>
+    {% endif %}
+    {% endcapture -%}
+    {{ next-prev-icons | strip | normalize_whitespace }}
+    </div>
   </div>
   <div class="shim"><hr></div>
 </header>

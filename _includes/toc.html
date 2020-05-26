@@ -1,7 +1,7 @@
 {% if include.url == site.posts.first.url %}
-  {% capture iconf %}<img src="{{ '/assets/img/icon-emo-new.png' | prepend: site.url }}" class="icon" width="16" height="16" alt="new!">{% endcapture %}
+  {% capture iconf %}<img src="{{ 'new-small.png' | prepend: site.emo_dir | prepend: site.url }}" class="icon" width="16" height="16" alt="new!">{% endcapture %}
 {% elsif include.tags contains 'cool' %}
-  {% capture iconf %}<img src="{{ '/assets/img/icon-emo-cool.png' | prepend: site.url }}" class="icon" width="16" height="16" alt="cool!">{% endcapture %}
+  {% capture iconf %}<img src="{{ 'cool-small.png' | prepend: site.emo_dir | prepend: site.url }}" class="icon" width="16" height="16" alt="cool!">{% endcapture %}
 {% endif -%}
 <li>
   <h2><a href="{{ include.url | prepend: site.url }}">{{ include.title | strip_html | normalize_whitespace | smartify }}{% if iconf %}&nbsp;{{ iconf }}{% endif %}</a></h2>

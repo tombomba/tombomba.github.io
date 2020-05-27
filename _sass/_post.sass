@@ -31,7 +31,7 @@ main article
       list-style-type: none
       li
         display: inline
-        @include font-ratio(14/16)
+        font-size: percentage(14/16)
         @extend .mix-link
         color: $mix-color
         &:nth-child(2):before
@@ -41,8 +41,7 @@ main article
       margin: 0
 
   figure
-    margin-bottom: bem(1)
-    //margin: bem(1) 0
+    margin-bottom: 1.5em
     padding-bottom: 0.415em
     .wrap
       position: relative
@@ -66,13 +65,13 @@ main article
 
   & > img
     display: block
-    margin: 0 auto (bem(1) + 0.415em) auto
+    margin: 0 auto (1em + 0.415em) auto
     max-width: 100%
     background-color: $bg-color
     vertical-align: top
     overflow: hidden
     &.top
-      margin-top: bem(1)
+      margin-top: 1em
     &.half
       max-width: ($max-width / 2)
     &.third
@@ -87,7 +86,7 @@ main article
       background-color: $body-color
 
   .byline
-    margin-top: bem(1)
+    margin-top: 1em
     p
       display: inline
       @extend .mix-link
@@ -108,18 +107,18 @@ main article
       @include font-ratio(14/16)
 
   main article > img
-    margin-bottom: bem(1)
+    margin-bottom: 1em
     &.left
       float: left
       margin-left: 0
-      margin-right: bem(1)
+      margin-right: 1em
       &.tilt
         transform: rotate(-3deg)
       &.shadow
         box-shadow: -4px 4px 4px $mix-color
     &.right
       float: right
-      margin-left: bem(1)
+      margin-left: 1em
       margin-right: 0
       &.tilt
         transform: rotate(3deg)
@@ -132,9 +131,9 @@ main article
 
   main article > img
     &.left
-      margin-left: bem(-1)
+      margin-left: -1em
     &.right
-      margin-right: bem(-1)
+      margin-right: -1em
 
 //-----------------------------------------------------------------------------
 
@@ -142,3 +141,9 @@ main article
 
   main article figure figcaption p
     @include font-ratio(14/16)
+
+  main article > img
+    &.left
+      margin-left: -3em
+    &.right
+      margin-right: -3em

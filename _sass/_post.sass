@@ -65,13 +65,13 @@ main article
 
   & > img
     display: block
-    margin: 0 auto (1em + 0.415em) auto
+    margin: 0 auto 1.5em auto
     max-width: 100%
     background-color: $bg-color
     vertical-align: top
     overflow: hidden
     &.top
-      margin-top: 1em
+      margin-top: 1.5em
     &.half
       max-width: ($max-width / 2)
     &.third
@@ -131,9 +131,9 @@ main article
 
   main article > img
     &.left
-      margin-left: -1em
+      margin-left: -1.5em
     &.right
-      margin-right: -1em
+      margin-right: -1.5em
 
 //-----------------------------------------------------------------------------
 
@@ -141,9 +141,3 @@ main article
 
   main article figure figcaption p
     @include font-ratio(14/16)
-
-  main article > img
-    &.left
-      margin-left: -3em
-    &.right
-      margin-right: -3em

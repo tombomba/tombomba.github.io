@@ -44,10 +44,10 @@ layout: default
 
   <ul class="ul-toc nextprev">
     {% if page.next %}
-      {% include toc.html title=page.next.title excerpt=page.next.excerpt url=page.next.url %}
+      {% include toc.html title=page.next.title excerpt=page.next.excerpt image=page.next.image url=page.next.url %}
     {% endif %}
     {% if page.previous %}
-      {% include toc.html title=page.previous.title excerpt=page.previous.excerpt url=page.previous.url %}
+      {% include toc.html title=page.previous.title excerpt=page.previous.excerpt image=page.previous.image url=page.previous.url %}
     {% endif %}
   </ul>
 

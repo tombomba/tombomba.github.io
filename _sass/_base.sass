@@ -140,7 +140,7 @@ footer
   &.post
     margin-top: 1em
   &.page
-    margin-top: 3em
+    margin-top: 3.66em
   text-align: center
   ul
     margin-top: 1em
@@ -159,17 +159,33 @@ footer
   margin-right: auto
   list-style-type: none
   li
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
     margin-top: ($line-height * 1em)
-    h2,
-    h3
-      margin: 0
-      font-size: 100%
-      font-weight: 400
-    p
-      margin: 0
-    img.icon
-      vertical-align: middle
-      padding-bottom: 2px
+    .meta
+      flex: 1
+      order: 2
+      padding-left: 1em
+      h2,
+      h3
+        margin: 0
+        font-size: 100%
+        font-weight: 400
+      p
+        margin: 0
+      img.icon
+        vertical-align: middle
+        padding-bottom: 2px
+    .thumb
+      order: 1
+      width: 80px
+      height: 60px
+      margin-top: 4px
+      border-radius: 4px
+      background-position: center center
+      background-repeat: no-repeat
+      background-size: cover
   &.home
     li:first-of-type
       margin-top: 0
@@ -199,53 +215,32 @@ footer
 
 @media screen and (min-width: 40em)
 
-  //header[role="banner"]
-    .nav
-      justify-content: space-between
-    .textbox
-      flex: 1 1 50%
-      h1
-        font-size: percentage(47/18)
-    .home,
-    .archive
-      display: flex
-      flex: 1 1 25%
-      img
-        width: 37px
-        height: 37px
-    .home
-      padding-right: 0
-    .archive
-      justify-content: flex-end
-      order: 3
-      padding-left: 0
-
   main article,
   main aside
     margin-top: 3.66em
+
+  .ul-toc li
+    align-items: center
+    .meta
+      margin-right: -1em
+    .thumb
+      margin-top: 0
+      width: 135px
+      height: 90px
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 48em)
 
-  //header[role="banner"]
-    display: flex
-    align-items: center
-    justify-content: space-between
-    .logobox
-      display: flex
-      justify-content: center
-      align-items: center
-      margin-left: bem(-0.5)
-    .shim
-      flex: 1
-      margin-top: 0
-      margin-left: 1em
+  main article blockquote
+    border-left-width: 1em
+    padding-left: 1em
 
-  main article
-    blockquote
-      border-left-width: bem(0.125)
-      padding-left: bem(0.875)
+//-----------------------------------------------------------------------------
 
-  //.ul-toc
-    margin-left: 0
+@media screen and (min-width: 64em)
+
+  .ul-toc li
+    .thumb
+      width: 150px
+      height: 100px

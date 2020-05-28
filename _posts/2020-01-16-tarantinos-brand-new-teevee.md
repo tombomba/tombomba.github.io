@@ -1,6 +1,6 @@
 ---
 title: "Tarantino's brand new teevee"
-excerpt: "Quentin wants to make 'Bounty Law' for real."
+excerpt: "Quentin wants to make his fictional 'Bounty Law' a real TV show."
 image:
   thumb: tarantino-teevee.jpg
 date: 2020-01-16 20:54 -0800

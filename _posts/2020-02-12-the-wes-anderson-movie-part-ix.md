@@ -1,7 +1,8 @@
 ---
 title: "'The Wes Anderson Movie, Part IX'"
-excerpt: "With Anderson, as with all franchisors, successful repetition is the goal."
-hed: alt
+excerpt: "With Anderson, successful repetition is the goal."
+image:
+  thumb: french-dispatch-poster.jpg
 date: 2020-02-12 10:49 -0800
 ---
 ![French Dispatch movie poster]({{ site.img_dir }}french-dispatch-poster.jpg){: width="220" height="330" .top .right .tilt .pull }

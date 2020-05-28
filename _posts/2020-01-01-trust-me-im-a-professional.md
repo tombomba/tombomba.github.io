@@ -1,7 +1,9 @@
 ---
 layout: note
 title: "Trust me, I'm a professional"
-excerpt: "Of course I'm a serious critic of serious films. What else would I be?"
+excerpt: "Of course I'm a serious critic of serious films."
+image:
+  thumb: frasier-crane-300x300.jpg
 tags: [about]
 date: 2020-01-01 20:40 -0800
 ---

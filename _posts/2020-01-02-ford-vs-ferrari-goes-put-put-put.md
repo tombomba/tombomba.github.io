@@ -1,6 +1,6 @@
 ---
 title: "'Ford v Ferrari' goes put-put-put"
-excerpt: "It's possible for a movie to have no bad scenes, but no good ones, either."
+excerpt: "A movie with no bad scenes, but no good ones, either."
 image:
   file: ford-v-ferrari-2-960x541.jpg
   width: 960

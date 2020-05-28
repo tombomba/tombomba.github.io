@@ -1,6 +1,8 @@
 ---
 title: "Tarantino's brand new teevee"
-excerpt: "Quentin claims to have written episodes of an old-style western show."
+excerpt: "Quentin wants to make 'Bounty Law' for real."
+image:
+  thumb: tarantino-teevee.jpg
 date: 2020-01-16 20:54 -0800
 ---
 

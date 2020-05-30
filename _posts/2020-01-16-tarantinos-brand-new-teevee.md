@@ -1,10 +1,13 @@
 ---
+layout: inline
 title: "Tarantino's brand new teevee"
 excerpt: "Quentin wants to make his fictional 'Bounty Law' a real TV show."
 image:
   thumb: tarantino-teevee.jpg
 date: 2020-01-16 20:54 -0800
 ---
+
+![Once Upon a Time... in Hollywood]({{ site.img_dir }}tarantino-teevee.jpg){: width="260" height="260" .left .tilt .rounded .pull }
 
 [Quentin says](https://deadline.com/2020/01/quentin-tarantino-oscar-nominations-once-upon-a-time-in-hollywood-star-trek-bounty-law-tv-series-1202829629/) he wrote 5 episodes of "Bounty Law," the fictional show featured in his recent film "Once Upon a Time ... in Hollywood," and plans to direct them. Where and when remain to be seen.
 

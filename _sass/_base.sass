@@ -73,43 +73,21 @@ header[role="banner"]
   margin: 0 auto
   padding: 0
 
-  .nav
-    display: flex
-    align-items: center
-    justify-content: center
-
-  .textbox
-    display: flex
-    align-items: center
-    justify-content: center
-    order: 2
-    h1
-      font-family: $sans
-      font-weight: 700
-      font-size: percentage(37/18)
-      line-height: 1
+  h1
+    font-family: $sans
+    font-weight: 700
+    font-size: percentage(37/18)
+    line-height: 1
+    color: $logo-color
+    text-align: center
+    a:link,
+    a:visited
       color: $logo-color
-      a:link,
-      a:visited
-        color: $logo-color
-      a:hover
-        text-decoration: none
+    a:hover
+      text-decoration: none
 
-  .home
-    display: none
-    //order: 2
-    //padding-right: 0.5em
-  .archive
-    order: 1
-  .home,
-  .archive
-    img
-      width: 47px
-      height: 47px
-
-  .shim
+  hr
     margin-top: 0.5em
-
 
 main article
   margin-top: 2.66em

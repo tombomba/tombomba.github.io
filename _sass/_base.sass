@@ -73,12 +73,13 @@ header[role="banner"]
   margin: 0 auto
   padding: 0
 
-  .logotext
+  .meta
     display: flex
     align-items: center
     justify-content: center
     height: ($line-height * 2em)
-    h1
+
+    .text h1
       font-family: $sans
       font-weight: 700
       font-size: percentage(37/18)
@@ -90,6 +91,10 @@ header[role="banner"]
         color: $logo-color
       a:hover
         text-decoration: none
+
+    .logo
+      order: -1
+      margin-right: 6px
 
 main article
   margin-top: 2.66em

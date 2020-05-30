@@ -29,7 +29,7 @@ body
   -ms-text-size-adjust: auto
   -webkit-text-size-adjust: auto
 
-  padding: 0.5em 1em 1em 1em
+  padding: 0 1em 1em 1em
 
 a
   text-decoration: none
@@ -73,21 +73,23 @@ header[role="banner"]
   margin: 0 auto
   padding: 0
 
-  h1
-    font-family: $sans
-    font-weight: 700
-    font-size: percentage(37/18)
-    line-height: 1
-    color: $logo-color
-    text-align: center
-    a:link,
-    a:visited
+  .logotext
+    display: flex
+    align-items: center
+    justify-content: center
+    height: ($line-height * 2em)
+    h1
+      font-family: $sans
+      font-weight: 700
+      font-size: percentage(37/18)
+      line-height: 1
       color: $logo-color
-    a:hover
-      text-decoration: none
-
-  hr
-    margin-top: 0.5em
+      text-align: center
+      a:link,
+      a:visited
+        color: $logo-color
+      a:hover
+        text-decoration: none
 
 main article
   margin-top: 2.66em

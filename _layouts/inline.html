@@ -1,0 +1,45 @@
+---
+layout: default
+---
+{% assign p = page -%}
+{% assign copy = content | strip | normalize_whitespace -%}
+
+{% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
+{% assign sub = t.last | prepend: '!QQ!' -%}
+{% assign t = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
+
+{% capture titlef %}
+  <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ t }}{% if include.is_home %}</a>{% endif %}</h1>
+{% endcapture -%}
+
+{% capture byline %}
+  <ul>{% unless include.is_home %}<li><a href="/about/">{{ p.author | default: site.author }}</a></li>{% endunless -%}<li><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></li></ul>
+{% endcapture -%}
+
+{% if copy contains 'img src=' -%}
+  {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
+{% endif -%}
+
+<article><!-- {{ copy | number_of_words }} words -->
+
+  {% capture headline %}<header class="{{ p.layout }}">{{ titlef }}{{ byline }}<p>{% endcapture -%}
+  {{ copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' }}
+
+</article>
+
+{% if page.next or page.previous %}
+<aside>
+
+  <hr>
+
+  <ul class="ul-toc nextprev">
+    {% if page.next %}
+      {% include toc.html title=page.next.title excerpt=page.next.excerpt image=page.next.image url=page.next.url %}
+    {% endif %}
+    {% if page.previous %}
+      {% include toc.html title=page.previous.title excerpt=page.previous.excerpt image=page.previous.image url=page.previous.url %}
+    {% endif %}
+  </ul>
+
+</aside>
+{% endif -%}

@@ -1,3 +1,7 @@
+{% assign t = include.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
+{% assign sub = t.last | prepend: '!QQ!' -%}
+{% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
+
 {% if include.url == site.posts.first.url %}
   {% capture iconf %}<img src="{{ 'new-small.png' | prepend: site.emo_dir | prepend: site.url }}" class="icon" width="16" height="16" alt="new!">{% endcapture %}
 
@@ -8,13 +12,13 @@
 
 <li>
   <div class="meta">
-    <h2><a href="{{ include.url | prepend: site.url }}">{{ include.title | strip_html | normalize_whitespace | smartify }}{% if iconf %}&nbsp;{{ iconf }}{% endif %}</a></h2>
+    <h2><a href="{{ include.url | prepend: site.url }}">{{ titlef }}{% if iconf %}&nbsp;{{ iconf }}{% endif %}</a></h2>
     <p>{{ include.excerpt | strip_html | normalize_whitespace | smartify }}</p>
     {% if include.date %}<p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}">{{ p.date | date: "%-d %B %Y" }}</a></time></p>{% endif -%}
   </div>
   {% if include.image.thumb or include.image.file %}
   <div class="thumb" style="background-image:url(/assets/img/{{ include.image.file | default: include.image.thumb }})"></div>
-  {% endif %}
+  {% endif -%}
 </li>
 
 {% assign iconf = nil -%}

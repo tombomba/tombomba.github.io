@@ -1,8 +1,13 @@
 ---
 layout: inline
 title: "The Future of Fango"
+excerpt: "The quick brown fox jumps over the lazy dog."
+image:
+  thumb: fangoria-068.jpg
 date: 2020-06-10 12:10 -0800
 ---
+
+![Fangoria cover 1987]({{ site.img_dir }}fangoria-068.jpg){: width="220" height="306" .left .tilt .pull }
 
 The Fango crowd overplayed their hand & gave Cinestate an easy out.
 

@@ -6,7 +6,6 @@ image:
   thumb: french-dispatch-poster.jpg
 date: 2020-02-12 10:49 -0800
 ---
-![French Dispatch movie poster]({{ site.img_dir }}french-dispatch-poster.jpg){: width="220" height="330" .right .tilt .pull }
 
 Everyone on the internet is required to have an opinion about [the "French Dispatch" trailer](https://www.youtube.com/watch?v=TcPk2p0Zaw4) so here's mine:
 

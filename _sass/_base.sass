@@ -53,7 +53,8 @@ hr
   border-bottom: 1px solid $border-light
   background-color: $body-color
   &.pagebreak
-    margin-top: 3.66em
+    width: $max-width
+    margin: bem(1) auto 0 auto
 
 .mix-link
   color: $mix-color
@@ -122,11 +123,9 @@ main aside
 
 footer
   max-width: $max-width
-  margin: 0 auto
-  &.post
-    margin-top: 1em
-  &.page
-    margin-top: bem(1)
+  margin-top: 1.5em
+  margin-left: auto
+  margin-right: auto
   text-align: center
   ul
     margin-top: 1em
@@ -148,7 +147,7 @@ footer
     display: flex
     align-items: flex-start
     justify-content: space-between
-    margin-top: bem(1)
+    margin-top: 1.5em
     .meta
       flex: 1
       order: 2
@@ -177,7 +176,7 @@ footer
       margin-top: 0
   &.nextprev
     li:first-of-type
-      margin-top: 1em
+      margin-top: 1.5em
 
 .ul-plain-condensed
   margin-left: 1.5em
@@ -203,8 +202,6 @@ footer
 
   .ul-toc li
     align-items: center
-    .meta
-      margin-right: -1em
     .thumb
       margin-top: 0
       width: 135px

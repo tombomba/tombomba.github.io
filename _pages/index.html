@@ -2,19 +2,22 @@
 is_home: true
 permalink: /index.html
 ---
+{% include post-block.html page=site.posts.first content=site.posts.first.content is_home=true %}
 
-<article>
+<aside>
 
-  <ul class="ul-toc home"><!-- 1 month! -->
-    {% assign scope = 2629743 -%}
-    {% assign today = site.posts.first.date | date: '%s' -%}
-    {% for p in site.posts %}
-      {% assign current = p.date | date: '%s' -%}
-      {% assign range = today | times: 1 |  minus: current -%}
-      {% if scope > range %}
-        {% include ul-toc.html title=p.title excerpt=p.excerpt tags=p.tags url=p.url image=p.image is_home=true %}
-      {% endif -%}
-    {% endfor %}
+  <hr>
+
+  <ul class="ul-toc nextprev">
+  {% assign scope = 31556926 -%}<!-- 1 year! -->
+  {% assign today = site.posts.first.date | date: '%s' -%}
+  {% for p in site.posts offset:1   %}
+    {% assign current = p.date | date: '%s' -%}
+    {% assign range = today | times: 1 |  minus: current -%}
+    {% if scope > range %}
+      {% include ul-toc.html title=p.title excerpt=p.excerpt tags=p.tags image=p.image url=p.url %}
+    {% endif -%}
+  {% endfor %}
   </ul>
 
-</article>
+</aside>

@@ -40,7 +40,7 @@ main article
 
   figure
     margin-bottom: 1.5em
-    padding-bottom: 0.415em
+    padding: 0.415em 0
     .wrap
       position: relative
       padding-bottom: 56.25%
@@ -84,11 +84,11 @@ main article
       background-color: $body-color
 
   .byline
-    margin-top: 1em
+    margin-top: 1.5em
     p
       display: inline
       @extend .mix-link
-      &:first-of-type::after
+      &.author::after
         content: "\20/\20"
         color: $mix-color
 

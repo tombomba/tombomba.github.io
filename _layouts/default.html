@@ -42,6 +42,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css_dir | prepend: site.url | append: '.css' }}?v={{ site.time | date: '%a' | downcase }}">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&text={{ site.title | upcase }}&display=swap" rel="stylesheet">
 
     <!-- msft mobile hacks -->
     <script>!function(){if("-ms-user-select"in document.documentElement.style&&navigator.userAgent.match(/IEMobile/)){var a=document.createElement("style");a.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")),document.getElementsByTagName("head")[0].appendChild(a)}}();</script>
@@ -51,11 +52,8 @@
 <body>
 
 <header role="banner">
-  <div class="meta">
-    <div class="text"><h1><a href="{{ site.url }}">{{ site.title | upcase }}</a></h1></div>
-    <div class="logo"><img src="{{ 'portrait-icon.png' | prepend: site.img_dir | prepend: site.url }}" width="48px" height="48px" alt="icon"></div>
-  </div>
-  <div class="shim"><hr></div>
+  <h1><a href="{{ site.url }}">{{ site.title | upcase }}</a></h1>
+  <hr>
 </header>
 
 <main role="main"><!-- {{ page.layout }} -->

@@ -17,4 +17,4 @@ Culture writing today is like basic cable with a busted remote, the television p
 
 So forget it. Why not binge "Frasier" instead, stopping only to screen cap each moment Kelsey Grammer appears without pants? Call it an 'art project,' if you will. Tell people, with absurd confidence, it's a form of media commentary, coming soon to an insta near you.
 
-Or, if you're exceptionally lazy, just shitpost to your own domain.
+Or you could, if you're exceptionally lazy, shitpost to your own domain.

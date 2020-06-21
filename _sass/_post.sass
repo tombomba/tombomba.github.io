@@ -61,6 +61,8 @@ main article
       max-width: ($max-width / 2)
     &.third
       max-width: ($max-width / 3)
+    &.rock
+      margin: 0 0 bem(1) 0
     &.border
       border-width: thin
       border-style: solid
@@ -106,18 +108,6 @@ main article
         transform: rotate(3deg)
       &.shadow
         box-shadow: 4px 4px 4px $mix-color
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 64em)
-
-  main article > img
-    &.left
-      margin-left: -1.5em
-      margin-right: 1.5em
-    &.right
-      margin-right: -1.5em
-      margin-left: 1.5em
 
 //-----------------------------------------------------------------------------
 

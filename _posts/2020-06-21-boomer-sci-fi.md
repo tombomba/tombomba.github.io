@@ -1,5 +1,8 @@
 ---
-title: "The quick brown fox jumps over the lazy dog."
+title: "Boomer sci-fi"
+media:
+  youtube: xgbPSA94Rqg
+  thumb: foundation.jpg
 date: 2020-06-21 12:34 -0800
 ---
 

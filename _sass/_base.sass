@@ -123,7 +123,9 @@ main aside
 
 footer
   max-width: $max-width
-  margin-top: bem(1)
+  margin-top: bem(1) - 0.415em
+  &.buff
+    margin-top: bem(1)
   margin-left: auto
   margin-right: auto
   text-align: center
@@ -200,12 +202,10 @@ footer
 
 @media screen and (min-width: 40em)
 
-  .ul-toc li
-    align-items: center
-    .thumb
-      margin-top: 0
-      width: 135px
-      height: 90px
+  .ul-toc li .thumb
+    margin-top: 6px
+    width: 135px
+    height: 90px
 
 //-----------------------------------------------------------------------------
 
@@ -219,7 +219,6 @@ footer
 
 @media screen and (min-width: 64em)
 
-  .ul-toc li
-    .thumb
-      width: 150px
-      height: 100px
+  .ul-toc li .thumb
+    width: 150px
+    height: 100px

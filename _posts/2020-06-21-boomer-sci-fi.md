@@ -2,7 +2,7 @@
 title: "Boomer sci-fi"
 media:
   youtube: xgbPSA94Rqg
-  thumb: foundation.jpg
+  thumb: boomer-sci-fi.jpg
 date: 2020-06-21 12:34 -0800
 ---
 

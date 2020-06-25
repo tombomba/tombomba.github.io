@@ -1,29 +1,14 @@
 main article
 
-  header
-    margin-top: 0
-
-    h1
-      font-size: percentage(23/18)
-      line-height: (($line-height - 1) / 2) + 1
+  h1.hed
+    font-size: percentage(23/18)
+    line-height: (($line-height - 1) / 2) + 1
+    color: $text-color
+    a:link, a:visited
       color: $text-color
-      a:link, a:visited
-        color: $text-color
-        text-decoration: none
-      a:hover
-        text-decoration: underline
-    p
-      margin-top: 1.5em
-    ul
-      margin: 0
-      list-style-type: none
-      li
-        display: inline
-        font-size: percentage(14/16)
-        @extend .mix-link
-        color: $mix-color
-        &:nth-child(2):before
-          content: "\00A0/\00A0"
+      text-decoration: none
+    a:hover
+      text-decoration: underline
 
   figure
     margin-bottom: 1.5em
@@ -55,24 +40,6 @@ main article
       padding: 0
       font-size: percentage(12/16)
 
-  & > img
-    display: block
-    margin: 0 auto 1.5em auto
-    max-width: 100%
-    background-color: $bg-color
-    vertical-align: top
-    overflow: hidden
-    &.top
-      margin-top: 1.5em
-    &.border
-      border-width: thin
-      border-style: solid
-      border-color: inherit
-    &.rounded
-      border-radius: 4px
-    &.transparent
-      background-color: $body-color
-
   .byline
     margin-top: 1.5em
     p
@@ -89,22 +56,3 @@ main article
 
   main article figure figcaption p
     font-size: percentage(14/16)
-
-  main article > img
-    margin-bottom: 1em
-    &.left
-      float: left
-      margin-left: 0
-      margin-right: 1em
-      &.tilt
-        transform: rotate(-3deg)
-      &.shadow
-        box-shadow: -4px 4px 4px $mix-color
-    &.right
-      float: right
-      margin-left: 1em
-      margin-right: 0
-      &.tilt
-        transform: rotate(3deg)
-      &.shadow
-        box-shadow: 4px 4px 4px $mix-color

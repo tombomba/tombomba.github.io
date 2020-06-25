@@ -64,12 +64,6 @@ main article
     overflow: hidden
     &.top
       margin-top: 1.5em
-    &.half
-      max-width: ($max-width / 2)
-    &.third
-      max-width: ($max-width / 3)
-    &.rock
-      margin: 0 0 bem(1) 0
     &.border
       border-width: thin
       border-style: solid
@@ -93,9 +87,8 @@ main article
 
 @media screen and (min-width: 48em)
 
-  main article figure
-    figcaption p
-      @include font-ratio(14/16)
+  main article figure figcaption p
+    font-size: percentage(14/16)
 
   main article > img
     margin-bottom: 1em
@@ -115,10 +108,3 @@ main article
         transform: rotate(3deg)
       &.shadow
         box-shadow: 4px 4px 4px $mix-color
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 72em)
-
-  main article figure figcaption p
-    @include font-ratio(14/16)

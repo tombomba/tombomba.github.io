@@ -56,6 +56,52 @@ hr
     width: $max-width
     margin: bem(1) auto 0 auto
 
+ul.toc
+  max-width: $max-width
+  margin-left: auto
+  margin-right: auto
+  list-style-type: none
+  li
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    margin-top: 1.5em
+    .meta
+      flex: 1
+      order: 2
+      h2,
+      h3
+        margin: 0
+        font-size: 100%
+        font-weight: 400
+      p
+        margin: 0
+      img.icon
+        vertical-align: middle
+        padding-bottom: 2px
+    .thumb
+      order: 1
+      width: 80px
+      height: 60px
+      margin-top: 4px
+      margin-right: 1em
+      border-radius: 4px
+      background-position: center center
+      background-repeat: no-repeat
+      background-size: cover
+  &.home
+    li:first-of-type
+      margin-top: 0
+  &.nextprev
+    li:first-of-type
+      margin-top: 1.5em
+
+ul.plain
+  margin-left: 1.5em
+  margin-top: 1em
+  li
+    margin: 0
+
 .mix-link
   color: $mix-color
   a:link,
@@ -140,52 +186,6 @@ footer
         padding-left: 0.5em
         color: $mix-color
 
-.ul-toc
-  max-width: $max-width
-  margin-left: auto
-  margin-right: auto
-  list-style-type: none
-  li
-    display: flex
-    align-items: flex-start
-    justify-content: space-between
-    margin-top: 1.5em
-    .meta
-      flex: 1
-      order: 2
-      h2,
-      h3
-        margin: 0
-        font-size: 100%
-        font-weight: 400
-      p
-        margin: 0
-      img.icon
-        vertical-align: middle
-        padding-bottom: 2px
-    .thumb
-      order: 1
-      width: 80px
-      height: 60px
-      margin-top: 4px
-      margin-right: 1em
-      border-radius: 4px
-      background-position: center center
-      background-repeat: no-repeat
-      background-size: cover
-  &.home
-    li:first-of-type
-      margin-top: 0
-  &.nextprev
-    li:first-of-type
-      margin-top: 1.5em
-
-.ul-plain-condensed
-  margin-left: 1.5em
-  margin-top: 1em
-  li
-    margin: 0
-
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 32em)
@@ -202,10 +202,11 @@ footer
 
 @media screen and (min-width: 40em)
 
-  .ul-toc li .thumb
-    margin-top: 6px
-    width: 135px
-    height: 90px
+  ul.toc li
+    .thumb
+      margin-top: 6px
+      width: 135px
+      height: 90px
 
 //-----------------------------------------------------------------------------
 
@@ -219,6 +220,7 @@ footer
 
 @media screen and (min-width: 64em)
 
-  .ul-toc li .thumb
-    width: 150px
-    height: 100px
+  ul.toc li
+    .thumb
+      width: 150px
+      height: 100px

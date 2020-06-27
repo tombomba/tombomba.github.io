@@ -12,7 +12,7 @@ date: 2020-06-26 20:22 -0800
 
 Arthur Jafa is a cinematographer and artist who has worked with Spike Lee and Julie Dash. "Love Is the Message" was acquired by the Hirshhorn Museum along with the Smithsonian American Art Museum in 2018. It is playing in [virtual screenings](https://hirshhorn.si.edu/news/press-release/love-is-the-message-the-message-is-death-streamed-june-26-28/) at 13 museums this weekend. Seek it out once the world re-opens if you miss these shows.
 
-"Love Is the Message, and the Message Is Death" is a Black history lesson in seven minutes and thirty seconds. It depicts private joy and public brutality, the famous alongside the obscure. The footage, in some cases, is all too recent. It is not always easy to watch.
+"Love Is the Message, and the Message Is Death" is a Black history lesson in 7 minutes and thirty seconds. It depicts private joy and public brutality, the famous alongside the obscure. The footage, in some cases, is all too recent. It is not always easy to watch.
 
 Yet you could make a photo book from Jafa's collection, each juxtaposition more striking than the last. The film's genius is in placing Black pride next to Black pain and presenting them both, unfiltered, using found objects and visual detritus.
 

@@ -36,11 +36,11 @@
 
   <h1 class="hed">{{ titlef }}</h1>
 
-  {{ copy }}
-
   <div class="byline">
     <p class="author"><a href="/about/">{{ page.author | default: site.author }}</a></p>
     <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}">{{ p.date | date: "%-d %B %Y" }}</a></p>
   </div>
+
+  {{ copy }}
 
 </article>

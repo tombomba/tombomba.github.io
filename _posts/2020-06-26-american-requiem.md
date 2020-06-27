@@ -16,6 +16,6 @@ Arthur Jafa is a cinematographer and artist who has worked with Spike Lee and Ju
 
 Yet you could make a photo book from Jafa's collection, each juxtaposition more striking than the last. The film's genius is in placing Black pride next to Black pain and presenting them both, unfiltered, using found objects and visual detritus.
 
-One image will stick with me: A close-up of a young woman riding silently in a car. Her expression doesn't change but her gaze travels for a mile and a year, and keeps going, her face the face of someone who has seen too much in too short a time. She doesn't need to speak for you to know her truth.
+One image will stick with me: A close-up of a young woman riding silently in a car. Her expression doesn't change but her gaze runs for a mile and a year, and keeps going, her face the face of someone who has seen too much in too short a time. She doesn't need to speak for you to know her truth.
 
 "Love Is the Message, and the Message Is Death" is like that, too. It says something real without using words.

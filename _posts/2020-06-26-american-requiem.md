@@ -14,8 +14,8 @@ Arthur Jafa is a cinematographer and artist who has worked with Spike Lee and Ju
 
 "Love Is the Message, and the Message Is Death" is a Black history lesson in 7 minutes and thirty seconds. It depicts private joy and public brutality, the famous with the obscure. The footage, in some cases, is all too recent. It is not always easy to watch.
 
-Yet you could make a photo book from Jafa's collection, each juxtaposition more striking than the last. The film's genius is in placing Black pride next to Black pain and presenting them both, unfiltered, using found objects and visual detritus.
+Yet you could make a photo book from Jafa's collection, each juxtaposition more striking than the last. His genius lies in placing Black pride next to Black pain and presenting both using only found objects and visual detritus.
 
-One image will stick with me: A close-up of a young woman riding silently in a car. Her expression doesn't change but her gaze runs for a mile and a year, and keeps going, her face the face of someone who has seen too much in too short a time. She needn't speak to communicate her truth.
+One image will stay with me: A close-up of a young woman riding silently in a car, her expression unchanging. Her gaze goes to the camera and runs for a mile and a year, and keeps going, her face the face of someone who has seen too much in too short a time. She needn't speak to communicate her truth.
 
-"Love Is the Message, and the Message Is Death" is like that, too, in the way it says something real without using words.
+"Love Is the Message, and the Message Is Death" is like that, too, in the way it says something real and lasting without using words.

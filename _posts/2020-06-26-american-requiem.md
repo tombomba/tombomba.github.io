@@ -14,4 +14,4 @@ Jafa is a cinematographer and artist who has worked with Spike Lee, Julie Dash, 
 
 "Love is the message, and the message is Death" is a history lesson in seven minutes and thirty seconds. The film is not easy to watch. It reflects private joy and public brutality, from the famous to the more obscure, and most of the footage is all too recent.
 
-One moment in particular will stick with me: A close-up of a young woman riding silently in a car and looking straight at the camera. I got the feeling that she was coming from a funeral. I don't know if she was. As she looks out, her expression doesn't change but her gaze travels for a mile and a year, and keeps going, her face the face of someone who has seen too much in too short a time. She doesn't have to say it for you to know.
+One moment will stick with me: A close-up of a young woman riding silently in a car and looking straight at the camera. As she looks out, her expression doesn't change but her gaze travels for a mile and a year, and keeps going, her face the face of someone who has seen too much in too short a time. She doesn't have to say for you to know.

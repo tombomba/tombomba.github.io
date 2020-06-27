@@ -1,6 +1,6 @@
 ---
 title: "American requiem"
-excerpt: "Arthur Jafa's 'Love is the message, and the message is Death' is an extraordinary piece of video art."
+tweet: "Arthur Jafa's 'Love is the message, and the message is Death' is an extraordinary piece of video art."
 media:
   image: love-is-the-message-and-the-message-is-death-2016.jpg
   thumb: love-is-the-message-and-the-message-is-death-2016.jpg

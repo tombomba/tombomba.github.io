@@ -9,10 +9,10 @@ layout: default
 
   <ul class="toc">
     {% if page.next %}
-      {% include ul-toc.html title=page.next.title excerpt=page.next.excerpt media=page.next.media url=page.next.url show_thumb=true %}
+      {% include ul-toc.html title=page.next.title tweet=page.next.tweet media=page.next.media url=page.next.url show_thumb=true %}
     {% endif %}
     {% if page.previous %}
-      {% include ul-toc.html title=page.previous.title excerpt=page.previous.excerpt media=page.previous.media url=page.previous.url show_thumb=true %}
+      {% include ul-toc.html title=page.previous.title tweet=page.previous.tweet media=page.previous.media url=page.previous.url show_thumb=true %}
     {% endif %}
   </ul>
 

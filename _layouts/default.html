@@ -26,7 +26,7 @@
     <!-- facebook -->
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta property="og:url" content="{{ page.url | prepend: site.url }}">
-    <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">
+    {% if page.is_post %}<meta property="og:description" content="{{ page.tweet | default: page.excerpt | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% else %}<meta property="og:description" content="{{ site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% endif %}
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:type" content="blog">
     <meta property="og:image" content="{{ page.media.thumb | default: 'default-opengraph.jpg' | prepend: site.img_dir |  prepend: site.url }}">
@@ -34,7 +34,7 @@
     <!-- twitter  -->
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="twitter:url" content="{{ page.url | default: '' | prepend: site.url }}">
-    <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">
+    {% if page.is_post %}<meta name="twitter:description" content="{{ page.tweet | default: page.excerpt | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% else %}<meta property="og:description" content="{{ site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% endif %}
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@{{ site.twitter }}">
     <meta name="twitter:creator" content="@{{ site.twitter }}">

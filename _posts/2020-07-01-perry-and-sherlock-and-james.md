@@ -4,7 +4,8 @@ tweet: "Quisque hendrerit eleifend eros, vitae tristique erat. Scooby dooby doo!
 media:
   image: perry-mason-2020-hbo.jpg
   thumb: perry-mason-2020-hbo.jpg
-  alt: "Matthew Rhys stars as 'Perry Mason' (HBO, 2020)"
+  alt: "Photo: Matthew Rhys in 'Perry Mason'"
+  caption: "Matthew Rhys stars in 'Perry Mason' (HBO, 2020)"
 date: 2020-07-01 12:34 -0800
 ---
 

@@ -1,18 +1,28 @@
 main article
 
-  h1.hed
-    font-size: percentage(23/18)
-    line-height: (($line-height - 1) / 2) + 1
-    color: $text-color
-    a:link, a:visited
+  header
+    h1.hed
+      font-size: percentage(23/18)
+      line-height: (($line-height - 1) / 2) + 1
       color: $text-color
-      text-decoration: none
-    a:hover
-      text-decoration: underline
+      a:link, a:visited
+        color: $text-color
+        text-decoration: none
+      a:hover
+        text-decoration: underline
+    div.byline
+      margin-top: 0
+      p
+        display: inline
+        @include font-ratio(14/16)
+        @extend .mix-link
+        &.author::after
+          content: "\20/\20"
+          color: $mix-color
 
   figure
-    margin-bottom: bem(1)
-    padding: 0.415em 0
+    margin-top: 1.5em
+    padding-bottom: 0.415em
     .wrap
       position: relative
       padding-bottom: 56.25%
@@ -37,19 +47,8 @@ main article
         border-radius: 4px
     figcaption p
       margin: 0 0 -0.415em 0
-      padding: 0
+      padding-top: 4px
       font-size: percentage(12/16)
-
-  .byline
-    margin-top: 0
-    p
-      display: inline
-      @include font-ratio(14/16)
-      @extend .mix-link
-      &.author::after
-        content: "\20/\20"
-        color: $mix-color
-
 
 //-----------------------------------------------------------------------------
 

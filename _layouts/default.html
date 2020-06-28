@@ -52,7 +52,13 @@
 <body>
 
 <header role="banner">
-  <h1><a href="{{ site.url }}">{{ site.title | upcase }}</a></h1>
+  <div class="wrap">
+    <div class="icon"><a href="{{ site.url }}"><span></span></a></div>
+    <div class="site">
+      <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+      <p>{{ site.description }}</p>
+    </div>
+  </div>
   <hr>
 </header>
 

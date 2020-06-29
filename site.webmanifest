@@ -3,12 +3,12 @@
     "short_name": "Bombaline",
     "icons": [
         {
-            "src": "/android-chrome-192x192.png?v=hoo-red",
+            "src": "/android-chrome-192x192.png?v=thin-red-box",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-512x512.png?v=hoo-red",
+            "src": "/android-chrome-512x512.png?v=thin-red-box",
             "sizes": "512x512",
             "type": "image/png"
         }

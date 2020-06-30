@@ -1,34 +1,32 @@
 ---
-title: "Trust me, I'm a professional"
-excerpt: "Of course I'm a serious critic of serious films. Of course!"
-is_about: true
+title: "About"
+excerpt: "Background information on Tom Bomba"
+is_bio: true
 permalink: /about/
 ---
 
 <article>
 
   <header>
-      <h1 class="hed">{{ page.title }}</h1>
-      <div class="byline">
-        <p class="author"><a href="/about/">{{ page.author | default: site.author }}</a></p>
-        <p class="datestamp"><a href="{{ p.url | prepend: site.url }}">{{ site.posts.last.date | date: "%-d %B %Y" }}</a></p>
-      </div>
+    <h1 class="hed">{{ page.title }}</h1>
   </header>
 
-  <figure><!-- 800.0 x 600.0 | 75.0% -->
-    <div class="wrap" style="padding-bottom:75%"><img src="/assets/img/frasier.jpg" alt="Frasier, Season 5 Episode 1, September 1997"></div>
-  </figure>
+  <p>There are quite a few crix out there who are smart and skilled and say interesting things. This site is my attempt to join them. I made it for fun, but also to express things I don’t see routinely expressed.</p>
 
-  {% capture bio %}
-  On one hand, there's a desire to be a serious critic of serious films, the perfect reviewer of mainstream pop, ready with a good tweet, always hovering between insight and #hottake.
+  <p>My name is Tom Bomba. I knocked around NYU’s cinema studies program before I “dropped out of college to get an education.” I’ve spent my time since producing digital media.</p>
 
-  On the other, an impish thought says: the hell with that. The media landscape is so fractured and ugly there isn't a point to writing reviews and profiles, to building a career out of words and opinions.
+  <p>The site was created on a Macintosh using Jekyll, Atom, and Pixelmator while listening to KCRW Los&nbsp;Angeles.</p>
 
-  Culture writing today is like basic cable with a busted remote, the television permanently stuck on the Home Shopping Network: everything is a pitch for something else, because criticism is no longer a job but publicity always is.
+  {% if site.tags.about.size > 2 %}
+    <p>For a little more biography, by way of the movies, read these posts:</p>
 
-  So forget it. Why not binge "Frasier" instead, stopping only to screen cap each moment Kelsey Grammer appears without pants? Call it an 'art project,' if you will. Tell people, with absurd confidence, it's a form of media commentary, coming soon to an insta near you.
-  {% endcapture -%}
+    <ul class="ul-plain-condensed">
+    {% for p in site.tags.about limit: 10 %}
+      <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip | normalize_whitespace | smartify }}</a></li>
+    {% endfor -%}
+    </ul>
 
-  {{ bio | smartify | markdownify | strip | normalize_whitespace }}
+    <p>If you need to get in touch, email “hello” at this domain.</p>
+  {% endif -%}
 
 </article>

@@ -111,9 +111,6 @@ ul.plain
   a:hover
     text-decoration: underline
 
-.datestamp
-  @extend .mix-link
-
 //-----------------------------------------------------------------------------
 
 header[role="banner"]
@@ -147,6 +144,9 @@ header[role="banner"]
 
 main article
   @extend .clearfix
+  &:not(:first-of-type)
+    margin-top: bem(1)
+    border-top: 1px dashed $light-mix
 
   h2, h3, h4, h5, h6
     font-size: 100%

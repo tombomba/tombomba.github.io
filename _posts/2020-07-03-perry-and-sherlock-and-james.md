@@ -6,7 +6,7 @@ media:
   thumb: perry-mason-2020-hbo.jpg
   alt: "Photo: Matthew Rhys in 'Perry Mason'"
   caption: "Matthew Rhys stars in 'Perry Mason' (HBO, 2020)"
-date: 2020-07-01 12:34 -0800
+date: 2020-07-03 12:34 -0800
 ---
 
 Donec ullamcorper orci eu venenatis volutpat. Aliquam neque nulla, malesuada ut lectus sit amet, pellentesque maximus nisl. Sed vel mi velit. Proin ornare, leo eget convallis feugiat, nisi sapien sagittis mauris, non tristique nulla metus fringilla libero. Quisque hendrerit eleifend eros, vitae tristique erat.

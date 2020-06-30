@@ -16,16 +16,6 @@ main article
       a:hover
         text-decoration: underline
 
-    div.byline
-      margin-top: 0
-      p
-        display: inline
-        font-size: percentage(14/16)
-        @extend .mix-link
-        &.author::after
-          content: "\20/\20"
-          color: $mix-color
-
   figure
     margin-top: bem(1)
     .wrap
@@ -54,3 +44,7 @@ main article
       margin: 0 0 -0.415em 0
       padding-top: 8px
       font-size: percentage(12/16)
+
+  .datestamp
+    font-style: italic
+    //@include font-ratio(14/16)

@@ -1,14 +1,14 @@
 {
-    "name": "Bombaline",
-    "short_name": "Bombaline",
+    "name": "BOMBALINE",
+    "short_name": "BOMBALINE",
     "icons": [
         {
-            "src": "/android-chrome-192x192.png?v=thin-red-box",
+            "src": "/android-chrome-192x192.png?v=bin",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-512x512.png?v=thin-red-box",
+            "src": "/android-chrome-512x512.png?v=bin",
             "sizes": "512x512",
             "type": "image/png"
         }

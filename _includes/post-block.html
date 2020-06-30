@@ -36,7 +36,7 @@
   {% endif -%}
 
   <header class="{% if p.media %}quarter-buff{% else %}half-buff{% endif %}">
-    <h1 class="hed">{% if include.is_home %}<a href="p.url">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
+    <h1 class="hed">{% if include.is_home %}<a href="{{ p.url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
   </header>
 
   {{ copy }}

@@ -15,14 +15,6 @@
 
 <article><!-- {{ copy | number_of_words }} words -->
 
-  <header>
-    <h1 class="hed">{{ titlef }}</h1>
-    <div class="byline">
-      <p class="author"><a href="/about/">{{ page.author | default: site.author }}</a></p>
-      <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}">{{ p.date | date: "%-d %B %Y" }}</a></p>
-    </div>
-  </header>
-  
   {% if p.media %}
     {% assign w = p.media.width | default: 800 | times: 1.0 -%}
     {% assign h = p.media.height | default: 450 | times: 1.0 -%}
@@ -42,6 +34,14 @@
       {% if p.media.caption %}<figcaption>{{ p.media.caption | strip | smartify | markdownify | normalize_whitespace }}</figcaption>{% endif -%}
     </figure>
   {% endif -%}
+
+  <header class="{% if p.media %}quarter-buff{% else %}half-buff{% endif %}">
+    <h1 class="hed">{{ titlef }}</h1>
+    <div class="byline">
+      <p class="author"><a href="/about/">{{ page.author | default: site.author }}</a></p>
+      <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}">{{ p.date | date: "%-d %B %Y" }}</a></p>
+    </div>
+  </header>
 
   {{ copy }}
 

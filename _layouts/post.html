@@ -2,19 +2,3 @@
 layout: default
 ---
 {% include post-block.html page=page content=page.content %}
-{% if page.next or page.previous %}
-<aside>
-
-  <hr>
-
-  <ul class="toc">
-    {% if page.next %}
-      {% include ul-toc.html title=page.next.title tweet=page.next.tweet media=page.next.media url=page.next.url show_thumb=true %}
-    {% endif %}
-    {% if page.previous %}
-      {% include ul-toc.html title=page.previous.title tweet=page.previous.tweet media=page.previous.media url=page.previous.url show_thumb=true %}
-    {% endif %}
-  </ul>
-
-</aside>
-{% endif -%}

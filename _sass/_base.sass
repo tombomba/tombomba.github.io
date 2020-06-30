@@ -117,68 +117,45 @@ ul.plain
 
 header[role="banner"]
 
+  position: relative
   max-width: $max-width
-  //display: flex
-  //align-items: center
-  //justify-content: space-between
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  background-color: $bg-color
   margin: 0 auto
-  padding: 0
-
-  .wrap
-    display: flex
-    align-items: center
-    justify-content: flex-start
-    background-color: $bg-color
-
-  .site
-    margin-left: 1em
-    h1
-      font-weight: 700
-      font-size: percentage(14/16)
-      line-height: 1
-      color: $text-color
-      a:link,
-      a:visited
-        color: $text-color
-      a:hover
-        text-decoration: none
-    p
-      margin: 0
-      padding-top: 8px
-      font-size: percentage(14/16)
-      line-height: 1
+  span
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    z-index: 1
+    background-image: url('/assets/img/shim.gif')
 
   .icon
-    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
     width: bem(2)
     height: bem(2)
-    //background-color: $logo-color
-    border: 0.5em solid $logo-color
-    span
-      position: absolute
-      width: 100%
-      height: 100%
-      top: 0
-      left: 0
-      z-index: 1
-      background-image: url('/assets/img/shim.gif')
-
-  hr
-    margin-top: 1em
+    background-color: $logo-color
+    img
+      width: bem(1.25)
+      height: bem(1.25)
 
 main article
-  margin-top: bem(1)
   @extend .clearfix
 
   h2, h3, h4, h5, h6
     font-size: 100%
-    margin-top: 1em
+    margin-top: 1.5em
 
   p, li, hr
     margin-top: 1.5em
 
   ul, ol
-    margin-left: 1em
+    margin-left: bem(1)
 
   blockquote
     padding-left: 0.75em
@@ -194,24 +171,20 @@ main aside
 
 footer
   max-width: $max-width
-  &.post
-    margin-top: bem(1) - 0.415em
-  &.page,
-  &.home
-    margin-top: bem(1)
+  margin-top: bem(2)
   margin-left: auto
   margin-right: auto
-  text-align: center
   ul
     margin-top: 1em
     list-style-type: none
     li
       display: inline
-      padding-right: 0.5em
-      &:not(:last-of-type)::after
-        content: "-"
-        padding-left: 0.5em
-        color: $mix-color
+      padding-right: 1em
+      font-weight: 700
+      text-transform: lowercase
+      a:link,
+      a:visited
+        color: $logo-color
 
 //-----------------------------------------------------------------------------
 
@@ -239,6 +212,9 @@ footer
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 48em)
+
+  body
+    padding-top: bem(1)
 
   main article blockquote
     border-left-width: 1em

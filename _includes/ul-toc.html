@@ -20,7 +20,7 @@
     {% endif -%}
     {% if include.date %}<p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}">[{{ p.date | date: "%-d %b" }}]</a></time></p>{% endif -%}
   </div>
-  {% if include.show_thumb and include.media %}
+  {% if include.show_thumb %}
   <div class="thumb" style="background-image:url(/assets/img/{{ include.media.thumb | default: 'default-opengraph.jpg' }})"></div>
   {% endif -%}
 </li>

@@ -51,9 +51,11 @@ ul.toc
   @extend .clearfix
   li
     margin-top: bem(1)
-    &:not(:first-of-type)
+    &.home:not(:first-of-type)
       padding-top: bem(1)
       border-top: 1px dashed lighten($light-mix, 5%)
+    //&.norm:first-of-type
+      margin-top: 0
     h2, h3
       margin: 0
       font-size: 100%

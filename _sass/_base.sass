@@ -53,7 +53,7 @@ ul.toc
     margin-top: bem(1)
     &:not(:first-of-type)
       padding-top: bem(1)
-      border-top: 1px dashed $light-mix
+      border-top: 1px dashed lighten($light-mix, 5%)
     h2, h3
       margin: 0
       font-size: 100%
@@ -105,7 +105,7 @@ header[role="banner"]
   justify-content: flex-start
   background-color: $bg-color
   &:hover
-    background-color: $shock-color
+    background-color: darken($bg-color, 5%)
 
   span
     position: absolute

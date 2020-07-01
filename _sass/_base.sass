@@ -51,14 +51,15 @@ ul.toc
   @extend .clearfix
   li
     margin-top: bem(1)
+    &.home:not(:first-of-type)
+      padding-top: bem(1)
+      border-top: 1px dashed $light-mix
     h2, h3
       margin: 0
       font-size: 100%
       font-weight: 700
     p
       margin: 0
-      &.dates
-        @extend .mix-link
     div.thumb
       float: right
       width: 80px
@@ -98,11 +99,14 @@ header[role="banner"]
 
   position: relative
   max-width: $max-width
+  margin: 0 auto
   display: flex
   align-items: center
   justify-content: flex-start
   background-color: $bg-color
-  margin: 0 auto
+  &:hover
+    background-color: $shock-color
+
   span
     position: absolute
     width: 100%
@@ -177,7 +181,6 @@ footer
 @media screen and (min-width: 40em)
 
   ul.toc li div.thumb
-    margin-top: 0
     margin-bottom: 1em
     width: 135px
     height: 90px

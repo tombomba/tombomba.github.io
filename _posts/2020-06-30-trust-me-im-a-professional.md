@@ -1,7 +1,6 @@
 ---
 layout: photo
 title: "Trust me, I'm a professional"
-tweet: "Of course I'm a serious critic! Of course!"
 media:
   image: frasier.jpg
   thumb: frasier.jpg

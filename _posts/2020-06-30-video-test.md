@@ -3,6 +3,7 @@ layout: video
 title: "This is a video post"
 media:
   youtube: ZPoNhi6xzlY
+  image: david-lynch-weather.jpg
 date: 2020-06-30 12:34 -0800
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla ante, viverra vehicula lorem vel, blandit dictum risus. Duis nisi dolor, vestibulum eu ligula quis, porttitor lacinia lectus. Duis eleifend dapibus lectus, quis eleifend magna rhoncus eu. Praesent id scelerisque odio. Ut laoreet hendrerit justo quis elementum. Ut accumsan convallis purus ac aliquam. Phasellus erat elit, mattis in eros non, facilisis dapibus massa.

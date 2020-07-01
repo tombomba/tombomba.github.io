@@ -8,6 +8,10 @@ permalink: /index.html
   {% assign current = p.date | date: '%s' -%}
   {% assign range = today | times: 1 |  minus: current -%}
   {% if scope > range %}
-    {% include post-block.html page=p content=p.content is_home=true %}
+    {% case p.layout %}
+      {% when 'photo' %}{% include photo-block.html page=p content=p.content is_home=true %}
+      {% when 'video' %}{% include video-block.html page=p content=p.content is_home=true %}
+      {% else %}{% include text-block.html page=p content=p.content is_home=true %}
+    {% endcase %}
   {% endif -%}
 {% endfor %}

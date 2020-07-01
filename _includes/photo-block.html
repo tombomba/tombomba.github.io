@@ -9,10 +9,6 @@
   {% assign titlef = t %}
 {% endif -%}
 
-{% if copy contains 'img src=' %}
-  {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}
-{% endif -%}
-
 <article><!-- {{ copy | number_of_words }} words -->
 
   {% if p.media %}
@@ -21,25 +17,15 @@
     {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
     <figure><!-- {{ w }} x {{ h }} | {{ percent }}% -->
       <div class="wrap" style="padding-bottom:{{ percent }}%">
-        {% if p.media.vimeo %}
-        <iframe src="https://player.vimeo.com/video/{{ p.media.vimeo }}?badge=0&color=0000FF&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-        {% elsif p.media.youtube %}
-        <iframe src="https://www.youtube.com/embed/{{ p.media.youtube }}?modestbranding=1&rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-        {% elsif p.media.image %}
         <img src="{{ p.media.image | prepend: site.img_dir }}" alt="{{ p.media.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}">
-        {% endif %}
       </div>
       {% if p.media.caption %}<figcaption>{{ p.media.caption | strip | smartify | markdownify | normalize_whitespace }}</figcaption>{% endif -%}
     </figure>
   {% endif -%}
 
-  <header class="{% if p.media %}quarter-buff{% else %}half-buff{% endif %}">
-    <h1 class="hed">{% if include.is_home %}<a href="{{ p.url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
-  </header>
+  {% capture headline %}<header class="inline {% if p.media %}quarter-buff{% else %}half-buff{% endif %}"><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif -%}</h1><p>{% endcapture -%}
 
-  {{ copy }}
+  {{ copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' | strip | normalize_whitespace }}
 
   <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ p.date | date: "%-d %B %Y" }}</a>{% else %}{{ p.date | date: "%-d %B %Y" }}{% endif %}</p>
 

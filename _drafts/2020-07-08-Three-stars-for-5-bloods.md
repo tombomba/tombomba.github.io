@@ -1,4 +1,5 @@
 ---
+layout: photo
 title: "Three stars for '5 Bloods'"
 tweet: "Integer semper nulla vitae augue varius, eget maximus augue ultrices."
 media:

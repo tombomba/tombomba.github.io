@@ -1,4 +1,4 @@
-title: "bombaline!"
+title: "Bombaline"
 description: "a media diary, a small collage, a dumb blog"
 domain: "bombaline.com"
 url: "https://www.bombaline.com"
@@ -24,7 +24,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: post
+      layout: text
       is_post: true
   -
     scope:

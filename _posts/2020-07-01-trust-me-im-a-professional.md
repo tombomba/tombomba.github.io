@@ -7,7 +7,7 @@ media:
   width: 800
   height: 600
   alt: "Frasier, Season 5 Episode 1, September 1997"
-date: 2020-07-01 12:34 -0800
+date: 2020-07-01 00:01 -0800
 ---
 On one hand, there's a desire to be a serious critic of serious films, the perfect reviewer of mainstream pop, ready with a good tweet, always hovering between insight and #hottake.
 

@@ -1,10 +1,8 @@
 ---
 layout: photo
 title: "American wake, American requiem"
-tweet: "Arthur Jafa's 'Love Is the Message, and the Message Is Death' is an extraordinary piece of video art."
 media:
   image: love-is-the-message-and-the-message-is-death-2016.jpg
-  thumb: love-is-the-message-and-the-message-is-death-2016.jpg
   alt: "Photo still: Arthur Jafa's 'Love is the Message and The Message is Death'"
 date: 2020-07-01 12:34 -0800
 ---

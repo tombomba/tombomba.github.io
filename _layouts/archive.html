@@ -35,7 +35,7 @@ layout: default
       {% if is_month_index and current_month == page_month and current_year == page_year -%}
         {% include ul-toc.html title=p.title excerpt=p.excerpt image=p.media.image url=p.url %}
       {% elsif is_year_index and current_year == page_year -%}
-        {% include ul-toc.html title=p.title excerpt=p.excerpt image=p.media.image date=p.date url=p.url %}
+        {% include ul-toc.html title=p.title excerpt=p.excerpt date=p.date url=p.url %}
       {% endif -%}
 
     {% endfor -%}

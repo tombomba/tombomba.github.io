@@ -10,13 +10,21 @@ main article
         color: $text-color
         text-decoration: none
       a:hover
-        text-decoration: underline    
+        text-decoration: underline
     &.inline
       h1, p
         display: inline
         font-size: 100%
       h1::after
         content: "\20\2014\20"
+    div.byline
+      p
+        margin: 0
+        display: inline
+        font-size: percentage(14/16)
+        @extend .mix-link
+        &.author::after
+          content: "\20\/\20"
 
   figure
     margin-top: bem(1)
@@ -44,7 +52,3 @@ main article
       margin: 0 0 -0.415em 0
       padding-top: 8px
       font-size: percentage(12/16)
-
-  .datestamp
-    font-style: italic
-    @extend .mix-link

@@ -43,6 +43,10 @@ a
   &:active
     color: $active-color
 
+time
+  @extend .mix-link
+  white-space: nowrap
+
 ul.toc
   max-width: $max-width
   margin-left: auto
@@ -70,9 +74,6 @@ ul.toc
       background-position: center center
       background-repeat: no-repeat
       background-size: cover
-    time
-      @extend .mix-link
-      white-space: nowrap
 
 ul.plain
   margin-left: 1.5em

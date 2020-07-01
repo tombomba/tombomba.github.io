@@ -10,7 +10,7 @@ permalink: /index.html
     {% assign current = p.date | date: '%s' -%}
     {% assign range = today | times: 1 |  minus: current -%}
     {% if scope > range %}
-      {% include ul-toc.html title=p.title excerpt=p.excerpt image=p.media.image date=p.date url=p.url is_home=true %}
+      {% include ul-toc.html title=p.title excerpt=p.excerpt image=p.media.image url=p.url is_home=true %}
     {% endif -%}
   {% endfor %}
   </ul>

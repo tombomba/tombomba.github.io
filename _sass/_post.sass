@@ -2,11 +2,7 @@ main article
 
   header
     margin-top: bem(1)
-    &.half-buff
-      padding-top: 0.415em
-    &.quarter-buff
-      padding-top: 0.2075em
-    h1.hed
+    h1
       font-size: percentage(23/18)
       line-height: (($line-height - 1) / 2) + 1
       color: $text-color
@@ -14,7 +10,17 @@ main article
         color: $text-color
         text-decoration: none
       a:hover
-        text-decoration: underline
+        text-decoration: underline    
+    &.half-buff
+      padding-top: 0.415em
+    &.quarter-buff
+      padding-top: 0.2075em
+    &.inline
+      h1, p
+        display: inline
+        font-size: 100%
+      h1::after
+        content: "\20\2014\20"
 
   figure
     margin-top: bem(1)
@@ -38,8 +44,6 @@ main article
       object,
       embed
         background: $bg-color url(/assets/img/default-image-icon.png) no-repeat center center
-      //img
-        border-radius: 0 4px 4px 0
     figcaption p
       margin: 0 0 -0.415em 0
       padding-top: 8px

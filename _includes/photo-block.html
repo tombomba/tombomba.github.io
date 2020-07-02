@@ -9,10 +9,7 @@
   {% assign titlef = t %}
 {% endif -%}
 
-{% capture datef -%}&nbsp;<time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><em>({{ p.date | date: "%-d %B %Y" }})</em>{% endcapture -%}
-
-{% assign copysize = copy | size | minus: 4 %}
-{% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
+{% capture datef -%}<time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %B %Y" }}{% endcapture -%}
 
 <article><!-- {{ copy | number_of_words }} words -->
 
@@ -28,8 +25,10 @@
     </figure>
   {% endif -%}
 
-  {% capture headline %}<header class="inline {% if p.media %}quarter-buff{% else %}half-buff{% endif %}"><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif -%}</h1><p>{% endcapture -%}
+  {% capture headline %}<header class="{{ p.layout }} {% if p.media %}quarter-buff{% else %}half-buff{% endif %}"><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif -%}</h1><p>{% endcapture -%}
 
   {{ copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' | strip | normalize_whitespace }}
+
+  <p class="datestamp">{{ datef }}</p>
 
 </article>

@@ -3,15 +3,21 @@ main article
   header
     margin-top: bem(1)
     h1
-      font-size: percentage(23/18)
-      line-height: (($line-height - 1) / 2) + 1
       color: $text-color
       a:link, a:visited
         color: $text-color
         text-decoration: none
       a:hover
         text-decoration: underline
-    &.inline
+
+    &.text
+      h1
+        font-size: percentage(23/18)
+        line-height: (($line-height - 1) / 2) + 1
+    &.photo
+      h1
+        font-size: 100%
+    &.video
       h1, p
         display: inline
         font-size: 100%

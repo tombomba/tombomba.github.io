@@ -4,12 +4,12 @@ title: "American wake, American requiem"
 media:
   image: love-is-the-message-and-the-message-is-death-2016.jpg
   alt: "Photo still: Arthur Jafa's 'Love is the Message and The Message is Death'"
-date: 2020-07-02 12:34 -0800
+date: 2020-07-02 04:19 -0800
 ---
 
 ["Love Is the Message, and the Message Is Death"](https://www.moca.org/program/arthur-jafa-love-is-the-message-the-message-is-death) is a collection of found images, news broadcasts, Getty archives, dashcam reels, and video clips, carefully edited and arranged, set to Kanye's ["Ultalight Beam,"](https://www.youtube.com/watch?v=6oHdAA3AqnE) and made into a work of extraordinary art by Arthur Jafa.
 
- Jafa is a cinematographer and artist who has worked with Spike Lee and Julie Dash. This particular film was acquired by the Hirshhorn Museum along with the Smithsonian American Art Museum in 2018. It is playing in [virtual screenings](https://hirshhorn.si.edu/news/press-release/love-is-the-message-the-message-is-death-streamed-june-26-28/) at 13 museums this weekend. Seek it out once the world re-opens if you miss these shows.
+ Jafa is a cinematographer and artist who has worked with Spike Lee and Julie Dash. This particular film was acquired by the Hirshhorn Museum along with the Smithsonian American Art Museum in 2018. It played in [virtual screenings](https://hirshhorn.si.edu/news/press-release/love-is-the-message-the-message-is-death-streamed-june-26-28/) at 13 museums last weekend. Seek it out once the world re-opens if you missed these shows.
 
 "Love Is the Message, and the Message Is Death" is a Black history lesson in 7 minutes and thirty seconds. It depicts private joy and public brutality, the famous with the obscure. There is plenty of shocking violence, and you'll recognize some of the news footage and remember when you saw it. Most is all too recent.
 

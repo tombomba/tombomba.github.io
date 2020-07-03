@@ -1,12 +1,12 @@
 ---
 layout: video
-title: "Sam Peckinpah's 'Westerner' (1960)"
+title: "'The Westerner' (1960)"
 media:
   youtube: zjrIDGtd5Kc
-  image: sam-peckinpah-the-westerner-1960.jpg
+  image: the-westerner-peckinpah-1960.jpg
   width: 560
   height: 315
-date: 2020-07-07 12:34 -0800
+date: 2020-07-08 12:34 -0800
 ---
 Sed nulla ante, viverra vehicula lorem vel, blandit dictum risus. Duis nisi dolor, vestibulum eu ligula quis, porttitor lacinia lectus.
 

@@ -1,14 +1,15 @@
 ---
 layout: photo
-title: "Best served cold"
+title: "Revenge (2017)"
 tweet: "The quick brown fox jumps over the lazy dog."
 media:
-  image: revenge-2018.jpg
-  thumb: revenge-2018.jpg
-  alt: "Photo still: Revenge, 2018"
+  image: revenge-fargeat-2017.jpg
+  alt: "Photo still: Matilda Lutz in 'Revenge,' 2017"
 date: 2020-07-06 12:34 -0800
 ---
-Suspendisse hendrerit auctor arcu, in consequat enim euismod nec. Aenean venenatis fermentum odio, vel dignissim tortor lacinia sit amet. Fusce consequat feugiat metus molestie lacinia. Vestibulum vitae fermentum nisi, eu scelerisque sapien. Fusce condimentum pulvinar enim blandit vulputate. Nam molestie pretium fringilla. Sed placerat felis eu urna maximus vehicula. Nulla vehicula eros pellentesque nulla accumsan, eget elementum nibh congue. Vestibulum sed felis vitae nibh consequat egestas ac ut libero. Cras volutpat, tellus a auctor dignissim, nisi lacus facilisis leo, at fringilla nulla ante sit amet magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque urna diam, aliquet id egestas vel, porta ac odio. Aenean congue sapien a tellus gravida condimentum.
+Suspendisse hendrerit auctor arcu, in consequat enim euismod nec. Aenean venenatis fermentum odio, vel dignissim tortor lacinia sit amet. Fusce consequat feugiat metus molestie lacinia. Vestibulum vitae fermentum nisi, eu scelerisque sapien. Fusce condimentum pulvinar enim blandit vulputate.
+
+Nam molestie pretium fringilla. Sed placerat felis eu urna maximus vehicula. Nulla vehicula eros pellentesque nulla accumsan, eget elementum nibh congue. Vestibulum sed felis vitae nibh consequat egestas ac ut libero. Cras volutpat, tellus a auctor dignissim, nisi lacus facilisis leo, at fringilla nulla ante sit amet magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque urna diam, aliquet id egestas vel, porta ac odio. Aenean congue sapien a tellus gravida condimentum.
 
 Cras finibus purus eu fermentum bibendum. Vivamus eget purus pharetra, vehicula ante a, dictum tellus. Aliquam aliquam lacus nisl, gravida gravida purus pulvinar quis. Fusce in maximus risus. Integer et justo quis nibh lacinia porttitor. In hac habitasse platea dictumst. Duis dignissim ipsum efficitur nunc accumsan efficitur. Vestibulum cursus vestibulum tortor, non aliquam lacus porttitor at. Sed malesuada, lacus vel facilisis faucibus, mauris neque pharetra sapien, eget varius velit arcu rutrum ex. Mauris viverra mauris leo, vitae maximus lacus rutrum a. Nulla facilisi. Maecenas id ultrices elit, in tristique nisl. Maecenas auctor lobortis leo, nec pharetra velit ultricies ac. In ornare finibus arcu.
 

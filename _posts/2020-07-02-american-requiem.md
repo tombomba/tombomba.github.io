@@ -2,7 +2,7 @@
 layout: photo
 title: "American wake, American requiem"
 media:
-  image: love-is-the-message-and-the-message-is-death-2016.jpg
+  image: love-is-the-message-and-the-message-is-death-jafa-2016.jpg
   alt: "Photo still: Arthur Jafa's 'Love is the Message and The Message is Death'"
 date: 2020-07-02 03:30 -0800
 ---

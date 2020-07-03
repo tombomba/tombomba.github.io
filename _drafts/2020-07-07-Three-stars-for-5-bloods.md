@@ -1,13 +1,13 @@
 ---
-layout: photo
 title: "Three stars for '5 Bloods'"
 tweet: "Integer semper nulla vitae augue varius, eget maximus augue ultrices."
 media:
-  image: da-5-bloods-2020.jpg
-  thumb: da-5-bloods-2020.jpg
-date: 2020-07-08 12:34 -0800
+  image: da-5-bloods-lee-2020-thumb.jpg
+date: 2020-07-07 12:34 -0800
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum augue feugiat ultrices elementum. Fusce eleifend dignissim fringilla. Mauris posuere at magna ac vestibulum. Morbi lacinia massa sed sapien vehicula molestie. Cras ultricies velit vel augue consequat, eu faucibus sem fringilla. Vivamus feugiat id tellus ac volutpat. Etiam iaculis, tellus eget interdum porta, erat tortor bibendum tellus, vel ultrices lectus diam eget nisi. Nulla sed nunc maximus ligula gravida volutpat. Nulla non varius velit. Fusce ac volutpat orci, non convallis diam.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum augue feugiat ultrices elementum. Fusce eleifend dignissim fringilla. Mauris posuere at magna ac vestibulum. Morbi lacinia massa sed sapien vehicula molestie. Cras ultricies velit vel augue consequat, eu faucibus sem fringilla. Vivamus feugiat id tellus ac volutpat.
+
+Etiam iaculis, tellus eget interdum porta, erat tortor bibendum tellus, vel ultrices lectus diam eget nisi. Nulla sed nunc maximus ligula gravida volutpat. Nulla non varius velit. Fusce ac volutpat orci, non convallis diam.
 
 Proin maximus pulvinar lobortis. Vivamus vel interdum purus. Mauris posuere elit id libero finibus facilisis. Sed volutpat, metus sit amet fringilla dapibus, magna tortor gravida mauris, id lacinia tellus odio ut magna. Aenean et dui ligula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed pharetra eros vel ante venenatis, in porta erat lacinia. Aenean consequat justo non eros tincidunt varius. Integer semper nulla vitae augue varius, eget maximus augue ultrices.
 

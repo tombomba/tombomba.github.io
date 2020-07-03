@@ -1,6 +1,6 @@
 ---
 layout: photo
-title: "Revenge (2017)"
+title: "Best served cold"
 tweet: "The quick brown fox jumps over the lazy dog."
 media:
   image: revenge-fargeat-2017.jpg

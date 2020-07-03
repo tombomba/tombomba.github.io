@@ -6,7 +6,7 @@ media:
   image: sam-peckinpah-the-westerner-1960.jpg
   width: 560
   height: 315
-date: 2020-07-04 12:34 -0800
+date: 2020-07-07 12:34 -0800
 ---
 Sed nulla ante, viverra vehicula lorem vel, blandit dictum risus. Duis nisi dolor, vestibulum eu ligula quis, porttitor lacinia lectus.
 

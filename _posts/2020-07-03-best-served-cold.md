@@ -5,7 +5,7 @@ tweet: "The quick brown fox jumps over the lazy dog."
 media:
   image: revenge-fargeat-2017.jpg
   alt: "Photo still: Matilda Lutz in 'Revenge,' 2017"
-date: 2020-07-03 11:59 -0800
+date: 2020-07-03 23:59 -0800
 ---
 Suspendisse hendrerit auctor arcu, in consequat enim euismod nec. Aenean venenatis fermentum odio, vel dignissim tortor lacinia sit amet. Fusce consequat feugiat metus molestie lacinia. Vestibulum vitae fermentum nisi, eu scelerisque sapien. Fusce condimentum pulvinar enim blandit vulputate.
 

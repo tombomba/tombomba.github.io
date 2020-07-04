@@ -15,7 +15,24 @@
 
 <article><!-- {{ copy | number_of_words }} words -->
 
-  <header class="{{ p.layout }} {% if p.media %}quarter-buff{% else %}half-buff{% endif %}">
+  {% if p.media %}
+    {% assign w = p.media.width | default: 800 | times: 1.0 -%}
+    {% assign h = p.media.height | default: 450 | times: 1.0 -%}
+    {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
+    <figure><!-- {{ w }} x {{ h }} | {{ percent }}% -->
+      <div class="wrap" style="padding-bottom:{{ percent }}%">
+        {% if p.media.vimeo %}
+        <iframe src="https://player.vimeo.com/video/{{ p.media.vimeo }}?badge=0&color=0000FF&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        {% elsif p.media.youtube %}
+        <iframe src="https://www.youtube.com/embed/{{ p.media.youtube }}?modestbranding=1&rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        {% elsif p.media.image %}<img src="{{ p.media.image | prepend: site.img_dir }}" alt="{{ p.media.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}">
+        {% endif -%}
+      </div>
+      {% if p.media.caption %}<figcaption>{{ p.media.caption | strip | smartify | markdownify | normalize_whitespace }}</figcaption>{% endif -%}
+    </figure>
+  {% endif -%}
+
+  <header class="{{ p.layout }} {% if p.media %}small quarter-buff{% else %}large half-buff{% endif %}">
     <h1 class="hed">{% if include.is_home %}<a href="{{ p.url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
     <div class="byline">
       <p class="author"><a href="/about/">{{ p.author | default: site.author }}</a></p>

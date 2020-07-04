@@ -4,8 +4,7 @@ title: "Perry & Sherlock & James"
 media:
   image: perry-mason-hbo-2020.jpg
   alt: "Matthew Rhys in 'Perry Mason,' 2020"
-date: 2020-07-03 12:34 -0800
-published: false
+date: 2020-07-06 12:34 -0800
 ---
 I tried to find an entry point into "Perry Mason," a new big money show that piles cliché on top of cliché, and I couldn't, except to wonder when a character is no longer a character. Lemme explain.
 

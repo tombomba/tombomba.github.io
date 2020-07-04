@@ -13,6 +13,9 @@
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}
 {% endif -%}
 
+{% assign copysize = copy | size | minus: 5 %}
+{% assign copy = copy | slice: 0, copysize | append: '</p>' %}
+
 <article><!-- {{ copy | number_of_words }} words -->
 
   {% if p.media %}

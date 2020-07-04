@@ -1,8 +1,12 @@
 ---
+layout: photo
 title: "Perry & Sherlock & James"
+media:
+  image: perry-mason-hbo-2020.jpg
+  alt: "Matthew Rhys in 'Perry Mason,' 2020"
 date: 2020-07-03 12:34 -0800
 ---
-I kept trying to find an entry point into "Perry Mason," a new big money show that piles cliché on top of cliché, and I couldn't, except to wonder when a character is no longer a character. Lemme explain.
+I tried to find an entry point into "Perry Mason," a new big money show that piles cliché on top of cliché, and I couldn't, except to wonder when a character is no longer a character. Lemme explain.
 
 "Perry Mason" is a rebooted something or other from HBO and based on pulp novels from generations gone by. He's your grandparents favorite lawyer. A CBS television series ran from 1957&ndash;66 and was in turn based on a Warner Bros. radio show and film series were adapted from novels by Erle Stanley Gardner. There's a legacy here. Yet HBO's effort jettisons all of it, keeping only the hero's name. The Perry Mason on our Sunday nights is no longer a lawyer. He's a private detective, and a shabby, drunken one at that, with a wholly new backstory (still in Los Angeles, yes, but now on a family farm and burdened with shell shock from the Great War).
 

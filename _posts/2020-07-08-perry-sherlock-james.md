@@ -1,5 +1,4 @@
 ---
-layout: photo
 title: "Perry & Sherlock & James"
 media:
   image: perry-mason-hbo-2020.jpg

@@ -1,5 +1,4 @@
 ---
-layout: photo
 title: "Trust me, I'm a professional"
 media:
   image: frasier.jpg

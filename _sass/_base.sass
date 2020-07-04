@@ -47,43 +47,6 @@ time
   @extend .mix-link
   white-space: nowrap
 
-ul.toc
-  max-width: $max-width
-  margin-left: auto
-  margin-right: auto
-  list-style-type: none
-  @extend .clearfix
-  li
-    margin-top: bem(1)
-    &.home:not(:first-of-type)
-      padding-top: bem(1)
-      border-top: 0.125em solid $bg-color
-    div.meta
-      h2, h3
-        margin: 0
-        font-size: 100%
-        font-weight: 700
-      p
-        margin: 0
-        //line-height: 1.7
-    div.thumb
-      float: right
-      width: 100px
-      height: 75px
-      margin-top: 4px
-      margin-left: 1em
-      border-radius: 4px
-      background-position: center center
-      background-repeat: no-repeat
-      background-size: cover
-
-ul.plain
-  list-style-type: square
-  margin-left: 1.5em
-  margin-top: 1em
-  li
-    margin: 0
-
 .half-buff
   padding-top: 0.415em
 .quarter-buff
@@ -151,6 +114,42 @@ main article
   li + p,
     margin-top: 0
 
+  ul.toc
+    max-width: $max-width
+    margin-left: auto
+    margin-right: auto
+    list-style-type: none
+    @extend .clearfix
+    li
+      margin-top: bem(1)
+      &.home:not(:first-of-type)
+        padding-top: bem(1)
+        border-top: 0.125em solid $bg-color
+      div.meta
+        h2, h3
+          margin: 0
+          font-size: 100%
+          font-weight: 700
+        p
+          margin: 0
+      div.thumb
+        float: right
+        width: 100px
+        height: 75px
+        margin-top: 4px
+        margin-left: 1em
+        border-radius: 4px
+        background-position: center center
+        background-repeat: no-repeat
+        background-size: cover
+
+    ul.plain
+      list-style-type: square
+      margin-left: 1.5em
+      margin-top: 1em
+      li
+        margin: 0
+
 footer
   max-width: $max-width
   margin-top: bem(2)
@@ -162,11 +161,9 @@ footer
     li
       display: inline
       padding-right: 1em
+      font-size: percentage(15/16)
       font-weight: 700
       text-transform: lowercase
-      a:link,
-      a:visited
-        color: $logo-color
 
 //-----------------------------------------------------------------------------
 

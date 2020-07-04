@@ -24,7 +24,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: text
+      layout: post
       is_post: true
   -
     scope:

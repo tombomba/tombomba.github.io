@@ -3,6 +3,7 @@ main article
   header
     margin-top: bem(1)
     h1
+      line-height: (($line-height - 1) / 2) + 1
       color: $text-color
       a:link, a:visited
         color: $text-color
@@ -10,28 +11,24 @@ main article
       a:hover
         text-decoration: underline
 
-    &.text
-      h1
-        font-size: percentage(23/18)
-        line-height: (($line-height - 1) / 2) + 1
-    &.photo
-      h1
-        font-size: 100%
-        line-height: (($line-height - 1) / 2) + 1
-    &.video
-      h1, p
-        display: inline
-        font-size: 100%
-      h1::after
-        content: "\20\2014\20"
-    div.byline
-      p
-        margin: 0
-        display: inline
-        font-size: percentage(14/16)
-        @extend .mix-link
-        &.author::after
-          content: "\20\/\20"
+    div.byline p
+      display: inline
+      @include font-ratio(14/16)
+      @extend .mix-link
+      &:nth-child(2)::before
+        content: "\20\/\20"
+        color: $mix-color
+
+    &.large h1
+      font-size: percentage(23/18)
+    &.small h1
+      font-size: 100%
+
+    p.author
+      margin: 0
+      display: inline
+      font-size: percentage(14/16)
+      @extend .mix-link
 
   figure
     margin-top: bem(1)

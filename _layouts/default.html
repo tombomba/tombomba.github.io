@@ -51,7 +51,7 @@
 
 <body>
 
-<header role="banner">
+<header role="banner" class="{% if page.is_home %}home{% elsif page.is_post %}post{% else %}page{% endif %}">
   <div class="icon">{% if page.is_home %}<img src="{{ 'bombaline.png' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.title }}">{% else %}<a href="{{ site.url }}"><img src="{{ 'bombaline.png' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.title }}"><span></span></a>{% endif %}</div>
 </header>
 
@@ -64,7 +64,7 @@
 <footer class="{% if page.is_post %}post{% elsif page.is_home %}home{% else %}page{% endif %}">
 
   <ul>
-    {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_about %}<li><a href="{{ '/about/' | prepend: site.url }}">About</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">@{{ site.twitter }}</a></li><li><a href="{{ '/feed.xml' | prepend: site.url }}">RSS</a></li>
+    {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_about %}<li><a href="{{ '/about/' | prepend: site.url }}">About</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="{{ '/feed.xml' | prepend: site.url }}">RSS</a></li>
   </ul>
 
 </footer>

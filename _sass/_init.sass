@@ -22,21 +22,21 @@ $line-height: 1.83
   $line-height: (32/18)
   $max-width: 35.889em
 
-$body-color:    #F3F3F3 !default
+$body-color:    #FBFBFB !default
 $text-color:    #161616 !default
 
-$key: random(6)
-$one-color:     #06f, #c06, #393, #f30, #09f, #099
-$two-color:     #6ff, #fc0, #9f0, #fc0, #9f3, #fc0
+//$key: random(6)
+  $one-color:     #06f, #c06, #393, #f30, #09f, #099
+  $two-color:     #6ff, #fc0, #9f0, #fc0, #9f3, #fc0
 
-$primary-color: nth($one-color, $key)
-$secondary-color: nth($two-color, $key)
+//$primary-color: nth($one-color, $key)
+  $secondary-color: nth($two-color, $key)
 
-$logo-color:    nth($one-color, $key) !default
-$shock-color:   nth($two-color, $key) !default
+//$logo-color:    nth($one-color, $key) !default
+  $shock-color:   nth($two-color, $key) !default
 
-//$logo-color: #099 !default
-//$shock-color: #FC0 !default
+$logo-color: #099 !default
+$shock-color: #FC0 !default
 
 $select-color:  $shock-color !default
 
@@ -59,8 +59,8 @@ $active-color: #F93 !default
 
 $bg-color:      darken($body-color, 5%) !default
 $mix-color:     mix($body-color, $text-color, 36%) !default
-$light-mix:     lighten($mix-color, 20%) !default
-$dark-mix:      darken($mix-color, 20%) !default
+$light-mix:     lighten($mix-color, 40%) !default
+$dark-mix:      darken($mix-color, 40%) !default
 
 $serif: Georgia, Cambria, 'Century Schoolbook L', serif
 $sans:  Verdana, 'Bitstream Vera Sans', Geneva, sans-serif

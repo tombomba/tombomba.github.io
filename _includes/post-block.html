@@ -16,7 +16,7 @@
 {% assign copysize = copy | size | minus: 5 %}
 {% assign copy = copy | slice: 0, copysize | append: '</p>' %}
 
-<article><!-- {{ copy | number_of_words }} words -->
+<article class="post"><!-- {{ copy | number_of_words }} words -->
 
   {% if p.media %}
     {% assign w = p.media.width | default: 800 | times: 1.0 -%}
@@ -36,7 +36,7 @@
   {% endif -%}
 
   <header class="{{ p.layout }} {% if p.media %}small quarter-buff{% else %}large half-buff{% endif %}">
-    <h1 class="hed">{% if include.is_home %}<a href="{{ p.url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
+    <h1>{% if include.is_home %}<a href="{{ p.url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
     <div class="byline">
       <p class="author"><a href="/about/">{{ p.author | default: site.author }}</a></p>
       <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ p.date | date: "%-d %B %Y" }}</a>{% else %}{{ p.date | date: "%-d %B %Y" }}{% endif %}</p>

@@ -1,15 +1,12 @@
 main article
 
   header
-    margin-top: bem(1)
     h1
+      font-size: percentage(23/18)
       line-height: (($line-height - 1) / 2) + 1
       color: $text-color
-      a:link, a:visited
-        color: $text-color
-        text-decoration: none
-      a:hover
-        text-decoration: underline
+      &.teaser
+        line-height: $line-height
 
     div.byline p
       display: inline
@@ -19,19 +16,8 @@ main article
         content: "\20\/\20"
         color: $mix-color
 
-    &.large h1
-      font-size: percentage(23/18)
-    &.small h1
-      font-size: 100%
-
-    p.author
-      margin: 0
-      display: inline
-      font-size: percentage(14/16)
-      @extend .mix-link
-
   figure
-    margin-top: bem(1)
+    margin-bottom: bem(1)
     .wrap
       position: relative
       padding-bottom: 56.25%
@@ -59,6 +45,9 @@ main article
       padding-top: 8px
       font-size: percentage(12/16)
 
-  & > p:last-of-type::after
+  &.post > p:last-of-type::after
     content: "\20\25CF"
     color: $logo-color
+
+  p.teaser
+    margin-top: 0

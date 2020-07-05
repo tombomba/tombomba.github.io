@@ -16,6 +16,6 @@ permalink: /404.html
     {% for rela in site.posts limit: 5 %}<li><a href="{{ rela.url | prepend: site.url }}">{{ rela.title | strip | normalize_whitespace | smartify }}</a></li>{% endfor %}
   </ul>
 
-  <p>If you’re having trouble locating a destination on the site, visit the <a href="{{ site.url }}">homepage</a> or browse posts from <a href="{{ site.posts.first.date | date: '/%Y/%m/' | prepend: site.url }}">this month</a> or <a href="{{ site.posts.first.date | date: '/%Y/' | prepend: site.url }}">this&nbsp;year</a></p>
+  <p>If you’re having trouble locating a destination on the site, visit the <a href="{{ site.url }}">homepage</a> or browse posts from <a href="{{ site.posts.first.date | date: '/%Y/%m/' | prepend: site.url }}">this month</a> or <a href="{{ site.posts.first.date | date: '/%Y/' | prepend: site.url }}">this&nbsp;year.</a></p>
 
 </article>

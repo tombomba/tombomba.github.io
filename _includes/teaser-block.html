@@ -6,7 +6,6 @@
   {% assign titlef = t %}
 {% endif -%}
 
-
 <article>
 
   {% if include.media %}
@@ -26,7 +25,7 @@
   {% endif -%}
 
   <header>
-    <h1 class="teaser">{% if include.is_home %}<a href="{{ p.url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
+    <h1 class="teaser"><a href="{{ p.url }}">{{ titlef }}</a></h1>
   </header>
 
   <p class="teaser">{{ include.excerpt | strip | strip_html }}&nbsp;<a class="more" href="{{ include.url | prepend: site.url }}" title="More">&#187;</a></p>

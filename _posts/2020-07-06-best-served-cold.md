@@ -1,5 +1,4 @@
 ---
-layout: photo
 title: "Best served cold"
 tweet: "The quick brown fox jumps over the lazy dog."
 media:

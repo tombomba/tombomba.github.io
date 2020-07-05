@@ -9,6 +9,8 @@ I tried to find an entry point into "Perry Mason," a new big money show that pil
 
 "Perry Mason" is a rebooted something or other from HBO and based on pulp novels from generations gone by. He's your grandparents favorite lawyer. A CBS television series ran from 1957&ndash;66 and was in turn based on a Warner Bros. radio show and film series were adapted from novels by Erle Stanley Gardner. There's a legacy here. Yet HBO's effort jettisons all of it, keeping only the hero's name. The Perry Mason on our Sunday nights is no longer a lawyer. He's a private detective, and a shabby, drunken one at that, with a wholly new backstory (still in Los Angeles, yes, but now on a family farm and burdened with shell shock from the Great War).
 
+<!--more-->
+
 A coupla weeks ago the estate of Arthur Conan Doyle sued the producers of the upcoming XX, which is based, partly, on Conan Doyle's original Sherlock Holmes stories. The new movie? show? introduces Holme's niece as the heroine. It sounds fine, like a gender bent riff on "Young Sherlock Holmes" from the mid-80s. The estate worried the producers changed Sherlock too much, and doing so somehow infringes on bits of ownership they have over a character otherwise in the public domain. It's a dumb lawsuit but it raises an interesting question about the essence of fictional characters. In this case, what makes Sherlock exactly Sherlock. His Sherlockness, if you will.
 
 So what's at the center of Perry Mason? [ fill in ! ]

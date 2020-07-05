@@ -1,5 +1,4 @@
 ---
-layout: photo
 title: "Odd Family: Zombie for Sale"
 media:
   image: odd-family-zombie-for-sale-lee-2019.jpg

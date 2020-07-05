@@ -1,5 +1,4 @@
 ---
-layout: video
 title: "'The Westerner' (1960)"
 media:
   youtube: zjrIDGtd5Kc

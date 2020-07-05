@@ -35,11 +35,11 @@
     </figure>
   {% endif -%}
 
-  <header class="{{ p.layout }} {% if p.media %}small quarter-buff{% else %}large half-buff{% endif %}">
-    <h1>{% if include.is_home %}<a href="{{ p.url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
+  <header class="{% if p.media %}quarter-buff{% else %}half-buff{% endif %}">
+    <h1>{{ titlef }}</h1>
     <div class="byline">
       <p class="author"><a href="/about/">{{ p.author | default: site.author }}</a></p>
-      <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ p.date | date: "%-d %B %Y" }}</a>{% else %}{{ p.date | date: "%-d %B %Y" }}{% endif %}</p>
+      <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %B %Y" }}</p>
     </div>
   </header>
 

@@ -3,12 +3,12 @@ is_home: true
 permalink: /index.html
 ---
 {% assign p = site.posts.first %}
-{% include teaser-block.html title=p.title date=p.date url=p.url excerpt=p.excerpt media=p.media is_home=true %}
+{% include teaser-block.html title=p.title date=p.date url=p.url excerpt=p.excerpt media=p.media style="home" %}
 
 <aside>
   <ul class="toc">
   {% for p in site.posts limit:5 offset:1 %}
-    {% include ul-toc.html title=p.title excerpt=p.excerpt image=p.media.image url=p.url is_home=true %}
+    {% include ul-toc.html title=p.title excerpt=p.excerpt image=p.media.image url=p.url style="home" %}
   {% endfor %}
   </ul>
 </aside>

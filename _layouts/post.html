@@ -5,12 +5,12 @@ layout: default
 
 {% if page.next or page.previous %}
 <aside>
-  <ul class="toc nextprev">
+  <ul class="toc">
   {% if page.previous %}
-    {% include ul-toc.html title=page.previous.title excerpt=page.previous.excerpt image=page.previous.media.image url=page.previous.url is_home=true %}
+    {% include ul-toc.html title=page.previous.title excerpt=page.previous.excerpt image=page.previous.media.image url=page.previous.url style="nextprev" %}
   {% endif %}
   {% if page.next %}
-    {% include ul-toc.html title=page.next.title excerpt=page.next.excerpt image=page.next.media.image url=page.next.url is_home=true %}
+    {% include ul-toc.html title=page.next.title excerpt=page.next.excerpt image=page.next.media.image url=page.next.url style="nextprev" %}
   {% endif %}
   </ul>
 </aside>

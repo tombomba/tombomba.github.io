@@ -1,8 +1,8 @@
 ---
 title: "Three stars for '5 Bloods'"
-tweet: "Integer semper nulla vitae augue varius, eget maximus augue ultrices."
-#media:
-#  image: da-5-bloods-lee-2020-thumb.jpg
+fbog:
+  image: da-5-bloods-lee-2020-thumb.jpg
+  text: "Integer semper nulla vitae augue varius, eget maximus augue ultrices."
 date: 2020-07-07 12:34 -0800
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum augue feugiat ultrices elementum. Fusce eleifend dignissim fringilla. Mauris posuere at magna ac vestibulum. Morbi lacinia massa sed sapien vehicula molestie. Cras ultricies velit vel augue consequat, eu faucibus sem fringilla. Vivamus feugiat id tellus ac volutpat.

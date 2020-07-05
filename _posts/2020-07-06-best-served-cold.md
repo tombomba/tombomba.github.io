@@ -4,6 +4,9 @@ tweet: "The quick brown fox jumps over the lazy dog."
 media:
   image: revenge-fargeat-2017.jpg
   alt: "Photo still: Matilda Lutz in 'Revenge,' 2017"
+fbog:
+  text: "Ispa scientia potestas est, again and again. Consequat!"
+  image: revenge-fargeat-2017.jpg
 date: 2020-07-06 12:34 -0800
 ---
 Suspendisse hendrerit auctor arcu, in consequat enim euismod nec. Aenean venenatis fermentum odio, vel dignissim tortor lacinia sit amet. Fusce consequat feugiat metus molestie lacinia.

@@ -32,14 +32,14 @@ body
   padding: 1em
 
 a
-  text-decoration: none
+  text-decoration: underline
   text-decoration-skip-ink: auto
   &:link
     color: $link-color
   &:visited
     color: $visited-color
   &:hover
-    text-decoration: underline
+    text-decoration: none
   &:active
     color: $active-color
 
@@ -92,9 +92,10 @@ header[role="banner"]
     height: bem(2)
     background-color: $logo-color
     border-radius: 4px 0 0 4px
-    img
+    svg
       width: bem(1.25)
       height: bem(1.25)
+      fill: $shock-color
 
 main article
   @extend .clearfix
@@ -126,17 +127,10 @@ ul.toc
   @extend .clearfix
   li
     margin-top: bem(1)
-    &.home,
-    &.nextprev
-      padding-top: bem(1)
-      border-top: 1px solid $light-mix
     div.meta
-      h2
+      h2, p
         margin: 0
         font-size: 100%
-        font-weight: 700
-      p
-        margin: 0
     div.thumb
       float: left
       width: bem(2)
@@ -147,13 +141,21 @@ ul.toc
       background-position: center center
       background-repeat: no-repeat
       background-size: cover
+    &.home,
+    &.nextprev
+      padding-top: bem(1)
+      border-top: 1px solid $light-mix
+    &.home div.meta h2
+      font-weight: 400
+    &.nextprev div.meta h2
+      font-weight: 400
 
-  ul.plain
-    list-style-type: square
-    margin-left: 1.5em
-    margin-top: 1em
-    li
-      margin: 0
+ul.plain
+  list-style-type: square
+  margin-left: 1.5em
+  margin-top: 1em
+  li
+    margin: 0
 
 footer
   max-width: $max-width
@@ -167,12 +169,15 @@ footer
     list-style-type: none
     li
       display: inline
-      padding-right: 1em
-      font-size: percentage(15/16)
-      font-weight: 700
-      text-transform: lowercase
-      a:link, a:visited
-        color: $logo-color
+      @include font-ratio(14/16)
+      padding-right: 0.5em
+      color: $mix-color
+      &.copyright
+        font-style: italic
+      &:not(:last-of-type)::after
+        content: "-"
+        margin-left: 0.5em
+        color: $mix-color
 
 //-----------------------------------------------------------------------------
 
@@ -204,7 +209,6 @@ footer
 
   ul.toc li
     display: flex
-    align-items: flex-start
     justify-content: space-between
     div.meta
       flex: 1
@@ -212,11 +216,13 @@ footer
       float: none
       margin-bottom: 0
     &.home
+      align-items: flex-start
       div.meta
         order: 2
       div.thumb
         order: 1
     &.nextprev
+      align-items: center
       div.meta
         order: 1
       div.thumb
@@ -230,7 +236,7 @@ footer
 
 @media screen and (min-width: 72em)
 
-  ul.toc li.nextprev
-    div.thumb
+  ul.toc li
+    &.nextprev div.thumb
       width: bem(5)
       height: bem(5/1.5)

@@ -8,19 +8,12 @@
 
 <article>
 
-  {% if include.media %}
-    {% assign w = include.media.width | default: 800 | times: 1.0 -%}
-    {% assign h = include.media.height | default: 450 | times: 1.0 -%}
+  {% if include.media.image %}
+    {% assign w = include.media.image.width | default: 800 | times: 1.0 %}
+    {% assign h = include.media.image.height | default: 450 | times: 1.0 %}
     {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
     <figure><!-- {{ w }} x {{ h }} | {{ percent }}% -->
-      <div class="wrap" style="padding-bottom:{{ percent }}%">
-        {% if include.media.vimeo %}
-        <iframe src="https://player.vimeo.com/video/{{ include.media.vimeo }}?badge=0&color=0000FF&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        {% elsif include.media.youtube %}
-        <iframe src="https://www.youtube.com/embed/{{ include.media.youtube }}?modestbranding=1&rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        {% elsif include.media.image %}<img src="{{ include.media.image | prepend: site.img_dir }}" alt="{{ include.media.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}">
-        {% endif -%}
-      </div>
+      <div class="wrap" style="padding-bottom:{{ percent }}%"><img src="{{ include.media.image | prepend: site.img_dir }}" alt="{{ include.media.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}"></div>
     </figure>
   {% endif -%}
 

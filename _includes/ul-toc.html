@@ -1,7 +1,7 @@
 {% assign t = include.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
 {% assign sub = t.last | prepend: '!QQ!' -%}
 {% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
-<li class="{{ include.style }}">
+<li class="{{ include.style }}"><!-- {{ include.description | number_of_words }} words -->
   {% if include.image %}<div class="thumb" style="background-image:url(/assets/img/{{ include.image }})"></div>{% endif %}
   <div class="meta">
     <h2><a href="{{ include.url | prepend: site.url }}">{{ titlef }}</a></h2>

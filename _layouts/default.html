@@ -27,19 +27,19 @@
     <!-- facebook -->
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta property="og:url" content="{{ page.url | prepend: site.url }}">
-    {% if page.is_post %}<meta property="og:description" content="{{ page.tweet | default: page.excerpt | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% else %}<meta property="og:description" content="{{ site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% endif %}
+    {% if page.is_post %}<meta property="og:description" content="{{ page.fbog.text | default: page.excerpt | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% else %}<meta property="og:description" content="{{ site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% endif %}
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:type" content="blog">
-    <meta property="og:image" content="{{ page.media.image | default: 'default-opengraph.jpg' | prepend: site.img_dir |  prepend: site.url }}">
+    <meta property="og:image" content="{{ page.fbog.image | default: 'default-opengraph.png' | prepend: site.img_dir |  prepend: site.url }}">
 
     <!-- twitter  -->
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="twitter:url" content="{{ page.url | default: '' | prepend: site.url }}">
-    {% if page.is_post %}<meta name="twitter:description" content="{{ page.tweet | default: page.excerpt | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% else %}<meta property="og:description" content="{{ site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% endif %}
+    {% if page.is_post %}<meta name="twitter:description" content="{{ page.fbog.text | default: page.excerpt | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% else %}<meta property="og:description" content="{{ site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% endif %}
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@{{ site.twitter }}">
     <meta name="twitter:creator" content="@{{ site.twitter }}">
-    <meta name="twitter:image:src" content="{{ page.media.image | default: 'default-opengraph.jpg' | prepend: site.img_dir | prepend: site.url }}">
+    <meta name="twitter:image:src" content="{{ page.fbog.image | default: 'default-twitter.png' | prepend: site.img_dir | prepend: site.url }}">
 
     <!-- css -->
     <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css_dir | prepend: site.url | append: '.css' }}?v={{ site.time | date: '%a' | downcase }}">
@@ -52,7 +52,7 @@
 <body>
 
 <header role="banner" class="{% if page.is_home %}home{% elsif page.is_post %}post{% else %}page{% endif %}">
-  <div class="icon">{% if page.is_home %}<img src="{{ 'bombaline.png' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.title }}">{% else %}<a href="{{ site.url }}"><img src="{{ 'bombaline.png' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.title }}"><span></span></a>{% endif %}</div>
+  <div class="icon">{% if page.is_home %}{% include icon-skull.svg %}{% else %}<a href="{{ site.url }}">{% include icon-skull.svg %}<span></span></a>{% endif %}</div>
 </header>
 
 <main role="main"><!-- {{ page.layout }} -->
@@ -64,7 +64,7 @@
 <footer class="{% if page.is_post %}post{% elsif page.is_home %}home{% else %}page{% endif %}">
 
   <ul>
-    {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_about %}<li><a href="{{ '/about/' | prepend: site.url }}">About</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="{{ '/feed.xml' | prepend: site.url }}">RSS</a></li>
+    {% if page.is_page %}<li class="copyright">Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {{ site.author }}{% else %}<li><a href="{{ site.url }}">Home</a></li>{% endif %}{% unless page.is_about %}<li><a href="{{ '/about/' | prepend: site.url }}">About</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="{{ '/feed.xml' | prepend: site.url }}">RSS</a></li>
   </ul>
 
 </footer>

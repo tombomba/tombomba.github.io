@@ -7,7 +7,7 @@ media:
 fbog:
   text: "Duis eleifend dapibus lectus, quis eleifend magna rhoncus eu. Praesent id scelerisque odio."
   image: the-westerner-peckinpah-1960.jpg
-date: 2020-07-10 12:34 -0800
+date: 2020-06-08 12:34 -0800
 ---
 Sed nulla ante, viverra vehicula lorem vel, blandit dictum risus. Duis nisi dolor, vestibulum eu ligula quis, porttitor lacinia lectus.
 

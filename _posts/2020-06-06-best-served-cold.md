@@ -7,7 +7,7 @@ media:
 fbog:
   text: "Ispa scientia potestas est, again and again. Consequat!"
   image: revenge-fargeat-2017.jpg
-date: 2020-07-06 12:34 -0800
+date: 2020-06-06 12:34 -0800
 ---
 Suspendisse hendrerit auctor arcu, in consequat enim euismod nec. Aenean venenatis fermentum odio, vel dignissim tortor lacinia sit amet. Fusce consequat feugiat metus molestie lacinia.
 

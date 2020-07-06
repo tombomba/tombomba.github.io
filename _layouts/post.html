@@ -7,10 +7,10 @@ layout: default
 <aside>
   <ul class="toc">
   {% if page.previous %}
-    {% include ul-toc.html title=page.previous.title excerpt=page.previous.excerpt image=page.previous.media.image url=page.previous.url style="nextprev" %}
+    {% include ul-toc.html title=page.previous.title description=page.previous.fbog.text image=page.previous.fbog.image url=page.previous.url style="nextprev" %}
   {% endif %}
   {% if page.next %}
-    {% include ul-toc.html title=page.next.title excerpt=page.next.excerpt image=page.next.media.image url=page.next.url style="nextprev" %}
+    {% include ul-toc.html title=page.next.title description=page.next.fbog.text image=page.next.fbog.image url=page.next.url style="nextprev" %}
   {% endif %}
   </ul>
 </aside>

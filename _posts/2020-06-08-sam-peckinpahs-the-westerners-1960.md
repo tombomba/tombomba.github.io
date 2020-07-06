@@ -1,9 +1,9 @@
 ---
 title: "'The Westerner' (1960)"
 media:
-  youtube: zjrIDGtd5Kc
-  width: 560
-  height: 315
+  image: the-westerner-peckinpah-1960.jpg
+  width: 700
+  height: 525
 fbog:
   text: "Duis eleifend dapibus lectus, quis eleifend magna rhoncus eu. Praesent id scelerisque odio."
   image: the-westerner-peckinpah-1960.jpg

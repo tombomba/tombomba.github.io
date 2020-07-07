@@ -47,6 +47,10 @@ time
   @extend .mix-link
   white-space: nowrap
 
+.pushup
+  padding-top: bem(1)
+  border-top: 1px solid $light-mix
+
 .half-buff
   padding-top: 0.415em
 .quarter-buff
@@ -120,10 +124,13 @@ main article
   li + p,
     margin-top: 0
 
-ul.toc
+aside
   max-width: $max-width
   margin-left: auto
   margin-right: auto
+
+ul.toc
+  margin-left: 0
   list-style-type: none
   @extend .clearfix
   li
@@ -153,10 +160,10 @@ ul.toc
         z-index: 1
         background-image: url('/assets/img/shim.gif')
     &.home,
-    &.nextprev,
-    &.bigtop
-      padding-top: bem(1)
-      border-top: 1px solid $light-mix
+    &.bigtop,
+    &.nextprev:first-of-type,
+    &.rela:first-of-type
+      @extend .pushup
 
 ul.plain
   list-style-type: square
@@ -164,6 +171,23 @@ ul.plain
   margin-top: 1em
   li
     margin: 0
+
+ul.dlist
+  list-style-type: none
+  margin-top: bem(1)
+  margin-left: 0
+  @extend .pushup
+  text-align: center
+  li
+    display: inline
+    line-height: 1
+    text-transform: capitalize
+    color: $mix-color
+    &:first-of-type
+      font-weight: 700
+    &:not(:last-of-type)::after
+      content: "\20-\20"
+      color: $mix-color
 
 footer
   max-width: $max-width
@@ -178,13 +202,11 @@ footer
     li
       display: inline
       @include font-ratio(14/16)
-      padding-right: 0.5em
       color: $mix-color
       &.copyright
         font-style: italic
       &:not(:last-of-type)::after
-        content: "-"
-        margin-left: 0.5em
+        content: "\20-\20"
         color: $mix-color
 
 //-----------------------------------------------------------------------------
@@ -198,11 +220,6 @@ footer
     max-width: $max-width
     margin-left: auto
     margin-right: auto
-
-  //ul.toc li div.thumb
-    margin-bottom: 1em
-    width: 125px
-    height: 94px
 
 //-----------------------------------------------------------------------------
 

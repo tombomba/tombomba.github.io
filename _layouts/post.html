@@ -12,10 +12,10 @@ layout: default
     {% endfor %}
   {% else %}
     {% if page.previous %}
-      {% include ul-toc.html title=page.previous.title description=page.previous.fbog.text image=page.previous.fbog.image url=page.previous.url style="nextprev" %}
+      {% include ul-toc.html title=page.previous.title description=page.previous.fbog.text image=page.previous.fbog.image url=page.previous.url style="rela" %}
     {% endif %}
     {% if page.next %}
-      {% include ul-toc.html title=page.next.title description=page.next.fbog.text image=page.next.fbog.image url=page.next.url style="nextprev" %}
+      {% include ul-toc.html title=page.next.title description=page.next.fbog.text image=page.next.fbog.image url=page.next.url style="rela" %}
     {% endif -%}
   {% endif -%}
   </ul>

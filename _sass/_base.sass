@@ -57,6 +57,7 @@ time
   a:link,
   a:visited
     color: $mix-color
+    text-decoration: none
   a:hover
     text-decoration: underline
 
@@ -131,7 +132,9 @@ ul.toc
       h2, p
         margin: 0
         font-size: 100%
+        font-weight: 400
     div.thumb
+      position: relative
       float: left
       width: bem(2)
       height: bem(2)
@@ -141,14 +144,19 @@ ul.toc
       background-position: center center
       background-repeat: no-repeat
       background-size: cover
+      span
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        z-index: 1
+        background-image: url('/assets/img/shim.gif')
     &.home,
-    &.nextprev
+    &.nextprev,
+    &.bigtop
       padding-top: bem(1)
       border-top: 1px solid $light-mix
-    &.home div.meta h2
-      font-weight: 400
-    &.nextprev div.meta h2
-      font-weight: 400
 
 ul.plain
   list-style-type: square
@@ -221,8 +229,16 @@ footer
         order: 2
       div.thumb
         order: 1
+      div.shim
+        margin-right: 1em
+        width: bem(2)
+        height: bem(2)
     &.nextprev
       align-items: center
+    &.bigtop
+      align-items: flex-start
+    &.nextprev,
+    &.bigtop
       div.meta
         order: 1
       div.thumb
@@ -234,9 +250,11 @@ footer
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 72em)
+@media screen and (min-width: 64em)
 
   ul.toc li
-    &.nextprev div.thumb
-      width: bem(5)
-      height: bem(5/1.5)
+    &.nextprev,
+    &.bigtop
+      div.thumb
+        width: bem(5)
+        height: bem(5/1.5)

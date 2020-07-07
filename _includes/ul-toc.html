@@ -1,10 +1,15 @@
 {% assign t = include.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
 {% assign sub = t.last | prepend: '!QQ!' -%}
 {% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
-<li class="{{ include.style }}"><!-- {{ include.description | number_of_words }} words -->
-  {% if include.image %}<div class="thumb" style="background-image:url(/assets/img/{{ include.image }})"></div>{% endif %}
+{% assign wc = include.description | number_of_words | times: 1.0 -%}
+<li class="{{ include.style }}"><!-- {{ wc }} words -->
+  {% if include.image %}
+  <div class="thumb" style="background-image:url(/assets/img/{{ include.image }})"><a href="{{ include.url | prepend: site.url }}"><span></span></a></div>
+  {% else %}
+    {% if include.style == 'home' and forloop.first == false %}<div class="shim"></div>{% endif %}
+  {% endif -%}
   <div class="meta">
     <h2><a href="{{ include.url | prepend: site.url }}">{{ titlef }}</a></h2>
-    <p>{{ include.description | strip_html | normalize_whitespace | smartify }}{% if include.date %} <time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}">[{{ p.date | date: "%-d %b" }}]</a></time>{% endif -%}</p>
+    <p>{{ include.description | strip_html | normalize_whitespace | smartify }}{% if include.date %} <time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ include.url | prepend: site.url }}">[{{ p.date | date: "%-d %b" }}]</a></time>{% endif -%}</p>
   </div>
 </li>

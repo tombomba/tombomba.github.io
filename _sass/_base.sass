@@ -88,7 +88,6 @@ header[role="banner"]
     left: 0
     z-index: 1
     background-image: url('/assets/img/shim.gif')
-
   .icon
     display: flex
     align-items: center
@@ -101,6 +100,9 @@ header[role="banner"]
       width: bem(1.25)
       height: bem(1.25)
       fill: $shock-color
+    img
+      width: bem(1.25)
+      height: bem(1.25)
 
 main article
   @extend .clearfix
@@ -202,7 +204,7 @@ footer
     list-style-type: none
     li
       display: inline
-      @include font-ratio(14/16)
+      //@include font-ratio(14/16)
       color: $mix-color
       &.copyright
         font-style: italic
@@ -251,7 +253,8 @@ footer
         margin-right: 1em
         width: bem(2)
         height: bem(2)
-    &.nextprev
+    &.nextprev,
+    &.rela
       align-items: center
     &.bigtop
       align-items: flex-start

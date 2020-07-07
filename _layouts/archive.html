@@ -21,7 +21,7 @@ layout: default
 
 <article>{% if page.date %}<!-- {{ page.date }} -->{% endif %}
 
-  <header class="large half-buff">
+  <header class="large quarter-buff">
     <h1 class="hed">{{ title_string }}</h1>
   </header>
 
@@ -33,7 +33,7 @@ layout: default
       {% assign current_year = p.date | date: "%Y" -%}
 
       {% if is_month_index and current_month == page_month and current_year == page_year -%}
-        {% include ul-toc.html title=p.title description=p.excerpt url=p.url %}
+        {% include ul-toc.html title=p.title description=p.fbog.text image=p.fbog.image url=p.url style="home" %}
       {% elsif is_year_index and current_year == page_year -%}
         {% include ul-toc.html title=p.title description=p.excerpt date=p.date url=p.url %}
       {% endif -%}

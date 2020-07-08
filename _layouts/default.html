@@ -52,10 +52,10 @@
 <body>
 
 <header role="banner" class="{% if page.is_home %}home{% elsif page.is_post %}post{% else %}page{% endif %}">
-  <div class="icon">{% if page.is_home %}<img src="{{ 'bombaline.png' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.title }}">{% else %}<a href="{{ site.url }}"><img src="{{ 'bombaline.png' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.url }}"><span></span></a>{% endif %}</div>
+  <div class="icon">{% if page.is_home %}<img src="{{ 'vvv-data-512.png' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.title }}">{% else %}<a href="{{ site.url }}"><img src="{{ 'vvv-data-512.png' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.url }}"><span></span></a>{% endif %}</div>
   {% comment %}
   <div class="icon">{% if page.is_home %}{% include icon-skull.svg %}{% else %}<a href="{{ site.url }}">{% include icon-skull.svg %}<span></span></a>{% endif %}</div>
-  {% endcomment %}
+  {% endcomment -%}
 </header>
 
 <main role="main"><!-- {{ page.layout }} -->

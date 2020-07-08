@@ -19,7 +19,7 @@
 $max-width: 37.389em
 $line-height: 1.83
 
-$body-color:    #F3F3F3 !default
+$body-color:    #EAEAEA !default
 $text-color:    #161616 !default
 
 //$key: random(6)
@@ -30,12 +30,20 @@ $text-color:    #161616 !default
   $logo-color:    nth($one-color, $key) !default
   $shock-color:   nth($two-color, $key) !default
 
-//$logo-color:    #F03 !default
-  $shock-color:   #FFF !default
-  $select-color:  #FFC !default
+$logo-color:    #F03 !default
+$shock-color:   #FFF !default
+$select-color:  #FFC !default
 
-$logo-color: #099 !default
-$shock-color: #FC0 !default
+$link-color: #0000FF !default
+$visited-color: #800080 !default
+$active-color: #F90 !default
+
+//$logo-color: #099 !default
+  $shock-color: #FC0 !default
+
+//$link-color: #36C !default
+  $visited-color: #939 !default
+  $active-color: #F90 !default
 
 //ORIGINAL BROWSER DEFAULTS:
   background: #C0C0C0
@@ -43,11 +51,7 @@ $shock-color: #FC0 !default
   a:visited: #800080
   a:active: #FF0000
 
-$link-color: #36C !default
-$visited-color: #939 !default
-$active-color: #F90 !default
-
-$select-color: $shock-color !default
+//$select-color: $shock-color !default
 
 $bg-color:      darken($body-color, 10%) !default
 $mix-color:     mix($body-color, $text-color, 36%) !default

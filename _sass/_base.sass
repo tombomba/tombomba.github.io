@@ -61,9 +61,6 @@ time
   a:link,
   a:visited
     color: $mix-color
-    text-decoration: none
-  a:hover
-    text-decoration: underline
 
 //-----------------------------------------------------------------------------
 
@@ -97,8 +94,8 @@ header[role="banner"]
     background-color: $logo-color
     border-radius: 4px 0 0 4px
     svg
-      width: bem(1.25)
-      height: bem(1.25)
+      width: bem(1.5)
+      height: bem(1.5)
       fill: $shock-color
     img
       width: bem(1.25)
@@ -142,6 +139,9 @@ ul.toc
         margin: 0
         font-size: 100%
         font-weight: 400
+      p a:link,
+      p a:visited
+        @extend .mix-link
     div.thumb
       position: relative
       float: left
@@ -204,7 +204,6 @@ footer
     list-style-type: none
     li
       display: inline
-      //@include font-ratio(14/16)
       color: $mix-color
       &.copyright
         font-style: italic

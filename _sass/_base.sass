@@ -77,8 +77,8 @@ header[role="banner"]
   justify-content: flex-start
   background-color: $bg-color
   border-radius: 4px
-  &.post:hover,
-  &.page:hover
+  //&.post:hover,
+  //&.page:hover
     background-color: $shock-color
   span
     position: absolute
@@ -97,11 +97,13 @@ header[role="banner"]
     background-color: $logo-color
     border-radius: 4px 0 0 4px
   .text
+    //max-width: bem(6)
     padding: 0 1em
+    overflow: hidden
     h1
-      font-family: 'Oswald', $system
-      font-size: bem(1)
-      font-weight: 400
+      font-family: $sans
+      font-size: percentage(29/18)
+      font-weight: 700
       line-height: 1
       color: $shock-color
       a:link, a:visited

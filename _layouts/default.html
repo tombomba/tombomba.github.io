@@ -43,6 +43,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css_dir | prepend: site.url | append: '.css' }}?v={{ site.time | date: '%a' | downcase }}">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&text={{ site.title | upcase }}&display=swap" rel="stylesheet">
 
     <!-- msft mobile hacks -->
     <script>!function(){if("-ms-user-select"in document.documentElement.style&&navigator.userAgent.match(/IEMobile/)){var a=document.createElement("style");a.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")),document.getElementsByTagName("head")[0].appendChild(a)}}();</script>
@@ -52,9 +53,12 @@
 <body>
 
 <header role="banner" class="{% if page.is_home %}home{% elsif page.is_post %}post{% else %}page{% endif %}">
-  <div class="icon">{% if page.is_home %}<img src="{{ 'bombaline.png' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.title }}">{% else %}<a href="{{ site.url }}"><img src="{{ 'bombaline.png' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.url }}"><span></span></a>{% endif %}</div>
+  <div class="text">
+    <h1><a href="{{ site.url }}">{{ site.title | upcase }}</a></h1>
+  </div>
   {% comment %}
-  <div class="icon">{% if page.is_home %}{% include icon-victory.svg %}{% else %}<a href="{{ site.url }}">{% include icon-victory.svg %}<span></span></a>{% endif %}</div>
+    <div class="icon">{% if page.is_home %}{% include icon-victory.svg %}{% else %}<a href="{{ site.url }}">{% include icon-victory.svg %}<span></span></a>{% endif %}</div>
+  <div class="icon">{% if page.is_home %}<img src="{{ 'bombaline.png' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.title }}">{% else %}<a href="{{ site.url }}"><img src="{{ 'bombaline.png' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.url }}"><span></span></a>{% endif %}</div>
   {% endcomment -%}
 </header>
 

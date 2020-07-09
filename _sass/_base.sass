@@ -61,6 +61,9 @@ time
   a:link,
   a:visited
     color: $mix-color
+    text-decoration: none
+  a:hover
+    text-decoration: underline
 
 //-----------------------------------------------------------------------------
 
@@ -85,6 +88,25 @@ header[role="banner"]
     left: 0
     z-index: 1
     background-image: url('/assets/img/shim.gif')
+  .text,
+  .icon
+    display: flex
+    align-items: center
+    justify-content: center
+    height: bem(2)
+    background-color: $logo-color
+    border-radius: 4px 0 0 4px
+  .text
+    padding: 0 1em
+    h1
+      font-family: 'Oswald', $sans
+      font-size: bem(1)
+      font-weight: 400
+      line-height: 1
+      color: $shock-color
+      a:link, a:visited
+        color: $shock-color
+        text-decoration: none
   .icon
     display: flex
     align-items: center

@@ -67,11 +67,6 @@
 
 <footer class="{% if page.is_post %}post{% elsif page.is_home %}home{% else %}page{% endif %}">
 
-  <div class="mmmeta">
-    <h1><a href="{{ site.url }}">{{ site.title | capitalize }}.com</a></h1>
-    <p>&ldquo;{{ site.data.taglines | sample: 1 }}&rdquo;</p>
-  </div>
-
   <ul>
     {% if page.is_page %}<li class="copyright">Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {{ site.author }}{% else %}<li><a href="{{ site.url }}">Home</a></li>{% endif %}{% unless page.is_about %}<li><a href="{{ '/about/' | prepend: site.url }}">About</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="{{ '/feed.xml' | prepend: site.url }}">RSS</a></li>
   </ul>

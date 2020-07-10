@@ -52,9 +52,9 @@
 <body>
 
 <header role="banner">
-  <div class="icon"><a href="{{ site.url }}" title="{{ site.url }}">{% include icon-skull.svg %}<span></span></a></div>
-  {% comment %}
   <div class="icon"><a href="{{ site.url }}"><img src="{{ 'bombaline.png' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.url }}"><span></span></a></div>
+  {% comment %}
+  <div class="icon"><a href="{{ site.url }}" title="{{ site.url }}">{% include icon-skull.svg %}<span></span></a></div>
   <div class="text"><h1><a href="{{ site.url }}">{{ site.title | upcase }}</a></h1></div>
   {% endcomment -%}
 </header>

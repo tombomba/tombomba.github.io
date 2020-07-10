@@ -162,8 +162,11 @@ ul.toc
         margin: 0
         font-size: 100%
         font-weight: 400
-      p
-        @extend .mix-link
+      p a:link, p a:visited
+        color: $mix-color
+        text-decoration: none
+      p a:hover
+        text-decoration: underline
     div.thumb
       position: relative
       float: left

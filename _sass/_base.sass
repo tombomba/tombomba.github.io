@@ -224,7 +224,7 @@ footer
   text-align: center
   border-top: 1px solid $light-mix
   div.mmmeta
-    margin-top: 1em
+    margin-top: bem(1)
     h1
       font-size: 100%
       a:link, a:visited
@@ -232,6 +232,8 @@ footer
         text-decoration: none
       a:hover
         text-decoration: underline
+    h1, p
+      margin: 0
   ul
     list-style-type: none
     li
@@ -260,7 +262,7 @@ footer
 @media screen and (min-width: 48em)
 
   body
-    padding-top: bem(1)
+    padding: bem(1) 0
 
   main article blockquote
     border-left-width: 1em

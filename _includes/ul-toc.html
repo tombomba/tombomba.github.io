@@ -15,6 +15,6 @@
   <div class="meta"><!-- {{ wc }} words -->
     {% assign blurb = include.description | strip_html | normalize_whitespace -%}
     <h2><a href="{{ include.url | prepend: site.url }}">{{ titlef }}</a></h2>
-    <p>{% if include.style == 'rela' %}{{ blurb | truncate: 65, "..." | smartify }}{% else %}{{ blurb | smartify }}{% endif %}{% if include.date %} <a class="datestamp" href="{{ include.url | prepend: site.url }}">({{ p.date | date: "%-d %b" }})</a>{% endif -%}</p>
+    <p>{% if include.style == 'rela' %}{{ blurb | truncate: 65, "..." | smartify }}{% else %}{{ blurb | smartify }}{% endif %}{% if include.date %} <a href="{{ include.url | prepend: site.url }}">[{{ p.date | date: "%-d %b" }}]</a>{% endif -%}</p>
   </div>
 </li>

@@ -20,6 +20,7 @@ permalink: /index.html
 
 <aside>
   <ul class="dlist">
-  {% include ul-dlist.html year="2020" start=6 stop=7 %}
+  {% assign stopdt = site.posts.first.date | date: '%m' %}
+  {% include ul-dlist.html year="2020" start=6 stop=stopdt %}
   </ul>
 </aside>

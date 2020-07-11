@@ -1,0 +1,58 @@
+
+header[role="banner"]
+
+  position: relative
+  max-width: $max-width
+  margin: 0 auto
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  background-color: $bg-color
+  border-radius: 4px
+  &:hover
+    background-color: $shock-color
+  span
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    z-index: 1
+    background-image: url('/assets/img/shim.gif')
+  .text,
+  .icon
+    display: flex
+    align-items: center
+    justify-content: center
+    height: bem(2)
+    background-color: $logo-color
+    border-radius: 4px 0 0 4px
+  .text
+    max-width: bem(8)
+    padding: 0 1em
+    overflow: hidden
+    h1
+      font-family: 'Oswald', $system
+      font-size: percentage(37/18)
+      font-weight: 400
+      line-height: 1
+      letter-spacing: -0.1px
+      color: $shock-color
+      a:link, a:visited
+        color: $shock-color
+        text-decoration: none
+  .icon
+    display: flex
+    align-items: center
+    justify-content: center
+    width: bem(2)
+    height: bem(2)
+    background-color: $logo-color
+    border-radius: 4px 0 0 4px
+    svg
+      width: bem(1.125)
+      height: bem(1.125)
+      fill: $shock-color
+    img
+      width: bem(1.25)
+      height: bem(1.25)

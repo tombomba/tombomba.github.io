@@ -97,7 +97,7 @@ main article
 
 aside
   max-width: $max-width
-  margin: bem(1) auto 0 auto
+  margin: 0 auto
 
 ul.toc
   margin-left: 0
@@ -134,8 +134,10 @@ ul.toc
         left: 0
         z-index: 1
         background-image: url('/assets/img/shim.gif')
-    &.home:not(:first-of-type),
-    &.bigtop:not(:first-of-type)
+    &.home,
+    &.bigtop,
+    &.nextprev,
+    &.rela:first-of-type
       @extend .pushup
 
 ul.plain
@@ -148,7 +150,8 @@ ul.plain
 ul.dlist
   list-style-type: none
   margin-top: bem(1)
-  margin-left: 0
+  margin-left: 0  
+  @extend .pushup
   text-align: center
   li
     display: inline
@@ -167,6 +170,7 @@ footer
   margin-left: auto
   margin-right: auto
   text-align: center
+  border-top: 1px solid $light-mix
   ul
     margin-top: 1em
     list-style-type: none
@@ -194,6 +198,9 @@ footer
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 48em)
+
+  body
+    padding-top: bem(1)
 
   main article blockquote
     border-left-width: 1em

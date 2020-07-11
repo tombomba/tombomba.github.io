@@ -5,6 +5,7 @@ layout: default
 
 {% if page.next or page.previous %}
 <aside>
+  <hr>
   <ul class="toc">
   {% if page.id == site.posts.first.id %}
     {% for p in site.posts limit:3 offset:1 %}

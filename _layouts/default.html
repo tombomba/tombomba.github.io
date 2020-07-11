@@ -51,7 +51,7 @@
 
 <body>
 
-{% include banner-text.html %}
+{% include banner-icon.html %}
 
 <main role="main"><!-- {{ page.layout }} -->
 
@@ -60,8 +60,6 @@
 </main>
 
 <footer class="{% if page.is_post %}post{% elsif page.is_home %}home{% else %}page{% endif %}">
-
-  <hr>
 
   <ul>
     {% if page.is_page %}<li class="copyright">Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {{ site.author }}{% else %}<li><a href="{{ site.url }}">Home</a></li>{% endif %}{% unless page.is_about %}<li><a href="{{ '/about/' | prepend: site.url }}">About</a></li>{% endunless %}<li><a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">Twitter</a></li><li><a href="{{ '/feed.xml' | prepend: site.url }}">RSS</a></li>

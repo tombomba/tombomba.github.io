@@ -7,14 +7,12 @@ permalink: /index.html
 
 <aside>
 
-  <hr>
   <ul class="toc">
   {% for p in site.posts limit:3 offset:1 %}
     {% include ul-toc.html title=p.title description=p.fbog.text image=p.fbog.image url=p.url style="rela" %}
   {% endfor %}
   </ul>
 
-  <hr class="pagebreak">
   <ul class="toc">
   {% for p in site.posts limit:5 offset:4 %}
     {% include ul-toc.html title=p.title description=p.excerpt image=p.fbog.image url=p.url style="bigtop" %}
@@ -24,9 +22,10 @@ permalink: /index.html
 </aside>
 
 <aside>
-  <hr>
+
   <ul class="dlist">
   {% assign stopdt = site.posts.first.date | date: '%m' %}
   {% include ul-dlist.html year="2020" start=6 stop=stopdt %}
   </ul>
+
 </aside>

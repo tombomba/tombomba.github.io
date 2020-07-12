@@ -9,10 +9,10 @@ header[role="banner"]
   height: bem(1)
   //border: 1px solid red
   .text
-    @extend .half-buff
+    //@extend .half-buff
     h1
-      font-family: 'Yahoo', $sans
-      font-size: percentage(23/18)
+      font-family: 'Bungee', $sans
+      font-size: percentage(37/18)
       font-weight: 400
       line-height: 1
       color: $logo-color
@@ -24,20 +24,3 @@ header[role="banner"]
     margin-left: 1em
     hr
       width: 100%
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 32em)
-
-  header[role="banner"]
-    .text h1
-      font-size: percentage(29/18)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 64em)
-
-  header[role="banner"]
-    .text
-      h1
-        font-size: percentage(37/18)

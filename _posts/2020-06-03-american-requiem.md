@@ -1,7 +1,7 @@
 ---
 title: "American wake, American requiem"
-media:
-  image: love-is-the-message-and-the-message-is-death-jafa-2016.jpg
+#media:
+#  image: love-is-the-message-and-the-message-is-death-jafa-2016.jpg
 fbog:
   text: "Arthur Jafa's 'Love Is the Message, and the Message Is Death' is an extraordinary piece of video art."
   image: love-is-the-message-and-the-message-is-death-jafa-2016.jpg

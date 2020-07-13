@@ -1,14 +1,17 @@
 ---
 title: "'The Westerner' (1960)"
-media:
-  image: the-westerner-peckinpah-1960.jpg
-  width: 700
-  height: 525
+#media:
+#  image: the-westerner-peckinpah-1960.jpg
+#  width: 700
+#  height: 525
 fbog:
   text: "Duis eleifend dapibus lectus, quis eleifend magna rhoncus eu. Praesent id scelerisque odio."
   image: the-westerner-peckinpah-1960.jpg
 date: 2020-06-08 12:34 -0800
 ---
+
+!["The Westerner 1960"](/assets/img/the-westerner-peckinpah-1960.jpg)
+
 Sed nulla ante, viverra vehicula lorem vel, blandit dictum risus. Duis nisi dolor, vestibulum eu ligula quis, porttitor lacinia lectus.
 
 Duis eleifend dapibus lectus, quis eleifend magna rhoncus eu. Praesent id scelerisque odio. Ut laoreet hendrerit justo quis elementum. Ut accumsan convallis purus ac aliquam. Phasellus erat elit, mattis in eros non, facilisis dapibus massa.

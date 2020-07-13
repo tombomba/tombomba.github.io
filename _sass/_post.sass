@@ -1,18 +1,20 @@
 main article
-
-  margin-top: bem(1)
+  @extend .clearfix
 
   header
+    margin-top: bem(1)
     h1
       font-size: percentage(23/18)
       line-height: (($line-height - 1) / 2) + 1
       color: $text-color
+      &.media
+        font-size: percentage(23/18)
       &.teaser
         line-height: $line-height
     div.byline p
       display: inline
       margin: 0
-      @include font-ratio(14/16)
+      font-size: percentage(14/16)
       @extend .mix-link
       &:first-of-type::after
         content: "\20/\20"
@@ -36,9 +38,7 @@ main article
     margin-top: 0
 
   figure
-    margin: bem(1) 0
-    padding-bottom: 0.2075em
-    max-width: 320px
+    margin-top: bem(1) - 0.415em
     .wrap
       position: relative
       padding-bottom: 56.25%
@@ -66,6 +66,26 @@ main article
       margin: 0 0 -0.415em 0
       padding-top: 8px
       font-size: percentage(12/16)
+
+  & > img
+    display: block
+    max-width: 100%
+    background-color: $bg-color
+    vertical-align: top
+    overflow: hidden
+    border-width: thin
+    border-style: solid
+    border-color: inherit
+    &.top
+      margin-bottom: 1.5em
+    &.transparent
+      background-color: $body-color
+    &.left
+      float: left
+      margin: 1.915em 1.5em 1em 0
+    &.right
+      float: right
+      margin: 1.915em 0 1em 1.5em
 
 main aside
   margin-top: bem(1)

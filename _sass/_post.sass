@@ -60,7 +60,10 @@ main article
       embed
         background: $bg-color url(/assets/img/default-image-icon.png) no-repeat center center
       img
-        //border-radius: 4px
+        -moz-box-sizing: border-box
+        -webkit-box-sizing: border-box
+        box-sizing: border-box
+        vertical-align: middle
         border: 1px solid $text-color
     figcaption p
       margin: 0 0 -0.415em 0

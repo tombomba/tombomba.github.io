@@ -18,14 +18,6 @@ layout: default
 
 <article class="post"><!-- {{ copy | number_of_words }} words -->
 
-  <header>
-    <h1>{{ titlef }}</h1>
-    <div class="byline">
-      <p><a href="/about/">{{ p.author | default: site.author }}</a></p>
-      <p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%B %-d, %Y" }}</time></p>
-    </div>
-  </header>
-
   {% if p.media %}
     {% assign w = p.media.width | default: 800 | times: 1.0 -%}
     {% assign h = p.media.height | default: 450 | times: 1.0 -%}
@@ -42,6 +34,14 @@ layout: default
       {% if p.media.caption %}<figcaption>{{ p.media.caption | strip | smartify | markdownify | normalize_whitespace }}</figcaption>{% endif -%}
     </figure>
   {% endif -%}
+
+  <header>
+    <h1 class="{% if p.media %}media{% else %}nomedia{% endif %}">{{ titlef }}</h1>
+    <div class="byline">
+      <p><a href="/about/">{{ p.author | default: site.author }}</a></p>
+      <p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%B %-d, %Y" }}</time></p>
+    </div>
+  </header>
 
   {{ copy }}
 

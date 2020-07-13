@@ -1,0 +1,18 @@
+{% if page.next or page.previous %}
+<aside>
+  <ul class="toc">
+  {% if page.id == site.posts.first.id %}
+    {% for p in site.posts limit:3 offset:1 %}
+      {% include ul-toc.html title=p.title description=p.fbog.text image=p.fbog.image url=p.url style="nextprev" %}
+    {% endfor %}
+  {% else %}
+    {% if page.previous %}
+      {% include ul-toc.html title=page.previous.title description=page.previous.fbog.text image=page.previous.fbog.image url=page.previous.url style="rela" %}
+    {% endif %}
+    {% if page.next %}
+      {% include ul-toc.html title=page.next.title description=page.next.fbog.text image=page.next.fbog.image url=page.next.url style="rela" %}
+    {% endif -%}
+  {% endif -%}
+  </ul>
+</aside>
+{% endif %}

@@ -40,7 +40,6 @@ main article
   figure
     margin: (bem(1) - 0.415em) 0 0 0
     padding: 0
-    outline: 1px solid $text-color
     .wrap
       position: relative
       padding-bottom: 56.25%
@@ -61,6 +60,10 @@ main article
       object,
       embed
         background: $bg-color url(/assets/img/default-image-icon.png) no-repeat center center
+      img
+        display: block
+        font-size: 0
+        border: thin solid $text-color
     figcaption p
       margin: 0 0 -0.415em 0
       padding-top: 8px
@@ -77,10 +80,12 @@ main article
     &.pushup
       margin-top: 1.5em
     &.full
+      display: block
       margin-top: 1.5em
       max-width: 100%
       height: auto
-      outline: 1px solid $text-color
+      border: 1px solid $text-color
+      font-size: 0
     &.transparent
       background-color: $body-color
     &.left

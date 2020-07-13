@@ -6,14 +6,11 @@ header[role="banner"]
   display: flex
   align-items: center
   justify-content: space-between
-  height: bem(1)
-  //border: 1px solid red
   .text
     //@extend .half-buff
     h1
-      font-family: 'Bungee', $sans
-      font-size: percentage(37/18)
-      font-weight: 400
+      font-family: 'Fruktur', $system
+      font-size: percentage(47/18)
       line-height: 1
       color: $logo-color
       a:link, a:visited
@@ -21,6 +18,10 @@ header[role="banner"]
         text-decoration: none
   .shim
     flex: 1
-    margin-left: 1em
+    &.first
+      margin-right: 1em
+    &.second
+      margin-left: 1em
     hr
       width: 100%
+      margin-top: 3px

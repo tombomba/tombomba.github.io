@@ -1,5 +1,7 @@
 main article
 
+  margin-top: bem(1)
+
   header
     h1
       font-size: percentage(23/18)
@@ -7,14 +9,31 @@ main article
       color: $text-color
       &.teaser
         line-height: $line-height
-
     div.byline p
       display: inline
+      margin: 0
       @include font-ratio(14/16)
       @extend .mix-link
-      &:nth-child(2)::before
-        content: "\20\/\20"
+      &:first-of-type::after
+        content: "\20/\20"
         color: $mix-color
+
+  h2, h3, h4, h5, h6
+    font-size: 100%
+    margin-top: 1.5em
+
+  p, li, hr
+    margin-top: 1.5em
+
+  ul, ol
+    margin-left: 1.5em
+
+  blockquote
+    padding: 0 1.5em
+
+  blockquote,
+  li + p,
+    margin-top: 0
 
   figure
     margin: bem(1) 0
@@ -48,5 +67,7 @@ main article
       padding-top: 8px
       font-size: percentage(12/16)
 
-  p.teaser
-    margin-top: 0
+main aside
+  margin-top: bem(1)
+  p:first-of-type
+    margin-top: bem(1)

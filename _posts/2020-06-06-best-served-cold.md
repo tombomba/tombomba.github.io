@@ -1,5 +1,5 @@
 ---
-title: "Best served cold"
+title: "'Revenge' is a dish best served cold"
 tweet: "The quick brown fox jumps over the lazy dog."
 media:
   image: revenge-fargeat-2017.jpg

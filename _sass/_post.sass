@@ -17,8 +17,9 @@ main article
         color: $mix-color
 
   figure
-    margin-bottom: bem(1)
+    margin: bem(1) 0
     padding-bottom: 0.2075em
+    max-width: 320px
     .wrap
       position: relative
       padding-bottom: 56.25%
@@ -40,7 +41,8 @@ main article
       embed
         background: $bg-color url(/assets/img/default-image-icon.png) no-repeat center center
       img
-        border-radius: 4px
+        //border-radius: 4px
+        border: 1px solid $text-color
     figcaption p
       margin: 0 0 -0.415em 0
       padding-top: 8px

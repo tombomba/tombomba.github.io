@@ -51,6 +51,11 @@ hr
   width: 100%
   margin: 0
   padding: 0
+  height: 0
+  border: 0
+  border-top: 1px solid $border-dark
+  border-bottom: 1px solid $border-light
+  background-color: $body-color
   &.pagebreak
     margin-top: bem(1)
 
@@ -199,7 +204,7 @@ footer
 
 @media screen and (min-width: 48em)
 
-  body
+  //body
     padding-top: bem(1)
 
   main article blockquote
@@ -252,5 +257,5 @@ footer
     &.nextprev,
     &.bigtop
       div.thumb
-        width: bem(5)
-        height: bem(5/1.5)
+        width: bem(4)
+        height: bem(5/1.77)

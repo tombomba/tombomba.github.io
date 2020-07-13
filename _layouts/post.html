@@ -1,23 +1,62 @@
 ---
 layout: default
 ---
-{% include post-block.html page=page content=page.content %}
+{% assign p = page -%}
+{% assign copy = content | strip | normalize_whitespace -%}
+
+{% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
+{% if t.size > 1 %}
+  {% assign sub = t.last | prepend: '!QQ!' -%}
+  {% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
+{% else -%}
+  {% assign titlef = t %}
+{% endif -%}
+
+{% if copy contains 'img src=' %}
+  {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}
+{% endif -%}
+
+<article class="post"><!-- {{ copy | number_of_words }} words -->
+
+  <header>
+    <h1>{{ titlef }}</h1>
+    <div class="byline">
+      <p><a href="/about/">{{ p.author | default: site.author }}</a></p>
+      <p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%B %-d, %Y" }}</time></p>
+    </div>
+  </header>
+
+  {% if p.media %}
+    {% assign w = p.media.width | default: 800 | times: 1.0 -%}
+    {% assign h = p.media.height | default: 450 | times: 1.0 -%}
+    {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
+    <figure><!-- {{ w }} x {{ h }} | {{ percent }}% -->
+      <div class="wrap" style="padding-bottom:{{ percent }}%">
+        {% if p.media.vimeo %}
+        <iframe src="https://player.vimeo.com/video/{{ p.media.vimeo }}?badge=0&color=0000FF&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        {% elsif p.media.youtube %}
+        <iframe src="https://www.youtube.com/embed/{{ p.media.youtube }}?modestbranding=1&rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        {% elsif p.media.image %}<img src="{{ p.media.image | prepend: site.img_dir }}" alt="{{ p.media.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}">
+        {% endif -%}
+      </div>
+      {% if p.media.caption %}<figcaption>{{ p.media.caption | strip | smartify | markdownify | normalize_whitespace }}</figcaption>{% endif -%}
+    </figure>
+  {% endif -%}
+
+  {{ copy }}
+
+</article>
 
 {% if page.next or page.previous %}
 <aside>
-  <ul class="toc">
-  {% if page.id == site.posts.first.id %}
-    {% for p in site.posts limit:3 offset:1 %}
-      {% include ul-toc.html title=p.title description=p.fbog.text image=p.fbog.image url=p.url style="nextprev" %}
-    {% endfor %}
-  {% else %}
-    {% if page.previous %}
-      {% include ul-toc.html title=page.previous.title description=page.previous.fbog.text image=page.previous.fbog.image url=page.previous.url style="rela" %}
-    {% endif %}
-    {% if page.next %}
-      {% include ul-toc.html title=page.next.title description=page.next.fbog.text image=page.next.fbog.image url=page.next.url style="rela" %}
-    {% endif -%}
+  <hr>
+  <div class="nextprev">
+  {% if page.previous %}
+  <p><strong>Previous:</strong> <a href="{{ page.previous.url }}">{{ page.previous.title | strip | normalize_whitespace | smartify }}</a></p>
   {% endif -%}
-  </ul>
+  {% if page.next %}
+  <p><strong>Next:</strong> <a href="{{ page.next.url }}">{{ page.next.title | strip | normalize_whitespace | smartify }}</a></p>
+  {% endif -%}
+  </div>
 </aside>
 {% endif %}

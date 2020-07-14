@@ -1,14 +1,16 @@
 {% assign t = include.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
 {% assign sub = t.last | prepend: '!QQ!' -%}
 {% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
-<li>
-  {% if include.image %}
-  <div class="image" style="background-image:url({{ include.image | prepend: site.img_dir | prepend: site.url }})"><a href="{{ include.url | prepend: site.url }}"><span></span></a></div>
-  {% else %}
-  <div class="shim"></div>
-  {% endif -%}
-  <div class="text">
-    <h2><a href="{{ include.url | prepend: site.url }}">{{ titlef }}</a></h2>
-    {% if include.description %}<p>{{ include.description | strip_html | normalize_whitespace | smartify }}{% if include.date %}&nbsp;<a href="{{ include.url | prepend: site.url }}">[{{ p.date | date: "%-d %b" }}]</a>{% endif %}</p>{% endif -%}
-  </div>
-</li>
+{% if include.image %}
+<div class="image">
+  <img src="{{ include.image | prepend: site.img_dir | prepend: site.url }}" alt="">
+</div>
+{% elsif include.thumb %}
+<div class="thumb" style="background-image:url({{ include.thumb | prepend: site.img_dir | prepend: site.url }})"><a href="{{ include.url | prepend: site.url }}"><span></span></a></div>
+{% else %}
+<div class="shim"></div>
+{% endif -%}
+<div class="text">
+  <h1><a href="{{ include.url | prepend: site.url }}">{{ titlef }}</a></h1>
+  {% if include.description %}<p>{{ include.description | strip_html | normalize_whitespace | smartify }}{% if include.date %}&nbsp;<a href="{{ include.url | prepend: site.url }}">[{{ p.date | date: "%-d %b" }}]</a>{% endif %}</p>{% endif -%}
+</div>

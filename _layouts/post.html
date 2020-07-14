@@ -41,12 +41,12 @@ layout: default
 <aside>
   <hr>
   {% if page.previous %}
-  <div class="card">
+  <div class="teevee card">
     {% include card.html title=page.previous.title description=page.previous.fbog.text thumb=page.previous.fbog.image url=page.previous.url %}
   </div>
   {% endif -%}
   {% if page.next %}
-  <div class="card">
+  <div class="teevee card">
     {% include card.html title=page.next.title description=page.next.fbog.text thumb=page.next.fbog.image url=page.next.url %}
   </div>
   {% endif -%}

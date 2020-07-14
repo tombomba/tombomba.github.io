@@ -29,7 +29,7 @@ layout: default
     <h1 class="{% if p.media %}media{% else %}nomedia{% endif %}">{{ titlef }}</h1>
     <div class="byline">
       <p><a href="/about/">{{ p.author | default: site.author }}</a></p>
-      <p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%B %-d, %Y" }}</time></p>
+      <p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %B %Y" }}</time></p>
     </div>
   </header>
 

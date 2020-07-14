@@ -2,28 +2,35 @@
 is_home: true
 permalink: /index.html
 ---
+
 {% assign p = site.posts.first %}
-{% include teaser-block.html title=p.title date=p.date url=p.url excerpt=p.excerpt media=p.media style="home" %}
+
+{% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
+{% if t.size > 1 %}
+  {% assign sub = t.last | prepend: '!QQ!' -%}
+  {% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
+{% else -%}
+  {% assign titlef = t %}
+{% endif -%}
+
+<article>
+  <div class="teaser">
+    {% include card.html title=p.title description=p.excerpt image=p.fbog.image url=p.url %}
+  </div>
+</article>
 
 <aside>
-
   <hr>
-
-  <ul class="teevee card">
   {% for p in site.posts limit:7 offset:1 %}
-    {% include card.html title=p.title description=p.fbog.text image=p.fbog.image url=p.url %}
+  <div class="teevee card">
+    {% include card.html title=p.title description=p.fbog.text thumb=p.fbog.image url=p.url %}
+  </div>
   {% endfor -%}
-  </ul>
-
 </aside>
 
 <aside>
-
   <hr>
-
   <ul class="dlist">
-  {% assign stopdt = site.posts.first.date | date: '%m' %}
-  {% include ul-dlist.html year="2020" start=6 stop=stopdt %}
+    {% include ul-dlist.html year="2020" start=6 stop=7 %}
   </ul>
-
 </aside>

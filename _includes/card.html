@@ -15,5 +15,5 @@
 {% endif -%}
 <div class="text">
   <h1><a href="{{ include.url | prepend: site.url }}">{{ titlef }}</a></h1>
-  {% if include.description %}<p>{{ include.description | strip_html | normalize_whitespace | smartify }}{% if include.date %}&nbsp;<a href="{{ include.url | prepend: site.url }}">[{{ p.date | date: "%-d %b" }}]</a>{% endif %}</p>{% endif -%}
+  <p>{{ include.description | strip_html | normalize_whitespace | smartify }}{% if include.date %}&nbsp;<span class="dates">({{ p.date | date: "%-d %b" }})</span>{% endif %}</p>
 </div>

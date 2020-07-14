@@ -39,13 +39,14 @@ div.card
       background-image: url('/assets/img/shim.gif')
   div.text
     flex: 1
-    h1, p
+    h1, h2, p
       margin: 0
       font-size: 100%
-    p
-      a:link, a:visited
-        white-space: nowrap
-      @extend .mix-link
+    span.dates
+      white-space: nowrap
+      font-weight: 400
+      font-style: italic
+      color: $mix-color
 
 //-----------------------------------------------------------------------------
 

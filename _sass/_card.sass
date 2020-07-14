@@ -1,0 +1,61 @@
+//-----------------------------------------------------------------------------
+
+ul.card
+  margin: 0
+  list-style: none
+  li
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    margin-top: bem(1)
+  div.image
+    position: relative
+    width: bem(2)
+    height: bem(2)
+    margin-top: 0.415em
+    margin-right: 1em
+    border: thin solid $text-color
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+    background-color: $bg-color
+    span
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      z-index: 1
+      background-image: url('/assets/img/shim.gif')
+  div.text
+    flex: 1
+    h2, p
+      margin: 0
+      font-size: 100%
+    p
+      @extend .mix-link
+  &.mini li
+    align-items: center
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 48em)
+
+  ul.card.widescreen
+    div.image, div.shim
+      width: bem(3 * 1.77)
+      height: bem(3)
+
+  ul.card.teevee
+    div.image, div.shim
+      width: bem(3 * 1.33)
+      height: bem(3)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 70em)
+
+  ul.card.teevee
+    div.image, div.shim
+      width: bem(4 * 1.33)
+      height: bem(4)

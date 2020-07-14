@@ -28,7 +28,7 @@ layout: default
   <header>
     <h1 class="{% if p.media %}media{% else %}nomedia{% endif %}">{{ titlef }}</h1>
     <div class="byline">
-      <p><a href="/about/">{{ p.author | default: site.author }}</a></p>
+      <p>{{ p.author | default: site.author }}</p>
       <p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %B %Y" }}</time></p>
     </div>
   </header>
@@ -40,13 +40,15 @@ layout: default
 {% if page.next or page.previous %}
 <aside>
   <hr>
-  <div class="nextprev">
   {% if page.previous %}
-  <p><strong>Previous:</strong> <a href="{{ page.previous.url }}">{{ page.previous.title | strip | normalize_whitespace | smartify }}</a></p>
+  <div class="card">
+    {% include card.html title=page.previous.title description=page.previous.fbog.text thumb=page.previous.fbog.image url=page.previous.url %}
+  </div>
   {% endif -%}
   {% if page.next %}
-  <p><strong>Next:</strong> <a href="{{ page.next.url }}">{{ page.next.title | strip | normalize_whitespace | smartify }}</a></p>
-  {% endif -%}
+  <div class="card">
+    {% include card.html title=page.next.title description=page.next.fbog.text thumb=page.next.fbog.image url=page.next.url %}
   </div>
+  {% endif -%}
 </aside>
 {% endif %}

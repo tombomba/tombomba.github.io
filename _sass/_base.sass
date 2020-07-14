@@ -19,8 +19,8 @@ html
 
 body
   font-family: $serif
-  font-size: 100%
-  line-height: $line-height
+  font-size: $mob-font-size
+  line-height: $mob-line-height
 
   background-color: $body-color
   color: $text-color
@@ -29,7 +29,7 @@ body
   -ms-text-size-adjust: auto
   -webkit-text-size-adjust: auto
 
-  padding: 1em
+  padding: 1em 0.5em
 
 a
   text-decoration: underline
@@ -70,11 +70,11 @@ hr
 //-----------------------------------------------------------------------------
 
 main article
-  max-width: $max-width
+  max-width: $mob-max-width
   margin: 0 auto
 
 main aside
-  max-width: $max-width
+  max-width: $mob-max-width
   margin: 2em auto 0 auto
   div.nextprev
     margin-top: 2em
@@ -104,7 +104,7 @@ ul.dlist
       color: $mix-color
 
 footer
-  max-width: $max-width
+  max-width: $mob-max-width
   margin-top: 2em
   margin-left: auto
   margin-right: auto
@@ -124,7 +124,14 @@ footer
 @media screen and (min-width: 32em)
 
   body
-    font-size: $base-font-size
+    font-size: $tab-font-size
+    line-height: $tab-line-height
+    padding-top: 1.5em
+
+  main article,
+  main aside,
+  footer
+    max-width: $tab-max-width
 
   footer ul
     flex-direction: row
@@ -134,3 +141,16 @@ footer
         padding-left: 0.25em
         content: "-"
         color: $mix-color
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 60em)
+
+  body
+    font-size: $desk-font-size
+    line-height: $desk-line-height
+
+  main article,
+  main aside,
+  footer
+    max-width: $desk-max-width

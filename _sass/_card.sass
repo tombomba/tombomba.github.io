@@ -1,18 +1,34 @@
 //-----------------------------------------------------------------------------
 
-ul.card
-  margin: 0
-  list-style: none
-  li
-    display: flex
-    align-items: flex-start
-    justify-content: space-between
-    margin-top: bem(1)
+div.teaser
+  max-width: $max-width
   div.image
+    margin-top: 1.415em
+    img
+      display: block
+      width: 100%
+      max-width: 100%
+      height: auto
+      border: thin solid $text-color
+  div.text
+    margin-top: bem(1)
+    h1, p
+      margin: 0
+    h1
+      font-size: percentage(23/18)
+      line-height: (($line-height - 1) / 2) + 1
+      color: $text-color
+
+div.card
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  margin-top: bem(1)
+  div.thumb
     position: relative
     width: bem(2)
     height: bem(2)
-    margin-top: 0.415em
+    margin-top: 5px
     margin-right: 1em
     border: thin solid $text-color
     background-position: center center
@@ -29,24 +45,22 @@ ul.card
       background-image: url('/assets/img/shim.gif')
   div.text
     flex: 1
-    h2, p
+    h1, p
       margin: 0
       font-size: 100%
     p
       @extend .mix-link
-  &.mini li
-    align-items: center
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 48em)
 
-  ul.card.widescreen
-    div.image, div.shim
+  div.card.widescreen
+    div.thumb, div.shim
       width: bem(3 * 1.77)
       height: bem(3)
 
-  ul.card.teevee
-    div.image, div.shim
+  div.card.teevee
+    div.thumb, div.shim
       width: bem(3 * 1.33)
       height: bem(3)

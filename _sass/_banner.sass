@@ -6,17 +6,17 @@ header[role="banner"]
   display: flex
   align-items: center
   justify-content: space-between
-  .text
-    //@extend .half-buff
-    h1
-      font-family: 'Fruktur', $system
-      font-size: percentage(37/18)
-      font-weight: 400
-      line-height: 1
+  h1
+    font-family: 'Fruktur', $system
+    font-size: percentage(37/18)
+    &.home
+      font-size: percentage(47/18)
+    font-weight: 400
+    line-height: 1
+    color: $logo-color
+    a:link, a:visited
       color: $logo-color
-      a:link, a:visited
-        color: $logo-color
-        text-decoration: none
+      text-decoration: none
   .shim
     flex: 1
     &.first

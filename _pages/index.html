@@ -5,14 +5,6 @@ permalink: /index.html
 
 {% assign p = site.posts.first %}
 
-{% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
-{% if t.size > 1 %}
-  {% assign sub = t.last | prepend: '!QQ!' -%}
-  {% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
-{% else -%}
-  {% assign titlef = t %}
-{% endif -%}
-
 <article>
   <div class="teaser">
     {% include card.html title=p.title description=p.excerpt image=p.fbog.image url=p.url %}

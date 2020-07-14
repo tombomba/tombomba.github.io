@@ -21,12 +21,6 @@ layout: default
 
 <article>{% if page.date %}<!-- {{ page.date }} -->{% endif %}
 
-  <header>
-    <h1>{{ title_string }}</h1>
-  </header>
-
-  <hr>
-
   {% for p in site.posts -%}
     {% assign current_month = p.date | date: "%m" -%}
     {% assign current_year = p.date | date: "%Y" -%}

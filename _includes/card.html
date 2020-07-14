@@ -14,6 +14,10 @@
 <div class="shim"></div>
 {% endif -%}
 <div class="text">
+  {% if include.image %}
+  <h1><a href="{{ include.url | prepend: site.url }}">{{ titlef }}</a></h1>
+  {% else %}
   <h2><a href="{{ include.url | prepend: site.url }}">{{ titlef }}</a></h2>
+  {% endif -%}
   <p>{{ include.description | strip_html | normalize_whitespace | smartify }}{% if include.date %}&nbsp;<span class="dates">({{ p.date | date: "%-d %b" }})</span>{% endif %}</p>
 </div>

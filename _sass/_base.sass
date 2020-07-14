@@ -58,10 +58,6 @@ hr
   &.pagebreak
     margin-top: bem(1)
 
-.pushup
-  padding-top: bem(1)
-  border-top: 1px solid $light-mix
-
 .half-buff
   padding-top: 0.415em
 .quarter-buff
@@ -70,9 +66,6 @@ hr
 .mix-link
   a:link, a:visited
     color: $mix-color
-    text-decoration: none
-  a:hover
-    text-decoration: underline
 
 //-----------------------------------------------------------------------------
 
@@ -115,18 +108,24 @@ footer
   margin-top: bem(1)
   margin-left: auto
   margin-right: auto
-  text-align: center
-  ul
+  div.flexwrap
+    display: flex
+    flex-direction: column-reverse
+    align-items: center
+    justify-content: center
     margin-top: 1em
-    list-style-type: none
-    li
-      display: inline
+    div.copyright p
+      margin-top: 0.415em
+      @include font-ratio(14/16)
+      font-style: italic
       color: $mix-color
-      &.copyright
-        font-style: italic
-      &:not(:last-of-type)::after
-        content: "\20-\20"
-        color: $mix-color
+      @extend .mix-link
+    div.subscribe
+      @extend .mix-link
+      svg
+        width: bem(1)
+        height: bem(1)
+        fill: $mix-color
 
 //-----------------------------------------------------------------------------
 
@@ -134,3 +133,12 @@ footer
 
   body
     font-size: $base-font-size
+
+  footer
+    div.flexwrap
+      flex-direction: row
+      justify-content: space-between
+      div.copyright
+        flex: 1
+        p
+          margin: 0

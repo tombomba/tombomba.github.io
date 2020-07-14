@@ -30,11 +30,11 @@ layout: default
     {% assign current_month = p.date | date: "%m" -%}
     {% assign current_year = p.date | date: "%Y" -%}
     {% if is_month_index and current_month == page_month and current_year == page_year -%}
-      <div class="card">
+      <div class="index card">
         {% include card.html title=p.title description=p.fbog.text url=p.url %}
       </div>
     {% elsif is_year_index and current_year == page_year -%}
-      <div class="card">
+      <div class="index card">
         {% include card.html title=p.title description=p.fbog.text date=p.date url=p.url %}
       </div>
     {% endif -%}

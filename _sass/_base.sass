@@ -108,24 +108,16 @@ footer
   margin-top: bem(1)
   margin-left: auto
   margin-right: auto
-  div.flexwrap
+  ul
     display: flex
     flex-direction: column-reverse
     align-items: center
     justify-content: center
-    margin-top: 1em
-    div.copyright p
-      margin-top: 0.415em
-      @include font-ratio(14/16)
+    margin: 1em 0 0 0
+    list-style-type: none
+    li.copyright
       font-style: italic
       color: $mix-color
-      @extend .mix-link
-    div.subscribe
-      @extend .mix-link
-      svg
-        width: bem(1)
-        height: bem(1)
-        fill: $mix-color
 
 //-----------------------------------------------------------------------------
 
@@ -134,11 +126,10 @@ footer
   body
     font-size: $base-font-size
 
-  footer
-    div.flexwrap
-      flex-direction: row
-      justify-content: space-between
-      div.copyright
-        flex: 1
-        p
-          margin: 0
+  footer ul
+    flex-direction: row
+    li
+      margin-right: 0.25em
+      &:not(:last-of-type)::after
+        padding-left: 0.25em
+        content: "-"

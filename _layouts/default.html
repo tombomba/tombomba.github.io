@@ -68,18 +68,12 @@
 
   <hr>
 
-  <div class="flexwrap">
-
-    <div class="copyright">
-      <p>Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {% unless page.is_about %}<a href="{{ '/about/' | prepend: site.url }}">{{ site.author }}</a>{% else %}{{ site.author }}{% endunless %}</p>
-    </div>
-
-    <div class="subscribe">
-      <a href="https://twitter.com/{{ site.twitter }}">{% include icon-twitter.svg %}</a>
-      <a href="{{ '/feed.xml' | prepend: site.url }}">{% include icon-rss.svg %}</a>
-    </div>
-
-  </div>
+  <ul>
+    <li class="copyright">Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {{ site.author }}</li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li>
+    <li><a href="/feed.xml">RSS</a></li>
+  </ul>
 
 </footer>
 

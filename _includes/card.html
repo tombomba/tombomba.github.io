@@ -3,7 +3,10 @@
 {% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
 {% if include.image %}
 <div class="image">
-  <img src="{{ include.image | prepend: site.img_dir | prepend: site.url }}" alt="">
+  {% assign w = include.image.width | default: 800 | times: 1.0 -%}
+  {% assign h = include.image.height | default: 450 | times: 1.0 -%}
+  {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
+  <figure><div class="wrap" style="padding-bottom:{{ percent }}%"><img src="{{ include.image | prepend: site.img_dir }}" alt=""></div></figure>
 </div>
 {% elsif include.thumb %}
 <div class="thumb" style="background-image:url({{ include.thumb | prepend: site.img_dir | prepend: site.url }})"><a href="{{ include.url | prepend: site.url }}"><span></span></a></div>

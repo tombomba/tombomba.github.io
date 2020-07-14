@@ -25,7 +25,9 @@ layout: default
     <h1>{{ title_string }}</h1>
   </header>
 
-  <ul class="toc">
+  <hr>
+
+  <ul class="card">
 
     {% for p in site.posts -%}
 
@@ -33,9 +35,9 @@ layout: default
       {% assign current_year = p.date | date: "%Y" -%}
 
       {% if is_month_index and current_month == page_month and current_year == page_year -%}
-        {% include ul-toc.html title=p.title description=p.fbog.text image=p.fbog.image url=p.url style="rela" %}
+        {% include card.html title=p.title description=p.fbog.text image=p.fbog.image url=p.url %}
       {% elsif is_year_index and current_year == page_year -%}
-        {% include ul-toc.html title=p.title description=p.excerpt date=p.date url=p.url %}
+        {% include card.html title=p.title description=p.fbog.text date=p.date url=p.url %}
       {% endif -%}
 
     {% endfor -%}

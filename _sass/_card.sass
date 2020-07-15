@@ -81,19 +81,24 @@ div.card
     h2, p
       display: block
 
-@media screen and (min-width: 40em)
+//-----------------------------------------------------------------------------
 
-  div.card.widescreen
-    div.thumb, div.shim
-      margin-right: 1em
-      width: (4em * 1.77)
-      height: 4em
+@media screen and (min-width: 40em)
 
   div.card.teevee
     div.thumb, div.shim
       margin-right: 1em
       width: (4em * 1.33)
       height: 4em
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50em)
+
+  div.card.teevee
+    div.thumb, div.shim
+      width: (5em * 1.33)
+      height: 5em
 
 //-----------------------------------------------------------------------------
 
@@ -105,16 +110,13 @@ div.card
       font-size: $desk-hed-size
       line-height: $desk-line-height
 
-  div.card.teevee div.text
-    h2, p
-      line-height: (29/18)
-
-  div.card.widescreen
-    div.thumb, div.shim
-      width: (5em * 1.77)
-      height: 5em
-
   div.card.teevee
+    align-items: center
     div.thumb, div.shim
-      width: (5em * 1.33)
-      height: 5em
+      width: (6em * 1.33)
+      height: 6em
+    div.text
+      h2
+        font-size: 105.555555556%
+      h2, p
+        line-height: (29/18)

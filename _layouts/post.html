@@ -18,13 +18,6 @@ layout: default
 
 <article class="post"><!-- {{ copy | number_of_words }} words -->
 
-  {% if p.media %}
-    {% assign w = p.media.width | default: 800 | times: 1.0 -%}
-    {% assign h = p.media.height | default: 450 | times: 1.0 -%}
-    {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
-    <figure><!-- {{ w }} x {{ h }} | {{ percent }}% --><div class="wrap" style="padding-bottom:{{ percent }}%"><img src="{{ p.media.image | prepend: site.img_dir }}" alt="{{ p.media.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}"></div>{% if p.media.caption %}<figcaption>{{ p.media.caption | strip | smartify | markdownify | normalize_whitespace }}</figcaption>{% endif -%}</figure>
-  {% endif -%}
-
   <header>
     <h1 class="{% if p.media %}media{% else %}nomedia{% endif %}">{{ titlef }}</h1>
     <div class="byline">
@@ -32,6 +25,13 @@ layout: default
       <p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %B %Y" }}</time></p>
     </div>
   </header>
+
+  {% if p.media %}
+    {% assign w = p.media.width | default: 800 | times: 1.0 -%}
+    {% assign h = p.media.height | default: 450 | times: 1.0 -%}
+    {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
+    <figure><!-- {{ w }} x {{ h }} | {{ percent }}% --><div class="wrap" style="padding-bottom:{{ percent }}%"><img src="{{ p.media.image | prepend: site.img_dir }}" alt="{{ p.media.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}"></div>{% if p.media.caption %}<figcaption>{{ p.media.caption | strip | smartify | markdownify | normalize_whitespace }}</figcaption>{% endif -%}</figure>
+  {% endif -%}
 
   {{ copy }}
 

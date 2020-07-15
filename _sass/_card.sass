@@ -42,6 +42,9 @@ div.card
     h1, h2, p
       margin: 0
       font-size: 1em
+    h2, p
+      display: inline
+      font-weight: 400
     span.dates
       white-space: nowrap
       font-weight: 400
@@ -63,6 +66,10 @@ div.card.index
     div.text h1
       font-size: $tab-hed-size
       line-height: (($tab-line-height - 1) / 2) + 1
+
+  div.card div.text
+    h2, p
+      display: block
 
 @media screen and (min-width: 40em)
 

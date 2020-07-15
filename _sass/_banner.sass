@@ -1,12 +1,15 @@
+//-----------------------------------------------------------------------------
 
 header[role="banner"]
 
-  max-width: $mob-max-width
+  max-width: 100%
+  //$mob-max-width
   margin: 0 auto
   display: flex
   align-items: center
   justify-content: space-between
   h1
+    order: 2
     font-family: 'Fruktur', $system
     font-size: $mob-logo-size
     font-weight: 400
@@ -15,15 +18,15 @@ header[role="banner"]
     a:link, a:visited
       color: $logo-color
       text-decoration: none
-  .shim
-    flex: 1
+  hr
+    width: 100%
+    //margin-top: 3px
     &.first
+      order: 1
       margin-right: 1em
     &.second
+      order: 3
       margin-left: 1em
-    hr
-      width: 100%
-      margin-top: 3px
 
 //-----------------------------------------------------------------------------
 

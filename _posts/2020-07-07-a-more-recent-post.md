@@ -2,7 +2,7 @@
 title: "A more recent post"
 fbog:
   text: "Ut nulla metus, commodo sed imperdiet non, rutrum non nulla. Maecenas at mi non justo fermentum scelerisque"
-date: 2020-07-05 12:34 -0800
+date: 2020-07-07 12:34 -0800
 ---
 ["Love Is the Message, and the Message Is Death"](https://www.moca.org/program/arthur-jafa-love-is-the-message-the-message-is-death) is a collection of found images, news broadcasts, Getty archives, dashcam reels, and video clips, carefully edited and arranged, set to Kanye's ["Ultalight Beam,"](https://www.youtube.com/watch?v=6oHdAA3AqnE) and made into a work of extraordinary art by Arthur Jafa.
 

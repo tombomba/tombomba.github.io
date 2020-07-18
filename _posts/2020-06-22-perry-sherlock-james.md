@@ -6,7 +6,7 @@ media:
 fbog:
   text: "My God this show is terrible and dull and not worth your time. Don't watch it."
   image: perry-mason-hbo-2020.jpg
-date: 2020-07-11 12:34 -0800
+date: 2020-06-22 12:34 -0800
 ---
 I tried to find an entry point into "Perry Mason," a new big money show that piles cliché on top of cliché, and I couldn't, except to wonder when a character is no longer a character. Lemme explain.
 

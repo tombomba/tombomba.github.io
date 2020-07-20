@@ -17,8 +17,14 @@ article
 
 div.card.promo
   padding-top: 1.5em
-  div.text p
-    margin-top: 0
+  div.text
+    max-width: 34em
+    p
+      margin-top: 0
+
+footer
+  p, ul li
+    font-size: percentage(16/20)
 
 //-----------------------------------------------------------------------------
 
@@ -28,6 +34,11 @@ div.card.promo
     font-size: percentage(18/16)
     line-height: (30/18)
 
+  header[role="banner"],
+  main,
+  footer
+    max-width: 37.389em
+
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 50em)
@@ -36,10 +47,20 @@ div.card.promo
     font-size: percentage(19/16)
     line-height: (32/19)
 
+  header[role="banner"],
+  main,
+  footer
+    max-width: 35.421em
+
 //-----------------------------------------------------------------------------
 
-//@media screen and (min-width: 80em)
+@media screen and (min-width: 64em)
 
   body
-    font-size: percentage(23/16)
-    line-height: (38/23)
+    font-size: percentage(20/16)
+    line-height: (33/20)
+
+  header[role="banner"],
+  main,
+  footer
+    max-width: 33.650em

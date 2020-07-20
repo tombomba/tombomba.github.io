@@ -1,12 +1,9 @@
 ---
 title: "'Revenge' is a dish best served cold"
 tweet: "The quick brown fox jumps over the lazy dog."
-media:
-  image: revenge-fargeat-2017.jpg
-  alt: "Photo still: Matilda Lutz in 'Revenge,' 2017"
 fbog:
   text: "Ispa scientia potestas est, again and again. Consequat!"
-  image: revenge-fargeat-2017.jpg
+  match: "Aenean venenatis"
 date: 2020-06-06 12:34 -0800
 ---
 

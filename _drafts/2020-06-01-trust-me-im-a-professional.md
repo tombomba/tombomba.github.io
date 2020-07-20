@@ -1,13 +1,15 @@
 ---
 title: "Trust me, I'm a professional"
-media:
-  image: frasier.jpg
-  width: 800
-  height: 600
-  alt: "Frasier, Season 5 Episode 1, September 1997"
+#media:
+#  image: frasier.jpg
+#  width: 800
+#  height: 600
+#  alt: "Frasier, Season 5 Episode 1, September 1997"
+#  caption: "Blah blah this is a test caption."
 fbog:
   text: "Of course I'm a serious critic! Of course!"
-  image: frasier.jpg
+  match: "a serious critic of serious films"
+  # image: frasier.jpg
 date: 2020-06-01 00:01 -0800
 ---
 On one hand, there's a desire to be a serious critic of serious films, the perfect reviewer of mainstream pop, ready with a good tweet, always hovering between insight and #hottake.

@@ -1,8 +1,8 @@
 ---
 title: "The quick brown fox jumps over the lazy dog"
 fbog:
-  image: dick-van-dyke-cbs-1963.jpg
   text: "Nullam volutpat maximus sapien eget tempor. Ut nulla metus, commodo sed imperdiet non, rutrum non nulla."
+  match: "placerat nulla ac,"
 date: 2020-06-05 12:34 -0800
 ---
 Shrikhand. Morbi at ipsum in velit aliquet tincidunt. Donec aliquet erat sed molestie porta. Proin quis nibh dictum, placerat nulla ac, interdum leo. In hac habitasse platea dictumst.

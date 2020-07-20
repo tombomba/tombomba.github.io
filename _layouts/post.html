@@ -19,19 +19,12 @@ layout: default
 <article class="post"><!-- {{ copy | number_of_words }} words -->
 
   <header>
-    <h1 class="{% if p.media %}media{% else %}nomedia{% endif %}">{{ titlef }}</h1>
+    <h1>{{ titlef }}</h1>
     <div class="byline">
       <p>{{ p.author | default: site.author }}</p>
       <p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %B %Y" }}</time></p>
     </div>
   </header>
-
-  {% if p.media %}
-    {% assign w = p.media.width | default: 800 | times: 1.0 -%}
-    {% assign h = p.media.height | default: 450 | times: 1.0 -%}
-    {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
-    <figure><!-- {{ w }} x {{ h }} | {{ percent }}% --><div class="wrap" style="padding-bottom:{{ percent }}%"><img src="{{ p.media.image | prepend: site.img_dir }}" alt="{{ p.media.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}"></div>{% if p.media.caption %}<figcaption>{{ p.media.caption | strip | smartify | markdownify | normalize_whitespace }}</figcaption>{% endif -%}</figure>
-  {% endif -%}
 
   {{ copy }}
 
@@ -39,16 +32,30 @@ layout: default
 
 {% if page.next or page.previous %}
 <aside>
-  <hr>
+  <div class="hr"></div>
   {% if page.previous %}
-  <div class="teevee card">
-    {% include card.html title=page.previous.title description=page.previous.fbog.text thumb=page.previous.fbog.image url=page.previous.url %}
+  <div class="nextprev card">
+    <div class="text">
+      <h2><a href="{{ page.previous.url | prepend: site.url }}">{{ page.previous.title | strip_html | normalize_whitespace | smartify }}</a></h2>
+      <p>{{ page.previous.fbog.text | default: page.previous.excerpt | strip_html | normalize_whitespace | smartify }}</p>
+    </div>
   </div>
   {% endif -%}
   {% if page.next %}
-  <div class="teevee card">
-    {% include card.html title=page.next.title description=page.next.fbog.text thumb=page.next.fbog.image url=page.next.url %}
+  <div class="nextprev card">
+    <div class="text">
+      <h2><a href="{{ page.next.url | prepend: site.url }}">{{ page.next.title | strip_html | normalize_whitespace | smartify }}</a></h2>
+      <p>{{ page.next.fbog.text | default: page.next.excerpt | strip_html | normalize_whitespace | smartify }}</p>
+    </div>
   </div>
   {% endif -%}
 </aside>
 {% endif %}
+
+<aside>
+  <div class="hr"></div>
+  <div class="morefrom">
+    <p><a href="{{ p.date | date: '/%Y/%m/' | prepend: site.url }}">[ More from {{ p.date | date: '%B' }} ]</a></p>
+    <p><a href="{{ p.date | date: '/%Y/' | prepend: site.url }}">[ More from {{ p.date | date: '%Y' }} ]</a></p>
+  </div>
+</aside>

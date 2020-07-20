@@ -122,6 +122,9 @@ figure
 img
   border: thin solid $text-color
 
+aside
+  margin-top: 1.5em
+
 div.hr
   width: 100%
   margin: 0
@@ -137,6 +140,13 @@ div.hr
 .mix-link
   a:link, a:visited
     color: $mix-color
+
+.morefrom
+  margin-top: 1.5em
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
 
 //-----------------------------------------------------------------------------
 
@@ -155,6 +165,14 @@ div.hr
 
   main
     max-width: $max-width
+
+  .morefrom
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    p
+      line-height: 1
+      padding: 0 0.5em
 
 //-----------------------------------------------------------------------------
 

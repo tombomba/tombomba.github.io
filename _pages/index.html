@@ -29,9 +29,9 @@ permalink: /index.html
 {% endfor -%}
 </article>
 
-<nav class="month card">
+<aside>
   <div class="hr"></div>
-  <ul class="dlist">
-    {% include ul-dlist.html year="2020" start=1 stop=7 %}
-  </ul>
-</nav>
+  <div class="morefrom">
+    <p><a href="{{ site.posts.first.date | date: '/%Y/' | prepend: site.url }}">[ More from this year ]</a></p>
+  </div>
+</aside>

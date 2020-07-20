@@ -34,27 +34,25 @@ layout: default
 <aside>
   <div class="hr"></div>
   {% if page.previous %}
-  <div class="nextprev card">
-    <div class="text">
-      <h2><a href="{{ page.previous.url | prepend: site.url }}">{{ page.previous.title | strip_html | normalize_whitespace | smartify }}</a></h2>
-      <p>{{ page.previous.fbog.text | default: page.previous.excerpt | strip_html | normalize_whitespace | smartify }}</p>
-    </div>
+  <div class="previous nextprev">
+    <h2>Previous:</h2>
+    <p><a href="{{ page.previous.url | prepend: site.url }}">{{ page.previous.title | strip_html | normalize_whitespace | smartify }}</a></p>
   </div>
   {% endif -%}
   {% if page.next %}
-  <div class="nextprev card">
-    <div class="text">
-      <h2><a href="{{ page.next.url | prepend: site.url }}">{{ page.next.title | strip_html | normalize_whitespace | smartify }}</a></h2>
-      <p>{{ page.next.fbog.text | default: page.next.excerpt | strip_html | normalize_whitespace | smartify }}</p>
-    </div>
+  <div class="next nextprev">
+    <h2>Next:</h2>
+    <p><a href="{{ page.next.url | prepend: site.url }}">{{ page.next.title | strip_html | normalize_whitespace | smartify }}</a></p>
   </div>
   {% endif -%}
 </aside>
 {% endif %}
 
+<!--
 <nav>
   <div class="hr"></div>
   <ul class="morefrom">
-    <li><a href="{{ p.date | date: '/%Y/%m/' | prepend: site.url }}">[ More from {{ p.date | date: '%B' }} ]</a></li><li><a href="{{ p.date | date: '/%Y/' | prepend: site.url }}">[ More from {{ p.date | date: '%Y' }} ]</a></li>
+    <li><a href="{{ site.url }}">{{ site.title | downcase }}.com</a><li><a href="{{ p.date | date: '/%Y/' | prepend: site.url }}">{{ p.date | date: '%Y' }}</a></li><li><a href="{{ p.date | date: '/%Y/%m/' | prepend: site.url }}">{{ p.date | date: '%m' }}</a></li><li><a href="{{ p.url | prepend: site.url }}">{{ p.slug | append: '.html' }}</a></li>
   </ul>
 </nav>
+-->

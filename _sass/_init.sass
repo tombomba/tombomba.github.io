@@ -144,7 +144,7 @@ div.hr
     color: $mix-color
 
 .morefrom
-  margin-top: 1.5em
+  margin-top: 1em
   display: flex
   flex-direction: column
   align-items: center
@@ -173,9 +173,12 @@ div.hr
     flex-direction: row
     align-items: center
     justify-content: center
-    p, li
-      line-height: 1
-      padding: 0 0.5em
+    li
+      margin-right: 0.25em
+      &:not(:last-of-type)::after
+        padding-left: 0.25em
+        content: "/"
+        color: $mix-color
 
 //-----------------------------------------------------------------------------
 

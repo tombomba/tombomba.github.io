@@ -1,19 +1,164 @@
 //-----------------------------------------------------------------------------
 
-@import fonts, mixins, color-yh, reset
+  # 16px
+    line-height: 26/16
+    13 16 20 26 33 42
 
-$max-width: 37.389em !default
-$mob-max-width: 30em !default
-$tab-max-width: 33.882em !default
-$desk-max-width: 37.389em !default
+  # 17px
+    line-height: 28/17
+    13 17 22 28 35 45
 
-$bg-color:      darken($body-color, 5%) !default
-$border-dark:   #B8B8B8 !default
-$border-light:  #FBFBFB !default
-$mix-color:     mix($body-color, $text-color, 36%) !default
-$light-mix:     lighten($mix-color, 40%) !default
-$dark-mix:      darken($mix-color, 40%) !default
-
-//foo
+  # 18px
+    line-height: 30/18
+    14 18 23 29 37 47
 
 //-----------------------------------------------------------------------------
+
+@import fonts, colors, reset
+
+$max-width: 37.389em !default
+
+//-----------------------------------------------------------------------------
+
+@function bem($size: 1, $context: $line-height)
+  @return ($size * $context) * 1em
+
+@mixin font-ratio($size: 1, $context: $line-height)
+  font-size: percentage($size)
+  line-height: $context / $size
+
+@mixin line-size($line-height: 1.6)
+  line-height: (($line-height - 1) / 2) + 1
+
+//-----------------------------------------------------------------------------
+
+html
+  box-sizing: border-box
+
+*, *:before, *:after
+  box-sizing: inherit
+
+@-ms-viewport
+  width: device-width
+
+::selection
+  background: $select-color
+
+::-moz-selection
+  background: $select-color
+
+body
+
+  font-family: $serif
+  font-size: 100%
+  line-height: (26/16)
+
+  background-color: $body-color
+  color: $text-color
+
+  text-rendering: optimizeSpeed
+  -ms-text-size-adjust: auto
+  -webkit-text-size-adjust: auto
+
+  padding: 1em 0.5em
+
+a
+  text-decoration: underline
+  text-decoration-skip-ink: auto
+  &:link
+    color: $link-color
+  &:visited
+    color: $visited-color
+  &:hover
+    text-decoration: none
+  &:active
+    color: $active-color
+
+time
+  white-space: nowrap
+
+main
+  max-width: 34em
+  margin: 0 auto
+
+article
+
+  h2, h3, h4, h5, h6
+    font-size: 100%
+    margin-top: 1.5em
+
+  p, ul, ol, li, hr
+    margin-top: 1.5em
+
+  blockquote
+    padding: 0 1.5em
+
+  blockquote,
+  li + p,
+    margin-top: 0
+
+figure
+  .wrap
+    position: relative
+    padding-bottom: 56.25%
+    height: 0
+    overflow: hidden
+    max-width: 100%
+    background-color: $bg-color
+    iframe,
+    object,
+    embed,
+    img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+    iframe,
+    object,
+    embed
+      background: $bg-color url(/assets/img/default-image-icon.png) no-repeat center center
+
+img
+  border: thin solid $text-color
+
+div.hr
+  width: 100%
+  margin: 0
+  padding: 0
+  height: 0
+  border: 0
+  border-top: thin solid $border-dark
+  border-bottom: thin solid $border-light
+  background-color: $body-color
+  &.pagebreak
+    margin-top: 1.5em
+
+.mix-link
+  a:link, a:visited
+    color: $mix-color
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 27em)
+
+  body
+    line-height: (27/16)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 32em)
+
+  body
+    font-size: percentage(18/16)
+    line-height: (30/18)
+
+  main
+    max-width: $max-width
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40em)
+
+  body
+    line-height: 1.83

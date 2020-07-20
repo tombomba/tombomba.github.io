@@ -1,5 +1,6 @@
 ---
 layout: default
+style: page
 ---
 
 {% comment -%}
@@ -22,22 +23,28 @@ layout: default
 <article>{% if page.date %}<!-- {{ page.date }} -->{% endif %}
 
   <header>
-    <h1 class="page">{{ title_string }}</h1>
+    <h1>{{ page.title }}</h1>
   </header>
 
-
+  <ul class="toc">
   {% for p in site.posts -%}
+    {% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
+    {% assign sub = t.last | prepend: '!QQ!' -%}
+    {% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
     {% assign current_month = p.date | date: "%m" -%}
     {% assign current_year = p.date | date: "%Y" -%}
     {% if is_month_index and current_month == page_month and current_year == page_year -%}
-      <div class="index card">
-        {% include card.html title=p.title description=p.fbog.text url=p.url %}
-      </div>
+    <li>
+      <h2><a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a></h2>
+      <p>{{ p.excerpt | strip_html | normalize_whitespace | smartify }}</p>
+    </li>
     {% elsif is_year_index and current_year == page_year -%}
-      <div class="index card">
-        {% include card.html title=p.title description=p.fbog.text date=p.date url=p.url %}
-      </div>
+    <li>
+      <h2><a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a></h2>
+      <p>{{ p.fbog.text | default: p.excerpt | strip_html | normalize_whitespace | smartify }} {% if p.date %}<span class="dates">({{ p.date | date: "%-d %b" }})</span>{% endif %}</p>
+    </li>
     {% endif -%}
   {% endfor -%}
+  </ul>
 
 </article>

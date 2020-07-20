@@ -1,28 +1,37 @@
 ---
+style: homepage
 is_home: true
 permalink: /index.html
 ---
 
-{% assign p = site.posts.first %}
-
 <article>
-  <div class="teaser">
-    {% include card.html title=p.title description=p.excerpt image=p.fbog.image url=p.url %}
-  </div>
+{% for p in site.posts limit: 7 %}
+{% assign p = site.posts.first -%}
+{% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
+{% assign sub = t.last | prepend: '!QQ!' -%}
+{% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
+  <section>
+    {% assign blurb = p.excerpt | strip | strip_html | normalize_whitespace -%}
+    {% if p.fbog.match %}
+      {% assign keyphrase = p.fbog.match | strip | normalize_whitespace | smartify %}
+    {% else %}
+      {% assign keyphrase = blurb | truncatewords: 5, '' | smartify %}
+    {% endif -%}
+    {% capture link %}<a href="{{ p.url | prepend: site.url }}">{{ keyphrase }}</a>{% endcapture -%}
+
+    {% unless forloop.first %}<div class="hr pagebreak"></div>{% endunless %}
+    <div class="promo card">
+      <div class="text">
+        <p>{{ blurb | replace_first: keyphrase, link }}</p>
+      </div>
+    </div>
+  </section>
+{% endfor -%}
 </article>
 
-<aside>
-  <hr>
-  {% for p in site.posts limit:7 offset:1 %}
-  <div class="teevee card">
-    {% include card.html title=p.title description=p.fbog.text thumb=p.fbog.image url=p.url %}
-  </div>
-  {% endfor -%}
-</aside>
-
-<aside>
-  <hr>
+<nav class="month card">
+  <div class="hr"></div>
   <ul class="dlist">
-    {% include ul-dlist.html year="2020" start=6 stop=7 %}
+    {% include ul-dlist.html year="2020" start=1 stop=7 %}
   </ul>
-</aside>
+</nav>

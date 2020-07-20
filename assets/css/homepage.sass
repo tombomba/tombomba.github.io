@@ -12,11 +12,8 @@ article
 
 div.card.promo
   padding-top: 1.5em
-  div.text
-    p
-      margin: 0
-      font-size: percentage(18/16)
-      line-height: (30/18)
+  div.text p
+    margin-top: 0
 
 div.card.plain
   div.text
@@ -46,11 +43,14 @@ ul.dlist
 
 @media screen and (min-width: 34em)
 
-  div.card.promo
-    div.text
-      p
-        font-size: percentage(19/18)
-        line-height: (32/19)
+  body
+    font-size: percentage(19/16)
+    line-height: (32/19)
+
+  header[role="banner"],
+  main,
+  footer
+    max-width: 34em
 
   ul.dlist
     flex-direction: row
@@ -62,6 +62,9 @@ ul.dlist
         content: "-"
         font-weight: 400
         color: $light-mix
+
+  footer ul li
+    font-size: percentage(15/19)
 
 //-----------------------------------------------------------------------------
 

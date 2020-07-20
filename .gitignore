@@ -3,8 +3,8 @@ _snips
 _notes
 _drafts/_killfile
 favicon-package.zip
-/assets/img/test*
-/assets/img/drafts
+/assets/img/
+/assets/fonts/
 .sass-cache
 .jekyll-cache/
 .jekyll-metadata

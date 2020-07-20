@@ -16,7 +16,7 @@ theme: null
 
 include:
   - _pages
-  - _archives
+  - _pages/archive
 
 defaults:
   -
@@ -26,6 +26,7 @@ defaults:
     values:
       layout: post
       is_post: true
+      style: "post"
   -
     scope:
       path: "_pages"
@@ -33,6 +34,15 @@ defaults:
     values:
       layout: "default"
       is_page: true
+      style: "page"
+  -
+    scope:
+      path: "_pages/archive"
+      type: "pages"
+    values:
+      layout: "archive"
+      is_page: true
+      style: "page"
 
 permalink: /:year/:month/:title:output_ext
 timezone: America/Los_Angeles

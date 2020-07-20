@@ -52,10 +52,9 @@ layout: default
 </aside>
 {% endif %}
 
-<aside>
+<nav>
   <div class="hr"></div>
-  <div class="morefrom">
-    <p><a href="{{ p.date | date: '/%Y/%m/' | prepend: site.url }}">[ More from {{ p.date | date: '%B' }} ]</a></p>
-    <p><a href="{{ p.date | date: '/%Y/' | prepend: site.url }}">[ More from {{ p.date | date: '%Y' }} ]</a></p>
-  </div>
-</aside>
+  <ul class="morefrom">
+    <li><a href="{{ site.url }}">{{ site.title }}</a></li><li><a href="{{ p.date | date: '/%Y/' | prepend: site.url }}">{{ p.date | date: '%Y' }}</a></li><li><a href="{{ p.date | date: '/%Y/%m/' | prepend: site.url }}">{{ p.date | date: '%B' }}</a></li>
+  </ul>
+</nav>

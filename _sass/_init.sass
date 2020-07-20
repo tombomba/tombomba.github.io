@@ -122,7 +122,8 @@ figure
 img
   border: thin solid $text-color
 
-aside
+aside,
+nav
   margin-top: 1.5em
 
 div.hr
@@ -148,6 +149,7 @@ div.hr
   flex-direction: column
   align-items: center
   justify-content: center
+  list-style-type: none
 
 //-----------------------------------------------------------------------------
 
@@ -174,6 +176,14 @@ div.hr
     p
       line-height: 1
       padding: 0 0.5em
+    li
+      margin-right: 0.25em
+      line-height: 1
+      &:not(:last-of-type)::after
+        padding-left: 0.25em
+        content: "/"
+        color: $light-mix
+
 
 //-----------------------------------------------------------------------------
 

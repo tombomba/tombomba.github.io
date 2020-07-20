@@ -11,7 +11,7 @@ permalink: /index.html
 {% assign sub = t.last | prepend: '!QQ!' -%}
 {% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
   <section>
-    {% assign blurb = p.excerpt | strip | strip_html | normalize_whitespace -%}
+    {% assign blurb = p.excerpt | strip | strip_html | normalize_whitespace | smartify -%}
     {% if p.fbog.match %}
       {% assign keyphrase = p.fbog.match | strip | normalize_whitespace | smartify %}
     {% else %}

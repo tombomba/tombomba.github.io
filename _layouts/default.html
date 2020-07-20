@@ -49,9 +49,7 @@
 <body>
 
   <header role="banner">
-    <h1><a href="{{ site.url }}">{{ site.title | downcase }}</a></h1>
-    <hr class="shim first">
-    <hr class="shim second">
+    <div class="logo"><h1 class="{% if page.is_home %}biggin{% else %}norm{% endif %}"><a href="{{ site.url }}">{{ site.title | downcase }}</a></h1></div>
   </header>
 
 <main role="main"><!-- {{ page.layout }} -->
@@ -60,16 +58,12 @@
 
 </main>
 
-<footer>
+<footer class="{% if page.is_page %}page{% else %}post{%endif %}">
 
-  <hr>
+  <div class="hr"></div>
 
   <ul>
-    {% if page.is_page %}<li class="copyright">Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {{ site.author }}</li>{% endif -%}
-    {% if page.is_post %}<li><a href="{{ site.url }}">Home</a></li>{% endif -%}
-    {% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless -%}
-    <li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li>
-    <li><a href="/feed.xml">RSS</a></li>
+    <li class="copyright">Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {{ site.author }}</li>{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless -%}<li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li>
   </ul>
 
 </footer>

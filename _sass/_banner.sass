@@ -1,47 +1,50 @@
 //-----------------------------------------------------------------------------
 
 header[role="banner"]
-
-  max-width: 100%
-  //$mob-max-width
+  max-width: $max-width
   margin: 0 auto
-  display: flex
-  align-items: center
-  justify-content: space-between
-  h1
-    order: 2
-    font-family: 'Fruktur', $system
-    font-size: $mob-logo-size
-    font-weight: 400
-    line-height: 1
-    color: $text-color
-    a:link, a:visited
-      color: $logo-color
-      text-decoration: none
-  hr
-    width: 100%
-    margin-top: 3px
-    &.first
-      order: 1
-      margin-right: 1em
-    &.second
-      order: 3
-      margin-left: 1em
+  div.logo
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    h1
+      font-family: 'Fruktur', $system
+      font-size: 225%
+      font-weight: 400
+      line-height: 1
+      color: $text-color
+      a:link, a:visited
+        color: $logo-color
+        text-decoration: none
+    &::after
+      content: ''
+      flex: 1
+      margin: 0 0 0 0.5em
+      padding: 0
+      height: 0
+      border: 0
+      background-color: $body-color
+      border-top: thin solid $border-dark
+      border-bottom: thin solid $border-light
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 30em)
+@media screen and (min-width: 34em)
 
   header[role="banner"]
-    max-width: $tab-max-width
-    h1
-      font-size: $tab-logo-size
+    div.logo
+      h1
+        font-size: 250%
+        &.biggin
+          font-size: 275%
+      &::after
+        margin-left: 1em
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 60em)
+@media screen and (min-width: 90em)
 
-  header[role="banner"]
-    max-width: $desk-max-width
-    h1
-      font-size: $desk-logo-size
+    header[role="banner"]
+      div.logo
+        h1.biggin
+          font-size: 300%

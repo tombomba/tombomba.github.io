@@ -1,5 +1,5 @@
 ---
-title: "404!"
+title: "404"
 excerpt: "The page you requested was not found."
 permalink: /404.html
 ---
@@ -7,10 +7,10 @@ permalink: /404.html
 <article>
 
   <header>
-    <h1 class="page">{{ page.title }}</h1>
+    <h1>{{ page.title }}</h1>
   </header>
 
-  <p>That page was no good. Try another?</p>
+  <p>The page you requested was not found. Try another?</p>
 
   <ul class="plain">
     {% for rela in site.posts limit: 5 %}<li><a href="{{ rela.url | prepend: site.url }}">{{ rela.title | strip | normalize_whitespace | smartify }}</a></li>{% endfor %}

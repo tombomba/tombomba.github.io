@@ -5,8 +5,8 @@ main article
     margin-top: 3em
     text-align: center
     h1
-      font-size: $mob-hed-size
-      line-height: (($mob-line-height - 1) / 2) + 1
+      font-size: percentage(20/16)
+      @include line-size(26/16)
       color: $text-color
     div.byline p
       display: inline
@@ -97,8 +97,8 @@ main article
 
   main article
     header h1
-      font-size: $tab-hed-size
-      line-height: (($tab-line-height - 1) / 2) + 1
+      font-size: percentage(22/17)
+      @include line-size(28/17)
 
 
 //-----------------------------------------------------------------------------
@@ -107,5 +107,5 @@ main article
 
   main article
     header h1
-      font-size: $desk-hed-size
-      line-height: (($desk-line-height - 1) / 2) + 1
+      font-size: percentage(29/18)
+      @include line-size(1.83)

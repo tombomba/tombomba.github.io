@@ -1,0 +1,74 @@
+---
+# HOMEPAGE
+---
+
+@charset "utf-8"
+@import init, banner, footer
+
+article
+  margin-top: 1.65em
+  &:first-of-type
+    margin-top: 0
+
+div.card.promo
+  padding-top: 1.5em
+  div.text
+    p
+      margin: 0
+      font-size: percentage(18/16)
+      line-height: (30/18)
+
+div.card.plain
+  div.text
+    margin-top: 1.5em
+    h1
+      font-size: percentage(18/18)
+      font-weight: 400
+      @include line-size(26/16)
+
+nav.card.month
+  margin-top: 1.5em
+
+ul.dlist
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  list-style-type: none
+  margin-top: 1.5em
+  margin-left: 0
+  li
+    text-transform: capitalize
+    &:first-of-type
+      font-weight: 700
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 34em)
+
+  div.card.promo
+    div.text
+      p
+        font-size: percentage(20/18)
+        line-height: (33/20)
+
+  ul.dlist
+    flex-direction: row
+    li
+      line-height: 1
+      margin-right: 0.25em
+      &:not(:last-of-type)::after
+        padding-left: 0.25em
+        content: "-"
+        font-weight: 400
+        color: $light-mix
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 90em)
+
+  div.card.promo
+    div.text
+      p
+        font-size: percentage(22/18)
+        line-height: (36/22)

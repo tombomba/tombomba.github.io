@@ -1,0 +1,62 @@
+---
+# POST: JUST REGULAR OL' ARTICLES
+---
+
+@charset "utf-8"
+@import init, banner, footer
+
+article
+  max-width: 32em
+
+  header
+    margin-top: (26/16) * 1em
+    h1
+      font-size: percentage(20/16)
+      @include line-size(26/16)
+      color: $text-color
+    div.byline p
+      display: inline
+      margin: 0
+      font-size: percentage(14/16)
+      color: $mix-color
+      &:first-of-type::after
+        content: "\20/\20"
+        color: $mix-color
+
+aside
+  margin-top: 1.5em
+
+div.nextprev
+  margin-top: 1.5em
+  h2
+    font-size: 100%
+    font-weight: 400
+  p
+    margin: 0
+
+div.morefrom
+  margin-top: 1.5em
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 34em)
+
+  article
+    max-width: $max-width
+    header
+      margin-top: 1.83em
+      h1
+        font-size: percentage(23/18)
+        @include line-size(1.83)
+
+  div.morefrom
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    p
+      line-height: 1
+      padding: 0 0.5em

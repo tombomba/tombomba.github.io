@@ -1,0 +1,48 @@
+---
+# PAGE: ABOUT, 404, ETC.
+---
+
+@charset "utf-8"
+@import init, banner, footer
+
+article
+  max-width: 32em
+  header
+    margin-top: 1.5em
+    h1
+      font-size: percentage(20/16)
+      @include line-size(26/16)
+  ul.toc
+    margin: 0
+    list-style-type: none
+    li
+      h2, p
+        margin: 0
+        font-size: 100%
+        font-weight: 400
+      span.dates
+        font-style: italic
+        color: $mix-color
+        white-space: nowrap
+
+  ul.plain
+    margin-left: 1.5em
+    li
+      margin: 0
+
+footer
+  margin-top: 1.66em
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 34em)
+
+  article
+    max-width: $max-width
+    header
+      h1
+        font-size: percentage(23/18)
+        @include line-size(1.83)
+
+  footer
+    margin-top: 1.915em

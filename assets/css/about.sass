@@ -2,8 +2,6 @@
 # PAGE: ABOUT, 404, ETC.
 ---
 
-$body-color: white
-
 @charset "utf-8"
 @import init, banner, footer
 
@@ -25,7 +23,6 @@ header[role="banner"]
     border-bottom: thin solid $border-light
 
 article
-  max-width: 32em
   header
     margin-top: 3em
     h1
@@ -33,9 +30,6 @@ article
       @include line-size(25/16)
       font-style: italic
       text-align: center
-
-div.hr
-  display: none
 
 footer
   margin-top: 1.66em

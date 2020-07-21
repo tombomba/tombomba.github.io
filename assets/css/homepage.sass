@@ -18,12 +18,11 @@ article
 div.card.promo
   padding-top: 1.5em
   div.text
+    h1, p
+      display: inline
     h1
-      font-family: $sans
-      @include font-ratio((10/16), (26/16))
-      font-weight: 400
-      text-transform: uppercase
-      @extend .mix-link
+      font-size: 1em
+      @extend .title-link
     p
       margin-top: 0
 
@@ -40,9 +39,6 @@ footer
     font-size: percentage(18/16)
     line-height: (30/18)
 
-  div.card.promo div.text h1
-    @include font-ratio((10/16), (30/18))
-
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 50em)
@@ -50,9 +46,6 @@ footer
   body
     font-size: percentage(19/16)
     line-height: (33/19)
-
-  div.card.promo div.text h1
-    @include font-ratio((10/16), (33/19))
 
   .morefrom
     p, li

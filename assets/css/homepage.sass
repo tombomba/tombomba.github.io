@@ -17,14 +17,9 @@ article
 
 div.card.promo
   padding-top: 1.5em
-  div.text
-    h1, p
-      display: inline
-    h1
-      font-size: 1em
-      @extend .title-link
-    p
-      margin-top: 0
+  div.text p
+    margin-top: 0
+
 
 footer
   margin-top: 1em
@@ -39,6 +34,9 @@ footer
     font-size: percentage(18/16)
     line-height: (30/18)
 
+  //div.card.promo.post div.text h1
+    font-size: percentage(23/18)
+
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 50em)
@@ -46,6 +44,9 @@ footer
   body
     font-size: percentage(19/16)
     line-height: (33/19)
+
+  //div.card.promo.post div.text h1
+    font-size: percentage(24/19)
 
   .morefrom
     p, li

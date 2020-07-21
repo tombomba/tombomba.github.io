@@ -15,7 +15,7 @@ permalink: /index.html
     {% if p.fbog.match %}
       {% assign keyphrase = p.fbog.match | strip | normalize_whitespace | smartify %}
     {% else %}
-      {% assign keyphrase = blurb | truncatewords: 5, '' | smartify %}
+      {% assign keyphrase = blurb | truncatewords: 3, '' | smartify %}
     {% endif -%}
     {% capture link %}<a href="{{ p.url | prepend: site.url }}">{{ keyphrase }}</a>{% endcapture -%}
     {% unless forloop.first %}<div class="hr pagebreak"></div>{% endunless -%}

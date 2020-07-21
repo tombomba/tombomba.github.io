@@ -22,6 +22,7 @@ permalink: /index.html
     {% unless forloop.first %}<div class="hr pagebreak"></div>{% endunless %}
     <div class="promo card">
       <div class="text">
+        <h1><a href="{{ p.url | prepend: site.url }}">{{ p.date | date: '%a %d %b' }}</a></h1>
         <p>{{ blurb | replace_first: keyphrase, link }}</p>
       </div>
     </div>

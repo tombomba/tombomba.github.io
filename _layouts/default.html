@@ -43,13 +43,13 @@
 
     <!-- css -->
     <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css_dir | prepend: site.url | append: '.css' }}?v={{ site.time | date: '%a' | downcase }}">
-    <link href="https://fonts.googleapis.com/css2?family=Fruktur&text={{ site.title | capitalize }}&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fruktur&text={{ site.title | downcase }}&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
   <header role="banner">
-    <div class="logo"><h1 class="{% if page.is_home %}biggin{% else %}norm{% endif %}"><a href="{{ site.url }}">{{ site.title | capitalize }}</a></h1></div>
+    <div class="logo"><h1 class="{% if page.is_home %}biggin{% else %}norm{% endif %}"><a href="{{ site.url }}">{{ site.title | downcase }}</a></h1></div>
   </header>
 
 <main role="main"><!-- {{ page.layout }} -->
@@ -63,7 +63,7 @@
   <div class="hr"></div>
 
   <div class="mmmeta">
-    {% if page.is_home %}<p><strong>{{ site.title }}:</strong> &ldquo;{{ site.data.taglines | sample: 1 }}&rdquo;</p>{% endif %}
+    {% if page.is_home %}<p><strong>{{ site.domain }}:</strong> &ldquo;{{ site.data.taglines | sample: 1 }}&rdquo;</p>{% endif %}
     <ul>
       <li>Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {% unless page.is_about %}<a href="/about/">{{ site.author }}</a>{% else %}{{ site.author }}{% endunless %}</li><li><a href="https://twitter.com/{{ site.twitter }}">@{{ site.twitter }}</a></li><li><a href="/feed.xml">RSS</a></li>
     </ul>

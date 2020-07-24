@@ -63,7 +63,7 @@
   <div class="hr"></div>
 
   <div class="mmmeta">
-    {% if page.is_home %}<p><strong>{{ site.domain }}:</strong> &ldquo;{{ site.data.taglines | sample: 1 }}&rdquo;</p>{% endif %}
+    {% if page.is_home %}<p><strong>{{ site.title | capitalize }}:</strong> &ldquo;{{ site.data.taglines | sample: 1 }}&rdquo;</p>{% endif %}
     <ul>
       <li>Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {% unless page.is_about %}<a href="/about/">{{ site.author }}</a>{% else %}{{ site.author }}{% endunless %}</li><li><a href="https://twitter.com/{{ site.twitter }}">@{{ site.twitter }}</a></li><li><a href="/feed.xml">RSS</a></li>
     </ul>

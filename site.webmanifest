@@ -1,14 +1,14 @@
 {
-    "name": "BOMBALINE",
-    "short_name": "BOMBALINE",
+    "name": "Wicked",
+    "short_name": "Wicked",
     "icons": [
         {
-            "src": "/android-chrome-192x192.png?v=bin",
+            "src": "/android-chrome-192x192.png?v=wred",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-512x512.png?v=bin",
+            "src": "/android-chrome-512x512.png?v=wred",
             "sizes": "512x512",
             "type": "image/png"
         }

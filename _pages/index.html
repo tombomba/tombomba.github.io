@@ -4,12 +4,7 @@ is_home: true
 permalink: /index.html
 ---
 <article>
-{% assign scope = 604800 -%}
-{% assign today = site.posts.first.date | date: '%s' -%}
-{% for p in site.posts %}
-  {% assign current = p.date | date: '%s' -%}
-  {% assign range = today | times: 1 |  minus: current -%}
-  {% if scope > range %}
+{% for p in site.posts limit: 10 %}
   <section>
     {% assign blurb = p.excerpt | strip | strip_html | normalize_whitespace | smartify -%}
     {% if p.fbog.match %}
@@ -25,13 +20,12 @@ permalink: /index.html
       </div>
     </div>
   </section>
-  {% endif -%}
 {% endfor -%}
 </article>
 
 <aside>
   <div class="hr"></div>
   <div class="morefrom">
-    <p><a href="/current/">[ More from this month ]</a></p>
+    <p><a href="/archive/">[ More from this year ]</a></p>
   </div>
 </aside>

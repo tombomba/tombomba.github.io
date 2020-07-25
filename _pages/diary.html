@@ -6,12 +6,7 @@ permalink: /diary/
 ---
 
 {% capture postlist %}
-{% assign scope = 2629743 -%}
-{% assign today = site.posts.first.date | date: '%s' -%}
-{% for p in site.posts %}
-  {% assign current = p.date | date: '%s' -%}
-  {% assign range = today | times: 1 |  minus: current -%}
-  {% if scope > range %}
+{% for p in site.posts offset:7 limit:21 %}
   <section>
     {% assign blurb = p.excerpt | strip | strip_html | normalize_whitespace | smartify -%}
     {% if p.fbog.match %}
@@ -26,12 +21,11 @@ permalink: /diary/
         <p>{{ blurb | replace_first: keyphrase, link }}</p>
       </div>
     </div>
-  </section>{% assign enddate = p.date -%}
-  {% endif -%}
+  </section>
+  {% if forloop.first %}{% assign startdate = p.date %}{% endif %}
+  {% if forloop.last %}{% assign enddate = p.date %}{% endif %}
 {% endfor -%}
 {% endcapture %}
-
-{% assign startdate = site.posts.first.date -%}
 
 {% assign startday = startdate | date: '%-d' -%}
 {% assign startmonth = startdate | date: '%b' -%}

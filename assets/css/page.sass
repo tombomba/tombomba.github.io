@@ -15,6 +15,7 @@ article
     p
       color: $mix-color
       margin: 0
+      @include line-size(26/16)
 
   ul.toc
     margin-left: 1.25em
@@ -49,6 +50,8 @@ footer
     header
       h1
         font-size: percentage(23/18)
+        @include line-size(1.83)
+      p
         @include line-size(1.83)
     ul.toc
       margin-left: 0

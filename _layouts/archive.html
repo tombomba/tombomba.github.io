@@ -33,14 +33,9 @@ style: page
     {% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
     {% assign current_month = p.date | date: "%m" -%}
     {% assign current_year = p.date | date: "%Y" -%}
-    {% if p.tags contains 'star' %}
-      {% assign icon = "star" %}
-    {% else %}
-      {% assign icon = "text" %}
-    {% endif -%}
     {% if is_month_index and current_month == page_month and current_year == page_year -%}
     <li>
-      <h2 class="{{ icon }}"><a href="{{ p.url | prepend: site.url }}" class="{{ iconstyle }}">{{ titlef }}</a>{{ icon }}</h2>
+      <h2><a href="{{ p.url | prepend: site.url }}" class="{{ iconstyle }}">{{ titlef }}</a></h2>
       <p>{{ p.excerpt | default: p.excerpt | strip_html | normalize_whitespace | smartify }}</p>
     </li>
     {% elsif is_year_index and current_year == page_year -%}

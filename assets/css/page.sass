@@ -13,18 +13,16 @@ article
       font-size: percentage(20/16)
       @include line-size(26/16)
   ul.toc
-    margin-left: 0
-    list-style-type: none
+    margin-left: 1.5em
+    list-style-type: disc
     li
       h2, p
         display: inline
         margin: 0
         font-size: 1em
         font-weight: 400
-      h2.text::after
+      h2::after
         content: "\20\2014\20"
-      h2.star::after
-        content: "\20\2605\20\2014\20"
       span.dates
         font-style: italic
         color: $mix-color

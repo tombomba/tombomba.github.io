@@ -1,0 +1,53 @@
+---
+title: "Diary"
+excerpt: "A rolling ~30 days of posts"
+is_archive: true
+permalink: /diary/
+---
+
+{% capture postlist %}
+{% assign scope = 2629743 -%}
+{% assign today = site.posts.first.date | date: '%s' -%}
+{% for p in site.posts %}
+  {% assign current = p.date | date: '%s' -%}
+  {% assign range = today | times: 1 |  minus: current -%}
+  {% if scope > range %}
+  <section>
+    {% assign blurb = p.excerpt | strip | strip_html | normalize_whitespace | smartify -%}
+    {% if p.fbog.match %}
+      {% assign keyphrase = p.fbog.match | strip | normalize_whitespace | smartify %}
+    {% else %}
+      {% assign keyphrase = blurb | truncatewords: 3, '' | smartify %}
+    {% endif -%}
+    {% capture link %}<a href="{{ p.url | prepend: site.url }}">{{ keyphrase }}</a>{% endcapture -%}
+    {% unless forloop.first %}<div class="hr pagebreak"></div>{% endunless -%}
+    <div class="promo card"><!-- {{ p.excerpt | number_of_words | times: 1 }} words -->
+      <div class="text">
+        <p>{{ blurb | replace_first: keyphrase, link }}</p>
+      </div>
+    </div>
+  </section>{% assign enddate = p.date -%}
+  {% endif -%}
+{% endfor -%}
+{% endcapture %}
+
+{% assign startdate = site.posts.first.date -%}
+
+{% assign startday = startdate | date: '%-d' -%}
+{% assign startmonth = startdate | date: '%b' -%}
+{% assign startyear = startdate | date: '%Y' -%}
+
+{% assign endday = enddate | date: '%-d' -%}
+{% assign endmonth = enddate | date: '%b' -%}
+{% assign endyear = enddate | date: '%Y' -%}
+
+<article>
+
+  <header>
+    <h1>{{ page.title }}</h1>
+    <p>{{ endmonth }} {{ endday }}{% if endyear != startyear %},&nbsp;{{ endyear }}{% endif %}&ndash;{% if endmonth != startmonth %}{{ startmonth }}&nbsp;{% endif %}{{ startday }}, {{ startyear }}</p>
+  </header>
+
+  {{ postlist }}
+
+</article>

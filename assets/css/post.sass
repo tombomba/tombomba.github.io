@@ -23,14 +23,22 @@ article
         content: "\20/\20"
         color: $mix-color
 
-div.nextprev
-  &:nth-of-type(2)
+aside
+  margin-top: 1.5em
+  ul.nextprev
     margin-top: 1.5em
-  &:nth-of-type(3)
-    margin-top: 1em
-  h2, p
-    margin: 0
-    font-size: 100%
+    margin-left: 1.25em
+    list-style-type: disc
+    li
+      &:not(:first-of-type)
+        margin-top: 1em
+      h2, p
+        display: inline
+        margin: 0
+        font-size: 1em
+        font-weight: 400
+      h2::after
+        content: "\20\2014\20"
 
 //-----------------------------------------------------------------------------
 
@@ -43,8 +51,10 @@ div.nextprev
       h1
         font-size: percentage(23/18)
 
-  div.nextprev
-    &:nth-of-type(3)
-      margin-top: 0
-    h2, p
-      display: inline
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 48em)
+
+  aside ul.nextprev
+    margin-left: 0
+    list-style-type: none

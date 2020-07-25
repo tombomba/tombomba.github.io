@@ -48,12 +48,13 @@ footer
         @include line-size(1.83)
     ul.toc
       margin-left: 0
-      list-style-type: none
-      li
-        h2, p
-          display: block
-        h2::after
-          content: ''
+      &.phat
+        list-style-type: none
+        li
+          h2, p
+            display: block
+          h2::after
+            content: ''
 
   footer
     margin-top: 1.915em

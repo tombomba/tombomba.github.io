@@ -4,6 +4,7 @@ fbog:
   text: "Nullam volutpat maximus sapien eget tempor. Ut nulla metus, commodo sed imperdiet non, rutrum non nulla."
   match: "placerat nulla ac,"
 date: 2020-06-05 12:34 -0800
+tags: [star]
 ---
 Shrikhand. Morbi at ipsum in velit aliquet tincidunt. Donec aliquet erat sed molestie porta. Proin quis nibh dictum, placerat nulla ac, interdum leo. In hac habitasse platea dictumst.
 

@@ -39,6 +39,8 @@ style: page
       {% assign iconstyle = 'icon cool' %}
     {% elsif p.tags contains 'review' %}
       {% assign iconstyle = 'icon review' %}
+    {% elsif p.tags contains 'star' %}
+      {% assign iconstyle = 'icon star' %}  
     {% else %}
       {% assign iconstyle = 'text' %}
     {% endif -%}

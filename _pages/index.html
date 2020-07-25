@@ -3,12 +3,10 @@ style: homepage
 is_home: true
 permalink: /index.html
 ---
-{% comment %} s u c k s t y l e {% endcomment %}
-<article><!-- 1 week scope! -->
+<article>
 {% assign scope = 604800 -%}
 {% assign today = site.posts.first.date | date: '%s' -%}
 {% for p in site.posts %}
-  {% assign p = site.posts.first -%}
   {% assign current = p.date | date: '%s' -%}
   {% assign range = today | times: 1 |  minus: current -%}
   {% if scope > range %}
@@ -34,6 +32,6 @@ permalink: /index.html
 <aside>
   <div class="hr"></div>
   <div class="morefrom">
-    <p><a href="{{ site.posts.first.date | date: '/%Y/' | prepend: site.url }}">[ More from this year ]</a></p>
+    <p><a href="/current/">[ More from this month ]</a></p>
   </div>
 </aside>

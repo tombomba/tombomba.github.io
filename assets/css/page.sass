@@ -13,26 +13,18 @@ article
       font-size: percentage(20/16)
       @include line-size(26/16)
   ul.toc
-    margin-left: 1.25em
-    list-style-type: disc
+    margin-left: 0
+    list-style-type: none
     li
       h2, p
         display: inline
         margin: 0
         font-size: 1em
         font-weight: 400
-      h2::after
+      h2.text::after
         content: "\20\2014\20"
-      a.icon::after
-        padding-left: 5px
-      a.new::after
-        content: url('/assets/img/new.gif')
-      a.cool::after
-        content: url('/assets/img/cool.gif')
-      a.review::after
-        content: url('/assets/img/review.gif')
-      a.star::after
-        content: url('/assets/img/1s.gif')
+      h2.star::after
+        content: "\20\2605\20\2014\20"
       span.dates
         font-style: italic
         color: $mix-color

@@ -33,25 +33,19 @@ style: page
     {% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
     {% assign current_month = p.date | date: "%m" -%}
     {% assign current_year = p.date | date: "%Y" -%}
-    {% if site.posts.first.id == p.id %}
-      {% assign iconstyle = 'icon new' %}
-    {% elsif p.tags contains 'cool' %}
-      {% assign iconstyle = 'icon cool' %}
-    {% elsif p.tags contains 'review' %}
-      {% assign iconstyle = 'icon review' %}
-    {% elsif p.tags contains 'star' %}
-      {% assign iconstyle = 'icon star' %}  
+    {% if p.tags contains 'star' %}
+      {% assign icon = "star" %}
     {% else %}
-      {% assign iconstyle = 'text' %}
+      {% assign icon = "text" %}
     {% endif -%}
     {% if is_month_index and current_month == page_month and current_year == page_year -%}
     <li>
-      <h2><a href="{{ p.url | prepend: site.url }}" class="{{ iconstyle }}">{{ titlef }}</a>{{ icon }}</h2>
+      <h2 class="{{ icon }}"><a href="{{ p.url | prepend: site.url }}" class="{{ iconstyle }}">{{ titlef }}</a>{{ icon }}</h2>
       <p>{{ p.excerpt | default: p.excerpt | strip_html | normalize_whitespace | smartify }}</p>
     </li>
     {% elsif is_year_index and current_year == page_year -%}
     <li>
-      <h2><a href="{{ p.url | prepend: site.url }}" class="{{ iconstyle }}">{{ titlef }}</a></h2>
+      <h2 class="{{ icon }}"><a href="{{ p.url | prepend: site.url }}" class="{{ iconstyle }}">{{ titlef }}</a></h2>
       <p>{{ p.excerpt | default: p.excerpt | strip_html | normalize_whitespace | smartify }} {% if p.date %}<span class="dates">({{ p.date | date: "%-d %b" }})</span>{% endif %}</p>
     </li>
     {% endif -%}

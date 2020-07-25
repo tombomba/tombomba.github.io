@@ -5,11 +5,6 @@
 @charset "utf-8"
 @import init, banner, footer
 
-header[role="banner"],
-main,
-footer
-  max-width: 35.421em
-
 article
   margin-top: 1.65em
   &:first-of-type
@@ -29,6 +24,11 @@ footer
 
 @media screen and (min-width: 30em)
 
+  header[role="banner"],
+  main,
+  footer
+    max-width: 37.389em
+
   body
     font-size: percentage(18/16)
     line-height: (30/18)
@@ -39,18 +39,7 @@ footer
 
   body
     line-height: 1.83
-    //font-size: percentage(19/16)
-    //line-height: (33/19)
 
   .morefrom
     p, li
       font-size: percentage(18/19)
-
-//-----------------------------------------------------------------------------
-
-//@media screen and (min-width: 64em)
-
-  header[role="banner"]
-    div.logo
-      h1
-        font-size: 275%

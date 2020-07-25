@@ -4,7 +4,7 @@ is_home: true
 permalink: /index.html
 ---
 <article>
-{% for p in site.posts limit: 10 %}
+{% for p in site.posts limit: 7 %}
   <section>
     {% assign blurb = p.excerpt | strip | strip_html | normalize_whitespace | smartify -%}
     {% if p.fbog.match %}
@@ -26,6 +26,6 @@ permalink: /index.html
 <aside>
   <div class="hr"></div>
   <div class="morefrom">
-    <p><a href="/archive/">[ More from this year ]</a></p>
+    <p><a href="/current/">[ More from this month ]</a></p>
   </div>
 </aside>

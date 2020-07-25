@@ -3,13 +3,15 @@ style: homepage
 is_home: true
 permalink: /index.html
 ---
-
-<article>
-{% for p in site.posts limit: 7 %}
+{% comment %} s u c k s t y l e {% endcomment %}
+<article><!-- 1 week scope! -->
+{% assign scope = 604800 -%}
+{% assign today = site.posts.first.date | date: '%s' -%}
+{% for p in site.posts %}
   {% assign p = site.posts.first -%}
-  {% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | split: ' ' -%}
-  {% assign sub = t.last | prepend: '!QQ!' -%}
-  {% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
+  {% assign current = p.date | date: '%s' -%}
+  {% assign range = today | times: 1 |  minus: current -%}
+  {% if scope > range %}
   <section>
     {% assign blurb = p.excerpt | strip | strip_html | normalize_whitespace | smartify -%}
     {% if p.fbog.match %}
@@ -25,7 +27,8 @@ permalink: /index.html
       </div>
     </div>
   </section>
-{% endfor %}
+  {% endif -%}
+{% endfor -%}
 </article>
 
 <aside>

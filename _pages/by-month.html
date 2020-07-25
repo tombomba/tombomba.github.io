@@ -1,0 +1,47 @@
+---
+title: "This month"
+excerpt: "A rolling ~30 days of posts"
+is_archive: true
+permalink: /current/
+---
+
+{% capture monthlist %}
+<ul class="toc">
+{% assign scope = 2629743 -%}
+{% assign today = site.posts.first.date | date: '%s' -%}
+{% for p in site.posts %}
+  {% assign current = p.date | date: '%s' -%}
+  {% assign range = today | times: 1 |  minus: current -%}
+  {% if scope > range %}
+    {% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
+    {% assign sub = t.last | prepend: '!QQ!' -%}
+    {% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
+    <li>
+      <h2><a href="{{ p.url | prepend: site.url }}" class="{{ iconstyle }}">{{ titlef }}</a></h2>
+      <p>{{ p.fbog.text | p.excerpt | strip_html | normalize_whitespace | smartify }}</p>
+    </li>
+    {% assign enddate = p.date -%}
+  {% endif -%}
+{% endfor -%}
+</ul>
+{% endcapture %}
+
+{% assign startdate = site.posts.first.date -%}
+
+{% assign startday = startdate | date: '%-d' -%}
+{% assign startmonth = startdate | date: '%b' -%}
+{% assign startyear = startdate | date: '%Y' -%}
+
+{% assign endday = enddate | date: '%-d' -%}
+{% assign endmonth = enddate | date: '%b' -%}
+{% assign endyear = enddate | date: '%Y' -%}
+
+<article>
+
+  <header>
+    <h1>{{ endmonth }} {{ endday }}{% if endyear != startyear %},&nbsp;{{ endyear }}{% endif %}&ndash;{% if endmonth != startmonth %}{{ startmonth }}&nbsp;{% endif %}{{ startday }}, {{ startyear }}</h1>
+  </header>
+
+  {{ monthlist }}
+
+</article>

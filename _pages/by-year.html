@@ -1,12 +1,13 @@
 ---
-title: "This month"
-excerpt: "A rolling ~30 days of posts"
-permalink: /current/
+title: "Archive"
+excerpt: "A rolling ~365 days of posts"
+is_archive: true
+permalink: /archive/
 ---
 
-{% capture monthlist %}
-<ul class="toc">
-{% assign scope = 2629743 -%}
+{% capture yearlist %}
+<ul class="toc phat">
+{% assign scope = 31556926 -%}
 {% assign today = site.posts.first.date | date: '%s' -%}
 {% for p in site.posts %}
   {% assign current = p.date | date: '%s' -%}
@@ -17,7 +18,7 @@ permalink: /current/
     {% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
     <li>
       <h2><a href="{{ p.url | prepend: site.url }}" class="{{ iconstyle }}">{{ titlef }}</a></h2>
-      <p>{{ p.excerpt | default: p.excerpt | strip_html | normalize_whitespace | smartify }}</p>
+      <p>{{ p.excerpt | strip_html | normalize_whitespace | smartify }} <span class="dates">({{ p.date | date: "%-d %b" }})</span></p>
     </li>
     {% assign enddate = p.date -%}
   {% endif -%}
@@ -41,6 +42,6 @@ permalink: /current/
     <h1>{{ endmonth }} {{ endday }}{% if endyear != startyear %},&nbsp;{{ endyear }}{% endif %}&ndash;{% if endmonth != startmonth %}{{ startmonth }}&nbsp;{% endif %}{{ startday }}, {{ startyear }}</h1>
   </header>
 
-  {{ monthlist }}
+  {{ yearlist }}
 
 </article>

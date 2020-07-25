@@ -3,6 +3,7 @@ title: "Three stars for '5 Bloods'"
 fbog:
   text: "Integer semper nulla vitae augue varius, eget maximus augue ultrices."
   match: "consectetur adipiscing"
+tags: [review, movie, action, war, spike lee]
 date: 2020-06-07 12:34 -0800
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum augue feugiat ultrices elementum. Fusce eleifend dignissim fringilla. Mauris posuere at magna ac vestibulum. Morbi lacinia massa sed sapien vehicula molestie.

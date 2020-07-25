@@ -4,6 +4,7 @@ tweet: "The quick brown fox jumps over the lazy dog."
 fbog:
   text: "Ispa scientia potestas est, again and again. Consequat!"
   match: "Aenean venenatis"
+tags: [cool,review,horror,movie]
 date: 2020-06-06 12:34 -0800
 ---
 

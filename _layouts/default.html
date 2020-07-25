@@ -65,7 +65,7 @@
   <div class="mmmeta">
     {% if page.is_home %}<p><strong>{{ site.domain | capitalize }}:</strong> &ldquo;{{ site.data.taglines | sample: 1 }}&rdquo;</p>{% endif %}
     <ul>
-      <li>Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {{ site.author }}</li>{% if page.is_post %}<li><a href="/archive/">Archive</a></li>{% endif %}{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li>
+      <li>Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {{ site.author }}</li>{% unless page.is_archive %}<li><a href="/archive/">Archive</a></li>{% endif %}{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li>
     </ul>
   </div>
 

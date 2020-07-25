@@ -58,7 +58,7 @@
 
 </main>
 
-<footer class="{% if page.is_home or page.is_archive %}thin{% else %}norm{% endif %}">
+<footer class="{% if page.is_home %}home{% elsif page.is_archive %}archive{% else %}norm{% endif %}">
 
   <div class="hr"></div>
 

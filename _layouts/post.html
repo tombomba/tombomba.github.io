@@ -30,20 +30,22 @@ layout: default
 
 </article>
 
+{% if page.previous or page.next %}
 <aside>
   <div class="hr pagebreak"></div>
   <ul class="nextprev">
     {% if page.previous %}
     <li>
-      <h2><a href="{{ page.previous.url | prepend: site.url }}">{{ page.previous.title | strip_html | normalize_whitespace | smartify }}</a></h2>
-      <p>{{ page.previous.fbog.text | default: page.next.excerpt | strip_html | normalize_whitespace | smartify }}</p>
+      <h2>Previous</h2>
+      <p><a href="{{ page.previous.url | prepend: site.url }}">{{ page.previous.title | strip_html | normalize_whitespace | smartify }}</a></p>
     </li>
     {% endif -%}
     {% if page.next %}
     <li>
-      <h2><a href="{{ page.next.url | prepend: site.url }}">{{ page.next.title | strip_html | normalize_whitespace | smartify }}</a></h2>
-      <p>{{ page.next.fbog.text | default: page.next.excerpt | strip_html | normalize_whitespace | smartify }}</p>
+      <h2>Next</h2>
+      <p><a href="{{ page.next.url | prepend: site.url }}">{{ page.next.title | strip_html | normalize_whitespace | smartify }}</a></p>
     </li>
     {% endif -%}
   </ul>
 </aside>
+{% endif %}

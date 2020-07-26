@@ -6,11 +6,11 @@
 @import init, banner, footer
 
 main
-  max-width: 34em
+  max-width: var(--page-width)
   margin: 0 auto
 
 aside.archive
-  @include quarter-pad(26/16)
+  margin-top: var(--spacer)
   div.flexwrap
     display: flex
     flex-direction: column
@@ -30,9 +30,9 @@ aside.archive
         font-weight: bold
 
 div.card.promo
-  @include quarter-pad(26/16)
+  margin-top: var(--spacer)
   &:nth-of-type(1)
-    @include half-pad(26/16)
+    margin-top: var(--spacer)
   div.text p
     margin-top: 0
 
@@ -42,13 +42,6 @@ footer
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 34em)
-
-  header[role="banner"]
-    div.logo h1
-      font-size: 250%
-
-  //div.card.promo
-    @include quarter-pad(28/17)
 
   aside.archive
     div.flexwrap
@@ -63,20 +56,3 @@ footer
             padding-left: 0.25em
             content: "-"
             color: $mix-color
-
-//-----------------------------------------------------------------------------
-
-//@media screen and (min-width: 48em)
-
-  div.card.promo
-    @include quarter-pad(30/18)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 64em)
-
-  main
-    max-width: 37.389em
-
-  //div.card.promo
-    @include quarter-pad(1.83)

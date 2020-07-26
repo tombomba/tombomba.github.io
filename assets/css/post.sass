@@ -12,6 +12,7 @@ article
         display: inline
         margin: 0
         font-size: percentage(14/16)
+        line-height: var(--hed-line-height)
         color: $mix-color
         &:first-of-type::after
           content: "\20/\20"
@@ -19,7 +20,7 @@ article
 
 aside
   ul.nextprev
-    margin-top: 1.5em
+    margin-top: 1em
     margin-left: 0
     list-style-type: none
     li
@@ -30,7 +31,7 @@ aside
         margin: 0
         font-size: 1em
       h2
-        line-height: 1.33
+        line-height: var(--hed-line-height)
         &::after
           content: ":\20"
 
@@ -43,20 +44,6 @@ aside
       h2, p
         display: inline
       h2
-        line-height: (28/17)
+        line-height: var(--line-height)
       &:nth-of-type(2)
         margin-top: 0
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 48em)
-
-  aside ul.nextprev li h2
-    line-height: (30/18)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 72em)
-
-  aside ul.nextprev li h2
-    line-height: 1.83

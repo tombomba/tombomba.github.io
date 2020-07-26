@@ -1,26 +1,24 @@
 //-----------------------------------------------------------------------------
 
   # 16px
-    line-height: 26/16
+    line-height: 26/16 (1.625)
     13 16 20 26 33 42
 
   # 17px
-    line-height: 28/17
+    line-height: 28/17 (1.64705882353)
     13 17 22 28 35 45
 
   # 18px
-    line-height: 30/18
+    line-height: 30/18 (1.66666666667)
     14 18 23 29 37 47
 
   # 19px
-    line-height: 32/19
+    line-height: 32/19 (1.68421052632)
     15 19 24 31 39 50
 
 //-----------------------------------------------------------------------------
 
 @import fonts, colors, reset
-
-$max-width: 37.389em !default
 
 //-----------------------------------------------------------------------------
 
@@ -42,6 +40,17 @@ $max-width: 37.389em !default
 
 //-----------------------------------------------------------------------------
 
+\:root
+  --rat: 1.625
+  --bem: calc(var(--rat) * 1em)
+  --bem-buff: calc(var(--bem) + 0.33em)
+  --logo-size: var(--bem)
+  --body-size: 100%
+  --line-height: var(--rat)
+  --hed-line-height: 1.33
+  --spacer: calc(var(--bem) / 1.5)
+  --page-width: 32em
+
 html
   box-sizing: border-box
 
@@ -60,8 +69,8 @@ html
 body
 
   font-family: $serif
-  font-size: 100%
-  line-height: (26/16)
+  font-size: var(--body-size)
+  line-height: var(--line-height)
 
   background-color: $body-color
   color: $text-color
@@ -71,6 +80,10 @@ body
   -webkit-text-size-adjust: auto
 
   padding: 1em 0.5em
+
+main
+  max-width: var(--page-width)
+  margin: 0 auto
 
 a
   text-decoration: underline
@@ -97,9 +110,9 @@ div.hr
   border-bottom: thin solid $border-light
   background-color: $body-color
   &.pagebreak
-    margin-top: 1.5em
+    margin-top: var(--bem)
   &.section
-    @include quarter-pad(26/16)
+    margin-top: var(--spacer)
 
 .mix-link
   color: $mix-color
@@ -118,37 +131,39 @@ div.hr
 
 @media screen and (min-width: 27em)
 
-  body
-    line-height: (27/16)
+  \:root
+    --rat: 1.6875
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 34em)
 
-  body
-    font-size: percentage(17/16)
-    line-height: (28/17)
+  \:root
+    --rat: 1.64705882353
+    --body-size: 106.25%
+    --page-width: 34em
 
-  //div.hr.section
-    @include quarter-pad(28/17)
+//-----------------------------------------------------------------------------
+
+//@media screen and (min-width: 40em)
+
+  body
+    padding-top: var(--bem)
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 48em)
 
-  body
-    font-size: percentage(18/16)
-    line-height: (30/18)
-
-  //div.hr.section
-    @include quarter-pad(30/18)
+  \:root
+    --rat: 1.66666666667
+    --body-size: 112.5%
+    --bem-buff: calc(var(--bem) + 0.415em)
+    --hed-line-height: 1.415
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 64em)
 
-  body
-    line-height: 1.83
-
-  //div.hr.section
-    @include quarter-pad(1.83)
+  \:root
+    --rat: 1.83
+    --page-width: 37.389em

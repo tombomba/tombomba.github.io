@@ -1,16 +1,15 @@
 //-----------------------------------------------------------------------------
 
 header[role="banner"]
-  max-width: 34em
+  max-width: var(--page-width)
   margin: 0 auto
   div.logo
     display: flex
     align-items: center
     justify-content: flex-start
     h1
-      font-family: 'Unlock', $sans
-      font-size: 230%
-      font-weight: 400
+      font-family: 'Bungee', $sans
+      font-size: var(--logo-size)
       line-height: 1
       letter-spacing: -1px
       color: $text-color
@@ -32,6 +31,9 @@ header[role="banner"]
 
 @media screen and (min-width: 34em)
 
+  \:root
+    --page-width: 34em
+
   header[role="banner"]
     div.logo
       h1:after
@@ -41,5 +43,5 @@ header[role="banner"]
 
 @media screen and (min-width: 64em)
 
-  header[role="banner"]
-    max-width: 37.389em
+  \:root
+    --page-width: 37.389em

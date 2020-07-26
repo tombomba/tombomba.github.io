@@ -1,27 +1,23 @@
 //-----------------------------------------------------------------------------
 
-main
-  max-width: 34em
-  margin: 0 auto
-
 article
 
   header
-    @include half-pad(26/16)
+    margin-top: var(--bem-buff)
     h1
-      font-size: percentage(20/16)
-      @include line-size(26/16)
+      font-size: 125%
+      line-height: var(--hed-line-height)
       @extend .title-link
 
   h2, h3, h4, h5, h6
     font-size: 100%
-    margin-top: 1.5em
+    margin-top: var(--bem)
 
   p, ul, ol, li, hr
-    margin-top: 1.5em
+    margin-top: var(--bem)
 
   blockquote
-    padding: 0 1.5em
+    padding: 0 var(--bem)
 
   blockquote,
   li + p,
@@ -52,46 +48,5 @@ article
       embed
         background: $bg-color url(/assets/img/default-image-icon.png) no-repeat center center
 
-aside,
-nav
-  @include half-pad(26/16)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 34em)
-
-  article header
-    @include half-pad(28/17)
-    h1
-      font-size: percentage(22/17)
-      @include line-size(28/17)
-
-  aside,
-  nav
-    @include half-pad(28/17)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 48em)
-
-  article header
-    @include half-pad(30/18)
-    h1
-      font-size: percentage(23/18)
-      @include line-size(30/18)
-
-  aside,
-  nav
-    @include half-pad(30/18)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 64em)
-
-  main
-    max-width: 37.389em
-
-  article header
-    @include half-pad(1.83)
-    //h1
-      @include line-size(1.83)
+aside
+  margin-top: var(--bem)

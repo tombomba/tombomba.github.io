@@ -31,8 +31,14 @@ $max-width: 37.389em !default
   font-size: percentage($size)
   line-height: $context / $size
 
-@mixin line-size($line-height: 1.6)
+@mixin line-size($line-height: 1.66)
   line-height: (($line-height - 1) / 2) + 1
+
+@mixin half-pad($line-height: 1.66)
+  margin-top: 1.5em + (($line-height - 1) / 2)
+
+@mixin quarter-pad($line-height: 1.66)
+  margin-top: 1.5em + (($line-height - 1) / 4)
 
 //-----------------------------------------------------------------------------
 
@@ -81,55 +87,6 @@ a
 time
   white-space: nowrap
 
-main
-  max-width: 34em
-  margin: 0 auto
-
-article
-
-  h2, h3, h4, h5, h6
-    font-size: 100%
-    margin-top: 1.5em
-
-  p, ul, ol, li, hr
-    margin-top: 1.5em
-
-  blockquote
-    padding: 0 1.5em
-
-  blockquote,
-  li + p,
-    margin-top: 0
-
-figure
-  .wrap
-    position: relative
-    padding-bottom: 56.25%
-    height: 0
-    overflow: hidden
-    max-width: 100%
-    background-color: $bg-color
-    iframe,
-    object,
-    embed,
-    img
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-    iframe,
-    object,
-    embed
-      background: $bg-color url(/assets/img/default-image-icon.png) no-repeat center center
-
-img
-  border: thin solid $text-color
-
-aside,
-nav
-  margin-top: 1.5em
-
 div.hr
   width: 100%
   margin: 0
@@ -141,6 +98,8 @@ div.hr
   background-color: $body-color
   &.pagebreak
     margin-top: 1.5em
+  &.section
+    @include quarter-pad(26/16)
 
 .mix-link
   color: $mix-color
@@ -170,6 +129,9 @@ div.hr
     font-size: percentage(17/16)
     line-height: (28/17)
 
+  //div.hr.section
+    @include quarter-pad(28/17)
+
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 48em)
@@ -178,12 +140,15 @@ div.hr
     font-size: percentage(18/16)
     line-height: (30/18)
 
+  //div.hr.section
+    @include quarter-pad(30/18)
+
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 72em)
-
-  main
-    max-width: 37.389em
+@media screen and (min-width: 64em)
 
   body
     line-height: 1.83
+
+  //div.hr.section
+    @include quarter-pad(1.83)

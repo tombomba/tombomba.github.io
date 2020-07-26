@@ -9,6 +9,14 @@ main
   max-width: var(--page-width)
   margin: 0 auto
 
+section:not(:first-of-type)
+  margin-top: var(--spacer)
+
+div.card.promo
+  padding-top: var(--spacer)
+  div.text p
+    margin-top: 0
+
 aside.archive
   margin-top: var(--spacer)
   div.flexwrap
@@ -28,13 +36,6 @@ aside.archive
       list-style-type: none
       li.year
         font-weight: bold
-
-div.card.promo
-  margin-top: var(--spacer)
-  &:nth-of-type(1)
-    margin-top: var(--spacer)
-  div.text p
-    margin-top: 0
 
 footer
   margin-top: 1em

@@ -13,11 +13,12 @@
     {% if page.id %}<link rel="canonical" href="{{ page.url | default: '' | prepend: site.url }}">{% endif %}
 
     <!-- icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=wred">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=wred">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=wred">
-    <link rel="manifest" href="/site.webmanifest?v=wred">
-    <link rel="shortcut icon" href="/favicon.ico?v=wred">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=bluedot">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=bluedot">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=bluedot">
+    <link rel="manifest" href="/site.webmanifest?v=bluedot">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=bluedot" color="#0000ff">
+    <link rel="shortcut icon" href="/favicon.ico?v=bluedot">
     <meta name="msapplication-TileColor" content="#eaeaea">
     <meta name="theme-color" content="#eaeaea">
 
@@ -63,10 +64,10 @@
   <div class="hr"></div>
 
   <div class="mmmeta">
-    {% if page.is_home %}<p><strong>{{ site.domain | capitalize }}:</strong> &ldquo;{{ site.data.taglines | sample: 1 }}&rdquo;</p>{% endif %}
     <ul>
-      <li>Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {% unless page.is_about %}<a href="/about/">{{ site.author }}</a>{% else %}{{ site.author }}{% endunless %}</li><li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li>
+      <li>{% unless page.is_home %}<a href="{{ site.url }}">{{ site.domain | capitalize }}</a>{% else %}{{ site.domain | capitalize }}{% endunless %}</li><li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li><li><a href="https://letterboxd.com/{{ site.letterboxd }}">Letterboxd</a></li><li><a href="/feed.xml">RSS</a></li>
     </ul>
+    <p>Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {% unless page.is_about %}<a href="/about/">{{ site.author }}</a>{% else %}{{ site.author }}{% endunless %}</p>
   </div>
 
 </footer>

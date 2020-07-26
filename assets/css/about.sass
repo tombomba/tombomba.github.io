@@ -30,8 +30,6 @@ article
       @include line-size(25/16)
       font-style: italic
       text-align: center
-  p
-    text-align: justify
 
 footer
   margin-top: 1.66em
@@ -46,12 +44,12 @@ footer
 
   header[role="banner"]
     div.logo::before
-      margin: 0 1em 0 0
+      margin: 0 0.5em 0 0
 
 
   footer
     margin-top: 1.915em
     ul
-      flex-direction: column-reverse
+      flex-direction: column
       li:not(:last-of-type)::after
         content: ''

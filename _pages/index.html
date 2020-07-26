@@ -29,7 +29,6 @@ permalink: /index.html
     <ul class="datelist">
       {% assign curryr = site.posts.first.date | date: '%Y' -%}
       {% assign currmo = site.posts.first.date | date: '%-m' -%}
-      {% assign currmo = 3 %}
       {% assign startmo = currmo | minus: 4 -%}
       {% assign prevyr = '' -%}
       {% for i in (startmo..currmo) %}

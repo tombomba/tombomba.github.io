@@ -77,9 +77,6 @@ a
     text-decoration: none
   &:active
     color: $active-color
-  //&:focus
-    outline: thin solid #FC3
-  //wtf
 
 time
   white-space: nowrap
@@ -178,26 +175,23 @@ div.hr
 @media screen and (min-width: 34em)
 
   body
-    font-size: percentage(18/16)
-    line-height: (30/18)
-
-  main
-    max-width: $max-width
-
-  .morefrom
-    flex-direction: row
-    align-items: center
-    justify-content: center
-    li
-      margin-right: 0.25em
-      &:not(:last-of-type)::after
-        padding-left: 0.25em
-        content: "/"
-        color: $mix-color
+    font-size: percentage(17/16)
+    line-height: (28/17)
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 40em)
+@media screen and (min-width: 48em)
+
+  body
+    font-size: percentage(18/16)
+    line-height: (30/18)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 72em)
+
+  main
+    max-width: 37.389em
 
   body
     line-height: 1.83

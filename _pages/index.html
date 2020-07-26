@@ -13,7 +13,7 @@ permalink: /index.html
       {% assign keyphrase = blurb | truncatewords: 3, '' | smartify %}
     {% endif -%}
     {% capture link %}<a href="{{ p.url | prepend: site.url }}">{{ keyphrase }}</a>{% endcapture -%}
-    {% unless forloop.first %}<div class="hr pagebreak"></div>{% endunless -%}
+    {% unless forloop.first %}<div class="hr section"></div>{% endunless -%}
     <div class="promo card"><!-- {{ p.excerpt | number_of_words | times: 1 }} words -->
       <div class="text">
         <p>{{ blurb | replace_first: keyphrase, link }}</p>

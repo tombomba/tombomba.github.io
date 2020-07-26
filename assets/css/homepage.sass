@@ -10,6 +10,25 @@ article
   &:first-of-type
     margin-top: 0
 
+aside.archive
+  div.flexwrap
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    margin-top: 1em
+    h2
+      font-size: 1em
+    ul.datelist
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      margin: 0
+      list-style-type: none
+      li.year
+        font-weight: bold
+
 div.card.promo
   padding-top: 1.5em
   div.text p
@@ -17,3 +36,25 @@ div.card.promo
 
 footer
   margin-top: 1em
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 34em)
+
+  header[role="banner"]
+    div.logo h1
+      font-size: 260%
+
+  aside.archive
+    div.flexwrap
+      flex-direction: row
+      h2
+        margin-right: 0.5em
+      ul.datelist
+        flex-direction: row
+        li
+          margin-right: 0.25em
+          &:not(:last-of-type)::after
+            padding-left: 0.25em
+            content: "-"
+            color: $mix-color

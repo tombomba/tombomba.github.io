@@ -5,12 +5,12 @@
 @charset "utf-8"
 @import init, banner, footer
 
-article
-  margin-top: 1.65em
-  &:first-of-type
-    margin-top: 0
+main
+  max-width: 34em
+  margin: 0 auto
 
 aside.archive
+  margin-top: 1.5em
   div.flexwrap
     display: flex
     flex-direction: column
@@ -30,7 +30,7 @@ aside.archive
         font-weight: bold
 
 div.card.promo
-  padding-top: 1.5em
+  @include quarter-pad(26/16)
   div.text p
     margin-top: 0
 
@@ -45,6 +45,9 @@ footer
     div.logo h1
       font-size: 250%
 
+  //div.card.promo
+    @include quarter-pad(28/17)
+
   aside.archive
     div.flexwrap
       flex-direction: row
@@ -58,3 +61,20 @@ footer
             padding-left: 0.25em
             content: "-"
             color: $mix-color
+
+//-----------------------------------------------------------------------------
+
+//@media screen and (min-width: 48em)
+
+  div.card.promo
+    @include quarter-pad(30/18)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 64em)
+
+  main
+    max-width: 37.389em
+
+  //div.card.promo
+    @include quarter-pad(1.83)

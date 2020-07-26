@@ -44,13 +44,13 @@
 
     <!-- css -->
     <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css_dir | prepend: site.url | append: '.css' }}?v={{ site.time | date: '%a' | downcase }}">
-    <link href="https://fonts.googleapis.com/css2?family=Unlock&text={{ site.title }}&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&text={{ site.title | upcase }}&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
   <header role="banner">
-    <div class="logo"><h1><a href="{{ site.url }}">{{ site.title }}</a></h1></div>
+    <div class="logo"><h1><a href="{{ site.url }}">{{ site.title | upcase }}</a></h1></div>
   </header>
 
 <main role="main"><!-- {{ page.layout }} -->
@@ -67,7 +67,7 @@
     <ul>
       <li>{% unless page.is_home %}<a href="{{ site.url }}">{{ site.domain | capitalize }}</a>{% else %}{{ site.domain | capitalize }}{% endunless %}</li><li><a href="/feed.xml">RSS</a></li><li><a href="https://letterboxd.com/{{ site.letterboxd }}">Letterboxd</a></li><li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li>
     </ul>
-    <p>Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {% unless page.is_about %}<a href="/about/">{{ site.author }}</a>{% else %}{{ site.author }}{% endunless %}</p>
+    {% if page.is_page %}<p>Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {% unless page.is_about %}<a href="/about/">{{ site.author }}</a>{% else %}{{ site.author }}{% endunless %}</p>{% endif %}
   </div>
 
 </footer>

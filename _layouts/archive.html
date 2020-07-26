@@ -14,7 +14,7 @@ style: page
 
 {% if page_month and page_month !='' and page_month != nil -%}
   {% assign is_month_index = true -%}
-  {% assign title_string = rawdate | push: '01' | join: '-' | date: '%b %Y' -%}
+  {% assign title_string = rawdate | push: '01' | join: '-' | date: '%B %Y' -%}
 {% else -%}
   {% assign is_year_index = true -%}
   {% assign title_string = page_year -%}
@@ -23,7 +23,7 @@ style: page
 <article>{% if page.date %}<!-- {{ page.date }} -->{% endif %}
 
   <header>
-    <h1>{{ page.title }}</h1>
+    <h1>{{ title_string }}</h1>
   </header>
 
   <ul class="toc phat">

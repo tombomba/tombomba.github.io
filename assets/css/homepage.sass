@@ -25,23 +25,15 @@ div.card.promo
 
 aside.archive
   margin-top: var(--spacer)
-  div.flexwrap
+  ul.datelist
     display: flex
     flex-direction: column
     align-items: center
     justify-content: center
-    margin-top: 1em
-    h2
-      font-size: 1em
-    ul.datelist
-      display: flex
-      flex-direction: column
-      align-items: center
-      justify-content: center
-      margin: 0
-      list-style-type: none
-      li.year
-        font-weight: bold
+    margin: 1em 0 0 0
+    list-style-type: none
+    li.year
+      font-weight: bold
 
 footer
   margin-top: 1em
@@ -51,15 +43,11 @@ footer
 @media screen and (min-width: 34em)
 
   aside.archive
-    div.flexwrap
+    ul.datelist
       flex-direction: row
-      h2
-        margin-right: 0.5em
-      ul.datelist
-        flex-direction: row
-        li
-          margin-right: 0.25em
-          &:not(:last-of-type)::after
-            padding-left: 0.25em
-            content: "-"
-            color: $mix-color
+      li
+        margin-right: 0.25em
+        &:not(:last-of-type)::after
+          padding-left: 0.25em
+          content: "-"
+          color: $mix-color

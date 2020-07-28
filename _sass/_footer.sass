@@ -15,6 +15,10 @@ footer
     font-size: percentage(14/16)
     text-align: center
     color: $mix-color
+    &.fortune::before
+      content: "\201C"
+    &.fortune::after
+      content: "\201D"
   ul
     display: flex
     flex-direction: column

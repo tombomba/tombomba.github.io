@@ -2,11 +2,11 @@
 title: "Duis eleifend dapibus pretium"
 fbog:
   text: "Ut nulla metus, commodo sed imperdiet non, rutrum non nulla. Maecenas at mi non justo fermentum scelerisque"
-  match: "insight and #hottake"
-  image: frasier.jpg
+  match: "in tincidunt neque lacinia"
+  #image: frasier.jpg
 date: 2020-07-01 12:34 -0800
 ---
-On one hand, there's a desire to be a serious critic of serious films, the perfect reviewer of mainstream pop, ready with a good tweet, always hovering between insight and #hottake. Nam in neque at risus volutpat consectetur non in ligula.
+Cras tempor orci felis, in tincidunt neque lacinia vehicula. Aenean blandit elit fringilla quam ullamcorper suscipit. Pellentesque in pulvinar urna, sit amet mollis odio. Aenean dui erat, laoreet id mollis quis, mattis sit amet tellus. In erat elit, laoreet blandit convallis eu, maximus non mauris.
 
 Sed vitae varius odio. Aliquam lacinia augue non dui commodo. Eget commodo erat ullamcorper. In eu commodo ligula, non luctus nisl. Nulla facilisi consequat.
 

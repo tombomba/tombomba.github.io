@@ -6,7 +6,7 @@ permalink: /index.html
 <article>
 {% for p in site.posts limit: 7 %}
   {% assign wc = p.excerpt | number_of_words | times: 1 -%}
-  <section>
+  <section><!-- ({{ forloop.index }} : {{ wc }}) -->
     {% assign blurb = p.excerpt | strip | strip_html | normalize_whitespace | smartify -%}
     {% if p.fbog.match %}
       {% assign keyphrase = p.fbog.match | strip | normalize_whitespace | smartify %}
@@ -14,22 +14,15 @@ permalink: /index.html
       {% assign keyphrase = blurb | truncatewords: 3, '' | smartify %}
     {% endif -%}
     {% capture link %}<a href="{{ p.url | prepend: site.url }}">{{ keyphrase }}</a>{% endcapture -%}
-    {% unless forloop.first %}<div class="hr"></div>{% endunless -%}
-    <div class="promo card"><!-- {{ wc }} -->
-      {% assign modu = forloop.index | modulo: 2 %}
-      {% if p.fbog.image and modu > 0 and wc > 40 %}
-        {% if wc > 60 %}
-          {% assign thumb_size = 'large' %}
-        {% elsif wc > 50 %}
-          {% assign thumb_size = 'medium' %}
-        {% else %}
-          {% assign thumb_size = 'small' %}
-        {% endif -%}
-        {% capture wtf %}{% cycle 'right', 'left' %}{% endcapture -%}
-        <div class="thumb {{ thumb_size }} {{ wtf }}" style="background-image: url({{ p.fbog.image | prepend: site.ico_dir | prepend: site.url }})"><a href="{{ include.item.url | prepend: site.url }}" aria-label="thumbnail image"><span></span></a></div>
+    {% unless forloop.first %}<div class="hr"></div>{% endunless %}
+    <div class="promo card">
+      <!-- {% assign modu = forloop.index | modulo: 2 -%} -->
+      {% if p.fbog.image %}
+      {% capture wtf %}{% cycle 'right', 'left' %}{% endcapture -%}
+      <div class="thumb {{ wtf }}" style="background-image: url({{ p.fbog.image | prepend: site.ico_dir | prepend: site.url }})"><a href="{{ p.url | prepend: site.url }}" aria-label="thumbnail image"><span></span></a></div>
       {% endif -%}
       <div class="text">
-        <p>{{ blurb | replace_first: keyphrase, link }} ({{wc}})</p>
+        <p>{{ blurb | replace_first: keyphrase, link }}</p>
       </div>
     </div>
   </section>

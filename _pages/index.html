@@ -22,8 +22,8 @@ permalink: /index.html
     {% capture link %}<a href="{{ p.url | prepend: site.url }}">{{ keyphrase }}</a>{% endcapture -%}
     {% unless forloop.first %}<div class="hr"></div>{% endunless %}
     <div class="promo card">
-      <!-- {% assign modu = forloop.index | modulo: 2 -%} -->
-      {% if p.fbog.image %}
+      {% assign modu = forloop.index | modulo: 2 -%}
+      {% if p.fbog.image and modu > 0 %}
       {% capture wtf %}{% cycle 'right', 'left' %}{% endcapture -%}
       <div class="thumb {{ wtf }}" style="background-image: url({{ p.fbog.image | prepend: site.ico_dir | prepend: site.url }})"><a href="{{ p.url | prepend: site.url }}" aria-label="thumbnail image"><span></span></a></div>
       {% endif -%}

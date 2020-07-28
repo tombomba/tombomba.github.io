@@ -3,7 +3,7 @@ title: "Duis eleifend dapibus pretium"
 fbog:
   text: "Ut nulla metus, commodo sed imperdiet non, rutrum non nulla. Maecenas at mi non justo fermentum scelerisque"
   match: "in tincidunt neque lacinia"
-  #image: frasier.jpg
+  image: frasier.jpg
 date: 2020-07-01 12:34 -0800
 ---
 Cras tempor orci felis, in tincidunt neque lacinia vehicula. Aenean blandit elit fringilla quam ullamcorper suscipit. Pellentesque in pulvinar urna, sit amet mollis odio. Aenean dui erat, laoreet id mollis quis, mattis sit amet tellus. In erat elit, laoreet blandit convallis eu, maximus non mauris.

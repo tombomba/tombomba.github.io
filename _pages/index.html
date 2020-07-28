@@ -3,9 +3,15 @@ style: homepage
 is_home: true
 permalink: /index.html
 ---
-<article>
-{% for p in site.posts limit: 7 %}
+{% assign scope = 2629743 -%}
+{% assign today = site.posts.first.date | date: '%s' -%}
+<article><!-- 1 month scope -->
+{% for p in site.posts %}
   {% assign wc = p.excerpt | number_of_words | times: 1 -%}
+  {% assign current = p.date | date: '%s' -%}
+  {% assign range = today | times: 1 |  minus: current -%}
+
+  {% if scope > range %}
   <section><!-- ({{ forloop.index }} : {{ wc }}) -->
     {% assign blurb = p.excerpt | strip | strip_html | normalize_whitespace | smartify -%}
     {% if p.fbog.match %}
@@ -26,6 +32,9 @@ permalink: /index.html
       </div>
     </div>
   </section>
+  {% else %}
+    {% break %}
+  {% endif -%}
 {% endfor -%}
 </article>
 

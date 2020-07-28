@@ -23,6 +23,13 @@ article
   li + p,
     margin-top: 0
 
+  a[href*="//"]:not([href*="localhost:4000"])
+    background-position: center right
+    background-repeat: no-repeat
+    background-image: url(/assets/img/external-link.png)
+    background-image: linear-gradient(transparent,transparent),url(/assets/img/external-link.svg)
+    padding-right: 13px
+
   img
     border: thin solid $text-color
 

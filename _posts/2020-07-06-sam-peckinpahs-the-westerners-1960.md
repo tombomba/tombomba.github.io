@@ -3,10 +3,10 @@ title: "Yet another test file is here!"
 fbog:
   text: "Duis eleifend dapibus lectus, quis eleifend magna rhoncus eu. Praesent id scelerisque odio."
   match: "a iaculis justo ultrices"
-  image: 2020-07-sam-peckinpahs-the-westerners-1960.jpg
+  #image: 2020-07-sam-peckinpahs-the-westerners-1960.jpg
 date: 2020-07-06 12:34 -0800
 ---
-Donec iaculis urna eget mauris vulputate, a iaculis justo ultrices. Aenean efficitur lectus lacinia, cursus lectus sed, posuere neque. Ut id ultricies neque. Cras faucibus pretium est, sed tempus felis pulvinar ut. Phasellus efficitur dolor at aliquet ultricies. Maecenas condimentum augue eu quam ultricies ornare.
+Donec iaculis urna eget mauris vulputate, a iaculis justo ultrices. Aenean efficitur lectus lacinia, cursus lectus sed, posuere neque. Ut id ultricies neque. Cras faucibus pretium est, sed tempus felis pulvinar ut. Phasellus efficitur dolor at aliquet ultricies.
 
 Quisque ac turpis sit amet lorem bibendum accumsan. Suspendisse tempus facilisis augue et dictum. Nulla a purus nibh. Aenean porta congue nunc, sit amet sagittis elit. Curabitur aliquam, erat ac laoreet condimentum, diam metus accumsan mi, vel scelerisque ipsum elit et diam.
 

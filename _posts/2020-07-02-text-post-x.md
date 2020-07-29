@@ -6,9 +6,9 @@ fbog:
   image: frasier.jpg
 date: 2020-07-01 12:34 -0800
 ---
-Cras tempor orci felis, in tincidunt neque lacinia vehicula. Aenean blandit elit fringilla quam ullamcorper suscipit. Pellentesque in pulvinar urna, sit amet mollis odio. Aenean dui erat, laoreet id mollis quis, mattis sit amet tellus. In erat elit, laoreet blandit convallis eu, maximus non mauris.
+Cras tempor orci felis, in tincidunt neque lacinia vehicula. Aenean blandit elit fringilla quam ullamcorper suscipit. Pellentesque in pulvinar urna, sit amet mollis odio. Aenean dui erat, laoreet id mollis quis, mattis sit amet tellus. In erat elit.
 
-Sed vitae varius odio. Aliquam lacinia augue non dui commodo. Eget commodo erat ullamcorper. In eu commodo ligula, non luctus nisl. Nulla facilisi consequat.
+Laoreet blandit convallis eu, maximus non mauris. Sed vitae varius odio. Aliquam lacinia augue non dui commodo. Eget commodo erat ullamcorper. In eu commodo ligula, non luctus nisl. Nulla facilisi consequat.
 
 Sed convallis ante ac arcu sagittis facilisis. Aliquam eu sagittis lectus, ac volutpat nisl. Vestibulum et arcu massa. In quis feugiat elit, vel tincidunt leo. Fusce scelerisque urna ac hendrerit tristique. Aliquam at nisi mauris. Suspendisse sodales molestie risus vitae volutpat. In risus enim, tincidunt vel auctor ut, rhoncus a urna. Fusce vehicula mollis congue. Morbi quam erat, egestas sodales mauris nec, finibus tincidunt metus. Suspendisse convallis nibh id orci vehicula, vitae egestas massa lobortis.
 

@@ -3,10 +3,6 @@ style: homepage
 is_home: true
 permalink: /index.html
 ---
-{% comment %}
-  {% assign modu = forloop.index | modulo: 2 -%}
-  {% capture wtf %}{% cycle 'right', 'left' %}{% endcapture -%}
-{% endcomment -%}
 {% assign scope = 2629743 -%}
 {% assign today = site.posts.first.date | date: '%s' -%}
 <article><!-- 1 month scope -->
@@ -26,11 +22,10 @@ permalink: /index.html
     {% unless forloop.first %}<div class="hr"></div>{% endunless %}
     <div class="promo card">
       {% if p.fbog.image %}
-        {% capture curr_position %}{% cycle 'right', 'left' %}{% endcapture %}
-        <div class="thumb {{ curr_position }}" style="background-image: url({{ p.fbog.image | prepend: site.ico_dir | prepend: site.url }})"><a href="{{ p.url | prepend: site.url }}" aria-label="thumbnail image"><span></span></a></div>
+        <div class="thumb {% if wc > 50 %}large {%endif%}{% cycle 'right', 'left' %}" style="background-image: url({{ p.fbog.image | prepend: site.ico_dir | prepend: site.url }})"><a href="{{ p.url | prepend: site.url }}" aria-label="thumbnail image"><span></span></a></div>
       {% endif -%}
       <div class="text">
-        <p>{{ blurb | replace_first: keyphrase, link }}</p>
+        <p>{{ blurb | replace_first: keyphrase, link }} ({{ wc }})</p>
       </div>
     </div>
   </section>

@@ -21,11 +21,13 @@ permalink: /index.html
     {% capture link %}<a href="{{ p.url | prepend: site.url }}">{{ keyphrase }}</a>{% endcapture -%}
     {% unless forloop.first %}<div class="hr"></div>{% endunless %}
     <div class="promo card">
+      {% comment %}
       {% if p.fbog.image %}
         <div class="thumb {% if wc > 50 %}large {%endif%}{% cycle 'right', 'left' %}" style="background-image: url({{ p.fbog.image | prepend: site.ico_dir | prepend: site.url }})"><a href="{{ p.url | prepend: site.url }}" aria-label="thumbnail image"><span></span></a></div>
       {% endif -%}
+      {% endcomment -%}
       <div class="text">
-        <p>{{ blurb | replace_first: keyphrase, link }} ({{ wc }})</p>
+        <p>{{ blurb | replace_first: keyphrase, link }}</p>
       </div>
     </div>
   </section>

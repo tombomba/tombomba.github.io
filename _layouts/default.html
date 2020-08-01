@@ -68,7 +68,7 @@
   {% if page.is_home %}
     <div class="titletag">
       <h1>{{ site.domain | capitalize }}</h1>
-      <p class="fortune">{{ site.data.taglines | sample: 1 }}</p>
+      <p class="fortune">{{ site.description }}</p>
     </div>
   {% endif -%}
     <ul>

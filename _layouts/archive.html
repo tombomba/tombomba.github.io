@@ -36,12 +36,12 @@ style: page
     {% if is_month_index and current_month == page_month and current_year == page_year -%}
     <li>
       <h2><a href="{{ p.url | prepend: site.url }}" class="{{ iconstyle }}">{{ titlef }}</a></h2>
-      <p>{{ p.excerpt | default: p.excerpt | strip_html | normalize_whitespace | smartify }}</p>
+      <p>{{ p.excerpt | strip_html | normalize_whitespace | smartify }}</p>
     </li>
     {% elsif is_year_index and current_year == page_year -%}
     <li>
       <h2><a href="{{ p.url | prepend: site.url }}" class="{{ iconstyle }}">{{ titlef }}</a></h2>
-      <p>{{ p.excerpt | default: p.excerpt | strip_html | normalize_whitespace | smartify }} {% if p.date %}<span class="dates">({{ p.date | date: "%-d %b" }})</span>{% endif %}</p>
+      <p>{{ p.excerpt | strip_html | normalize_whitespace | smartify }} {% if p.date %}<span class="dates">({{ p.date | date: "%-d %b" }})</span>{% endif %}</p>
     </li>
     {% endif -%}
   {% endfor -%}

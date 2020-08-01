@@ -8,15 +8,26 @@ header[role="banner"]
     align-items: center
     justify-content: flex-start
     h1
-      font-family: $system
+      font-family: 'Bungee', $system
       font-size: var(--logo-size)
       font-weight: 900
       line-height: 1
-      letter-spacing: -1px
+      letter-spacing: -0.6px
       color: $text-color
       a:link, a:visited
-        color: $link-color
+        color: $logo-color
         text-decoration: none
+
+  div.icon
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    img
+      width: var(--icon-size)
+      height: var(--icon-size)
+
+  div.logo,
+  div.icon
     &::after
       content: ''
       flex: 1
@@ -33,5 +44,7 @@ header[role="banner"]
 @media screen and (min-width: 34em)
 
   header[role="banner"]
-    div.logo::after
-      margin-left: 1em
+    div.logo,
+    div.icon
+      img
+        margin-left: -0.125em

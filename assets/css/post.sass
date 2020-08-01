@@ -27,5 +27,14 @@ aside
     li
       margin-top: var(--bem)
       h2, p
+        display: inline
         margin: 0
         font-size: 1em
+        font-weight: 400
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 28em)
+
+  aside ul.nextprev li h2::after
+    content: "\20\2014\20"

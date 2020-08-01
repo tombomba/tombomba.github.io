@@ -74,7 +74,7 @@
     </div>
   {% endif -%}
     <ul>
-      <li>Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {{ site.author }}</li>{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}{% if page.is_page %}<li><a href="/feed.xml">RSS</a></li>{% endif %}<li><a href="https://twitter.com/{{ site.twitter }}">@{{ site.twitter }}</a></li>
+      {% if page.is_post %}<li><a href="{{ site.url }}">{{ site.domain | capitalize }}</a></li>{% else %}<li>Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {{ site.author }}</li>{% endif %}{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="/feed.xml">RSS</a></li><li><a href="https://twitter.com/{{ site.twitter }}">@{{ site.twitter }}</a></li>
     </ul>
   </div>
 

@@ -66,7 +66,7 @@
 
   <div class="mmmeta">
     <ul>
-      <li>Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {% unless page.is_about %}<a href="/about/">{{ site.author }}</a>{% else %}{{ site.author }}{% endunless %}</li><li><a href="/feed.xml">RSS</a></li><li><a href="https://twitter.com/{{ site.twitter }}">@{{ site.twitter }}</a></li>
+      <li>Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {% unless page.is_about %}<a href="/about/">{{ site.author }}</a>{% else %}{{ site.author }}{% endunless %}</li><li><a href="https://twitter.com/{{ site.twitter }}">@{{ site.twitter }}</a></li>{% if page.is_page %}<li><a href="/feed.xml">RSS</a></li>{% endif %}
     </ul>
     {% if page.is_page %}<p class="copyright"></p>{% endif %}
   </div>

@@ -67,10 +67,10 @@
 
   <div class="mmmeta">
     <ul>
-      <li>{% unless page.is_home %}<a href="{{ site.url }}">{{ site.domain | capitalize }}</a>{% else %}{{ site.domain | capitalize }}{% endunless %}</li><li><a href="/feed.xml">RSS</a></li><li><a href="https://letterboxd.com/{{ site.letterboxd }}">Letterboxd</a></li><li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li>
+      <li>{% unless page.is_home %}<a href="{{ site.url }}">{{ site.domain | capitalize }}</a>{% else %}{{ site.domain | capitalize }}{% endunless %}</li><li><a href="/feed.xml">RSS</a></li><li><a href="https://twitter.com/{{ site.twitter }}">@{{ site.twitter }}</a></li>
     </ul>
     {% if page.is_home %}<p class="fortune">{{ site.data.taglines | sample: 1 }}</p>{% endif %}
-    {% if page.is_page %}<p>Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {% unless page.is_about %}<a href="/about/">{{ site.author }}</a>{% else %}{{ site.author }}{% endunless %}</p>{% endif %}
+    {% if page.is_page %}<p class="copyright">Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {% unless page.is_about %}<a href="/about/">{{ site.author }}</a>{% else %}{{ site.author }}{% endunless %}</p>{% endif %}
   </div>
 
 </footer>

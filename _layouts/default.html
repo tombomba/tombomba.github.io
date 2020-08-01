@@ -43,13 +43,13 @@
 
     <!-- css -->
     <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css_dir | prepend: site.url | append: '.css' }}?v={{ site.time | date: '%a' | downcase }}">
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&text={{ site.title | downcase }}&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fruktur&text={{ site.title | upcase }}&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
   <header role="banner">
-    <div class="logo"><h1><a href="{{ site.url }}">{{ site.title | downcase }}</a></h1></div>
+    <div class="logo"><h1><a href="{{ site.url }}">{{ site.title | upcase }}</a></h1></div>
   </header>
 
 <main role="main"><!-- {{ page.layout }} -->

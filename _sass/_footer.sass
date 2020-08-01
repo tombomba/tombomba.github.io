@@ -10,15 +10,21 @@ footer
     margin-top: var(--bem)
   &.page
     margin-top: calc(var(--bem) + 0.25em)
-  p
-    text-align: center
-    color: $mix-color
-    &.copyright
+  div.mmmeta
+    margin-top: 1em
+    h1, p
       font-size: percentage(14/16)
-    &.fortune::before
-      content: "\201C"
-    &.fortune::after
-      content: "\201D"
+      text-align: center
+      color: $mix-color
+    p
+      text-align: center
+      color: $mix-color
+      &.copyright
+        font-size: percentage(14/16)
+      &.fortune::before
+        content: "\201C"
+      &.fortune::after
+        content: "\201D"
   ul
     display: flex
     flex-direction: column
@@ -28,8 +34,6 @@ footer
     list-style-type: none
     li
       color: $mix-color
-  .mmmeta
-    padding-top: 1em
 
 //-----------------------------------------------------------------------------
 
@@ -45,3 +49,14 @@ footer
           padding-left: 0.25em
           content: "-"
           color: $mix-color
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40em)
+
+  footer div.mmmeta
+    text-align: center
+    h1, p
+      display: inline
+    h1::after
+      content: ":\20"

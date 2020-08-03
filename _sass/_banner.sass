@@ -24,33 +24,24 @@ header[role="banner"]
       align-items: center
       justify-content: flex-start
       h1
-        font-family: 'Bungee Shade',$sans
-        font-size: 200%
+        font-family: 'Fruktur', $sans
+        font-size: var(--logo-text-size)
         line-height: 1
         letter-spacing: -0.6px
-        text-transform: uppercase
         color: $text-color
         a:link, a:visited
           color: $logo-color
           text-decoration: none
     div.icon img
-      margin-right: 0.125em
-      width: var(--icon-size)
-      height: var(--icon-size)
-
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 34em)
-
-  header[role="banner"]
-    div.icon img
-      margin-left: -0.125em
-
-//-----------------------------------------------------------------------------
-
-//@media screen and (min-width: 48em)
-
-  header[role="banner"]
-    div.icon img
       margin-left: -0.25em
+      width: var(--logo-icon-size)
+      height: var(--logo-icon-size)
+
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 48em)
+
+  header[role="banner"]
+    div.flexwrap div.icon img
+      margin-left: -0.5em

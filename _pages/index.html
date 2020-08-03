@@ -40,17 +40,9 @@ permalink: /index.html
 <aside class="archive">
   <div class="hr"></div>
   <ul class="datelist">
-    <li class="year"><a href="/2020/">2020</li><li><a href="{{ site.url }}/2020/07/">Jul</a></li>
-  </ul>
-</aside>
-
-{% comment %} DATELIST FOR FUTURE USE! DO NOT CHANGE OR DELETE!
-<aside class="archive">
-  <div class="hr"></div>
-  <ul class="datelist">
     {% assign curryr = site.posts.first.date | date: '%Y' -%}
     {% assign currmo = site.posts.first.date | date: '%-m' -%}
-    {% assign startmo = currmo | minus: 4 -%}
+    {% assign startmo = currmo | minus: 0 -%}
     {% assign prevyr = '' -%}
     {% for i in (startmo..currmo) %}
       {% assign month = i -%}
@@ -69,4 +61,3 @@ permalink: /index.html
     {% endfor -%}
   </ul>
 </aside>
-{% endcomment %}

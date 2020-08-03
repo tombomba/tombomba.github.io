@@ -45,7 +45,7 @@ style: page
     {% elsif is_year_index and current_year == page_year -%}
     <li>
       <h2><a href="{{ p.url | prepend: site.url }}" class="{{ iconstyle }}">{{ titlef }}</a></h2>
-      <p>{{ p.fbog.text | default: p.excerpt | strip_html | normalize_whitespace | smartify }} {% if p.date %}<span class="dates">({{ p.date | date: "%-d %b" }})</span>{% endif %}</p>
+      <p>{{ p.fbog.text | default: p.excerpt | strip_html | normalize_whitespace | smartify }}{% comment %} {% if p.date %}<span class="dates">({{ p.date | date: "%-d %b" }})</span>{% endif %}{% endcomment %}</p>
     </li>
     {% endif -%}
   {% endfor -%}

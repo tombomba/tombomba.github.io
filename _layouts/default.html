@@ -71,11 +71,11 @@
   {% if page.is_home %}
     <div class="titletag">
       <h1>{{ site.domain | capitalize }}</h1>
-      <p class="fortune">{{ site.description }}</p>
+      <p class="fortune">{{ site.data.taglines | sample: 1 }}</p>
     </div>
   {% endif -%}
     <ul>
-      <li>Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {% unless page.is_about %}<a href="/about/">{{ site.author }}</a>{% else %}{{ site.author }}{% endunless %}</li><li><a href="/feed.xml">RSS</a></li><li><a href="https://letterboxd.com/{{ site.letterboxd }}">Letterboxd</a></li><li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li>
+      {% if page.is_page %}<li>Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {{ site.author }}</li>{% else %}<li><a href="{{ site.url }}">{{ site.domain | capitalize }}</a></li>{% endif %}{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="/feed.xml">RSS</a></li><li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li>
     </ul>
   </div>
 

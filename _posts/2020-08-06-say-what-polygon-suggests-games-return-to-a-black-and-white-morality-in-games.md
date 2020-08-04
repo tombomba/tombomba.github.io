@@ -1,5 +1,7 @@
 ---
-title: "Say what? Polygon urges a return to black and white morality in games"
+title: "Say what? Polygon argues for black and white morality in games"
+fbog:
+  text: "The quick brown fox jumps over the lazy dog. As he does. Ya know."
 date: 2020-08-06 12:34 -0800
 ---
 

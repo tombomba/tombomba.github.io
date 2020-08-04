@@ -16,6 +16,11 @@ layout: default
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}
 {% endif -%}
 
+{% if copy contains '<!--copynote-->' %}
+  {% capture copynotice %}<!-- Copyright {{ p.date | date: "%Y" }} {{ p.author | default: site.author }} -->{% endcapture %}
+  {% assign copy = copy | replace: '<!--copynote-->', copynotice %}
+{% endif -%}
+
 <article class="post"><!-- {{ copy | number_of_words }} words -->
 
   <header>

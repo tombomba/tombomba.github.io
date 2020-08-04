@@ -4,3 +4,4 @@ domain: "localhost:4000"
 url: "http://localhost:4000"
 
 safe: false
+future: true

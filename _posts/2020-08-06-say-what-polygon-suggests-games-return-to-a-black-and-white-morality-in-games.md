@@ -1,5 +1,5 @@
 ---
-title: "Polygon suggests games to return to a black and white morality"
+title: "Say what? Polygon urges a return to black and white morality in games"
 date: 2020-08-06 12:34 -0800
 ---
 

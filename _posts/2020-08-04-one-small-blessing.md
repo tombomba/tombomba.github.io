@@ -1,5 +1,5 @@
 ---
-title: "One Small Benefit"
+title: "One small blessing"
 excerpt: "A summer during the pandemic means a season without endless hype."
 fbog:
   text: "A small blessing during the pandemic: a summer without an endless stream of hype."

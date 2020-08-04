@@ -3,7 +3,7 @@
 header[role="banner"]
   max-width: var(--page-width)
   margin: 0 auto
-  div.flexwrap
+  div.icon
     display: flex
     align-items: center
     justify-content: flex-start
@@ -19,29 +19,15 @@ header[role="banner"]
       background-color: $body-color
       border-top: thin solid $border-dark
       border-bottom: thin solid $border-light
-    div.logo
-      display: flex
-      align-items: center
-      justify-content: flex-start
-      h1
-        font-family: 'Fruktur', $sans
-        font-size: var(--logo-text-size)
-        line-height: 1
-        letter-spacing: -0.6px
-        color: $text-color
-        a:link, a:visited
-          color: $logo-color
-          text-decoration: none
-    div.icon img
+    img
       margin-left: -0.25em
       width: var(--logo-icon-size)
       height: var(--logo-icon-size)
-
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 48em)
 
   header[role="banner"]
-    div.flexwrap div.icon img
+    div.icon img
       margin-left: -0.5em

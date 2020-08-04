@@ -2,17 +2,17 @@
 title: "'Host' is a helluva thing"
 excerpt: "I was skeptical of the Zoom horror premise in \"Host,\" but the movie is exceedingly clever in its writing and direction, and it won me over in its first 10 minutes."
 fbog:
-  text: "Shudder's new exclusive might be the best pure horror movie of the summer."
+  text: "Shudder's new exclusive might be the best pure horror movie of the year."
   match: "Zoom horror"
 date: 2020-08-04 12:34 -0800
 ---
-A good ghost story will make me look over my shoulder, once or twice, when it's over, because the good ones fully creep me out. The good ones leave behind a sorta psychic residue I can't shake so easily. So I need to look, you know, just in case there's something back there.
+A good ghost story will make me look over my shoulder, once or twice, when it's over, because the good ones fully creep me out. They leave behind a sorta psychic residue I can't shake so easily. So I need to look, you know, just in case there's something back there.
 
 As the credits played on "Host," I did that, and also kept my head down, and paced around my apartment, and mumbled "that was fucked up" each time a different scene flashed through my mind.
 
 "Host," directed by Rob Savage and co-written by Savage, Gemma Hurley and Jed Shepherd, might be the best horror of the year, because it's scary, thrilling, and fully entertaining.<!--copynote-->
 
-The premise is simple, almost tired. A group of women meet for a séance, and because it's horror, everything goes terribly wrong. The twist on formula is they're in lockdown due to coronavirus, and none are in the same room. The action takes place over Zoom, the teleconf software, and we see everything they see through the cameras on their laptops.
+The premise is simple, almost tired. A group of women meet for a séance, and because it's a horror movie, everything goes terribly wrong. The twist on formula is they're in lockdown due to coronavirus, and none are in the same room. The action takes place over Zoom, the teleconf software, and we see everything they see through the cameras on their laptops.
 
 The movie is short at 56 minutes, and the writing, direction, and editing, are exceedingly clever. There's a high amount of creativity and discipline here, as the story moves effortlessly from a bunch of chicks goofing around about spirits to being actively terrorized by demons.
 

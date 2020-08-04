@@ -1,18 +1,21 @@
 ---
 title: "'Host' is a helluva thing"
+excerpt: "I was skeptical of the Zoom horror premise in \"Host,\" but the movie is exceedingly clever in its writing and direction, and it won me over in its first 10 minutes."
 fbog:
-  text: "Shudder's new exclusive might be the best pure horror movie of the year."
+  text: "Shudder's new exclusive might be the best pure horror movie of the summer."
   match: "Zoom horror"
 date: 2020-08-04 12:34 -0800
 ---
-I was skeptical of the Zoom horror premise in "Host," but the movie won me over in its first 10 minutes. This is a well crafted entertainment, and a genuinely freaky experience.
+A good ghost story will make me look over my shoulder, once or twice, when it's over, because the good ones fully creep me out. The good ones leave behind a sorta psychic residue I can't shake so easily. So I need to look, you know, just in case there's something back there.
 
-but the writing and direction are exceedingly clever and the performances are good. Savage and his collaborators won me over in less than 10 minutes; this is a well constructed horror movie. A genuinely freaky experience, especially if you watch as I did: on a laptop, alone in a dark room.
+As the credits played on "Host," I did that, and also kept my head down, and paced around my apartment, and mumbled "that was fucked up" each time a different scene flashed through my mind.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu lorem nunc. Maecenas egestas ex massa, quis luctus arcu cursus ut. Nam sit amet posuere nisl. Integer ullamcorper id lorem eu vestibulum. Phasellus eget dictum nulla. Sed eu feugiat turpis, vitae volutpat diam. Etiam sollicitudin dui libero, id aliquet lorem hendrerit ut. Morbi a porttitor risus. Suspendisse ut erat ac lorem facilisis congue dignissim vel massa. Aenean cursus justo quis mauris laoreet, a aliquet nulla vestibulum. Donec tempus dignissim ex.
+"Host," directed by Rob Savage and co-written by Savage, Gemma Hurley and Jed Shepherd, might be the best horror of the year, because it's scary, thrilling, and fully entertaining.<!--copynote-->
 
-Nulla placerat at nisl sit amet rutrum. Nulla a erat sodales, ullamcorper sem a, consectetur enim. Duis et ligula ut erat luctus rhoncus euismod vitae enim. Nunc a dui dui. Cras at ipsum et dolor blandit feugiat. Nunc ut laoreet neque. Donec lorem enim, gravida mattis dapibus sit amet, sollicitudin non urna. Vestibulum a rutrum orci, vel mollis justo.
+The premise is simple, almost tired. A group of women meet for a séance, and because it's horror, everything goes terribly wrong. The twist on formula is they're in lockdown due to coronavirus, and none are in the same room. The action takes place over Zoom, the teleconf software, and we see everything they see through the cameras on their laptops.
 
-Nam sit amet tellus sed augue porttitor tincidunt at vitae sem. Donec ultricies nisl in pharetra gravida. Ut dapibus dictum sollicitudin. Nunc id metus quis massa aliquet tristique sed vel lacus. In venenatis scelerisque risus, et facilisis dolor pulvinar in. Nullam eleifend mauris nibh, nec accumsan ligula facilisis ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque eu eros orci. Mauris ac fermentum velit, id consequat est.
+The movie is short at 56 minutes, and the writing, direction, and editing, are exceedingly clever. There's a high amount of creativity and discipline here, as the story moves effortlessly from a bunch of chicks goofing around about spirits to being actively terrorized by demons.
 
-Fusce eget facilisis tortor, sed fringilla est. Cras volutpat ante nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elementum maximus feugiat. Donec varius purus.
+
+
+"Host" delivered a feeling I had as a kid, after I breathlessly survived another foray into one of those cheesy summertime haunted house rides: the strangely life affirming experience of being terrified, and loving it, because my brain was aware of the fantasy but my gut wasn't.  

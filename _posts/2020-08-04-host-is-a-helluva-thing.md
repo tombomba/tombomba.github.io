@@ -1,8 +1,8 @@
 ---
 title: "'Host' is a helluva thing"
-excerpt: "I was skeptical of the Zoom horror premise in \"Host,\" but the movie is exceedingly clever in its writing and direction, and it won me over in its first 10 minutes."
+excerpt: "I was skeptical of the Zoom horror premise in \"Host,\" but the movie is exceedingly clever in its writing and direction, and it won me over."
 fbog:
-  text: "Shudder's new exclusive might be the best pure horror movie of the year."
+  text: "Rob Savage's newest might be the best horror movie of the year."
   match: "Zoom horror"
 date: 2020-08-04 12:34 -0800
 ---

@@ -6,11 +6,11 @@ fbog:
   match: "Zoom horror"
 date: 2020-08-04 12:34 -0800
 ---
-A good ghost story will make me look over my shoulder, once or twice, when it's over, because the good ones fully creep me out. They leave behind a sorta psychic residue I can't shake so easily. So I need to look, you know, just in case there's something back there.
+A good ghost story will make me look over my shoulder when it's over. The good ones creep me out. They leave behind a sorta psychic residue I can't shake easily. So I glance back, you know, just in case. 
 
 As the credits played on "Host," I did that, and also kept my head down, and paced around my apartment, and mumbled "that was fucked up" each time a different scene flashed through my mind.
 
-"Host," directed by Rob Savage and co-written by Savage, Gemma Hurley and Jed Shepherd, might be the best horror of the year, because it's scary, thrilling, and fully entertaining.<!--copynote-->
+"Host," directed by Rob Savage and co-written by Savage, Gemma Hurley and Jed Shepherd, might be the best horror of the year, because it's scary, thrilling, and entertaining.<!--copynote-->
 
 The premise is simple, almost tired. A group of women meet for a séance, and because it's a horror movie, everything goes terribly wrong. The twist on formula is they're in lockdown due to coronavirus, and none are in the same room. The action takes place over Zoom, the teleconf software, and we see everything they see through the cameras on their laptops.
 

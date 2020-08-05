@@ -2,7 +2,7 @@
 title: "Say what? Polygon argues for black and white morality in games"
 fbog:
   text: "The quick brown fox jumps over the lazy dog. As he does. Ya know."
-date: 2020-08-06 12:34 -0800
+date: 2020-08-10 12:34 -0800
 ---
 
 Curabitur interdum metus dolor, placerat placerat ex mattis sit amet. Donec a pulvinar urna, egestas pretium orci. Etiam vitae risus dui. Curabitur mauris arcu, tempor eu massa sit amet, elementum mattis velit.

@@ -49,7 +49,7 @@
       {% when 'downcase' %}{% assign bannertext = site.title | downcase %}
       {% else %}{% assign bannertext = site.title | capitalize %}
     {% endcase -%}
-    <link href="https://fonts.googleapis.com/css2?family=Frijole&text={{ site.title | downcase }}&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Frijole&text={{ site.title }}&display=swap" rel="stylesheet">
 
 </head>
 <!-- foo foo  -->
@@ -57,7 +57,7 @@
 
   <header role="banner">
     <div class="text">
-      <h1><a href="{{ site.url }}">{{ site.title | downcase }}</a></h1>
+      <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
     </div>
     {% comment %}
     <div class="icon">

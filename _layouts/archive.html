@@ -26,11 +26,7 @@ style: page
     <h1>{{ page.title }}</h1>
   </header>
 
-  {% if is_month_index %}
-  <ul class="toc norm">
-  {% else %}
   <ul class="toc">
-  {% endif -%}
   {% for p in site.posts -%}
     {% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
     {% assign sub = t.last | prepend: '!QQ!' -%}
@@ -39,12 +35,12 @@ style: page
     {% assign current_year = p.date | date: "%Y" -%}
     {% if is_month_index and current_month == page_month and current_year == page_year -%}
     <li>
-      <h2><a href="{{ p.url | prepend: site.url }}" class="{{ iconstyle }}">{{ titlef }}</a></h2>
-      <p>{{ p.excerpt | strip_html | normalize_whitespace | smartify }}</p>
+      <h2><a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a></h2>
+      <p>{{ p.fbog.text | default: p.excerpt | strip_html | normalize_whitespace | smartify }}{% comment %} {% if p.date %}<span class="dates">({{ p.date | date: "%-d %b" }})</span>{% endif %}{% endcomment %}</p>
     </li>
     {% elsif is_year_index and current_year == page_year -%}
     <li>
-      <h2><a href="{{ p.url | prepend: site.url }}" class="{{ iconstyle }}">{{ titlef }}</a></h2>
+      <h2><a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a></h2>
       <p>{{ p.fbog.text | default: p.excerpt | strip_html | normalize_whitespace | smartify }}{% comment %} {% if p.date %}<span class="dates">({{ p.date | date: "%-d %b" }})</span>{% endif %}{% endcomment %}</p>
     </li>
     {% endif -%}

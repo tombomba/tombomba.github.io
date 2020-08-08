@@ -16,4 +16,4 @@ The premise is simple, almost tired. A group of women meet for a séance, and be
 
 The movie is short at 56 minutes, and the writing, direction, and editing, are exceedingly clever. There's a high amount of creativity and discipline here, as the story moves effortlessly from a bunch of chicks goofing around about spirits to being actively terrorized by demons.
 
-"Host" delivered a feeling I had as a kid, after I breathlessly survived another foray into one of those cheesy summertime haunted house rides: the strangely life affirming experience of being terrified, and loving it, because my brain was aware of the fantasy but my gut wasn't.  
+"Host" delivered an experience I had as a kid, after I breathlessly survived another foray into one of those cheesy summertime haunted house rides: the strangely life affirming feeling of being terrified, and loving it, because my brain was aware of the fantasy but my gut wasn't.  

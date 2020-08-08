@@ -43,15 +43,27 @@
 
     <!-- css -->
     <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css_dir | prepend: site.url | append: '.css' }}?v=winbin93">
+    {% assign bannerfont = site.data.banner | sample: 1 -%}
+    {% case bannerfont.transform %}
+      {% when 'upcase' %}{% assign bannertext = site.title | upcase %}
+      {% when 'downcase' %}{% assign bannertext = site.title | downcase %}
+      {% else %}{% assign bannertext = site.title | capitalize %}
+    {% endcase -%}
+    <link href="https://fonts.googleapis.com/css2?family={{ bannerfont.name | replace: ' ', '+' }}&text={{ bannertext }}&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
   <header role="banner">
+    <div class="text">
+      <h1 style="font-family:'{{ bannerfont.name }}',sans-serif; font-size:{{ bannerfont.size }};"><a href="{{ site.url }}">{{ bannertext }}</a></h1>
+    </div>
+    {% comment %}
     <div class="icon">
       <a href="{{ site.url }}"><img src="{{ 'trashdiary.png' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.title | capitalize }}"></a>
     </div>
+    {% endcomment %}
   </header>
 
 <main role="main"><!-- {{ page.layout }} -->

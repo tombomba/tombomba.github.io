@@ -1,0 +1,6 @@
+- name: "Fruktur"
+  size: 250%
+  transform: downcase
+- name: "Unlock"
+  size: 250%
+  transform: downcase

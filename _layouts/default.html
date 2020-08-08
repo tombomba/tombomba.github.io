@@ -43,13 +43,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css_dir | prepend: site.url | append: '.css' }}?v=winbin93">
-    {% assign bannerfont = site.data.banner | sample: 1 -%}
-    {% case bannerfont.transform %}
-      {% when 'upcase' %}{% assign bannertext = site.title | upcase %}
-      {% when 'downcase' %}{% assign bannertext = site.title | downcase %}
-      {% else %}{% assign bannertext = site.title | capitalize %}
-    {% endcase -%}
-    <link href="https://fonts.googleapis.com/css2?family=Frijole&text={{ site.title }}&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&text={{ site.title }}&display=swap" rel="stylesheet">
 
 </head>
 <!-- foo foo  -->

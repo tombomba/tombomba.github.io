@@ -20,6 +20,16 @@ article
 
 aside
   margin-top: calc(var(--bem) + 0.2em)
+  div.previously
+    margin-top: var(--bem)
+    h2
+      font-size: 1em
+      @extend .title-link
+      &::after
+        content: "\00A0\2014\20"
+        font-weight: 700
+    h2, p
+      display: inline
   ul.nextprev
     margin-top: var(--bem)
     margin-left: 0
@@ -33,11 +43,3 @@ aside
         font-weight: 400
       h2::after
         content: "\00A0\2014\20"
-
-//-----------------------------------------------------------------------------
-
-//@media screen and (min-width: 28em)
-
-  aside ul.nextprev li
-    h2, p
-      display: block

@@ -35,22 +35,19 @@ layout: default
 
 </article>
 
-{% if page.previous or page.next %}
+{% if page.previous %}
+  {% assign blurb = page.previous.excerpt | strip | strip_html | normalize_whitespace | smartify -%}
+  {% if page.previous.fbog.match %}
+    {% assign keyphrase = page.previous.fbog.match | strip | normalize_whitespace | smartify %}
+  {% else %}
+    {% assign keyphrase = blurb | truncatewords: 3, '' | smartify %}
+  {% endif -%}
+  {% capture link %}<a href="{{ page.previous.url | prepend: site.url }}">{{ keyphrase }}</a>{% endcapture -%}
 <aside>
   <div class="hr"></div>
-  <ul class="nextprev">
-    {% if page.previous %}
-    <li>
-      <h2><a href="{{ page.previous.url | prepend: site.url }}">{{ page.previous.title | strip_html | normalize_whitespace | smartify }}</a></h2>
-      <p>{{ page.previous.fbog.text | default: page.previous.excerpt | strip_html | normalize_whitespace | smartify }}</p>
-    </li>
-    {% endif -%}
-    {% if page.next %}
-    <li>
-      <h2><a href="{{ page.next.url | prepend: site.url }}">{{ page.next.title | strip_html | normalize_whitespace | smartify }}</a></h2>
-      <p>{{ page.next.fbog.text | default: page.next.excerpt | strip_html | normalize_whitespace | smartify }}</p>
-    </li>
-    {% endif -%}
-  </ul>
+  <div class="previously">
+    <h2><a href="{{ page.previous.url | prepend: site.url }}">Previously</a></h2>
+    <p>{{ blurb | replace_first: keyphrase, link }}</p>
+  </div>
 </aside>
 {% endif %}

@@ -71,14 +71,8 @@
   <div class="hr"></div>
 
   <div class="mmmeta">
-  {% if page.is_home %}
-    <div class="titletag">
-      <h1>{{ site.domain | capitalize }}</h1>
-      <p class="fortune">{{ site.description }}</p>
-    </div>
-  {% endif -%}
     <ul>
-      {% if page.is_page %}<li>Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {{ site.author }}</li>{% else %}<li><a href="{{ site.url }}">{{ site.domain | capitalize }}</a></li>{% endif %}{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="/feed.xml">RSS</a></li><li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li>
+      {% if page.is_page %}<li>Copyright &copy; {{ site.posts.first.date | date: "%Y" }} {{ site.author }}</li>{% else %}<li><a href="{{ site.url }}">Home</a></li>{% endif %}{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="/feed.xml">RSS</a></li><li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li>
     </ul>
   </div>
 

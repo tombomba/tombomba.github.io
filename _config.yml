@@ -4,12 +4,11 @@ domain: "trashdiary.com"
 url: "https://www.trashdiary.com"
 
 author: Tom Bomba
-twitter: trashdiary_
+twitter: t__bomba
 letterboxd: t__bomba
 
 img_dir: /assets/img/
 css_dir: /assets/css/
-ico_dir: /assets/img/ico/
 
 safe: true
 future: false

@@ -3,7 +3,7 @@ style: homepage
 is_home: true
 permalink: /index.html
 ---
-{% assign scope = 604800 -%}
+{% assign scope = 2629743 -%}
 {% assign today = site.posts.first.date | date: '%s' -%}
 <article><!-- 1 month scope -->
 {% for p in site.posts %}
@@ -12,22 +12,10 @@ permalink: /index.html
   {% assign range = today | times: 1 |  minus: current -%}
   {% if scope > range %}
   <section><!-- #{{ forloop.index }} ({{ wc }} words) -->
-    {% assign blurb = p.excerpt | strip | strip_html | normalize_whitespace | smartify -%}
-    {% if p.fbog.match %}
-      {% assign keyphrase = p.fbog.match | strip | normalize_whitespace | smartify %}
-    {% else %}
-      {% assign keyphrase = blurb | truncatewords: 3, '' | smartify %}
-    {% endif -%}
-    {% capture link %}<a href="{{ p.url | prepend: site.url }}">{{ keyphrase }}</a>{% endcapture -%}
-    {% unless forloop.first %}<div class="hr"></div>{% endunless %}
+    {% unless forloop.first %}<div class="hr"></div>{% endunless -%}
     <div class="promo card">
-      {% comment %}
-      {% if p.fbog.image %}
-        <div class="thumb {% if wc > 50 %}large {%endif%}{% cycle 'right', 'left' %}" style="background-image: url({{ p.fbog.image | prepend: site.ico_dir | prepend: site.url }})"><a href="{{ p.url | prepend: site.url }}" aria-label="thumbnail image"><span></span></a></div>
-      {% endif -%}
-      {% endcomment -%}
       <div class="text">
-        <p>{{ blurb | replace_first: keyphrase, link }}</p>
+        {% include linkwords.html blurb=p.excerpt link=p.linkwords %}
       </div>
     </div>
   </section>

@@ -1,0 +1,8 @@
+{% assign blurb = include.blurb | strip | strip_html | normalize_whitespace | smartify -%}
+{% if include.link %}
+  {% assign keyphrase = include.link | strip | normalize_whitespace | smartify %}
+{% else %}
+  {% assign keyphrase = blurb | truncatewords: 3, '' | smartify %}
+{% endif -%}
+{% capture link %}<a href="{{ p.url | prepend: site.url }}">{{ keyphrase }}</a>{% endcapture -%}
+<p>{{ blurb | replace_first: keyphrase, link }}</p>

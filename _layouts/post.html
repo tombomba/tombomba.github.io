@@ -23,6 +23,7 @@ layout: default
 
 <article class="post"><!-- {{ copy | number_of_words }} words -->
 
+  <!---
   <header>
     <h1>{{ titlef }}</h1>
     <div class="byline">
@@ -30,8 +31,13 @@ layout: default
       <p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %B %Y" }}</time></p>
     </div>
   </header>
+  -->
 
-  {{ copy }}
+  {% capture hed %}<h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ titlef }}{% if include.is_home %}</a>{% endif %}</h1>{% endcapture -%}
+  {% capture datestamp %}<p class="datestamp">(<time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b" }})</time></p>{% endcapture -%}
+
+  {% capture headline %}<header>{{ hed }}{{ datestamp }}<p>{% endcapture -%}
+  {{ copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', headline }}
 
 </article>
 

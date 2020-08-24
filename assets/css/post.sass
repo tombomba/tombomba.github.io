@@ -7,16 +7,17 @@
 
 article
   header
-    div.byline
-      line-height: var(--line-height)
-      p
-        display: inline
-        margin: 0
-        font-size: percentage(14/16)
-        color: $mix-color
-        &:first-of-type::after
-          content: "\20/\20"
-          color: $mix-color
+    h1
+      font-size: 1em
+    h1, p
+      display: inline
+    p.datestamp
+      time
+        white-space: nowrap
+      &:before
+        content: "\20"
+      &:after
+        content: "\20\2014\20"
 
 aside
   margin-top: calc(var(--bem) + 0.2em)

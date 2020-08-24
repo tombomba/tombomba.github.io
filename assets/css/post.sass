@@ -9,15 +9,18 @@ article
   header
     h1
       font-size: 1em
+      &:after
+        content: "\20"
     h1, p
       display: inline
-    p.datestamp
-      time
-        white-space: nowrap
-      &:before
-        content: "\20"
-      &:after
-        content: "\20\2014\20"
+  time
+    font-style: italic
+    white-space: nowrap
+    color: $mix-color
+    &::before
+      content: "\20("
+    &::after
+      content: ")"
 
 aside
   margin-top: calc(var(--bem) + 0.2em)

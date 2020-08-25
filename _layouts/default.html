@@ -28,22 +28,22 @@
     <!-- facebook -->
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta property="og:url" content="{{ page.url | prepend: site.url }}">
-    {% if page.is_post %}<meta property="og:description" content="{{ page.fbog.text | default: page.excerpt | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% else %}<meta property="og:description" content="{{ site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% endif %}
+    {% if page.excerpt %}<meta property="og:description" content="{{ page.fbog.text | default: page.excerpt | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% else %}<meta property="og:description" content="{{ site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% endif %}
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:type" content="blog">
-    <meta property="og:image" content="{{ page.fbog.image | default: 'default-social.png' | prepend: site.img_dir |  prepend: site.url }}">
+    <meta property="og:image" content="{{ 'default-social.png' | prepend: site.img_dir |  prepend: site.url }}">
 
     <!-- twitter  -->
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="twitter:url" content="{{ page.url | default: '' | prepend: site.url }}">
-    {% if page.is_post %}<meta name="twitter:description" content="{{ page.fbog.text | default: page.excerpt | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% else %}<meta property="og:description" content="{{ site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% endif %}
+    {% if page.excerpt %}<meta name="twitter:description" content="{{ default: page.excerpt | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% else %}<meta property="og:description" content="{{ site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% endif %}
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@{{ site.twitter }}">
     <meta name="twitter:creator" content="@{{ site.twitter }}">
-    <meta name="twitter:image:src" content="{{ page.fbog.image | default: 'default-twitter.png' | prepend: site.img_dir | prepend: site.url }}">
+    <meta name="twitter:image:src" content="{{ 'default-twitter.png' | prepend: site.img_dir | prepend: site.url }}">
 
     <!-- css -->
-    <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css_dir | prepend: site.url | append: '.css' }}?v=winbin93">
+    <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css_dir | prepend: site.url | append: '.css' }}?v=redaste">
     <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&text={{ site.title }}&display=swap" rel="stylesheet">
 
 </head>

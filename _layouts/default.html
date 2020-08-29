@@ -54,11 +54,9 @@
     <div class="text">
       <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
     </div>
-    {% comment %}
-    <div class="icon">
-      <a href="{{ site.url }}"><img src="{{ 'trashdiary.png' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.title | capitalize }}"></a>
+    <div class="subh">
+      <h2>{% if page.is_post %}{{ page.date | date: '%-d %b %Y' }}{% else %}{{ page.title }}{% endif %}</h2>
     </div>
-    {% endcomment %}
   </header>
 
 <main role="main"><!-- {{ page.layout }} -->

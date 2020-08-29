@@ -5,6 +5,9 @@
 @charset "utf-8"
 @import init, banner, footer
 
+article
+  margin-top: var(--bem)
+
 section:not(:first-of-type)
   margin-top: var(--spacer)
 
@@ -42,7 +45,7 @@ div.card.promo
       background-image: url('/assets/img/shim.gif')
 
 aside.archive
-  margin-top: var(--spacer)
+  margin-top: calc(var(--spacer) * 2)
   ul.datelist
     display: flex
     flex-direction: column

@@ -1,44 +1,39 @@
 ---
-# HOMEPAGE
+# HOMEPAGE & ARCHIVES
 ---
 
 @charset "utf-8"
 @import init, banner, footer
 
 article
+  margin-top: calc(var(--bem) + 0.33em)
   section
     &:not(:first-of-type)
-      margin-top: var(--spacer)
-    div.card.promo
-      padding-top: var(--spacer)
-      &:first-of-type
-        padding-top: calc(var(--spacer) - 0.2em)
-
-aside.archive
-  margin-top: var(--spacer)
-  ul.datelist
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: center
-    margin: 1em 0 0 0
-    list-style-type: none
-    li.year
-      font-weight: bold
+      margin-top: var(--bem)
+      padding-top: var(--bem)
+      border-top: thin dashed $border-dark
+    h1, p
+      display: inline
+      font-size: 1em
+    span.datestamp
+      white-space: nowrap
+      color: $mix-color
+      a:link, a:visited
+        color: $mix-color
+      &::before
+        content: '['
+      &::after
+        content: ']'
 
 footer
-  margin-top: 1em
+  margin-top: var(--bem)
+  padding-top: var(--bem)
+  border-top: thin dashed $border-dark
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 34em)
 
-  aside.archive
-    ul.datelist
-      flex-direction: row
-      li
-        margin-right: 0.25em
-        &:not(:last-of-type)::after
-          padding-left: 0.25em
-          content: "-"
-          color: $mix-color
+  article section
+    h1, p
+      display: block

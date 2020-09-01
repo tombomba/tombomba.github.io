@@ -1,35 +1,18 @@
 //-----------------------------------------------------------------------------
 
 header[role="banner"]
-  max-width: calc(var(--page-width) + var(--bem-double))
+  max-width: var(--page-width)
   margin: 0 auto
-  div.title h1
-    font-family: 'Sedgwick Ave Display', sans-serif
-    font-weight: 400
-    line-height: 1
-    letter-spacing: -0.25px
-    text-transform: uppercase
-    color: $mix-color
-    a:link, a:visited
-      color: $logo-color
-      text-decoration: none
-  //&::after
-    content: ''
-    flex: 1
-    margin: 0 0 8px 0.5em
-    padding: 0
-    height: 0
-    border: 0
-    background-color: $body-color
-    border-top: thin solid $border-dark
-    border-bottom: thin solid $border-light
-
-//-----------------------------------------------------------------------------
-
-//@media screen and (min-width: 30em)
-
-  header[role="banner"]
-    flex-direction: row
-    div.subhead
-      margin-left: 0.5em
-    //
+  background-color: $bg-color
+  border-radius: 0 4px 4px 0
+  div.logo
+    display: flex
+    align-items: center
+    justify-content: center
+    width: var(--bem-double)
+    height: var(--bem-double)
+    background-color: $logo-color
+    border-radius: 4px 0 0 4px
+    img
+      width: calc(var(--bem) * 1.25)
+      height: calc(var(--bem) * 1.25)

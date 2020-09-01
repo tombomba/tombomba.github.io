@@ -1,41 +1,35 @@
 //-----------------------------------------------------------------------------
 
 header[role="banner"]
-  max-width: calc(var(--page-width) * 1.5)
+  max-width: calc(var(--page-width) + var(--bem-double))
   margin: 0 auto
-  display: flex
-  align-items: center
-  justify-content: space-between
-  flex-direction: column
-  div.text
-    h1
-      font-family: 'Sedgwick Ave Display', sans-serif
-      //font-size: 150%
-      font-weight: 400
-      line-height: 1.3
-      text-transform: uppercase
-      letter-spacing: -0.25px
-      color: $mix-color
-      a:link, a:visited
-        color: $logo-color
-        text-decoration: none
-  div.subh
-    h2
-      font-family: 'Sedgwick Ave Display', sans-serif
-      font-weight: 400
-      line-height: 1
-      text-transform: uppercase
-      letter-spacing: -0.25px
-      color: $mix-color
-      a:link, a:visited
-        color: $logo-color
-        text-decoration: none
+  div.title h1
+    font-family: 'Sedgwick Ave Display', sans-serif
+    font-weight: 400
+    line-height: 1
+    letter-spacing: -0.25px
+    text-transform: uppercase
+    color: $mix-color
+    a:link, a:visited
+      color: $logo-color
+      text-decoration: none
+  //&::after
+    content: ''
+    flex: 1
+    margin: 0 0 8px 0.5em
+    padding: 0
+    height: 0
+    border: 0
+    background-color: $body-color
+    border-top: thin solid $border-dark
+    border-bottom: thin solid $border-light
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 34em)
+//@media screen and (min-width: 30em)
 
   header[role="banner"]
     flex-direction: row
-    div.text h1
-      line-height: 1
+    div.subhead
+      margin-left: 0.5em
+    //

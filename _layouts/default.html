@@ -51,12 +51,20 @@
 <body>
 
   <header role="banner">
-    <div class="text">
-      <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+    <div class="title">
+      <h1><a href="{{ site.url }}">{{ site.title | upcase }}</a></h1>
     </div>
-    <div class="subh">
-      <h2>{% if page.is_post %}{{ page.date | date: '%-d %b %Y' }}{% else %}{{ page.title }}{% endif %}</h2>
+    {% comment %}
+    {% if page.is_post %}
+    <div class="subhead">
+      <h2><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ page.date | date: "%-d %b %Y" }}</time></h2>
     </div>
+    {% elsif page.is_archive %}
+    <div class="subhead">
+      <h2>{{ page.title }}</h2>
+    </div>
+    {% endif -%}
+    {% endcomment -%}
   </header>
 
 <main role="main"><!-- {{ page.layout }} -->

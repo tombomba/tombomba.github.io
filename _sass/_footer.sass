@@ -2,49 +2,19 @@
 
 footer
   max-width: var(--page-width)
-  margin-top: calc(var(--bem) + 0.2em)
+  margin-top: var(--bem-triple)
   margin-left: auto
   margin-right: auto
-  div.mmmeta
-    margin-top: 1em
-    h1, p
-      font-size: 1em
-      color: $mix-color
-      text-align: center
-    p.fortune
-      &::before
-        content: "\201C"
-      &::after
-        content: "\201D"
-    ul
-      display: flex
-      flex-direction: column
-      align-items: center
-      justify-content: center
-      margin: 0
-      list-style-type: none
-      li
-        color: $mix-color
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 34em)
-
-  footer div.mmmeta
-    text-align: center
-    div.titletag
-      text-align: center
-      h1, p
-        display: inline
-        font-size: percentage(14/16)
-      h1::after
-        content: ":\20"
-    ul
-      flex-direction: row
-      li
-        margin-right: 0.25em
-        font-size: percentage(14/16)
-        &:not(:last-of-type)::after
-          padding-left: 0.25em
-          content: "-"
-          color: $mix-color
+  ul
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    flex-direction: row
+    margin: 0
+    list-style-type: none
+    li
+      margin-right: 1em
+      font-weight: 900
+      text-transform: lowercase
+      a:link, a:visited
+        color: $logo-color

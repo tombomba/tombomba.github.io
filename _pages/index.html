@@ -3,26 +3,18 @@ style: homepage
 is_home: true
 permalink: /index.html
 ---
-{% assign scope = 2629743 -%}
-{% assign today = site.posts.first.date | date: '%s' -%}
-<article><!-- 1 month scope -->
-{% for p in site.posts %}
-  {% assign wc = p.excerpt | number_of_words | times: 1 -%}
-  {% assign current = p.date | date: '%s' -%}
-  {% assign range = today | times: 1 |  minus: current -%}
-  {% if scope > range %}
+
+<article>
+
+  {% for p in site.posts limit: 10 %}
   <section><!-- #{{ forloop.index }} ({{ wc }} words) -->
     {% unless forloop.first %}<div class="hr"></div>{% endunless -%}
-    <div class="promo card">
-      <div class="text">
-        {% include linkwords.html blurb=p.excerpt link=p.linkwords %}
-      </div>
+    <div class="card promo">
+      {% include linkwords.html blurb=p.excerpt link=p.linkwords -%}
     </div>
   </section>
-  {% else %}
-    {% break %}
-  {% endif -%}
-{% endfor -%}
+  {% endfor -%}
+
 </article>
 
 <aside class="archive">

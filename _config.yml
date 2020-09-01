@@ -42,6 +42,7 @@ defaults:
     values:
       layout: "archive"
       is_page: true
+      is_archive: true
       style: "page"
 
 permalink: /:year/:month/:title:output_ext

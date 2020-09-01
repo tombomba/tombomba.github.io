@@ -28,8 +28,6 @@
   --bem-triple: calc(var(--bem) * 3)
   --body-size: 100%
   --line-height: var(--rat)
-  --logo-text-size: 260%
-  --logo-text-home-size: 310%
   --hed-size: 125%
   --hed-lh: 1.4
   --spacer: var(--bem)
@@ -63,7 +61,7 @@ body
   -ms-text-size-adjust: auto
   -webkit-text-size-adjust: auto
 
-  padding: 1em 0.5em
+  padding: 1em
 
 main
   max-width: var(--page-width)
@@ -71,14 +69,14 @@ main
   margin-right: auto
 
 a
-  text-decoration: underline
+  text-decoration: none
   text-decoration-skip-ink: auto
   &:link
     color: $link-color
   &:visited
     color: $visited-color
   &:hover
-    text-decoration: none
+    text-decoration: underline
   &:active
     color: $active-color
 
@@ -112,6 +110,11 @@ div.hr
   a:hover
     text-decoration: underline
 
+.dashed
+  margin-top: var(--bem)
+  padding-top: var(--bem)
+  border-top: thin dashed $light-mix
+
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 27em)
@@ -143,14 +146,9 @@ div.hr
 
 @media screen and (min-width: 60em)
 
+  \:root
+    --rat: 1.83
+    --page-width: 37.389em
+
   body
     padding: var(--bem) 0
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 90em)
-
-  \:root
-    --rat: 1.68421052632
-    --body-size: 118.75%
-    --hed-size: 126.315789474%

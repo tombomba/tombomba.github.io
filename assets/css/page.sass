@@ -7,9 +7,16 @@
 
 article
 
-  header p.dek
-    color: $mix-color
-    margin: 0
+  header
+    h1
+      font-size: var(--hed-size)
+      line-height: var(--hed-lh)
+    &.flat
+      h1, p
+        font-size: 1em
+        display: inline
+      h1::after
+        content: "\20\2014\20"
 
   ul.toc
     margin-left: 1.25em

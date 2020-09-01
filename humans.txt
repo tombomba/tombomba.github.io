@@ -7,7 +7,6 @@ permalink: /humans.txt
 Author: {{ site.author }}
 Site: {{ site.url }}
 Twitter: {{ site.twitter }}
-Letterboxd: {{ site.letterboxd }}
 
 /* SITE */
 
@@ -28,10 +27,13 @@ Software: Atom, Pixelmator, Jekyll, Git
 - http://hotwired.com, ca. 1996
 - "Factotum" by Charles Bukowski
 - Rachel Whiteread's "House," 1993
+- Griel Marcus' "Real Life Rock Top 10"
 - "How to Tell a True War Story" from Tim O'Brien's "The Things They Carried"
 - Tom Spurgeon's Comics Reporter
 - Jessa Crispin's Book Slut
 - Rookie magazine
+- tweets by @BrandyLJensen
+- Screen Slate's newsletter
 - MTV's "Liquid Television"
 - Richard Nixon's "Checkers" speech
 - "song (did you see me walking by the Buick repairs?)" by Frank O'Hara

@@ -43,7 +43,7 @@ defaults:
       layout: "archive"
       is_page: true
       is_archive: true
-      style: "page"
+      style: "index"
 
 permalink: /:year/:month/:title:output_ext
 timezone: America/Los_Angeles

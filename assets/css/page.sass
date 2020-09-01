@@ -6,54 +6,15 @@
 @import init, banner, footer, article
 
 article
-
   header
     h1
-      font-size: var(--hed-size)
-      line-height: var(--hed-lh)
-    &.flat
-      h1, p
-        font-size: 1em
-        display: inline
-      h1::after
-        content: "\20\2014\20"
-
-  ul.toc
-    margin-left: 1.25em
-    list-style-type: disc
-    li
-      h2, p
-        display: inline
-        margin: 0
-        font-size: 1em
-        font-weight: 400
-      span.dates
-        font-style: italic
+      font-size: 1em
+      line-height: 1.3
+    div.byline p
+      display: inline
+      font-size: percentage(14/16)
+      color: $mix-color
+      a:link, a:visited
         color: $mix-color
-        white-space: nowrap
-
-  ul.plain
-    margin-left: 1.5em
-    li
-      margin: 0
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 28em)
-
-  article ul.toc li h2::after
-    content: "\00A0\2014\20"
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40em)
-
-  article ul.toc
-    margin-left: 0
-    &.norm
-      list-style-type: none
-      li
-        h2, p
-          display: block
-        h2::after
-          content: ''
+      &.author::after
+        content: '\20\/\20'

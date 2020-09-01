@@ -1,43 +1,26 @@
 ---
-style: homepage
+style: index
 is_home: true
 permalink: /index.html
 ---
 
 <article>
+{% assign scope = 604800 -%}<!-- 1 week -->
+{% assign today = site.posts.first.date | date: '%s' -%}
 
-  {% for p in site.posts limit: 10 %}
-  <section><!-- #{{ forloop.index }} ({{ wc }} words) -->
-    {% unless forloop.first %}<div class="hr"></div>{% endunless -%}
-    <div class="card promo">
-      {% include linkwords.html blurb=p.excerpt link=p.linkwords -%}
-    </div>
-  </section>
+  {% for p in site.posts %}
+
+    {% assign current = p.date | date: '%s' -%}
+    {% assign range = today | times: 1 |  minus: current -%}
+
+    {% if scope > range %}
+      {% if page.is_home and forloop.first %}<section class="first">{% else %}<section>{% endif %}
+        <h1><a href="{{ p.url | prepend: site.url }}">{{ p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify }}</a></h1>
+        <p class="excerpt">{{ p.excerpt | strip | strip_html | normalize_whitespace | smartify }} <span class="datestamp"><a href="{{ p.url | prepend: site.url }}">{{ p.date | date: "%-d %b" }}</a></span></p>
+      </section>
+    {% else %}
+      {% break %}
+    {% endif -%}
+
   {% endfor -%}
-
 </article>
-
-<aside class="archive">
-  <div class="hr"></div>
-  <ul class="datelist">
-    {% assign curryr = site.posts.first.date | date: '%Y' -%}
-    {% assign currmo = site.posts.first.date | date: '%-m' -%}
-    {% assign startmo = currmo | minus: 0 -%}
-    {% assign prevyr = '' -%}
-    {% for i in (startmo..currmo) %}
-      {% assign month = i -%}
-      {% if 1 > month %}
-        {% assign month = month | plus: 12 %}
-        {% assign year = curryr | minus: 1 %}
-      {% else %}
-        {% assign year = curryr %}
-      {% endif -%}
-      {% capture datestring %}1999-{{ month }}-01{% endcapture -%}
-      {% if year != prevyr %}
-        <li class="year"><a href="/{{ year }}/">{{ year }}</li>
-      {% endif -%}
-      <li><a href="{{ site.url }}/{{ year }}/{% if 9 > month %}0{% endif %}{{ month }}/">{{ datestring | date: '%b' }}</a></li>
-      {% assign prevyr = year -%}
-    {% endfor -%}
-  </ul>
-</aside>

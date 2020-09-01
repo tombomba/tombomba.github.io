@@ -24,6 +24,8 @@
 \:root
   --rat: 1.625
   --bem: calc(var(--rat) * 1em)
+  --bem-double: calc(var(--bem) * 2)
+  --bem-triple: calc(var(--bem) * 3)
   --body-size: 100%
   --line-height: var(--rat)
   --logo-text-size: 260%
@@ -65,7 +67,8 @@ body
 
 main
   max-width: var(--page-width)
-  margin: 0 auto
+  margin-left: auto
+  margin-right: auto
 
 a
   text-decoration: underline

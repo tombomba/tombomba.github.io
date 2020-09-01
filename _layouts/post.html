@@ -34,11 +34,9 @@ layout: default
   {% assign copy = copy | replace: '<!--copynote-->', copynotice %}
 {% endif -%}
 
-{% comment %}
-{% capture datef -%}<time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time>{% endcapture -%}
+{% capture datef -%}&nbsp;<time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b" }}</time>{% endcapture -%}
 {% assign copysize = copy | size | minus: 4 %}
 {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
-{% endcomment %}
 
 <article class="post"><!-- {{ copy | number_of_words }} words -->
 

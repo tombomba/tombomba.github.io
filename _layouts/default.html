@@ -61,6 +61,7 @@
 
 <footer>
 
+  {% if page.is_page %}
   <ul class="datelist">
     {% assign curryr = site.posts.first.date | date: '%Y' -%}
     {% assign currmo = site.posts.first.date | date: '%-m' -%}
@@ -82,6 +83,7 @@
       {% assign prevyr = year -%}
     {% endfor -%}
   </ul>
+  {% endif -%}
 
   <ul class="meta">
     {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="/feed.xml">RSS</a></li><li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li>

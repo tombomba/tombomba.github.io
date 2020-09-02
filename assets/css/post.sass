@@ -10,11 +10,20 @@ article
     h1
       font-size: var(--hed-size)
       line-height: 1.3
-    div.byline p
-      display: inline
-      font-size: percentage(14/16)
-      color: $mix-color
-      a:link, a:visited
+    div.byline
+      p
+        display: inline
+        margin: 0
+        font-size: percentage(14/16)
         color: $mix-color
-      &.author::after
-        content: '\20\/\20'
+        &.author::after
+          content: '\20\/\20'
+  & > p:first-of-type
+    margin-top: var(--bem)
+    padding-top: var(--bem)
+    border-top: thin dashed $border-dark
+
+footer
+  margin-top: var(--bem)
+  padding-top: var(--bem)
+  border-top: thin dashed $border-dark

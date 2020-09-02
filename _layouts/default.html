@@ -61,7 +61,7 @@
 
 <footer>
 
-  {% if page.is_page %}
+  {% if page.is_home %}
   <ul class="datelist">
     {% assign curryr = site.posts.first.date | date: '%Y' -%}
     {% assign currmo = site.posts.first.date | date: '%-m' -%}

@@ -1,0 +1,21 @@
+<ul class="datelist">
+  {% assign curryr = site.posts.first.date | date: '%Y' -%}
+  {% assign currmo = site.posts.first.date | date: '%-m' -%}
+  {% assign startmo = currmo | minus: 0 -%}
+  {% assign prevyr = '' -%}
+  {% for i in (startmo..currmo) %}
+    {% assign month = i -%}
+    {% if 1 > month %}
+      {% assign month = month | plus: 12 %}
+      {% assign year = curryr | minus: 1 %}
+    {% else %}
+      {% assign year = curryr %}
+    {% endif -%}
+    {% capture datestring %}1999-{{ month }}-01{% endcapture -%}
+    {% if year != prevyr %}
+      <li class="year"><a href="/{{ year }}/">{{ year }}</li>
+    {% endif -%}
+    <li><a href="{{ site.url }}/{{ year }}/{% if 9 > month %}0{% endif %}{{ month }}/">{{ datestring | date: '%b' }}</a></li>
+    {% assign prevyr = year -%}
+  {% endfor -%}
+</ul>

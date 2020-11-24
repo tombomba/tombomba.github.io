@@ -5,6 +5,19 @@ footer
   margin-top: var(--bem-triple)
   margin-left: auto
   margin-right: auto
+  div.brand
+    h1, p
+      display: inline
+      font-size: 100%
+      font-weight: 700
+    h1
+      color: $text-color
+      a:link, a:visited
+        color: $text-color
+      &::after
+        content: ":\20"
+    p
+      color: $mix-color
   ul
     display: flex
     align-items: flex-start

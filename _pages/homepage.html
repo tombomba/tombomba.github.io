@@ -1,5 +1,5 @@
 ---
-style: archive
+style: homepage
 is_home: true
 permalink: /index.html
 ---
@@ -22,7 +22,7 @@ permalink: /index.html
           {% assign keyphrase = blurb | truncatewords: 3, '' | smartify %}
         {% endif -%}
         {% capture link %}<a href="{{ p.url | prepend: site.url }}">{{ keyphrase }}</a>{% endcapture -%}
-        <p>{{ blurb | replace_first: keyphrase, link }}</p>
+        <h1><a href="{{ p.url | prepend: site.url }}">{{ current | date: '%-d %b' }}</a></h1><p>{{ blurb | replace_first: keyphrase, link }}</p>
       </section>
     {% else %}
       {% break %}

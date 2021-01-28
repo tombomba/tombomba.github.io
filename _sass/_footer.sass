@@ -6,18 +6,26 @@ footer
   margin-left: auto
   margin-right: auto
   ul
-    display: flex
-    align-items: flex-start
-    justify-content: flex-start
-    flex-direction: row
-    margin: 0
-    list-style-type: none
+    list-style: square
+    margin: 1em 0 0 1.3em
     li
-      margin-right: 1em
-      font-weight: 900
-      text-transform: lowercase
-      a:link, a:visited
-        color: $logo-color
-      &:first-of-type
-        a:link, a:visited
-          color: $text-color
+      color: $mix-color
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30em)
+
+  footer
+    ul
+      display: flex
+      align-items: flex-start
+      justify-content: flex-start
+      flex-direction: row
+      margin: 1em 0 0 0
+      list-style: none
+      li
+        margin-right: 0.25em
+        &:not(:last-of-type)::after
+          padding-left: 0.25em
+          content: "-"
+          color: $border-dark

@@ -12,6 +12,20 @@ layout: default
   {% assign titlef = t %}
 {% endif -%}
 
+{% assign lastchar = titlef | slice: -1 %}
+{% assign punc = '<span class="punc"></span>' %}
+{% case lastchar %}
+  {% when '"' %}
+  {% when "'" %}
+    {% assign grabstring = titlef.size | times: 1 | minus: 1 %}
+    {% assign titlef = titlef | slice: 0, grabstring | append: punc | append: lastchar %}
+  {% when '!' %}
+  {% when '?' %}
+    {% comment %} do nothing {% endcomment %}
+  {% else %}
+    {% assign titlef = titlef | append: punc %}
+{% endcase -%}
+
 {% if copy contains 'img src=' %}
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}
 {% endif -%}
@@ -21,16 +35,14 @@ layout: default
   {% assign copy = copy | replace: '<!--copynote-->', copynotice %}
 {% endif -%}
 
+{% capture datef -%}<span class="byline">{{ site.author }}, <time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time>{% endcapture -%}
+{% assign copysize = copy | size | minus: 4 %}
+{% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
+
 <article><!-- {{ copy | number_of_words }} words -->
 
-  <header>
-    <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
-    <div class="byline">
-      <p class="author"><a href="/about/">{{ site.author }}</a></p>
-      <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time></p>
-    </div>
-  </header>
+  {% capture hed %}<header><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ titlef }}{% if include.is_home %}</a>{% endif %}</h1><p>{% endcapture -%}
 
-  {{ copy }}
+  {{ copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed }}
 
 </article>

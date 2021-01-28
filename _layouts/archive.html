@@ -1,6 +1,6 @@
 ---
 layout: default
-# style css call is set in _config! 
+# style css call is set in _config!
 ---
 
 {% comment -%}
@@ -29,6 +29,7 @@ layout: default
   {% for p in site.posts -%}
     {% assign current_month = p.date | date: "%m" -%}
     {% assign current_year = p.date | date: "%Y" -%}
+    <div class="hr pagebreak"></div>
     {% if is_month_index and current_month == page_month and current_year == page_year -%}
     <section>
       <h1><a href="{{ p.url | prepend: site.url }}">{{ p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify }}</a></h1>

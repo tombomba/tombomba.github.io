@@ -50,14 +50,8 @@
 <body>
 
   <header role="banner">
-    <div class="logo">{% include icon-skull.svg %}</div>
-  </header>
-
-  <!--
-  <header role="banner">
     <div class="logo"><a href="{{ site.url }}"><img src="{{ 'trashdiary.png' | prepend: site.img_dir | prepend: site.url }}" alt="trash diary dot com"></a></div>
   </header>
-  -->
 
 <main role="main"><!-- {{ page.layout }} -->
 
@@ -73,8 +67,14 @@
   {% endif -%}
   {% endcomment -%}
 
-  <ul class="meta">
-    <li><a href="{{ site.url }}">{{ site.title | downcase }}</a></li>{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="https://twitter.com/{{ site.twitter }}">twitter</a></li><li><a href="/feed.xml">RSS</a></li>
+  <hr>
+
+  <ul>
+    <li><a href="{{ site.url }}">{{ site.domain | capitalize }}</a></li>
+    {% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}
+    <li><a href="#">License</a></li>
+    <li><a href="{{ site.twitter }}">Twitter</a></li>
+    <li><a href="/feed.xml">RSS</a></li>
   </ul>
 
 </footer>

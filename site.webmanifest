@@ -1,19 +1,19 @@
 {
-    "name": "Trash Diary",
-    "short_name": "Trash Diary",
+    "name": "Bunkhouse",
+    "short_name": "Bunkhouse",
     "icons": [
         {
-            "src": "/android-chrome-192x192.png?v=winbin93",
+            "src": "/android-chrome-192x192.png?v=horsey",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-512x512.png?v=winbin93",
+            "src": "/android-chrome-512x512.png?v=horsey",
             "sizes": "512x512",
             "type": "image/png"
         }
     ],
-    "theme_color": "#009999",
-    "background_color": "#009999",
+    "theme_color": "#f3f3f3",
+    "background_color": "#f3f3f3",
     "display": "standalone"
 }

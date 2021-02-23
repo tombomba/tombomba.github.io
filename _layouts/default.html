@@ -50,7 +50,7 @@
 <body>
 
   <header role="banner">
-    <div class="logo"><a href="{{ site.url }}"><img src="{{ 'trashdiary.png' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.domain | capitalize }}"></a></div>
+    <div class="logo {{ site.posts.first.date | date: "%a" | downcase }}"><a href="{{ site.url }}">{% include icon-horseshoe.svg %}</a><a href="{{ site.url }}"><span></span></a></div>
   </header>
 
 <main role="main"><!-- {{ page.layout }} -->
@@ -61,15 +61,9 @@
 
 <footer>
 
-  {% comment %}
-  {% if page.is_home %}
-    {% include datelist.html %}
-  {% endif -%}
-  {% endcomment -%}
-
   <div class="hr"></div>
 
-  <ul>{% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<!-- <li><a href="#">License</a></li> --><li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li></ul>
+  <ul>{% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li></ul>
 
 </footer>
 

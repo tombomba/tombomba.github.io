@@ -6,17 +6,54 @@ header[role="banner"]
   background-color: $bg-color
   border-radius: 0 4px 4px 0
   div.logo
+    position: relative
     display: flex
     align-items: center
     justify-content: center
     width: var(--bem-double)
     height: var(--bem-double)
-    background-color: $logo-color
+    background-color: black
     border-radius: 4px 0 0 4px
     img
       width: calc(var(--bem) * 1.25)
       height: calc(var(--bem) * 1.25)
     svg
-      width: var(--bem)
-      height: var(--bem)
-      fill: $shock-color
+      width: calc(var(--bem) * 1.25)
+      height: calc(var(--bem) * 1.25)
+      fill: white
+    &.mon
+      background-color: #06F
+      svg
+        fill: #6FF
+    &.tue
+      background-color: #C06
+      svg
+        fill: #FC0
+    &.wed
+      background-color: #393
+      svg
+        fill: #9F0
+    &.thu
+      background-color: #F30
+      svg
+        fill: #FC0
+    &.fri
+      background-color: #09F
+      svg
+        fill: #9F3
+    &.sat,
+    &.sun
+      background-color: #099
+      svg
+        fill: #FC0
+    span
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      z-index: 1
+      background-image: url('img/shim.gif')
+
+  //$one-color: #06f, #c06, #393, #f30, #09f, #099
+  //$two-color: #6ff, #fc0, #9f0, #fc0, #9f3, #fc0

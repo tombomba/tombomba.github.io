@@ -50,8 +50,8 @@
 <body>
 
   <header role="banner">
-    <div class="logo"><a href="{{ site.url }}">{% include icon-horseshoe.svg %}</a><a href="{{ site.url }}"><span></span></a></div>
-  </header>
+    <div class="logo {{ site.posts.first.date | date: '%a' | downcase }}"><a href="{{ site.url }}">{% include icon-horseshoe.svg %}</a><a href="{{ site.url }}"><span></span></a></div>
+  </header><!-- foo foo foo -->
 
 <main role="main"><!-- {{ page.layout }} -->
 

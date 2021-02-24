@@ -40,7 +40,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@{{ site.twitter }}">
     <meta name="twitter:creator" content="@{{ site.twitter }}">
-    <meta name="twitter:image:src" content="{{ 'default-twitter.png' | prepend: site.img_dir | prepend: site.url }}">
+    <meta name="twitter:image:src" content="{{ 'default-social.png' | prepend: site.img_dir | prepend: site.url }}">
 
     <!-- css -->
     <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css_dir | prepend: site.url | append: '.css' }}?v=redaste">
@@ -50,7 +50,7 @@
 <body>
 
   <header role="banner">
-    <div class="logo {{ site.posts.first.date | date: "%a" | downcase }}"><a href="{{ site.url }}">{% include icon-horseshoe.svg %}</a><a href="{{ site.url }}"><span></span></a></div>
+    <div class="logo"><a href="{{ site.url }}">{% include icon-horseshoe.svg %}</a><a href="{{ site.url }}"><span></span></a></div>
   </header>
 
 <main role="main"><!-- {{ page.layout }} -->

@@ -50,7 +50,7 @@
 <body>
 
   <header role="banner">
-    <div class="logo {{ site.posts.first.date | date: '%a' | downcase }}"><a href="{{ site.url }}">{% include icon-horseshoe.svg %}</a><a href="{{ site.url }}"><span></span></a></div>
+    <div class="logo"><a href="{{ site.url }}">{% include icon-horseshoe.svg %}</a><a href="{{ site.url }}"><span></span></a></div>{% comment %}{{ site.posts.first.date | date: '%a' | downcase }}{% endcomment %}
   </header><!-- foo foo foo -->
 
 <main role="main"><!-- {{ page.layout }} -->

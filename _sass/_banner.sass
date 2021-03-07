@@ -8,10 +8,11 @@ header[role="banner"]
   justify-content: center
   div.shim
     flex: 1
-    padding-left: 0.33em
+    padding-left: 0.66em
   div.text
     h1
       font-family: 'Rye', $sans
+      font-size: 161%
       font-weight: normal
       line-height: 1
       letter-spacing: -0.1px
@@ -37,19 +38,6 @@ header[role="banner"]
       width: calc(var(--bem) * 1.25)
       height: calc(var(--bem) * 1.25)
       fill: #FC0
-    //&.mon
-      @include set-logo-color(#06F, #6FF)
-    //&.tue
-      @include set-logo-color(#C06, #FC0)
-    //&.wed
-      @include set-logo-color(#393, #9F0)
-    //&.thu
-      @include set-logo-color(#F30, #FC0)
-    //&.fri
-      @include set-logo-color(#09F, #9F3)
-    //&.sat,
-    //&.sun
-      @include set-logo-color(#099, #FC0)
     span
       position: absolute
       width: 100%
@@ -59,5 +47,18 @@ header[role="banner"]
       z-index: 1
       background-image: url('../img/shim.gif')
 
-// $one-color: #06f, #c06, #393, #f30, #09f, #099
-// $two-color: #6ff, #fc0, #9f0, #fc0, #9f3, #fc0
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40em)
+
+
+  header[role="banner"] div.text h1
+    font-size: 205%
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 60em)
+
+
+  header[role="banner"] div.text h1
+    font-size: 261%

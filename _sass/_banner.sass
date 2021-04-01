@@ -11,14 +11,14 @@ header[role="banner"]
     padding-left: 0.66em
   div.text
     h1
-      font-family: $serif
+      font-family: 'Bungee Shade', $sans
       font-size: 161%
-      font-weight: normal
+      //font-weight: normal
       line-height: 1
       letter-spacing: -0.1px
       a:link,
       a:visited
-        color: #F03
+        color: $link-color
         text-decoration: none
       a:hover
         text-decoration: none
@@ -27,7 +27,7 @@ header[role="banner"]
     display: flex
     align-items: center
     justify-content: center
-    width: var(--bem-double)
+    //width: var(--bem-double)
     height: var(--bem-double)
     background-color: none
     border-radius: 4px
@@ -61,7 +61,7 @@ header[role="banner"]
 
   header[role="banner"]
     div.logo
-      margin-left: -0.5em
+      margin-left: -9px
 
 //-----------------------------------------------------------------------------
 
@@ -71,5 +71,3 @@ header[role="banner"]
   header[role="banner"]
     div.text h1
       font-size: 261%
-    div.logo
-      margin-left: -1em

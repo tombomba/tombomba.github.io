@@ -45,17 +45,21 @@
     <!-- css -->
     <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css_dir | prepend: site.url | append: '.css' }}?v=redaste">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=rye&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
   <header role="banner">
-    <div class="text"><h1><a href="{{ site.url }}">bomtomba</a></h1></div>
+    <div class="text"><h1><a href="{{ site.url }}">Trash Diary</a></h1></div>
     <div class="shim"><div class="hr"></div></div>
   </header>
 
   {% comment %}<!--
+    <header role="banner">
+      <div class="logo"><a href="{{ site.url }}">{% include icon-horseshoe.svg %}</a><a href="{{ site.url }}"><span></span></a></div>{% comment %}{{ site.posts.first.date | date: '%a' | downcase }}{% endcomment %}
+      <div class="shim"><div class="hr"></div></div>
+    </header>
     <header role="banner">
       <div class="logo"><a href="{{ site.url }}">{% include icon-horseshoe.svg %}</a><a href="{{ site.url }}"><span></span></a></div>{% comment %}{{ site.posts.first.date | date: '%a' | downcase }}{% endcomment %}
       <div class="shim"><div class="hr"></div></div>

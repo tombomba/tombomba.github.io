@@ -8,7 +8,6 @@
 //-----------------------------------------------------------------------------
 
 $body-color:    #EAEAEA !default
-$logo-color:    #F03 !default
 $logo-bg-color: #000 !default
 $text-color:    #000 !default
 
@@ -16,18 +15,18 @@ $link-color:    #36C !default
 $visited-color: #939 !default
 $active-color:  #F90 !default
 
-$select-color:  #FFC !default
+//$select-color:  #FFC !default
 
-//$key: random(6)
-  $one-color: #06f, #c06, #393, #f30, #09f, #099
-  $two-color: #6ff, #fc0, #9f0, #fc0, #9f3, #fc0
-  $primary-color: nth($one-color, $key)
-  $secondary-color: nth($two-color, $key)
-  $select-color: $secondary-color
+$key: random(6)
+$one-color: #06f, #c06, #393, #f30, #09f, #099
+$two-color: #6ff, #fc0, #9f0, #fc0, #9f3, #fc0
+$primary-color: nth($one-color, $key)
+$secondary-color: nth($two-color, $key)
+$select-color: $secondary-color
 
-  $logo-color:    nth($one-color, $key) !default
-  $shock-color:   nth($two-color, $key) !default
-  $select-color:  $shock-color !default
+$logo-color:    nth($one-color, $key) !default
+$shock-color:   nth($two-color, $key) !default
+$select-color:  $shock-color !default
 
 //$body-color:    #F3F3F3 !default
   $logo-bg-color: #E2E2E2 !default

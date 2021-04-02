@@ -18,7 +18,7 @@ header[role="banner"]
       letter-spacing: -0.1px
       a:link,
       a:visited
-        color: $link-color
+        color: $logo-color
         text-decoration: none
       a:hover
         text-decoration: none
@@ -27,19 +27,18 @@ header[role="banner"]
     display: flex
     align-items: center
     justify-content: center
-    margin-left: -3px
-    //width: var(--bem-double)
+    width: var(--bem-double)
     height: var(--bem-double)
-    background-color: none
+    background-color: #F30
     border-radius: 4px
     img
       //width: var(--bem-double)
       height: var(--bem-double)
-    //svg
-      width: var(--bem-double)
-      height: var(--bem-double)
-      fill: $link-color
-    //span
+    svg
+      width: var(--bem)
+      height: var(--bem)
+      fill: #FC0
+    span
       position: absolute
       width: 100%
       height: 100%
@@ -59,19 +58,9 @@ header[role="banner"]
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 30em)
-
-  header[role="banner"]
-    div.logo
-      margin-left: -6px
-
-//-----------------------------------------------------------------------------
-
 @media screen and (min-width: 50em)
 
 
   header[role="banner"]
     div.text h1
       font-size: 261%
-    div.logo
-      margin-left: -9px

@@ -7,15 +7,26 @@
 
 //-----------------------------------------------------------------------------
 
-$body-color:    #E2E2E2 !default
+$body-color:    #F3F3F3 !default
 $logo-bg-color: #000 !default
-$text-color:    #0E0E0E !default
+$text-color:    #1F1F1F !default
 
-$link-color:    #0000FF !default
-$visited-color: #800080 !default
-$active-color:  #F00 !default
+$link-color:    #36C !default
+$visited-color: #939 !default
+$active-color:  #F90 !default
 
-$select-color:  #FFC !default
+//$select-color:  #FFC !default
+
+$key: random(6)
+$one-color: #06f, #c06, #393, #f30, #09f, #099
+$two-color: #6ff, #fc0, #9f0, #fc0, #9f3, #fc0
+$primary-color: nth($one-color, $key)
+$secondary-color: nth($two-color, $key)
+$select-color: $secondary-color
+
+$logo-color:    nth($one-color, $key) !default
+$shock-color:   nth($two-color, $key) !default
+$select-color:  $shock-color !default
 
 //$key: random(6)
   $one-color: #06f, #c06, #393, #f30, #09f, #099
@@ -32,9 +43,9 @@ $select-color:  #FFC !default
   $logo-bg-color: #E2E2E2 !default
   $text-color:    #1F1F1F !default
 
-//$link-color:    #36C !default
-  $visited-color: #939 !default
-  $active-color:  #F90 !default
+//$link-color:    #0000FF !default
+  $visited-color: #800080 !default
+  $active-color:  #F00 !default
 
 //$logo-color:    #099 !default
   $shock-color:   #FC0 !default

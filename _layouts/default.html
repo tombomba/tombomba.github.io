@@ -49,6 +49,7 @@
 </head>
 
 <body>
+
   <header role="banner">
     <div class="text"><h1><a href="{{ site.url }}">bomtomba</a></h1></div>
     <div class="shim"><div class="hr"></div></div>
@@ -56,13 +57,13 @@
 
   {% comment %}<!--
     <header role="banner">
+      <div class="logo"><a href="{{ site.url }}">{% include icon-horseshoe.svg %}</a><a href="{{ site.url }}"><span></span></a></div>{% comment %}{{ site.posts.first.date | date: '%a' | downcase }}{% endcomment %}
+      <div class="shim"><div class="hr"></div></div>
+    </header>
+    <header role="banner">
       <div class="logo"><a href="{{ site.url }}"><img src="{{ 'bomtomba.png' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.title }}"></a></div>
       <div class="shim"><div class="hr"></div></div>
     </header>
-  <header role="banner">
-    <div class="logo"><a href="{{ site.url }}">{% include icon-horseshoe.svg %}</a><a href="{{ site.url }}"><span></span></a></div>{% comment %}{{ site.posts.first.date | date: '%a' | downcase }}{% endcomment %}
-    <div class="shim"><div class="hr"></div></div>
-  </header>
   -->{% endcomment -%}
 
 <main role="main"><!-- {{ page.layout }} -->

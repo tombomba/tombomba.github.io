@@ -1,9 +1,4 @@
-//-----------------------------------------------------------------------------
 
-@mixin set-logo-color($back, $fore)
-  background-color: $back
-  svg
-    fill: $fore
 
 //-----------------------------------------------------------------------------
 
@@ -29,6 +24,8 @@ $logo-color:    #000
 $shock-color:   $border-dark
 $select-color:  #FFC !default
 
+//-----------------------------------------------------------------------------
+
 //$key: random(6)
   $one-color: #06f, #c06, #393, #f30, #09f, #099
   $two-color: #6ff, #fc0, #9f0, #fc0, #9f3, #fc0
@@ -51,13 +48,4 @@ $select-color:  #FFC !default
   $shock-color:   #FC0 !default
   $select-color:  #FFC !default
 
-
 //-----------------------------------------------------------------------------
-
-$bg-color:      darken($body-color, 5%) !default
-$mix-color:     mix($body-color, $text-color, 36%) !default
-$light-mix:     lighten($mix-color, 33%) !default
-$dark-mix:      darken($mix-color, 33%) !default
-
-$border-dark:   #A7A7A7 !default
-$border-light:  #F3F3F3 !default

@@ -42,6 +42,12 @@ html
 @-ms-viewport
   width: device-width
 
+::selection
+  background: $select-color
+
+::-moz-selection
+  background: $select-color
+
 body
 
   font-family: $serif
@@ -77,7 +83,7 @@ a
 time
   white-space: nowrap
 
-div.hr
+//div.hr
   width: 100%
   margin: 0
   padding: 0

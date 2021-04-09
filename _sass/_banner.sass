@@ -3,9 +3,20 @@
 header[role="banner"]
   max-width: var(--page-width)
   margin: 0 auto
+  display: flex
+  align-items: center
   div.shim
     flex: 1
     padding-left: 0.66em
+    padding-top: 2px
+    div.hr
+      width: 100%
+      margin: 0
+      padding: 0
+      height: 6px
+      border: 0
+      border-top: 1px dashed $mix-color
+      background-color: $body-color
   div.text
     h1
       font-family: 'Rye', $sans
@@ -15,12 +26,8 @@ header[role="banner"]
       letter-spacing: -0.1px
       a:link,
       a:visited
-        color: #000
+        color: $link-color
         text-decoration: none
-        border-bottom: thin solid $border-dark
-        box-shadow: 0px -5px 0px $border-dark inset
-      a:hover:link
-        background-color: darken($body-color, 5%)
   div.logo
     position: relative
     display: flex

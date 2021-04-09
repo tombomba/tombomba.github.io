@@ -15,14 +15,12 @@ header[role="banner"]
       letter-spacing: -0.1px
       a:link,
       a:visited
-        color: $logo-color
+        color: #000
         text-decoration: none
-        border-bottom: 1px solid $shock-color
-        box-shadow: 0px -5px 0px $shock-color inset
+        border-bottom: thin solid $border-dark
+        box-shadow: 0px -5px 0px $border-dark inset
       a:hover:link
-        background-color: $shock-color
-      //a:hover
-        text-decoration: none
+        background-color: darken($body-color, 5%)
   div.logo
     position: relative
     display: flex

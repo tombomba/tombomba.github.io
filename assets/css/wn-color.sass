@@ -1,0 +1,30 @@
+---
+# RANDO COLORS FOR LOGOTYPE & FOOT
+---
+
+$key: random(6)
+$one-color: #06f, #c06, #393, #f30, #09f, #099
+$two-color: #6ff, #fc0, #9f0, #fc0, #9f3, #fc0
+$primary-color: nth($one-color, $key)
+$secondary-color: nth($two-color, $key)
+
+$logo-color:    nth($one-color, $key) !default
+$shock-color:   nth($two-color, $key) !default
+$select-color:  $shock-color !default
+
+::selection
+  background: $select-color
+
+::-moz-selection
+  background: $select-color
+
+header[role="banner"] div.text
+  h1 a:link,
+  h1 a:visited
+    color: $logo-color
+    text-decoration: none
+    border-bottom: thin solid $shock-color
+    box-shadow: 0px -5px 0px $shock-color inset
+
+footer
+  border-top: 6px solid $shock-color

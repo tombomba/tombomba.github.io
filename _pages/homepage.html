@@ -14,6 +14,7 @@ permalink: /index.html
     {% assign range = today | times: 1 |  minus: current -%}
 
     {% if scope > range %}
+      {% unless forloop.first %}<hr class="section">{% endunless %}
       {% if page.is_home and forloop.first %}<section class="first">{% else %}<section>{% endif %}
         {% assign blurb = p.excerpt | strip | strip_html | normalize_whitespace | smartify -%}
         {% if p.linkwords %}

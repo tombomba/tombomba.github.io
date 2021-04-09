@@ -3,31 +3,22 @@
 header[role="banner"]
   max-width: var(--page-width)
   margin: 0 auto
-  display: flex
-  align-items: center
-  div.shim
-    flex: 1
-    padding-left: 0.66em
-    padding-top: 2px
-    div.hr
-      width: 100%
-      margin: 0
-      padding: 0
-      height: 6px
-      border: 0
-      border-top: 1px dashed $mix-color
-      background-color: $body-color
+
+  div.wrap
+    display: flex
+    align-items: center
   div.text
-    h1
-      font-family: 'Rye', $sans
-      font-size: 161%
-      font-weight: 400
-      line-height: 1
-      letter-spacing: -0.1px
+    margin-left: 0.75em
+    h1, p
+      line-height: var(--hed-lh)
       a:link,
       a:visited
-        color: $logo-color
+        color: #000
         text-decoration: none
+    h1
+      font-size: 100%
+    p
+      font-size: 87.5%
   div.logo
     position: relative
     display: flex
@@ -35,7 +26,7 @@ header[role="banner"]
     justify-content: center
     width: var(--bem-double)
     height: var(--bem-double)
-    background-color: #000
+    background-color: $logo-color
     border-radius: 4px
     img
       //width: var(--bem-double)
@@ -55,7 +46,7 @@ header[role="banner"]
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 22em)
+//@media screen and (min-width: 22em)
 
   header[role="banner"]
     div.text h1

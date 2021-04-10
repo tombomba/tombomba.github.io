@@ -5,6 +5,9 @@ header[role="banner"]
   margin: 0 auto
   //padding-bottom: 1em
   //border-bottom: 1px dashed $border-dark
+  display: flex
+  align-items: center
+  background-color: darken($body-color, 5%)
   div.wrap
     display: flex
     align-items: center
@@ -20,15 +23,19 @@ header[role="banner"]
         font-size: 100%
       p
         font-size: 87.5%
+  div.hr
+    flex: 1
+    margin-left: 1em
   div.wordmark
     h1
-      font-family: 'Rye', $serif
+      font-family: 'Rye', $sans
       font-size: 161%
       line-height: 1
       font-weight: 400
+      letter-spacing: -0.1px
       a:link,
       a:visited
-        color: #000
+        color: $logo-color
         border-bottom: 1px solid $border-dark
         box-shadow: 0px -5px 0px $border-dark inset
       a:hover
@@ -46,8 +53,8 @@ header[role="banner"]
       width: calc(var(--bem) * 1.25)
       height: calc(var(--bem) * 1.25)
     svg
-      width: calc(var(--bem) * 1.33)
-      height: calc(var(--bem) * 1.33)
+      width: calc(var(--bem) * 1)
+      height: calc(var(--bem) * 1)
       fill: $shock-color
     span
       position: absolute
@@ -68,8 +75,9 @@ header[role="banner"]
 
 //-----------------------------------------------------------------------------
 
+
 //@media screen and (min-width: 52em)
 
   header[role="banner"]
-    div.text h1
+    div.wordmark h1
       font-size: 261%

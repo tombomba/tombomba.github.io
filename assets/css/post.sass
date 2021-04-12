@@ -6,20 +6,20 @@
 @import init, banner, footer, article
 
 article
-  margin-top: calc(var(--bem) + 0.33em)
+  margin-top: calc(var(--bem) + 0.66em)
   header
-    h1, p
-      display: inline
-      font-size: 1em
-    span.punc::after
-      content: ".\20"
-
-  span.byline::before
-    content: "\00A0\2014\00A0"
-
-  time, span.byline
-    font-style: italic
-    color: $mix-color
+    h1
+      font-size: var(--hed-size)
+      line-height: var(--hed-lh)
+    div.byline
+      p
+        display: inline
+        margin: 0
+        font-size: percentage(14/16)
+        line-height: var(--hed-lh)
+        //color: $mix-color
+        &:first-of-type::after
+          content: "\20/\20"
 
   time
     white-space: nowrap

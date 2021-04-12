@@ -1,48 +1,17 @@
 //-----------------------------------------------------------------------------
 
 header[role="banner"]
+  position: relative
   max-width: var(--page-width)
   margin: 0 auto
-  //padding-bottom: 1em
-  //border-bottom: 1px dashed $border-dark
   display: flex
   align-items: center
   background-color: darken($body-color, 5%)
   border-radius: 4px
-  div.wrap
-    display: flex
-    align-items: center
-    div.text
-      margin-left: 0.75em
-      h1, p
-        line-height: var(--hed-lh)
-        a:link,
-        a:visited
-          color: #000
-          text-decoration: none
-      h1
-        font-size: 100%
-      p
-        font-size: 87.5%
-  div.hr
-    flex: 1
-    margin-left: 1em
-  div.wordmark
-    h1
-      font-family: 'Rye', $sans
-      font-size: 161%
-      line-height: 1
-      font-weight: 400
-      letter-spacing: -0.1px
-      a:link,
-      a:visited
-        color: $logo-color
-        border-bottom: 1px solid $border-dark
-        box-shadow: 0px -5px 0px $border-dark inset
-      a:hover
-        text-decoration: none
+  &:hover
+    background-color: lighten($body-color, 5%)
+    transition: background-color 1000ms linear
   div.logo
-    position: relative
     display: flex
     align-items: center
     justify-content: center
@@ -54,31 +23,14 @@ header[role="banner"]
       width: calc(var(--bem) * 1.25)
       height: calc(var(--bem) * 1.25)
     svg
-      width: calc(var(--bem) * 1)
-      height: calc(var(--bem) * 1)
+      width: var(--bem)
+      height: var(--bem)
       fill: $shock-color
-    span
-      position: absolute
-      width: 100%
-      height: 100%
-      top: 0
-      left: 0
-      z-index: 1
-      background-image: url('../img/shim.gif')
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 22em)
-
-  header[role="banner"]
-    div.wordmark h1
-      font-size: 205%
-
-//-----------------------------------------------------------------------------
-
-
-//@media screen and (min-width: 52em)
-
-  header[role="banner"]
-    div.wordmark h1
-      font-size: 261%
+  span
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    z-index: 1
+    background-image: url('../img/shim.gif')

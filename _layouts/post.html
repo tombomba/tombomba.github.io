@@ -26,7 +26,7 @@ layout: default
   <header>
     <h1>{{ titlef }}</h1>
     <div class="byline">
-      <p class="author">{{ p.author | default: site.author }}</p>
+      <p class="author"><a href="/about/">{{ p.author | default: site.author }}</a></p>
       <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time></p>
     </div>
   </header>

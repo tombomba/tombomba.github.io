@@ -2,30 +2,42 @@
 
 header[role="banner"]
   position: relative
-  max-width: var(--page-width)
+  //max-width: var(--page-width)
+  height: var(--bem-triple)
   margin: 0 auto
   display: flex
-  align-items: center
-  background-color: darken($body-color, 5%)
-  border-radius: 4px
-  &:hover
-    background-color: $logo-color
-    //transition: background-color 3000ms linear
+  align-items: flex-end
+  background-color: #FFF
+  border-radius: 0 0 4px 4px
+  div.placewrap
+    width: 100%
+    max-width: var(--page-width)
+    margin: 0 auto
+  div.word
+    padding-bottom: 0.66em
+    h1
+      font-size: 161%
+      font-family: 'Rye', $serif
+      font-weight: 400
+      line-height: 1
+      a:link,
+      a:visited
+        color: #000
   div.logo
     display: flex
     align-items: center
     justify-content: center
     width: var(--bem-double)
     height: var(--bem-double)
-    background-color: $logo-color
-    border-radius: 4px 0 0 4px
+    background-color: #000
+    border-radius: 4px 4px 0 0
     img
       width: var(--bem)
       height: var(--bem)
     svg
       width: var(--bem)
       height: var(--bem)
-      fill: $shock-color
+      fill: #FFF
   span
     position: absolute
     width: 100%
@@ -34,3 +46,15 @@ header[role="banner"]
     left: 0
     z-index: 1
     background-image: url('../img/shim.gif')
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40em)
+  header[role="banner"] div.word h1
+    font-size: 161%
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 60em)
+  header[role="banner"] div.word h1
+    font-size: 205%

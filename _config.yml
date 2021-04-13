@@ -1,7 +1,15 @@
-title: "Bomtomba"
+title: "Bunkhouse"
 description: "a media diary"
 domain: "trashdiary.com"
 url: "https://www.trashdiary.com"
+
+#title: "Localhost"
+#description: "A development site"
+#domain: "localhost:4000"
+#url: "http://localhost:4000"
+#safe: false
+#future: true
+#show_drafts: true
 
 author: Tom Bomba
 twitter: bunkhou_se

@@ -44,7 +44,6 @@
 
     <!-- css -->
     <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css_dir | prepend: site.url | append: '.css' }}?v=redaste">
-    <link rel="stylesheet" href="{{ 'wn-color-2' | prepend: site.css_dir | prepend: site.url | append: '.css' }}?v=redaste">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rye&display=swap">
 </head>
@@ -52,8 +51,7 @@
 <body>
 
   <header role="banner">
-    <div class="placewrap"><div class="logo"><a href="{{ site.url }}">{% include icon-horseshoe.svg %}</a></div></div>
-    <a href="{{ site.url }}"><span></span></a>
+    <div class="placewrap"><div class="logo"><a href="{{ site.url }}">{% include icon-horseshoe.svg %}<span></span></a></div></div>
   </header>
 
   <!--

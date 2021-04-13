@@ -48,11 +48,6 @@ html
 ::-moz-selection
   background: $select-color
 
-header[role="banner"],
-main[role="main"],
-footer
-  padding: 0 1em
-
 body
 
   font-family: $serif
@@ -65,6 +60,8 @@ body
   text-rendering: optimizeSpeed
   -ms-text-size-adjust: auto
   -webkit-text-size-adjust: auto
+
+  padding: 0 1em
 
 main[role="main"]
   max-width: var(--page-width)
@@ -147,9 +144,7 @@ div.hr
     --body-size: 112.5%
     --hed-size: 127.777777778%
 
-  header[role="banner"],
-  main[role="main"],
-  footer
+  body
     padding: 0
 
 //-----------------------------------------------------------------------------

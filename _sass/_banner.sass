@@ -1,8 +1,6 @@
 //-----------------------------------------------------------------------------
 
 header[role="banner"]
-  position: relative
-  //max-width: var(--page-width)
   height: var(--bem-triple)
   margin: 0 auto
   display: flex
@@ -24,6 +22,7 @@ header[role="banner"]
       a:visited
         color: #000
   div.logo
+    position: relative
     display: flex
     align-items: center
     justify-content: center
@@ -38,14 +37,14 @@ header[role="banner"]
       width: var(--bem)
       height: var(--bem)
       fill: $body-color
-  span
-    position: absolute
-    width: 100%
-    height: 100%
-    top: 0
-    left: 0
-    z-index: 1
-    background-image: url('../img/shim.gif')
+    span
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      z-index: 1
+      background-image: url('../img/shim.gif')
 
 //-----------------------------------------------------------------------------
 

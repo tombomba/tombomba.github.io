@@ -12,11 +12,13 @@ article
     line-height: var(--hed-lh)
   section
     margin-top: var(--bem)
-    padding-top: var(--bem)
-    border-top: 1px dashed $border-dark
-    &.first
-      padding: 0
-      border: 0
+    //padding-top: var(--bem)
+    //border-top: 1px dashed $border-dark
+    &:first-of-type
+      padding-top: var(--bem)
+      border-top: 1px dashed $border-dark
+      //padding: 0
+      //border: 0
     h1, p
       display: inline
       font-size: 1em

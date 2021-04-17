@@ -1,5 +1,5 @@
-title: "Bunkhouse"
-description: "a media diary"
+title: "Bomtomba"
+description: "a media diary, a small collage, a dumb blog"
 domain: "trashdiary.com"
 url: "https://trashdiary.com"
 
@@ -12,7 +12,7 @@ url: "https://trashdiary.com"
 #show_drafts: true
 
 author: Tom Bomba
-twitter: bunkhou_se
+twitter: bomtomba
 letterboxd: t__bomba
 
 img_dir: /assets/img/

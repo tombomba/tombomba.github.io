@@ -1,15 +1,21 @@
 ---
-title: "404: Page not found"
-excerpt: "Page not found error"
+title: "Page not found"
+excerpt: "404: Page not found error"
 permalink: /404.html
 ---
 
 <article>
 
   <header>
-    <h1>{{ page.title }}</h1>
+    <h1>That page was no good. Try another?</h1>
   </header>
 
-  <p>Sorry, the page you requested was not found. Please check the URL for proper spelling and capitalization. If you're having trouble locating a destination on <em>{{ site.title }},</em> try visiting the <a href="{{ site.url }}">homepage</a> or browsing posts from <a href="{{ site.posts.first.date | date: '/%Y/%m/' | prepend: site.url }}">this month</a> or <a href="{{ site.posts.first.date | date: '/%Y/' | prepend: site.url }}">this&nbsp;year.</a></p>
+  <ul class="plain">
+    {% for p in site.posts limit: 5 %}
+      <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip | strip_html | normalize_whitespace | smartify }}</a></li>
+    {% endfor %}
+  </ul>
+
+  <p>If you're having trouble locating a destination on <em>{{ site.title }},</em> try visiting the <a href="{{ site.url }}">homepage</a> or browsing posts from <a href="{{ site.posts.first.date | date: '/%Y/%m/' | prepend: site.url }}">this month</a> or <a href="{{ site.posts.first.date | date: '/%Y/' | prepend: site.url }}">this&nbsp;year.</a></p>
 
 </article>

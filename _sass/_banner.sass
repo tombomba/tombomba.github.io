@@ -4,12 +4,15 @@ header[role="banner"]
   margin: var(--bem) auto 0 auto
   max-width: var(--page-width)
   div.wordmark
-    h1
+    h1, p
       font-size: 161.1%
       line-height: 1.3
       text-transform: lowercase
       &::after
         content: "."
+    p
+      font-weight: 700
+      color: $mix-color     
   div.logo
     position: relative
     display: flex

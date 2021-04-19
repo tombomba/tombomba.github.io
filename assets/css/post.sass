@@ -6,30 +6,29 @@
 @import init, banner, footer, article
 
 article
-  margin-top: calc(var(--bem) + 0.33em)
   header
     h1
       font-size: var(--hed-size)
       line-height: var(--hed-lh)
-    div.byline
-      p
-        display: inline
-        margin: 0
-        font-size: percentage(14/16)
-        line-height: var(--hed-lh)
+  div.byline
+    margin-top: var(--bem)
+    p
+      display: inline
+      margin: 0
+      color: $mix-color
+      a:link,
+      a:visited
         color: $mix-color
-        a:link,
-        a:visited
-          color: $mix-color
-        &:first-of-type::after
-          content: "\20/\20"
+      &:first-of-type::after
+        content: "\20/\20"
 
   time
     white-space: nowrap
+    //foo
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 40em)
+//@media screen and (min-width: 40em)
 
   article
     margin-top: calc(var(--bem) + 0.66em)

@@ -1,26 +1,14 @@
 //-----------------------------------------------------------------------------
 
 header[role="banner"]
-  height: var(--bem-triple)
-  margin: 0 auto
-  display: flex
-  align-items: flex-end
-  background-color: $banner-color
-  border-radius: 0 0 4px 4px
-  div.placewrap
-    width: 100%
-    max-width: var(--page-width)
-    margin: 0 auto
-  div.word
-    padding-bottom: 0.66em
+  margin: var(--bem) auto 0 auto
+  max-width: var(--page-width)
+  div.wordmark
     h1
-      font-size: 161%
-      font-family: 'Rye', $serif
-      font-weight: 400
+      font-size: 205.6%
       line-height: 1
-      a:link,
-      a:visited
-        color: #000
+      &::after
+        content: "."
   div.logo
     position: relative
     display: flex
@@ -49,12 +37,12 @@ header[role="banner"]
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 40em)
+//@media screen and (min-width: 40em)
   header[role="banner"] div.word h1
     font-size: 161%
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 60em)
-  header[role="banner"] div.word h1
-    font-size: 205%
+@media screen and (min-width: 50em)
+  header[role="banner"] div.wordmark h1
+    font-size: 261.11%

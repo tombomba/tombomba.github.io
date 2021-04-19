@@ -44,12 +44,13 @@
 
     <!-- css -->
     <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css_dir | prepend: site.url | append: '.css' }}?v=redaste">
+    <link rel="stylesheet" href="{{ 'wn-color-2' | prepend: site.css_dir | prepend: site.url | append: '.css' }}?v=redaste">
 </head>
 
 <body>
 
   <header role="banner">
-    <div class="placewrap"><div class="logo"><a href="{{ site.url }}"><img src="{{ 'bomtomba.gif' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.title }}"><span></span></a></div></div>
+    <div class="wordmark"><h1><a href="{{ site.url }}">{{ site.title | downcase }}</a></h1></div>
   </header>
 
   {% comment %}
@@ -60,6 +61,9 @@
   </header>
   <header role="banner">
     <div class="placewrap"><div class="word"><h1><a href="{{ site.url }}">{{ site.title | downcase }}</a></h1></div></div>
+  </header>
+  <header role="banner">
+    <div class="placewrap"><div class="logo"><a href="{{ site.url }}"><img src="{{ 'bomtomba.gif' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.title }}"><span></span></a></div></div>
   </header>
   -->
   {% endcomment -%}
@@ -72,7 +76,7 @@
 
 <footer>
 
-  <ul><li><h1><a href="{{ site.url }}">{{ site.title | capitalize }}</a></h1></li>{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li></ul>
+  <ul>{% unless page.is_home %}<li><a href="{{ site.url }}">home</a></li>{% endunless %}{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li></ul>
 
 </footer>
 

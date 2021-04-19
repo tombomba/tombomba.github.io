@@ -2,47 +2,18 @@
 
 footer
   max-width: var(--page-width)
-  margin-top: calc(var(--bem) + 0.33em)
+  margin-top: var(--bem-triple)
+  margin-bottom: var(--bem)
   margin-left: auto
   margin-right: auto
-  border-top: 1px dashed $border-dark
   padding-bottom: 1em
   ul
-    list-style: square
-    margin: 1em 0 0 1.3em
+    margin: 0
+    list-style: none
     li
-      color: $mix-color
-      h1
-        display: inline
-        font-size: 100%
-        a:link,
-        a:visited
-          color: $text-color
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 30em)
-
-  footer
-    ul
-      display: flex
-      align-items: flex-start
-      justify-content: flex-start
-      flex-direction: row
-      margin: 1em 0 0 0
-      list-style: none
-      li
-        margin-right: 0.25em
-        &:not(:last-of-type)::after
-          padding-left: 0.25em
-          content: "-"
-          color: $border-dark
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40em)
-  footer
-    padding-bottom: calc(var(--bem) - 0.33em)
-    ul
-      align-items: center
-      justify-content: center
+      display: inline
+      margin-right: 0.5em
+      font-weight: 700
+      text-transform: lowercase
+      &::after
+        content: "."

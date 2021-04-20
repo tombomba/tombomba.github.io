@@ -2,7 +2,7 @@
 
 footer
   max-width: var(--page-width)
-  margin: var(--bem-double) auto var(--bem) auto  
+  margin: var(--bem-double) auto var(--bem) auto
   ul
     margin: 0
     list-style: none
@@ -15,3 +15,10 @@ footer
       text-transform: lowercase
       &::after
         content: "."
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40em)
+
+  footer
+    margin-top: var(--bem-quad)

@@ -7,10 +7,13 @@
 
 article
   margin-top: var(--bem)
+  header
+    h1, p
+      display: inline
+      font-size: 1em
+    span.punc::after
+      content: "\00A0\2014\20"
 
-  h1.hed
-    font-size: var(--hed-size)
-    line-height: var(--hed-lh)
   div.byline
     margin-top: var(--bem)
     p
@@ -23,9 +26,19 @@ article
       &:first-of-type::after
         content: "\20/\20"
 
+footer
+  margin-top: calc(var(--bem) * 2)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 32em)
+
+  header[role="banner"] h1
+    font-size: 161.1%
+
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40em)
 
-  article
-    margin-top: calc(var(--bem) * 2)
+  footer ul li
+    font-size: 100%

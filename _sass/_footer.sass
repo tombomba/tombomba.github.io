@@ -2,14 +2,17 @@
 
 footer
   max-width: var(--page-width)
-  margin: var(--bem-double) auto var(--bem) auto
+  margin-top: calc(var(--bem) * 2)
+  margin-bottom: var(--bem)
+  margin-left: auto
+  margin-right: auto
+
   ul
     margin: 0
     list-style: none
     li
       display: inline
       margin-right: 0.5em
-      font-size: 111%
       font-weight: 700
       line-height: 1
       text-transform: lowercase
@@ -21,4 +24,4 @@ footer
 @media screen and (min-width: 40em)
 
   footer
-    margin-top: var(--bem-quad)
+    margin-top: calc(var(--bem) * 4)

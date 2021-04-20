@@ -1,5 +1,6 @@
 ---
 layout: default
+style: palt
 ---
 {% assign p = page -%}
 {% assign copy = content | strip | normalize_whitespace -%}
@@ -12,6 +13,8 @@ layout: default
   {% assign titlef = t %}
 {% endif -%}
 
+{% assign punc = '<span class="punc"></span>' %}
+
 {% if copy contains 'img src=' %}
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}
 {% endif -%}
@@ -23,13 +26,15 @@ layout: default
 
 <article><!-- {{ copy | number_of_words }} words -->
 
-  <h1 class="hed">{{ titlef }}</h1>
+  {% capture hed %}<header><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ titlef }}{% if include.is_home %}</a>{% endif %}</h1><p><span class="punc"></span>{% endcapture -%}
 
-  {{ copy }}
+  {{ copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed }}
 
+  {% if p.date %}
   <div class="byline">
     <p class="author"><a href="/about/">{{ p.author | default: site.author }}</a></p>
     <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time></p>
   </div>
+  {% endif -%}
 
 </article>

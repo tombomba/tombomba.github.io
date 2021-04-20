@@ -1,4 +1,5 @@
 ---
+layout: text
 title: "The quick brown fox jumps over the lazy dog"
 linkwords: "quam quis est dictum"
 date: "2020-08-12 09:52 -0800"

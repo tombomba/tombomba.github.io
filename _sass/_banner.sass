@@ -3,54 +3,10 @@
 header[role="banner"]
   margin: var(--bem) auto 0 auto
   max-width: var(--page-width)
-  div.wordmark
-    h1, p
-      font-size: 161.1%
-      font-weight: 700
-      line-height: 1.4
-      text-transform: lowercase
-      &::after
-        content: "."
-    p
-      font-size: 111%
-      color: $mix-color
-  div.logo
-    position: relative
-    display: flex
-    align-items: center
-    justify-content: center
-    width: var(--bem-double)
-    height: var(--bem-double)
-    background-color: #000
-    border-radius: 4px 4px 0 0
-    img
-      width: var(--bem-double)
-      height: var(--bem-double)
-      border-radius: 4px 4px 0 0
-    svg
-      width: var(--bem)
-      height: var(--bem)
-      fill: #FFF
-    span
-      position: absolute
-      width: 100%
-      height: 100%
-      top: 0
-      left: 0
-      z-index: 1
-      background-image: url('../img/shim.gif')
-
-//-----------------------------------------------------------------------------
-
-//@media screen and (min-width: 40em)
-  header[role="banner"] div.word h1
-    font-size: 161%
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 50em)
-  header[role="banner"] div.wordmark
-    h1
-      font-size: 205.6%
-    h2
-      font-size: 205.6%
+  h1
+    font-size: var(--logo-size)
+    line-height: 1
+    font-weight: 700
+    text-transform: lowercase
+    &::after
+      content: "."

@@ -43,7 +43,7 @@
     <meta name="twitter:image:src" content="{{ 'default-social.png' | prepend: site.img_dir | prepend: site.url }}">
 
     <!-- css -->
-    <link rel="stylesheet" href="{{ page.layout | default: 'default' | prepend: site.css_dir | prepend: site.url | append: '.css' }}?v=redaste">
+    <link rel="stylesheet" href="{{ page.style | default: page.layout | prepend: site.css_dir | prepend: site.url | append: '.css' }}?v=redaste">
     <link rel="stylesheet" href="{{ 'wn-color-2' | prepend: site.css_dir | prepend: site.url | append: '.css' }}?v=redaste">
 </head>
 
@@ -59,7 +59,7 @@
 
   <footer>
 
-    <ul>{% unless page.is_home %}<li><a href="{{ site.url }}">home</a></li>{% endunless %}{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li></ul>
+    <ul>{% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li></ul>
 
   </footer>
 

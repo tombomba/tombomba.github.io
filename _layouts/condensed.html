@@ -1,9 +1,9 @@
 ---
 layout: default
-style: palt
 ---
+
 {% assign p = page -%}
-{% assign copy = content | strip | normalize_whitespace -%}
+{% assign copy = p.content | strip | normalize_whitespace -%}
 
 {% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
 {% if t.size > 1 %}
@@ -12,8 +12,6 @@ style: palt
 {% else -%}
   {% assign titlef = t %}
 {% endif -%}
-
-{% assign punc = '<span class="punc"></span>' %}
 
 {% if copy contains 'img src=' %}
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}

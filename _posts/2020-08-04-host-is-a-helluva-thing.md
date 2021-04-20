@@ -1,7 +1,7 @@
 ---
+layout: text
 title: "'Host' is a helluva thing"
 excerpt: "I was skeptical of the Zoom horror premise in \"Host,\" but the movie is exceedingly clever in its writing and direction, and it won me over."
-linkwords: "Zoom horror"
 date: 2020-08-04 12:34 -0800
 ---
 A good ghost story will make me look over my shoulder when it's over. The good ones leave behind a sorta psychic residue I can't shake easily; they creep me out. So I glance back, you know, just in case.

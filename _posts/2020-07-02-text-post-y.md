@@ -1,4 +1,5 @@
 ---
+layout: text
 title: "Phasellus suscipit porttitor faucibus"
 fbog:
   text: "Ut nulla metus, commodo sed imperdiet non, rutrum non nulla. Maecenas at mi non justo fermentum scelerisque"

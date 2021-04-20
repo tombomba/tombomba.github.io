@@ -14,17 +14,12 @@ article
     span.punc::after
       content: "\00A0\2014\20"
 
-  div.byline
-    margin-top: var(--bem)
-    p
-      display: inline
-      margin: 0
+  span.byline
+    font-style: italic
+    color: $mix-color
+    a:link,
+    a:visited
       color: $mix-color
-      a:link,
-      a:visited
-        color: $mix-color
-      &:first-of-type::after
-        content: "\20/\20"
 
 footer
   margin-top: calc(var(--bem) * 2)

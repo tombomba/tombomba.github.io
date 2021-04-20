@@ -32,26 +32,20 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: post
       is_post: true
-      style: "post"
   -
     scope:
       path: "_pages"
       type: "pages"
     values:
-      layout: "default"
       is_page: true
-      style: "page"
   -
     scope:
       path: "_pages/archive"
       type: "pages"
     values:
-      layout: "archive"
       is_page: true
       is_archive: true
-      style: "archive"
 
 permalink: /:year/:month/:title:output_ext
 timezone: America/Los_Angeles

@@ -6,16 +6,39 @@
 @import init, banner, footer
 
 article
+  margin-top: var(--bem)
 
-  section
-    margin-top: var(--bem)
-    h1
-      font-size: 111%
-      line-height: 1.65
-        
+  ul
+    margin: 0
+    list-style-type: none
+    li
+      &:not(:first-of-type)
+        margin-top: var(--bem)
+      h1
+        font-size: 112.5%
+      p
+        margin: 0
+        &.datestamp
+          color: $mix-color
+          a:link,
+          a:visited
+            color: $mix-color
+
 //-----------------------------------------------------------------------------
 
-//@media screen and (min-width: 60em)
+@media screen and (min-width: 32em)
+
+  article ul li h1
+    font-size: 111.76%
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40em)
 
   article
-    margin-top: calc(var(--bem) + 0.66em)
+    margin-top: calc(var(--bem) * 2)
+    ul li h1
+      font-size: 111.11%
+
+  footer ul li
+    font-size: 111.11%

@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% assign p = page -%}
-{% assign copy = p.content | strip | normalize_whitespace -%}
+{% assign copy = content | strip | normalize_whitespace -%}
 
 {% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
 {% if t.size > 1 %}

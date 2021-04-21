@@ -3,10 +3,19 @@
 header[role="banner"]
   margin: var(--bem) auto 0 auto
   max-width: var(--page-width)
-  h1
+  h1, h2
     font-size: var(--logo-size)
-    line-height: 1
+    line-height: var(--hed-lh)
     font-weight: 700
     text-transform: lowercase
-    &::after
-      content: "."
+  h1::after,
+  h2::after
+    content: ".\20"
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 20em)
+
+  header[role="banner"] h1, h2
+    display: inline
+    line-height: 1

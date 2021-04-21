@@ -22,18 +22,22 @@ layout: default
 
 <article>{% if page.date %}<!-- {{ page.date }} -->{% endif %}
 
-  <header>
-    <h1>{{ page.title }}</h1>
-  </header>
-
   <ul>
   {% for p in site.posts -%}
     {% assign current_month = p.date | date: "%m" -%}
     {% assign current_year = p.date | date: "%Y" -%}
     {% if is_month_index and current_month == page_month and current_year == page_year -%}
-    <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify }}</li>
+    <li>
+      <h1 class="hed"><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip | strip_html | normalize_whitespace | smartify }}</a></h1>
+      <p class="dek">{{ p.excerpt | strip | strip_html | normalize_whitespace | smartify }}</p>
+      <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}">{{ p.date | date: "%-d %b %Y" }}</a></time></p>
+    </li>
     {% elsif is_year_index and current_year == page_year -%}
-    <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify }}&nbsp;</a><span class="datestamp"><a href="{{ p.url | prepend: site.url }}">[{{ p.date | date: "%-d %b" }}]</a></span></li>
+    <li>
+      <h1 class="hed"><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip | strip_html | normalize_whitespace | smartify }}</a></h1>
+      <p class="dek">{{ p.excerpt | strip | strip_html | normalize_whitespace | smartify }}</p>
+      <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}">{{ p.date | date: "%-d %b %Y" }}</a></time></p>
+    </li>
     {% endif -%}
   {% endfor -%}
   </ul>

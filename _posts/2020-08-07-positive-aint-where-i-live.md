@@ -1,5 +1,4 @@
 ---
-layout: condensed
 title: "Positive ain't where I live"
 date: 2020-08-07 08:52 -0800
 ---

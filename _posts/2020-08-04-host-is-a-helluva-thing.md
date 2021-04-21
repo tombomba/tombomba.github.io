@@ -1,5 +1,4 @@
 ---
-layout: text
 title: "'Host' is a helluva thing"
 excerpt: "I was skeptical of the Zoom horror premise in \"Host,\" but the movie is exceedingly clever in its writing and direction, and it won me over."
 date: 2020-08-04 12:34 -0800

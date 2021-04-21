@@ -18,11 +18,18 @@
   {% assign copy = copy | replace: '<!--copynote-->', copynotice %}
 {% endif -%}
 
-{% if p.date %}
+{% if include.is_home %}
+  {% if forloop.first %}
+    {% capture datef -%}&nbsp;<span class="byline">(<a href="/about/" aria-label="About the author">{{ site.author }}</a>, <time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}" aria-label="Post date">{{ p.date | date: "%-d %b %Y" }}</a></time>)</span>{% endcapture -%}
+  {% else %}
+    {% capture datef -%}&nbsp;<time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}" aria-label="Post date">{{ p.date | date: "%-d %b" }}</a></time>)</span>{% endcapture -%}
+  {% endif -%}
+{% else %}
   {% capture datef -%}&nbsp;<span class="byline">(<a href="/about/" aria-label="About the author">{{ site.author }}</a>, <time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}" aria-label="Post date">{{ p.date | date: "%-d %b %Y" }}</a></time>)</span>{% endcapture -%}
+{% endif -%}
+
   {% assign copysize = copy | size | minus: 4 %}
   {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
-{% endif -%}
 
 <article><!-- {{ copy | number_of_words }} words -->
 

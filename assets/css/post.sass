@@ -32,31 +32,26 @@ article
       color: $mix-color
 
 aside.extras
-  margin-top: calc(var(--bem) * 2)
-  h2
-    padding-bottom: 4px
+  margin-top: calc(var(--bem-double) - 1em)
+  p.shim
     font-size: 125%
-    &::after
-      content: "."
   ul
-    margin: 0.66em 0 0 0
+    margin: 0.2em 0 0 0
     list-style-type: none
     li
       &:not(:first-of-type)
         margin-top: var(--bem)
-      h3
+      h2
         font-size: 100%
-      h3, p
+        line-height: var(--line-height)
+      h2, p
         display: inline
       p.datestamp
+        font-style: italic
         color: $mix-color
         a:link,
         a:visited
           color: $mix-color
-  div.shim
-    width: calc(var(--bem) * 2)
-    height: 0.25em
-    background-color: $mix-color
 
 footer
   margin-top: calc(var(--bem) * 3)
@@ -66,19 +61,19 @@ footer
 @media screen and (min-width: 25em)
 
   aside.extras ul li
-    h3, p
+    h2
       display: block
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 32em)
 
-  aside.extras h2
+  aside.extras p.shim
     font-size: 129.41%
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40em)
 
-  aside.extras h2
+  aside.extras p.shim
     font-size: 127.77%

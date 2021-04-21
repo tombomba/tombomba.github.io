@@ -15,8 +15,9 @@ article
       a:link,
       a:visited
         color: $text-color
-    span.punc::after
-      content: "\00A0\2014\20"
+      &::after
+        content: "\00A0\2014\20"
+        font-weight: 400
 
   span.byline
     font-style: italic
@@ -27,17 +28,3 @@ article
 
 footer
   margin-top: calc(var(--bem) * 2)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 32em)
-
-  header[role="banner"] h1
-    font-size: 161.1%
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40em)
-
-  footer ul li
-    font-size: 100%

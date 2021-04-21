@@ -48,10 +48,10 @@
 </head>
 
 <body>
-  {% if page.is_archive %}
+  {% if page.is_page %}
     <header role="banner">
       <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
-      <h2>{{ page.title }}</h2>
+      {% if page.title %}<h2>{{ page.title }}</h2>{% endif -%}
     </header>
   {% else %}
     <header role="banner">

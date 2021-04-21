@@ -1,6 +1,6 @@
 ---
-layout: post
-title: "404!"
+layout: page
+title: "404"
 excerpt: "Page not found error"
 permalink: /404.html
 ---
@@ -15,6 +15,6 @@ permalink: /404.html
     {% endfor %}
   </ul>
 
-  <p>If you're having trouble locating a destination on <em>{{ site.title }},</em> try visiting the <a href="{{ site.url }}">homepage</a> or browsing posts from <a href="{{ site.posts.first.date | date: '/%Y/%m/' | prepend: site.url }}">this month</a> or <a href="{{ site.posts.first.date | date: '/%Y/' | prepend: site.url }}">this&nbsp;year.</a></p>
+  <p>If you're having trouble locating a destination on <em>{{ site.title }},</em> try visiting the <a href="{{ site.url }}">homepage</a> or browsing posts from <a href="{{ site.posts.first.date | date: '/%Y/%m/' | prepend: site.url }}">this month</a> or <a href="{{ site.posts.first.date | date: '/%Y/' | prepend: site.url }}">this&nbsp;year</a>.</p>
 
 </article>

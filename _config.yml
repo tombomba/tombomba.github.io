@@ -46,6 +46,7 @@ defaults:
       type: "pages"
     values:
       layout: archive
+      style: archive
       is_page: true
       is_archive: true
 

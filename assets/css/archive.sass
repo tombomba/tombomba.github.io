@@ -14,8 +14,10 @@ article
     li
       &:not(:first-of-type)
         margin-top: var(--bem)
+      h1, p
+        display: inline
       h1
-        font-size: 112.5%
+        font-size: 100%
       p
         margin: 0
         &.datestamp
@@ -26,19 +28,22 @@ article
 
 //-----------------------------------------------------------------------------
 
+@media screen and (min-width: 25em)
+
+  article ul li
+    h1, p
+      display: block
+
+//-----------------------------------------------------------------------------
+
 @media screen and (min-width: 32em)
 
   article ul li h1
-    font-size: 111.76%
+    font-size: 105.88%
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40em)
 
-  article
-    margin-top: calc(var(--bem) * 2)
-    ul li h1
-      font-size: 111.11%
-
-  footer ul li
-    font-size: 111.11%
+  article ul li h1
+    font-size: 105.55%

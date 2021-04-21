@@ -5,7 +5,7 @@ layout: default
 
 <aside class="extras">
   <!-- <div class="shim"></div> -->
-  <p class="shim"><a href="{{ site.posts.first.date | date: '/%Y/%m/' | prepend: site.url }}" title="Recent posts">&ctdot;</a></p>
+  <p class="shim"><a href="{{ site.posts.first.date | date: '/%Y/%m/' | prepend: site.url }}" aria-label="Recent posts">&ctdot;</a></p>
   <ul>
     {% if page.next %}{% include extras.html item=page.next %}{% endif -%}
     {% if page.previous %}{% include extras.html item=page.previous %}{% endif -%}

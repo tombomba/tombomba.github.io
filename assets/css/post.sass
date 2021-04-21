@@ -7,8 +7,6 @@
 
 article
   margin-top: var(--bem)
-  &:not(:first-of-type)
-    margin-top: calc(var(--bem) * 2)
   header
     h1, p
       display: inline
@@ -28,12 +26,19 @@ article
     a:visited
       color: $mix-color
 
+  div.shim
+    margin-top: var(--bem)
+    font-size: 125%
+    line-height: 1
+    &::after
+      content: "\22EF"
+
 aside.extras
-  margin-top: calc(var(--bem-double) - 1.2em)
+  margin-top: var(--bem)
   p.shim
     font-size: 125%
   ul
-    margin: 0.2em 0 0 0
+    margin: 0
     list-style-type: none
     li
       &:not(:first-of-type)

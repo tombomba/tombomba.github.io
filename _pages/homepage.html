@@ -1,27 +1,21 @@
 ---
 layout: default
-style: homepage
 is_home: true
 permalink: /index.html
 ---
 
-<article>
+{% include block-post.html page=site.posts.first content=site.posts.first.content is_home=true %}
 
+<aside class="extras">
+  <!-- <div class="shim"></div> -->
+  <h2><a href="{{ site.posts.first.date | date: '/%Y/' | prepend: site.url }}">More bombast</a></h2>
   <ul>
-  {% for p in site.posts limit: 10 %}
-    {% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
-    {% if t.size > 1 %}
-      {% assign sub = t.last | prepend: '!QQ!' -%}
-      {% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
-    {% else -%}
-      {% assign titlef = t %}
-    {% endif -%}
+    {% for p in site.posts limit:5 offset:1 %}
     <li>
-      <h1 class="hed"><a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a></h1>
-      <p class="dek">{{ p.excerpt | strip | strip_html | normalize_whitespace | smartify }}</p>
-      <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}">{{ p.date | date: "%-d %b %Y" }}</a></time></p>
+      <h3><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip | strip_html | normalize_whitespace | smartify }}</a></h3>
+      <p>{{ p.excerpt | strip_html | strip | normalize_whitespace | smartify | truncate: 140 }}</p>
+      <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url | prepend: site.url }}">{{ p.date | date: "%-d %b, %Y" }}</a></time></p>
     </li>
-  {% endfor -%}
+    {% endfor %}
   </ul>
-
-</article>
+</aside>

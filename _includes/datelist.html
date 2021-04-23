@@ -1,7 +1,7 @@
 <ul class="datelist">
   {% assign curryr = site.posts.first.date | date: '%Y' -%}
   {% assign currmo = site.posts.first.date | date: '%-m' -%}
-  {% assign startmo = currmo | minus: 0 -%}
+  {% assign startmo = include.start | default: currmo | minus: 0 -%}
   {% assign prevyr = '' -%}
   {% for i in (startmo..currmo) %}
     {% assign month = i -%}

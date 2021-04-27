@@ -16,7 +16,7 @@ Daniel Kaluuya was high, right?
 
 Questlove is always good television. Point a camera at him, and the man glows. He can make anything more fun than it has a right to be (like trivia games).
 
-Glenn Close was funny in a too-obvious bit. But the more she laughed at the gag, the more pity I felt for her, because she was trying to be likeable in a room full of people who do not like her.
+Glenn Close was funny in a too-obvious bit. But the more she laughed at the gag, the more I pitied her, because she was trying to be likeable in a room full of people who do not like her.
 
 Some musical cues were Academy nominees from years past, some weren't. None of them made sense. Public Enemy's "Fight the Power" intro'd Brad Pitt and Best Supporting Actress. Simple Minds' "Don't You Forget About Me" before Renée Zellweger. McCartney's "Live and Let Die" as Chloé Zhao left the stage.
 
@@ -24,10 +24,10 @@ Viola Davis in that white dress.
 
 Tyler Perry is the 21st century's Roger Corman. A highly skilled, highly successful impresario, the ringmaster of his own deliberate circus. He may never be back on that stage again, but it was nice to see the acknowledgement.
 
-Winners of major categories, per place of origin: United States (2x), England (2x), Wales, Korea, Portugal, France, China, and Denmark. If the Oscar is meant to be a global award, and at this point it probably should be, then "Best International" should be abolished and future noms should reflect this new reality.
+Winners of major categories, per place of origin: United States (2x), England (2x), Wales, Korea, Portugal, France, China, and Denmark. If the Oscar is global, then let it be global. Abolish "Best International" and design a system that allows future noms to reflect a new reality.
 
 Is Marlee Matlin Hollywood's one deaf friend?
 
 That only 2 women have won Best Director in 93 years is embarrassing. That Zhao won for "Nomadland" is only slightly less embarrassing.
 
-I imagine being around Frances McDormand is like being around the mom from "Almost Famous." Years ago, she took the stage and talked authoritatively about inclusion riders without being quite sure what an inclusion rider was. This year she encouraged us to go back to the movies. Thanks, but no thanks.
+I imagine being around Frances McDormand is like being around the mom from "Almost Famous," but all the time. Years ago, she took the stage and talked authoritatively about inclusion riders without being quite sure what an inclusion rider was. This year she encouraged us to go back to the movies. Thanks, but no thanks.

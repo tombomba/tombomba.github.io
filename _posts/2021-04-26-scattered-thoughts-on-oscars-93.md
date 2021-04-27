@@ -16,7 +16,7 @@ Daniel Kaluuya was high, right?
 
 Questlove is always good television. Point a camera at him, and the man glows. He can make anything more fun than it has a right to be (like trivia games).
 
-Glenn Close was funny in a too-obvious bit. But the more she laughed at the gag, the more pity I felt for her, because she was trying too hard to be likeable in a room full of people who do not like her.
+Glenn Close was funny in a too-obvious bit. But the more she laughed at the gag, the more pity I felt for her, because she was trying to be likeable in a room full of people who do not like her.
 
 Some musical cues were Academy nominees from years past, some weren't. None of them made sense. Public Enemy's "Fight the Power" intro'd Brad Pitt and Best Supporting Actress. Simple Minds' "Don't You Forget About Me" before Renée Zellweger. McCartney's "Live and Let Die" as Chloé Zhao left the stage.
 

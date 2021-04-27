@@ -30,4 +30,4 @@ Is Marlee Matlin Hollywood's one deaf friend?
 
 That only 2 women have won Best Director in 93 years is embarrassing. That Zhao won for "Nomadland" is only slightly less embarrassing.
 
-I imagine being around Frances McDormand is like being around the mom from "Almost Famous," but all the time. Years ago, she took the stage and talked authoritatively about inclusion riders without being quite sure what an inclusion rider was. This year she encouraged us to go back to the movies. Thanks, but no thanks.
+I imagine being around Frances McDormand is like being around the mom from "Almost Famous," but ceaselessly and without interruption. Years ago, she took the stage and talked authoritatively about inclusion riders without being quite sure what an inclusion rider was. This year she encouraged us to go back to the movies. Soon. Real soon. Meanwhile, only a third of my country is vaxxed. Thanks, but no thanks.

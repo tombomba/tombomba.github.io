@@ -22,9 +22,9 @@ Some musical cues were Academy nominees from years past, some weren't. None of t
 
 Viola Davis in that white dress.
 
-Tyler Perry is the 21st century's Roger Corman. A highly skilled, highly successful impresario, the ringmaster of his own deliberate circus. He may never be back on that stage again, but it was nice to see the acknowledgement.
+Tyler Perry is the Roger Corman of the 21st century. Highly skilled, highly successful impresario, the ringmaster of his own deliberate circus. He may never be back on that stage again, but it was nice to see some acknowledgement.
 
-I saw fewer nominees this year than in previous years, but what I did see was perfectly fine, mass market entertainment. None of them were quite Best Pictures, though. 
+I saw fewer nominees this year than in previous years, but what I did see was perfectly fine, mass market entertainment. None of them were quite Best Pictures, though.
 
 Winners of major categories, per place of origin: United States (2x), England (2x), Wales, Korea, Portugal, France, China, and Denmark. If the Oscar is global, then let it be global. Abolish "Best International" and design a system that allows future noms to reflect a new reality.
 
@@ -32,4 +32,4 @@ Is Marlee Matlin Hollywood's one deaf friend?
 
 That only 2 women have won Best Director in 93 years is embarrassing. That Zhao won for "Nomadland" is only slightly less embarrassing.
 
-I imagine being around Frances McDormand is like being around the mom from "Almost Famous," but ceaselessly and without interruption. Years ago, she took the stage and talked authoritatively about inclusion riders without being quite sure what an inclusion rider was. This year she encouraged us to go back to the movies. Soon. Meanwhile, only a third of my country is vaxxed. Thanks, but no thanks.
+I imagine being around Frances McDormand is like being around the mom from "Almost Famous," but ceaselessly and without interruption. Years ago, she took the stage and talked authoritatively about inclusion riders without being sure what an inclusion rider was. This year she encouraged us to go back to the movies. Soon. Meanwhile, only a third of my country is vaxxed. Thanks, but no thanks.

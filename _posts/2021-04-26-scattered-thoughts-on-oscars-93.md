@@ -26,7 +26,7 @@ Tyler Perry is the Roger Corman of the 21st century. Highly skilled, highly succ
 
 I saw fewer nominees this year than in previous years, but what I did see was perfectly fine, mass market entertainment. None of them were quite Best Pictures, though.
 
-Winners of major categories, per place of origin: United States (2x), England (2x), China, Denmark, Wales, Korea, Portugal, and France. If the Oscar is global, then let it be global. Abolish "Best International" and design a system that allows future noms to reflect a new reality.
+People who won in major categories, per place of origin: U.S. (2x), England (2x), China, Denmark, Wales, Korea, Portugal, and France. If the Oscar is global, then let it be global. Abolish "Best International" and design a system that allows future noms to reflect a new reality.
 
 Is Marlee Matlin Hollywood's one deaf friend?
 

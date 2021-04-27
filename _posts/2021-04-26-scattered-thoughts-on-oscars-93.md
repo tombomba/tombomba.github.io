@@ -4,7 +4,7 @@ date: "2021-04-26 21:01 -0800"
 ---
 Decent given the limitations, but the production design made Union Station resemble a Vegas lounge, and the ceremony played like a weird combo of the Golden Globes and the MTV Movie Awards.
 
-Opening credits on an award show are tacky. We're already in our seats. We know who you are. You don't need to hype us.
+Opening credits on an award show are tacky. We're already in our seats. We know who you are. You don't need to hype the crowd at home.
 
 The Academy should have bowed to reality last summer, or at least nodded at it, and cancelled the ceremony. Instead they offered ghoulish self aggrandizement in the opening remarks. 3 million dead, but movies!
 

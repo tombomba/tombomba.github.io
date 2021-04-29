@@ -27,12 +27,15 @@ header[role="banner"]
     a:visited,
     &::after
       color: $logo-color
+    span
+      border-bottom: 1px solid $shock-color
+      box-shadow: 0px -8px 0px $shock-color inset
 
 div.shim::after
   color: $logo-color
 
 footer ul li
   a:link,
-  a:visited,
-  &::after
-    color: $logo-color
+  a:visited
+    border-bottom: 1px solid $shock-color
+    box-shadow: 0px -4px 0px $shock-color inset

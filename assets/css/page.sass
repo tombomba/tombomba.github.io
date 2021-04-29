@@ -8,5 +8,18 @@
 article
   margin-top: var(--bem)
 
+  header
+    h1
+      font-size: 100%
+      line-height: var(--line-height)
+      a:link,
+      a:visited
+        color: $text-color
+      &::after
+        content: '\00A0\2014\20'
+        color: $mix-color
+    h1, p
+      display: inline
+
 footer
   margin-top: calc(var(--bem) * 2)

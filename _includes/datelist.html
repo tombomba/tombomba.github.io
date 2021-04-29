@@ -15,7 +15,7 @@
     {% if year != prevyr %}
       <li class="year"><a href="/{{ year }}/">{{ year }}</li>
     {% endif -%}
-    <li><a href="{{ site.url }}/{{ year }}/{% if 9 > month %}0{% endif %}{{ month }}/">{{ datestring | date: '%m' }}</a></li>
+    <li><a href="{{ site.url }}/{{ year }}/{% if 9 > month %}0{% endif %}{{ month }}/">{{ datestring | date: '%b' }}</a></li>
     {% assign prevyr = year -%}
   {% endfor -%}
 </ul>

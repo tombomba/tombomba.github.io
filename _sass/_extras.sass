@@ -1,0 +1,34 @@
+//-----------------------------------------------------------------------------
+
+ul.extras
+  margin: var(--bem) 0 0 0
+  list-style-type: none
+  li
+    &:not(:first-of-type)
+      margin-top: var(--bem)
+    h2
+      font-size: 100%
+      line-height: var(--line-height)
+    h2, p
+      display: inline
+    p.datestamp
+      font-style: italic
+      color: $mix-color
+      a:link,
+      a:visited
+        color: $mix-color
+
+div.shim
+  margin-top: var(--bem)
+  font-size: 125%
+  line-height: 1
+  &::after
+    content: "\22EF"
+    color: $logo-color
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 25em)
+
+  ul.extras li h2
+    display: block

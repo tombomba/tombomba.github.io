@@ -4,8 +4,10 @@ layout: default
 {% include block-post.html page=page content=content %}
 
 {% if page.previous %}
-<aside class="extras">
+<aside>
   <div class="shim"></div>
-  <ul>{% include extras.html item=page.previous %}</ul>
+  <ul class="extras">
+    {% include extras.html item=page.previous %}
+  </ul>
 </aside>
 {% endif -%}

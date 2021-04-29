@@ -6,25 +6,35 @@
 @import init, banner, footer, article
 
 article
-  margin-top: var(--bem)
+  &:first-of-type
+    margin-top: var(--bem-double)
+  &:not(:first-of-type)
+    padding-top: 0.33em
   header
-    h1, p
+    //h1, p
       display: inline
       font-size: 1em
     h1
+      font-size: var(--hed-size)
+      line-height: var(--hed-lh)
       a:link,
       a:visited
         color: $text-color
-      &::after
+      //&::after
         content: "\00A0\2014\20"
         font-weight: 400
 
-  span.byline
-    font-style: italic
-    color: $mix-color
-    a:link,
-    a:visited
+  div.byline
+    p
+      display: inline
+      font-size: 87.5%
+      line-height: var(--hed-size)
       color: $mix-color
+      a:link,
+      a:visited
+        color: $mix-color
+      &.author::after
+        content: "\20/\20"
 
   div.shim
     margin-top: var(--bem)
@@ -56,7 +66,7 @@ aside.extras
           color: $mix-color
 
 footer
-  margin-top: calc(var(--bem) * 3)
+  margin-top: calc(var(--bem) * 4)
 
 //-----------------------------------------------------------------------------
 
@@ -79,11 +89,3 @@ footer
 
   aside.extras p.shim
     font-size: 127.77%
-
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40em)
-
-  \:root
-    --logo-size: 205.6%

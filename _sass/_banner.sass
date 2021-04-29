@@ -3,33 +3,16 @@
 header[role="banner"]
   margin: 0 auto
   padding-top: var(--bem)
-  //border-top-style: solid
-  //border-top-width: 1em
   max-width: var(--page-width)
-  h1,
-  h2
-    font-family: 'Rye', $serif
-    font-weight: 400
+  h1
+    font-family: $system
+    font-weight: 700
     line-height: var(--hed-lh)
     text-transform: lowercase
+    &::after
+      content: "."
     a:link,
     a:visited
       color: $logo-color
   h1
     font-size: var(--logo-size)
-  h2
-    font-size: 161.1%
-  h1::after,
-  h2::after
-    content: ".\20"
-    font-family: 'Rye', $serif
-  h1::after
-    color: $logo-color
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 20em)
-
-  header[role="banner"] h1, h2
-    display: inline
-    line-height: 1

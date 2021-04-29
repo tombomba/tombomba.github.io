@@ -3,87 +3,25 @@
 ---
 
 @charset "utf-8"
-@import init, banner, footer, article
+@import init, banner, footer, article, extras
 
 article
-  &:first-of-type
-    margin-top: var(--bem-double)
-  &:not(:first-of-type)
-    padding-top: 0.33em
+
   header
-    //h1, p
-      display: inline
-      font-size: 1em
     h1
       font-size: var(--hed-size)
       line-height: var(--hed-lh)
       a:link,
       a:visited
         color: $text-color
-      //&::after
-        content: "\00A0\2014\20"
-        font-weight: 400
 
-  div.byline
-    p
-      display: inline
-      font-size: 87.5%
-      line-height: var(--hed-size)
+  div.byline p
+    display: inline
+    font-size: 87.5%
+    line-height: var(--hed-lh)
+    color: $mix-color
+    a:link,
+    a:visited
       color: $mix-color
-      a:link,
-      a:visited
-        color: $mix-color
-      &.author::after
-        content: "\20/\20"
-
-aside.extras
-  margin-top: var(--bem)
-  ul
-    margin: var(--bem) 0 0 0
-    list-style-type: none
-    li
-      &:not(:first-of-type)
-        margin-top: var(--bem)
-      h2
-        font-size: 100%
-        line-height: var(--line-height)
-      h2, p
-        display: inline
-      p.datestamp
-        font-style: italic
-        color: $mix-color
-        a:link,
-        a:visited
-          color: $mix-color
-  div.shim
-    margin-top: var(--bem)
-    font-size: 125%
-    line-height: 1
-    &::after
-      content: "\22EF"
-      color: $logo-color
-
-footer
-  margin-top: calc(var(--bem) * 4)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 25em)
-
-  aside.extras ul li
-    h2
-      display: block
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 32em)
-
-  aside.extras p.shim
-    font-size: 129.41%
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40em)
-
-  aside.extras p.shim
-    font-size: 127.77%
+    &:first-of-type::after
+      content: "\20/\20"

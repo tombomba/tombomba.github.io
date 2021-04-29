@@ -1,16 +1,12 @@
 ---
 layout: default
+style: homepage
 is_home: true
 permalink: /index.html
 ---
 
-{% include block-post.html page=site.posts.first content=site.posts.first.content is_home=true -%}
-
-<aside class="extras">
-  <div class="shim"></div>
-  <ul>
-    {% for extra in site.posts limit:7 offset:1 %}
-      {% include extras.html item=extra %}
-    {% endfor -%}
+<article>
+  <ul class="extras">
+    {% for extra in site.posts limit:10 %}{% include extras.html item=extra %}{% endfor %}
   </ul>
-</aside>
+</article>

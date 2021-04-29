@@ -2,17 +2,22 @@
 
 header[role="banner"]
   margin: 0 auto
-  padding-top: var(--bem)
+  padding-top: 1em
   max-width: var(--page-width)
+  div.wrap
+    transform: rotate(-5deg)
   h1
+    font-size: var(--logo-size)
     font-weight: 700
-    line-height: var(--hed-lh)
+    line-height: 1
     text-transform: lowercase
-    &::after
-      content: "."
-      color: $logo-color
     a:link,
     a:visited
       color: $logo-color
-  h1
-    font-size: var(--logo-size)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40em)
+
+  header[role="banner"] div.wrap
+    margin-left: -1rem

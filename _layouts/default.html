@@ -48,16 +48,9 @@
 </head>
 
 <body>
-  {% if page.is_archive %}
-    <header role="banner">
-      <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
-      {% if page.title %}<h2>{{ page.title }}</h2>{% endif %}
-    </header>
-  {% else -%}
-    <header role="banner">
-      <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
-    </header>
-  {% endif %}
+  <header role="banner">
+    <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+  </header>
 
   <main role="main"><!-- {{ page.layout }} -->
 

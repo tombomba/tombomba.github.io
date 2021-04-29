@@ -3,47 +3,7 @@
 ---
 
 @charset "utf-8"
-@import init, banner, footer
+@import init, banner, footer, extras
 
 article
   margin-top: var(--bem-double)
-
-  ul
-    margin: 0
-    list-style-type: none
-    li
-      &:not(:first-of-type)
-        margin-top: var(--bem)
-      h1, p
-        display: inline
-      h1
-        font-size: 100%
-      p
-        margin: 0
-        &.datestamp
-          color: $mix-color
-          a:link,
-          a:visited
-            color: $mix-color
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 25em)
-
-  article ul li
-    h1, p
-      display: block
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 32em)
-
-  article ul li h1
-    font-size: 105.88%
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40em)
-
-  article ul li h1
-    font-size: 105.55%

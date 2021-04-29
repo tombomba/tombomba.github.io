@@ -3,11 +3,9 @@ layout: default
 ---
 {% include block-post.html page=page content=content %}
 
-{% if page.next or page.previous %}
+{% if page.previous %}
 <aside class="extras">
-  <ul>
-    {% if page.next %}{% include extras.html item=page.next %}{% endif -%}
-    {% if page.previous %}{% include extras.html item=page.previous %}{% endif -%}
-  </ul>
+  <div class="shim"></div>
+  <ul>{% include extras.html item=page.previous %}</ul>
 </aside>
 {% endif -%}

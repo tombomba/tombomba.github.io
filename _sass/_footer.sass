@@ -2,7 +2,7 @@
 
 footer
   max-width: var(--page-width)
-  margin-top: calc(var(--bem) * 2)
+  margin-top: calc(var(--bem) * 4)
   margin-bottom: var(--bem)
   margin-left: auto
   margin-right: auto
@@ -15,8 +15,13 @@ footer
       font-weight: 700
       line-height: var(--line-height)
       text-transform: lowercase
+      color: $logo-color
+      a:link,
+      a:visited
+        color: $logo-color
       &::after
         content: "."
+        color: $logo-color
 
 //-----------------------------------------------------------------------------
 

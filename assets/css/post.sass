@@ -36,19 +36,10 @@ article
       &.author::after
         content: "\20/\20"
 
-  div.shim
-    margin-top: var(--bem)
-    font-size: 125%
-    line-height: 1
-    &::after
-      content: "\22EF"
-
 aside.extras
   margin-top: var(--bem)
-  p.shim
-    font-size: 125%
   ul
-    margin: 0
+    margin: var(--bem) 0 0 0
     list-style-type: none
     li
       &:not(:first-of-type)
@@ -64,6 +55,13 @@ aside.extras
         a:link,
         a:visited
           color: $mix-color
+  div.shim
+    margin-top: var(--bem)
+    font-size: 125%
+    line-height: 1
+    &::after
+      content: "\22EF"
+      color: $logo-color
 
 footer
   margin-top: calc(var(--bem) * 4)

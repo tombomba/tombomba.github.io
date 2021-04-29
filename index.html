@@ -4,28 +4,13 @@ is_home: true
 permalink: /index.html
 ---
 
-{% for p in site.posts limit:10 %}
-  {% include block-post.html page=p content=p.content is_home=true -%}
-{% endfor -%}
+{% include block-post.html page=site.posts.first content=site.posts.first.content is_home=true -%}
 
-{% comment %}
-
-  SUCK STYLE
-
-{% assign scope = 2629743 -%}<!-- 1 month -->
-{% assign today = site.posts.first.date | date: '%s' -%}
-
-  {% for p in site.posts %}
-
-    {% assign current = p.date | date: '%s' -%}
-    {% assign range = today | times: 1 |  minus: current -%}
-
-    {% if scope > range %}
-      {% include block-post.html page=site.posts.first content=site.posts.first.content is_home=true -%}
-    {% else %}
-      {% break %}
-    {% endif -%}
-
-  {% endfor -%}
-
-{% endcomment -%}
+<aside class="extras">
+  <div class="shim"></div>
+  <ul>
+    {% for extra in site.posts limit:7 offset:1 %}
+      {% include extras.html item=extra %}
+    {% endfor -%}
+  </ul>
+</aside>

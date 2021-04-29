@@ -22,21 +22,17 @@ $select-color:  $shock-color !default
   background-color: $shock-color
 
 header[role="banner"]
-  border-top-color: $shock-color
   h1
     a:link,
-    a:visited
-      color: $logo-color
+    a:visited,
     &::after
       color: $logo-color
 
-article
-  div.shim::after
-    color: $logo-color
+div.shim::after
+  color: $logo-color
 
 footer ul li
   a:link,
-  a:visited
-    color: $logo-color
+  a:visited,
   &::after
     color: $logo-color

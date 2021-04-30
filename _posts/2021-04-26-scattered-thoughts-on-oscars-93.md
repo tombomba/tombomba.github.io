@@ -24,7 +24,7 @@ Viola Davis in that white dress.
 
 Tyler Perry is the Roger Corman of the 21st century. Highly skilled, highly successful impresario, the ringmaster of his own deliberate circus. He may never be back on that stage again, but it was nice to see some acknowledgement, whatever the context.
 
-I saw fewer nominees this year than in previous years, but what I did see was perfectly fine, mass market entertainment. None were Best Pictures.
+What I saw from this year was perfectly fine, mass market entertainment. None were Best Pictures.
 
 People who won in major categories, per place of origin: U.S. (2x), England (2x), China, Denmark, Wales, Korea, Portugal, and France. If the Oscar is global, then let it be global. Abolish "Best International" and design a system that allows future noms to reflect a new reality.
 

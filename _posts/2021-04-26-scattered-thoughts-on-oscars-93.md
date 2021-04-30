@@ -2,7 +2,7 @@
 title: "Scattered thoughts on Oscars #93"
 date: "2021-04-26 21:01 -0800"
 ---
-Decent given the limitations, right? But the production design made Union Station resemble a Vegas lounge, and the ceremony played like a weird combo of the Golden Globes and the MTV Movie Awards.
+Decent given the limitations, but the production design made Union Station resemble a Vegas lounge, and the ceremony played like a weird combo of the Golden Globes and the MTV Movie Awards.
 
 Opening credits on an award show are tacky. We're already in our seats. We know who you are. You don't need to hype the crowd at home.
 

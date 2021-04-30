@@ -6,7 +6,21 @@ permalink: /index.html
 ---
 
 <article>
+
+{% assign scope = 2629743 -%}<!-- 1 month -->
+{% assign today = site.posts.first.date | date: '%s' -%}
+
   <ul class="extras">
-    {% for extra in site.posts limit:10 %}{% include extras.html item=extra %}{% endfor %}
+  {% for p in site.posts %}
+
+    {% assign current = p.date | date: '%s' -%}
+    {% assign range = today | times: 1 |  minus: current -%}
+
+    {% if scope > range %}{% include extras.html item=p %}
+    {% else %}{% break %}
+    {% endif -%}
+
+  {% endfor -%}
   </ul>
+
 </article>

@@ -14,15 +14,15 @@ Fennell did a better job of directing "Promising Young Woman" than Zhao did with
 
 Daniel Kaluuya was high, right?
 
-Questlove is always good television. Point a camera at him, and the man glows. He can make anything more fun than it has a right to be (like trivia games).
+Questlove is always good television. Point a camera at him, the man glows. He can make anything more fun than it has a right to be (like trivia games).
 
 Glenn Close was funny in a too-obvious bit. But the more she laughed at the gag, the more I pitied her, because she was trying to be likeable in a room full of people who do not like her.
 
-Some musical cues were Academy nominees from years past, some weren't. None made sense. Public Enemy's "Fight the Power" intro'd Brad Pitt and Best Supporting Actress. Simple Minds' "Don't You Forget About Me" before Renée Zellweger. McCartney's "Live and Let Die" as Chloé Zhao left the stage.
+Some musical cues were Academy nominees from years past, some weren't. None made sense. Public Enemy's "Fight the Power" into Brad Pitt and Best Supporting Actress. Simple Minds' "Don't You Forget About Me" before Renée Zellweger. McCartney's "Live and Let Die" as Chloé Zhao left the stage.
 
 Viola Davis in that white dress.
 
-Tyler Perry is the Roger Corman of the 21st century. Highly skilled, highly successful impresario, the ringmaster of his own deliberate circus. He may never be back on that stage again, but it was nice to see some acknowledgement.
+Tyler Perry is the Roger Corman of the 21st century. Highly skilled, highly successful impresario, the ringmaster of his own deliberate circus. He may never be back on that stage again, but it was nice to see some acknowledgement, whatever the context.
 
 I saw fewer nominees this year than in previous years, but what I did see was perfectly fine, mass market entertainment. None were Best Pictures.
 

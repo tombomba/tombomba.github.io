@@ -5,20 +5,37 @@
 @charset "utf-8"
 @import init, banner, footer, extras
 
-header[role="banner"] h1
-  font-size: 261.1%
-
 article
   margin-top: var(--bem-double)
 
-  section
-    &:not(:first-of-type)
-      margin-top: var(--bem)
-    h1
-      font-size: 87.5%
-      font-weight: 400
-      //line-height: 1.4
-      text-transform: uppercase
-    p
-      font-size: 111.11%
-      line-height: 1.65
+  ul.extras li h1
+    display: inline
+    font-size: 100%
+    font-weight: 400
+    line-height: var(--line-height)
+    a
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 32em)
+
+  article
+    ul.extras li h1
+      display: block
+      //font-size: 111.7%
+      font-weight: 700
+      a
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+
+//-----------------------------------------------------------------------------
+
+//@media screen and (min-width: 48em)
+
+  article
+    ul.extras li h1
+      font-size: 111.1%

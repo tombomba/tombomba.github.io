@@ -16,6 +16,7 @@ permalink: /index.html
 
     {% if scope > range %}
       {% if page.is_home and forloop.first %}<section class="first">{% else %}<section>{% endif %}
+        <h1>The quick brown fox</h1>
         {% assign blurb = p.excerpt | strip | strip_html | normalize_whitespace | smartify -%}
         {% if p.linkwords %}
           {% assign keyphrase = p.linkwords | strip | normalize_whitespace | smartify %}

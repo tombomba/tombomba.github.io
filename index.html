@@ -16,7 +16,7 @@ permalink: /index.html
     {% assign current = p.date | date: '%s' -%}
     {% assign range = today | times: 1 |  minus: current -%}
 
-    {% if scope > range %}{% include extras.html item=p %}
+    {% if scope > range %}{% include extras.html item=p is_home=true %}
     {% else %}{% break %}
     {% endif -%}
 

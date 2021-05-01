@@ -28,7 +28,7 @@ layout: default
     {% assign current_month = p.date | date: "%m" -%}
     {% assign current_year = p.date | date: "%Y" -%}
     {% if is_month_index and current_month == page_month and current_year == page_year %}
-      {% include extras.html item=p %}
+      {% include extras.html item=p hide_date=true %}
       {% unless first_dt %}{% assign first_dt = p.date %}{% endunless %}
       {% assign last_dt = p.date %}
     {% elsif is_year_index and current_year == page_year %}
@@ -41,12 +41,8 @@ layout: default
   {% endcapture -%}
 
   <header>
-    <h1>{{ page.title }}</h1>
-    {% if is_month_index %}
-    <p>{{ rawdate | push: '01' | join: '-' | date: '%b' }} {{ last_dt | date: "%d" }}&ndash;{{ first_dt | date: "%d" }}</p>
-    {% elsif is_year_index %}
-    <p>{{ last_dt | date: "%b %d" }}&ndash;{{ first_dt | date: "%b %d" }}</p>
-    {% endif -%}
+    <h1>{% if is_month_index %}{{ rawdate | push: '01' | join: '-' | date: '%B' }} {{ last_dt | date: "%d" }}&ndash;{{ first_dt | date: "%d" }}{% elsif is_year_index %}{{ last_dt | date: "%b %d" }}&ndash;{{ first_dt | date: "%b %d" }}{% endif %}, {{ current_year }}</h1>
+
   </header>
 
   {{ mylist }}

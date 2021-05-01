@@ -3,5 +3,5 @@
 <li>
   <{{ hsize }}><a href="{{ i.url | prepend: site.url }}">{{ i.title | strip | strip_html | normalize_whitespace | smartify }}</a></{{ hsize }}>
   <p>{{ i.excerpt | strip_html | strip | normalize_whitespace | smartify }}</p>
-  <p class="datestamp"><time pubdate datetime="{{ i.date | date: "%FT%T%:z" }}"><a href="{{ i.url | prepend: site.url }}">({{ i.date | date: "%-d %b" }})</a></time></p>
+  <p class="datestamp"><time pubdate datetime="{{ i.date | date: "%FT%T%:z" }}">({{ i.date | date: "%-d %b" }})</time></p>
 </li>

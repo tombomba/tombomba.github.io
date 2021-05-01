@@ -41,7 +41,7 @@ layout: default
   {% endcapture -%}
 
   <header>
-    <h1>{% if is_month_index %}{{ rawdate | push: '01' | join: '-' | date: '%B' }} {{ last_dt | date: "%d" }}&ndash;{{ first_dt | date: "%d" }}{% elsif is_year_index %}{{ last_dt | date: "%b %d" }}&ndash;{{ first_dt | date: "%b %d" }}{% endif %}, {{ current_year }}</h1>
+    <h1>{% if is_month_index %}{{ rawdate | push: '01' | join: '-' | date: '%B' }} {{ last_dt | date: "%d" }}&ndash;{{ first_dt | date: "%d" }}{% elsif is_year_index %}{{ last_dt | date: "%B %d" }}&ndash;{{ first_dt | date: "%B %d" }}{% endif %}, {{ current_year }}</h1>
 
   </header>
 

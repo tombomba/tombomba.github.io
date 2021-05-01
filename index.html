@@ -6,6 +6,35 @@ permalink: /index.html
 ---
 
 <article>
+{% assign scope = 604800 -%}<!-- 1 week -->
+{% assign today = site.posts.first.date | date: '%s' -%}
+
+  {% for p in site.posts %}
+
+    {% assign current = p.date | date: '%s' -%}
+    {% assign range = today | times: 1 |  minus: current -%}
+
+    {% if scope > range %}
+      {% if page.is_home and forloop.first %}<section class="first">{% else %}<section>{% endif %}
+        {% assign blurb = p.excerpt | strip | strip_html | normalize_whitespace | smartify -%}
+        {% if p.linkwords %}
+          {% assign keyphrase = p.linkwords | strip | normalize_whitespace | smartify %}
+        {% else %}
+          {% assign keyphrase = blurb | truncatewords: 3, '' | smartify %}
+        {% endif -%}
+        {% capture link %}<a href="{{ p.url | prepend: site.url }}">{{ keyphrase }}</a>{% endcapture -%}
+        <p>{{ blurb | replace_first: keyphrase, link }}</p>
+      </section>
+    {% else %}
+      {% break %}
+    {% endif -%}
+
+  {% endfor -%}
+</article>
+
+
+{% comment %}
+<article>
 
 {% assign scope = 2629743 -%}<!-- 1 month -->
 {% assign today = site.posts.first.date | date: '%s' -%}
@@ -24,3 +53,4 @@ permalink: /index.html
   </ul>
 
 </article>
+{% endcomment -%}

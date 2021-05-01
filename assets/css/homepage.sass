@@ -8,34 +8,9 @@
 article
   margin-top: var(--bem-double)
 
-  ul.extras li h1
-    display: inline
-    font-size: 100%
-    font-weight: 400
-    line-height: var(--line-height)
-    a
-      text-decoration: underline
-      &:hover
-        text-decoration: none
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 32em)
-
-  article
-    ul.extras li h1
-      display: block
-      //font-size: 111.7%
-      font-weight: 700
-      a
-        text-decoration: none
-        &:hover
-          text-decoration: underline
-
-//-----------------------------------------------------------------------------
-
-//@media screen and (min-width: 48em)
-
-  article
-    ul.extras li h1
-      font-size: 111.1%
+  section
+    &:not(:first-of-type)
+      margin-top: var(--bem)
+    p
+      font-size: 127.77%
+      line-height: 1.65217391304

@@ -22,10 +22,7 @@ layout: default
 
 <article>{% if page.date %}<!-- {{ page.date }} -->{% endif %}
 
-  <header>
-    <h1>{{ page.title }}</h1>
-  </header>
-
+  {% capture mylist %}
   <ul class="extras">
   {% for p in site.posts -%}
     {% assign current_month = p.date | date: "%m" -%}
@@ -34,8 +31,18 @@ layout: default
       {% include extras.html item=p %}
     {% elsif is_year_index and current_year == page_year -%}
       {% include extras.html item=p %}
+      {% unless first_dt %}{% assign first_dt = p.date %}{% endunless %}
+      {% assign last_dt = p.date %}
     {% endif -%}
   {% endfor -%}
   </ul>
+  {% endcapture -%}
+
+  <header>
+    <h1>{{ page.title }}</h1>
+    <p>{{ last_dt | date: "%b %d" }}&ndash;{{ first_dt | date: "%b %d" }}</p>
+  </header>
+
+  {{ mylist }}
 
 </article>

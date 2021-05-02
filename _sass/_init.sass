@@ -25,6 +25,7 @@
   --rat: 1.625
   --bem: calc(var(--rat) * 1em)
   --bem-double: calc(var(--rat) * 2em)
+  --bem-triple: calc(var(--rat) * 3em)
   --body-size: 100%
   --line-height: var(--rat)
   --logo-size: 161.1%
@@ -148,9 +149,10 @@ div.hr
 
 @media screen and (min-width: 60em)
 
-  //\:root
-    --rat: 1.83
-    --page-width: 37.389em
+  \:root
+    //--rat: 1.83
+    //--page-width: 37.389em
+    --logo-size: 261.1%
 
   body
     padding: 0

@@ -45,8 +45,6 @@
     <!-- css -->
     <link rel="stylesheet" href="{{ page.style | default: 'post' | prepend: site.css_dir | prepend: site.url | append: '.css' }}">
     <link rel="stylesheet" href="{{ 'wn-color-2' | prepend: site.css_dir | prepend: site.url | append: '.css' }}?{{ site.posts.first.date | date: '%Y%m%d' }}">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rye&display=swap&text={{ site.title | downcase }}">
 
 </head>
 

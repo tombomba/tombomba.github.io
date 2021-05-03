@@ -21,3 +21,16 @@ article
     color: $mix-color
     &:first-of-type::after
       content: "\20/\20"
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 60em)
+
+  \:root
+    --logo-size: 261.1%
+
+  article
+    margin-top: var(--bem-triple)
+
+  footer
+    margin-top: calc(var(--bem-triple) * 2)

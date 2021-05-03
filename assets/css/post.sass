@@ -6,7 +6,7 @@
 @import init, banner, footer, article, extras
 
 article
-
+  margin-top: var(--bem-triple)
   header
     h1
       font-size: var(--hed-size)
@@ -22,3 +22,6 @@ article
     color: $mix-color
     &:first-of-type::after
       content: "\20/\20"
+
+footer
+  margin-top: calc(var(--bem-triple) * 2)

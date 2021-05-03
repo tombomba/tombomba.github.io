@@ -29,7 +29,7 @@ layout: default
   </div>
 {% endcapture -%}
 
-<article><!-- {{ copy | number_of_words }} words -->
+<article class="{{ p.layout }}"><!-- {{ copy | number_of_words }} words -->
 
   {% capture hed %}<header><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ titlef }}{% if include.is_home %}</a>{% endif %}</h1>{{ byline }}<p>{% endcapture -%}
 
@@ -37,12 +37,21 @@ layout: default
 
 </article>
 
-{% if page.previous or page.next %}
-<aside>
+{% if page.id == site.posts.first.id or page.previous or page.next %}
+<aside class="{{ p.layout }}">
   <div class="shim"></div>
   <ul class="extras">
+  {% if page.id == site.posts.first.id %}
+    {% for e in site.posts limit:3 offset: 1 %}
+      {% include extras.html item=e %}
+    {% endfor -%}
+
+  {% elsif page.previous or page.next %}
     {% if page.next %}{% include extras.html item=page.next %}{% endif -%}
     {% if page.previous %}{% include extras.html item=page.previous %}{% endif -%}
+  {% endif -%}
+
   </ul>
 </aside>
+
 {% endif -%}

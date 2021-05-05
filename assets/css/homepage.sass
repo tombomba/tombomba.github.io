@@ -3,10 +3,28 @@
 ---
 
 @charset "utf-8"
-@import init, banner, footer, extras
+@import init, banner, footer, article, extras
 
 article
-  margin-top: var(--bem-double)
+  header
+    h1
+      font-size: var(--hed-size)
+      line-height: var(--hed-lh)
+      a:link,
+      a:visited
+        color: $text-color
+
+  div.byline p
+    display: inline
+    font-size: 87.5%
+    line-height: var(--hed-lh)
+    color: $mix-color
+    a:link,
+    a:visited
+      color: $mix-color
+    &:first-of-type::after
+      content: "\20/\20"
+
   ul.extras li h1
     display: inline
     font-size: 100%

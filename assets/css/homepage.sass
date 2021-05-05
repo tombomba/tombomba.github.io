@@ -5,25 +5,46 @@
 @charset "utf-8"
 @import init, banner, footer, article, extras
 
+div.shim
+  margin-top: var(--bem-double)
+
 article
-  header
+
+  &.post header
     h1
       font-size: var(--hed-size)
       line-height: var(--hed-lh)
       a:link,
       a:visited
         color: $text-color
-
-  div.byline p
-    display: inline
-    font-size: 87.5%
-    line-height: var(--hed-lh)
-    color: $mix-color
-    a:link,
-    a:visited
+    div.byline p
+      display: inline
+      font-size: 87.5%
+      line-height: var(--hed-lh)
       color: $mix-color
-    &:first-of-type::after
-      content: "\20/\20"
+      a:link,
+      a:visited
+        color: $mix-color
+      &:first-of-type::after
+        content: "\20/\20"
+
+  &.photo
+    header
+      margin-top: var(--bem)
+      h1
+        font-size: 100%
+        line-height: var(--line-height)
+        &::after
+          content: "\00A0\2014\20"
+          color: $mix-color
+        a:link,
+        a:visited
+          color: $text-color
+      h1, p
+        display: inline
+    span.byline
+      font-style: italic
+      color: $mix-color
 
   ul.extras li h1
     display: inline

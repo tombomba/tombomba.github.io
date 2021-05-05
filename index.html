@@ -5,25 +5,26 @@ is_home: true
 permalink: /index.html
 ---
 
-<article>
-
 {% assign scope = 2629743 -%}<!-- 1 month -->
 {% assign today = site.posts.first.date | date: '%s' -%}
 
-  <ul class="extras">
-  {% for p in site.posts %}
+{% for p in site.posts %}
 
-    {% assign current = p.date | date: '%s' -%}
-    {% assign range = today | times: 1 |  minus: current -%}
+  {% assign current = p.date | date: '%s' -%}
+  {% assign range = today | times: 1 |  minus: current -%}
 
-    {% if scope > range %}
-      {% unless forloop.first %}<div class="shim"></div>{% endunless -%}
-      {% include post-detail.html page=p is_home=true %}
+  {% if scope > range %}
 
-    {% else %}{% break %}
-    {% endif -%}
+    {% unless forloop.first %}<div class="shim"></div>{% endunless %}
 
-  {% endfor -%}
-  </ul>
+    {% case p.layout %}
+      {% when 'photo' %}{% include photo-detail.html page=p content=p.content is_home=true %}
+      {% else %}{% include post-detail.html page=p content=p.content is_home=true %}
+    {% endcase %}
 
-</article>
+  {% else %}
+    {% break %}
+
+  {% endif -%}
+
+{% endfor -%}

@@ -45,13 +45,13 @@
     <!-- css -->
     <link rel="stylesheet" href="{{ page.style | default: 'post' | prepend: site.css_dir | prepend: site.url | append: '.css' }}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap&text={{ site.title | upcase }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap&text={{ site.title }}" rel="stylesheet">
 
 </head>
 
 <body>
   <header role="banner" class="{{ page.layout }}">
-    <h1><a href="{{ site.url }}"><span>{{ site.title | upcase }}</span></a></h1>
+    <h1><a href="{{ site.url }}"><span>{{ site.title }}</span></a></h1>
   </header>
 
   <main role="main"><!-- {{ page.layout }} -->

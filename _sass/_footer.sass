@@ -12,8 +12,16 @@ footer
     list-style: none
     li
       margin-right: 0.66em
-      font-weight: 400
+      font-weight: 700
       line-height: var(--line-height)
+      text-transform: lowercase
+      color: $logo-color
+      a:link,
+      a:visited
+        color: $logo-color
+        text-decoration: none
+      a:hover
+        text-decoration: underline
 
 //-----------------------------------------------------------------------------
 
@@ -22,10 +30,3 @@ footer
   footer ul li
     display: inline
     line-height: 1
-
-//-----------------------------------------------------------------------------
-
-//@media screen and (min-width: 48em)
-
-  footer ul li
-    font-size: 111.1%

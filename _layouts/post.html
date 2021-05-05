@@ -57,21 +57,15 @@ layout: default
 
 </article>
 
-{% if page.id == site.posts.first.id or page.previous or page.next %}
+{% if page.previous or page.next %}
 <aside class="{{ p.layout }}">
   <div class="shim"></div>
   <ul class="extras">
-  {% if page.id == site.posts.first.id %}
-    {% for e in site.posts limit:3 offset: 1 %}
-      {% include extras.html item=e %}
-    {% endfor -%}
-
-  {% elsif page.previous or page.next %}
-    {% if page.next %}{% include extras.html item=page.next %}{% endif -%}
-    {% if page.previous %}{% include extras.html item=page.previous %}{% endif -%}
+  {% if page.previous %}
+    {% include extras.html item=page.previous %}
+  {% elsif page.next -%}
+    {% include extras.html item=page.next %}
   {% endif -%}
-
   </ul>
 </aside>
-
 {% endif -%}

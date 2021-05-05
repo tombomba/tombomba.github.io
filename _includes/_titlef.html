@@ -1,7 +1,0 @@
-{% assign t = include.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
-{% if t.size > 1 %}
-  {% assign sub = t.last | prepend: '!QQ!' -%}
-  {% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
-{% else -%}
-  {% assign titlef = t %}
-{% endif -%}

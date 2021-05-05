@@ -1,5 +1,4 @@
 ---
-layout: photo
 title: "The drive-in 'Star Wars' experience"
 excerpt: "Vivamus accumsan massa justo, eu tristique mi porttitor id. Fusce accumsan libero felis, eu efficitur purus consequat sit amet."
 image:

@@ -10,17 +10,12 @@ permalink: /index.html
 
 {% for p in site.posts %}
 
-  {% assign current = p.date | date: '%s' -%}
-  {% assign range = today | times: 1 |  minus: current -%}
+  {% assign current = p.date | date: '%s' %}
+  {% assign range = today | times: 1 |  minus: current %}
 
   {% if scope > range %}
-
-    {% unless forloop.first %}<div class="shim"></div>{% endunless %}
-
-    {% case p.layout %}
-      {% when 'photo' %}{% include photo-detail.html page=p content=p.content is_home=true %}
-      {% else %}{% include post-detail.html page=p content=p.content is_home=true %}
-    {% endcase %}
+    {% unless forloop.first %}<div class="shim home"></div>{% endunless %}
+    {% include post-detail.html page=p content=p.content is_home=true %}
 
   {% else %}
     {% break %}

@@ -6,10 +6,11 @@ ul.extras
   li
     &:not(:first-of-type)
       margin-top: var(--bem)
+    h1,
     h2
       font-size: 100%
-      font-weight: 400
       line-height: var(--line-height)
+    h1,
     h2,
     p
       display: inline
@@ -33,6 +34,8 @@ div.shim
 
 @media screen and (min-width: 32em)
 
-  ul.extras li h2
-    display: block
-    font-weight: 700
+  ul.extras li
+    h1,
+    h2
+      display: block
+      font-weight: 700

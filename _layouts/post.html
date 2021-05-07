@@ -4,12 +4,11 @@ layout: default
 
 {% include post-detail.html page=page content=content %}
 
-{% if page.previous or page.next %}
+{% if page.previous %}
 <aside>
   <div class="shim"></div>
   <ul class="extras">
     {% if page.previous %}{% include extras.html item=page.previous %}{% endif %}
-    {% if page.next %}{% include extras.html item=page.next %}{% endif %}
   </ul>
 </aside>
 {% endif %}

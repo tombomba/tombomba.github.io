@@ -51,7 +51,12 @@
 <body>
 
   <header role="banner">
+    {% if page.is_page %}
     <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+    <p>{{ page.title }}</p>
+    {% else %}
+    <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+    {% endif -%}
   </header>
 
   <main role="main"><!-- {{ page.layout }} -->

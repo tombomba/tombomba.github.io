@@ -22,29 +22,16 @@ layout: default
 
 <article>{% if page.date %}<!-- {{ page.date }} -->{% endif %}
 
-  {% capture mylist %}
   <ul class="extras">
   {% for p in site.posts -%}
     {% assign current_month = p.date | date: "%m" -%}
     {% assign current_year = p.date | date: "%Y" -%}
     {% if is_month_index and current_month == page_month and current_year == page_year %}
       {% include extras.html item=p hide_date=true %}
-      {% unless first_dt %}{% assign first_dt = p.date %}{% endunless %}
-      {% assign last_dt = p.date %}
     {% elsif is_year_index and current_year == page_year %}
       {% include extras.html item=p %}
-      {% unless first_dt %}{% assign first_dt = p.date %}{% endunless %}
-      {% assign last_dt = p.date %}
     {% endif -%}
   {% endfor -%}
   </ul>
-  {% endcapture -%}
-
-  <header>
-    <h1>{% if is_month_index %}{{ rawdate | push: '01' | join: '-' | date: '%B' }} {{ last_dt | date: "%d" }}&ndash;{{ first_dt | date: "%d" }}{% elsif is_year_index %}{{ last_dt | date: "%B %d" }}&ndash;{{ first_dt | date: "%B %d" }}{% endif %}, {{ current_year }}</h1>
-
-  </header>
-
-  {{ mylist }}
 
 </article>

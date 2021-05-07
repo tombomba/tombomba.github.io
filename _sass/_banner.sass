@@ -1,21 +1,27 @@
 //-----------------------------------------------------------------------------
 
 header[role="banner"]
+  display: flex
+  align-items: flex-end
   margin: 0 auto
   height: var(--bem-triple)
   max-width: var(--page-width)
-  display: flex
-  align-items: flex-end
-  h1
+  h1, p
     font-size: var(--logo-size)
+    font-weight: 700
     line-height: 1
     text-transform: lowercase
-    &:after
-      content: "."
-      color: $logo-color
+  h1
     a:link,
     a:visited
       color: $logo-color
       text-decoration: none
     a:hover
       text-decoration: underline
+    &:after
+      content: "."
+      color: $logo-color
+  p
+    padding-left: 0.25em
+    &:after
+      content: "."

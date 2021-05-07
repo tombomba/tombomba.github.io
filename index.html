@@ -5,13 +5,12 @@ is_home: true
 permalink: /index.html
 ---
 
-{% include post-detail.html page=site.posts.first content=site.posts.first.content is_home=true %}
+<article>
 
-<aside>
-  <div class="shim"></div>
   <ul class="extras">
-  {% for p in site.posts limit:7 offset:1 %}
+  {% for p in site.posts limit:7 %}
   {% include extras.html item=p is_home=true %}
   {% endfor %}
   </ul>
-</aside>
+
+</article>

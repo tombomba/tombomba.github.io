@@ -5,30 +5,24 @@ is_home: true
 permalink: /index.html
 ---
 
-{% assign scope = 2629743 -%}<!-- 1 month -->
-{% assign today = site.posts.first.date | date: '%s' -%}
-
-{% for p in site.posts %}
-
-  {% assign current = p.date | date: '%s' -%}
-  {% assign range = today | times: 1 |  minus: current -%}
-
-  {% if scope > range %}
-    {% include post-detail.html page=p content=p.content is_home=true %}
-  {% else %}
-    {% break %}
-  {% endif -%}
-
-{% endfor -%}
-
-{% comment %}
 <article>
-
   <ul class="extras">
-  {% for p in site.posts limit:7 %}
-  {% include extras.html item=p is_home=true %}
-  {% endfor %}
-  </ul>
 
+  {% assign scope = 2629743 -%}<!-- 1 month -->
+  {% assign today = site.posts.first.date | date: '%s' -%}
+
+  {% for p in site.posts %}
+
+    {% assign current = p.date | date: '%s' -%}
+    {% assign range = today | times: 1 |  minus: current -%}
+
+    {% if scope > range %}
+      {% include extras.html item=p is_home=true %}
+    {% else %}
+      {% break %}
+    {% endif -%}
+
+  {% endfor -%}
+
+  </ul>
 </article>
-{% endcomment -%}

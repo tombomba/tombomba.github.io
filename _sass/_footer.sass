@@ -25,10 +25,15 @@ footer
         text-decoration: none
       a:hover
         text-decoration: underline
+    &:nth-child(2)
+      margin-top: var(--bem)   
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 19em)
+
+  footer ul:nth-child(2)
+    margin-top: 0
 
   footer ul li
     display: inline

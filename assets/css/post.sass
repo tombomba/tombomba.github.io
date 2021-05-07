@@ -24,3 +24,13 @@ article
       color: $mix-color
     &:first-of-type::after
       content: "\20/\20"
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 48em)
+
+  article
+    margin-top: var(--bem-triple)
+
+  footer
+    margin-top: calc(var(--bem-double) * 3)

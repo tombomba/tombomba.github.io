@@ -1,17 +1,14 @@
 //-----------------------------------------------------------------------------
 
 header[role="banner"]
-  display: flex
-  align-items: flex-end
-  margin: 0 auto
-  height: var(--bem-triple)
+  margin: var(--bem) auto 0 auto
   max-width: var(--page-width)
   h1, p
-    font-size: var(--logo-size)
     font-weight: 700
-    line-height: 1
+    line-height: 1.2
     text-transform: lowercase
   h1
+    font-size: var(--logo-size)
     a:link,
     a:visited
       color: $logo-color
@@ -22,6 +19,22 @@ header[role="banner"]
       content: "."
       color: $logo-color
   p
-    padding-left: 0.25em
-    &:after
+    font-size: 161.1%
+    &::after
       content: "."
+
+
+  //-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40em)
+
+  header[role="banner"]
+    display: flex
+    align-items: flex-end
+    height: var(--bem-triple)
+    margin-top: 0
+    h1, p
+      line-height: 1
+    p
+      font-size: var(--logo-size)
+      padding-left: 0.25em

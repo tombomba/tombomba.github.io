@@ -4,11 +4,11 @@ header[role="banner"]
   margin: var(--bem) auto 0 auto
   max-width: var(--page-width)
   h1, p
+    font-size: var(--logo-size)
     font-weight: 700
     line-height: 1.2
     text-transform: lowercase
   h1
-    font-size: var(--logo-size)
     a:link,
     a:visited
       color: $logo-color
@@ -18,10 +18,8 @@ header[role="banner"]
     &:after
       content: "."
       color: $logo-color
-  p
-    font-size: 161.1%
-    &::after
-      content: "."
+  p::after
+    content: "."
 
 
   //-----------------------------------------------------------------------------

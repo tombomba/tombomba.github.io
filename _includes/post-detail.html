@@ -13,6 +13,21 @@
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}
 {% endif -%}
 
+{% if p.date %}
+  {% capture datef -%}&nbsp;<span class="byline">({{ site.author }}, <time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time>)</span>{% endcapture -%}
+  {% assign copysize = copy | size | minus: 4 %}
+  {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
+{% endif -%}
+
+<article><!-- {{ copy | number_of_words }} words -->
+
+  {% capture hed %}<header><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ titlef }}{% if include.is_home %}</a>{% endif %}</h1><p>{% endcapture -%}
+
+  {{ copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed }}
+
+</article>
+
+{% comment %}
 <article><!-- {{ copy | number_of_words }} words -->
 
   <header class="{{ p.layout }}">
@@ -37,3 +52,4 @@
   {{ copy }}
 
 </article>
+{% endcomment -%}

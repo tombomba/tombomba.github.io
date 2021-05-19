@@ -1,10 +1,10 @@
 ---
 title: "The drive-in 'Star Wars' experience"
 excerpt: "Vivamus accumsan massa justo, eu tristique mi porttitor id. Fusce accumsan libero felis, eu efficitur purus consequat sit amet."
-image:
-  file: starwars-on-16mm.jpg
-  ratio: 768x279
-  alt: "Photo still from a 16 millimeter print of Star Wars"
+#image:
+#  file: starwars-on-16mm.jpg
+#  ratio: 768x279
+#  alt: "Photo still from a 16 millimeter print of Star Wars"
 date: 2021-05-04 12:34 -0800
 ---
 

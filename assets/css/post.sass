@@ -7,14 +7,21 @@
 
 article
   header
+    h1, p
+      display: inline
     h1
       font-size: var(--hed-size)
       line-height: var(--hed-lh)
       a:link,
       a:visited
         color: $text-color
+      &::after
+        content: "\00A0\2014\20"
+  .byline
+    color: $mix-color
+    font-style: italic
 
-  div.byline p
+  //div.byline p
     display: inline
     font-size: 87.5%
     line-height: var(--hed-lh)
@@ -27,7 +34,7 @@ article
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 48em)
+//@media screen and (min-width: 48em)
 
   article
     margin-top: var(--bem-triple)

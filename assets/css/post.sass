@@ -7,30 +7,24 @@
 
 article
   header
-    h1, p
-      display: inline
     h1
       font-size: var(--hed-size)
       line-height: var(--hed-lh)
       a:link,
       a:visited
         color: $text-color
-      &::after
-        content: "\00A0\2014\20"
-  .byline
-    color: $mix-color
-    font-style: italic
 
-  //div.byline p
-    display: inline
-    font-size: 87.5%
-    line-height: var(--hed-lh)
-    color: $mix-color
-    a:link,
-    a:visited
+  div.byline
+    margin-top: var(--bem)
+    p
+      display: inline
+      line-height: var(--line-height)
       color: $mix-color
-    &:first-of-type::after
-      content: "\20/\20"
+      a:link,
+      a:visited
+        color: $mix-color
+        &:first-of-type::after
+          content: ",\20"
 
 //-----------------------------------------------------------------------------
 

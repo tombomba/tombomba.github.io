@@ -8,8 +8,8 @@
 article
   header
     h1
-      font-size: var(--hed-size)
-      line-height: var(--hed-lh)
+      font-size: 100%
+      line-height: var(--line-height)
       a:link,
       a:visited
         color: $text-color
@@ -17,14 +17,13 @@ article
   div.byline
     p
       display: inline
-      font-size: 87.5%
-      line-height: var(--hed-lh)
+      line-height: var(--line-height)
       color: $mix-color
       a:link,
       a:visited
         color: $mix-color
         &:first-of-type::after
-          content: ",\20"
+          content: "\20\/\20"
 
 //-----------------------------------------------------------------------------
 

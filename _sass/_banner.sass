@@ -15,7 +15,7 @@ header[role="banner"]
     div.text
       flex: 1
       h1, p
-        line-height: 1.2
+        line-height: 1.3
         text-transform: lowercase
       h1
         font-size: 100%
@@ -23,8 +23,13 @@ header[role="banner"]
         a:visited
           color: $text-color
       p
-        font-size: 87.5%
-        font-style: italic
+        display: none
 
+//-----------------------------------------------------------------------------
 
-  //-----------------------------------------------------------------------------
+@media screen and (min-width: 28em)
+
+  header[role="banner"] div.mast div.text p
+    display: block
+    font-size: 87.5%
+    font-style: italic

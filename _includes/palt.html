@@ -32,7 +32,7 @@
   {% assign copy = copy | replace: '<!--copynote-->', copynotice %}
 {% endif -%}
 
-{% capture datef -%}<span class="byline">{{ site.author }}, <time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time>{% endcapture -%}
+{% capture datef -%}<time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b" }}</time>{% endcapture -%}
 {% assign copysize = copy | size | minus: 4 %}
 {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
 

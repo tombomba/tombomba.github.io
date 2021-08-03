@@ -57,7 +57,7 @@
       <div class="logo"><a href="{{ site.url }}"><img src="{{ 'bomtomba.gif' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.title }}"></a></div>
       <div class="text">
         <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
-        <p>a media diary<span class="tagshow">, a small collage, a dumb blog</span></p>
+        <p>A media diary<span class="tagshow">, a small collage, a dumb blog</span></p>
       </div>
     </div>
     <div class="shim">
@@ -76,9 +76,7 @@
 
     <div class="hr"></div>
 
-    {% if page.is_home or page.is_page %}{% include datelist.html start=4 %}{% endif -%}
-
-    <ul>{% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li></ul>
+    <ul><li><a href="{{ site.url }}">{{ site.domain | capitalize }}</a><span class="tagshow"> &copy {{ site.posts.first.date | date: "%Y" }} {{ site.author }}</span></li>{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li></ul>
   </footer>
 
 </body>

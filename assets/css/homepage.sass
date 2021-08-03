@@ -6,4 +6,18 @@
 @import init, banner, footer, article, extras
 
 article
-  margin-top: var(--bem-double)
+  header
+    h1, p
+      display: inline
+      font-size: 1em
+    span.punc::after
+      content: ".\20"
+
+  time
+    font-style: italic
+    color: $mix-color
+    white-space: nowrap
+    &::before
+      content: '\20('
+    &::after
+      content: ')'

@@ -10,6 +10,10 @@ article
     h1, p
       display: inline
       font-size: 1em
+    h1
+      a:link,
+      a:visited
+        color: $text-color
     span.punc::after
       content: ".\20"
 
@@ -21,6 +25,9 @@ article
       content: '\20('
     &::after
       content: ')'
+    a:link,
+    a:visited
+      color: $mix-color
 
 
 //-----------------------------------------------------------------------------

@@ -125,12 +125,12 @@ article
       margin-right: var(--bem)
       &.tilt
         transform: rotate(-3deg)
-        margin-left: -1em
+        margin-left: calc(var(--bem) * -1)
     &>img.right
       margin-left: var(--bem)
       &.tilt
         transform: rotate(3deg)
-        margin-right: -1em
+        margin-right: calc(var(--bem) * -1)
 
 //-----------------------------------------------------------------------------
 
@@ -146,6 +146,6 @@ article
 
   article
     &>img.left.tilt
-      margin-left: calc(var(--bem) * -1)
+      margin-left: calc(var(--bem) * -2)
     &>img.right.tilt
-      margin-right: calc(var(--bem) * -1)
+      margin-right: calc(var(--bem) * -2)

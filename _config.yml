@@ -54,7 +54,7 @@ defaults:
       is_page: true
       is_archive: true
 
-permalink: /:year/:month/:title:output_ext
+permalink: /p/:title:output_ext
 timezone: America/Los_Angeles
 
 markdown: kramdown

@@ -3,9 +3,9 @@ description: "A media diary"
 domain: "tombomba.github.io"
 
 url: "https://tombomba.github.io"
-cdn: "https://tombomba.github.io/assets"
-img: "https://tombomba.github.io/assets/img"
-css: "https://tombomba.github.io/assets/css"
+cdn: "https://tombomba.github.io/assets/"
+img: "https://tombomba.github.io/assets/img/"
+css: "https://tombomba.github.io/assets/css/"
 
 img_dir: /assets/img/
 css_dir: /assets/css/

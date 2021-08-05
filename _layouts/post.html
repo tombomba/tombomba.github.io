@@ -4,12 +4,11 @@ layout: default
 
 {% include palt.html page=page content=content %}
 
+{% comment %}
+{% if page.previous %}
 <aside>
   <div class="hr"></div>
-  {% if page.previous %}
-  <p><b>Previous:</b> <a href="{{ page.previous.url }}">{{ page.previous.title | default: 'Empty?!' | strip | normalize_whitespace | smartify }}</a></p>
-  {% endif %}
-  {% if page.next %}
-  <p><b>Next:</b> <a href="{{ page.next.url }}">{{ page.next.title | default: 'Empty?!' | strip | normalize_whitespace | smartify }}</a></p>
-  {% endif %}
+  <p><b>Previously:</b> <a href="{{ page.previous.url }}">{{ page.previous.title | default: 'Empty?!' | strip | normalize_whitespace | smartify }}</a></p>
 </aside>
+{% endif %}
+{% endcomment -%}

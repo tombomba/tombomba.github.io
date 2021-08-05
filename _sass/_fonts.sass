@@ -1,5 +1,9 @@
 //-----------------------------------------------------------------------------
 
+@mixin font-ratio($size: 1, $context: $line-height)
+    font-size: percentage($size)
+    line-height: $context / $size
+
 $base-font-size: percentage(18/16)
 $line-height: 1.83 !default
 

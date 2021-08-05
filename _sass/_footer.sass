@@ -3,7 +3,7 @@
 footer
   max-width: var(--page-width)
   &.post
-    margin-top: var(--bem)
+    margin-top: calc(var(--bem) + 0.33em)
   &.home
     margin-top: var(--bem-triple)
   margin-bottom: 1em
@@ -15,9 +15,6 @@ footer
     list-style: none
     li
       line-height: var(--line-height)
-      color: $mix-color
-      span.tagshow
-        display: none
 
 //-----------------------------------------------------------------------------
 
@@ -28,8 +25,7 @@ footer
     margin-right: 0.33em
     font-size: 87.5%
     line-height: 1
-    span.tagshow
-      display: inline
     &:not(:last-of-type)::after
       padding-left: 0.33em
       content: "-"
+      color: $mix-color

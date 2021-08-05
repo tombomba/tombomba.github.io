@@ -19,24 +19,31 @@ article
     span.punc::after
       content: ".\20"
 
-  time
-    font-style: italic
-    color: $mix-color
-    white-space: nowrap
-    &::before
-      content: '\20('
-    &::after
-      content: ')'
-    a:link,
-    a:visited
+  div.byline
+    &.fat
+      margin-top: 1em
+    &.thin
+      margin-top: 0
+    p
+      display: inline
+      margin: 0
+      font-size: 87.5%
+      line-height: var(--hed-lh)
       color: $mix-color
+      &.author::after
+        content: "\20\/\20"
+    time
+      white-space: nowrap
+      a:link,
+      a:visited
+        color: $mix-color
 
 aside
   margin-top: var(--bem)
   p
     margin: 0
     &:first-of-type
-      margin-top: 1.66em
+      margin-top: 1em
 
 //-----------------------------------------------------------------------------
 

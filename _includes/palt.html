@@ -1,6 +1,8 @@
 {% assign p = include.page -%}
 {% assign copy = include.content | strip | normalize_whitespace -%}
 
+{% assign titlef = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify -%}
+
 {% assign lastchar = titlef | slice: -1 %}
 {% assign punc = '<span class="punc"></span>' %}
 {% case lastchar %}

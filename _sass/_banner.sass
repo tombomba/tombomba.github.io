@@ -4,51 +4,18 @@ header[role="banner"]
   margin: var(--bem) auto 0 auto
   max-width: var(--page-width)
   display: flex
+  align-items: center
 
-  div.shim
+  h1
+    font-family: 'Sancreek', $serif
+    font-size: var(--logo-size)
+    font-weight: 400
+    line-height: 1
+    text-transform: uppercase
+    a:link,
+    a:visited
+      color: $link-color
+
+  div.hr
     flex: 1
-    margin-left: 6px
-  div.mast
-    //display: flex
-    //align-items: center
-    //div.logo
-      margin-right: 1em
-      img
-        height: var(--bem-double)
-        width: var(--bem-double)
-        border-radius: 4px
-    div.text
-      flex: 1
-      h1
-        font-family: 'Sancreek', $serif
-        font-size: var(--logo-size)
-        font-weight: 400
-        line-height: 1
-        //letter-spacing: 2px
-        text-transform: uppercase
-        a:link,
-        a:visited
-          color: $link-color
-      //h1, p
-        display: inline
-        font-size: 87.5%
-        line-height: 1.3333
-        a:link,
-        a:visited
-          color: $text-color
-        span.tagshow
-          display: none
-      p
-        text-transform: lowercase
-
-
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 30em)
-
-  header[role="banner"] div.mast div.text
-    h1, p
-      display: block
-      span.tagshow
-        display: inline
+    margin-left: 0.5em

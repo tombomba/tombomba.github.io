@@ -1,7 +1,13 @@
 {% assign p = include.page -%}
 {% assign copy = include.content | strip | normalize_whitespace -%}
 
-{% assign titlef = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify -%}
+{% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
+{% if t.size > 1 %}
+  {% assign sub = t.last | prepend: '!QQ!' -%}
+  {% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
+{% else -%}
+  {% assign titlef = t %}
+{% endif -%}
 
 {% assign lastchar = titlef | slice: -1 %}
 {% assign punc = '<span class="punc"></span>' %}

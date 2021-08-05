@@ -38,6 +38,24 @@
 
 <article><!-- {{ copy | number_of_words }} words -->
 
+  <header class="{{ p.layout }}">
+    <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
+  </header>
+
+  {% if p.image %}
+  {% assign aspectr = p.image.ratio | default: '640x360' | split: 'x' -%}
+  {% assign w = aspectr[0] | times: 1.0 -%}
+  {% assign h = aspectr[1] | times: 1.0 -%}
+  {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
+  <figure>
+    <div class="wrap" style="padding-bottom:{{ percent }}%"><img src="{{ p.image.file | prepend: site.img }}" alt="{{ p.image.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}"></div>
+    {% if p.media.caption -%}<figcaption>{{ p.media.caption | strip | normalize_whitespace | smartify | markdownify }}</figcaption>{% endif -%}
+  </figure>
+  {% endif -%}
+
+  {{ copy }}
+
+  {% comment %}
   {% if p.image %}
   {% assign aspectr = p.image.ratio | default: '640x360' | split: 'x' -%}
   {% assign w = aspectr[0] | times: 1.0 -%}
@@ -52,5 +70,6 @@
   {% capture hed %}<header><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ titlef }}{% if include.is_home %}</a>{% endif %}</h1><p>{% endcapture -%}
 
   {{ copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed }}
+  {% endcomment -%}
 
 </article>

@@ -1,7 +1,12 @@
 title: "Bomtomba"
 description: "A media diary"
 domain: "tombomba.github.io"
+
 url: "https://tombomba.github.io"
+cdn: "https://tombomba.github.io/assets/"
+
+img_dir: /assets/img/
+css_dir: /assets/css/
 
 #title: "Localhost"
 #description: "A development site"
@@ -13,9 +18,6 @@ url: "https://tombomba.github.io"
 
 author: Tom Bomba
 twitter: bomtomba
-
-img_dir: /assets/img/
-css_dir: /assets/css/
 
 safe: true
 future: false

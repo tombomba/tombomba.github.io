@@ -4,7 +4,7 @@ article
   margin-top: var(--bem)
   &:not(:first-of-type)
     margin-top: var(--bem-double)
-    //fooo! 
+    //fooo!
 
   h2, h3, h4, h5, h6
     font-size: 100%
@@ -101,7 +101,6 @@ aside
   article>img.left,
   article>img.right
     display: inline
-    max-width: 33%
 
   article>img.left
     float: left
@@ -150,11 +149,7 @@ aside
 @media screen and (min-width: 64em)
 
   article
-    &>img.left
-      max-width: 40%
-      &.tilt
-        margin-left: calc(var(--bem) * -1)
-    &>img.right
-      max-width: 40%
-      &.tilt
-        margin-right: calc(var(--bem) * -1)
+    &>img.left.tilt
+      margin-left: calc(var(--bem) * -1)
+    &>img.right.tilt
+      margin-right: calc(var(--bem) * -1)

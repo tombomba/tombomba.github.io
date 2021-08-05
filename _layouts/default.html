@@ -31,7 +31,7 @@
     {% if page.excerpt %}<meta property="og:description" content="{{ page.excerpt | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% else %}<meta property="og:description" content="{{ site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% endif %}
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:type" content="blog">
-    <meta property="og:image" content="{{ 'default-social.png' | prepend: site.img_dir |  prepend: site.url }}">
+    <meta property="og:image" content="{{ 'default-social.png' | prepend: site.img }}">
 
     <!-- twitter  -->
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
@@ -40,10 +40,10 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@{{ site.twitter }}">
     <meta name="twitter:creator" content="@{{ site.twitter }}">
-    <meta name="twitter:image:src" content="{{ 'default-social.png' | prepend: site.img_dir | prepend: site.url }}">
+    <meta name="twitter:image:src" content="{{ 'default-social.png' | prepend: site.img }}">
 
     <!-- css -->
-    <link rel="stylesheet" href="{{ page.style | default: 'post' | prepend: site.css_dir | prepend: site.url | append: '.css' }}">
+    <link rel="stylesheet" href="{{ page.style | default: 'post' | prepend: site.css | append: '.css' }}">
 
 </head>
 
@@ -51,7 +51,7 @@
 
   <header role="banner">
     <div class="mast">
-      <div class="logo"><a href="{{ site.url }}"><img src="{{ 'bomtomba.gif' | prepend: site.img_dir | prepend: site.url }}" alt="{{ site.title }}"></a></div>
+      <div class="logo"><a href="{{ site.url }}"><img src="{{ 'bomtomba.gif' | prepend: site.img }}" alt="{{ site.title }}"></a></div>
       <div class="text">
         <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
         <p>A media diary<span class="tagshow">, a small collage, a dumb blog</span></p>

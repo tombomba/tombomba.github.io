@@ -6,11 +6,13 @@
 @import init, banner, footer, article, extras
 
 article
+  margin-top: var(--bem)
+  &:not(:first-of-type)
+    margin-top: var(--bem-triple)
   header
-    h1, p
-      display: inline
-      font-size: 1em
     h1
+      font-size: var(--hed-size)
+      line-height: var(--hed-lh)
       a:link,
       a:visited
         color: $text-color

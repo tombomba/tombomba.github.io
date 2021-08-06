@@ -3,22 +3,11 @@
 //-----------------------------------------------------------------------------
 
 article > img
-  margin-top: var(--bem)
-  margin-bottom: 1em
+  display: block
+  margin: var(--bem) auto
+  padding-bottom: 0.33em
   &.top
     margin-top: 0
-  &.left,
-  &.right
-    display: inline-block
-  &.center,
-  &.wide
-    display: inline-block
-    max-width: 100%
-    margin-bottom: 0
-  &.wide
-    display: inline-block
-    max-width: 100%
-    margin-bottom: 0
   &.curved
     border-radius: 4px
 
@@ -29,6 +18,10 @@ article > img
   article>img.left,
   article>img.right
     display: inline
+
+  article>img.top
+    margin-bottom: 1em
+    padding: 0
 
   article>img.left
     float: left

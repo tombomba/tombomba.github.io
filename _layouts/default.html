@@ -52,7 +52,8 @@
 <body>
 
   <header role="banner">
-    <h1><a href="{{ site.url }}">{{ site.title }}!</a></h1>
+    <div class="logo"><a href="{{ site.url }}"><img src="{{ 'bomtomba.gif' | prepend: site.img }}" alt="{{ site.title }}"></a></div>
+    <!-- <h1><a href="{{ site.url }}">{{ site.title }}!</a></h1> -->
     <div class="hr"></div>
   </header>
 
@@ -66,7 +67,7 @@
 
     <div class="hr"></div>
 
-    <ul><li><a href="{{ site.url }}">{{ site.domain | capitalize }}</a><span class="tagshow"> &copy {{ site.posts.first.date | date: "%Y" }} {{ site.author }}</span></li>{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li></ul>
+    <ul><li><a href="{{ site.url }}">{{ site.domain | capitalize }}</a><span class="copyshow"> &copy {{ site.posts.first.date | date: "%Y" }} {{ site.author }}</span></li>{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li></ul>
   </footer>
 
 </body>

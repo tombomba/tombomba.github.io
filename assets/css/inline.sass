@@ -21,7 +21,13 @@ article
       font-style: italic
   &>img.top
     margin-top: -1em
-    
+
+footer ul
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30em)
@@ -29,6 +35,5 @@ article
   article header h1
     font-size: 129.4%
     line-height: 1.32352941176
-
   footer ul
-    justify-content: center
+    flex-direction: row

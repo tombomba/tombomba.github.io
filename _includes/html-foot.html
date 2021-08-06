@@ -1,0 +1,9 @@
+<footer class="{% if page.is_home %}home{% else %}post{% endif %}">
+
+  <div class="hr"></div>
+
+  <ul><li><a href="{{ site.url }}">{{ site.domain | capitalize }}</a><span class="copyshow"> &copy {{ site.posts.first.date | date: "%Y" }} {{ site.author }}</span></li>{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li></ul>
+</footer>
+
+</body>
+</html>

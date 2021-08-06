@@ -25,14 +25,8 @@
   --rat: 1.625
   --bem: calc(var(--rat) * 1em)
   --bem-double: calc(var(--rat) * 2em)
-  --bem-triple: calc(var(--rat) * 3em)
-  --bem-quad: calc(var(--rat) * 4em)
   --body-size: 100%
   --line-height: var(--rat)
-  --logo-size: 206.3%
-  --hed-size: 129.4%
-  --hed-lh: 1.3333
-  --spacer: var(--bem)
   --page-width: 32em
 
 html
@@ -70,6 +64,10 @@ main[role="main"]
   margin-left: auto
   margin-right: auto
 
+header[role="banner"]
+  margin: var(--bem) auto 0 auto
+  max-width: var(--page-width)
+
 a
   text-decoration: none
   text-decoration-skip-ink: auto
@@ -94,30 +92,10 @@ div.hr
   border-top: 1px solid $border-dark
   border-bottom: 2px solid $border-light
   background-color: $body-color
-  &.pagebreak
-    margin-top: var(--bem)
-  &.section
+  &.buff
     margin-top: var(--bem)
   &.shim
     margin-top: 1.33em
-
-.mix-link
-  color: $mix-color
-  a:link, a:visited
-    color: $mix-color
-
-.title-link
-  color: $text-color
-  a:link, a:visited
-    color: $text-color
-    text-decoration: none
-  a:hover
-    text-decoration: underline
-
-.dashed
-  margin-top: var(--bem)
-  padding-top: var(--bem)
-  border-top: thin dashed $mix-color
 
 //-----------------------------------------------------------------------------
 
@@ -157,19 +135,3 @@ div.hr
 
   body
     padding: 0
-
-//-----------------------------------------------------------------------------
-
-//@media screen and (min-width: 72em)
-
-  \:root
-    --body-size: 112.5%
-    //--hed-size: 127.77%
-
-//-----------------------------------------------------------------------------
-
-//@media screen and (min-width: 80em)
-
-  \:root
-    --rat: 1.83
-    --page-width: 37.389em

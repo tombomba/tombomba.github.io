@@ -2,13 +2,10 @@
 
 footer
   max-width: var(--page-width)
-  &.post
-    margin-top: calc(var(--bem) + 0.33em)
-  &.home
-    margin-top: var(--bem-triple)
-  margin-bottom: 1em
+  margin-top: calc(var(--bem) + 0.33em)
   margin-left: auto
   margin-right: auto
+  margin-bottom: 1em
 
   ul
     margin: 1em 0 0 0
@@ -23,14 +20,15 @@ footer
 
 @media screen and (min-width: 30em)
 
-  footer ul li
-    display: inline
-    margin-right: 0.33em
-    font-size: 87.5%
-    line-height: 1
-    span.copyshow
-      display: inline
-    &:not(:last-of-type)::after
-      padding-left: 0.33em
-      content: "-"
-      color: $mix-color
+  footer ul
+    display: flex
+    li
+      margin-right: 0.33em
+      font-size: 87.5%
+      line-height: 1
+      span.copyshow
+        display: inline
+      &:not(:last-of-type)::after
+        padding-left: 0.33em
+        content: "-"
+        color: $mix-color

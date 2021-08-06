@@ -36,14 +36,19 @@
     <!-- twitter  -->
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="twitter:url" content="{{ page.url | default: '' | prepend: site.url }}">
-    {% if page.excerpt %}<meta name="twitter:description" content="{{ page.excerpt | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% else %}<meta property="og:description" content="{{ site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% endif %}
+    {% if page.excerpt %}<meta name="twitter:description" content="{{ page.excerpt | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% else %}<meta property="og:description" content="{{ site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 140 }}">{% endif %}
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@{{ site.twitter }}">
     <meta name="twitter:creator" content="@{{ site.twitter }}">
     <meta name="twitter:image:src" content="{{ 'default-social.png' | prepend: site.img }}">
 
-    <!-- css -->
-    <link rel="stylesheet" href="{{ page.style | default: 'post' | prepend: site.css | append: '.css' }}">
+    <!-- {{ page.layout }} css -->
+    <link rel="stylesheet" href="{{ page.layout | default: 'post' | prepend: site.css | append: '.css' }}">
+    {% if page.layout == 'inline' %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sancreek&display=swap&text={{ site.title | upcase }}" rel="stylesheet">
+    {% endif -%}
 
 </head>
 

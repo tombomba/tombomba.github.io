@@ -1,0 +1,34 @@
+---
+# POSTS WITH FLOATS
+---
+
+@charset "utf-8"
+@import init, img, footer, banner-text-only, article
+
+article
+  margin-top: var(--bem-double)
+  header
+    h1
+      font-size: 125%
+      line-height: 1.3125
+      a:link,
+      a:visited
+        color: $text-color
+  div.byline
+    margin-top: var(--bem)
+    p
+      margin: 0
+      font-style: italic
+  &>img.top
+    margin-top: -1em
+    
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30em)
+
+  article header h1
+    font-size: 129.4%
+    line-height: 1.32352941176
+
+  footer ul
+    justify-content: center

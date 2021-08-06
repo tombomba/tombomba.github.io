@@ -1,10 +1,12 @@
 <header role="banner">
-  <div class="logo">
-    <a href="{{ site.url }}"><img src="{{ 'bomtomba.gif' | prepend: site.img }}" alt="{{ site.title }}"></a>
+  <div class="meta">
+    <div class="logo">
+      <a href="{{ site.url }}"><img src="{{ 'bomtomba.gif' | prepend: site.img }}" alt="{{ site.title }}"></a>
+    </div>
+    <div class="text">
+      <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+      <p>A media diary<span class="tagshow">, a small collage, a dumb blog</span></p>
+    </div>
   </div>
-  <div class="text">
-    <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
-    <p>{{ site.description }}</p>
-  </div>
-  <div class="hr"></div>
+  <div class="hr buff"></div>
 </header>

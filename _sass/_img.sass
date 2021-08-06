@@ -1,0 +1,67 @@
+//-----------------------------------------------------------------------------
+// INLINE IMAGE FLOAT STYLES!
+//-----------------------------------------------------------------------------
+
+article > img
+  margin-top: var(--bem)
+  margin-bottom: 1em
+  &.top
+    margin-top: 0
+  &.left,
+  &.right
+    display: inline-block
+  &.center,
+  &.wide
+    display: inline-block
+    max-width: 100%
+    margin-bottom: 0
+  &.wide
+    display: inline-block
+    max-width: 100%
+    margin-bottom: 0
+  &.curved
+    border-radius: 4px
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 32em)
+
+  article>img.left,
+  article>img.right
+    display: inline
+
+  article>img.left
+    float: left
+    margin-left: 0
+    margin-right: 1em
+
+  article>img.right
+    float: right
+    margin-left: 1em
+    margin-right: 0
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50em)
+
+  article
+    &>img.left
+      margin-right: var(--bem)
+      &.tilt
+        transform: rotate(-3deg)
+        margin-left: calc(var(--bem) * -1)
+    &>img.right
+      margin-left: var(--bem)
+      &.tilt
+        transform: rotate(3deg)
+        margin-right: calc(var(--bem) * -1)
+
+//-----------------------------------------------------------------------------
+
+//@media screen and (min-width: 64em)
+
+  article
+    &>img.left.tilt
+      margin-left: calc(var(--bem) * -2)
+    &>img.right.tilt
+      margin-right: calc(var(--bem) * -2)

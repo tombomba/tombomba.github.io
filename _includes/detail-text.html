@@ -1,0 +1,33 @@
+{% assign p = include.page -%}
+{% assign copy = include.content | strip | normalize_whitespace -%}
+
+{% assign t = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
+{% if t.size > 1 %}
+  {% assign sub = t.last | prepend: '!QQ!' -%}
+  {% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
+{% else -%}
+  {% assign titlef = t %}
+{% endif -%}
+
+{% if copy contains 'img src=' %}
+  {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}
+{% endif -%}
+
+<main role="main"><!-- {{ p.layout }} -->
+
+  <article><!-- {{ copy | number_of_words }} words -->
+
+    <header class="{{ p.layout }}">
+      <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
+      <div class="byline">
+        <p class="author"><i>by</i> {{ page.author | default: site.author }}</p>
+        <p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time></p>
+      </div>
+      <div class="hr buff"></div>
+    </header>
+
+    {{ copy }}
+
+  </article>
+
+</main>

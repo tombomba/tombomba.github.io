@@ -1,0 +1,31 @@
+header[role="banner"]
+  div.meta
+    display: flex
+    align-items: center
+    div.logo
+      margin-right: 1em
+      img
+        width: var(--bem-double)
+        height: var(--bem-double)
+        border-radius: 4px
+    div.text
+      h1, p
+        font-size: 87.5%
+        line-height: 1.4
+        a:link,
+        a:visited
+          color: $text-color
+      p
+        text-transform: lowercase
+      span.tagshow
+        display: none
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30em)
+
+  header[role="banner"]
+    div.meta
+      div.text
+        span.tagshow
+          display: inline

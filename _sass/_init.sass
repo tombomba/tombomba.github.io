@@ -1,26 +1,129 @@
-//-----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 
-  # 16px
-    line-height: 26/16 (1.625)
-    13 16 20 26 33 42
+$body-color:    #EAEAEA !default
+$text-color:    #272727 !default
+$banner-color:  #FFF !default
 
-  # 17px
-    line-height: 28/17 (1.64705882353)
-    13 17 22 28 35 45
+$link-color:    #0000FF !default
+$visited-color: #800080 !default
+$active-color:  #F00 !default
 
-  # 18px
-    line-height: 30/18 (1.66666666667)
-    14 18 23 29 37 47
+$bg-color:      darken($body-color, 5%) !default
+$mix-color:     mix($body-color, $text-color, 36%) !default
+$light-mix:     lighten($mix-color, 33%) !default
+$dark-mix:      darken($mix-color, 33%) !default
 
-  # 19px
-    line-height: 32/19 (1.68421052632)
-    15 19 24 31 39 50
+$logo-color:    #F00 !default
+$shock-color:   #FFC !default
+$select-color:  $shock-color !default
 
-//-----------------------------------------------------------------------------
-
-@import fonts, colors, reset
+$border-dark:   #C0C0C0 !default
+$border-light:  #F3F3F3 !default
 
 //----------------------------------------------------------------------------
+
+$serif: Georgia, Cambria, 'Century Schoolbook L', serif !default
+$sans:  Verdana, 'Bitstream Vera Sans', Geneva, sans-serif !default
+$system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default
+
+//----------------------------------------------------------------------------
+
+// a mix of eric meyer and html5 boilerplate
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  vertical-align: baseline
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary
+  display: block
+
+audio, canvas,iframe, img, svg, video
+  vertical-align: middle
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+b, strong
+  font-weight: 700
+
+audio, canvas, iframe, img, svg, video
+  vertical-align: middle
+
+video
+  max-width: 100%
+  height: auto
+
+iframe, embed, object
+  max-width: 100%
+
+sub,sup
+  font-size: 75%
+  line-height: 0
+  position: relative
+  vertical-align: baseline
+
+sup
+  top: -0.5em
+
+sub
+  bottom: -0.25em
+
+.hidden
+  display: none !important
+
+.invisible
+  visibility: hidden
+
+.visuallyhidden
+  border: 0
+  clip: rect(0 0 0 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus
+  clip: auto
+  height: auto
+  margin: 0
+  overflow: visible
+  position: static
+  width: auto
+
+.clearfix:before, .clearfix:after
+    content: " "
+    display: table
+
+.clearfix:after
+    clear: both
+
+//-----------------------------------------------------------------------------
+
 \:root
   --rat: 1.625
   --bem: calc(var(--rat) * 1em)
@@ -95,14 +198,9 @@ div.hr
   &.buff
     margin-top: var(--bem)
   &.shim
-    margin-top: 1.33em
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 20em)
-
-  \:root
-    --logo-size: 205.9%
+    margin-top: 1em
+  &.plus
+    margin-top: 1.33em    
 
 //-----------------------------------------------------------------------------
 
@@ -118,7 +216,6 @@ div.hr
   \:root
     --rat: 1.64705882353
     --body-size: 106.25%
-    --hed-size: 129.41%
     --page-width: 34em
 
 //-----------------------------------------------------------------------------
@@ -127,7 +224,6 @@ div.hr
 
   \:root
     --rat: 1.66666666667
-    //--logo-size: 264.7%
 
 //-----------------------------------------------------------------------------
 

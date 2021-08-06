@@ -1,0 +1,34 @@
+---
+# POSTS WITH FLOATS
+---
+
+@charset "utf-8"
+@import init, banner-icon-and-text, figure, img, footer, article
+
+article
+
+  header
+    h1
+      font-size: 100%
+      line-height: var(--line-height)
+    h1, p
+      display: inline
+    span.punc::after
+      content: ".\20"
+
+  time
+    font-style: italic
+    color: $mix-color
+    white-space: nowrap
+    a:link,
+    a:visited
+      color: $mix-color
+    &::before
+      content: '\20('
+    &::after
+      content: ')'
+
+
+//-----------------------------------------------------------------------------
+
+//@media screen and (min-width: 30em)

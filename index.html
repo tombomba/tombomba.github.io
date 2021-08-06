@@ -1,10 +1,16 @@
 ---
-layout: default
-style: homepage
-is_home: true
 permalink: /index.html
 ---
 
+{% include html-head.html %}
+<ul>
+{% for p in site.posts %}
+  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+{% endfor %}
+</ul>
+{% include html-foot.html %}
+
+{% comment %}
 <article>
   <ul class="extras">
 
@@ -26,3 +32,4 @@ permalink: /index.html
 
   </ul>
 </article>
+{% endcomment -%}

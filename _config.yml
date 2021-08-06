@@ -10,49 +10,12 @@ css: "https://tombomba.github.io/assets/css/"
 img_dir: /assets/img/
 css_dir: /assets/css/
 
-#title: "Localhost"
-#description: "A development site"
-#domain: "localhost:4000"
-#url: "http://localhost:4000"
-#safe: false
-#future: true
-#show_drafts: true
-
 author: Tom Bomba
 twitter: bomtomba
 
 safe: true
 future: false
 theme: null
-
-include:
-  - _pages
-  - _pages/archive
-
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      is_post: true
-      layout: post
-  -
-    scope:
-      path: "_pages"
-      type: "pages"
-    values:
-      is_page: true
-      style: page
-  -
-    scope:
-      path: "_pages/archive"
-      type: "pages"
-    values:
-      layout: archive
-      style: list
-      is_page: true
-      is_archive: true
 
 permalink: /p/:title:output_ext
 timezone: America/Los_Angeles

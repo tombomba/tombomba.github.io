@@ -13,19 +13,15 @@
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}
 {% endif -%}
 
-<main role="main"><!-- {{ p.layout }} -->
+<article><!-- {{ copy | number_of_words }} words -->
 
-  <article><!-- {{ copy | number_of_words }} words -->
+  {% capture hed %}<header><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ titlef }}{% if include.is_home %}</a>{% endif %}</h1><p>{% endcapture -%}
 
-    {% capture hed %}<header><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ titlef }}{% if include.is_home %}</a>{% endif %}</h1><p>{% endcapture -%}
+  {{ copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed }}
 
-    {{ copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed }}
+  <div class="byline">
+    <p class="author">{{ page.author | default: site.author }}</p>
+    <p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time></p>
+  </div>
 
-    <div class="byline">
-      <p class="author">{{ page.author | default: site.author }}</p>
-      <p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time></p>
-    </div>
-
-  </article>
-
-</main>
+</article>

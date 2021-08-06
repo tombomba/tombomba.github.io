@@ -1,6 +1,8 @@
 ---
 layout: inline
 title: "Donec tincidunt metus augue, in varius mi pulvinar vel"
+excerpt: "Donec tincidunt metus augue, in varius mi pulvinar vel. Nam pulvinar arcu ut ex vulputate molestie. Quisque dictum sit amet neque vel eleifend."
+fbog: african-queen-240x365.jpg
 ---
 
 ![The African Queen, 1952]({{ site.img }}african-queen-240x365.jpg){: width="240" height="365" .top .left .tilt .pull .transparent }

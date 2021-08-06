@@ -13,21 +13,17 @@
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}
 {% endif -%}
 
-<main role="main"><!-- {{ p.layout }} -->
+<article><!-- {{ copy | number_of_words }} words -->
 
-  <article><!-- {{ copy | number_of_words }} words -->
+  <header class="{{ p.layout }}">
+    <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
+    <div class="byline">
+      <p class="author"><i>by</i> {{ page.author | default: site.author }}</p>
+      <p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time></p>
+    </div>
+    <div class="hr buff"></div>
+  </header>
 
-    <header class="{{ p.layout }}">
-      <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
-      <div class="byline">
-        <p class="author"><i>by</i> {{ page.author | default: site.author }}</p>
-        <p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time></p>
-      </div>
-      <div class="hr buff"></div>
-    </header>
+  {{ copy }}
 
-    {{ copy }}
-
-  </article>
-
-</main>
+</article>

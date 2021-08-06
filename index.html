@@ -2,34 +2,46 @@
 permalink: /index.html
 ---
 
+{% assign p = site.posts.first %}
+
 {% include html-head.html %}
-<ul>
-{% for p in site.posts %}
-  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-{% endfor %}
-</ul>
+
+<main role="main"><!-- {{ p.layout }} -->
+
+{% case p.layout %}
+
+  {% when 'inline' %}
+    {% include banner-text-only.html %}
+    {% include detail-inline.html page=p content=p.content is_home=true %}
+
+  {% when 'short' %}
+    {% include banner-icon-and-text.html %}
+    {% include detail-short.html page=p content=p.content is_home=true %}
+
+  {% else %}
+    {% include banner-icon-only.html %}
+    {% include detail-text.html page=p content=p.content is_home=true %}
+
+{% endcase %}
+
+<aside class="extras"><!-- 1 month -->
+  <div class="hr"></div>
+{% assign scope = 2629743 -%}
+{% assign today = site.posts.first.date | date: '%s' -%}
+{% for x in site.posts offset: 1 %}
+  {% assign current = x.date | date: '%s' -%}
+  {% assign range = today | times: 1 |  minus: current -%}
+  {% if scope > range %}
+  <div class="item">
+    <h2><a href="{{ x.url }}">{{ x.title | strip_html | normalize_whitespace | smartify }}</a></h2>
+    <p>{{ x.excerpt | strip_html | normalize_whitespace | smartify }}</p>
+  </div>
+  {% else -%}
+    {% break -%}
+  {% endif -%}
+{% endfor -%}
+</aside>
+
+</main>
+
 {% include html-foot.html %}
-
-{% comment %}
-<article>
-  <ul class="extras">
-
-  {% assign scope = 2629743 -%}<!-- 1 month -->
-  {% assign today = site.posts.first.date | date: '%s' -%}
-
-  {% for p in site.posts %}
-
-    {% assign current = p.date | date: '%s' -%}
-    {% assign range = today | times: 1 |  minus: current -%}
-
-    {% if scope > range %}
-      {% include palt.html page=p content=p.content is_home=true %}
-    {% else %}
-      {% break %}
-    {% endif -%}
-
-  {% endfor -%}
-
-  </ul>
-</article>
-{% endcomment -%}

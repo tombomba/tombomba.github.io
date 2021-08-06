@@ -2,6 +2,8 @@
 # FEATURES
 ---
 {% include html-head.html %}
-{% include banner-text-only.html %}
-{% include detail-inline.html page=page content=content %}
+<main role="main"><!-- {{ p.layout }} -->
+  {% include banner-text-only.html %}
+  {% include detail-inline.html page=page content=content %}
+</main>
 {% include html-foot.html %}

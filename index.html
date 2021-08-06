@@ -24,21 +24,13 @@ permalink: /index.html
 
 {% endcase %}
 
-<aside class="extras"><!-- 1 month -->
+<aside class="extras">
   <div class="hr"></div>
-{% assign scope = 2629743 -%}
-{% assign today = site.posts.first.date | date: '%s' -%}
-{% for x in site.posts offset: 1 %}
-  {% assign current = x.date | date: '%s' -%}
-  {% assign range = today | times: 1 |  minus: current -%}
-  {% if scope > range %}
+{% for x in site.posts limit:7 offset:1 %}
   <div class="item">
     <h2><a href="{{ x.url }}">{{ x.title | strip_html | normalize_whitespace | smartify }}</a></h2>
     <p>{{ x.excerpt | strip_html | normalize_whitespace | smartify }}</p>
   </div>
-  {% else -%}
-    {% break -%}
-  {% endif -%}
 {% endfor -%}
 </aside>
 

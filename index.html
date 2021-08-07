@@ -30,7 +30,7 @@ permalink: /index.html
   <div class="item">
     <h2><a href="{{ x.url }}">{{ x.title | strip_html | normalize_whitespace | smartify }}</a></h2>
     <div class="meta">
-      {% if x.fbog %}<div class="fbog" style="background-image: url({{ x.fbog | prepend: site.img }})"></div>{% endif %}
+      {% if x.thumbnail or x.fbog %}<div class="fbog" style="background-image: url({{ x.thumbnail | default: x.fbog | prepend: site.img }})"></div>{% endif %}
       <p>{{ x.excerpt | strip_html | normalize_whitespace | smartify }}</p>
     </div>
   </div>

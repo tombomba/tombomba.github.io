@@ -27,7 +27,7 @@
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}
 {% endif -%}
 
-{% capture datef -%}<time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b" }}</time>{% endcapture -%}
+{% capture datef -%}<time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{% if include.is_home %}<a href="{{ p.url }}">{% endif %}{{ p.date | date: "%-d %b" }}{% if include.is_home %}</a>{% endif %}</time>{% endcapture -%}
 {% assign copysize = copy | size | minus: 4 %}
 {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
 

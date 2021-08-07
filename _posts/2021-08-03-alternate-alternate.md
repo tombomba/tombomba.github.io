@@ -3,7 +3,6 @@ layout: alt
 title: "This is an alternate alternate for the inline layout, doncha know"
 excerpt: "Aliquam erat volutpat. Proin semper mi sem, et porta odio ultricies ut. Vivamus facilisis a leo id tempor. Aenean lobortis rutrum nunc, eget commodo neque malesuada eget."
 fbog: joel-coen-220x226.png
-thumbnail: thumb--joel-coen-220x226.png
 ---
 
 ![Joel Coen]({{ site.img }}joel-coen-220x226.png){: width="220" height="226" .top .right .transparent }

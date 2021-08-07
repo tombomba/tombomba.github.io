@@ -28,11 +28,11 @@ permalink: /index.html
   <div class="hr"></div>
 {% for x in site.posts limit:7 offset:1 %}
   <div class="item">
-    {% if x.fbog %}
-      <div class="fbog" style="background-image: url({{ x.fbog | prepend: site.img }})"></div>
-    {% endif %}
     <h2><a href="{{ x.url }}">{{ x.title | strip_html | normalize_whitespace | smartify }}</a></h2>
-    <p>{{ x.excerpt | strip_html | normalize_whitespace | smartify }}</p>
+    <div class="meta">
+      {% if x.fbog %}<div class="fbog" style="background-image: url({{ x.fbog | prepend: site.img }})"></div>{% endif %}
+      <p>{{ x.excerpt | strip_html | normalize_whitespace | smartify }}</p>
+    </div>
   </div>
 {% endfor -%}
 </aside>

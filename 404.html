@@ -1,19 +1,19 @@
 ---
-title: "404"
-excerpt: "Page not found error"
+layout: short
+title: "404!"
 permalink: /404.html
 ---
 
-<article>
+{% capture pagetext %}
+That page was no good. Try another?
 
-  <p>That page was no good. Try another?</p>
+<ul class="plain">
+  {% for p in site.posts limit: 7 %}
+    <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip | strip_html | normalize_whitespace | smartify }}</a></li>
+  {% endfor %}
+</ul>
 
-  <ul class="plain">
-    {% for p in site.posts limit: 7 %}
-      <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip | strip_html | normalize_whitespace | smartify }}</a></li>
-    {% endfor %}
-  </ul>
+If you're having trouble locating a destination, try visiting   the [homepage]({{ site.url}}).
+{% endcapture %}
 
-  <p>If you're having trouble locating a destination on <em>{{ site.title }},</em> try visiting the <a href="{{ site.url }}">homepage</a> or browsing posts from <a href="{{ site.posts.first.date | date: '/%Y/%m/' | prepend: site.url }}">this month</a> or <a href="{{ site.posts.first.date | date: '/%Y/' | prepend: site.url }}">this&nbsp;year</a>.</p>
-
-</article>
+{{ pagetext | smartify | markdownify | strip | normalize_whitespace }}

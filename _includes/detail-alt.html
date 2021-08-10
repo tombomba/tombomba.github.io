@@ -13,7 +13,9 @@
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}
 {% endif -%}
 
+{% if p.date %}
 {% capture datestamp %}<time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time>{% endcapture %}
+{% endif -%}
 
 <article><!-- {{ copy | number_of_words }} words -->
 

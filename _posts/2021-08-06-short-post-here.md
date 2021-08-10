@@ -1,6 +1,6 @@
 ---
 layout: short
-title: "Lorem ipsum dolor sit amet"
+title: "Short: Lorem ipsum dolor sit amet"
 image:
   file: starwars-on-16mm-768x279.jpg
   ratio: 768x279

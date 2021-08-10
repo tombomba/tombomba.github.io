@@ -17,10 +17,12 @@
 
   <header class="{{ p.layout }}">
     <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
+    {% if p.author or p.date %}
     <div class="byline">
-      <p class="author"><i>by</i> {{ page.author | default: site.author }}</p>
-      <p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time></p>
+      {% if p.author %}<p class="author"><i>by</i> {{ page.author | default: site.author }}</p>{% endif %}
+      {% if p.date %}<p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time></p>{% endif %}
     </div>
+    {% endif %}
     <div class="hr buff"></div>
   </header>
 

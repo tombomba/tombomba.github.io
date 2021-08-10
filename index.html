@@ -12,7 +12,7 @@ permalink: /index.html
 
   {% when 'inline' %}
     {% include banner-text-only.html %}
-    {% include detail-inline.html page=p content=p.content is_home=true %}
+    {% include detail-feature.html page=p content=p.content is_home=true %}
 
   {% when 'post' %}
     {% include banner-icon-and-text.html %}
@@ -26,16 +26,16 @@ permalink: /index.html
 
 <aside class="extras">
   <div class="hr"></div>
-{% for x in site.posts limit:12 offset:1 %}
-  {% include --widow-fix.html title=x.title %}
-  <div class="item">
-    <h2><a href="{{ x.url }}">{{ titlef }}</a></h2>
-    <div class="meta">
-      {% if x.thumbnail or x.fbog %}<div class="fbog" style="background-image: url({{ x.thumbnail | default: x.fbog | prepend: site.img }})"></div>{% endif %}
-      <p>{{ x.excerpt | strip_html | normalize_whitespace | smartify }}</p>
+  {% for x in site.posts limit:12 offset:1 %}
+    {% include --widow-fix.html title=x.title %}
+    <div class="item">
+      <h2><a href="{{ x.url }}">{{ titlef }}</a></h2>
+      <div class="meta">
+        {% if x.thumbnail or x.fbog %}<div class="fbog" style="background-image: url({{ x.thumbnail | default: x.fbog | prepend: site.img }})"></div>{% endif %}
+        <p>{{ x.excerpt | strip_html | normalize_whitespace | smartify }}</p>
+      </div>
     </div>
-  </div>
-{% endfor -%}
+  {% endfor -%}
 </aside>
 
 </main>

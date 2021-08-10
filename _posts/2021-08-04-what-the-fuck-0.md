@@ -1,6 +1,6 @@
 ---
-layout: inline
-title: "Inline: Donec tincidunt metus augue, in varius mi pulvinar vel"
+layout: feature
+title: "feature: Donec tincidunt metus augue, in varius mi pulvinar vel"
 excerpt: "Donec tincidunt metus augue, in varius mi pulvinar vel. Nam pulvinar arcu ut ex vulputate molestie. Quisque dictum sit amet neque vel eleifend."
 fbog: african-queen-240x365.jpg
 thumbnail: thumb--african-queen-240x365.jpg

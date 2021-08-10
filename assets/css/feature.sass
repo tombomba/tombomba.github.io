@@ -6,11 +6,13 @@
 @import init, img, footer, article
 
 header[role="banner"]
+  display: flex
+  align-items: center
+  justify-content: space-between
   div.text
     display: flex
     align-items: center
-    justify-content: space-between
-    height: var(--bem-double)
+    margin: 0 1em
     h1
       margin: 0
       padding: 0
@@ -19,20 +21,9 @@ header[role="banner"]
       font-weight: 400
       line-height: 1
       text-transform: uppercase
-      a:link,
-      a:visited
-        color: $logo-color
-    span.decoration::after
-      content: '*'
-      font-family: 'Sancreek', $serif
-      font-size: 205.9%
-      font-weight: 400
-      line-height: 1
-      text-transform: uppercase
-      color: $logo-color
-      a:link,
-      a:visited
-        color: $logo-color
+      @extend .logo-link
+    div.hr
+      flex: 1
 
 article
   margin-top: var(--bem-double)
@@ -40,9 +31,7 @@ article
     h1
       font-size: 125%
       line-height: 1.3125
-      a:link,
-      a:visited
-        color: $text-color
+      @extend .title-link
   div.byline
     margin-top: var(--bem)
     p

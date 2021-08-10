@@ -19,9 +19,7 @@ header[role="banner"]
       h1, p
         font-size: 87.5%
         line-height: 1.4
-        a:link,
-        a:visited
-          color: $text-color
+        @extend .title-link
       p
         text-transform: lowercase
       span.tagshow
@@ -32,17 +30,15 @@ article
     h1
       font-size: 100%
       line-height: var(--line-height)
+      @extend .title-link
     h1, p
       display: inline
     span.punc::after
       content: ".\20"
   time
     font-style: italic
-    color: $mix-color
     white-space: nowrap
-    a:link,
-    a:visited
-      color: $mix-color
+    @extend .mix-link
     &::before
       content: '\20('
     &::after

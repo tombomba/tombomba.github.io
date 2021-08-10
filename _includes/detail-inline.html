@@ -19,9 +19,9 @@
 
   {{ copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed }}
 
-  {% if p.author or p.date %}
+  {% if p.is_post %}
   <div class="byline">
-    {% if p.author %}<p class="author">{{ page.author | default: site.author }}</p>{% endif %}
+    <p class="author">{{ page.author | default: site.author }}</p>
     {% if p.date %}<p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time></p>{% endif %}
   </div>
   {% endif %}

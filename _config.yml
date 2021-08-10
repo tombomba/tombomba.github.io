@@ -20,6 +20,14 @@ theme: null
 permalink: /p/:title:output_ext
 timezone: America/Los_Angeles
 
+defaults:
+  -
+    scope:
+      path: ""      # empty string for all files
+      type: posts   # limit to posts
+    values:
+      is_post: true # automatically set is_post=true for all posts]
+
 markdown: kramdown
 kramdown:
     auto_ids: false

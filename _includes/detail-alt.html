@@ -13,22 +13,26 @@
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}
 {% endif -%}
 
-{% if p.date %}
-{% capture datestamp %}<time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time>{% endcapture %}
+{% if p.is_post %}
+  {% capture byline %}
+  <div class="byline">
+    <p class="author">{{ page.author | default: site.author }}</p>
+    {% if p.date %}<p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time></p>{% endif %}
+  </div>
+  <p>
+  {% endcapture %}
 {% endif -%}
 
 <article><!-- {{ copy | number_of_words }} words -->
 
   <header>
     <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ titlef }}{% if include.is_home %}</a>{% endif %}</h1>
-    {% if p.is_post %}
-    <div class="byline">
-      <p class="author">{{ page.author | default: site.author }}</p>
-      {% if p.date %}<p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time></p>{% endif %}
-    </div>
-    {% endif %}
   </header>
 
-  {{ copy }}
+  {% if byline %}
+    {{ copy | replace_first: '<p>', byline }}
+  {% else %}
+    {{ copy }}
+  {% endif -%}
 
 </article>

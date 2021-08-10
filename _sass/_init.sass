@@ -1,7 +1,7 @@
 //----------------------------------------------------------------------------
 
-$body-color:    #E2E2E2 !default
-$text-color:    #161616 !default
+$body-color:    #EAEAEA !default
+$text-color:    #272727 !default
 $banner-color:  #FFF !default
 
 $link-color:    #0000FF !default
@@ -17,8 +17,8 @@ $logo-color:    #F00 !default
 $shock-color:   #FFC !default
 $select-color:  $shock-color !default
 
-$border-dark:   #B8B8B8 !default
-$border-light:  #EAEAEA !default
+$border-dark:   #C0C0C0 !default
+$border-light:  #F3F3F3 !default
 
 //----------------------------------------------------------------------------
 
@@ -172,14 +172,14 @@ header[role="banner"]
   max-width: var(--page-width)
 
 a
-  text-decoration: none
+  text-decoration: underline
   text-decoration-skip-ink: auto
   &:link
     color: $link-color
   &:visited
     color: $visited-color
   &:hover
-    text-decoration: underline
+    text-decoration: none
   &:active
     color: $active-color
 
@@ -201,6 +201,33 @@ div.hr
     margin-top: 1em
   &.plus
     margin-top: 1.33em
+
+.title-link
+  color: $text-color
+  a:link,
+  a:visited
+    color: $text-color
+    text-decoration: none
+  a:hover
+    text-decoration: underline
+
+.logo-link
+  color: $logo-color
+  a:link,
+  a:visited
+    color: $logo-color
+    text-decoration: none
+  a:hover
+    text-decoration: underline
+
+.mix-link
+  color: $mix-color
+  a:link,
+  a:visited
+    color: $mix-color
+    text-decoration: none
+  a:hover
+    text-decoration: underline
 
 //-----------------------------------------------------------------------------
 

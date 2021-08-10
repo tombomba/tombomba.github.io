@@ -18,7 +18,20 @@ article header
 
 footer
   margin-bottom: var(--bem)
-  div.social,
+
+  div.social
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 0.33em
+    svg
+      width: var(--bem)
+      height: var(--bem)
+      margin: 0 0.25em
+      &.twit
+        fill: #1DA1F2
+      &.rss
+        fill: orange
   div.meta
     display: flex
     flex-direction: column
@@ -27,7 +40,12 @@ footer
     margin-top: var(--bem)
     h1
       font-size: 100%
-    p.copyright
+  div.copyright
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: var(--bem)
+    p
       font-size: 87.5%
       color: $mix-color
 

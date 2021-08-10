@@ -7,12 +7,14 @@
 {% assign hedsize = p.title | strip | normalize_whitespace | size -%}
 {% if hedsize > 49 %}{% assign hedbuff = 'buff' %}{% else %}{% assign hedbuff = 'norm' %}{% endif -%}
 
-{% if copy contains 'img src=' %}
+{% if p.image or copy contains 'img src=' %}
+{% assign bysize = 'allcaps' %}
 <header role="banner">
   <h1><a href="{{ site.url }}">{{ site.title | capitalize }}</a></h1>
   <div class="hr"></div>
 </header>
 {% else %}
+{% assign bysize = 'nocaps' %}
 <header role="banner">
   <div class="logo">
     <a href="{{ site.url }}"><img src="{{ 'bomtomba.gif' | prepend: site.img }}" alt="{{ site.title }}"></a>
@@ -29,13 +31,24 @@
       <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ titlef }}{% if include.is_home %}</a>{% endif %}</h1>
       {% if p.is_post %}
       <div class="byline {{ hedbuff }}"><!-- {{ hedsize }} -->
-        <p class="author">{{ page.author | default: site.author }}</p>
+        <p class="author {{ bysize }}">{% if bysize == 'nocaps' %}<em>by</em> {% endif %}{{ p.author | default: site.author }}</p>
         {% if p.date %}<p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time></p>{% endif %}
       </div>
       {% endif -%}
     </header>
 
     <div class="hr buff"></div>
+
+    {% if p.image %}
+    {% assign aspectr = p.image.ratio | default: '640x360' | split: 'x' -%}
+    {% assign w = aspectr[0] | times: 1.0 -%}
+    {% assign h = aspectr[1] | times: 1.0 -%}
+    {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
+    <figure>
+      <div class="wrap" style="padding-bottom:{{ percent }}%"><img src="{{ p.image.file | prepend: site.img }}" alt="{{ p.image.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}"></div>
+      {% if p.media.caption -%}<figcaption>{{ p.media.caption | strip | normalize_whitespace | smartify | markdownify }}</figcaption>{% endif -%}
+    </figure>
+    {% endif -%}
 
     {{ copy }}
 

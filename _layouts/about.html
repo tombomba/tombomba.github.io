@@ -1,0 +1,49 @@
+{% include html-head.html %}
+
+{% assign p = page -%}
+{% assign copy = content | strip | normalize_whitespace -%}
+
+{% include --widow-fix.html title=p.title -%}
+{% include --img-fix.html copy=copy -%}
+
+<header role="banner">
+  <div class="icon">
+    <a href="{{ site.url }}"><img src="{{ 'bomtomba-400x400.png' | prepend: site.img }}" width="240" height="240" alt="{{ site.title }}"></a>
+  </div>
+</header>
+
+<main role="main">
+
+  <article>
+    <header>
+      <h1>{{ page.title }}</h1>
+      <div class="hr buff"></div>
+    </header>
+
+    {{ copy }}
+
+  </article>
+
+</main>
+
+<footer>
+
+  <div class="hr"></div>
+
+  <div class="social">
+    <p><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></p>
+    <p><a href="/feed.xml">RSS</a></p>
+  </div>
+
+  <div class="hr buff"></div>
+
+  <div class="meta">
+    <h1>{{ site.title }}</h1>
+    <p><i>{{ site.description }}</i></p>
+    <p class="copyright">Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</p>
+  </div>
+
+</footer>
+
+</body>
+</html>

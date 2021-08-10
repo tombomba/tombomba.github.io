@@ -1,13 +1,15 @@
 ---
-layout: post
+layout: about
 title: "About"
 permalink: /about.html
 ---
 
 {% capture pagetext %}
+
 Morbi ut purus nec ex egestas gravida non at diam. Vestibulum quis velit porttitor, volutpat velit quis, cursus urna. Etiam tincidunt sagittis auctor. Pellentesque interdum enim sed lectus fringilla imperdiet. Suspendisse iaculis turpis vitae mollis cursus. Donec vestibulum, lorem sagittis pellentesque lobortis, orci odio lobortis mauris, ac malesuada quam dolor non orci. Etiam semper facilisis consequat. Suspendisse bibendum nunc ut nisl molestie pellentesque. Ut vulputate bibendum purus, tristique malesuada ipsum. Pellentesque vehicula nibh eros, sed luctus purus accumsan sit amet. Donec et posuere diam. Proin quis vehicula mi, sed semper leo. Phasellus cursus tellus in ultricies pharetra. Cras volutpat dictum lacus ac aliquam. Suspendisse dignissim sem nisi.
 
 Morbi ut elementum magna. Sed quis porttitor augue. Curabitur non ante id nisl tristique feugiat suscipit ac nisi. Aliquam erat volutpat. Vivamus molestie ullamcorper tellus et finibus. Donec congue consectetur euismod. Duis pulvinar, ipsum sagittis tincidunt auctor, tortor est egestas massa, vel pharetra risus sapien id orci. Ut cursus nisi eget justo aliquam, nec pulvinar justo tempus. Duis pharetra nibh a ipsum elementum, nec mollis enim pharetra. Nulla scelerisque dignissim porta. Suspendisse augue tellus, eleifend ac massa non, pulvinar rutrum orci. Nunc urna est, dapibus eu sem sed, lacinia fringilla dui. Ut rutrum.
+
 {% endcapture -%}
 
 {{ pagetext | smartify | markdownify | strip | normalize_whitespace }}

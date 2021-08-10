@@ -14,9 +14,9 @@ permalink: /index.html
     {% include banner-text-only.html %}
     {% include detail-inline.html page=p content=p.content is_home=true %}
 
-  {% when 'short' %}
+  {% when 'post' %}
     {% include banner-icon-and-text.html %}
-    {% include detail-short.html page=p content=p.content is_home=true %}
+    {% include detail-post.html page=p content=p.content is_home=true %}
 
   {% else %}
     {% include banner-icon-only.html %}

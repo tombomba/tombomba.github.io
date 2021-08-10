@@ -4,10 +4,6 @@
 {% include --widow-fix.html title=p.title -%}
 {% include --img-fix.html copy=copy -%}
 
-{% if copy contains 'img src=' %}
-  {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}
-{% endif -%}
-
 <header role="banner">
   <div class="text">
     <span class="decoration"></span>

@@ -6,7 +6,7 @@
   {% assign sub = t.last | prepend: '!QQ!' -%}
   {% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
 {% else -%}
-  {% assign titlef = t %}
+  {% assign titlef = t[0] %}
 {% endif -%}
 
 {% if copy contains 'img src=' %}

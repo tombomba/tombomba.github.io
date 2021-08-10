@@ -26,9 +26,16 @@ permalink: /index.html
 
 <aside class="extras">
   <div class="hr"></div>
-{% for x in site.posts limit:7 offset:1 %}
+{% for x in site.posts limit:12 offset:1 %}
+  {% assign t = x.title | default: 'Empty?!' | strip | normalize_whitespace | smartify | split: ' ' -%}
+  {% if t.size > 1 %}
+    {% assign sub = t.last | prepend: '!QQ!' -%}
+    {% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
+  {% else -%}
+    {% assign titlef = t[0] %}
+  {% endif -%}
   <div class="item">
-    <h2><a href="{{ x.url }}">{{ x.title | strip_html | normalize_whitespace | smartify }}</a></h2>
+    <h2><a href="{{ x.url }}">{{ titlef }}</a></h2>
     <div class="meta">
       {% if x.thumbnail or x.fbog %}<div class="fbog" style="background-image: url({{ x.thumbnail | default: x.fbog | prepend: site.img }})"></div>{% endif %}
       <p>{{ x.excerpt | strip_html | normalize_whitespace | smartify }}</p>

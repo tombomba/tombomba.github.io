@@ -27,18 +27,6 @@
 
   <article><!-- {{ copy | number_of_words }} words -->
 
-    <header>
-      <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ titlef }}{% if include.is_home %}</a>{% endif %}</h1>
-      {% if p.is_post %}
-      <div class="byline {{ hedbuff }}"><!-- {{ hedsize }} -->
-        <p class="author {{ bysize }}">{% if bysize == 'nocaps' %}<em>by</em> {% endif %}{{ p.author | default: site.author }}</p>
-        {% if p.date %}<p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time></p>{% endif %}
-      </div>
-      {% endif -%}
-    </header>
-
-    <div class="hr buff"></div>
-
     {% if p.image %}
     {% assign aspectr = p.image.ratio | default: '640x360' | split: 'x' -%}
     {% assign w = aspectr[0] | times: 1.0 -%}
@@ -49,6 +37,18 @@
       {% if p.media.caption -%}<figcaption>{{ p.media.caption | strip | normalize_whitespace | smartify | markdownify }}</figcaption>{% endif -%}
     </figure>
     {% endif -%}
+
+    <header>
+      <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ titlef }}{% if include.is_home %}</a>{% endif %}</h1>
+      {% if p.is_post %}
+      <div class="byline {{ hedbuff }}"><!-- {{ hedsize }} -->
+        <p class="author {{ bysize }}">{% if bysize == 'nocaps' %}<em>by</em> {% endif %}{{ p.author | default: site.author }}</p>
+        {% if p.date %}<p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time></p>{% endif %}
+      </div>
+      {% endif -%}
+    </header>
+
+    {% unless p.image %}<div class="hr buff"></div>{% endunless %}
 
     {{ copy }}
 

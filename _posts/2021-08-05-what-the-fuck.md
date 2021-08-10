@@ -2,6 +2,11 @@
 layout: alternate
 title: "The quick brown fox jumps over the lazy dog"
 excerpt: "In elementum, justo vitae sagittis maximus, tortor tortor suscipit tortor, quis fermentum dui purus quis tellus. Duis hendrerit arcu eu nibh consectetur, ac pharetra nunc porta."
+image:
+  file: test-image-640x360.jpg
+  ratio: 640x360
+  alt: "Photo still from a 16 millimeter print of Star Wars"
+fbog: test-image-640x360.jpg
 ---
 
 Donec et quam quis magna fermentum aliquet quis ac dolor. Mauris turpis dui, pulvinar vitae dictum a, tempus vel orci. Cras ut diam ut sapien sodales porttitor eget eget diam. Donec faucibus nulla at orci mollis vestibulum. Pellentesque gravida consequat augue, et convallis ex sollicitudin quis. Vestibulum vitae accumsan lacus, quis congue mauris. Nullam vitae sollicitudin lacus. Curabitur eget leo felis. Aliquam gravida, mi vitae posuere molestie, odio urna tincidunt eros, sit amet tristique magna enim a neque.

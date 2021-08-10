@@ -3,7 +3,36 @@
 ---
 
 @charset "utf-8"
-@import init, img, footer, banner-text-only, article
+@import init, img, footer, article
+
+header[role="banner"]
+  div.text
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: var(--bem-double)
+    h1
+      margin: 0
+      padding: 0
+      font-family: 'Sancreek', $serif
+      font-size: 205.9%
+      font-weight: 400
+      line-height: 1
+      text-transform: uppercase
+      a:link,
+      a:visited
+        color: $logo-color
+    span.decoration::after
+      content: '*'
+      font-family: 'Sancreek', $serif
+      font-size: 205.9%
+      font-weight: 400
+      line-height: 1
+      text-transform: uppercase
+      color: $logo-color
+      a:link,
+      a:visited
+        color: $logo-color
 
 article
   margin-top: var(--bem-double)

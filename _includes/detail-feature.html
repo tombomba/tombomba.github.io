@@ -2,21 +2,39 @@
 {% assign copy = include.content | strip | normalize_whitespace -%}
 
 {% include --widow-fix.html title=p.title -%}
+{% include --img-fix.html copy=copy -%}
 
 {% if copy contains 'img src=' %}
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}
 {% endif -%}
 
-<article><!-- {{ copy | number_of_words }} words -->
-
-  {% capture hed %}<header><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ titlef }}{% if include.is_home %}</a>{% endif %}</h1><p>{% endcapture -%}
-
-  {{ copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed }}
-
-  {% if p.is_post %}
-  <div class="byline">
-    <p class="author">{{ page.author | default: site.author }}</p>
-    {% if p.date %}<p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time></p>{% endif %}
+<header role="banner">
+  <div class="text">
+    <span class="decoration"></span>
+    <h1><a href="{{ site.url }}">{{ site.title | capitalize }}</a></h1>
+    <span class="decoration"></span>
   </div>
-  {% endif %}
-</article>
+  <div class="hr"></div>
+</header>
+
+<main role="main">
+
+  <article><!-- {{ copy | number_of_words }} words -->
+
+    {% capture hed %}<header><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ titlef }}{% if include.is_home %}</a>{% endif %}</h1><p>{% endcapture -%}
+
+    {{ copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed }}
+
+    {% if p.is_post %}
+    <div class="byline">
+      <p class="author">{{ page.author | default: site.author }}</p>
+      {% if p.date %}<p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time></p>{% endif %}
+    </div>
+    {% endif %}
+  </article>
+
+  {% if include.is_home %}
+    {% include --aside-extras.html %}
+  {% endif -%}
+
+</main>

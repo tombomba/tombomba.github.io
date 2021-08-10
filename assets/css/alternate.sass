@@ -3,7 +3,27 @@
 ---
 
 @charset "utf-8"
-@import init, img, footer, banner-text-only-alt, article
+@import init, img, figure, footer, article
+
+header[role="banner"]
+  display: flex
+  align-items: center
+  div.logo img
+    width: var(--bem-double)
+    height: var(--bem-double)
+    border-radius: 4px
+  h1
+    font-family: 'Sancreek', $serif
+    font-size: 205.9%
+    font-weight: 400
+    line-height: 1
+    text-transform: uppercase
+    a:link,
+    a:visited
+      color: $logo-color
+  div.hr
+    flex: 1
+    margin-left: 1em
 
 article
   header
@@ -28,7 +48,7 @@ article
       a:visited
         color: $mix-color
     p.author
-      text-transform: uppercase
+      //text-transform: uppercase
       &::after
         content: "\20\/\20"
 

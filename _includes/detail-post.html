@@ -2,6 +2,7 @@
 {% assign copy = include.content | strip | normalize_whitespace -%}
 
 {% include --widow-fix.html title=p.title -%}
+{% include --img-fix.html copy=copy -%}
 
 {% assign lastchar = titlef | slice: -1 %}
 {% assign punc = '<span class="punc"></span>' %}
@@ -18,31 +19,48 @@
     {% assign titlef = titlef | append: punc %}
 {% endcase -%}
 
-{% if copy contains 'img src=' %}
-  {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}
-{% endif -%}
-
 {% if p.date %}
 {% capture datef -%}<time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{% if include.is_home %}<a href="{{ p.url }}">{% endif %}{{ p.date | date: "%-d %b" }}{% if include.is_home %}</a>{% endif %}</time>{% endcapture -%}
 {% assign copysize = copy | size | minus: 4 %}
 {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
 {% endif -%}
 
-<article><!-- {{ copy | number_of_words }} words -->
+<header role="banner">
+  <div class="meta">
+    <div class="logo">
+      <a href="{{ site.url }}"><img src="{{ 'bomtomba.gif' | prepend: site.img }}" alt="{{ site.title }}"></a>
+    </div>
+    <div class="text">
+      <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+      <p>A media diary<span class="tagshow">, a small collage, a dumb blog</span></p>
+    </div>
+  </div>
+  <div class="hr buff"></div>
+</header>
 
-  {% if p.image %}
-  {% assign aspectr = p.image.ratio | default: '640x360' | split: 'x' -%}
-  {% assign w = aspectr[0] | times: 1.0 -%}
-  {% assign h = aspectr[1] | times: 1.0 -%}
-  {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
-  <figure>
-    <div class="wrap" style="padding-bottom:{{ percent }}%"><img src="{{ p.image.file | prepend: site.img }}" alt="{{ p.image.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}"></div>
-    {% if p.media.caption -%}<figcaption>{{ p.media.caption | strip | normalize_whitespace | smartify | markdownify }}</figcaption>{% endif -%}
-  </figure>
+<main role="main">
+
+  <article><!-- {{ copy | number_of_words }} words -->
+
+    {% if p.image %}
+    {% assign aspectr = p.image.ratio | default: '640x360' | split: 'x' -%}
+    {% assign w = aspectr[0] | times: 1.0 -%}
+    {% assign h = aspectr[1] | times: 1.0 -%}
+    {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
+    <figure>
+      <div class="wrap" style="padding-bottom:{{ percent }}%"><img src="{{ p.image.file | prepend: site.img }}" alt="{{ p.image.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}"></div>
+      {% if p.media.caption -%}<figcaption>{{ p.media.caption | strip | normalize_whitespace | smartify | markdownify }}</figcaption>{% endif -%}
+    </figure>
+    {% endif -%}
+
+    {% capture hed %}<header><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ titlef }}{% if include.is_home %}</a>{% endif %}</h1><p>{% endcapture -%}
+
+    {{ copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed }}
+
+  </article>
+
+  {% if include.is_home %}
+    {% include --aside-extras.html %}
   {% endif -%}
 
-  {% capture hed %}<header><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ titlef }}{% if include.is_home %}</a>{% endif %}</h1><p>{% endcapture -%}
-
-  {{ copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed }}
-
-</article>
+</main>

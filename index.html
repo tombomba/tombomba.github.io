@@ -6,38 +6,13 @@ permalink: /index.html
 
 {% include html-head.html %}
 
-<main role="main"><!-- {{ p.layout }} -->
-
 {% case p.layout %}
-
-  {% when 'inline' %}
-    {% include banner-text-only.html %}
+  {% when 'feature' %}
     {% include detail-feature.html page=p content=p.content is_home=true %}
-
-  {% when 'post' %}
-    {% include banner-icon-and-text.html %}
-    {% include detail-post.html page=p content=p.content is_home=true %}
-
+  {% when 'alternate' %}
+    {% include detail-alternate.html page=p content=p.content is_home=true %}
   {% else %}
-    {% include banner-icon-only.html %}
-    {% include detail-text.html page=p content=p.content is_home=true %}
-
+    {% include detail-post.html page=p content=p.content is_home=true %}
 {% endcase %}
-
-<aside class="extras">
-  <div class="hr"></div>
-  {% for x in site.posts limit:12 offset:1 %}
-    {% include --widow-fix.html title=x.title %}
-    <div class="item">
-      <h2><a href="{{ x.url }}">{{ titlef }}</a></h2>
-      <div class="meta">
-        {% if x.thumbnail or x.fbog %}<div class="fbog" style="background-image: url({{ x.thumbnail | default: x.fbog | prepend: site.img }})"></div>{% endif %}
-        <p>{{ x.excerpt | strip_html | normalize_whitespace | smartify }}</p>
-      </div>
-    </div>
-  {% endfor -%}
-</aside>
-
-</main>
 
 {% include html-foot.html %}

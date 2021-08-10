@@ -7,6 +7,7 @@ image:
   ratio: 640x360
   alt: "Photo still from a 16 millimeter print of Star Wars"
 fbog: test-image-640x360.jpg
+thumbnail: thumb--test-image-640x360.jpg
 ---
 
 Donec et quam quis magna fermentum aliquet quis ac dolor. Mauris turpis dui, pulvinar vitae dictum a, tempus vel orci. Cras ut diam ut sapien sodales porttitor eget eget diam. Donec faucibus nulla at orci mollis vestibulum. Pellentesque gravida consequat augue, et convallis ex sollicitudin quis. Vestibulum vitae accumsan lacus, quis congue mauris. Nullam vitae sollicitudin lacus. Curabitur eget leo felis. Aliquam gravida, mi vitae posuere molestie, odio urna tincidunt eros, sit amet tristique magna enim a neque.

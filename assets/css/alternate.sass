@@ -31,8 +31,8 @@ header[role="banner"]
 article
   header
     h1
-      font-size: 125%
-      line-height: 1.3125
+      font-size: var(--hed-size)
+      line-height: var(--hed-lh)
       a:link,
       a:visited
         color: $text-color
@@ -44,7 +44,7 @@ article
     p
       display: inline
       margin: 0
-      font-size: 81.3%
+      font-size: var(--micro-size)
       line-height: var(--hed-lh)
       color: $mix-color
       a:link,
@@ -61,14 +61,3 @@ article
 
   &>img.top
     margin-top: var(--bem)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 30em)
-
-  article
-    header h1
-      font-size: 129.4%
-      line-height: 1.32352941176
-    div.byline p
-      font-size: 76.5%

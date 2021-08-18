@@ -29,14 +29,14 @@ article
   margin-top: var(--bem-double)
   header
     h1
-      font-size: 125%
-      line-height: 1.3125
+      font-size: var(--hed-size)
+      line-height: var(--hed-lh)
       @extend .title-link
   div.byline
     margin-top: var(--bem)
     p
       margin: 0
-      line-height: 1.4
+      line-height: var(--hed-lh)
       font-style: italic
   &>img.top
     margin-top: -1em
@@ -51,8 +51,5 @@ footer ul
 
 @media screen and (min-width: 30em)
 
-  article header h1
-    font-size: 129.4%
-    line-height: 1.32352941176
   footer ul
     flex-direction: row

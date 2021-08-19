@@ -53,6 +53,31 @@ header[role="banner"]
   margin: var(--bem) auto 0 auto
   max-width: var(--page-width)
 
+article
+
+  h1, h2, h3, h4, h5, h6
+    @extend .title-link
+
+  h2, h3, h4, h5, h6
+    font-size: 100%
+    margin-top: var(--bem)
+
+  p, ul, ol, li, hr
+    margin-top: 1em
+
+  ul.plain
+    margin: var(--bem) 0 0 var(--bem)
+    li
+      margin: 0
+
+  blockquote
+    padding-left: var(--bem)
+    border-left: thin solid $light-mix
+
+  blockquote,
+  li + p,
+    margin-top: 0
+
 a
   text-decoration: none
   text-decoration-skip-ink: auto
@@ -77,9 +102,7 @@ div.hr
   border-top: 1px solid $border-dark
   border-bottom: 2px solid $border-light
   background-color: $body-color
-  &.buff
-    margin-top: var(--bem)
-  &.buff-double
+  &.double
     margin-top: var(--bem-double)
 
 .title-link

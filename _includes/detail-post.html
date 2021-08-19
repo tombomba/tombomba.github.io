@@ -2,7 +2,6 @@
 {% assign copy = include.content | strip | normalize_whitespace -%}
 
 {% include --widow-fix.html title=p.title -%}
-{% include --img-fix.html copy=copy -%}
 
 {% assign lastchar = titlef | slice: -1 %}
 {% assign punc = '<span class="punc"></span>' %}

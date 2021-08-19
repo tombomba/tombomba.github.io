@@ -2,7 +2,6 @@
 {% assign copy = include.content | strip | normalize_whitespace -%}
 
 {% include --widow-fix.html title=p.title -%}
-{% include --img-fix.html copy=copy -%}
 
 {% assign hedsize = p.title | strip | normalize_whitespace | size -%}
 {% if hedsize > 49 %}{% assign hedbuff = 'buff' %}{% else %}{% assign hedbuff = 'norm' %}{% endif -%}

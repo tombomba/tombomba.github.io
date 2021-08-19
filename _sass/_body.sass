@@ -2,13 +2,17 @@
 
 \:root
   --bem: 1.5em
+  --bem-wrapper: 1.5em
   --bem-double: 3em
+  --bem-micro: 0.34375em
+  --logo-size: 206.3%
   --body-size: 100%
   --body-lh: 1.6875
   --hed-size: 125%
   --hed-lh: 1.34375
   --micro-size: 81.3%
   --page-width: 32em
+
 
 html
   box-sizing: border-box
@@ -119,6 +123,8 @@ div.hr
 @media screen and (min-width: 30em)
 
   \:root
+    --bem-micro: 0.32352941176em
+    --logo-size: 205.9%
     --body-size: 106.25%
     --body-lh: 1.64705882353
     --hed-size: 129.4%
@@ -130,6 +136,9 @@ div.hr
 
 @media screen and (min-width: 48em)
 
+  \:root
+    --bem-wrapper: 3em
+
   body
     padding: 0
 
@@ -138,6 +147,8 @@ div.hr
 @media screen and (min-width: 60em)
 
   \:root
+    --bem-micro: 0.415em
+    --logo-size: 261.1%	
     --body-size: 112.5%
     --body-lh: 1.83
     --page-width: 37.389em

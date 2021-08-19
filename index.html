@@ -2,17 +2,20 @@
 permalink: /index.html
 ---
 
-{% assign p = site.posts.first %}
-
 {% include html-head.html %}
+{% include banner.html %}
 
-{% case p.layout %}
-  {% when 'feature' %}
-    {% include detail-feature.html page=p content=p.content is_home=true %}
-  {% when 'alternate' %}
-    {% include detail-alternate.html page=p content=p.content is_home=true %}
-  {% else %}
-    {% include detail-post.html page=p content=p.content is_home=true %}
-{% endcase %}
+{% for p in site.posts %}
+
+  {% unless forloop.first %}<div class="hr buff-double"></div>{% endunless %}
+
+  {% case p.layout %}
+    {% when 'feature' %}
+      {% include detail-feature.html page=p content=p.content is_home=true %}
+    {% else %}
+      {% include detail-post.html page=p content=p.content is_home=true %}
+  {% endcase %}
+
+{% endfor %}
 
 {% include html-foot.html %}

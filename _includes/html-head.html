@@ -43,9 +43,11 @@
     <meta name="twitter:image:src" content="{{ page.fbog | default: 'default-social.png' | prepend: site.img }}">
 
     <!-- {{ page.layout }} css -->
-    <link rel="stylesheet" href="{{ p.layout | default: page.layout | prepend: site.css | append: '.css' }}">
+    <link rel="stylesheet" href="{{ 'feature' | prepend: site.css | append: '.css' }}">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sancreek&display=swap&text={{ site.title | upcase }}*!40" rel="stylesheet">
 
 </head>
 
 <body><!--{{ p.layout }}{{ page.layout }}-->
+
+  <main role="main">

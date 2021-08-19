@@ -23,8 +23,6 @@
 </header>
 {% endif -%}
 
-<main role="main">
-
   <article><!-- {{ copy | number_of_words }} words -->
 
     {% if p.image %}
@@ -53,9 +51,3 @@
     {{ copy }}
 
   </article>
-
-  {% if include.is_home %}
-    {% include --aside-extras.html %}
-  {% endif -%}
-
-</main>

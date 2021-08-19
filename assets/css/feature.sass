@@ -3,7 +3,7 @@
 ---
 
 @charset "utf-8"
-@import reset, global, img, footer, article
+@import reset, fonts, colors, body, article, img, footer
 
 header[role="banner"]
   margin-top: var(--bem)
@@ -45,9 +45,6 @@ article
         text-transform: uppercase
         &::after
           content: "\20/\20"
-  p.datestamp
-    font-style: italic
-    @extend .mix-link
   &>img.top
     margin-top: 0
 

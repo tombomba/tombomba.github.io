@@ -4,6 +4,13 @@
 {% include --widow-fix.html title=p.title -%}
 {% include --img-fix.html copy=copy -%}
 
+{% capture byline %}
+<div class="byline">
+  <p class="author">{{ p.author | default: site.author }}</p>
+  {% if p.date %}<p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time></p>{% endif %}
+</div>
+{% endcapture -%}
+
 <header role="banner">
   <div class="hr left"></div>
   <div class="text">
@@ -16,11 +23,10 @@
 
   <article><!-- {{ copy | number_of_words }} words -->
 
-    {% capture hed %}<header><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ titlef }}{% if include.is_home %}</a>{% endif %}</h1><p>{% endcapture -%}
+    {% capture hed %}<header><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ titlef }}{% if include.is_home %}</a>{% endif %}</h1>{{ byline }}<p>{% endcapture -%}
 
     {{ copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed }}
 
-    <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time></p>
   </article>
 
   {% if include.is_home %}

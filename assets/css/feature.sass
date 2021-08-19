@@ -67,11 +67,17 @@ footer
 
 @media screen and (min-width: 30em)
 
+  footer ul
+    flex-direction: row
+
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 32em)
+
   article header div.byline
     &.inline
       margin-top: 1em
-    &.figure
+    &.figure,
+    &.plain
       margin-top: 0
-
-  footer ul
-    flex-direction: row

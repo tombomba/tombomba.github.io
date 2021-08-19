@@ -33,11 +33,20 @@ article
       line-height: var(--hed-lh)
       @extend .title-link
   div.byline
-    margin-top: var(--bem)
+    margin-top: 0
     p
-      margin: 0
+      display: inline
+      font-size: var(--micro-size)
       line-height: var(--hed-lh)
-      font-style: italic
+      color: $mix-color
+      @extend .mix-link
+      &.author
+        text-transform: uppercase
+        &::after
+          content: "\20/\20"
+  p.datestamp
+    font-style: italic
+    @extend .mix-link
   &>img.top
     margin-top: 0
 

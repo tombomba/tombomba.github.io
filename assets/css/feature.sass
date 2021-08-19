@@ -6,7 +6,7 @@
 @import reset, global, img, footer, article
 
 header[role="banner"]
-  margin-top: 2em
+  margin-top: var(--bem)
   display: flex
   align-items: center
   justify-content: space-between
@@ -27,6 +27,7 @@ header[role="banner"]
       flex: 1
 
 article
+  margin-top: var(--bem)
   header
     h1
       font-size: var(--hed-size)

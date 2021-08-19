@@ -6,7 +6,7 @@ fbog: african-queen-240x365.jpg
 thumbnail: thumb--african-queen-240x365.jpg
 ---
 
-![The African Queen, 1952]({{ site.img }}african-queen-240x365.jpg){: width="240" height="365" .top .left .tilt .pull .transparent }
+![The African Queen, 1952]({{ site.img }}african-queen-240x365.jpg){: width="240" height="365" .top .right .tilt }
 
 Vestibulum eu nunc ut purus sodales sagittis vitae eget urna. Aliquam ac metus turpis. Fusce mollis sollicitudin lacus et mollis. Nunc porttitor maximus eros, id mollis ante molestie at. Aliquam odio est, egestas id lectus eget, placerat feugiat magna. Cras vitae arcu at orci vestibulum dapibus. Maecenas quis nisi a nunc suscipit ultrices eu vel tellus. Nulla varius vehicula nisi in sodales. Donec consequat ante at molestie condimentum. Nullam interdum eget augue a scelerisque.
 

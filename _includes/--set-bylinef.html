@@ -1,6 +1,0 @@
-{% capture bylinef %}
-<div class="byline {{ include.style }}">
-  <p class="author">{{ include.author | default: site.author }}</p>
-  <p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ include.date | date: "%-d %b %Y" }}</time></p>
-</div>
-{% endcapture -%}

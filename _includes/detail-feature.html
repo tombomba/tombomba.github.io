@@ -5,7 +5,7 @@
   {% assign style = 'inline' %}
 
 {% elsif p.image %}
-  {% assign style = 'inline' %}
+  {% assign style = 'figure' %}
 
 {% else %}
   {% assign style = 'plain' %}
@@ -13,12 +13,18 @@
 {% endif -%}
 
 {% include --widow-fix.html title=p.title -%}
-{% include --set-bylinef.html author=p.author date=p.date style=style %}
 {% include --set-img-src.html %}
 
-<header role="banner" class="{{ style }}">
+{% capture bylinef %}
+<div class="byline {{ style }}">
+  <p class="author">{{ include.author | default: site.author }}</p>
+  <p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time></p>
+</div>
+{% endcapture -%}
+
+<header role="banner">
   {% unless style == 'plain' %}<div class="hr left"></div>{% endunless %}
-  <div class="text">
+  <div class="text {{ style }}">
     <h1><a href="{{ site.url }}">{{ site.title | capitalize }}</a></h1>
   </div>
   <div class="hr right"></div>

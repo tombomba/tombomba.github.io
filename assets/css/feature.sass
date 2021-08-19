@@ -36,21 +36,25 @@ article
       font-size: var(--hed-size)
       line-height: var(--hed-lh)
       @extend .title-link
-  div.byline
-    margin-top: 1ems
-    p
-      display: inline
-      font-size: var(--micro-size)
-      line-height: var(--hed-lh)
-      color: $mix-color
-      @extend .mix-link
-      &.author
-        text-transform: uppercase
-        &::after
-          content: "\20/\20"
+    div.byline
+      &.inline,
+      &.figure
+        margin-top: 1em
+      &.plain
+        margin-top: 0
+      p
+        display: inline
+        font-size: var(--micro-size)
+        line-height: var(--hed-lh)
+        color: $mix-color
+        @extend .mix-link
+        &.author
+          text-transform: uppercase
+          &::after
+            content: "\20/\20"
   &>img.top
     margin-top: 0
-    
+
 footer
   margin-top: var(--bem-wrapper)
   ul
@@ -62,6 +66,12 @@ footer
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30em)
+
+  article header div.byline
+    &.inline
+      margin-top: 1em
+    &.figure
+      margin-top: 0
 
   footer ul
     flex-direction: row

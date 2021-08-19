@@ -27,14 +27,14 @@ header[role="banner"]
       flex: 1
 
 article
-  margin-top: var(--bem)
+  margin-top: var(--bem-double)
   header
     h1
       font-size: var(--hed-size)
       line-height: var(--hed-lh)
       @extend .title-link
   div.byline
-    margin-top: 0
+    margin-top: 1em
     p
       display: inline
       font-size: var(--micro-size)
@@ -48,11 +48,13 @@ article
   &>img.top
     margin-top: 0
 
-footer ul
-  display: flex
-  flex-direction: column
-  align-items: center
-  justify-content: center
+footer
+  margin-top: var(--bem-double)
+  ul
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
 
 //-----------------------------------------------------------------------------
 

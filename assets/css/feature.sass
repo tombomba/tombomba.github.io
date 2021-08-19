@@ -3,31 +3,7 @@
 ---
 
 @charset "utf-8"
-@import reset, fonts, colors, body, figure, img, footer
-
-header[role="banner"]
-  margin-top: 1em
-  display: flex
-  align-items: center
-  justify-content: space-between
-  div.text
-    display: flex
-    align-items: center
-    h1
-      margin: 0
-      padding: 0
-      font-family: 'Sancreek', $serif
-      font-size: var(--logo-size)
-      font-weight: 400
-      line-height: 1
-      text-transform: uppercase
-      @extend .logo-link
-  div.hr
-    flex: 1
-    &.left
-      margin-right: 1em
-    &.right
-      margin-left: 1em
+@import reset, fonts, colors, banner, body, figure, img, footer
 
 article
   margin-top: var(--bem-wrapper)

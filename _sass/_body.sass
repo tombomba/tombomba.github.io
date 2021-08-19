@@ -3,7 +3,7 @@
 \:root
   --bem: 1.5em
   --bem-wrapper: 2em
-  --bem-double: 2em
+  --bem-double: 3em
   --bem-micro: 0.34375em
   --logo-size: 206.3%
   --body-size: 100%
@@ -50,7 +50,7 @@ main[role="main"]
   margin-right: auto
 
 header[role="banner"]
-  margin: var(--bem) auto 0 auto
+  margin: 1em auto 0 auto
   max-width: var(--page-width)
 
 article
@@ -60,13 +60,13 @@ article
 
   h2, h3, h4, h5, h6
     font-size: 100%
-    margin-top: var(--bem)
+    margin-top: 1em
 
   p, ul, ol, li, hr
     margin-top: 1em
 
   ul.plain
-    margin: var(--bem) 0 0 var(--bem)
+    margin: 1em 0 0 var(--bem)
     li
       margin: 0
 
@@ -157,9 +157,6 @@ div.hr
 
 @media screen and (min-width: 48em)
 
-  \:root
-    --bem-wrapper: 2em
-
   body
     padding: 0
 
@@ -169,7 +166,6 @@ div.hr
 
   \:root
     --bem-micro: 0.415em
-    //--logo-size: 261.1%
     --body-size: 112.5%
     --body-lh: 1.83
     --page-width: 37.389em

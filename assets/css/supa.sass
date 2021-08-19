@@ -1,0 +1,61 @@
+---
+# POSTS WITH FLOATS
+---
+
+@charset "utf-8"
+@import reset, fonts, colors, banner, body, figure, img, footer
+
+article
+  margin-top: var(--bem-wrapper)
+  &:not(:first-of-type)
+    margin-top: var(--bem-double)
+  header
+    h1
+      font-size: var(--hed-size)
+      line-height: var(--hed-lh)
+      @extend .title-link
+    div.byline
+      &.inline,
+      &.figure
+        margin-top: 1em
+      &.plain
+        margin-top: 0
+      p
+        display: inline
+        font-size: var(--micro-size)
+        line-height: var(--hed-lh)
+        color: $mix-color
+        @extend .mix-link
+        &.author
+          text-transform: uppercase
+          &::after
+            content: "\20/\20"
+  &>img.top
+    margin-top: 0
+  time
+    font-style: italic
+    @extend .mix-link
+
+footer
+  ul
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30em)
+
+  footer ul
+    flex-direction: row
+
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 32em)
+
+  article header div.byline
+    &.figure,
+    &.plain
+      margin-top: 0

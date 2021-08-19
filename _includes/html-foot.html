@@ -5,7 +5,8 @@
   <div class="hr"></div>
 
   <div class="meta">
-    <ul><li><a href="{{ site.url }}">{{ site.domain | capitalize }}</a><span class="copyshow"> &copy {{ site.posts.first.date | date: "%Y" }} {{ site.author }}</span></li>{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li></ul>
+    <p><a href="{{ site.ur }}"><b>{{ site.domain | capitalize }}:</b></a> &ldquo;{{ site.data.taglines | sample: 1 }}&rdquo;</p>
+    <ul><li>Copyright &copy {{ site.posts.first.date | date: "%Y" }} {{ site.author }}</li>{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li></ul>
   </div>
 
 </footer>

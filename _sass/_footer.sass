@@ -7,20 +7,28 @@ footer
   margin-right: auto
   margin-bottom: 1em
 
-  ul
-    margin: 1em 0 0 0
-    list-style: none
-    li
-      line-height: var(--body-lh)
-      color: $mix-color
-      span.copyshow
-        display: none
+  div.meta
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 1em
+    p
+      font-size: var(--micro-size)
+      @extend .title-link
+    ul
+      margin: 0
+      list-style: none
+      li
+        line-height: var(--body-lh)
+        color: $mix-color
+        span.copyshow
+          display: none
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30em)
 
-  footer ul
+  footer div.meta ul
     display: flex
     li
       margin-right: var(--bem-micro)

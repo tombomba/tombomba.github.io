@@ -1,0 +1,6 @@
+{% capture bylinef %}
+<div class="byline {% if include.is_fat %}fat{% else %}thin{% endif %}">
+  <p class="author">{{ include.author | default: site.author }}</p>
+  <p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ include.date | date: "%-d %b %Y" }}</time></p>
+</div>
+{% endcapture -%}

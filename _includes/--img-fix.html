@@ -1,3 +1,0 @@
-{% if include.copy contains 'img src=' %}
-  {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}
-{% endif -%}

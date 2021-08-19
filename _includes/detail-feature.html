@@ -1,15 +1,13 @@
 {% assign p = include.page -%}
 {% assign copy = include.content | strip | normalize_whitespace -%}
 
-{% include --widow-fix.html title=p.title -%}
-{% include --img-fix.html copy=copy -%}
+{% if copy contains 'img src=' %}
+  {% assign fat-margin = true %}
+  {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}
+{% endif -%}
 
-{% capture byline %}
-<div class="byline">
-  <p class="author">{{ p.author | default: site.author }}</p>
-  {% if p.date %}<p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%-d %b %Y" }}</time></p>{% endif %}
-</div>
-{% endcapture -%}
+{% include --widow-fix.html title=p.title -%}
+{% include --set-byline.html author=p.author date=p.date is_fat=fat-margin %}
 
 <header role="banner">
   <div class="hr left"></div>
@@ -23,7 +21,18 @@
 
   <article><!-- {{ copy | number_of_words }} words -->
 
-    {% capture hed %}<header><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ titlef }}{% if include.is_home %}</a>{% endif %}</h1>{{ byline }}<p>{% endcapture -%}
+    {% if p.image %}
+    {% assign aspectr = p.image.ratio | default: '640x360' | split: 'x' -%}
+    {% assign w = aspectr[0] | times: 1.0 -%}
+    {% assign h = aspectr[1] | times: 1.0 -%}
+    {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
+    <figure>
+      <div class="wrap" style="padding-bottom:{{ percent }}%"><img src="{{ p.image.file | prepend: site.img }}" alt="{{ p.image.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}"></div>
+      {% if p.media.caption -%}<figcaption>{{ p.media.caption | strip | normalize_whitespace | smartify | markdownify }}</figcaption>{% endif -%}
+    </figure>
+    {% endif -%}
+
+    {% capture hed %}<header><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ titlef }}{% if include.is_home %}</a>{% endif %}</h1>{{ bylinef }}<p>{% endcapture -%}
 
     {{ copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed }}
 

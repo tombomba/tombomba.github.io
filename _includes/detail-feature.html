@@ -2,15 +2,22 @@
 {% assign copy = include.content | strip | normalize_whitespace -%}
 
 {% if copy contains 'img src=' %}
-  {% assign fat-margin = true %}
-  {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' %}
+  {% assign style = 'inline' %}
+
+{% elsif p.image %}
+  {% assign style = 'inline' %}
+
+{% else %}
+  {% assign style = 'plain' %}
+
 {% endif -%}
 
 {% include --widow-fix.html title=p.title -%}
-{% include --set-byline.html author=p.author date=p.date is_fat=fat-margin %}
+{% include --set-bylinef.html author=p.author date=p.date style=style %}
+{% include --set-img-src.html %}
 
-<header role="banner">
-  <div class="hr left"></div>
+<header role="banner" class="{{ style }}">
+  {% unless style == 'plain' %}<div class="hr left"></div>{% endunless %}
   <div class="text">
     <h1><a href="{{ site.url }}">{{ site.title | capitalize }}</a></h1>
   </div>

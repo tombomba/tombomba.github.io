@@ -13,7 +13,6 @@ header[role="banner"]
   div.text
     display: flex
     align-items: center
-    margin: 0 1em
     h1
       margin: 0
       padding: 0
@@ -23,8 +22,12 @@ header[role="banner"]
       line-height: 1
       text-transform: uppercase
       @extend .logo-link
-    div.hr
-      flex: 1
+  div.hr
+    flex: 1
+    &.left
+      margin-right: 1em
+    &.right
+      margin-left: 1em
 
 article
   margin-top: var(--bem-wrapper)
@@ -34,10 +37,7 @@ article
       line-height: var(--hed-lh)
       @extend .title-link
   div.byline
-    &.fat
-      margin-top: 1em
-    &.thin
-      margin-top: 0
+    margin-top: 1ems
     p
       display: inline
       font-size: var(--micro-size)
@@ -50,7 +50,7 @@ article
           content: "\20/\20"
   &>img.top
     margin-top: 0
-
+    
 footer
   margin-top: var(--bem-wrapper)
   ul

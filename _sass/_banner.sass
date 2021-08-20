@@ -1,14 +1,25 @@
 //-----------------------------------------------------------------------------
 
 header[role="banner"]
-  display: flex
-  align-items: center
-  justify-content: space-between
-  margin-top: 1em
-  img
-    width: var(--bem-double)
-    height: var(--bem-double)
-    margin-right: 1em
-    border-radius: 4px
+  div.meta
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-top: 1em
+    div.icon
+      img
+        width: var(--bem-double)
+        height: var(--bem-double)
+        margin-right: 1em
+        border-radius: 4px
+    div.text
+      flex: 1
+      h1, p
+        font-size: var(--micro-size)
+        line-height: var(--hed-lh)
+      h1
+        @extend .title-link
+
   div.hr
+    margin-top: 1em
     flex: 1

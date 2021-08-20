@@ -1,24 +1,14 @@
 //-----------------------------------------------------------------------------
 
 header[role="banner"]
+  display: flex
+  align-items: center
+  justify-content: space-between
   margin-top: 1em
-  div.brand
-    display: flex
-    align-items: center
-    justify-content: space-between
-    div.text
-      flex: 1
-      h1, p
-        font-size: var(--micro-size)
-        line-height: var(--hed-lh)
-      h1
-        @extend .title-link
-    div.icon
-      margin-right: 1em
-      img
-          width: var(--bem-double)
-          height: var(--bem-double)
-          border-radius: 4px
-
+  img
+    width: var(--bem-double)
+    height: var(--bem-double)
+    margin-right: 1em
+    border-radius: 4px
   div.hr
     flex: 1

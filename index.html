@@ -3,19 +3,10 @@ permalink: /index.html
 ---
 
 {% include html-head.html %}
+
+{% assign p = site.posts.first %}
+
 {% include banner.html %}
-
-{% for p in site.posts %}
-
-  {% unless forloop.first %}<div class="hr double"></div>{% endunless %}
-
-  {% case p.layout %}
-    {% when 'feature' %}
-      {% include detail-feature.html page=p content=p.content is_home=true %}
-    {% else %}
-      {% include detail-post.html page=p content=p.content is_home=true %}
-  {% endcase %}
-
-{% endfor %}
+{% include detail-supa.html page=p content=p.content is_home=true %}
 
 {% include html-foot.html %}

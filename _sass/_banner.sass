@@ -2,24 +2,23 @@
 
 header[role="banner"]
   margin-top: 1em
-  display: flex
-  align-items: center
-  justify-content: space-between
-  div.text
+  div.brand
     display: flex
     align-items: center
-    h1
-      margin: 0
-      padding: 0
-      font-family: 'Sancreek', $serif
-      font-size: var(--logo-size)
-      font-weight: 400
-      line-height: 1
-      text-transform: uppercase
-      @extend .logo-link
+    justify-content: space-between
+    div.text
+      flex: 1
+      h1, p
+        font-size: var(--micro-size)
+        line-height: var(--hed-lh)
+      h1
+        @extend .title-link
+    div.icon
+      margin-right: 1em
+      img
+          width: var(--bem-double)
+          height: var(--bem-double)
+          border-radius: 4px
+
   div.hr
     flex: 1
-    &.left
-      margin-right: 1em
-    &.right
-      margin-left: 1em

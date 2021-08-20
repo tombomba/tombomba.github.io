@@ -1,16 +1,16 @@
 //-----------------------------------------------------------------------------
 
 \:root
-  --bem: 1.5em
-  --bem-wrapper: 2em
-  --bem-double: 3em
-  --bem-micro: 0.34375em
-  --logo-size: 206.3%
   --body-size: 100%
   --body-lh: 1.6875
+  --logo-size: 206.3%
   --hed-size: 125%
   --hed-lh: 1.34375
   --micro-size: 81.3%
+  --bem: calc(var(--body-lh) * 1em)
+  --bem-double: calc(var(--body-lh) * 2em)
+  --bem-wrapper: 2em
+  --bem-micro: 0.34375em
   --page-width: 32em
 
 
@@ -102,6 +102,10 @@ div.hr
   border-top: 1px solid $border-dark
   border-bottom: 2px solid $border-light
   background-color: $body-color
+  &.buff
+    margin-top: 1em
+  &.single
+    margin-top: var(--bem)
   &.double
     margin-top: var(--bem-double)
 

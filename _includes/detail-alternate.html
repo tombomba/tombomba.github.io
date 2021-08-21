@@ -6,21 +6,6 @@
 {% assign hedsize = p.title | strip | normalize_whitespace | size -%}
 {% if hedsize > 49 %}{% assign hedbuff = 'buff' %}{% else %}{% assign hedbuff = 'norm' %}{% endif -%}
 
-{% if p.image or copy contains 'img src=' %}
-{% assign bysize = 'allcaps' %}
-<header role="banner">
-  <h1><a href="{{ site.url }}">{{ site.title | capitalize }}</a></h1>
-  <div class="hr"></div>
-</header>
-{% else %}
-{% assign bysize = 'nocaps' %}
-<header role="banner">
-  <div class="logo">
-    <a href="{{ site.url }}"><img src="{{ 'bomtomba.gif' | prepend: site.img }}" alt="{{ site.title }}"></a>
-  </div>
-  <div class="hr"></div>
-</header>
-{% endif -%}
 
   <article><!-- {{ copy | number_of_words }} words -->
 

@@ -3,7 +3,13 @@ permalink: /index.html
 ---
 
 {% assign p = site.posts.first %}
-
 {% include html-head.html %}
 {% include detail-supa.html page=p content=p.content is_home=true %}
+
+<ul>
+{% for p in site.posts offset: 1 %}
+<li><a href="{{ p.url }}">{{ p.title }}</a></li>
+{% endfor %}
+</ul>
+
 {% include html-foot.html %}

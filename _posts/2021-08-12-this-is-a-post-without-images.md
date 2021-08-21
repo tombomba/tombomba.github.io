@@ -1,5 +1,5 @@
 ---
-layout: feature
+layout: supa
 title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
 ---
 

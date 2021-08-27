@@ -32,6 +32,6 @@
 
   {{ copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed }}
 
-  <p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%Y-%m-%d %H:%M" }}</time></p>
+  <p class="byline"><a href="/about/">{{ site.author }}</a> @ <time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}"><a href="{{ p.url }}">{{ p.date | date: "%Y-%m-%d %H:%M" }}</a></time></p>
 
 </article>

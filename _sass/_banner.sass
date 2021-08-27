@@ -12,7 +12,10 @@ header[role="banner"]
     border-radius: 4px
   div.hr
     flex: 1
-    margin-left: 1em
+    &.right
+      margin-left: 1em
+    &.left
+      margin-right: 1em
   h1
     font-family: $system
     font-size: var(--logo-size)
@@ -20,4 +23,4 @@ header[role="banner"]
     line-height: 1
     letter-spacing: -0.5px
     text-transform: uppercase
-    @extend .logo-link
+    @extend .link-link

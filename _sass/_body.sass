@@ -11,6 +11,8 @@
   --rat: calc(var(--body-lh) * 1em)
   --bem: 1.5em
   --bem-double: 3em
+  --buffer-thin: 1.5em
+  --buffer-fat: 3em
   --bem-micro: 0.34375em
   --page-width: 32em
 
@@ -106,6 +108,11 @@ div.hr
     margin-top: var(--bem)
   &.double
     margin-top: var(--bem-double)
+
+.thin
+  margin-top: var(--bem)
+.fat
+  margin-top: var(--bem-double)    
 
 .title-link
   color: $text-color

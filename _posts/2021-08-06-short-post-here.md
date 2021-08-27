@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Short short condensed micro post"
 #image:
 #  file: starwars-on-16mm-768x279.jpg

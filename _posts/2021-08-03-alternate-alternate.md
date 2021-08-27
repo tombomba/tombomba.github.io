@@ -1,5 +1,4 @@
 ---
-layout: alternate
 title: "Alternate for the inline layout, doncha know"
 excerpt: "Aliquam erat volutpat. Proin semper mi sem, et porta odio ultricies ut. Vivamus facilisis a leo id tempor. Aenean lobortis rutrum nunc, eget commodo neque malesuada eget."
 ---

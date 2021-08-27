@@ -22,9 +22,17 @@ article
 
   &>img.top
     margin-top: 0
-  time
-    font-style: italic
-    @extend .mix-link
+  div.byline
+    margin-top: var(--bem)
+    p
+      margin: 0
+      display: inline
+      font-style: italic
+      line-height: var(--hed-lh)
+      @extend .mix-link
+      &.author::after
+        content: "\20\/\20"
+
 
 footer
   ul

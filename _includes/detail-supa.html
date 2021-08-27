@@ -19,7 +19,7 @@
   {% assign w = aspectr[0] | times: 1.0 -%}
   {% assign h = aspectr[1] | times: 1.0 -%}
   {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
-  <figure>
+  <figure class="{% if include.is_home %}home{% else %}post{% endif %}">
     <div class="wrap" style="padding-bottom:{{ percent }}%"><img src="{{ p.image.file | prepend: site.img }}" alt="{{ p.image.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}"></div>
     {% if p.media.caption -%}<figcaption>{{ p.media.caption | strip | normalize_whitespace | smartify | markdownify }}</figcaption>{% endif -%}
   </figure>
@@ -29,6 +29,13 @@
 
   {{ copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed }}
 
-  <p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{% if include.is_home %}<a href="{{ p.url }}">{{ p.date | date: "%d %b %Y" }}</a>{% else %}{{ p.date | date: "%d %b %Y" }}{% endif %}</time></p>
+  <div class="byline">
+    {% if include.is_home %}
+      {% if forloop.first %}<p class="author"><a href="/about/">{{ p.author | default: site.author }}</a></p>{% endif %}
+    {% elsif include.is_post %}
+      <p class="author"><a href="/about/">{{ p.author | default: site.author }}</a></p>
+    {% endif %}
+    <p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{% if include.is_home %}<a href="{{ p.url }}">{{ p.date | date: "%d %b %Y" }}</a>{% else %}{{ p.date | date: "%d %b %Y" }}{% endif %}</time></p>
+  </div>
 
 </article>

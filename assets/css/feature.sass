@@ -7,27 +7,19 @@
 
 article
   margin-top: var(--bem-double)
-  header
+  header.small
+    h1
+      font-size: 100%
+      line-height: var(--body-lh)
+    h1, p
+      display: inline
+    span.punc::after
+      content: "\00A0\2014\20"
+  header.large
     h1
       font-size: var(--hed-size)
       line-height: var(--hed-lh)
-      @extend .title-link
-    div.byline
-      &.inline,
-      &.figure
-        margin-top: 1em
-      &.plain
-        margin-top: 0
-      p
-        display: inline
-        font-size: var(--micro-size)
-        line-height: var(--hed-lh)
-        color: $mix-color
-        @extend .mix-link
-        &.author
-          text-transform: uppercase
-          &::after
-            content: "\20/\20"
+
   &>img.top
     margin-top: 0
   time

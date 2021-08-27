@@ -1,23 +1,20 @@
 {% assign p = include.page -%}
 {% assign copy = include.content | strip | normalize_whitespace -%}
 
-{% if copy contains 'img src=' %}
-  {% assign style = 'inline' %}
-
-{% elsif p.image %}
-  {% assign style = 'figure' %}
-
-{% else %}
-  {% assign style = 'plain' %}
-
-{% endif -%}
-
 {% include --widow-fix.html title=p.title -%}
 {% include --set-img-src.html %}
+
+{% assign wc = copy | number_of_words -%}
+{% if wc > 149 %}
+  {% assign hedsize = 'large' %}
+{% else %}
+  {% assign hedsize = 'small' %}
+{% endif -%}
 
 <article><!-- {{ copy | number_of_words }} words -->
 
   {% if p.image %}
+  {% assign hedsize = 'small' %}
   {% assign aspectr = p.image.ratio | default: '640x360' | split: 'x' -%}
   {% assign w = aspectr[0] | times: 1.0 -%}
   {% assign h = aspectr[1] | times: 1.0 -%}
@@ -28,7 +25,7 @@
   </figure>
   {% endif -%}
 
-  {% capture hed %}<header><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ titlef }}{% if include.is_home %}</a>{% endif %}</h1><p>{% endcapture -%}
+  {% capture hed %}<header class="{{ hedsize }}"><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{% endif %}{{ titlef }}{% if include.is_home %}</a>{% endif %}</h1><span class="punc"></span><p>{% endcapture -%}
 
   {{ copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed }}
 

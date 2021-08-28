@@ -1,53 +1,27 @@
 ---
-# POSTS WITH FLOATS
+#
 ---
 
 @charset "utf-8"
-@import reset, fonts, colors, body, figure, img, footer
-
-header[role="banner"]
-  div.meta
-    display: flex
-    align-items: center
-    div.logo
-      margin-right: 1em
-      img
-        width: var(--bem-double)
-        height: var(--bem-double)
-        border-radius: 4px
-    div.text
-      h1, p
-        font-size: var(--micro-size)
-        line-height: var(--hed-lh)
-        @extend .title-link
-      p
-        text-transform: lowercase
-      span.tagshow
-        display: none
+@import reset, fonts, colors, body, banner, figure, img, footer
 
 article
+  margin-top: var(--spacer)
   header
-    h1
-      font-size: 100%
-      line-height: var(--line-height)
-      @extend .title-link
     h1, p
       display: inline
-    span.punc::after
-      content: ".\20"
+    h1
+      font-size: 100%
+      line-height: var(--lh)
+      color: $text-color
+      a:link,
+      a:visited
+        color: $text-color
+      &::after
+        content: "\00A0\2014\20"
   time
     font-style: italic
-    white-space: nowrap
-    @extend .mix-link
-    &::before
-      content: '\20('
-    &::after
-      content: ')'
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 30em)
-
-  header[role="banner"] div.meta div.text
-    span.tagshow
-      display: inline
+    color: $mix-color
+    a:link,
+    a:visited
+      color: $mix-color

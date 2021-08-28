@@ -42,16 +42,16 @@
     <meta name="twitter:creator" content="@{{ site.twitter }}">
     <meta name="twitter:image:src" content="{{ page.fbog | default: 'default-social.png' | prepend: site.img }}">
 
-    <!-- {{ page.layout }} css -->
-    <link rel="stylesheet" href="{{ 'feature' | prepend: site.css | append: '.css' }}">
+    <!-- {{ p.layout | default: page.layout }}" css -->
+    <link rel="stylesheet" href="{{ 'main' | prepend: site.css | append: '.css' }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sancreek&display=swap&text={{ site.title | upcase }}" rel="stylesheet">
 
 </head>
 
-<body><!--{{ p.layout }}{{ page.layout }}-->
+<body>
 
-  {% include banner.html %}
+  {% include banner.html layout=p.layout %}
 
-  <main role="main">
+  <main role="main" class="{{ p.layout | default: page.layout }}">

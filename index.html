@@ -1,12 +1,30 @@
 ---
+is_home: true
 permalink: /index.html
 ---
 
+{% assign p = site.posts.first %}
+
 {% include html-head.html %}
 
-{% for p in site.posts %}
-  {% unless forloop.first %}<div class="hr double"></div>{% endunless %}
-  {% include detail-supa.html page=p content=p.content is_home=true %}
-{% endfor %}
+{% case p.layout %}
+
+  {% when 'feature' %}{% include detail-feature.html page=p content=p.content is_home=true %}
+  {% else %}{% include detail-post.html page=p content=p.content is_home=true %}
+
+{% endcase -%}
+
+{% for x in site.posts offset: 1 %}
+
+  <div class="hr home"></div>
+
+  {% case x.layout %}
+
+    {% when 'feature' %}{% include detail-feature.html page=x content=x.content is_home=true %}
+    {% else %}{% include detail-post.html page=x content=x.content is_home=true %}
+
+  {% endcase -%}
+
+{% endfor -%}
 
 {% include html-foot.html %}

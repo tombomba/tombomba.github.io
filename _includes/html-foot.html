@@ -1,6 +1,6 @@
   </main>
 
-<footer class="{{ bodybuff | default: 'fat' }}">
+<footer class="{% if page.is_home %}home{% else %}{{ p.layout | default: page.layout }}{% endif %}">
 
   <div class="hr"></div>
 

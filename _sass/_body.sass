@@ -1,20 +1,22 @@
 //-----------------------------------------------------------------------------
 
 \:root
-  --body-size: 100%
-  --body-lh: 1.6875
-  --logo-size: 206.3%
-  --hed-size: 125%
-  --hed-lh: 1.34375
-  --date-size: 93.75%
-  --micro-size: 81.3%
-  --rat: calc(var(--body-lh) * 1em)
-  --bem: 1.5em
-  --bem-double: 3em
-  --buffer-thin: 1.5em
-  --buffer-fat: 3em
-  --bem-micro: 0.34375em
+  --spacer: 1.5em
+  --spacer-double: 3em
+  --spacer-micro: 0.34375em
+
   --page-width: 32em
+
+  --fs: 100%
+  --fs-sm: 81.3%
+  --lh: 1.6875
+  --lh--tight: 1.34375
+  --lh--flat: 1
+
+  --hs: 125%
+  --hs-md: 162.5%
+  --hs-lg: 206.3%
+  --hs-xl: 262.5%
 
 html
   box-sizing: border-box
@@ -34,8 +36,8 @@ html
 body
 
   font-family: $serif
-  font-size: var(--body-size)
-  line-height: var(--body-lh)
+  font-size: var(--fs)
+  line-height: var(--lh)
 
   background-color: $body-color
   color: $text-color
@@ -55,23 +57,20 @@ footer
 
 article
 
-  h1, h2, h3, h4, h5, h6
-    @extend .title-link
-
   h2, h3, h4, h5, h6
-    font-size: 100%
+    font-size: var(--fs)
     margin-top: 1em
 
   p, ul, ol, li, hr
     margin-top: 1em
 
   ul.plain
-    margin: 1em 0 0 var(--bem)
+    margin: 1em 0 0 var(--spacer)
     li
       margin: 0
 
   blockquote
-    padding-left: var(--bem)
+    padding-left: var(--spacer)
     border-left: thin solid $light-mix
 
   blockquote,
@@ -93,7 +92,7 @@ a
 time
   white-space: nowrap
 
-div.hr
+.hr
   width: 100%
   margin: 0
   padding: 0
@@ -102,75 +101,29 @@ div.hr
   border-top: 1px solid $border-dark
   border-bottom: 2px solid $border-light
   background-color: $body-color
-  &.buff
-    margin-top: 1em
-  &.single
-    margin-top: var(--bem)
-  &.double
-    margin-top: var(--bem-double)
-
-.thin
-  margin-top: var(--bem)
-.fat
-  margin-top: var(--bem-double)    
-
-.title-link
-  color: $text-color
-  a:link,
-  a:visited
-    color: $text-color
-    text-decoration: none
-  a:hover
-    text-decoration: underline
-
-.logo-link
-  color: $logo-color
-  a:link,
-  a:visited
-    color: $logo-color
-    text-decoration: none
-  a:hover
-    text-decoration: underline
-
-.link-link
-  color: $link-color
-  a:link,
-  a:visited
-    color: $link-color
-    text-decoration: none
-  a:hover
-    text-decoration: underlines
-
-.mix-link
-  color: $mix-color
-  a:link,
-  a:visited
-    color: $mix-color
-    text-decoration: none
-  a:hover
-    text-decoration: underline
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 25em)
-
-  \:root
-    --body-lh: 1.6875
+  &.home
+    margin-top: var(--spacer-double)
+    margin-bottom: var(--spacer-double)
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 32em)
 
   \:root
-    --bem-micro: 0.32352941176em
-    --logo-size: 264.7%
-    --body-size: 106.25%
-    --body-lh: 1.64705882353
-    --hed-size: 129.4%
-    --hed-lh: 1.32352941176
-    --date-size: 88.235294117%
-    --micro-size: 76.5%
+
+    --spacer-micro: 0.32352941176em
+
     --page-width: 34em
+
+    --fs: 106.25%
+    --fs-sm: 76.5%
+    --lh: 1.64705882353
+    --lh--tight: 1.32352941176
+
+    --hs: 129.4%
+    --hs-md: 164.7%
+    --hs-lg: 205.9%
+    --hs-xl: 264.7%
 
 //-----------------------------------------------------------------------------
 
@@ -184,12 +137,17 @@ div.hr
 @media screen and (min-width: 64em)
 
   \:root
-    --bem-micro: 0.415em
-    --logo-size: 261.1%
-    --body-size: 112.5%
-    --body-lh: 1.83
+
+    --spacer-micro: 0.415em
+
     --page-width: 37.389em
-    --hed-size: 127.8%
-    --hed-lh: 1.33333333333
-    --date-size: 83.333333333%
-    --micro-size: 77.8%
+
+    --fs: 112.5%
+    --fs-sm: 77.8%
+    --lh: 1.83
+    --lh--tight: 1.415
+
+    --hs: 127.8%
+    --hs-md: 161.1%
+    --hs-lg: 205.6%
+    --hs-xl: 261.1%

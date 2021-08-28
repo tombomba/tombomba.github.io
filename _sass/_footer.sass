@@ -1,30 +1,36 @@
 //-----------------------------------------------------------------------------
 
 footer
-  margin-top: calc(var(--bem-double) + var(--bem-micro))
   margin-bottom: 1em
-
   ul
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
     margin: 1em 0 0 0
     list-style: none
     li
-      line-height: var(--body-lh)
+      line-height: var(--lh)
       color: $mix-color
-      span.copyshow
-        display: none
+
+footer.home,
+footer.feature
+  margin-top: calc(var(--spacer-double) + var(--spacer-micro))
+
+footer.post
+  margin-top: calc(var(--spacer) + var(--spacer-micro))
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 30em)
+@media screen and (min-width: 32em)
 
-  footer ul
-    display: flex
-    li
-      margin-right: var(--bem-micro)
-      font-size: var(--micro-size)
-      span.copyshow
-        display: inline
-      &:not(:last-of-type)::after
-        padding-left: var(--bem-micro)
-        content: "-"
-        color: $mix-color
+  footer
+    ul
+      flex-direction: row
+      li
+        font-size: var(--fs-sm)
+        line-height: var(--lh--flat)
+        &:not(:last-of-type)::after
+          content: "-"
+          padding: 0 0.25em
+          color: $mix-color

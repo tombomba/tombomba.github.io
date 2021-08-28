@@ -52,7 +52,9 @@
 
 <body>
 
-{% assign LAYOUT_SWITCH = p.layout | default: page.layout %}
-{% include banner.html layout=LAYOUT_SWITCH %}
+  <header role="banner" class="{{ p.layout | default: page.layout }}">
+    <h1><a href="{{ site.url }}">{{ site.title | upcase }}</a></h1>
+    <div class="hr"></div>
+  </header>
 
-<main role="main" class="{{ p.layout | default: page.layout }}">
+  <main role="main" class="{{ p.layout | default: page.layout }}">

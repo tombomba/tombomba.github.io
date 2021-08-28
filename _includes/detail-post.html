@@ -1,7 +1,6 @@
 {% assign p = include.page -%}
 {% assign copy = include.content | strip | normalize_whitespace -%}
 
-{% include --fix-widows.html title=p.title -%}
 {% include --fix-images.html %}
 
 {% capture datef -%}&nbsp;<time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">({% if include.is_home %}<a href="{{ p.url }}">{{ p.date | date: "%-d %b" }}</a>{% else %}{{ p.date | date: "%-d %b" }}{% endif -%})</time>{% endcapture -%}

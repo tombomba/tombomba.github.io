@@ -52,6 +52,7 @@
 
 <body>
 
-  {% include banner.html layout=p.layout %}
+{% assign LAYOUT_SWITCH = p.layout | default: page.layout %}
+{% include banner.html layout=LAYOUT_SWITCH %}
 
-  <main role="main" class="{{ p.layout | default: page.layout }}">
+<main role="main" class="{{ p.layout | default: page.layout }}">

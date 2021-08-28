@@ -44,11 +44,16 @@ article.post
       a:link,
       a:visited
         color: $text-color
-      &::after
-        content: "\00A0\2014\20"
   time
     font-style: italic
     color: $mix-color
     a:link,
     a:visited
       color: $mix-color
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 32em)
+
+  article.post h1::after
+    content: "\00A0\2014\20"

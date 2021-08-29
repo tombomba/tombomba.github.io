@@ -4,15 +4,24 @@
 {% include --fix-widows.html title=p.title -%}
 {% include --fix-images.html %}
 
+{% assign tc = p.title | strip | size %}
+{% if p.content contains '<img' or tc > 55 %}
+  {% assign fat_title = true %}
+{% endif %}
+
 <article class="{{ p.layout | default: page.layout }}"><!-- {{ copy | number_of_words }} -->
 
   {% capture hed %}
   <header>
-    {% if include.is_home %}<h1><a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a></h1>{% else %}<h1>{{ titlef }}</h1>{% endif %}<p>
+    {% if include.is_home %}<h1><a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a></h1>{% else %}<h1>{{ titlef }}</h1>{% endif %}
+    <p class="byline{% if fat_title %} extra-pad{% endif %}"><i>by</i> {{ p.author | default: site.author }} / <time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%d %b %Y" }}</time></p>
+  </header>
   {% endcapture -%}
 
-  {{ copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed }}
+  {% assign copy = copy | replace_first: '<p>', 'QQ<p>' | replace_first: 'QQ', hed %}
 
-  {% include byline.html author=p.author date=p.date is_home=include.is_home %}
+  {{ copy }}
+
+  {% if include.is_home %}<p class="permalink"><a href="{{ p.url }}" title="permalink">&bull;</a></p>{% endif %}
 
 </article>

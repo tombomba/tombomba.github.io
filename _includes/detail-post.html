@@ -4,6 +4,12 @@
 {% assign titlef = p.title | default: 'Empty?!' | strip | normalize_whitespace | smartify %}
 {% include --fix-images.html %}
 
+{% unless include.is_home %}
+  {% capture datef -%}&nbsp;<time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">({% if include.is_home %}<a href="{{ p.url }}">{{ p.date | date: "%-d %b" }}</a>{% else %}{{ p.date | date: "%-d %b" }}{% endif -%})</time>{% endcapture -%}
+  {% assign copysize = copy | size | minus: 4 %}
+  {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
+{% endunless -%}
+
 <article class="{{ p.layout | default: page.layout }}"><!-- {{ copy | number_of_words }} -->
 
   {% if p.image %}
@@ -21,6 +27,6 @@
 
   {{ copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed }}
 
-  {% include byline.html author=p.author date=p.date is_home=include.is_home %}
+  {% if include.is_home %}<p class="permalink"><a href="{{ p.url }}" title="permalink">&bull;</a></p>{% endif %}
 
 </article>

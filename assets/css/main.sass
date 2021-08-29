@@ -7,17 +7,15 @@
 
 article
   .byline
-    margin-top: 1em
-    p
-      display: inline
-      margin: 0
-      font-style: italic
+    margin-top: 0.1em
+    &.extra-pad
+      margin-top: calc(var(--spacer-micro) + 0.9em)
+    font-size: var(--fs-sm)
+    line-height: var(--lh)
+    color: $mix-color
+    a:link,
+    a:visited
       color: $mix-color
-      a:link,
-      a:visited
-        color: $mix-color
-      &:first-of-type::after
-        content: "\20\/\20"
   .permalink
     margin-top: calc(1em - var(--spacer-micro))
     font-size: var(--hs-md)
@@ -25,6 +23,8 @@ article
     a:hover,
     a:active
       text-decoration: none
+  .caps
+    text-transform: uppercase
 
 article.feature
   header
@@ -49,3 +49,9 @@ article.post
       a:link,
       a:visited
         color: $text-color
+  time
+    font-style: italic
+    color: $mix-color
+    a:link,
+    a:visited
+      color: $mix-color

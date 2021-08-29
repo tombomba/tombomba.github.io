@@ -3,17 +3,10 @@ is_home: true
 permalink: /index.html
 ---
 
-{% assign p = site.posts.first %}
-
 {% include html-head.html %}
 
-{% include detail-post.html page=p content=p.content is_home=true %}
-
-{% for x in site.posts offset: 1 %}
-
-  <div class="shim home"></div>
-  {% include detail-post.html page=x content=x.content is_home=true %}
-
+{% for p in site.posts limit:7 %}
+  {% include detail-post.html page=p content=p.content is_home=true %}
 {% endfor -%}
 
 {% include html-foot.html %}

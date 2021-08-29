@@ -1,9 +1,10 @@
 //-----------------------------------------------------------------------------
 
 \:root
-  --spacer: 1.5em
-  --spacer-double: 3em
-  --spacer-double-double: 6em
+  --spacer: 2em
+  --spacer-double: 4em
+  --spacer-triple: 6em
+  --spacer-quad: 8em
   --spacer-micro: 0.34375em
 
   --page-width: 32em
@@ -58,11 +59,8 @@ footer
   margin-left: auto
   margin-right: auto
 
-main[role="main"]
-  margin-top: var(--spacer-double)
-  margin-bottom: var(--spacer-double)
-
 article
+  margin-top: var(--spacer-double)
 
   h2, h3, h4, h5, h6
     font-size: var(--fs)
@@ -109,12 +107,6 @@ time
   border-bottom: 2px solid $border-light
   background-color: $body-color
 
-.shim.home
-  display: block
-  border-top: 1px solid $body-color
-  margin-top: var(--spacer)
-  margin-bottom: var(--spacer)
-
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 32em)
@@ -138,6 +130,9 @@ time
     --hs-md: 164.7%
     --hs-lg: 205.9%
     --hs-xl: 264.7%
+
+  article:not(:first-of-type)
+    margin-top: var(--spacer-triple)
 
 //-----------------------------------------------------------------------------
 

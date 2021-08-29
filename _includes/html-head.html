@@ -44,9 +44,6 @@
 
     <!-- {{ p.layout | default: page.layout }}" css -->
     <link rel="stylesheet" href="{{ 'main' | prepend: site.css | append: '.css' }}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sancreek&display=swap&text={{ site.title | upcase }}" rel="stylesheet">
 
 </head>
 
@@ -54,7 +51,6 @@
 
   <header role="banner" class="{{ p.layout | default: page.layout }}">
     <h1><a href="{{ site.url }}">{{ site.title | upcase }}</a></h1>
-    <div class="hr"></div>
   </header>
 
   <main role="main" class="{{ p.layout | default: page.layout }}">

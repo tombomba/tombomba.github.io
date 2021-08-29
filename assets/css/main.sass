@@ -7,11 +7,12 @@
 
 article
   .byline
-    margin-top: 0.1em
-    &.extra-pad
-      margin-top: calc(var(--spacer-micro) + 0.9em)
-    font-size: var(--fs-sm)
-    line-height: var(--lh)
+    margin-top: 1em
+    p
+      display: inline
+      margin: 0
+      &:nth-child(2)::before
+        content: '\20\/\20'
     color: $mix-color
     a:link,
     a:visited
@@ -23,8 +24,6 @@ article
     a:hover,
     a:active
       text-decoration: none
-  .caps
-    text-transform: uppercase
 
 article.feature
   header
@@ -38,20 +37,13 @@ article.feature
 
 article.post
   header
-    h1, p
-      display: inline
     h1
-      font-size: 100%
-      line-height: var(--lh)
+      &.feature
+        font-size: var(--hs-sm)
+      &.post
+        font-size: 100%
+      line-height: var(--lh--tight)
       color: $text-color
-      &::after
-        content: "\00A0\2014\20"
       a:link,
       a:visited
         color: $text-color
-  time
-    font-style: italic
-    color: $mix-color
-    a:link,
-    a:visited
-      color: $mix-color

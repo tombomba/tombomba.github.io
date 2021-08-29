@@ -1,5 +1,5 @@
 {% if include.is_home %}
-  <p class="permalink"><a href="{{ p.url }}">&bull;</a></p>
+  <p class="permalink"><a href="{{ p.url }}" title="permalink">&bull;</a></p>
 {% else %}
   <div class="byline">
     <p><a href="/about/">{{ include.author | default: site.author }}</a></p>

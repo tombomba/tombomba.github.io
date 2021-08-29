@@ -5,7 +5,7 @@
 {% include --fix-images.html %}
 
 {% assign wc = copy | strip | normalize_whitespace | number_of_words %}
-{% if wc > 150 %}
+{% if copy contains 'img' or wc > 150 %}
   {% assign hedsize = 'feature' %}
 {% else %}
   {% assign hedsize = 'post' %}

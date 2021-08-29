@@ -7,23 +7,12 @@ permalink: /index.html
 
 {% include html-head.html %}
 
-{% case p.layout %}
-
-  {% when 'feature' %}{% include detail-feature.html page=p content=p.content is_home=true %}
-  {% else %}{% include detail-post.html page=p content=p.content is_home=true %}
-
-{% endcase -%}
+{% include detail-post.html page=p content=p.content is_home=true %}
 
 {% for x in site.posts offset: 1 %}
 
   <div class="shim home"></div>
-
-  {% case x.layout %}
-
-    {% when 'feature' %}{% include detail-feature.html page=x content=x.content is_home=true %}
-    {% else %}{% include detail-post.html page=x content=x.content is_home=true %}
-
-  {% endcase -%}
+  {% include detail-post.html page=x content=x.content is_home=true %}
 
 {% endfor -%}
 

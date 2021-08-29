@@ -1,12 +1,9 @@
 //-----------------------------------------------------------------------------
 
 footer
+  margin-top: calc(var(--spacer-double) + var(--spacer-micro))
   margin-bottom: var(--spacer)
   ul
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: center
     margin: 1em 0 0 0
     list-style: none
     li
@@ -15,26 +12,24 @@ footer
       .hideshow
         display: none
 
-footer.home,
-footer.feature
-  margin-top: calc(var(--spacer-double) + var(--spacer-micro))
-
-footer.post
-  margin-top: calc(var(--spacer) + var(--spacer-micro))
-
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 32em)
 
   footer
     ul
+      display: flex
       flex-direction: row
       li
-        font-size: var(--fs-sm)
+        font-weight: 700
         line-height: var(--lh--flat)
-        &:not(:last-of-type)::after
-          content: "-"
-          padding: 0 0.25em
-          color: $mix-color
+        text-transform: lowercase
+        a:link,
+        a:visited
+          color: $link-color
+        &::after
+          content: "."
+          margin-right: 0.5em
+          color: $link-color
         .hideshow
           display: inline

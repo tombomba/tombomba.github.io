@@ -1,11 +1,9 @@
   </main>
 
-<footer class="{% if page.is_home %}home{% else %}{{ p.layout | default: page.layout }}{% endif %}">
-
-  <div class="hr"></div>
+<footer>
 
   <div class="meta">
-    <ul><li><a href="{{ site.url }}">{{ site.domain | capitalize }}</a><span class="hideshow"> &copy; {{ site.posts.first.date | date: "%Y" }}</span></li>{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li></ul>
+    <ul>{% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li></ul>
   </div>
 
 </footer>

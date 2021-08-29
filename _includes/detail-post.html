@@ -10,9 +10,6 @@
 {% else %}
   {% assign hedsize = 'post' %}
 {% endif -%}
-{% if p.image %}
-  {% assign hedsize = 'post' %}
-{% endif %}
 
 <article class="{{ p.layout | default: page.layout }}"><!-- {{ copy | number_of_words }} -->
 

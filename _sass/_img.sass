@@ -5,56 +5,70 @@
 article > img
   display: block
   margin: var(--spacer) auto
-  padding-bottom: 0.33em
-  &.top
+  padding-bottom: var(--spacer-micro)
+  &.pull-top
     margin-top: 0
-  &.curved
+  &.rounded
     border-radius: 4px
+  &.border
+    border: 1px solid $text-color
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 32em)
 
-  article>img.left,
-  article>img.right
-    display: inline
+  article > img
+    padding-bottom: 0
 
-  article>img.top
-    margin-bottom: 1em
-    padding: 0
+    &.float-left
+      display: inline
+      float: left
+      margin-right: 1em
+      margin-bottom: 0.5em
 
-  article>img.left
-    float: left
-    margin-left: 0
-    margin-right: 1em
-
-  article>img.right
-    float: right
-    margin-left: 1em
-    margin-right: 0
+    &.float-right
+      display: inline
+      float: right
+      margin-left: 1em
+      margin-bottom: 0.5em
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 50em)
 
-  article
-    &>img.left
+  article > img
+
+    &.float-left
       margin-right: var(--spacer)
-      &.tilt
-        transform: rotate(-3deg)
-        margin-left: -1em
-    &>img.right
+      margin-bottom: 1em
+
+    &.tilt-left
+      transform: rotate(-3deg)
+
+    &.pull-top
+      margin-top: -1em
+
+    &.pull-left
+      margin-left: -1em
+
+    &.float-right
       margin-left: var(--spacer)
-      &.tilt
-        transform: rotate(3deg)
-        margin-right: -1em
+      margin-bottom: 1em
+
+    &.tilt-right
+      transform: rotate(3deg)
+
+    &.pull-right
+      margin-right: -1em
 
 //-----------------------------------------------------------------------------
 
-//@media screen and (min-width: 64em)
+@media screen and (min-width: 60em)
 
-  article
-    &>img.left.tilt
-      margin-left: calc(var(--bem) * -2)
-    &>img.right.tilt
-      margin-right: calc(var(--bem) * -2)
+  article > img
+
+    &.pull-left
+      margin-left: -2em
+
+    &.pull-right
+      margin-right: -2em

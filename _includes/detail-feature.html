@@ -13,9 +13,13 @@
 
   {{ copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed }}
 
+  <!--
   <div class="byline">
     <p><a href="/about/">{{ p.author | default: site.author }}</a></p>
     <p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{% if include.is_home %}<a href="{{ p.url }}">{{ p.date | date: "%d %b %Y" }}</a>{% else %}{{ p.date | date: "%d %b %Y" }}{% endif %}</time></p>
   </div>
+  -->
+
+  <p class="permalink"><a href="{{ p.url }}">&bull;</a></p>
 
 </article>

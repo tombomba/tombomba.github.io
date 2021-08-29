@@ -55,6 +55,10 @@ footer
   margin-left: auto
   margin-right: auto
 
+main[role="main"]
+  margin-top: var(--spacer-double)
+  margin-bottom: var(--spacer-double)
+
 article
 
   h2, h3, h4, h5, h6
@@ -101,9 +105,12 @@ time
   border-top: 1px solid $border-dark
   border-bottom: 2px solid $border-light
   background-color: $body-color
-  &.home
-    margin-top: var(--spacer-double)
-    margin-bottom: var(--spacer-double)
+
+.shim.home
+  display: block
+  border-top: 1px solid $body-color
+  margin-top: var(--spacer-double)
+  margin-bottom: var(--spacer-double)
 
 //-----------------------------------------------------------------------------
 

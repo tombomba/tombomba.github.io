@@ -5,11 +5,14 @@
 @charset "utf-8"
 @import reset, fonts, colors, body, banner, figure, img, footer
 
-main[role="main"].feature
-  margin-top: var(--spacer-double)
-
-main[role="main"].post
-  margin-top: var(--spacer)
+article
+  .permalink
+    margin-top: calc(1em - var(--spacer-micro))
+    font-size: var(--hs-md)
+    line-height: var(--lh--flat)
+    a:hover,
+    a:active
+      text-decoration: none
 
 article.feature
   header
@@ -21,7 +24,7 @@ article.feature
       a:visited
         color: $text-color
   .byline
-    margin-top: var(--spacer)
+    margin-top: 1em
     p
       display: inline
       margin: 0

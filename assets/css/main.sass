@@ -6,6 +6,18 @@
 @import reset, fonts, colors, body, banner, figure, img, footer
 
 article
+  .byline
+    margin-top: 1em
+    p
+      display: inline
+      margin: 0
+      font-style: italic
+      color: $mix-color
+      a:link,
+      a:visited
+        color: $mix-color
+      &:first-of-type::after
+        content: "\20\/\20"
   .permalink
     margin-top: calc(1em - var(--spacer-micro))
     font-size: var(--hs-md)
@@ -23,18 +35,6 @@ article.feature
       a:link,
       a:visited
         color: $text-color
-  .byline
-    margin-top: 1em
-    p
-      display: inline
-      margin: 0
-      font-style: italic
-      color: $mix-color
-      a:link,
-      a:visited
-        color: $mix-color
-      &:first-of-type::after
-        content: "\20\/\20"
 
 article.post
   header
@@ -44,20 +44,8 @@ article.post
       font-size: 100%
       line-height: var(--lh)
       color: $text-color
+      &::after
+        content: "\00A0\2014\20"
       a:link,
       a:visited
         color: $text-color
-  time
-    font-style: italic
-    color: $mix-color
-    a:link,
-    a:visited
-      color: $mix-color
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 32em)
-
-  article.post
-    h1::after
-      content: "\00A0\2014\20"

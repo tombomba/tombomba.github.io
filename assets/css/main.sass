@@ -6,36 +6,7 @@
 @import reset, fonts, colors, body, banner, figure, img, footer
 
 article
-  .byline
-    margin-top: 1em
-    p
-      display: inline
-      margin: 0
-      &:nth-child(2)::before
-        content: '\20\/\20'
-    color: $mix-color
-    a:link,
-    a:visited
-      color: $mix-color
-  .permalink
-    margin-top: calc(1em - var(--spacer-micro))
-    font-size: var(--hs-md)
-    line-height: var(--lh--flat)
-    a:hover,
-    a:active
-      text-decoration: none
 
-article.feature
-  header
-    h1
-      font-size: var(--hs)
-      line-height: var(--lh--tight)
-      color: $text-color
-      a:link,
-      a:visited
-        color: $text-color
-
-article.post
   header
     h1
       &.feature
@@ -47,3 +18,31 @@ article.post
       a:link,
       a:visited
         color: $text-color
+    &.marquee
+      h1, p
+        display: inline
+      h1
+        line-height: var(--lh)
+        &::after
+          content: '\00A0\2014\20'
+
+
+  .byline
+    margin-top: 1em
+    p
+      display: inline
+      margin: 0
+      &:nth-child(2)::before
+        content: '\20\/\20'
+    color: $mix-color
+    a:link,
+    a:visited
+      color: $mix-color
+
+  .permalink
+    margin-top: calc(1em - var(--spacer-micro))
+    font-size: var(--hs-md)
+    line-height: var(--lh--flat)
+    a:hover,
+    a:active
+      text-decoration: none

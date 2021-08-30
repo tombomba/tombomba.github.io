@@ -1,10 +1,10 @@
 {% assign p = include.page -%}
 {% assign copy = include.content | strip | normalize_whitespace -%}
 
-{% include --fix-widows.html title=p.title %}
-{% include --fix-images.html %}
+{% include --fix-widows.html title=p.title -%}
+{% include --fix-images.html -%}
 
-{% assign wc = copy | strip | normalize_whitespace | number_of_words %}
+{% assign wc = copy | strip | normalize_whitespace | number_of_words -%}
 
 {% if copy contains 'img' %}
   {% assign hedsize = 'feature' %}

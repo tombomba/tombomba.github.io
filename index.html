@@ -5,7 +5,7 @@ permalink: /index.html
 
 {% include html-head.html %}
 
-{% for p in site.posts limit:7 %}
+{% for p in site.posts limit:20 %}
   {% include detail-post.html page=p content=p.content is_home=true %}
 {% endfor -%}
 

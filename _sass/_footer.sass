@@ -1,32 +1,32 @@
 //-----------------------------------------------------------------------------
 
 footer
-  margin-top: var(--spacer-double)
+  margin-top: var(--spacer)
   margin-bottom: var(--spacer)
   ul
-    margin: 1em 0 0 0
+    margin-top: 1em
     list-style: none
     li
-      font-weight: 700
       line-height: var(--lh)
-      text-transform: lowercase
+      text-transform: capitalize
       a:link,
       a:visited
         color: $link-color
-      &::after
-        content: "."
-        margin-right: 0.5em
-        color: $link-color
-
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 32em)
 
   footer
-    margin-top: var(--spacer-quad)
     ul
       display: flex
       flex-direction: row
+      justify-content: center
       li
+        font-size: var(--fs-sm)
         line-height: var(--lh--flat)
+        &:not(:last-of-type)::after
+          content: "-"
+          padding-left: 0.25em
+          margin-right: 0.25em
+          color: $mix-color

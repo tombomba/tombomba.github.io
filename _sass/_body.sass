@@ -1,12 +1,6 @@
 //-----------------------------------------------------------------------------
 
 \:root
-  --spacer: 2em
-  --spacer-double: 4em
-  --spacer-triple: 6em
-  --spacer-quad: 8em
-  --spacer-micro: 0.34375em
-
   --page-width: 32em
 
   --fs: 100%
@@ -22,7 +16,9 @@
   --hs-lg: 206.3%
   --hs-xl: 262.5%
 
-  --icon: calc(var(--lh) * 2em)
+  --spacer: calc(var(--lh) * 1em)
+  --spacer-double: calc(var(--spacer) * 2)
+  --spacer-micro: 0.34375em
 
 html
   box-sizing: border-box
@@ -54,7 +50,7 @@ body
 
   padding: 0 1em
 
-header[role="banner"],
+//header[role="banner"],
 main[role="main"],
 footer
   max-width: var(--page-width)
@@ -62,11 +58,11 @@ footer
   margin-right: auto
 
 article
-  margin-top: var(--spacer-double)
+  margin-top: calc(var(--spacer) + var(--spacer-micro))
 
   h2, h3, h4, h5, h6
     font-size: var(--fs)
-    margin-top: 1em
+    margin-top: var(--spacer)
 
   p, ul, ol, li, hr
     margin-top: 1em
@@ -158,7 +154,7 @@ time
     --page-width: 37.389em
 
     --fs: 112.5%
-    --fs-sm: 77.8%
+    --fs-xs: 77.8%
     --fs-sm: 88.88%
     --lh: 1.83
     --lh--tight: 1.415

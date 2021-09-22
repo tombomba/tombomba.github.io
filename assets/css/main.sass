@@ -9,30 +9,18 @@ article
 
   header
     h1
-      &.supa
-        font-size: var(--hs)
-      &.feature
-        font-size: var(--hs-sm)
-      &.post
-        font-size: 100%
+      font-size: var(--hs)
       line-height: var(--lh--tight)
       color: $text-color
       a:link,
       a:visited
         color: $text-color
-    &.marquee
-      h1, p
-        display: inline
-      h1
-        line-height: var(--lh)
-        &::after
-          content: '\00A0\2014\20'
-
   .byline
-    margin-top: 1em
     p
       display: inline
       margin: 0
+      font-size: var(--fs-sm)
+      line-height: var(--lh)
       &:nth-child(2)::before
         content: '\20\/\20'
     color: $mix-color
@@ -40,10 +28,16 @@ article
     a:visited
       color: $mix-color
 
-  .permalink
-    margin-top: calc(1em - var(--spacer-micro))
+//-----------------------------------------------------------------------------
+
+//@media screen and (min-width: 32em)
+
+  article header h1
     font-size: var(--hs-md)
-    line-height: var(--lh--flat)
-    a:hover,
-    a:active
-      text-decoration: none
+
+//-----------------------------------------------------------------------------
+
+//@media screen and (min-width: 64em)
+
+  article header h1
+    font-size: var(--hs-md)

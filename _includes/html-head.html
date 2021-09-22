@@ -44,16 +44,16 @@
 
     <!-- {{ p.layout | default: page.layout }}" css -->
     <link rel="stylesheet" href="{{ 'main' | prepend: site.css | append: '.css' }}">
-
+    
 </head>
 
 <body>
 
-  <header role="banner" class="{{ p.layout | default: page.layout }}">
+  <header role="banner">
     <div class="icon">
       <a href="{{ site.url }}"><img src="{{ 'bomtomba.gif' | prepend: site.img }}" alt="{{ site.title }}"></a>
     </div>
     <div class="hr">
   </header>
 
-  <main role="main" class="{{ p.layout | default: page.layout }}">
+  <main role="main">

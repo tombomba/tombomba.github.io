@@ -1,38 +1,15 @@
 //-----------------------------------------------------------------------------
 
 header[role="banner"]
-  margin: 0 -1em
-  padding-top: var(--spacer)
-  background-color: white
+  display: flex
+  align-items: center
+  margin-top: var(--spacer)
   .icon
-    margin: 0 1em
     max-width: var(--page-width)
     img
       width: var(--spacer-double)
       height: var(--spacer-double)
-      border-radius: 4px 4px 0 0
-  h1
-    font-size: var(--hs-lg)
-    font-weight: 700
-    line-height: var(--lh--flat)
-    letter-spacing: -0.1px
-    text-transform: lowercase
-    color: $link-color
-    &::after
-      content: '.'
-      color: $link-color
-    a:link,
-    a:visited
-      color: $link-color
+      border-radius: 4px
   .hr
     flex: 1
     margin-left: var(--spacer-micro)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 32em)
-
-  header[role="banner"]
-    margin: 0
-    .icon
-      margin: 0 auto

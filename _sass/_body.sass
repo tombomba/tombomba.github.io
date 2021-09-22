@@ -50,7 +50,7 @@ body
 
   padding: 0 1em
 
-//header[role="banner"],
+header[role="banner"],
 main[role="main"],
 footer
   max-width: var(--page-width)
@@ -66,6 +66,9 @@ article
 
   p, ul, ol, li, hr
     margin-top: 1em
+
+  p:first-of-type
+    margin-top: var(--spacer)
 
   ul.plain
     margin: 1em 0 0 var(--spacer)

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="{{ site.url }}">
+
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">
+    <link rel="author" type="text/plain" href="/humans.txt">
+    {% if page.id %}<link rel="canonical" href="{{ page.url | default: '' | prepend: site.url }}">{% endif %}
+
+    <!-- icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=bluedot">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=bluedot">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=bluedot">
+    <link rel="manifest" href="/site.webmanifest?v=bluedot">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=bluedot" color="#0000ff">
+    <link rel="shortcut icon" href="/favicon.ico?v=bluedot">
+    <meta name="msapplication-TileColor" content="#fbfbfb">
+    <meta name="theme-color" content="#fbfbfb">
+
+    <!-- rss (atom) feed -->
+    <link rel="alternate" title="{{ site.title }}" type="application/atom+xml" href="/feed.xml">
+
+    <!-- facebook -->
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:url" content="{{ page.url | prepend: site.url }}">
+    {% if page.excerpt %}<meta property="og:description" content="{{ page.excerpt | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% else %}<meta property="og:description" content="{{ site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% endif %}
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:type" content="blog">
+    <meta property="og:image" content="{{ page.fbog | 'default-social.png' | prepend: site.img }}">
+
+    <!-- twitter  -->
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:url" content="{{ page.url | default: '' | prepend: site.url }}">
+    {% if page.excerpt %}<meta name="twitter:description" content="{{ page.excerpt | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% else %}<meta property="og:description" content="{{ site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 140 }}">{% endif %}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@{{ site.twitter }}">
+    <meta name="twitter:creator" content="@{{ site.twitter }}">
+    <meta name="twitter:image:src" content="{{ page.fbog | default: 'default-social.png' | prepend: site.img }}">
+
+    <!-- {{ p.layout | default: page.layout }}" css -->
+    <link rel="stylesheet" href="{{ 'main' | prepend: site.css | append: '.css' }}">
+
+</head>
+
+<body>
+
+  <header role="banner" class="{{ p.layout | default: page.layout }}">
+    <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+  </header>
+
+  <main role="main" class="{{ p.layout | default: page.layout }}">

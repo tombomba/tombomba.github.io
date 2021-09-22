@@ -1,5 +1,5 @@
 ---
-title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit and this is also a super long title"
 ---
 
 Sed eu libero sit amet arcu laoreet porta. Mauris arcu sapien, aliquam vitae eros eu, efficitur vulputate nunc. Sed sed fermentum sem. Proin non velit a mauris molestie aliquet. Ut velit augue, commodo ut vehicula placerat, sollicitudin vel nisi. Nulla sit amet mollis orci, eget facilisis risus. Donec porttitor euismod elementum. Aliquam sed condimentum mi.

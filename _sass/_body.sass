@@ -22,6 +22,8 @@
   --hs-lg: 206.3%
   --hs-xl: 262.5%
 
+  --icon: calc(var(--lh) * 2em)
+
 html
   box-sizing: border-box
 
@@ -52,7 +54,6 @@ body
 
   padding: 0 1em
 
-header[role="banner"],
 main[role="main"],
 footer
   max-width: var(--page-width)
@@ -60,7 +61,7 @@ footer
   margin-right: auto
 
 article
-  margin-top: var(--spacer-double)
+  margin-top: calc(var(--spacer) + var(--spacer-micro))
 
   h2, h3, h4, h5, h6
     font-size: var(--fs)

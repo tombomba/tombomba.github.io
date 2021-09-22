@@ -50,7 +50,9 @@
 <body>
 
   <header role="banner" class="{{ p.layout | default: page.layout }}">
-    <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+    <div class="icon">
+      <a href="{{ site.url }}"><img src="{{ 'bomtomba.gif' | prepend: site.img }}" alt="{{ site.title}}"></a>
+    </div>
   </header>
 
   <main role="main" class="{{ p.layout | default: page.layout }}">

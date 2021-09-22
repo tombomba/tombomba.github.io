@@ -16,12 +16,12 @@ article
       a:visited
         color: $text-color
   .byline
-    margin-top: 1em
+    margin-top: 0
     p
       display: inline
       margin: 0
-      font-size: var(--fs-sm)
-      line-height: var(--lh)
+      font-size: var(--fs--sm)
+      line-height: var(--lh--tight)
       &:nth-child(2)::before
         content: '\20\/\20'
     color: $mix-color
@@ -31,7 +31,7 @@ article
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 41em)
+//@media screen and (min-width: 41em)
 
   article header
     .byline

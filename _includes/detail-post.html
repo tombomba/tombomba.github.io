@@ -5,31 +5,36 @@
 {% include --fix-images.html -%}
 
 {% assign wc = copy | strip | normalize_whitespace | number_of_words -%}
+{% assign hedsize = titlef | strip | normalize_whitespace | size %}
 
-{% if copy contains 'img' %}
-  {% assign hedsize = 'feature' %}
-{% else %}
-  {% if wc >=150 %}
-    {% assign hedsize = 'supa' %}
+<article><!-- {{ wc }} -->
+
+  <header>
+    <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
+    {% if p.date %}
+    <div class="byline{% if hedsize > 60 %} long{% endif %}">
+      <p>{% unless p.image %}<i>by</i> {% endunless %}{{ p.author | default: site.author }}</p>
+      <p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%d %b %Y" }}</time></p>
+    </div>
+    {% endif -%}
+  </header>
+
+  {% if p.image %}
+
+    {% assign aspectr = p.image.ratio | default: '640x360' | split: 'x' -%}
+    {% assign w = aspectr[0] | times: 1.0 -%}
+    {% assign h = aspectr[1] | times: 1.0 -%}
+    {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
+    <figure class="{% if include.is_home %}home{% else %}post{% endif %}">
+      <div class="wrap" style="padding-bottom:{{ percent }}%"><img src="{{ p.image.file | prepend: site.img }}" alt="{{ p.image.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}"></div>
+      {% if p.media.caption -%}<figcaption>{{ p.media.caption | strip | normalize_whitespace | smartify | markdownify }}</figcaption>{% endif -%}
+    </figure>
+
   {% else %}
-    {% assign hedsize = 'post' %}
+
+  <div class="hr spacer"></div>
+
   {% endif -%}
-{% endif -%}
-{% if p.image %}
-  {% assign hedsize = 'post' %}
-{% endif -%}
-
-<article><!-- {{ copy | number_of_words }} -->
-
-    <header>
-      <h1 class="{{ hedsize }}">{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
-      {% if p.date %}
-      <div class="byline">
-        {% if wc > 150 %}<p>{{ p.author | default: site.author }}</p>{% endif %}
-        <p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%d %b %Y" }}</time></p>
-      </div>
-      {% endif -%}
-    </header>
 
   {{ copy }}
 

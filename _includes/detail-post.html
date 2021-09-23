@@ -51,7 +51,9 @@
 
     {% capture hed %}<header><h1 class="{{ hedsize }}">{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1></header>{% endcapture -%}
 
-    {% assign copy = copy | replace_first: '<p>', 'QQ<p>' | replace_first: 'QQ', hed %}
+    {% capture pstring %}QQ<p class="{{ hedsize }}">{% endcapture -%}
+
+    {% assign copy = copy | replace_first: '<p>', pstring | replace_first: 'QQ', hed %}
 
   {% endif -%}
 

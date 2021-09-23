@@ -7,17 +7,30 @@
 {% assign wc = copy | strip | normalize_whitespace | number_of_words -%}
 {% assign hedsize = titlef | strip | normalize_whitespace | size %}
 
-<article><!-- {{ wc }} -->
+{% if copy contains 'img' %}
+  {% assign hedsize = 'feature' %}
+{% else %}
+  {% if wc >=150 %}
+    {% assign hedsize = 'supa' %}
+  {% else %}
+    {% assign hedsize = 'post' %}
+  {% endif -%}
+{% endif -%}
+{% if p.image %}
+  {% assign hedsize = 'post' %}
+{% endif -%}
 
-  <header>
-    <h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
-    {% if p.date %}
-    <div class="byline{% if hedsize > 60 %} long{% endif %}">
-      <p>{% unless p.image %}<i>by</i> {% endunless %}{{ p.author | default: site.author }}</p>
-      <p><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: "%d %b %Y" }}</time></p>
-    </div>
-    {% endif -%}
-  </header>
+{% comment %}
+{% if p.date %}
+  {% capture datef %}&nbsp;<span class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">({{ p.date | date: '%-d %b' }})</time></span>{% endcapture -%}
+  {% assign copysize = copy | size | minus: 4 %}
+  {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
+{% endif -%}
+{% endcomment -%}
+
+<div class="hr double short"></div>
+
+<article><!-- {{ wc }} -->
 
   {% if p.image %}
 
@@ -30,12 +43,20 @@
       {% if p.media.caption -%}<figcaption>{{ p.media.caption | strip | normalize_whitespace | smartify | markdownify }}</figcaption>{% endif -%}
     </figure>
 
+    {% capture hed %}<header class="marquee"><h1 class="{{ hedsize }}">{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1><p>{% endcapture -%}
+
+    {% assign copy = copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed  %}
+
   {% else %}
 
-  <div class="hr spacer"></div>
+    {% capture hed %}<header><h1 class="{{ hedsize }}">{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1></header>{% endcapture -%}
+
+    {% assign copy = copy | replace_first: '<p>', 'QQ<p>' | replace_first: 'QQ', hed %}
 
   {% endif -%}
 
   {{ copy }}
+
+  {% unless include.is_home %}{% if p.date %}<p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: '%-d %b %Y' }}</time></p>{% endif %}{% endunless %}
 
 </article>

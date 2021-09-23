@@ -1,9 +1,8 @@
 //-----------------------------------------------------------------------------
 
 figure
-  margin-top: calc(var(--spacer) + var(--spacer-micro))
-  &.home
-    padding-top: var(--spacer-micro)
+  margin-bottom: var(--spacer)
+  padding-top: var(--spacer-micro)
   .wrap
     position: relative
     padding-bottom: 56.25%
@@ -27,3 +26,17 @@ figure
     img
       border-radius: 4px
       background-color: $bg-color
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40em)
+
+  figure
+    margin-right: -1em
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 60em)
+
+  figure
+    margin-right: calc(var(--spacer) * -1)

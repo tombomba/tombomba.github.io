@@ -4,7 +4,7 @@ description: "Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed 
 date: 2021-09-02 12:34 -0800
 ---
 
-![Twitch logo]({{ site.img }}twitch-logo-120x118.png){: width="120" height="118" .top .float-right .transparent .edged }
+![Twitch logo]({{ site.img }}twitch-logo-240x235.png){: width="240" height="235" .top .float-right .transparent .edged }
 
 Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed convallis dolor in eros consectetur gravida. Aenean at porttitor diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pharetra dapibus lacinia. Praesent porttitor, tellus placerat feugiat dignissim, elit tellus tincidunt urna, posuere hendrerit lacus sem sed justo. Vivamus sed dictum ligula. Morbi sollicitudin euismod leo, eget vehicula nunc hendrerit sed. Morbi mattis cursus sem, ac scelerisque turpis maximus nec. Nunc ac vulputate ligula, id rhoncus magna. Curabitur efficitur arcu eu tortor porta pretium.
 

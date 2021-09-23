@@ -57,6 +57,4 @@
 
   {{ copy }}
 
-  {% unless include.is_home %}{% if p.date %}<p class="datestamp"><time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date: '%-d %b %Y' }}</time></p>{% endif %}{% endunless %}
-
 </article>

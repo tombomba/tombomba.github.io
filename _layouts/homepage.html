@@ -8,13 +8,13 @@ layout: default
   {% include --generate-titlef.html title=feature.title %}
   <div class="feature">
     <h1><a href="{{ feature.url | prepend: site.url }}">{{ titlef }}</a></h1>
-    <p>{{ feature.excerpt | strip | strip_html | normalize_whitespace | smartify }}</p>
+    <p>{{ feature.excerpt | strip | normalize_whitespace | smartify }}</p>
   </div>
 
   <div class="hr double short"></div>
 
   <div class="previously">
-    {% for p in site.posts limit:7 %}
+    {% for p in site.posts limit:20 %}
     {% include --generate-titlef.html title=p.title %}
     <div class="item">
       <h3><a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a></h3>

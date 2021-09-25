@@ -16,12 +16,11 @@ article.home
       font-size: 1em
     div.item
       margin-top: var(--spacer)
+      h3, p
+        display: inline
       h3
         margin: 0
         font-size: 1em
-        line-height: var(--lh--tight)
-        font-weight: 400
-        padding-bottom: calc(var(--spacer-micro) / 2)
       p
         margin: 0
 
@@ -49,7 +48,15 @@ article.media
 
 @media screen and (min-width: 32em)
 
-  // fuck
+  article.home
+    div.previously
+      div.item
+        h3, p
+          display: block
+        h3
+          line-height: var(--lh--tight)
+          font-weight: 400
+          padding-bottom: calc(var(--spacer-micro) / 2)
 
 //-----------------------------------------------------------------------------
 

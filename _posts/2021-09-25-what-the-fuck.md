@@ -2,7 +2,7 @@
 layout: media
 title: "The quick brown fox jumps over the lazy dog"
 excerpt: "In elementum, justo vitae sagittis maximus, tortor tortor suscipit tortor, quis fermentum dui purus quis tellus. Duis hendrerit arcu eu nibh consectetur, ac pharetra nunc porta."
-image:
+media:
   file: test-image.jpg
   ratio: 768x482
   alt: "This is a test image"

@@ -5,27 +5,99 @@
 @charset "utf-8"
 @import reset, fonts, colors, body, banner, figure, img, footer
 
-article
-
-  header
+article.home
+  div.feature
     h1
-      line-height: var(--lh--tight)
-      color: $text-color
-      a:link,
-      a:visited
-        color: $text-color
-      &.supa
-        font-size: var(--hs--md)
-      &.feature
-        font-size: var(--hs)
-      &.post
-        font-size: 1em
-    &.marquee
-      h1, p
+      font-size: var(--hs)
+      line-height: 1.4
+      padding-bottom: var(--spacer-micro)
+    p
+      margin: 0
+      font-size: 112.5%
+      line-height: 1.66666666667
+  ul.prev
+    list-style-type: none
+    margin-top: var(--spacer-double)
+    margin-left: 0
+    li
+      margin-top: var(--spacer)
+      h2, p
         display: inline
+      h2
         font-size: 1em
-      h1::after
-        content: '\00A0\2014\020'
+      p
+        margin: 0
 
-  p.supa
-    margin-top: var(--spacer)
+article.post.supa,
+article.post.norm,
+article.page
+  header h1
+    font-size: var(--hs)
+    line-height: var(--lh--tight)
+
+article.post.micro
+  header h1
+    font-size: 1em
+    line-height: var(--lh--tight)
+
+article.media
+  header
+    h1, p
+      display: inline
+      font-size: 1em
+    h1::after
+      content: '\00A0\2014\020'
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 32em)
+
+  article.home
+    div.feature
+      h1
+        font-size: 147.058823529%
+        line-height: 1.325
+        padding-bottom: var(--spacer-micro)
+      p
+        margin: 0
+        font-size: 117.647058824%
+        line-height: 1.65
+    ul.prev
+      list-style-type: none
+      margin-top: var(--spacer-double)
+      margin-left: 0
+      li
+        margin-top: var(--spacer)
+        h2, p
+          display: block
+        h2
+          font-size: 1em
+          line-height: var(--lh--tight)
+          padding-bottom: calc(var(--spacer-micro) / 2)
+        p
+          margin: 0
+
+
+@media screen and (min-width: 40em)
+
+  article.post.supa
+    header
+      h1
+        font-size: var(--hs--md)
+    p:first-of-type
+      margin-top: var(--spacer)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 60em)
+
+  article.home
+    div.feature
+      h1
+        font-size: 138.888888889%
+        line-height: 1.325
+        padding-bottom: var(--spacer-micro)
+      p
+        margin: 0
+        font-size: 111.111111111%
+        line-height: 1.65

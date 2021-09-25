@@ -9,22 +9,18 @@ article.home
   div.feature
     h1
       font-size: var(--hs)
-      line-height: 1.4
-      padding-bottom: var(--spacer-micro)
-    p
-      margin: 0
-      font-size: 112.5%
-      line-height: 1.66666666667
-  ul.prev
-    list-style-type: none
+      line-height: var(--lh--tight)
+  div.previously
     margin-top: var(--spacer-double)
-    margin-left: 0
-    li
+    h2
+      font-size: 1em
+    div.item
       margin-top: var(--spacer)
-      h2, p
-        display: inline
-      h2
+      h3
         font-size: 1em
+        line-height: var(--lh--tight)
+        font-weight: 400
+        padding-bottom: calc(var(--spacer-micro) / 2)
       p
         margin: 0
 
@@ -52,31 +48,9 @@ article.media
 
 @media screen and (min-width: 32em)
 
-  article.home
-    div.feature
-      h1
-        font-size: 147.058823529%
-        line-height: 1.325
-        padding-bottom: var(--spacer-micro)
-      p
-        margin: 0
-        font-size: 117.647058824%
-        line-height: 1.65
-    ul.prev
-      list-style-type: none
-      margin-top: var(--spacer-double)
-      margin-left: 0
-      li
-        margin-top: var(--spacer)
-        h2, p
-          display: block
-        h2
-          font-size: 1em
-          line-height: var(--lh--tight)
-          padding-bottom: calc(var(--spacer-micro) / 2)
-        p
-          margin: 0
+  // fuck
 
+//-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40em)
 
@@ -86,18 +60,3 @@ article.media
         font-size: var(--hs--md)
     p:first-of-type
       margin-top: var(--spacer)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 60em)
-
-  article.home
-    div.feature
-      h1
-        font-size: 138.888888889%
-        line-height: 1.325
-        padding-bottom: var(--spacer-micro)
-      p
-        margin: 0
-        font-size: 111.111111111%
-        line-height: 1.65

@@ -11,10 +11,8 @@ layout: default
     <p>{{ feature.excerpt | strip | normalize_whitespace | smartify }}</p>
   </div>
 
-  <div class="hr double short"></div>
-
   <div class="previously">
-    {% for p in site.posts offset:1 limit:7 %}
+    {% for p in site.posts offset:1 limit:12 %}
     {% include --generate-titlef.html title=p.title %}
     <div class="item">
       <h3><a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a></h3>
@@ -22,7 +20,5 @@ layout: default
     </div>
     {% endfor -%}
   </div>
-
-  <div class="hr double short"></div>
 
 </article>

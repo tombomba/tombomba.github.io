@@ -1,12 +1,6 @@
 ---
+layout: homepage
 is_home: true
+is_page: true
 permalink: /index.html
 ---
-
-{% include html-head.html %}
-
-{% for p in site.posts limit:20 %}
-  {% include detail-post.html page=p content=p.content is_home=true %}
-{% endfor -%}
-
-{% include html-foot.html %}

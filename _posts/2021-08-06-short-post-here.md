@@ -1,11 +1,4 @@
 ---
-title: "Short short condensed micro post"
-#image:
-#  file: starwars-on-16mm-768x279.jpg
-#  ratio: 768x279
-#  alt: "Photo still from a 16 millimeter print of Star Wars"
-#fbog: starwars-on-16mm-768x279.jpg
+title: "Short short micro post"
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu euismod nisl, in dictum eros. Nullam bibendum vitae dolor in mollis. Sed condimentum tempor mi, at commodo turpis placerat non.
-
-Nulla sed quam eu elit sodales ultricies. Interdum et malesuada fames ac ante ipsum primis in faucibus. In ultricies id neque et faucibus. Pellentesque eleifend enim sem, vel commodo magna cursus porttitor. In vel dapibus enim, in tincidunt ex. Vivamus id vulputate lectus, non suscipit diam.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec semper, sem nec viverra fermentum, massa est viverra ante, et posuere ipsum ligula non nisl. Nam eu dui neque. Maecenas varius viverra felis eu condimentum. Pellentesque quis ipsum lacinia, malesuada ex non, vulputate tellus. Mauris fermentum facilisis tellus ut viverra. Quisque et tellus et dolor pharetra auctor non ac ante. Sed non scelerisque magna. Suspendisse tortor est, mattis et sollicitudin in, aliquet a ex. Morbi a volutpat sem. Maecenas nec consectetur magna. Nullam mollis vitae urna id euismod. Aenean vestibulum odio sit amet vestibulum accumsan. Suspendisse potenti. Aenean auctor libero.

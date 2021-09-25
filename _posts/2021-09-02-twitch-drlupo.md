@@ -1,13 +1,12 @@
 ---
 title: "Twitch and drlupo"
-description: "Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed convallis dolor in eros consectetur gravida. Aenean at porttitor diam."
+excerpt: "Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed convallis dolor in eros consectetur gravida. Aenean at porttitor diam."
 date: 2021-09-02 12:34 -0800
 ---
-
+<!--
 ![Twitch logo]({{ site.img }}twitch-logo-240x235.png){: width="240" height="235" .top .float-right .transparent .edged }
+-->
 
-Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed convallis dolor in eros consectetur gravida. Aenean at porttitor diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pharetra dapibus lacinia. Praesent porttitor, tellus placerat feugiat dignissim, elit tellus tincidunt urna, posuere hendrerit lacus sem sed justo. Vivamus sed dictum ligula. Morbi sollicitudin euismod leo, eget vehicula nunc hendrerit sed. Morbi mattis cursus sem, ac scelerisque turpis maximus nec. Nunc ac vulputate ligula, id rhoncus magna. Curabitur efficitur arcu eu tortor porta pretium.
+Vestibulum vestibulum lobortis lorem, vel consectetur enim. Praesent maximus cursus est at ornare. Fusce quis velit mattis, dictum ex vel, luctus nisi. Curabitur mi ligula, commodo eu consequat in, lacinia et metus. Ut sagittis est id eleifend lacinia. Morbi vitae blandit tellus, ac auctor justo. Nulla lobortis elit sit amet sem auctor, ac viverra ante accumsan. Proin viverra dolor vitae tellus rutrum ultrices. Praesent id lacinia tortor, sed posuere nisl. Curabitur congue arcu nisl, sed condimentum justo molestie ac. In at massa pellentesque, scelerisque felis eu, sollicitudin lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla faucibus ullamcorper bibendum. Nulla mattis eu lacus sed ullamcorper. Donec pretium tempor nisl in elementum. Vivamus ut lorem ipsum.
 
-Sed at sollicitudin dolor. Integer eleifend quis augue eget bibendum. Donec vitae dolor congue nibh congue porta eget consectetur ipsum. Nulla at mauris lacus. Nulla facilisi. Aliquam ac gravida enim. Praesent blandit quis velit sit amet auctor. Fusce vulputate quis nisl non egestas.
-
-Fusce ut consequat nisi, at mattis diam. Curabitur eu sem ac elit viverra vestibulum. Fusce metus velit, laoreet ut fringilla eu, varius et dolor. Praesent in elit sed tellus elementum porttitor dapibus ac risus. Cras non felis malesuada, feugiat nisi ut, congue sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris sodales velit quis scelerisque consequat. Vivamus semper purus nulla, ut ultricies est rhoncus a. Nam nulla lacus, finibus vel gravida blandit, gravida ac ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum ultrices non magna ut consequat. Nam condimentum mattis libero, vel viverra sem facilisis id. Duis lacinia dolor nisi, ut bibendum ante ornare ut. Ut vel mi enim.
+Donec viverra nulla enim, in venenatis tellus maximus et. Etiam eleifend hendrerit eros gravida dictum. Nullam a nisl vitae massa mollis malesuada sit amet eget risus. Proin.

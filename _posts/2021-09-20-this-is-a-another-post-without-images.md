@@ -1,5 +1,5 @@
 ---
-title: "The quick brown foxs jumps over the lazy dog, while a bunch of boxing wizards watch"
+title: "The five boxing wizards jumped quickly"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in elementum sapien. Nam feugiat mauris sed dui dapibus accumsan. Cras quis sapien sem. In fermentum efficitur mauris, vel dictum augue dignissim sed. Duis vel dictum justo, gravida pulvinar nunc. In congue ipsum id justo condimentum faucibus. Vivamus ornare orci at turpis aliquet rhoncus. Praesent vitae posuere tellus. Nullam aliquet condimentum quam, sed commodo tellus mollis vel. Sed bibendum nisl velit, et commodo urna iaculis at.

@@ -1,5 +1,5 @@
 ---
-title: "A short title about a movie"
+title: "A short post about a movie with a multi-line headline"
 date: 2021-09-23 12:34 -0800
 ---
 

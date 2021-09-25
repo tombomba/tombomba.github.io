@@ -19,7 +19,7 @@ layout: default
     {% include --generate-titlef.html title=p.title %}
     <div class="item">
       <h3><a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a></h3>
-      <p>{{ p.excerpt | strip | strip_html | normalize_whitespace | smartify | truncatewords: 35 }}</p>
+      <p>{{ p.excerpt | strip | strip_html | normalize_whitespace | smartify | truncate: 280 }}</p>
     </div>
     {% endfor -%}
   </div>

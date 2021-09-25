@@ -5,7 +5,12 @@
 @charset "utf-8"
 @import reset, fonts, colors, body, banner, figure, img, footer
 
+article
+  margin-top: var(--spacer-double)
+  margin-bottom: var(--spacer-quad)
+
 article.home
+  margin-bottom: var(--spacer-double)
   div.feature
     h1
       font-size: var(--hs)
@@ -14,8 +19,13 @@ article.home
     p
       margin: 0
   div.previously
-    div.item
+    &.norm
       margin-top: var(--spacer)
+    &.media
+      margin-top: var(--spacer-double)
+    div.item
+      &:not(:first-of-type)
+        margin-top: var(--spacer)
       h3, p
         display: inline
       h3

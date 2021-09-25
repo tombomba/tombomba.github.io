@@ -11,6 +11,8 @@ layout: default
     <p>{{ feature.excerpt | strip | normalize_whitespace | smartify }}</p>
   </div>
 
+  <div class="hr double short"></div>
+
   <div class="previously">
     {% for p in site.posts offset:1 limit:7 %}
     {% include --generate-titlef.html title=p.title %}

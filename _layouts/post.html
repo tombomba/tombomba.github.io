@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+{% assign copy = content | strip | normalize_whitespace -%}
+
+{% include --generate-titlef.html title=page.title -%}
+{% include --fix-kramdown-tags.html -%}
+
+{% assign wc = copy | number_of_words -%}
+{% assign hc = page.title | strip | normalize_whitespace | size %}
+
+{% if wc > 200 and hc > 45 %}
+  {% assign hedsize = 'supa' %}
+{% elsif wc > 100 %}
+  {% assign hedsize = 'norm' %}
+{% else %}
+  {% assign hedsize = 'micro' %}
+{% endif -%}
+
+<article class="{{ page.layout }} {{ hedsize }}"><!-- {{ wc }} words -->
+
+  <header>
+    <h1>{{ titlef }}</h1>
+  </header>
+
+  {{ copy }}
+
+</article>

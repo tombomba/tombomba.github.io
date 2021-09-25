@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+{% assign copy = content | strip | normalize_whitespace -%}
+
+{% include --generate-titlef.html title=page.title -%}
+{% include --fix-kramdown-tags.html -%}
+
+{% assign wc = copy | number_of_words -%}
+
+<article class="{{ page.layout }}"><!-- {{ wc }} words -->
+
+  {% assign aspectr = page.image.ratio | default: '640x360' | split: 'x' -%}
+  {% assign w = aspectr[0] | times: 1.0 -%}
+  {% assign h = aspectr[1] | times: 1.0 -%}
+  {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
+  <figure>
+    <div class="wrap" style="padding-bottom:{{ percent }}%"><img src="{{ page.image.file | prepend: site.img }}" alt="{{ page.image.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}"></div>
+    {% if page.media.caption -%}<figcaption>{{ page.media.caption | strip | normalize_whitespace | smartify | markdownify }}</figcaption>{% endif -%}
+  </figure>
+
+  {% capture hed %}<header><h1>{{ titlef }}</h1><p>{% endcapture -%}
+  {% assign copy = copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed  %}
+
+  {{ copy }}
+
+</article>

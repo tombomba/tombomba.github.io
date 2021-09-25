@@ -1,5 +1,5 @@
 ---
-title: "A short post about a movie with a multi-line headline"
+title: "The quick brown foxs jumps over the lazy dog, while a bunch of boxing wizards watch"
 date: 2021-09-23 12:34 -0800
 ---
 

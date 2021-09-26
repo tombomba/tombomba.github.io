@@ -15,7 +15,7 @@ layout: default
   {% if feature.media %}<div class="hr double short"></div>{% endif %}
 
   <div class="previously {% if feature.media %}media{% else %}norm{% endif %}">
-    {% for p in site.posts offset:1 limit:12 %}
+    {% for p in site.posts offset:1 limit:7 %}
     {% include --generate-titlef.html title=p.title %}
     <div class="item">
       <h3><a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a></h3>

@@ -4,13 +4,13 @@ excerpt: "Too many contemporary critics are smug when they should be thoughtful.
 ---
 ![Benedetta poster, 2021]({{ site.img }}benedetta-2021.jpg){: width="240" height="326" .top .float-left .border .edged }
 
-Too many contemporary critics are smug when they should be thoughtful. Case in point: The [film twit reaction](https://twitter.com/search?q=benedetta%20protest&src=typed_query) to a small protest outside the NYFF showing of "Benedetta," Paul Verhoeven's [lesbian nun movie](https://www.youtube.com/results?search_query=verhoeven+benedetta+trailer).
+Too many contemporary critics are smug when they should be thoughtful. Case in point: The [#filmtwitter response](https://twitter.com/search?q=benedetta%20protest&src=typed_query) to a small protest outside the NYFF showing of "Benedetta," Paul Verhoeven's [lesbian nun movie](https://www.youtube.com/results?search_query=verhoeven+benedetta+trailer).
 
 A dozen or so Catholics from a right-leaning fringe group made noise this Sunday afternoon. Right outside a movie theater. A snare drum was involved. One guy carried a megaphone. A sign read, "Why the endless insults to Jesus?" Another, "I'm Catholic. Stop attacking my faith."
 
-First, who cares? It was an insignificant rally, and quickly became [publicity](https://twitter.com/TheNYFF/status/1442193742396465155) for the film. Nobody blocked access to the venue. There wasn't any violence. (The middlebrows still appreciate peaceful protests, don't they?) Second, it's easy to [point and laugh](https://twitter.com/TomiLaffly/status/1442202169386536961), but not every spiritual person with a cardboard sign is a member of a hate group. They may even have a point.
+First, who cares? It was an insignificant rally, and quickly became [publicity](https://twitter.com/TheNYFF/status/1442193742396465155) for the film. Nobody blocked access to the venue. Violence did not break out. (The middlebrows still appreciate peaceful protests, don't they?) Second, it's easy to [point and laugh](https://twitter.com/TomiLaffly/status/1442202169386536961), but not every spiritual person with a placard is a member of a hate group. They may even have a point.
 
-If another movie treated Islam or Judaism as a cheap magic show, as a source of prurient interest, I imagine these same critics would demand retractions and apologies. They wouldn't hesitate to beat their social media pulpits in self-righteous fury. But when it comes to Catholicism, there's no problem, right?
+If another movie treated Islam or Judaism as a cheap magic show, as a source of prurient interest, I imagine these same critics would demand retractions and apologies. They wouldn't hesitate to beat their social media pulpits in self-righteous fury. But when it comes to Catholicism, there's no problem, right? Take the cheap shot because no one will mind.
 
 One stringer raised an inadvertent point when [she said](https://twitter.com/TomiLaffly/status/1442198523198337025), "Bought my tix as soon as I heard it’s a sexy nun movie---can't wait." She meant to be clever, if not superior, but there's a whole worldview packed in there.
 

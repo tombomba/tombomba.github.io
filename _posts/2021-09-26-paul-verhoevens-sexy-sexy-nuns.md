@@ -1,6 +1,6 @@
 ---
-title: "Next in tiresome discourse: The power and problem with your sexy nun movie"
-excerpt: "Too many contemporary critics are smug when they should be thoughtful. Case in point: The film twit response to a small protest outside the NYFF showing of \"Benedetta,\" Paul Verhoeven's latest."
+title: "Next in tiresome discourse: Paul Verhoeven's sexy, sexy nuns"
+excerpt: "Too many contemporary critics are smug when they should be thoughtful. Case in point: The #filmtwitter response to a small protest outside the NYFF showing of \"Benedetta,\" Paul Verhoeven's latest."
 ---
 ![Benedetta poster, 2021]({{ site.img }}benedetta-2021.jpg){: width="222" height="301" .top .float-left .edged }
 

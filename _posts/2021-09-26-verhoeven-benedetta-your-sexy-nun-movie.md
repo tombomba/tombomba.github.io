@@ -2,7 +2,7 @@
 title: "Next in tiresome discourse: The power and problem with your sexy nun movie"
 excerpt: "Too many contemporary critics are smug when they should be thoughtful. Case in point: The film twit response to a small protest outside the NYFF showing of \"Benedetta,\" Paul Verhoeven's latest."
 ---
-![Benedetta poster, 2021]({{ site.img }}benedetta-2021.jpg){: width="222" height="302" .top .float-left .border .edged }
+![Benedetta poster, 2021]({{ site.img }}benedetta-2021.jpg){: width="222" height="301" .top .float-left .border .edged }
 
 Too many contemporary critics are smug when they should be thoughtful. Case in point: The [#filmtwitter response](https://twitter.com/search?q=benedetta%20protest&src=typed_query) to a small protest outside the NYFF showing of "Benedetta," Paul Verhoeven's [lesbian nun movie](https://www.youtube.com/results?search_query=verhoeven+benedetta+trailer).
 

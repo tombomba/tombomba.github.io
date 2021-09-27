@@ -2,7 +2,7 @@
 title: "Next in tiresome discourse: The power and problem with your sexy nun movie"
 excerpt: "Too many contemporary critics are smug when they should be thoughtful. Case in point: The film twit response to a small protest outside the NYFF showing of \"Benedetta,\" Paul Verhoeven's latest."
 ---
-![Benedetta poster, 2021]({{ site.img }}benedetta-2021.jpg){: width="222" height="301" .top .float-left .border .edged }
+![Benedetta poster, 2021]({{ site.img }}benedetta-2021.jpg){: width="222" height="301" .top .float-left .edged }
 
 Too many contemporary critics are smug when they should be thoughtful. Case in point: The [#filmtwitter response](https://twitter.com/search?q=benedetta%20protest&src=typed_query) to a small protest outside the NYFF showing of "Benedetta," Paul Verhoeven's [lesbian nun movie](https://www.youtube.com/results?search_query=verhoeven+benedetta+trailer).
 
@@ -12,10 +12,10 @@ It was an insignificant rally, and quickly became [publicity](https://twitter.co
 
 If another movie treated Islam or Judaism as a cheap magic show, as a source of prurient interest, I imagine these same critics would demand retractions and apologies. They wouldn't hesitate to beat their social media pulpits in self-righteous fury. When it comes to Catholicism, there isn't a problem, though, right? You can take the cheap shot because no one will mind.
 
-One stringer raised an inadvertent point when [she said](https://twitter.com/TomiLaffly/status/1442198523198337025), "Bunch of loonies protesting BENEDETTA outside Alice Tully Hall now. Bought my tix as soon as I heard it’s a sexy nun movie---can't wait." She meant to be clever, if not superior, but there's a whole worldview packed in her tweet, one predicated on the idea that buying a movie ticket is a political act.
+One stringer raised an inadvertent point when [she said](https://twitter.com/TomiLaffly/status/1442198523198337025), "Bunch of loonies protesting BENEDETTA outside Alice Tully Hall now. Bought my tix as soon as I heard it’s a sexy nun movie---can't wait." She meant to be clever, if not superior, but there's a whole worldview packed into her tweet, one predicated on the idea that buying a movie ticket is a political act.
 
-But the 'sexy nun' is a loaded representation, somewhere between fetish object and power fantasy, and with a host of trouble all its own. It's also admittedly the movie's one big draw. (Without the obvious taboo, would anyone attend?)
+The 'sexy nun' exists somewhere between fetish object and power fantasy, and with a host of unexamined trouble all its own. It's also admittedly the movie's one big draw. (Without the obvious taboo, would anyone attend?)
 
 If "Benedetta" were an earnest meditation on religious life, the public interest would approach zero, and the pageview-driven media interest would soon follow. The same story about two priests wouldn't have sold to a distributor, because movies featuring homosexual men rarely go mainstream. If it had sold, nobody would be gleefully posting about it, because contemporary film culture doesn't champion gay men in quite the same way it champions gay women.
 
-I'm tired of critics who'd rather be glib than empathetic. Who call themselves journalists, and see a story play out in front of them, but don't ask questions. Who are proud to have a narrow perspective. And I'm especially tired of the gamesmanship that surrounds film culture. The discourse is bad, and it's barely begun.
+I'm tired of critics who'd rather be glib than empathetic. Who call themselves journalists, and see a story play out in front of them, but don't ask questions. Who are proud to have a narrow perspective. And I'm especially tired of the gamesmanship that surrounds film culture. The "Benedetta" discourse is already bad, and it's barely started.

@@ -1,6 +1,9 @@
 ---
 title: "Next in tiresome discourse: The power and problems with your sexy nun movie"
+excerpt: "Too many contemporary critics are smug when they should be thoughtful. Case in point: The film twit response to a small protest outside the NYFF showing of \"Benedetta,\" Paul Verhoeven's latest."
 ---
+![Benedetta poster, 2021]({{ site.img }}benedetta-2021.jpg){: width="240" height="326" .top .float-left .border .edged }
+
 Too many contemporary critics are smug when they should be thoughtful. Case in point: The [film twit reaction](https://twitter.com/search?q=benedetta%20protest&src=typed_query) to a small protest outside the NYFF showing of "Benedetta," Paul Verhoeven's [lesbian nun movie](https://www.youtube.com/results?search_query=verhoeven+benedetta+trailer).
 
 A dozen or so Catholics from a right-leaning fringe group made noise this Sunday afternoon. Right outside a movie theater. A snare drum was involved. One guy carried a megaphone. A sign read, "Why the endless insults to Jesus?" Another, "I'm Catholic. Stop attacking my faith."

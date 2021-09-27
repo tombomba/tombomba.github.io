@@ -1,5 +1,5 @@
 ---
-title: "Next in tiresome discourse: The power and problems of your sexy nun movie"
+title: "Next in tiresome discourse: The power and problems with your sexy nun"
 ---
 Too many contemporary critics are smug when they should be thoughtful. Case in point: The [film twit reaction](https://twitter.com/search?q=benedetta%20protest&src=typed_query) to a small protest outside the NYFF showing of "Benedetta," Paul Verhoeven's [lesbian nun movie](https://www.youtube.com/results?search_query=verhoeven+benedetta+trailer).
 

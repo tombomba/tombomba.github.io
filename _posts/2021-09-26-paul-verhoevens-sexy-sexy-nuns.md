@@ -14,7 +14,7 @@ If another movie treated Islam or Judaism as a cheap magic show, as a source of 
 
 One stringer raised an inadvertent point when [she said](https://twitter.com/TomiLaffly/status/1442198523198337025), "Bunch of loonies protesting BENEDETTA outside Alice Tully Hall now. Bought my tix as soon as I heard it’s a sexy nun movie---can't wait." She meant to be clever, if not superior, but there's a whole worldview packed into her tweet, one predicated on the idea that buying a movie ticket is a political act.
 
-If "Benedetta" were an earnest meditation on religious life, the public interest would approach zero, and the pageview-driven media interest would soon follow. The same story about two priests wouldn't have sold to a distributor, because movies featuring homosexual men rarely go mainstream. If it had sold, nobody would be gleefully posting about it, because contemporary film culture doesn't champion gay men in quite the same way it champions gay women.
+If "Benedetta" were an earnest meditation on religious life, the public interest would approach zero, and the pageview-driven media interest would soon follow. The same story about two priests wouldn't have sold to a distributor, because movies featuring homosexual men rarely go mainstream. If it had sold, nobody would be gleefully posting about it, as contemporary film culture doesn't champion gay men in quite the same way it champions gay women.
 
 Meanwhile, the 'sexy nun' exists somewhere between fetish object and power fantasy, with unexamined baggage all her own, often walking a line between girl power and trash exploitation. The trope is also the movie's one big draw. (Without the obvious taboo, would anyone attend?)
 

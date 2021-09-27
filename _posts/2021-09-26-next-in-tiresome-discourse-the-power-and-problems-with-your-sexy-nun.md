@@ -16,6 +16,6 @@ One stringer raised an inadvertent point when [she said](https://twitter.com/Tom
 
 The 'sexy nun' is a loaded representation, somewhere between fetish object and power fantasy, and it's the movie's one big draw. (Without the obvious taboos, would anyone watch?)
 
-The same story about two priests wouldn't have sold to a distributor, because movies featuring homosexual men rarely go mainstream. If it had somehow sold, nobody would be gleefully posting about it, because contemporary film culture doesn't champion gay men in quite the same way it champions gay women. If "Benedetta" were an earnest film about religious life, the public interest would approach zero, and the critical interest would immediately follow suit.
+The same story about two priests wouldn't have sold to a distributor, because movies featuring homosexual men rarely go mainstream. If it had somehow sold, nobody would be gleefully posting about it, because contemporary film culture doesn't champion gay men in quite the same way it champions gay women. If "Benedetta" were an earnest film about religious life, the public interest would approach zero, and the pageview-driven critical interest would follow.
 
 I'm tired of critics who'd rather be glib than curious or empathetic. Who call themselves journalists, and see a story, but don't ask questions. Who have such an obviously narrow perspective. And I'm especially tired of the political gamesmanship that surrounds so much of film culture. The discourse is bad, and it's barely begun.

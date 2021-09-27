@@ -10,7 +10,7 @@ A dozen or so Catholics from a right-leaning fringe group made noise this Sunday
 
 It was an insignificant rally, and quickly became [publicity](https://twitter.com/TheNYFF/status/1442193742396465155) for the film. Nobody blocked access to the venue. A riot did not erupt. (The middlebrows still appreciate peaceful protests, don't they?) While it's easy to make assumptions, to [point and laugh](https://twitter.com/TomiLaffly/status/1442202169386536961), not every spiritual person with a placard is a member of a hate group. They may even have a point.
 
-If another movie treated Islam or Judaism as a cheap magic show, as a source of prurient interest, I imagine these same critics would demand retractions and apologies. They wouldn't hesitate to beat their social media pulpits in self-righteous fury. When it comes to Catholicism, there isn't a problem, though, right? You can take the cheap shot because no one will mind.
+If another movie treated Islam or Judaism as a cheap magic show, as a source of prurient interest, I imagine these same critics would demand retractions and apologies. They wouldn't hesitate to beat their social media pulpits in self-righteous fury. When it comes to Catholicism, there isn't a problem, though, right? You can take the cheap shot knowing no one will object.
 
 One stringer raised an inadvertent point when [she said](https://twitter.com/TomiLaffly/status/1442198523198337025), "Bunch of loonies protesting BENEDETTA outside Alice Tully Hall now. Bought my tix as soon as I heard it’s a sexy nun movie---can't wait." She meant to be clever, if not superior, but there's a whole worldview packed into her tweet, one predicated on the idea that buying a movie ticket is a political act.
 

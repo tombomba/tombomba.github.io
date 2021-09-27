@@ -3,7 +3,7 @@
 header[role="banner"]
   h1
     font-family: 'Slackey', $sans
-    font-size: var(--hs--xl)
+    font-size: var(--hs--lg)
     line-height: var(--lh--flat)
     a:link,
     a:visited
@@ -13,3 +13,10 @@ header[role="banner"]
     font-size: var(--fs--sm)
     line-height: var(--lh--tight)
     text-transform: lowercase
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 23em)
+
+  header[role="banner"] h1
+    font-size: var(--hs--xl)

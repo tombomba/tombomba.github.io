@@ -12,7 +12,7 @@ First, who cares? It was an insignificant rally, and quickly became [publicity](
 
 If another movie treated Islam or Judaism as a cheap magic show, as a source of prurient interest, I imagine these same critics would demand retractions and apologies. They wouldn't hesitate to beat their social media pulpits in self-righteous fury. But when it comes to Catholicism, there's no problem, right? Take the cheap shot because no one will mind.
 
-One stringer raised an inadvertent point when [she said](https://twitter.com/TomiLaffly/status/1442198523198337025), "Bought my tix as soon as I heard it’s a sexy nun movie---can't wait." She meant to be clever, if not superior, but there's a whole worldview packed in there.
+One stringer raised an inadvertent point when [she said](https://twitter.com/TomiLaffly/status/1442198523198337025), "Bought my tix as soon as I heard it’s a sexy nun movie---can't wait." She meant to be clever, if not superior, but there's a whole worldview packed in there, one predicated on the idea that buying a movie ticket is a political act.
 
 The 'sexy nun' is a loaded representation, somewhere between fetish object and power fantasy, and it's the movie's one big draw. (Without the obvious taboos, would anyone watch?)
 

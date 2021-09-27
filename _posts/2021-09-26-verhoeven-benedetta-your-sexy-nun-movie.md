@@ -8,7 +8,7 @@ Too many contemporary critics are smug when they should be thoughtful. Case in p
 
 A dozen or so Catholics from a right-leaning fringe group made noise this Sunday afternoon. Right outside a movie theater. One guy carried a megaphone. A snare drum was involved. A sign read, "I'm Catholic. Stop attacking my faith." Another, "Why the endless insults to Jesus?"
 
-It was an insignificant rally, and quickly became [publicity](https://twitter.com/TheNYFF/status/1442193742396465155) for the film. Nobody blocked access to the venue. A riot did not erupt. (The middlebrows still appreciate peaceful protests, don't they?) While it's easy to [point and laugh](https://twitter.com/TomiLaffly/status/1442202169386536961), not every spiritual person with a placard is a member of a hate group. They may even have a point.
+It was an insignificant rally, and quickly became [publicity](https://twitter.com/TheNYFF/status/1442193742396465155) for the film. Nobody blocked access to the venue. A riot did not erupt. (The middlebrows still appreciate peaceful protests, don't they?) While it's easy to make assumptions, to [point and laugh](https://twitter.com/TomiLaffly/status/1442202169386536961), not every spiritual person with a placard is a member of a hate group. They may even have a point.
 
 If another movie treated Islam or Judaism as a cheap magic show, as a source of prurient interest, I imagine these same critics would demand retractions and apologies. They wouldn't hesitate to beat their social media pulpits in self-righteous fury. When it comes to Catholicism, though, there's no problem, right? Take the cheap shot because no one will mind.
 

@@ -11,7 +11,7 @@ If a prominent European director released a movie that treated Islam or Judaism 
 
 One stringer inadvertently raised a good point about the film when [she said](https://twitter.com/TomiLaffly/status/1442198523198337025), "Bought my tix as soon as I heard it’s a sexy nun movie---can't wait." She meant to be clever, if not superior, but there's a whole worldview packed in there.
 
-If Verhoeven had made the same story about two priests, it never would have sold to a distributor, and nobody would be gleefully posting, because contemporary film culture loves to headline lesbians while virtually ignoring gay men. If "Benedetta" were an earnest film about religious life, there would be far less critical interest. The veneer of warm and fuzzy politics is suspect then, if not a sham.
+If Verhoeven had made the same story about two priests, it never would have sold to a distributor, and nobody would be gleefully posting about it, because contemporary film culture loves to headline lesbians while virtually ignoring gay men. If "Benedetta" were an earnest film about religious life, there would be far less critical interest. The veneer of warm and fuzzy politics is suspect then, if not a sham.
 
 Verhoeven, for his part, has made half a career of turning trashy exploitation into commercial art. That should tell us something here. He's never been as much about empowerment as much as he's been about tits on screen (God bless &rsquo;em).
 

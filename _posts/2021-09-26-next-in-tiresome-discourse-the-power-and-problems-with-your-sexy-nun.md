@@ -11,7 +11,7 @@ If another prominent European director released a different movie treating Islam
 
 One stringer raised an inadvertent point when [she said](https://twitter.com/TomiLaffly/status/1442198523198337025), "Bought my tix as soon as I heard it’s a sexy nun movie---can't wait." She meant to be clever, if not superior, but there's a whole worldview packed in there.
 
-The 'sexy nun' is a loaded representation, somewhere between fetish object and power fantasy, and it's the movie's one big draw. (Would anyone want to watch if it weren't girl-on-girl?)
+The 'sexy nun' is a loaded representation, somewhere between fetish object and power fantasy, and it's the movie's one big draw. (Without the obvious taboos, would anyone watch?)
 
 The same story about two priests wouldn't have sold to a distributor, because movies about homosexual men rarely go mainstream. If it somehow had, nobody would be gleefully posting about it, because contemporary film culture doesn't champion gay men in quite the same way it champions gay women. If "Benedetta" were an earnest film about religious life, the public interest would approach zero, and the critical interest would immediately follow suit.
 

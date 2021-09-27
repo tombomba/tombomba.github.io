@@ -1,9 +1,10 @@
 ---
 title: "Next in tiresome discourse: The power and problems with your sexy nun movie"
+excerpt: "A dozen Catholics from a right-leaning fringe group made noise this Sunday afternoon. Right outside a movie theater. There were bagpipes and a snare drum. One guy carried a megaphone. A sign read, \"Why the endless insults to Jesus?\" Another, \"I'm Catholic. Stop attacking my faith.\""
 ---
 Too many contemporary critics are smug when they should be thoughtful. Case in point: The [film twit reaction](https://twitter.com/search?q=benedetta%20protest&src=typed_query) to a small protest outside the NYFF showing of "Benedetta," Paul Verhoeven's [lesbian nun movie](https://www.youtube.com/results?search_query=verhoeven+benedetta+trailer).
 
-A dozen Catholics from a right-leaning fringe group made noise this Sunday afternoon. Right outside a movie theater. There was a megaphone, and bagpipes. One guy played drums. A sign read, "Why the endless insults to Jesus?" Another, "I'm Catholic. Stop attacking my faith."
+A dozen Catholics from a right-leaning fringe group made noise this Sunday afternoon. Right outside a movie theater. There were bagpipes and a snare drum. One guy carried a megaphone. A sign read, "Why the endless insults to Jesus?" Another, "I'm Catholic. Stop attacking my faith."
 
 First, who cares? It was an insignificant rally, and quickly became [accidental publicity](https://twitter.com/TheNYFF/status/1442193742396465155) for the film. Nobody blocked access to the venue. There wasn't any violence. (The middlebrows still appreciate peaceful protests, don't they?) Second, it's easy to [point and laugh](https://twitter.com/TomiLaffly/status/1442202169386536961), but not every spiritual person with a cardboard sign is a member of a hate group. They may sometimes have a point.
 

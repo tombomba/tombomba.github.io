@@ -6,8 +6,7 @@
 @import reset, fonts, colors, body, banner, figure, img, footer
 
 article
-  margin-top: var(--spacer-double)
-  margin-bottom: var(--spacer-quad)
+  margin: var(--spacer-double) 0
 
 article.home
   margin-bottom: var(--spacer-double)
@@ -36,12 +35,13 @@ article.home
 
 article.post.supa,
 article.post.norm,
+article.post.micro,
 article.page
   header h1
     font-size: var(--hs)
     line-height: var(--lh--tight)
 
-article.post.micro
+//article.post.micro
   header h1
     font-size: 1em
     line-height: var(--lh--tight)
@@ -73,7 +73,6 @@ article.media
 
   article.post.supa
     header
+      margin: var(--spacer) 0
       h1
         font-size: var(--hs--md)
-    p:first-of-type
-      margin-top: var(--spacer)

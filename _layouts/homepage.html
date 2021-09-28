@@ -6,15 +6,12 @@ layout: default
 
   {% assign feature = site.posts.first %}
   {% include --generate-titlef.html title=feature.title %}
-  {% if feature.media %}{% include --display-figure.html media=feature.media %}{% endif %}
   <div class="feature">
     <h1><a href="{{ feature.url | prepend: site.url }}">{{ titlef }}</a></h1>
     <p>{{ feature.excerpt | strip | strip_html | normalize_whitespace | smartify }}</p>
   </div>
 
-  {% if feature.media %}<div class="hr double short"></div>{% endif %}
-
-  <div class="previously {% if feature.media %}media{% else %}norm{% endif %}">
+  <div class="previously norm">
     {% for p in site.posts offset:1 limit:7 %}
     {% include --generate-titlef.html title=p.title %}
     <div class="item">
@@ -23,7 +20,5 @@ layout: default
     </div>
     {% endfor -%}
   </div>
-
-  <div class="hr double short"></div>
 
 </article>

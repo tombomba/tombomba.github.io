@@ -1,8 +1,7 @@
 //-----------------------------------------------------------------------------
 
 figure
-  margin-bottom: var(--spacer)
-  padding-top: var(--spacer-micro)
+  margin: var(--spacer-macro) 0
   .wrap
     position: relative
     padding-bottom: 56.25%
@@ -24,8 +23,13 @@ figure
     embed
       background: $body-color url(/assets/img/default-image-icon.png) no-repeat center center
     img
-      border-radius: 4px
       background-color: $bg-color
+  figcaption
+    margin-top: var(--spacer-micro)
+    p
+      margin: 0
+      font-size: var(--fs--xs)
+      line-height: var(--lh--tight)
 
 //-----------------------------------------------------------------------------
 

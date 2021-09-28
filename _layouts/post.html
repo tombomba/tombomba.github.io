@@ -11,7 +11,7 @@ layout: default
 {% assign hc = page.title | strip | normalize_whitespace | size %}
 
 {% if wc > 200 and hc > 45 %}
-  {% assign hedsize = 'supa' %}
+  {% assign hedsize = 'norm' %}
 {% elsif wc > 100 %}
   {% assign hedsize = 'norm' %}
 {% else %}
@@ -23,6 +23,10 @@ layout: default
   <header>
     <h1>{{ titlef }}</h1>
   </header>
+
+  {% if page.media %}
+    {% include --display-figure.html media=page.media %}
+  {% endif %}
 
   {{ copy }}
 

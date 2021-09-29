@@ -1,5 +1,6 @@
 ---
-title: "This is meant to be about PTA's upcoming 'Licorice Pizza,' but really it's an excuse to post a photo of Debbie Harry"
+title: "Debbie Harry outside Licorice Pizza, Los Angeles, 1977. Photo by Chris Stein."
+tweet: "This is meant to be about PTA's upcoming, but really it's an excuse to post a photo of Debbie Harry"
 excerpt: "Now you know everything there is to know and you can decide for yourself if it's worth a trip to the theater."
 media:
   file: debbie-harry-los-angeles-1977.jpg

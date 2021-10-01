@@ -42,14 +42,16 @@
     <meta name="twitter:image:src" content="{{ page.fbog | default: 'default-social.png' | prepend: site.img }}">
 
     <link rel="stylesheet" href="{{ page.style | default: 'main' | prepend: site.css | append: '.css' }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap&text={{ site.title }}!" rel="stylesheet">
 
 </head>
 
 <body><!-- {{ page.layout }} -->
 
   <header role="banner">
-    <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
-    <p>{{ site.description }}</p>
+    <h1><a href="{{ site.url }}">{{ site.title }}!</a></h1>
     <div class="hr double short"></div>
   </header>
 
@@ -64,9 +66,9 @@
     <ul>{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li></ul>
 
     {% if page.is_post %}
-    <p>This page published {{ page.date | date: '%A, %B %-d, %Y' }}</p>
+    <p>This page published {{ page.date | date: '%B %-d, %Y' }}</p>
     {% else %}
-    <p>Site last updated {{ site.posts.first.date | date: '%A, %B %-d, %Y' }}</p>
+    <p>Site last updated {{ site.posts.first.date | date: '%B %-d, %Y' }}</p>
     {% endif -%}
 
     <p>Copyright &copy; <a href="/about/">{{ site.author }}</a></p>

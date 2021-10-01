@@ -1,0 +1,77 @@
+---
+#
+---
+
+@charset "utf-8"
+@import reset, fonts, colors, body, banner, figure, img, footer
+
+article
+  margin: var(--spacer-double) 0
+
+article.home
+  margin-bottom: var(--spacer-double)
+  div.feature
+    h1
+      font-size: var(--hs)
+      line-height: var(--lh--tight)
+      padding-bottom: calc(var(--spacer-micro) / 2)
+    p
+      margin: 0
+  div.previously
+    &.norm
+      margin-top: var(--spacer)
+    &.media
+      margin-top: var(--spacer-double)
+    div.item
+      &:not(:first-of-type)
+        margin-top: var(--spacer)
+      h3, p
+        display: inline
+      h3
+        margin: 0
+        font-size: 1em
+      p
+        margin: 0
+
+article.post.supa,
+article.post.norm,
+article.page
+  header h1
+    font-size: var(--hs)
+    line-height: var(--lh--tight)
+
+article.post.micro
+  header h1
+    font-size: 1em
+    line-height: var(--lh--tight)
+
+article.media
+  header
+    h1, p
+      display: inline
+      font-size: 1em
+    h1::after
+      content: '\00A0\2014\020'
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 32em)
+
+  article.home
+    div.previously
+      div.item
+        h3, p
+          display: block
+        h3
+          line-height: var(--lh--tight)
+          padding-bottom: calc(var(--spacer-micro) / 2)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40em)
+
+  article.post.supa
+    header
+      margin: var(--spacer) 0
+      h1
+        font-size: var(--hs--md)

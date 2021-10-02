@@ -16,11 +16,7 @@
   --hs--lg: 206.3%
   --hs--xl: 262.5%
 
-  --spacer: 2em
-  --spacer-double: 4em
-  --spacer-quad: 8em
-  --spacer-micro: 0.34375em
-  --spacer-macro: calc(var(--spacer-micro) + 1em)
+  --shim: 0.34375em
 
 html
   box-sizing: border-box
@@ -61,18 +57,18 @@ article
 
   h2, h3, h4, h5, h6
     font-size: var(--fs)
-    margin-top: var(--spacer)
+    margin-top: 2em
 
   p, ul, ol, li, hr
     margin-top: 1em
 
   ul.plain
-    margin: 1em 0 0 var(--spacer)
+    margin: 1em 0 0 2em
     li
       margin: 0
 
   blockquote
-    padding-left: var(--spacer)
+    padding-left: 2em
     border-left: thin solid $light-mix
 
   blockquote,
@@ -104,11 +100,9 @@ time
   border-bottom: 2px solid $border-light
   background-color: $body-color
   &.spacer
-    margin-top: var(--spacer)
+    margin-top: 2em
   &.double
-    margin-top: var(--spacer-double)
-  &.banner
-    margin-top: calc(var(--spacer-double) + var(--spacer-micro))
+    margin-top: 4em
   &.short
     max-width: 33%
 
@@ -118,7 +112,7 @@ time
 
   \:root
 
-    --spacer-micro: 0.32352941176em
+    --shim: 0.33em
 
     --page-width: 34em
 
@@ -141,7 +135,7 @@ time
 @media screen and (min-width: 40em)
 
   body
-    padding: var(--spacer)
+    padding: 2em
 
 //-----------------------------------------------------------------------------
 
@@ -149,7 +143,7 @@ time
 
   \:root
 
-    --spacer-micro: 0.415em
+    --shim: 0.415em
 
     --page-width: 37.389em
 
@@ -166,4 +160,4 @@ time
     --hs--xl: 261.1%
 
   body
-    padding: var(--spacer-double)
+    padding: 4em

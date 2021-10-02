@@ -4,7 +4,7 @@
 
 article > img
   display: block
-  margin-bottom: calc(var(--spacer) + var(--spacer-micro))
+  margin-bottom: calc(var(--shim) + 1em)
   border-radius: 4px
   &.top
     margin-top: 0
@@ -46,7 +46,7 @@ article > img
       margin-top: -0.5em
 
     &.float-left
-      margin-right: var(--spacer)
+      margin-right: calc(var(--shim) + 1em)
       margin-bottom: 1em
 
     &.pull-left
@@ -56,7 +56,7 @@ article > img
       transform: rotate(-3deg)
 
     &.float-right
-      margin-left: var(--spacer)
+      margin-left: calc(var(--shim) + 1em)
       margin-bottom: 1em
 
     &.pull-right

@@ -1,7 +1,8 @@
 //-----------------------------------------------------------------------------
 
 figure
-  margin: var(--spacer-macro) 0
+  margin: 2em 0 1em 0
+  padding: var(--shim) 0
   .wrap
     position: relative
     padding-bottom: 56.25%
@@ -24,8 +25,9 @@ figure
       background: $body-color url(/assets/img/default-image-icon.png) no-repeat center center
     img
       background-color: $bg-color
+      border-radius: 4px
   figcaption
-    margin-top: var(--spacer-micro)
+    margin-top: var(--shim)
     p
       margin: 0
       font-size: var(--fs--xs)
@@ -33,7 +35,7 @@ figure
 
 //-----------------------------------------------------------------------------
 
-///@media screen and (min-width: 40em)
+@media screen and (min-width: 40em)
 
   figure
     margin-right: -1em
@@ -43,4 +45,4 @@ figure
 //@media screen and (min-width: 60em)
 
   figure
-    margin-right: calc(var(--spacer) * -1)
+    margin-right: -2em

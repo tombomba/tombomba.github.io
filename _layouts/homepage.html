@@ -10,6 +10,7 @@ layout: default
   {% if feature.media %}{% include --display-figure.html media=feature.media is_home=true %}{% endif %}
   <div class="feature">
     <h1><a href="{{ feature.url | prepend: site.url }}">{{ titlef }}</a></h1>
+    <p>{{ feature.excerpt | strip | strip_html | normalize_whitespace | smartify }}</p>
   </div>
 
   {% if feature.media %}<div class="hr double short"></div>{% endif %}
@@ -19,7 +20,7 @@ layout: default
     {% include --generate-titlef.html title=p.title %}
     <div class="item">
       <h3><a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a></h3>
-      <p>{{ p.excerpt | strip | strip_html | normalize_whitespace | smartify | truncate: 280 }}</p>
+      <p>{{ p.excerpt | strip | strip_html | normalize_whitespace | smartify | truncate: 140 }}</p>
     </div>
     {% endfor -%}
   </div>

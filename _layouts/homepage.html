@@ -6,7 +6,6 @@
 
 {% for p in site.posts limit:20 %}
   {% include text-detail.html page=p content=p.content is_home=true %}
-  <div class="hr double short"></div>
 {% endfor -%}
 
 {% include html-foot.html %}

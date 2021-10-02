@@ -19,5 +19,7 @@ article
         text-decoration: none
       a:hover
         text-decoration: underline
-      &::after
-        content: '\00A0\2014\020'
+    p::before
+      content: '\20'
+    span.punc::after
+      content: '.'

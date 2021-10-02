@@ -1,5 +1,5 @@
 ---
-title: "The five boxing wizards jumped quickly"
+title: "The five boxing wizards jumped quickly!"
 ---
 
 Nunc mattis ex ac egestas tincidunt. Phasellus sit amet ornare sem. Maecenas lobortis ultrices massa. Suspendisse potenti. Etiam finibus, diam eu malesuada iaculis, felis erat egestas metus, ac dapibus justo urna ut neque. Praesent rutrum lectus quis arcu semper ullamcorper. Donec faucibus tortor ante, consectetur venenatis nunc porttitor non. Donec sit amet magna mi. Morbi enim nibh, condimentum nec ligula fermentum, cursus ultricies neque. Etiam eget volutpat enim, feugiat aliquam ipsum. Phasellus vitae dignissim massa.

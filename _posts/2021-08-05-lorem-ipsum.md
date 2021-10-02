@@ -1,5 +1,5 @@
 ---
-title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+title: "Lorem ipsum dolor sit amet, 'consectetur adipiscing' elit"
 excerpt: "Blah"
 ---
 ![Benedetta poster, 2021]({{ site.img }}benedetta-2021.jpg){: width="222" height="301" .top .float-left }

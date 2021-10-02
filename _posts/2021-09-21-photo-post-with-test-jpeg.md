@@ -1,6 +1,5 @@
 ---
-layout: media
-title: "The quick brown fox jumps over the lazy dog"
+title: "The quick brown fox jumps over 'The Lazy Dog'"
 media:
   file: test-image.jpg
   ratio: 768x482

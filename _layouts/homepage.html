@@ -1,30 +1,14 @@
 ---
-layout: default
+#
 ---
 
-<article class="home">
+{% include html-head.html %}
 
-  {% assign feature = site.posts.first %}
-  {% assign titleswap = feature.tweet | default: feature.title %}
-  {% include --generate-titlef.html title=titleswap %}
-  {% if feature.media %}{% include --display-figure.html media=feature.media is_home=true %}{% endif %}
-  <div class="feature">
-    <h1><a href="{{ feature.url | prepend: site.url }}">{{ titlef }}</a></h1>
-    <p>{{ feature.excerpt | strip | strip_html | normalize_whitespace | smartify }}</p>
-  </div>
+{% for p in site.posts limit:20 %}
+  {% unless forloop.first %}<div class="hr double short"></div>{% endunless %}
+  {% include text-detail.html page=p content=p.content is_home=true %}
+{% endfor -%}
 
-  {% if feature.media %}<div class="hr double short"></div>{% endif %}
+<div class="hr double short"></div>
 
-  <div class="previously {% if feature.media %}media{% else %}norm{% endif %}">
-    {% for p in site.posts offset:1 limit:7 %}
-    {% include --generate-titlef.html title=p.title %}
-    <div class="item">
-      <h3><a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a></h3>
-      <p>{{ p.excerpt | strip | strip_html | normalize_whitespace | smartify | truncate: 140 }}</p>
-    </div>
-    {% endfor -%}
-  </div>
-
-  <div class="hr double short"></div>
-
-</article>
+{% include html-foot.html %}

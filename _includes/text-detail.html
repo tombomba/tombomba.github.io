@@ -1,16 +1,15 @@
-{% assign raw_headline = p.title | strip | normalize_whitespace | smartify -%}
+{% assign p = include.page %}
+{% assign copy = include.content | strip | normalize_whitespace -%}
 
-{% capture punc -%}
-  {% unless p.title contains '.' or p.title contains '!' or p.title contains '?' -%}
-    {% assign last_char = p.title | slice: -1, 1 -%}
-    {% if last_char == '"' or last_char == "'" -%}
-      <span class="dash"></span>
-    {% else -%}
-      <span class="punc"></span>
-    {% endif %}
-  {% endunless -%}
-{% endcapture -%}
+{% include --generate-titlef.html title=p.title -%}
+{% include --fix-kramdown-tags.html -%}
 
-{% capture headline -%}<header class="inline"><h1>{% if page.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ raw_headline }}</a>{% else %}{{ raw_headline }}{% endif %}{{ punc }}</h1>&#32;<p>{% endcapture -%}
+<article class="{{ page.layout }}"><!-- {{ wc }} words -->
 
-{% assign copy = copy | replace_first: '<p>', headline | replace_first: '</p>', '</p></header>' %}
+  {% if p.media %}{% include --display-figure.html media=p.media %}{% endif %}
+  {% capture hed %}<header><h1>{% if include.is_home %}<a href="{{ p.url | prepend: site.url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1><p>{% endcapture -%}
+  {% assign copy = copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed  %}
+
+  {{ copy }}
+
+</article>

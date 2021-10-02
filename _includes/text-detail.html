@@ -9,7 +9,7 @@
     {% assign grabstring = raw.size | times: 1 | minus: 1 %}
     {% assign raw = raw | slice: 0, grabstring | append: punc | append: lastchar %}
   {% when '!' or '?' %}
-    {% assign raw = raw | append: '&nbsp;' %}
+    {% comment %} make no changes to string {% endcomment %}
   {% else %}
     {% assign raw = raw | append: punc %}
 {% endcase -%}

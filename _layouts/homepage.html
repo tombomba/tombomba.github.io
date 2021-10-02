@@ -5,10 +5,8 @@
 {% include html-head.html %}
 
 {% for p in site.posts limit:20 %}
-  {% unless forloop.first %}<div class="hr double short"></div>{% endunless %}
   {% include text-detail.html page=p content=p.content is_home=true %}
+  <div class="hr double short"></div>
 {% endfor -%}
-
-<div class="hr double short"></div>
 
 {% include html-foot.html %}

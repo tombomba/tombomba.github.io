@@ -1,6 +1,8 @@
 ---
-layout: default
+#
 ---
+
+{% include html-head.html %}
 
 {% assign copy = content | strip | normalize_whitespace -%}
 
@@ -31,3 +33,5 @@ layout: default
   {{ copy }}
 
 </article>
+
+{% include html-foot.html %}

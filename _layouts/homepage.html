@@ -4,9 +4,21 @@
 
 {% include html-head.html %}
 
-{% for p in site.posts limit:20 %}
-  {% include text-detail.html page=p content=p.content is_home=true %}
-  <div class="hr double short"></div>
+{% assign scope = 2629743 -%}<!-- 1 month -->
+{% assign today = site.posts.first.date | date: '%s' -%}
+
+{% for p in site.posts %}
+
+  {% assign current = p.date | date: '%s' -%}
+  {% assign range = today | times: 1 |  minus: current -%}
+
+  {% if scope > range %}
+    {% include text-detail.html page=p content=p.content is_home=true %}
+    <div class="hr double short"></div>
+  {% else %}
+    {% break %}
+  {% endif -%}
+
 {% endfor -%}
 
 {% include html-foot.html %}

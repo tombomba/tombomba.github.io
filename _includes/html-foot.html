@@ -5,9 +5,9 @@
   <ul>{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li></ul>
 
   {% if page.is_post %}
-  <p>Page published {{ page.date | date: '%B %-d, %Y' }}</p>
+  <p>Published {{ page.date | date: '%B %-d, %Y' }}</p>
   {% else %}
-  <p>Last updated {{ site.posts.first.date | date: '%B %-d, %Y' }}</p>
+  <p>Site updated {{ site.posts.first.date | date: '%B %-d, %Y' }}</p>
   {% endif -%}
 
   <p>Copyright &copy; <a href="/about/">{{ site.author }}</a></p>

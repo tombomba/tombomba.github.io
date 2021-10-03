@@ -3,7 +3,7 @@
 {% assign raw = p.title | strip | normalize_whitespace %}
 
 {% assign wordcount = copy | number_of_words %}
-{% if wordcount > 200 %}
+{% if wordcount > 250 %}
   {% assign hedsize = 'lg' %}
 {% else %}
   {% assign hedsize = 'sm' %}

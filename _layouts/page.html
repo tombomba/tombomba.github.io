@@ -1,15 +1,7 @@
 ---
-layout: default
+#
 ---
 
-{% include --generate-titlef.html title=page.title -%}
-
-<article class="{{ page.layout }}">
-
-  <header>
-    <h1>{{ titlef }}</h1>
-  </header>
-
-  {{ content }}
-
-</article>
+{% include html-head.html %}
+{% include text-detail.html page=page content=content %}
+{% include html-foot.html %}

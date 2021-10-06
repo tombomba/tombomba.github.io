@@ -1,5 +1,5 @@
 ---
-title: "Tigers Are Not Afraid"
+title: "Tigers Are Not Afraid (2017)"
 excerpt: "The reality of the film, what it's really addressing, is too ugly to be dramatized this way."
 ---
 

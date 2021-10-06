@@ -1,21 +1,17 @@
 ---
 layout: page
-title: "A media diary, a small collage, a dumb blog"
+title: "About the site..."
 is_about: true
 is_page: true
 permalink: /about/
 ---
 
 {% capture pagetext %}
-There are quite a few voices out there who are smart and skilled and interesting. This site is my attempt to join them. I made it for fun, but also to express things I don't see routinely expressed.
+I tend to overthink things, and lately I've been thinking about a Pauline Kael quote from 1969 and a TKTK tweet from 2020. First one, then the other.
 
-My name is Tom Bomba. I knocked around NYU before I "dropped out of college to get an education." I've spent my time since producing digital media.
+"Movies are so rarely great art, that if we cannot appreciate great trash, we have very little reason to be interested in them."
 
-<i>{{ site.title }}</i> is about American mythology. The rough borders of my interest stretch from the Mississippi to the Pacific, up through the Yukon, down to Panama, and maybe a little further.
 
-While this is another blog about movies and books, it's one where pop art is viewed through an intentionally limited, geographic lens.
-
-The site was created on a Macintosh using Jekyll, Atom, and Pixelmator while listening to KCRW Los&nbsp;Angeles. In typical fashion, I've revised this page 37 times and I'm still not satisfied with it.
 {% endcapture -%}
 
 {{ pagetext | smartify | markdownify | strip | normalize_whitespace }}

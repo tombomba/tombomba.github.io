@@ -27,14 +27,14 @@ article > img
     &.float-left
       display: inline
       float: left
-      margin-right: 1em
-      margin-bottom: 0.5em
+      margin-right: calc(var(--shim) + 1em)
+      margin-bottom: 1em
 
     &.float-right
       display: inline
       float: right
-      margin-left: 1em
-      margin-bottom: 0.5em
+      margin-left: calc(var(--shim) + 1em)
+      margin-bottom: 1em
 
 //-----------------------------------------------------------------------------
 
@@ -45,19 +45,11 @@ article > img
     &.pull-top
       margin-top: -0.5em
 
-    &.float-left
-      margin-right: calc(var(--shim) + 1em)
-      margin-bottom: 1em
-
     &.pull-left
       margin-left: -1em
 
     &.tilt-left
       transform: rotate(-3deg)
-
-    &.float-right
-      margin-left: calc(var(--shim) + 1em)
-      margin-bottom: 1em
 
     &.pull-right
       margin-right: -1em

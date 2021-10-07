@@ -1,6 +1,6 @@
 ---
 title: "The Night House (2021)"
-tags: horror
+tags: horror fave
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante tempus, dapibus tortor sit amet, congue sem. Nunc tristique nulla turpis. Morbi egestas felis ante, non molestie diam hendrerit ac. Sed ultricies fermentum sapien sit amet imperdiet. Sed ut dolor turpis. Aliquam vehicula posuere orci, eu iaculis magna fermentum ac. In accumsan congue elit vel posuere. Integer pharetra diam viverra magna dictum ornare. Nullam sapien metus, porttitor sit amet congue a, lacinia eu eros. Mauris sed consequat tellus. Fusce mattis bibendum felis et rutrum. Vestibulum quis aliquet odio.

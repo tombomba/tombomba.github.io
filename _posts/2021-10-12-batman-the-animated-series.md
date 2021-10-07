@@ -1,6 +1,6 @@
 ---
 title: "'P.O.V.,' Batman: The Animated Series, (1994)"
-tags: animated
+tags: animated fave
 ---
 
 In id lobortis magna. Aliquam sed nibh et quam scelerisque posuere. Suspendisse fringilla suscipit turpis ut dictum. Integer non leo tempor, placerat nunc in, blandit quam. In hac habitasse platea dictumst. Maecenas laoreet lorem a posuere mattis. Integer sed faucibus massa. Phasellus pretium id magna in aliquet. Sed eu ornare mi, non venenatis eros.

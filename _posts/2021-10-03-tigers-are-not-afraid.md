@@ -1,6 +1,7 @@
 ---
 title: "Tigers Are Not Afraid (2017)"
 excerpt: "The reality of the film, what it's really addressing, is too ugly to be dramatized this way."
+tags: horror
 ---
 
 ![Tigers Are Not Afraid poster art, 2017]({{ site.img }}tigers-are-not-afraid-2017.jpg){: width="222" height="317" .top .float-right .pull-right .tilt-right }

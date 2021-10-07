@@ -1,6 +1,7 @@
 ---
 title: "Prom Night (1980)"
 excerpt: "It has a cool poster, so that's something...right?"
+tags: horror
 ---
 
 ![Prom Night poster art, 1980]({{ site.img }}prom-night-1980.jpg){: width="222" height="337" .top .float-left .border }

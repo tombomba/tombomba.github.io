@@ -17,7 +17,7 @@ safe: true
 future: false
 theme: null
 
-permalink: :title-:year:month:day:output_ext
+permalink: /:year/:month/:title:output_ext
 timezone: America/Los_Angeles
 
 defaults:

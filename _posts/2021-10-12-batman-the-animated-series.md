@@ -1,5 +1,5 @@
 ---
-title: "Batman: The Animated Series (1994)"
+title: "'P.O.V.,' Batman: The Animated Series, (1994)"
 tags: animated
 ---
 

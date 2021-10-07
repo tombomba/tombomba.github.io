@@ -1,46 +1,52 @@
-title: "Bomtomba"
+title: "Trash Diary"
 description: "A media diary, a small collage, a dumb blog"
-domain: "tombomba.github.io"
+domain: "trashdiary.com"
+url: "https://www.trashdiary.com"
 
-url: "https://tombomba.github.io"
-cdn: "https://tombomba.github.io/assets/"
-img: "https://tombomba.github.io/assets/img/"
-css: "https://tombomba.github.io/assets/css/"
+author: Tom Bomba
+twitter: drashtiary
+letterboxd: t__bomba
 
 img_dir: /assets/img/
 css_dir: /assets/css/
-
-author: Tom Bomba
-twitter: bomtomba
 
 safe: true
 future: false
 theme: null
 
-permalink: /:year/:month/:title:output_ext
-timezone: America/Los_Angeles
-
-collections:
-  pages:
-    collections_dir: _pages
-    output: true
-    permalink: /:path
+include:
+  - _pages
+  - _pages/archive
 
 defaults:
   -
     scope:
-      path: ""      # empty string for all files
-      type: posts   # limit to posts
+      path: ""
+      type: "posts"
     values:
       layout: post
-      is_post: true # automatically set is_post=true for all posts
+      is_post: true
+      style: "post"
   -
     scope:
       path: "_pages"
       type: "pages"
     values:
-      layout: "page"
+      layout: "default"
       is_page: true
+      style: "page"
+  -
+    scope:
+      path: "_pages/archive"
+      type: "pages"
+    values:
+      layout: "archive"
+      is_page: true
+      is_archive: true
+      style: "archive"
+
+permalink: /:year/:month/:title:output_ext
+timezone: America/Los_Angeles
 
 markdown: kramdown
 kramdown:

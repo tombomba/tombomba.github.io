@@ -62,10 +62,13 @@ article
   p, ul, ol, li, hr
     margin-top: 1em
 
-  ul.plain
-    margin: 1em 0 0 2em
-    li
-      margin: 0
+  ul
+    &.fancy
+      margin: 1em 0 0 calc(var(--shim) + 1em)
+    &.plain
+      margin: 1em 0 0 calc(var(--shim) + 1em)
+      li
+        margin: 0
 
   blockquote
     padding-left: 2em
@@ -136,6 +139,10 @@ time
 
   body
     padding: 2em
+
+  article
+    ul.fancy
+      margin: 1em 0 0 0
 
 //-----------------------------------------------------------------------------
 

@@ -7,7 +7,7 @@
 
 article
   margin-top: 4em
-  header
+  header.post
     h1
       a:link,
       a:visited
@@ -15,11 +15,11 @@ article
         text-decoration: none
       a:hover
         text-decoration: underline
-  header.lg
+  header.post.lg
     h1
       font-size: var(--hs)
       line-height: var(--lh--tight)
-  header.sm
+  header.post.sm
       h1, p
         display: inline
         font-size: 1em
@@ -27,3 +27,20 @@ article
           content: '.'
         &::after
           content: '\20'
+  header.page
+    h1
+      font-size: 1em
+      line-height: var(--lh--tight)
+
+aside
+  margin-top: 4em
+  ul
+    display: flex
+    flex-direction: row
+    list-style: none
+    li
+      margin-right: 0.75em
+      font-size: var(--fs--sm)
+      line-height: var(--lh)
+      text-transform: capitalize
+      color: $mix-color

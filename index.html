@@ -1,6 +1,26 @@
 ---
-layout: homepage
 is_home: true
-is_page: true
 permalink: /index.html
 ---
+
+{% include html-head.html %}
+
+{% assign scope = 2629743 -%}<!-- 1 month -->
+{% assign today = site.posts.first.date | date: '%s' -%}
+
+{% for p in site.posts %}
+
+  {% unless forloop.first %}<div class="hr double short"></div>{% endunless %}
+
+  {% assign current = p.date | date: '%s' -%}
+  {% assign range = today | times: 1 |  minus: current -%}
+
+  {% if scope > range %}
+    {% include text-detail.html page=p content=p.content is_home=true %}
+  {% else %}
+    {% break %}
+  {% endif -%}
+
+{% endfor -%}
+
+{% include html-foot.html %}

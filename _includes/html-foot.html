@@ -6,7 +6,7 @@
 
   {% assign tags = site.tags | sort %}
   <aside>
-    <ul>
+    <ul class="tags">
       {% for tag in tags %}
       {% assign tagtitle = tag[0] | capitalize | replace: '-', ' ' %}
       {% unless page.title == tagtitle %}
@@ -16,7 +16,7 @@
     </ul>
   </aside>
 
-  <ul>{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li></ul>
+  <ul class="meta">{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li></ul>
 
   {% if page.is_post %}
   <p>This page published {{ page.date | date: '%B %-d, %Y' }}</p>

@@ -27,7 +27,7 @@ collections:
   pages:
     collections_dir: _pages
     output: true
-    permalink: /:path
+    #permalink: /:path
 
 defaults:
   -
@@ -44,6 +44,7 @@ defaults:
     values:
       layout: "page"
       is_page: true
+      permalink: /:path
 
 markdown: kramdown
 kramdown:

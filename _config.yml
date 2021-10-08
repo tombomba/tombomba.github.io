@@ -26,8 +26,9 @@ timezone: America/Los_Angeles
 collections:
   pages:
     collections_dir: _pages
-    permalink: "/:path"
     output: true
+    permalink: "/:path"
+
 
 defaults:
   -
@@ -44,7 +45,6 @@ defaults:
     values:
       layout: "page"
       is_page: true
-      permalink: "/:path"
 
 markdown: kramdown
 kramdown:

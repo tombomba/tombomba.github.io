@@ -24,10 +24,10 @@ timezone: America/Los_Angeles
 #  - _pages
 
 collections:
-  pages:
-    collections_dir: _pages
+  static:
+    collections_dir: _static
+    permalink: "/:path"
     output: true
-    #permalink: /:path
 
 defaults:
   -
@@ -39,12 +39,11 @@ defaults:
       is_post: true # automatically set is_post=true for all posts
   -
     scope:
-      path: "_pages"
+      path: "_static"
       type: "pages"
     values:
       layout: "page"
       is_page: true
-      permalink: /:path
 
 markdown: kramdown
 kramdown:

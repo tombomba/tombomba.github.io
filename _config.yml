@@ -24,8 +24,8 @@ timezone: America/Los_Angeles
 #  - _pages
 
 collections:
-  pages:
-    collections_dir: _pages
+  tags:
+    collections_dir: _tags
     permalink: "/:path"
     output: true
 
@@ -39,10 +39,10 @@ defaults:
       is_post: true # automatically set is_post=true for all posts
   -
     scope:
-      path: "_pages"
-      type: "pages"
+      path: "_tags"
+      type: "tags"
     values:
-      layout: "page"
+      layout: "tag"
       is_page: true
       permalink: "/:path"
 

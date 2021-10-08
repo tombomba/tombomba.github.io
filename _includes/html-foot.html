@@ -10,7 +10,7 @@
       {% for tag in tags %}
       {% assign tagtitle = tag[0] | capitalize | replace: '-', ' ' %}
       {% unless page.title == tagtitle %}
-      <li><a href="/{{ tag | first | slugify | prepend: site.baseurl | prepend: site.url }}/">{{ tagtitle }} ({{ tag | last | size %}})</a></li>
+      <li><a href="/{{ tag | first | slugify | prepend: site.url }}/">{{ tagtitle }} ({{ tag | last | size %}})</a></li>
       {% endunless %}
       {% endfor %}
     </ul>

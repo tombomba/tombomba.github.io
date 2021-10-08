@@ -27,7 +27,7 @@ collections:
   pages:
     collections_dir: _pages
     output: true
-    permalink: "/:path"
+    permalink: "/:path/"
 
 
 defaults:

@@ -1,5 +1,6 @@
 ---
 title: "About the site..."
+permalink: /about/
 ---
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit." Nunc vehicula mauris...quis convallis fringilla. Donec molestie, sapien nec porta suscipit, nulla purus porta orci, quis volutpat elit enim eget leo. Pellentesque sem neque, pellentesque eu nibh eu, tincidunt porttitor quam. Quisque sed sem a urna consequat rhoncus. Mauris venenatis interdum massa, ut auctor eros vehicula ut. Fusce ipsum erat, posuere nec commodo sed, lobortis ac velit. Ut eget neque eu nisi ultricies venenatis. Nullam eget feugiat metus. Sed placerat eu quam id lobortis.
 

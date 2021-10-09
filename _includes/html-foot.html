@@ -6,7 +6,10 @@
 
   {% assign tags = site.tags | sort %}
   <aside>
-    <ul class="tags">
+    <ul class="datelist">
+      {% include --generate-datelist.html start=10 end=10 %}
+    </ul>
+    <ul class="genres">
       {% for tag in tags %}
       {% assign tagslug = tag | first | slugify %}
       {% assign tagtitle = tag[0] | capitalize | replace: '-', ' ' %}

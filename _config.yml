@@ -24,11 +24,10 @@ timezone: America/Los_Angeles
 #  - _pages
 
 collections:
-  pages:
-    collections_dir: _pages
+  genres:
+    collections_dir: _genres
     output: true
     permalink: "/:path/"
-
 
 defaults:
   -
@@ -40,10 +39,10 @@ defaults:
       is_post: true # automatically set is_post=true for all posts
   -
     scope:
-      path: "_pages"
-      type: "pages"
+      path: ""
+      type: "genres"
     values:
-      layout: "page"
+      layout: "tag"
       is_page: true
 
 markdown: kramdown

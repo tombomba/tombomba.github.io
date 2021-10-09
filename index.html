@@ -15,7 +15,7 @@ is_home: true
   {% assign range = today | times: 1 |  minus: current -%}
 
   {% if scope > range %}
-    {% include text-detail.html page=p content=p.content is_home=true %}
+    {% include post-detail.html page=p content=p.content is_home=true %}
   {% else %}
     {% break %}
   {% endif -%}

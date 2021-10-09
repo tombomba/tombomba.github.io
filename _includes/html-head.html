@@ -49,7 +49,7 @@
 
   <header role="banner">
     <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
-    <p>{{ site.data.taglines | sample }}</p>
+    <p>{% if page.is_post %}{{ site.data.taglines | sample }}{% else %}{{ site.description }}{% endif %}</p>
     <div class="hr double short"></div>
   </header>
 

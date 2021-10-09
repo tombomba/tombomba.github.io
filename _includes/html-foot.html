@@ -11,7 +11,7 @@
       {% assign tagslug = tag | first | slugify %}
       {% assign tagtitle = tag[0] | capitalize | replace: '-', ' ' %}
       {% unless page.title == tagtitle %}
-      <li><a href="{{ tagslug | relative_url }}">{{ tagtitle }} ({{ tag | last | size %}})</a></li>
+      <li><a href="{{ tagslug | relative_url }}">{{ tagtitle }}</a> ({{ tag | last | size %}})</li>
       {% endunless %}
       {% endfor %}
     </ul>

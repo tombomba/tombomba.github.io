@@ -1,7 +1,7 @@
 ---
 title: "Next in tiresome discourse: Paul Verhoeven's sexy, sexy nuns"
 excerpt: "Too many contemporary critics are smug when they should be thoughtful. Case in point: The #filmtwitter response to a small protest outside the NYFF showing of \"Benedetta,\" Verhoeven's latest."
-publish: false
+published: false
 ---
 
 Too many contemporary critics are smug when they should be thoughtful. Case in point: The [#filmtwitter response](https://twitter.com/search?q=benedetta%20protest&src=typed_query) to a small protest outside the NYFF showing of "Benedetta," Paul Verhoeven's [lesbian nun movie](https://www.youtube.com/results?search_query=verhoeven+benedetta+trailer).

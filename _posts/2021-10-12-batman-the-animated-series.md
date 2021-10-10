@@ -1,5 +1,9 @@
 ---
 title: "P.O.V., Batman: The Animated Series (1994)"
+media:
+  file: batman-the-animated-series-1992.jpg
+  ratio: 800x601
+  alt: "Batman: The Animated Series (S01E13)"
 tags: animated fave
 ---
 

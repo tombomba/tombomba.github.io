@@ -10,17 +10,6 @@
     {% include --generate-datelist.html start=10 end=10 %}
   </ul>
 
-  <ul class="genres">
-    {% for tag in tags %}
-    {% assign tagslug = tag | first | slugify %}
-    {% assign tagtitle = tag[0] | capitalize | replace: '-', ' ' %}
-    {% unless page.title == tagtitle %}
-    <li><a href="{{ tagslug | relative_url }}">{{ tagtitle }}</a> ({{ tag | last | size %}})</li>
-    {% endunless %}
-    {% endfor %}
-  </ul>
-  {% endif -%}
-
   <ul class="nav">{% unless page.is_about %}<li><a href="{{ '/about/' | relative_url }}">About</a></li>{% endunless %}<li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li><li><a href="https://letterboxd.com/{{ site.socials }}">Letterboxd</a></li><li><a href="/feed.xml">RSS</a></li></ul>
 
   {% if page.is_post %}

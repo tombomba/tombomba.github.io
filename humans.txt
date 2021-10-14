@@ -14,3 +14,11 @@ Letterboxd: /{{ site.socials }}
 Last update: {{ site.time | date: "%Y/%m/%d" }}
 Standards: HTML5, CSS3
 Software: Atom, Pixelmator, Jekyll, Git
+
+/* INFLUENCES */
+
+- Greil Marcus' "Real Life Rock Top 10"
+- Barry Gifford's "Out of the Past: Adventures in Film Noir"
+- Tom Spurgeon's "Comics Reporter"
+- Jessa Crispin's "Book Slut"
+- Brian Collins' "Horror Movie a Day"

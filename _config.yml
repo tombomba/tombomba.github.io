@@ -70,6 +70,8 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - _drafts
+  - _notes
   - _snips
   - .gitignore
   - .DS_Store

@@ -11,6 +11,6 @@ My name is Tom Bomba. I knocked around New York University's cinema studies prog
 
 _{{ site.title }}_ is intentionally basic, the design a sorta mental note to myself not to write as if I'm submitting for publication. The name is a loose reference to work by Pauline Kael ("Trash, Art, and the Movies") and Jeffrey Sconce ("'Trashing' the academy: taste, excess, and the emerging politics of cinematic style").
 
-My goal is to create something that sits comfortably among Barry Gifford's "Out of the Past: Adventures in Film Noir," Tom Spurgeon's "Comics Reporter," Jessa Crispin's "Book Slut," and Brian Collins' "Horror Movie a Day."
+My goal is to create something that sits comfortably among Greil Marcus' "Real Life Rock Top 10," Barry Gifford's "Out of the Past: Adventures in Film Noir," Tom Spurgeon's "Comics Reporter," Jessa Crispin's "Book Slut," and Brian Collins' "Horror Movie a Day."
 
 The site was built on an ancient Macintosh using Jekyll, Atom, and Pixelmator, while listening to KCRW Los Angeles.

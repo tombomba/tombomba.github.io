@@ -9,6 +9,6 @@ There are quite a few critics who are smart and skilled and say interesting thin
 
 My name is Tom Bomba. I knocked around New York University's cinema studies program before I "dropped out of college to get an education." I've spent my time since producing various forms of digital media.
 
-_{{ site.title }}_ focuses on horror, science fiction, and crime stories. Mostly film. Occasionally TV. Sometimes books. The name is intentionally basic, a sorta mental note to myself not to write as if I'm submitting for publication, and a reference to work by Pauline Kael ("Trash, Art, and the Movies") and Jeffrey Sconce ("'Trashing' the academy: taste, excess, and the emerging politics of cinematic style").
+_{{ site.title }}_ is intentionally basic, a sorta mental note to myself not to write as if I'm submitting for publication. The name is a loose reference to work by Pauline Kael ("Trash, Art, and the Movies") and Jeffrey Sconce ("'Trashing' the academy: taste, excess, and the emerging politics of cinematic style").
 
 The site was made on an ancient Macintosh using Jekyll, Atom, and Pixelmator, while listening to KCRW Los Angeles.

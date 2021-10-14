@@ -5,7 +5,7 @@ is_page: true
 is_about: true
 ---
 
-There are quite a few critics who are smart and skilled and say interesting things. This website is my attempt to join them, or, at least, join the conversation. I made it for fun, but also to express ideas I don't see routinely expressed.
+There are quite a few critics online who are smart and skilled and say interesting things. This website is my attempt to join them. Or, at least, join the conversation. I made it for fun, but also to express ideas I don't see routinely expressed.
 
 My name is Tom Bomba. I knocked around New York University's cinema studies program before I "dropped out of college to get an education." I've spent my time since producing various forms of digital media.
 

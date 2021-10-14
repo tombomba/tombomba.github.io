@@ -2,6 +2,7 @@
 title: "Tigers Are Not Afraid (2017)"
 excerpt: "The reality of the film, what it's really addressing, is too ugly to be dramatized this way."
 tags: horror foreign
+published: false
 ---
 The film, produced in Mexico, and originally "Vuelven" (literally "They Return"), centers on two children living in a ghost town created by narco violence. El Shine leads a group of street kids, imagining himself a gang leader but behaving more as a tiny parent. He and his pals steal whatever they need and sleep wherever they can find a squat. Estrella is quite literally haunted by victims of the local cartel, and befriends Shine after she is orphaned. The opening introduces a main plot and a couple subplots, which automatically makes the film more ambitious than most.
 

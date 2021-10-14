@@ -17,8 +17,8 @@ Software: Atom, Pixelmator, Jekyll, Git
 
 /* INFLUENCES */
 
-- Greil Marcus' "Real Life Rock Top 10"
-- Barry Gifford's "Out of the Past: Adventures in Film Noir"
-- Tom Spurgeon's "Comics Reporter"
-- Jessa Crispin's "Book Slut"
-- Brian Collins' "Horror Movie a Day"
+- Greil Marcus, "Real Life Rock Top 10"
+- Barry Gifford, "Out of the Past: Adventures in Film Noir"
+- Tom Spurgeon, "Comics Reporter"
+- Jessa Crispin, "Book Slut"
+- Brian Collins, "Horror Movie a Day"

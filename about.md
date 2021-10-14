@@ -1,5 +1,5 @@
 ---
-title: "About..."
+title: "A diary about trash or a trashy diary? Lessee..."
 permalink: /about/
 is_page: true
 is_about: true

@@ -24,13 +24,13 @@ article > img
   article > img
     padding-bottom: 0
 
-    &.float-left
+    &.left
       display: inline
       float: left
       margin-right: calc(var(--shim) + 1em)
       margin-bottom: 1em
 
-    &.float-right
+    &.right
       display: inline
       float: right
       margin-left: calc(var(--shim) + 1em)
@@ -45,16 +45,16 @@ article > img
     &.pull-top
       margin-top: -0.5em
 
-    &.pull-left
+    &.left.pull
       margin-left: -1em
 
-    &.tilt-left
+    &.left.tilt
       transform: rotate(-3deg)
 
-    &.pull-right
+    &.right.pull
       margin-right: -1em
 
-    &.tilt-right
+    &.right.tilt
       transform: rotate(3deg)
 
 //-----------------------------------------------------------------------------
@@ -66,8 +66,8 @@ article > img
     &.pull-top.float-right
       margin-top: -1em
 
-    &.pull-left
+    &.left.pull
       margin-left: -2em
 
-    &.pull-right
+    &.right.pull
       margin-right: -2em

@@ -7,7 +7,7 @@ is_page: true
 <p>Try another?</p>
 
 <ul class="plain">
-  {% for p in site.posts limit: 7 %}
+  {% for p in site.posts limit: 20 %}
     <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip | strip_html | normalize_whitespace | smartify }}</a></li>
   {% endfor %}
 </ul>

@@ -1,10 +1,14 @@
 ---
-title: "About the site..."
+title: "About..."
 permalink: /about/
 is_page: true
 is_about: true
 ---
 
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit." Nunc vehicula mauris...quis convallis fringilla. Donec molestie, sapien nec porta suscipit, nulla purus porta orci, quis volutpat elit enim eget leo. Pellentesque sem neque, pellentesque eu nibh eu, tincidunt porttitor quam. Quisque sed sem a urna consequat rhoncus. Mauris venenatis interdum massa, ut auctor eros vehicula ut. Fusce ipsum erat, posuere nec commodo sed, lobortis ac velit. Ut eget neque eu nisi ultricies venenatis. Nullam eget feugiat metus. Sed placerat eu quam id lobortis.
+There are quite a few critics who are smart and skilled and say interesting things. This website is my attempt to join them, or, at least, join the conversation. I made it for fun, but also to express ideas I don't see routinely expressed.
 
-Sed---a laoreet mi. Pellentesque molestie, tortor ut aliquet fermentum, libero nisi convallis quam, quis pretium risus ligula eget massa. Vivamus nec tortor nec libero interdum congue at hendrerit est. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris eget urna eget mauris auctor blandit. Ut eget leo et orci ultrices rhoncus in quis felis. Sed laoreet dui at erat blandit faucibus. Nulla.
+My name is Tom Bomba. I knocked around New York University's cinema studies program before I "dropped out of college to get an education." I've spent my time since producing various forms of digital media.
+
+_{{ site.title }}_ focuses on horror, science fiction, and crime stories. Mostly film. Occasionally TV. Sometimes books. The name is intentionally basic, a sorta mental note to myself not to write as if I'm submitting for publication, and a reference to work by Pauline Kael ("Trash, Art, and the Movies") and Jeffrey Sconce ("'Trashing' the academy: taste, excess, and the emerging politics of cinematic style").
+
+The site was made on an ancient Macintosh using Jekyll, Atom, and Pixelmator, while listening to KCRW Los Angeles.

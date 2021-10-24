@@ -2,6 +2,8 @@ title: "Bomtomba"
 description: "Short notes on dark genres"
 domain: "tombomba.github.io"
 
+JEKYLL_ENV: 'production'
+
 url: "https://tombomba.github.io"
 cdn: "https://tombomba.github.io/assets/"
 img: "https://tombomba.github.io/assets/img/"

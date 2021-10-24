@@ -2,11 +2,13 @@
 
 header[role="banner"]
   h1
-    font-size: 1em
-    line-height: var(--lh--tight)
+    font-family: 'Sancreek', $serif
+    font-size: var(--hs--md)
+    line-height: var(--lh--flat)
+    text-transform: uppercase
     a:link,
     a:visited
-      color: $text-color
+      color: $logo-color
       text-decoration: none
     a:hover
       text-decoration: underline
@@ -17,7 +19,14 @@ header[role="banner"]
 
 //-----------------------------------------------------------------------------
 
-//@media screen and (min-width: 28em)
+@media screen and (min-width: 24em)
+
+  header[role="banner"] h1
+    font-size: var(--hs--lg)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 60em)
 
   header[role="banner"] h1
     font-size: var(--hs--xl)

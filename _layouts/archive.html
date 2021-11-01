@@ -30,9 +30,9 @@ layout: page
     {% assign current_month = p.date | date: "%m" -%}
     {% assign current_year = p.date | date: "%Y" -%}
     {% if is_month_index and current_month == page_month and current_year == page_year -%}
-      <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip | normalize_whitespace | smartify }}</a>&nbsp;&mdash;&nbsp;{{ p.excerpt | strip | strip_html | normalize_whitespace | smartify | truncatewords: 25 }}</li>
+      <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip | normalize_whitespace | smartify }}</a>&nbsp;&mdash;&nbsp;{{ p.excerpt | strip | strip_html | normalize_whitespace | smartify | truncatewords: 35 }}</li>
     {% elsif is_year_index and current_year == page_year -%}
-      <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip | normalize_whitespace | smartify }}</a>&nbsp;&mdash;&nbsp;{{ p.excerpt | strip | strip_html | normalize_whitespace | smartify | truncatewords: 25 }}</li>
+      <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip | normalize_whitespace | smartify }}</a>&nbsp;&mdash;&nbsp;{{ p.excerpt | strip | strip_html | normalize_whitespace | smartify | truncatewords: 35 }}</li>
     {% endif -%}
   {% endfor -%}
   </ul>

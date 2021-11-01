@@ -1,6 +1,6 @@
 ---
 title: "Yellow Sky (1948)"
-excerpt: "Produced around the time of Ford's calvary trilogy and Hawk's \"Red River,\" the movie looks clean and plays nasty, in a way strangely more contemporary than its peers"
+excerpt: "Produced around the time of Ford's calvary trilogy and Hawk's \"Red River,\" the movie looks clean and plays nasty, in a way strangely more contemporary than its peers."
 media:
   file: yellow-sky-wellman-1948.jpg
   ratio: 768x578

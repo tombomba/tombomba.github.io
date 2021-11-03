@@ -27,7 +27,7 @@
     <!-- facebook -->
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
-    {% if page.excerpt %}<meta property="og:description" content="{{ page.excerpt | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% else %}<meta property="og:description" content="{{ site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% endif %}
+    {% if page.is_post %}<meta property="og:description" content="{{ page.excerpt | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% else %}<meta property="og:description" content="{{ site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% endif %}
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:type" content="blog">
     <meta property="og:image" content="{{ page.media.file | default: 'default-social.png' | prepend: site.img }}">
@@ -35,10 +35,10 @@
     <!-- twitter  -->
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="twitter:url" content="{{ page.url | default: '' | prepend: site.url }}">
-    {% if page.excerpt %}<meta name="twitter:description" content="{{ page.excerpt | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% else %}<meta property="og:description" content="{{ site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 140 }}">{% endif %}
+    {% if page.is_post %}<meta name="twitter:description" content="{{ page.excerpt | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">{% else %}<meta property="og:description" content="{{ site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 140 }}">{% endif %}
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@{{ site.twitter }}">
-    <meta name="twitter:creator" content="@{{ site.twitter }}">
+    <meta name="twitter:site" content="@{{ site.socials }}">
+    <meta name="twitter:creator" content="@{{ site.socials }}">
     <meta name="twitter:image:src" content="{{ page.media.file | default: 'default-social.png' | prepend: site.img }}">
 
     <link rel="stylesheet" href="{{ page.style | default: 'main' | prepend: site.css | append: '.css' }}">

@@ -1,6 +1,6 @@
 ---
 title: "Two figures, a crowd, and some chickens"
-excerpt: "Produced around the time of Ford's calvary trilogy and Hawk's \"Red River,\" the movie looks clean and plays nasty, in a way strangely more contemporary than its peers."
+excerpt: "I really like the implied action in Dash Shaw's new \"Discpline\" from New York Review Comics."
 media:
   file: discipline-shaw-2021.jpg
   ratio: 768x994

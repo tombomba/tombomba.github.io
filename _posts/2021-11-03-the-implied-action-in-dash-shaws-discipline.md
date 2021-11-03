@@ -1,0 +1,10 @@
+---
+title: "Two figures, a crowd, and some chickens"
+excerpt: "Produced around the time of Ford's calvary trilogy and Hawk's \"Red River,\" the movie looks clean and plays nasty, in a way strangely more contemporary than its peers."
+media:
+  file: discipline-shaw-2021.jpg
+  ratio: 768x994
+  alt: "Single page illustration from Discipline by Dash Shaw"
+tags: comics
+---
+I really like the implied movement in Dash Shaw's new ["Discpline"](https://www.tcj.com/reviews/discipline/) (New York Review Comics, 2021). There's only a handful of figures on the page, some duplicated, but the movement remains coherent. Shaw achieves his desired effect without the use of panels, dialogue, or sound. No beats lost between the top left and bottom right. From what I understand, the whole book is drawn to a similar style. 304 pages. I don't know if that works (or if such a thing could legit be called a comic, or a graphic novel, or enters into some new territory), but goddamn it's glorious in a single view. One page, and then another, and something to think about.

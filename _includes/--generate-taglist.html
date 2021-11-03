@@ -14,7 +14,4 @@
     {% endfor %}
   {% endcapture -%}
   {% assign sortedtags = tags | split:' ' | sort %}
-  {% for tag in sortedtags reversed %}
-      {% assign tagitems = tag | split: '#' %}
-      <li><a href="{{ tagitems[1] | relative_url }}">{{ tagitems[1] }}</a> ({{ tagitems[2] }})</li>
-  {% endfor -%}
+  {% for tag in sortedtags reversed %}{% assign tagitems = tag | split: '#' %}<li><a href="{{ tagitems[1] | relative_url }}">{{ tagitems[1] }}</a><!-- ({{ tagitems[2] }}) --></li>{% endfor -%}

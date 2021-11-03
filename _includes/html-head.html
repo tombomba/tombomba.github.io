@@ -49,7 +49,12 @@
 
   <header role="banner">
     <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
-    <p>{{ site.description }}</p>
+    <div class="nav">
+      <p>Short notes on&hellip;</p>
+      <ul class="taglist">
+        {% include --generate-taglist.html %}
+      </ul>
+    </div>
     <div class="hr double short"></div>
   </header>
 

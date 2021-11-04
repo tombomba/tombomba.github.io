@@ -1,17 +1,1 @@
-{% comment %}
-  {% for tag in tags %}
-  {% assign tagslug = tag | first | slugify %}
-  {% assign tagtitle = tag[0] | capitalize | replace: '-', ' ' %}
-  {% unless page.title == tagtitle %}
-  <li><a href="{{ tagslug | relative_url }}">{{ tagtitle }}</a> ({{ tag | last | size %}})</li>
-  {% endunless -%}
-  {% endfor -%}
-{% endcomment %}
-
-  {% capture tags %}
-    {% for tag in site.tags %}
-      {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
-    {% endfor %}
-  {% endcapture -%}
-  {% assign sortedtags = tags | split:' ' | sort %}
-  {% for tag in sortedtags reversed %}{% assign tagitems = tag | split: '#' %}<li><a href="{{ tagitems[1] | relative_url }}">{{ tagitems[1] }}</a><!-- ({{ tagitems[2] }}) --></li>{% endfor -%}
+{% for tag in tags %}{% assign tagslug = tag | first | slugify %}{% assign tagtitle = tag[0] | capitalize | replace: '-', ' ' %}{% unless page.title == tagtitle %}<li><a href="{{ tagslug | relative_url }}">{{ tagtitle }}</a> ({{ tag | last | size %}})</li>{% endunless %}{% endfor -%}

@@ -9,6 +9,9 @@
   <ul class="datelist">
     {% include --generate-datelist.html start=11 end=11 %}
   </ul>
+  <ul class="taglist">
+    {% include --generate-taglist.html %}
+  </ul>
   {% endif -%}
 
   <ul class="nav">{% unless page.is_about %}<li><a href="{{ '/about/' | relative_url }}">About</a></li>{% endunless %}<li><a href="/feed.xml">RSS</a></li><li><a href="https://twitter.com/{{ site.socials }}">@{{ site.socials }}</a></li></ul>

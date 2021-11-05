@@ -9,12 +9,11 @@ is_home: true
 
 {% for p in site.posts %}
 
-  {% unless forloop.first %}<div class="hr double short"></div>{% endunless %}
-
   {% assign current = p.date | date: '%s' -%}
   {% assign range = today | times: 1 |  minus: current -%}
 
   {% if scope > range %}
+    {% unless forloop.first %}<div class="hr double short"></div>{% endunless %}
     {% include post-detail.html page=p content=p.content is_home=true %}
   {% else %}
     {% break %}

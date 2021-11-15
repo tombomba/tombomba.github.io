@@ -2,7 +2,7 @@
 {% assign w = aspectr[0] | times: 1.0 -%}
 {% assign h = aspectr[1] | times: 1.0 -%}
 {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
-<figure>
+<figure class="{% if include.is_home %}home{% else %}post{% endif %}">
   <div class="wrap" style="padding-bottom:{{ percent }}%"><img src="{{ include.media.file | prepend: site.img }}" alt="{{ include.media.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}"></div>
   {% unless include.is_home %}{% if include.media.caption -%}<figcaption>{{ include.media.caption | strip | normalize_whitespace | smartify | markdownify }}</figcaption>{% endif -%}{% endunless %}
 </figure>

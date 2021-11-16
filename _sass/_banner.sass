@@ -2,14 +2,12 @@
 
 header[role="banner"]
   h1
-    font-family: "Sedgwick Ave Display", $serif
     font-size: var(--hs--lg)
-    font-weight: 400
     line-height: var(--lh--flat)
-    text-transform: uppercase
+    text-transform: downcase
     a:link,
     a:visited
-      color: $logo-color
+      color: $link-color
       text-decoration: none
     a:hover
       text-decoration: underline
@@ -20,7 +18,7 @@ header[role="banner"]
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 23em)
+//@media screen and (min-width: 23em)
 
   header[role="banner"] h1
     font-size: var(--hs--xl)

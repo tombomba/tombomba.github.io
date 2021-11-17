@@ -1,0 +1,9 @@
+{% if page.is_page or page.is_home %}
+{% assign tags = site.tags | sort %}
+<ul class="datelist">
+  {% include --generate-datelist.html start=11 end=11 %}
+</ul>
+<ul class="taglist">
+  {% include --generate-taglist.html %}
+</ul>
+{% endif -%}

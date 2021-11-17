@@ -7,7 +7,7 @@
   <ul class="nav">{% unless page.is_about %}<li><a href="{{ '/about/' | relative_url }}">About</a></li>{% endunless %}<li><a href="/feed.xml">RSS</a></li><li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li></ul>
 
   {% if page.is_post %}
-  <p>This page published {{ page.date | date: '%B %-d, %Y' }}</p>
+  <p>Page published {{ page.date | date: '%B %-d, %Y' }}</p>
   {% else %}
   <p>Site updated {{ site.posts.first.date | date: '%B %-d, %Y' }}</p>
   {% endif -%}

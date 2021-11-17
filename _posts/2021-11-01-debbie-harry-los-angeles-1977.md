@@ -1,5 +1,5 @@
 ---
-title: "Debbie Harry outside Licorice Pizza. Los Angeles, 1977."
+title: "Debbie Harry outside Licorice Pizza, Los Angeles, 1977"
 excerpt: "What are you even doing?"
 media:
   file: debbie-harry-los-angeles-1977.jpg

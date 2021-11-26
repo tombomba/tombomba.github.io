@@ -42,15 +42,17 @@
     <meta name="twitter:image:src" content="{{ page.media.file | default: 'default-social.png' | prepend: site.img }}">
 
     <link rel="stylesheet" href="{{ page.style | default: 'main' | prepend: site.css | append: '.css' }}">
-  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap&text={{ site.title | strip | remove:' ' | upcase }}" rel="stylesheet">
+
 </head>
 
 <body><!-- {{ page.layout }} -->
 
   <header role="banner">
     <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
-    <p>{{ site.description }}</p>
-    <div class="hr short double"></div>
+    <div class="hr short banner"></div>
   </header>
 
   <main role="main">

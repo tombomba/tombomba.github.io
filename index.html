@@ -4,7 +4,18 @@ is_home: true
 
 {% include html-head.html %}
 
-{% include post-detail.html page=site.posts.first content=site.posts.first.content is_home=true %}
+{% assign scope = 2629743 -%}<!-- 1 month -->
+{% assign today = site.posts.first.date | date: '%s' -%}
+{% for p in site.posts %}
+  {% assign current = p.date | date: '%s' -%}
+  {% assign range = today | times: 1 |  minus: current -%}
+  {% if scope > range %}
+    {% unless forloop.first %}<div class="hr short double"></div>{% endunless %}
+    {% include post-detail.html page=p content=p.content is_home=true %}
+  {% else %}
+    {% break %}
+  {% endif -%}
+{% endfor -%}
 
 <div class="hr short double"></div>
 

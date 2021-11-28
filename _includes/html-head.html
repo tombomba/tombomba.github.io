@@ -41,16 +41,22 @@
     <meta name="twitter:creator" content="@{{ site.socials }}">
     <meta name="twitter:image:src" content="{{ page.media.file | default: 'default-social.png' | prepend: site.img }}">
 
+    <!-- css -->
     <link rel="stylesheet" href="{{ page.style | default: 'main' | prepend: site.css | append: '.css' }}">
-    
+
+    <!-- goog fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Slackey&display=swap&text={{ site.title | strip | remove:' ' | upcase }}">
+
 </head>
 
 <body><!-- {{ page.layout }} -->
 
   <header role="banner">
     <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
-    <p>{{ site.description }}</p>
-    <div class="hr short double"></div>
+    <!-- <p>{{ site.description }}</p> -->
+    <div class="hr short banner"></div>
   </header>
 
   <main role="main">

@@ -41,18 +41,12 @@ article
     a:hover
       text-decoration: underline
 
-aside
-  margin-top: 4em
-  h2
-    font-size: 1em
-  ul
-    margin: 1em 0 0 calc(var(--shim) + 1em)
-    li
-      margin-top: 1em
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40em)
-
-  aside ul
-    margin: 1em 0 0 0
+  section.home
+    h2
+      &.first
+        font-size: var(--hs)
+        line-height: var(--lh--tight)
+      &.not
+        font-size: 1em
+    p
+      margin: 0

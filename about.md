@@ -1,5 +1,6 @@
 ---
-title: "About..."
+layout: default
+title: "About"
 permalink: /about/
 is_page: true
 is_about: true

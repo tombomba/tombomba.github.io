@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "About"
-permalink: /about.html
+permalink: /about
 is_page: true
 is_about: true
 ---

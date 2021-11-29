@@ -1,6 +1,13 @@
 ---
-#
+layout: default
 ---
-{% include html-head.html %}
-{% include post-detail.html page=page content=content %}
-{% include html-foot.html %}
+
+{% assign copy = content | strip | normalize_whitespace -%}
+
+{% include --generate-titlef.html title=page.title -%}
+{% include --fix-kramdown-tags.html -%}
+
+{% capture hed %}<header><h1>{{ titlef }}</h1><p>{% endcapture -%}
+{% assign copy = copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed  %}
+
+{{ copy }}

@@ -1,27 +1,15 @@
 ---
 is_home: true
 ---
-
 {% include html-head.html %}
 
 <article>
 
-  {% assign scope = 2629743 -%}<!-- 1 month -->
-  {% assign today = site.posts.first.date | date: '%s' -%}
-  {% for p in site.posts %}
-
-    {% assign current = p.date | date: '%s' -%}
-    {% assign range = today | times: 1 |  minus: current -%}
-
-    {% if scope > range %}
-      <section class="home">
-        <h2 class="{% if forloop.first %}first{% else %}not{% endif %}"><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip | normalize_whitespace | smartify }}</a></h2>
-        <p>{{ p.excerpt | strip | strip_html | normalize_whitespace | smartify | truncatewords: 35 }}</p>
-      </section>
-    {% else %}
-      {% break %}
-    {% endif -%}
-
+  {% for p in site.posts limit:7 %}
+  <section class="home">
+    <h2 class="{% if forloop.first %}first{% else %}not{% endif %}"><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip | normalize_whitespace | smartify }}</a></h2>
+    <p>{{ p.excerpt | strip | strip_html | normalize_whitespace | smartify | truncatewords: 35 }}</p>
+  </section>
   {% endfor -%}
 
 </article>

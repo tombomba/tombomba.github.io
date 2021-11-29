@@ -1,0 +1,62 @@
+---
+#
+---
+
+@charset "utf-8"
+@import reset, fonts, colors, body, banner, figure, img, footer
+
+article
+  margin-top: 4em
+  header.post
+    h1
+      a:link,
+      a:visited
+        color: $text-color
+        text-decoration: none
+      a:hover
+        text-decoration: underline
+  header.post.lg
+    h1
+      font-size: var(--hs)
+      line-height: var(--lh--tight)
+  header.post.sm
+      h1, p
+        display: inline
+        font-size: 1em
+        .punc::after
+          content: '.'
+        &::after
+          content: '\20'
+  header.page
+    h1
+      font-size: 1em
+      line-height: var(--lh--tight)
+  .datestamp
+    font-style: italic
+    color: $mix-color
+    a:link,
+    a:visited
+      color: $mix-color
+      text-decoration: none
+    a:hover
+      text-decoration: underline
+
+  section.home
+    margin-top: 2em
+    h2
+      margin-top: 0
+      padding-bottom: 3px
+      line-height: var(--lh--tight)
+      &.first
+        font-size: var(--hs)
+      &.not
+        font-size: 1em
+    p
+      margin: 0
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40em)
+
+  article section.home
+    padding-bottom: 0

@@ -1,11 +1,11 @@
 title: "Trash!"
 description: "Short notes on dark genres"
-domain: "trashdiary.com"
+domain: "www.trashdiary.com"
 
-url: "https://trashdiary.com"
-cdn: "https://trashdiary.com/assets/"
-img: "https://trashdiary.com/assets/img/"
-css: "https://trashdiary.com/assets/css/"
+url: "https://www.trashdiary.com"
+cdn: "https://www.trashdiary.com/assets/"
+img: "https://www.trashdiary.com/assets/img/"
+css: "https://www.trashdiary.com/assets/css/"
 
 img_dir: /assets/img/
 css_dir: /assets/css/

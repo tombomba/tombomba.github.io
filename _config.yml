@@ -1,4 +1,4 @@
-title: "Trash!"
+title: "Crash!"
 description: "Short notes on dark genres"
 domain: "tombomba.github.io"
 
@@ -11,7 +11,7 @@ img_dir: /assets/img/
 css_dir: /assets/css/
 
 author: Tom Bomba
-socials: drashtiary
+socials: drashciary
 
 safe: true
 future: false

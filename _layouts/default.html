@@ -55,12 +55,12 @@
 
   <header role="banner">
     <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+    <div class="hr short banner"></div>
   </header>
 
   <main role="main">
 
-    <article class="{% if page.is_post %}{{ page.layout }}{% else %}page{% endif %}">
-    <!-- {{ page.layout }} // {{ page.content | number_of_words }} -->
+    <article class="{% if page.is_post %}{{ page.layout }}{% else %}page{% endif %}"><!-- {{ page.layout }} // {{ page.content | number_of_words }} -->
 
       {{ content }}
 

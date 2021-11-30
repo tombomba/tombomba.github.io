@@ -1,7 +1,6 @@
 ---
 layout: micro
 title: "Debbie Harry outside Licorice Pizza, Los Angeles, 1977"
-excerpt: "If you're peddling another sentimental coming-of-age story with \"Life on Mars,\" my God, what are you even doing?"
 media:
   file: debbie-harry-los-angeles-1977.jpg
   ratio: 800x533

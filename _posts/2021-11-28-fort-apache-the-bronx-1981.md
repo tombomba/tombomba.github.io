@@ -1,5 +1,5 @@
 ---
-layout: photo
+layout: micro
 title: "Fort Apache The Bronx (1981)"
 media:
   file: fort-apache-the-bronx-1981.jpg

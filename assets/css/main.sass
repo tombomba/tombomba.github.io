@@ -20,7 +20,7 @@ article.feature
       font-size: var(--hs--md)
       line-height: var(--lh--tight)
     p
-      margin: 0
+      margin-top: 1em
       font-size: var(--fs--sm)
       line-height: var(--lh)
       color: $mix-color
@@ -56,3 +56,11 @@ article.page
         font-size: 1em
     p
       margin: 0
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50em)
+
+  article.feature header
+    p
+      margin-top: 0

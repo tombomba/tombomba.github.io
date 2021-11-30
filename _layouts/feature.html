@@ -7,13 +7,13 @@ layout: default
 {% include --generate-titlef.html title=page.title -%}
 {% include --fix-kramdown-tags.html -%}
 
+{% if page.media %}
+  {% include --display-figure.html media=page.media %}
+{% endif %}
+
 <header>
   <h1>{{ titlef }}</h1>
   <p><i>by</i> <a href="{{ '/about/' | relative_url }}">{{ page.author | default: site.author }}</a></p>
 </header>
-
-{% if page.media %}
-  {% include --display-figure.html media=page.media %}
-{% endif %}
 
 {{ copy }}

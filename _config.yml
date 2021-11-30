@@ -1,11 +1,11 @@
 title: "Trash!"
 description: "Short notes on dark genres"
-domain: "tombomba.github.io"
+domain: "trashdiary.com"
 
-url: "https://tombomba.github.io"
-cdn: "https://tombomba.github.io/assets/"
-img: "https://tombomba.github.io/assets/img/"
-css: "https://tombomba.github.io/assets/css/"
+url: "https://trashdiary.com"
+cdn: "https://trashdiary.com/assets/"
+img: "https://trashdiary.com/assets/img/"
+css: "https://trashdiary.com/assets/css/"
 
 img_dir: /assets/img/
 css_dir: /assets/css/

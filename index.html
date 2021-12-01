@@ -3,7 +3,19 @@ layout: default
 is_home: true
 ---
 
-{% for p in site.posts limit:10 %}
-  {% unless forloop.first %}<div class="hr short double"></div>{% endunless %}
-  {% include post-detail.html page=p content=p.content -%}
+{% assign scope = 2419200 -%}<!-- 28 days -->
+{% assign today = site.posts.first.date | date: '%s' -%}
+
+{% for p in site.posts %}<!-- 1 month -->
+
+  {% assign current = p.date | date: '%s' -%}
+  {% assign range = today | times: 1 |  minus: current -%}
+
+  {% if scope > range %}
+    {% unless forloop.first %}<div class="hr short double"></div>{% endunless %}
+    {% include post-detail.html page=p content=p.content is_home=true -%}
+  {% else -%}
+    {% break -%}
+  {% endif -%}
+
 {% endfor -%}

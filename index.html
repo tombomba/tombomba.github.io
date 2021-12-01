@@ -5,13 +5,15 @@ is_home: true
 
 {% include post-detail.html page=site.posts.first content=site.posts.first.content is_home=true -%}
 
-{% assign scope = 604800 -%}
+{% comment %} ONE WEEK IS ... {% assign scope = 604800 -%} {% endcomment %}
+
+{% assign scope = 2629743 -%} {% comment %} ONE MONTH {% endcomment %}
 {% assign today = site.posts.first.date | date: '%s' -%}
 
 <div class="hr short double"></div>
 
 <aside class="recent">
-  <ul><!-- 1 week -->
+  <ul>
   {% for p in site.posts offset:1 %}
     {% assign current = p.date | date: '%s' %}
     {% assign range = today | times: 1 |  minus: current -%}

@@ -68,7 +68,7 @@
 
     <div class="hr short double"></div>
 
-    <ul class="nav">{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li><li><a href="https://letterboxd.com/{{ site.socials }}">Letterboxd</a></li><li><a href="/feed.xml">RSS</a></li></ul>
+    <ul class="nav">{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}<li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li></ul>
 
     {% if page.is_post %}
     <p>This page published {{ page.date | date: "%B %-d, %Y" }}</p>

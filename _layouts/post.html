@@ -32,7 +32,7 @@ layout: default
 {% include --generate-titlef.html title=raw -%}
 {% include --fix-kramdown-tags.html -%}
 
-{% assign titlef = titlef | replace_first: '!!QQ!!', '<span class="punc"></span>' %}
+{% assign titlef = titlef | replace_first: '!!QQ!!', '<span class="punc"></span>' -%}
 
 {% if page.media %}
   {% include --display-figure.html media=page.media %}

@@ -16,6 +16,7 @@ layout: default
 {% endif -%}
 
 {% if hedsize == 'micro' %}
+  {% assign punc = '!!QQ!!' %}
   {% assign lastchar = raw | slice: -1 %}
   {% case lastchar %}
     {% when '"' or "'" or '\"' or "\'" %}
@@ -24,7 +25,7 @@ layout: default
     {% when '!' or '?' or '.' %}
       {% comment %} make no changes to string {% endcomment %}
     {% else %}
-      {% assign raw = raw | append: '!!QQ!!' %}
+      {% assign raw = raw | append: punc %}
   {% endcase -%}
 {% endif -%}
 

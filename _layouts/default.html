@@ -81,7 +81,7 @@
     {% else %}
       <p>Last updated {{ site.posts.first.date | date: '%B %-d, %Y' }}</p>
     {% endif %}
-    <p>Copyright &copy; {% unless page.is_about or page.media %}<a href="{{ '/about/' | absolute_url }}">{{ site.author }}</a>{% else %}{{ site.author }}{% endunless %}</p>
+    <p>Copyright &copy; {{ site.author }}</p>
 
   </footer>
 

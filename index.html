@@ -1,12 +1,10 @@
 ---
 layout: default
-style: homepage
 is_home: true
 ---
 
 <div class="feature">
-  {% if site.posts.first.media %}{% include --display-figure.html media=site.posts.first.media %}{% endif %}
-  <h1><a href="{{ site.posts.first.url }}">{{ site.posts.first.title | strip | normalize_whitespace | smartify }}</a></h1><p>{{ site.posts.first.excerpt | strip | strip_html | normalize_whitespace | smartify }}</p>
+  <h1><a href="{{ site.posts.first.url }}">{{ site.posts.first.title | strip | normalize_whitespace | smartify }}</a></h1><p>{{ site.posts.first.excerpt | strip | strip_html | normalize_whitespace | smartify | truncatewords: 35 }}</p>
 </div>
 
 <ul>

@@ -1,0 +1,30 @@
+---
+#
+---
+
+@charset "utf-8"
+@import reset, fonts, colors, body, banner, figure, img, footer
+
+article
+
+  div.feature
+    h1
+      font-size: var(--hs)
+      line-height: var(--lh--tight)
+      padding-bottom: 3px
+    p
+      margin: 0
+
+  ul
+    margin: 4em 0 0 0
+    list-style-type: none
+    li
+      &:not(:first-of-type)
+        margin-top: 2em
+      h2
+        margin-top: 0
+        padding-bottom: 3px
+        font-size: 1em
+        line-height: var(--lh--tight)
+      p
+        margin: 0

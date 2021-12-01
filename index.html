@@ -5,26 +5,15 @@ is_home: true
 
 {% include post-detail.html page=site.posts.first content=site.posts.first.content is_home=true -%}
 
-{% comment %} ONE WEEK IS ... {% assign scope = 604800 -%} {% endcomment %}
-
-{% assign scope = 2629743 -%} {% comment %} ONE MONTH {% endcomment %}
-{% assign today = site.posts.first.date | date: '%s' -%}
-
 <div class="hr short double"></div>
 
 <aside class="recent">
   <ul>
-  {% for p in site.posts offset:1 %}
-    {% assign current = p.date | date: '%s' %}
-    {% assign range = today | times: 1 |  minus: current -%}
-    {% if scope > range %}
-      <li>
-        <h2><a href="{{ p.url | absolute_url }}">{{ p.title | strip | smartify | normalize_whitespace }}</a></h2>
-        <p>{{ p.excerpt | strip | strip_html | smartify | truncatewords:35 | normalize_whitespace }}</p>
-      </li>
-    {% else %}
-      {% break %}
-    {% endif -%}
+  {% for p in site.posts offset: 1 limit: 7 %}
+    <li>
+      <h2><a href="{{ p.url | absolute_url }}">{{ p.title | strip | smartify | normalize_whitespace }}</a></h2>
+      <p>{{ p.excerpt | strip | strip_html | smartify | truncatewords:35 | normalize_whitespace }}</p>
+    </li>
   {% endfor -%}
   </ul>
 </aside>

@@ -11,15 +11,28 @@ article
     h1
       font-size: var(--hs)
       line-height: var(--lh--tight)
+      a:link,
+      a:visited
+        color: $text-color
+        text-decoration: none
+      a:hover
+        text-decoration: underline
 
   header.micro
     h1, p
       display: inline
       font-size: 1em
+    h1
       .punc::after
         content: '.'
       &::after
         content: '\20'
+      a:link,
+      a:visited
+        color: $text-color
+        text-decoration: none
+      a:hover
+        text-decoration: underline
 
   header.page
     h1

@@ -37,7 +37,7 @@
     {% include --display-figure.html media=p.media %}
   {% endif -%}
 
-  {% capture hed %}<header class="{{ hedsize }}"><h1>{{ titlef }}</h1><p>{% endcapture %}
+  {% capture hed %}<header class="{{ hedsize }}"><h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1><p>{% endcapture %}
   {% assign copy = copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed  -%}
 
   {{ copy }}

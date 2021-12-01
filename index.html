@@ -9,7 +9,7 @@ is_home: true
 
 <aside class="recent">
   <ul>
-  {% for p in site.posts offset: 1 limit: 7 %}
+  {% for p in site.posts offset:1 limit:7 %}
     <li>
       <h2><a href="{{ p.url | absolute_url }}">{{ p.title | strip | smartify | normalize_whitespace }}</a></h2>
       <p>{{ p.excerpt | strip | strip_html | smartify | truncatewords:35 | normalize_whitespace }}</p>

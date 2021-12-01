@@ -1,5 +1,4 @@
 ---
-layout: micro
 title: "Debbie Harry outside Licorice Pizza, Los Angeles, 1977"
 media:
   file: debbie-harry-los-angeles-1977.jpg

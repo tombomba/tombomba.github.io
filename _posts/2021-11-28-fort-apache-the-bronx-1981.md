@@ -1,10 +1,10 @@
 ---
-layout: micro
 title: "Fort Apache The Bronx (1981)"
 media:
   file: fort-apache-the-bronx-1981.jpg
   ratio: 608x336
-  alt: "Fort Apache the Bronx"
+  alt: "Fort Apache, the Bronx (1981)"
+  #caption: "Pam Grier takes aim in \"Fort Apache, The Bronx.\""
 ---
 Nam lacinia dictum felis, eget tempus purus faucibus in. Nunc scelerisque gravida viverra. Nulla interdum luctus iaculis. Aenean vitae mi leo. Suspendisse finibus molestie nibh. Duis pulvinar, nunc et convallis congue, erat lacus posuere neque, in euismod ex odio sit amet tortor. Sed erat felis, scelerisque id vulputate sed, dapibus non turpis. Duis in dolor mi. Sed aliquet nisl sed ex auctor tristique. Donec interdum vel ipsum sed ornare. Sed in felis auctor, accumsan odio non, luctus eros. In vulputate massa justo, at porttitor magna dapibus a. Integer euismod, dolor id rhoncus molestie, ligula tortor tempor lacus, a tempor odio neque vel sapien.
 

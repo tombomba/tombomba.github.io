@@ -6,7 +6,9 @@ is_page: true
 is_about: true
 ---
 
-<header><h1>{{ page.title }}</h1></header>
+<header class="page">
+  <h1>{{ page.title }}</h1>
+</header>
 
 There are quite a few critics online who are smart and skilled and say interesting things. This website is my attempt to join them. I made it for fun, but also to express ideas I don't see routinely expressed.
 

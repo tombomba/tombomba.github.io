@@ -4,15 +4,19 @@ title: "Page not found"
 is_page: true
 ---
 
-<header class="page">
-  <h1>Page not found</h1>
-  <p>Try another?</p>
-</header>
+<article>
 
-<ul class="plain">
-  {% for p in site.posts limit:7 %}
-    <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip | strip_html | normalize_whitespace | smartify }}</a></li>
-  {% endfor %}
-</ul>
+  <header class="page">
+    <h1>Page not found</h1>
+    <p>Try another?</p>
+  </header>
 
-<p>If you are having trouble locating a destination, try visiting the <a href="{{ site.url }}">homepage</a>, or browsing posts from <a href="{{ site.posts.first.date | date: '/%Y/%m/' }}">this month</a> or <a href="{{ site.posts.first.date | date: '/%Y/' }}">this year</a>.<p>
+  <ul class="plain">
+    {% for p in site.posts limit:7 %}
+      <li><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip | strip_html | normalize_whitespace | smartify }}</a></li>
+    {% endfor %}
+  </ul>
+
+  <p>If you are having trouble locating a destination, try visiting the <a href="{{ site.url }}">homepage</a>, or browsing posts from <a href="{{ site.posts.first.date | date: '/%Y/%m/' }}">this month</a> or <a href="{{ site.posts.first.date | date: '/%Y/' }}">this year</a>.<p>
+
+</article>

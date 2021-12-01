@@ -3,19 +3,26 @@ layout: default
 is_home: true
 ---
 
-{% assign scope = 2419200 -%}<!-- 28 days -->
+{% include post-detail.html page=site.posts.first content=site.posts.first.content is_home=true -%}
+
+{% assign scope = 604800 -%}
 {% assign today = site.posts.first.date | date: '%s' -%}
 
-{% for p in site.posts %}<!-- 1 month -->
+<div class="hr short double"></div>
 
-  {% assign current = p.date | date: '%s' -%}
-  {% assign range = today | times: 1 |  minus: current -%}
-
-  {% if scope > range %}
-    {% unless forloop.first %}<div class="hr short double"></div>{% endunless %}
-    {% include post-detail.html page=p content=p.content is_home=true -%}
-  {% else -%}
-    {% break -%}
-  {% endif -%}
-
-{% endfor -%}
+<aside class="recent">
+  <ul><!-- 1 week -->
+  {% for p in site.posts offset:1 %}
+    {% assign current = p.date | date: '%s' %}
+    {% assign range = today | times: 1 |  minus: current -%}
+    {% if scope > range %}
+      <li>
+        <h2><a href="{{ p.url | absolute_url }}">{{ p.title | strip | smartify | normalize_whitespace }}</a></h2>
+        <p>{{ p.excerpt | strip | strip_html | smartify | truncatewords:35 | normalize_whitespace }}</p>
+      </li>
+    {% else %}
+      {% break %}
+    {% endif -%}
+  {% endfor -%}
+  </ul>
+</aside>

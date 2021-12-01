@@ -12,6 +12,15 @@ article
       font-size: var(--hs)
       line-height: var(--lh--tight)
 
+  header.micro
+    h1, p
+      display: inline
+      font-size: 1em
+      .punc::after
+        content: '.'
+      &::after
+        content: '\20'
+
   header.page
     h1
       font-size: var(--hs)

@@ -5,7 +5,8 @@ is_home: true
 <article>
 
   <div class="feature">
-    <h1><a href="{{ site.posts.first.url | absolute_url }}">{{ site.posts.first.title | strip | smartify | normalize_whitespace }}</a></h1>
+    {% include --generate-titlef.html title=site.posts.first.title %}
+    <h1><a href="{{ site.posts.first.url | absolute_url }}">{{ titlef }}</a></h1>
     <p>{{ site.posts.first.excerpt | strip | strip_html | normalize_whitespace }}</p>
   </div>
 

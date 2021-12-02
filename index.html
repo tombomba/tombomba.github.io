@@ -2,13 +2,16 @@
 layout: default
 is_home: true
 ---
+<article>
 
-{% include post-detail.html page=site.posts.first content=site.posts.first.content is_home=true -%}
+  <div class="feature">
+    <h1><a href="{{ site.posts.first.url | absolute_url }}">{{ site.posts.first.title | strip | smartify | normalize_whitespace }}</a></h1>
+    <p>{{ site.posts.first.excerpt | strip | strip_html | normalize_whitespace }}</p>
+  </div>
 
-<div class="hr short double"></div>
+  <div class="hr short double"></div>
 
-<aside class="recent">
-  <ul>
+  <ul class="recent">
   {% for p in site.posts offset:1 limit:7 %}
     <li>
       <h2><a href="{{ p.url | absolute_url }}">{{ p.title | strip | smartify | normalize_whitespace }}</a></h2>
@@ -16,4 +19,5 @@ is_home: true
     </li>
   {% endfor -%}
   </ul>
-</aside>
+
+</article>

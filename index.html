@@ -9,8 +9,6 @@ is_home: true
     <p>{{ site.posts.first.excerpt | strip | strip_html | normalize_whitespace }}</p>
   </div>
 
-  <div class="hr short double"></div>
-
   <ul class="recent">
   {% for p in site.posts offset:1 limit:7 %}
     <li>

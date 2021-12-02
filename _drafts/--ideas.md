@@ -1,0 +1,15 @@
+	# MORE IDEAS
+- The Problem with Marvel villains
+- Light and shadow in "Tales of Zatoichi"
+- That weird Star Trek video about why screenwriting sucks now
+- Graham Green on Petrified Forest
+- Technicolor skylines in Black Widow, 1954
+- Andrea Long Chu's thing in NYT about that model
+- Alice Gribbin's (@asgribbin) weird essay about the arts
+- Juvenile emotions in "Pig" and "Titane"??
+- Pig as the anti-Wick
+- The 3 stories in "Curse of the Werewolf"
+- Half reviews of "Finch" and "The Harder They Fall"
+- Marilyn in "Niagara"
+- Purpose of Trudy in Pulp Fiction
+- Use of the space in Blade Runner/2049

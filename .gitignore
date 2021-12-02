@@ -1,9 +1,6 @@
 _site
 _snips
-_notes
 _config.dev.yml
-_config-old-jan-2021.yml
-favicon-package.zip
 .sass-cache
 .jekyll-cache/
 .jekyll-metadata

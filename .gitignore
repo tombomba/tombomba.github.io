@@ -1,5 +1,6 @@
 _site
 _snips
+_drafts
 _config.dev.yml
 .sass-cache
 .jekyll-cache/

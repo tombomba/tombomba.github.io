@@ -17,7 +17,7 @@ safe: true
 future: false
 theme: null
 
-permalink: /:title:output_ext
+permalink: /posts/:title-:year:y_day:output_ext
 timezone: America/Los_Angeles
 
 collections:
@@ -37,7 +37,6 @@ defaults:
       type: posts   # limit to posts
     values:
       layout: post
-      permalink: /posts/:title-:y_day:output_ext
       is_post: true # automatically set is_post=true for all posts
   -
     scope:

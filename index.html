@@ -5,17 +5,21 @@ is_home: true
 <article>
 
   <div class="feature">
-    {% include --generate-titlef.html title=site.posts.first.title %}
-    <h1><a href="{{ site.posts.first.url | absolute_url }}">{{ titlef }}</a></h1>
-    <p>{{ site.posts.first.excerpt | strip | strip_html | normalize_whitespace }}</p>
+    <h1><a href="{{ site.posts.first.url | absolute_url }}">{{ site.posts.first.title | strip | strip_html | smartify | normalize_whitespace }}</a></h1>
+    <p>{{ site.posts.first.excerpt | strip | strip_html | smartify | normalize_whitespace }}</p>
   </div>
 
   <ul class="recent">
-  {% for p in site.posts offset:1 limit:7 %}
-    <li>
-      <h2><a href="{{ p.url | absolute_url }}">{{ p.title | strip | smartify | normalize_whitespace }}</a></h2>
-      <p>{{ p.excerpt | strip | strip_html | smartify | truncatewords:35 | normalize_whitespace }}</p>
-    </li>
+  {% assign scope = 2629743 %}
+  {% assign today = site.posts.first.date | date: '%s' %}
+  {% for p in site.posts %}
+    {% assign current = p.date | date: '%s' %}
+    {% assign range = today | times: 1 |  minus: current %}
+    {% if scope > range %}
+    <li><h2><a href="{{ p.url | absolute_url }}">{{ p.title | strip | smartify | normalize_whitespace }}</a></h2><p>{{ p.excerpt | strip | strip_html | smartify | truncatewords:35 | normalize_whitespace }}</p></li>
+    {% else %}
+      {% break %}
+    {% endif %}
   {% endfor -%}
   </ul>
 

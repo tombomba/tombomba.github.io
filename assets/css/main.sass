@@ -57,3 +57,14 @@ article
         line-height: var(--lh--tight)
       p
         margin: 0
+
+  ul.archive
+    margin-left: calc(1em + var(--shim))
+    li span.datestamp
+      font-style: italic
+      color: $mix-color
+
+@media screen and (min-width: 40em)
+
+  article ul.archive
+    margin-left: 0

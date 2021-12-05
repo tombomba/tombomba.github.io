@@ -37,15 +37,8 @@ defaults:
       type: posts   # limit to posts
     values:
       layout: post
+      permalink: /posts/:title-:y_day:output_ext
       is_post: true # automatically set is_post=true for all posts
-  -
-    scope:
-      path: ""
-      type: "archives"
-    values:
-      layout: "archive"
-      title: :short_month :year xoxo
-      is_page: true
   -
     scope:
       path: ""

@@ -31,7 +31,7 @@
 
 {% assign titlef = titlef | replace_first: '!!QQ!!', '<span class="punc"></span>' -%}
 
-  <article><!-- {{ copy | number_of_words }} -->
+  <article class="{% if p.media %}media{% else %}text{% endif %}"><!-- {{ copy | number_of_words }} -->
 
   {% if p.media %}
     {% include --display-figure.html media=p.media %}

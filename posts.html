@@ -33,7 +33,7 @@ is_archive: true
 {% assign endmonth = enddate | date: '%B' %}
 {% assign endyear = enddate | date: '%Y' -%}
 
-<article>
+<article class="text">
 
   <header class="page">
     <h1>{{ endmonth }} {{ endday }}{% if endyear != startyear %},&nbsp;{{ endyear }}{% endif %}&ndash;{% if endmonth != startmonth %}{{ startmonth }}&nbsp;{% endif %}{{ startday }}, {{ startyear }}</h1>

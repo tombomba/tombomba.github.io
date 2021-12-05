@@ -54,7 +54,11 @@ footer
   max-width: var(--page-width)
 
 article
-  margin-top: 4em
+
+  &.text
+    margin-top: 4em
+  &.media
+    margin-top: 2em
 
   h2, h3, h4, h5, h6
     font-size: var(--fs)
@@ -96,7 +100,6 @@ span.byline
   color: $mix-color
 
 .hr
-  width: 100%
   margin: 0
   padding: 0
   height: 0
@@ -108,8 +111,6 @@ span.byline
     margin-top: 2em
   &.double
     margin-top: 4em
-  &.banner
-    margin-top: calc(4em - var(--shim))
   &.short
     max-width: 33%
 

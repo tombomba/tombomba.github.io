@@ -1,9 +1,15 @@
 //-----------------------------------------------------------------------------
 
 footer
-  margin-top: 2em
-  ul
+  &.text
     margin-top: 4em
+    ul
+      margin-top: 4em
+  &.media
+    margin-top: 2em
+    ul
+      margin-top: 2em
+  ul
     list-style: none
     li
       text-transform: capitalize
@@ -32,3 +38,19 @@ footer
         line-height: var(--lh)
     p
       font-size: var(--fs--sm)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50em)
+
+  footer.media
+    div.hr
+      margin-right: -1em
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 70em)
+
+  footer.media
+    div.hr
+      margin-right: -2em

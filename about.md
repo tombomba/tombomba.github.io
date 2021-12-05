@@ -6,7 +6,7 @@ is_page: true
 is_about: true
 ---
 
-<article>
+<article class="text">
 
 <header class="page"><h1>{{ page.title }}</h1></header>
 

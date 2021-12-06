@@ -25,17 +25,17 @@ article
       &::after
         content: '\20'
   span.byline
-    font-style: italic
+    font-style: italic    
+    color: $mix-color
 
 footer
   margin-top: 2em
   ul
     margin-top: 1em
-    li
-      color: $mix-color
-      span.copyright
-        display: none
-
+  p
+    margin-top: 1em
+    font-size: var(--fs--sm)
+    text-align: center
   div.hr
     margin-top: calc(2em + var(--shim))
 
@@ -49,8 +49,6 @@ footer
       font-size: var(--fs--sm)
       line-height: var(--lh--tight)
       margin-right: 0.25em
-      span.copyright
-        display: inline
       &:not(:last-of-type)::after
         content: '-'
         padding-left: 0.25em

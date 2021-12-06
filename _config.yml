@@ -17,12 +17,12 @@ safe: true
 future: false
 theme: null
 
-permalink: /posts/:title-:year:y_day:output_ext
+permalink: /posts/:title-:short_year:y_day:output_ext
 timezone: America/Los_Angeles
 
 collections:
-  archives:
-    collections_dir: _archives
+  pages:
+    collections_dir: _pages
     output: true
     permalink: "/:path/"
   genres:
@@ -38,6 +38,13 @@ defaults:
     values:
       layout: post
       is_post: true # automatically set is_post=true for all posts
+  -
+    scope:
+      path: "_pages"
+      type: "pages"
+    values:
+      layout: "page"
+      is_page: true
   -
     scope:
       path: ""

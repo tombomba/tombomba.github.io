@@ -2,10 +2,10 @@
 layout: default
 title: "Posts"
 excerpt: "A rolling ~365 days of posts"
-permalink: "/posts/"
-is_page: true
+permalink: /posts/
 is_archive: true
 ---
+
 {% capture yearlist %}
 <ul class="archive">
 {% assign scope = 31556926 %}
@@ -14,7 +14,7 @@ is_archive: true
   {% assign current = p.date | date: '%s' %}
   {% assign range = today | times: 1 |  minus: current %}
   {% if scope > range %}
-    <li><a href="{{ p.url | absolute_url }}">{{ p.title | strip | strip_html | smartify | normalize_whitespace }}</a>&nbsp;&mdash;&nbsp;{{ p.excerpt | strip | strip_html | truncatewords: 35 | smartify | normalize_whitespace }} <span class="datestamp">({{ p.date | date: "%-d %b" }})</span></li>
+    <li><a href="{{ p.url | absolute_url }}">{{ p.title | strip | strip_html | smartify | normalize_whitespace }}</a>&nbsp;&mdash;&nbsp;{{ p.excerpt | strip | strip_html | smartify | normalize_whitespace }}</li>
     {% assign enddate = p.date %}
   {% else %}
     {% break %}

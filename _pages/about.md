@@ -1,15 +1,9 @@
 ---
-layout: default
 title: "About"
+excerpt: "About the author"
 permalink: /about/
-is_page: true
 is_about: true
 ---
-
-<article class="text">
-
-<header class="page"><h1>{{ page.title }}</h1></header>
-
 {% capture bio %}
 There are quite a few critics online who are smart and skilled and say interesting things. This website is my attempt to join them. I made it for fun, but also to express ideas I don't see routinely expressed.
 
@@ -19,5 +13,3 @@ _{{ site.title }}_ is intentionally basic, a sorta mental note to myself not to 
 {% endcapture -%}
 
 {{ bio | smartify | markdownify }}
-
-</article>

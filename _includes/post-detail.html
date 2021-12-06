@@ -3,7 +3,7 @@
 {% assign raw = p.title | strip | normalize_whitespace %}
 {% assign wordcount = copy | number_of_words -%}
 
-{% if wordcount > 199 or copy contains 'img' %}
+{% if wordcount > 250 %}
   {% assign hedsize = 'post' %}
 {% else %}
   {% assign hedsize = 'micro' %}
@@ -37,7 +37,7 @@
   {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
 {% endif -%}
 
-  <article class="{% if p.media %}media{% else %}text{% endif %}"><!-- {{ copy | number_of_words }} -->
+  <article><!-- {{ copy | number_of_words }} -->
 
   {% if p.media %}
     {% include --display-figure.html media=p.media %}

@@ -3,7 +3,7 @@
 ---
 
 @charset "utf-8"
-@import reset, fonts, colors, body, banner, figure, footer
+@import reset, fonts, colors, body, banner, figure, img
 
 header[role="banner"]
   display: flex
@@ -24,9 +24,18 @@ article
         content: '.'
       &::after
         content: '\20'
+  span.byline
+    font-style: italic
 
 footer
   margin-top: 2em
+  ul
+    margin-top: 1em
+    li
+      color: $mix-color
+      span.copyright
+        display: none
+
   div.hr
     margin-top: calc(2em + var(--shim))
 
@@ -37,7 +46,11 @@ footer
   footer ul
     justify-content: center
     li
+      font-size: var(--fs--sm)
+      line-height: var(--lh--tight)
       margin-right: 0.25em
+      span.copyright
+        display: inline
       &:not(:last-of-type)::after
         content: '-'
         padding-left: 0.25em

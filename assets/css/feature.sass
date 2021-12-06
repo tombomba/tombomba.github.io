@@ -1,0 +1,46 @@
+---
+#
+---
+
+@charset "utf-8"
+@import reset, fonts, colors, body, banner, figure, footer
+
+header[role="banner"]
+  display: flex
+  align-items: center
+  div.hr
+    width: 100%
+    margin-left: var(--shim)
+
+article
+
+  header
+    h1, p
+      display: inline
+      font-size: 1em
+    h1
+      .punc::after
+        content: '.'
+      &::after
+        content: '\20'
+      a:link,
+      a:visited
+        color: $text-color
+        text-decoration: none
+      a:hover
+        text-decoration: underline
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50em)
+
+  header[role="banner"] div.hr
+    margin-right: -1em
+
+//-----------------------------------------------------------------------------
+
+//@media screen and (min-width: 70em)
+
+  header[role="banner"].media
+    div.hr.banner
+      margin-right: -2em

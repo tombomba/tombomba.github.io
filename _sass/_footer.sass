@@ -14,15 +14,18 @@ footer
     li
       text-transform: capitalize
       color: $mix-color
-  p
-    &:first-of-type
-      margin-top: 2em
-    font-size: var(--fs--sm)
-    line-height: var(--lh)
-    color: $mix-color
-    a:link,
-    a:visited
+  .copydate
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    p
+      font-size: var(--fs--sm)
+      line-height: var(--lh)
       color: $mix-color
+      a:link,
+      a:visited
+        color: $mix-color
 
 //-----------------------------------------------------------------------------
 
@@ -31,8 +34,8 @@ footer
   footer
     ul
       display: flex
-      flex-direction: row
       flex-flow: row wrap
+      justify-content: center
       li
         margin-right: 0.75em
         line-height: var(--lh)
@@ -46,11 +49,3 @@ footer
   footer.media
     div.hr
       margin-right: -1em
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 70em)
-
-  footer.media
-    div.hr
-      margin-right: -2em

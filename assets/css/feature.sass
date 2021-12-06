@@ -12,35 +12,46 @@ header[role="banner"]
     width: 100%
     margin-left: var(--shim)
 
-article
+article header
+  h1, p
+    display: inline
+    font-size: 1em
+  h1
+    .punc::after
+      content: '.'
+    &::after
+      content: '\20'
 
-  header
-    h1, p
-      display: inline
-      font-size: 1em
-    h1
-      .punc::after
-        content: '.'
-      &::after
-        content: '\20'
-      a:link,
-      a:visited
-        color: $text-color
-        text-decoration: none
-      a:hover
-        text-decoration: underline
+footer
+  margin-top: 2em
+  ul
+    margin-top: 1em
+    list-style: none
+    li
+      text-transform: capitalize
+      color: $mix-color
+  div.hr
+    margin-top: calc(2em + var(--shim))
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 32em)
+
+  footer ul
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    li
+      margin-right: 0.25em
+      line-height: var(--lh)
+      &:not(:last-of-type)::after
+        content: '-'
+        padding-left: 0.25em
+        color: $mix-color
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 50em)
 
-  header[role="banner"] div.hr
+  footer.media div.hr
     margin-right: -1em
-
-//-----------------------------------------------------------------------------
-
-//@media screen and (min-width: 70em)
-
-  header[role="banner"].media
-    div.hr.banner
-      margin-right: -2em

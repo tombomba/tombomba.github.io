@@ -31,8 +31,8 @@
 
 {% assign titlef = titlef | replace_first: '!!QQ!!', '<span class="punc"></span>' -%}
 
-{% if p.media and p.date %}
-  {% capture datef -%}&nbsp;<span class="byline">({{ p.author | default: site.author }}, <time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time>)</span>{% endcapture -%}
+{% if hedsize == 'micro' %}
+  {% capture datef -%}&nbsp;<span class="byline">&mdash;&nbsp;{{ p.author | default: site.author }}, <time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></span>{% endcapture -%}
   {% assign copysize = copy | size | minus: 4 %}
   {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
 {% endif -%}

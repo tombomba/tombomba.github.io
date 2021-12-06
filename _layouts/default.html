@@ -54,16 +54,18 @@
 
 <body>
 
-  <header role="banner" class="{% if page.media %}media{% else %}text{% endif %}">
-    <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
-    <div class="hr banner"></div>
-  </header>
+  {% include banner.html -%}
 
   <main role="main">
     {{ content }}
   </main>
 
-  <footer>
+
+    {% if page.style == 'feature' %}
+      {% include footer-feature.html %}
+
+    {% else %}
+    <footer>
 
     <div class="hr"></div>
 
@@ -81,6 +83,7 @@
     {% endunless %}
 
   </footer>
+    {% endif %}
 
   </body>
   </html>

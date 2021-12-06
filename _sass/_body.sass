@@ -53,32 +53,38 @@ main[role="main"],
 footer
   max-width: var(--page-width)
 
+header[role="banner"] h1
+  font-family: 'Slackey', $sans
+  font-size: var(--hs--lg)
+  font-weight: 400
+  line-height: var(--lh--flat)
+  text-transform: uppercase
+  text-shadow: -3px 3px 0px $shock-color
+  a:link,
+  a:visited
+    color: $logo-color
+    text-decoration: none
+
 article
-
-  &.text
-    margin-top: 4em
-  &.media
-    margin-top: 2em
-
   h2, h3, h4, h5, h6
     font-size: var(--fs)
     margin-top: 2em
-
   p, ul, ol, li, hr
     margin-top: 1em
-
   ul
     margin: 1em 0 0 calc(var(--shim) + 1em)
     &.plain li
       margin: 0
-
   blockquote
     padding-left: 2em
     border-left: thin solid $light-mix
-
   blockquote,
   li + p,
     margin-top: 0
+
+footer ul
+  margin-top: 1em
+  list-style: none
 
 a
   text-decoration: underline
@@ -110,6 +116,13 @@ span.byline
 
 //-----------------------------------------------------------------------------
 
+@media screen and (min-width: 23em)
+
+  header[role="banner"] h1
+    font-size: var(--hs--xl)
+
+//-----------------------------------------------------------------------------
+
 @media screen and (min-width: 32em)
 
   \:root
@@ -131,6 +144,12 @@ span.byline
     --hs--md: 164.7%
     --hs--lg: 205.9%
     --hs--xl: 264.7%
+
+  footer ul
+    display: flex
+    flex-flow: row wrap
+    li
+      line-height: var(--lh)
 
 //-----------------------------------------------------------------------------
 

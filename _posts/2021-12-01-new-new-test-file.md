@@ -1,5 +1,6 @@
 ---
 title: "The quick brown fox jumps over the lazy dog."
+style: feature
 media:
   file: test-image.jpg
   ratio: 768x482

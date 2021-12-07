@@ -17,7 +17,7 @@ is_home: true
     {% assign current = p.date | date: '%s' %}
     {% assign range = today | times: 1 |  minus: current %}
     {% if scope > range %}
-    <li><h2><a href="{{ p.url | absolute_url }}">{{ p.title | strip | smartify | normalize_whitespace }}</a></h2><p>{{ p.excerpt | strip | strip_html | smartify | normalize_whitespace }}</p></li>
+    <li><h2><a href="{{ p.url | absolute_url }}">{{ p.title | strip | smartify | normalize_whitespace }}</a></h2><p>{{ p.excerpt | strip | strip_html | smartify | truncatewords:40 | normalize_whitespace }}</p></li>
     {% else %}
       {% break %}
     {% endif %}

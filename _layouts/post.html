@@ -2,4 +2,36 @@
 layout: default
 ---
 
-{% include post-detail.html page=page content=content %}
+{% assign copy = content | strip | normalize_whitespace %}
+{% assign raw = page.title | strip | normalize_whitespace %}
+{% assign wordcount = copy | number_of_words -%}
+
+{% if page.media %}
+  {% assign punc = '!!QQ!!' %}
+  {% assign lastchar = raw | slice: -1 %}
+  {% case lastchar %}
+    {% when '"' or "'" or '\"' or "\'" %}
+      {% assign grabstring = raw.size | times: 1 | minus: 1 %}
+      {% assign raw = raw | slice: 0, grabstring | append: punc | append: lastchar %}
+    {% when '!' or '?' or '.' %}
+      {% comment %} make no changes to string {% endcomment %}
+    {% else %}
+      {% assign raw = raw | append: punc %}
+  {% endcase -%}
+{% endif -%}
+
+{% include --generate-titlef.html title=raw %}
+{% include --fix-kramdown-tags.html -%}
+
+{% assign titlef = titlef | replace_first: '!!QQ!!', '<span class="punc"></span>' -%}
+
+<article><!-- {{ copy | number_of_words }} -->
+
+  {% if page.media %}{% include --display-figure.html media=page.media %}{% endif -%}
+
+  {% capture hed %}<header><h1>{{ titlef }}</h1><p>{% endcapture -%}
+  {% assign copy = copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed  -%}
+
+  {{ copy }}
+
+</article>

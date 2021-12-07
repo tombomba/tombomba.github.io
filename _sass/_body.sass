@@ -72,9 +72,7 @@ article
   p, ul, ol, li, hr
     margin-top: 1em
   ul
-    margin: 1em 0 0 calc(var(--shim) + 1em)
-    &.plain li
-      margin: 0
+    margin: 1em 0 0 calc(1em + var(--shim))
   blockquote
     padding-left: 2em
     border-left: thin solid $light-mix
@@ -122,10 +120,8 @@ time
     --fs: 106.25%
     --fs--xs: 76.5%
     --fs--sm: 88.23%
-    //--lh: 1.64705882353
     --lh: 1.66
     --lh--tight: 1.33
-    //--lh--tight: 1.32352941176
 
     --hs: 129.4%
     --hs--sm: 111.76%
@@ -145,10 +141,6 @@ time
 
   body
     padding: 1em 2em
-
-  article
-    ul.fancy
-      margin: 1em 0 0 0
 
 //-----------------------------------------------------------------------------
 

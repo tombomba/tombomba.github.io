@@ -11,6 +11,14 @@ is_home: true
   </div>
 
   <ul class="recent"><!-- 30.44 days -->
+  {% for p in site.posts offset:1 limit:7 %}
+    <li><h2><a href="{{ p.url | absolute_url }}">{{ p.title | strip | smartify | normalize_whitespace }}</a></h2><p>{{ p.excerpt | strip | strip_html | smartify | truncatewords:40 | normalize_whitespace }}</p></li>
+  {% endfor -%}
+    <li><p><a href="{{ 'posts' | absolute_url }}">Previously&hellip;</a></p></li>
+  </ul>
+
+  {% comment %} !! rolling list style
+  <ul class="recent"><!-- 30.44 days -->
   {% assign scope = 2629743 %}
   {% assign today = site.posts.first.date | date: '%s' %}
   {% for p in site.posts offset:1 %}
@@ -24,5 +32,6 @@ is_home: true
   {% endfor -%}
   <li><p><a href="{{ 'posts' | absolute_url }}">Previously&hellip;</a></p></li>
   </ul>
+  {% endcomment -%}
 
 </article>

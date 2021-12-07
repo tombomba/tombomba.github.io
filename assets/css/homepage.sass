@@ -1,0 +1,81 @@
+---
+#
+---
+
+@charset "utf-8"
+@import reset, fonts, colors, body, img
+
+header[role="banner"]
+  div.hr
+    display: none
+
+article
+  margin-top: calc(4em - var(--shim))
+
+  div.feature
+    h1
+      font-size: var(--hs)
+      line-height: var(--lh--tight)
+      margin-bottom: 2px
+    p
+      margin: 0
+
+  ul.recent
+    margin: 0
+    list-style-type: none
+    li
+      margin-top: 2em
+      h2
+        margin: 0
+        font-size: 1em
+        line-height: var(--lh--tight)
+        margin-bottom: 3px
+      p
+        margin: 0
+
+footer
+  margin-top: 4em
+  ul
+    margin-top: 4em
+  div.hr
+    max-width: 33%
+  div.copydate
+    margin-top: 1em
+    p
+      font-size: var(--fs--sm)
+      line-height: var(--lh)
+      color: $mix-color
+      a:link,
+      a:visited
+        color: $mix-color
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 23em)
+
+  header[role="banner"] h1
+    font-size: var(--hs--xl)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 32em)
+
+  header[role="banner"]
+    margin-left: calc(var(--shim) * -1)
+
+  footer ul li
+    margin-right: 0.5em
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40em)
+
+  header[role="banner"] h1
+    transform: rotate(-3deg)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50em)
+
+  footer
+    max-width: calc(1em + var(--page-width ))

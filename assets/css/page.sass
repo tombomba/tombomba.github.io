@@ -7,7 +7,7 @@
 
 header[role="banner"]
   div.hr
-    display: none
+    margin-top: calc(1em - var(--shim))
 
 article
   margin-top: calc(4em - var(--shim))
@@ -37,21 +37,11 @@ footer
 
 @media screen and (min-width: 32em)
 
-  header[role="banner"]
-    margin-left: calc(var(--shim) * -1)
-
   article ul
     margin-left: 0
 
   footer ul li
     margin-right: 0.5em
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40em)
-
-  header[role="banner"] h1
-    transform: rotate(-3deg)
 
 //-----------------------------------------------------------------------------
 

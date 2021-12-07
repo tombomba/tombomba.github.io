@@ -1,6 +1,5 @@
 ---
-title: "About Trash Diary"
-excerpt: "But enough about me. Let's talk about me!"
+title: "About"
 permalink: /about/
 is_about: true
 ---

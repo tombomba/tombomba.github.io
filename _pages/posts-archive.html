@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Archive"
+title: "Posts"
 excerpt: "A rolling ~365 days of posts"
 permalink: /posts/
 is_archive: true
@@ -33,10 +33,10 @@ is_archive: true
 {% assign endmonth = enddate | date: '%B' %}
 {% assign endyear = enddate | date: '%Y' -%}
 
-<article class="text">
+<article>
 
-  <header class="page">
-    <h1>Archive: {{ endmonth }} {{ endday }}{% if endyear != startyear %},&nbsp;{{ endyear }}{% endif %}&ndash;{% if endmonth != startmonth %}{{ startmonth }}&nbsp;{% endif %}{{ startday }}, {{ startyear }}</h1>
+  <header>
+    <h1>{{ page.title }}: {{ endmonth }} {{ endday }}{% if endyear != startyear %},&nbsp;{{ endyear }}{% endif %}&ndash;{% if endmonth != startmonth %}{{ startmonth }}&nbsp;{% endif %}{{ startday }}, {{ startyear }}</h1>
   </header>
 
   <div class="hr"></div>

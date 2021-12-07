@@ -55,6 +55,8 @@ defaults:
       layout: "tag"
       is_page: true
 
+excerpt_separator: <!--more-->      
+
 markdown: kramdown
 kramdown:
     auto_ids: false

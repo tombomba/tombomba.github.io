@@ -1,6 +1,6 @@
 ---
 title: "About"
-excerpt: "About the author"
+excerpt: "But enough about me. Let's talk about me!"
 permalink: /about/
 is_about: true
 ---

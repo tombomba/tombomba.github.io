@@ -16,18 +16,22 @@ article
   margin-top: calc(2em - var(--shim))
 
   header
-    h1
-      font-size: var(--hs)
-      line-height: var(--lh--tight)
-    p
-      margin: 0
+    h1, p
+      display: inline
       font-size: 1em
-      line-height: var(--lh)
-      color: $mix-color
+    h1
+      .punc::after
+        content: '.'
+      &::after
+        content: '\20'
+
   ul
     margin-top: 2em
-    &.plain li
-      margin: 0
+    &.plain
+      margin-top: 1em
+      li
+        margin: 0
+
   div.hr
     margin-top: 2em
 

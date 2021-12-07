@@ -3,10 +3,13 @@ title: "404!"
 permalink: /404.html
 ---
 
-<p>Page not found. Try another?</p>
+<header>
+  <h1>{{ page.title }}</h1>
+  <p>Page not found. Try another?</p>
+</header>
 
 <ul class="plain">
-  {% for p in site.posts limit:5 %}<li><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip | strip_html | normalize_whitespace | smartify }}</a></li>{% endfor %}
+  {% for p in site.posts limit:7 %}<li><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip | strip_html | normalize_whitespace | smartify }}</a></li>{% endfor %}
 </ul>
 
 <p>If you are having trouble locating a destination, try visiting the <a href="{{ site.url }}">homepage</a>, or browsing posts from <a href="/posts/">this year</a>.<p>

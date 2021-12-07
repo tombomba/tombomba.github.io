@@ -3,7 +3,7 @@
 ---
 
 @charset "utf-8"
-@import reset, fonts, colors, body, banner, figure, img
+@import reset, fonts, colors, body, figure
 
 header[role="banner"]
   display: flex
@@ -30,29 +30,26 @@ article
 footer
   margin-top: 2em
   ul
-    margin-top: 1em
-  p
-    margin-top: 1em
-    font-size: var(--fs--sm)
-    text-align: center
-    color: $mix-color
+    margin-top: 2em
   div.hr
-    margin-top: calc(2em + var(--shim))
+    margin-top: 2em
+  div.copydate
+    margin-top: 2em
+    p
+      margin: 0
+      font-size: var(--fs--sm)
+      line-height: var(--lh)
+      color: $mix-color
+      a:link,
+      a:visited
+        color: $mix-color
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 32em)
 
-  footer ul
-    justify-content: center
-    li
-      font-size: var(--fs--sm)
-      line-height: var(--lh--tight)
-      margin-right: 0.25em
-      &:not(:last-of-type)::after
-        content: '-'
-        padding-left: 0.25em
-        color: $mix-color
+  footer ul li
+    margin-right: 0.5em
 
 //-----------------------------------------------------------------------------
 

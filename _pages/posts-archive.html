@@ -1,5 +1,6 @@
 ---
 layout: default
+style: archive
 title: "Posts"
 excerpt: "A rolling ~365 days of posts"
 permalink: /posts/
@@ -14,7 +15,7 @@ is_archive: true
   {% assign current = p.date | date: '%s' %}
   {% assign range = today | times: 1 |  minus: current %}
   {% if scope > range %}
-    <li><a href="{{ p.url | absolute_url }}">{{ p.title | strip | strip_html | smartify | normalize_whitespace }}</a>&nbsp;&mdash;&nbsp;{{ p.excerpt | strip | strip_html | smartify | normalize_whitespace }}</li>
+    <li><a href="{{ p.url | absolute_url }}">{{ p.title | strip | strip_html | smartify | normalize_whitespace }}</a>&nbsp;&mdash;&nbsp;{{ p.excerpt | strip | strip_html | smartify | truncatewords:35 | normalize_whitespace }}</li>
     {% assign enddate = p.date %}
   {% else %}
     {% break %}
@@ -36,10 +37,8 @@ is_archive: true
 <article>
 
   <header>
-    <h1>{{ page.title }}: {{ endmonth }} {{ endday }}{% if endyear != startyear %},&nbsp;{{ endyear }}{% endif %}&ndash;{% if endmonth != startmonth %}{{ startmonth }}&nbsp;{% endif %}{{ startday }}, {{ startyear }}</h1>
+    <h1>{{ endmonth }} {{ endday }}{% if endyear != startyear %},&nbsp;{{ endyear }}{% endif %}&ndash;{% if endmonth != startmonth %}{{ startmonth }}&nbsp;{% endif %}{{ startday }}, {{ startyear }}</h1>
   </header>
-
-  <div class="hr"></div>
 
   {{ yearlist }}
 

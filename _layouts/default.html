@@ -67,7 +67,7 @@
 
     <div class="hr"></div>
 
-      <ul class="nav">{% unless page.is_home %}<li><a href="{{ site.url }}">{{ site.title | capitalize }}</a></li>{% endunless %}{% unless page.is_archive %}<li><a href="/posts/">Archive</a></li>{% endunless %}{% unless page.is_about %}<li><a href="/about/">About</a></li>{% endunless %}{% if page.is_page or page.is_home %}<li><a href="https://letterboxd.com/{{ site.socials }}">Letterboxd</a></li><li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li><li><a href="/feed.xml">RSS</a></li>{% endif %}</ul>
+      {% if page.is_page or page.is_home %}<ul class="nav"><li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li><li><a href="https://letterboxd.com/{{ site.socials }}">Letterboxd</a></li><li><a href="/feed.xml">RSS</a></li></ul>{% endif %}
 
       <div class="copydate">
         {% if page.is_post %}
@@ -75,7 +75,7 @@
         {% else %}
           <p>Site last updated {{ site.posts.first.date | date: "%B %-d, %Y" }}</p>
         {% endif %}
-        <p>Copyright &copy; {{ site.author }}</p>
+        <p>Copyright &copy; {% unless page.is_about %}<a href="/about/">{{ site.author }}</a>{% else %}{{ site.author }}{% endunless %}</p>
       </div>
 
   </footer>

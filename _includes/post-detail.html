@@ -31,11 +31,13 @@
 
 {% assign titlef = titlef | replace_first: '!!QQ!!', '<span class="punc"></span>' -%}
 
+{% comment %} !! leave datestamp off for now !!
 {% if p.media %}
   {% capture datef -%}&nbsp;<span class="byline">&mdash;&nbsp;{{ p.author | default: site.author }}, <time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></span>{% endcapture -%}
   {% assign copysize = copy | size | minus: 4 %}
   {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
 {% endif -%}
+{% endcomment -%}
 
 <article><!-- {{ copy | number_of_words }} -->
 

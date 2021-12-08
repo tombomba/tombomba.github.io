@@ -2,8 +2,8 @@
 title: "The quick brown fox jumps over the lazy dog."
 style: feature
 media:
-  file: marilyin-niagara-1953.jpeg
-  ratio: 768x482
+  file: niagara-1953.jpg
+  ratio: 768x432
   alt: "This is a test image"
   caption: "Photo by Clarence Hupple."
 ---

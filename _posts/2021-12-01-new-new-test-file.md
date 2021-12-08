@@ -1,5 +1,5 @@
 ---
-title: "The quick brown fox jumps over the lazy dog."
+title: "The quick brown fox jumps over the lazy dog "
 style: feature
 media:
   file: niagara-1953.jpg

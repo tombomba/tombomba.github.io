@@ -8,13 +8,7 @@
       {% if include.media.vimeo %}
         <iframe src="https://player.vimeo.com/video/{{ include.media.vimeo }}?badge=0&color=0000FF&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       {% elsif include.media.youtube %}
-        {% if include.media.youtube contains 'youtube.com' %}
-          {% assign ytsplit = include.media.youtube | split: 'v=' %}
-          {% assign ytid = ytsplit[1] | strip %}
-        {% else %}
-          {% assign ytid = include.media.youtube %}
-        {% endif -%}
-        <iframe src="https://www.youtube.com/embed/{{ ytid }}?modestbranding=1&rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/{{ include.media.youtube }}?modestbranding=1&rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       {% elsif include.media.file %}
         <img src="{{ include.media.file | prepend: site.img }}" alt="{{ include.media.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}">
       {% endif -%}

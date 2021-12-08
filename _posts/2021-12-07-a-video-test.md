@@ -2,7 +2,7 @@
 title: "Video killed the radio star"
 style: feature
 media:
-  youtube: https://www.youtube.com/watch?v=nNpvWBuTfrc
+  youtube: nNpvWBuTfrc
   ratio: 560x315
   caption: "Matrix Resurrections (Warner, 2021)"
 ---

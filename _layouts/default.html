@@ -73,7 +73,7 @@
         {% if page.is_post %}
           <p>This page published {{ page.date |  date: "%B %-d, %Y" }}</p>
         {% else %}
-          <p>Site last updated {{ site.posts.first.date | date: "%B %-d, %Y" }}</p>
+          <p>{{ site.title }} last updated {{ site.posts.first.date | date: "%B %-d, %Y" }}</p>
         {% endif %}
         <p>Copyright &copy; {% unless page.is_about %}<a href="/about/">{{ site.author }}</a>{% else %}{{ site.author }}{% endunless %}</p>
       </div>

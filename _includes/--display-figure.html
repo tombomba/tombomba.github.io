@@ -1,8 +1,28 @@
-{% assign aspectr = include.media.ratio | default: '640x360' | split: 'x' -%}
-{% assign w = aspectr[0] | times: 1.0 -%}
-{% assign h = aspectr[1] | times: 1.0 -%}
-{% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
-<figure>
-  <div class="wrap" style="padding-bottom:{{ percent }}%"><img src="{{ include.media.file | prepend: site.img }}" alt="{{ include.media.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}"></div>
-  {% if include.media.caption -%}<figcaption>{{ include.media.caption | strip | normalize_whitespace | smartify | markdownify }}</figcaption>{% endif -%}
-</figure>
+{% if include.media %}
+  {% assign aspectr = include.media.ratio | default: '640x360' | split: 'x' -%}
+  {% assign w = aspectr[0] | times: 1.0 -%}
+  {% assign h = aspectr[1] | times: 1.0 -%}
+  {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
+  <figure><!-- {{ w }} x {{ h }} | {{ percent }}% -->
+    <div class="wrap" style="padding-bottom:{{ percent }}%">
+      {% if include.media.vimeo %}
+        <iframe src="https://player.vimeo.com/video/{{ include.media.vimeo }}?badge=0&color=0000FF&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      {% elsif include.media.youtube %}
+        {% if include.media.youtube contains 'youtube.com' %}
+          {% assign ytsplit = include.media.youtube | split: 'v=' %}
+          {% assign ytid = ytsplit[1] | strip %}
+        {% else %}
+          {% assign ytid = include.media.youtube %}
+        {% endif -%}
+        <iframe src="https://www.youtube.com/embed/{{ ytid }}?modestbranding=1&rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      {% elsif include.media.file %}
+        <img src="{{ include.media.file | prepend: site.img }}" alt="{{ include.media.alt | strip_html | strip | normalize_whitespace | truncate: 140 }}">
+      {% endif -%}
+    </div>
+    {% if include.media.caption -%}<figcaption>{{ include.media.caption | strip | normalize_whitespace | smartify | markdownify | normalize_whitespace }}</figcaption>{% endif -%}
+  </figure>
+{% endif -%}
+
+<!--
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nNpvWBuTfrc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+-->

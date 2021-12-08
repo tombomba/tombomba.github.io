@@ -1,4 +1,5 @@
-title: "Trash!"
+title: "Trash Diary"
+displayname: "Trash!"
 description: "Short notes on dark genres"
 domain: "www.trashdiary.com"
 
@@ -55,7 +56,7 @@ defaults:
       layout: "tag"
       is_page: true
 
-excerpt_separator: <!--more-->      
+excerpt_separator: <!--more-->
 
 markdown: kramdown
 kramdown:

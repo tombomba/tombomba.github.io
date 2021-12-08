@@ -48,14 +48,14 @@
     <!-- goog -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap&text={{ site.title | strip | remove:' ' | upcase }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap&text={{ site.displayname | default: site.title | strip | remove:' ' | upcase }}" rel="stylesheet">
 
 </head>
 
 <body>
 
   <header role="banner">
-    <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+    <h1><a href="{{ site.url }}">{{ site.displayname | default: site.title }}</a></h1>
     <div class="hr"></div>
   </header>
 

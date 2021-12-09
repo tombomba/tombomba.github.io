@@ -14,3 +14,5 @@ The site was built on an old Mac using Jekyll, Atom, and Pixelmator, while liste
 {% endcapture -%}
 
 {{ bio | smartify | markdownify }}
+
+<!-- doing a push from restore for testing -->

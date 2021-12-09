@@ -1,8 +1,7 @@
 ---
 layout: default
 style: archive
-title: "Previously on Trash Diary..."
-excerpt: "A rolling ~365 days of posts"
+title: "A rolling 30 days of Trash..."
 permalink: /posts/
 is_archive: true
 ---
@@ -15,7 +14,7 @@ is_archive: true
   {% assign current = p.date | date: '%s' %}
   {% assign range = today | times: 1 |  minus: current %}
   {% if scope > range %}
-    <li><a href="{{ p.url | absolute_url }}">{{ p.title | strip | strip_html | smartify | normalize_whitespace }}</a>&nbsp;&mdash;&nbsp;{{ p.excerpt | strip | strip_html | smartify | truncatewords:35 | normalize_whitespace }}</li>
+    <li><a href="{{ p.url | absolute_url }}">{{ p.title | strip | strip_html | smartify | normalize_whitespace }}</a>&nbsp;&mdash;&nbsp;{{ p.excerpt | strip | strip_html | smartify | truncatewords:50 | normalize_whitespace }}</li>
     {% assign enddate = p.date %}
   {% else %}
     {% break %}

@@ -4,35 +4,27 @@ style: archive
 is_home: true
 permalink: /index.html
 ---
-<article class="text">
+<article>
 
   <div class="feature">
     <h1><a href="{{ site.posts.first.url | absolute_url }}">{{ site.posts.first.title | strip | strip_html | smartify | normalize_whitespace }}</a></h1>
     <p>{{ site.posts.first.excerpt | strip | strip_html | smartify | normalize_whitespace }}</p>
   </div>
 
-  <ul class="recent"><!-- 30.44 days -->
-  {% for p in site.posts offset:1 limit:7 %}
-    <li><h2><a href="{{ p.url | absolute_url }}">{{ p.title | strip | smartify | normalize_whitespace }}</a></h2><p>{{ p.excerpt | strip | strip_html | smartify | truncatewords:40 | normalize_whitespace }}</p></li>
-  {% endfor -%}
-    <li><p><a href="{{ 'posts' | absolute_url }}">Previously&hellip;</a></p></li>
-  </ul>
-
-  {% comment %} !! rolling list style
-  <ul class="recent"><!-- 30.44 days -->
-  {% assign scope = 2629743 %}
-  {% assign today = site.posts.first.date | date: '%s' %}
+  <ul class="recent"><!-- 1 week -->
+  {% assign scope = 604800 %}
+  {% assign today = site.posts.first.date | date: '%s' -%}
   {% for p in site.posts offset:1 %}
     {% assign current = p.date | date: '%s' %}
-    {% assign range = today | times: 1 |  minus: current %}
+    {% assign range = today | times: 1 |  minus: current -%}
     {% if scope > range %}
-    <li><h2><a href="{{ p.url | absolute_url }}">{{ p.title | strip | smartify | normalize_whitespace }}</a></h2><p>{{ p.excerpt | strip | strip_html | smartify | truncatewords:40 | normalize_whitespace }}</p></li>
+    <li><h2><a href="{{ p.url | absolute_url }}">{{ p.title | strip | smartify | normalize_whitespace }}</a></h2><p>{{ p.excerpt | strip | strip_html | smartify | truncatewords:50 | normalize_whitespace }}</p></li>
     {% else %}
       {% break %}
-    {% endif %}
+    {% endif -%}
   {% endfor -%}
-  <li><p><a href="{{ 'posts' | absolute_url }}">Previously&hellip;</a></p></li>
+
+    <li><p><a href="{{ 'posts' | absolute_url }}">Previously&hellip;</a></p></li>
   </ul>
-  {% endcomment -%}
 
 </article>

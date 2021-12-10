@@ -1,10 +1,9 @@
 ---
-layout: post
-title: "Oops"
+title: "Oops!"
 permalink: /404.html
 ---
 {% capture txt %}
-The page you're looking for was not found. If you're having trouble locating a destination on _{{ site.title }},_ try visiting the [homepage]({{ site.url }}), or browsing [a list of recent posts]({{ '/posts/' | prepend: site.url }}). If you're really stuck, [@ me](https://twitter.com/{{ site.socials }}).
+Dunno what happened, but your page was not found. Try visiting the [homepage]({{ site.url }}), or browsing posts from earlier [this month]({{ '/posts/' | prepend: site.url }}). 
 {% endcapture -%}
 
 {{ txt | smartify | markdownify }}

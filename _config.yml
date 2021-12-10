@@ -26,10 +26,6 @@ collections:
     collections_dir: _pages
     output: true
     permalink: "/:path/"
-  genres:
-    collections_dir: _genres
-    output: true
-    permalink: "/:path/"
 
 defaults:
   -
@@ -44,14 +40,6 @@ defaults:
       path: "_pages"
       type: "pages"
     values:
-      layout: "page"
-      is_page: true
-  -
-    scope:
-      path: ""
-      type: "genres"
-    values:
-      layout: "tag"
       is_page: true
 
 excerpt_separator: <!--more-->

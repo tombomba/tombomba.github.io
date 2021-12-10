@@ -1,5 +1,4 @@
 ---
-layout: micro
 title: "Video killed the radio star"
 media:
   youtube: nNpvWBuTfrc

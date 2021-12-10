@@ -1,5 +1,4 @@
 ---
-layout: micro
 title: "The quick brown fox jumps over the lazy dog "
 media:
   file: niagara-1953.jpg

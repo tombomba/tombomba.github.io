@@ -1,25 +1,25 @@
 ---
 layout: default
 style: archive
-title: "A rolling 30 days of Trash..."
+title: "28 days of Trash"
 permalink: /posts/
 is_archive: true
 ---
-
 {% capture yearlist %}
-<ul class="archive"><!-- 30.44 days -->
-{% assign scope = 2629743 %}
-{% assign today = site.posts.first.date | date: '%s' %}
-{% for p in site.posts %}
+<ul class="archive"><!-- 29, actually -->
+  {% assign scope = 2505600 %}
+  {% assign today = site.posts.first.date | date: '%s' -%}
+  {% for p in site.posts %}
   {% assign current = p.date | date: '%s' %}
-  {% assign range = today | times: 1 |  minus: current %}
+  {% assign range = today | times: 1 | minus: current %}
   {% if scope > range %}
-    <li><a href="{{ p.url | absolute_url }}">{{ p.title | strip | strip_html | smartify | normalize_whitespace }}</a>&nbsp;&mdash;&nbsp;{{ p.excerpt | strip | strip_html | smartify | truncatewords:50 | normalize_whitespace }}</li>
-    {% assign enddate = p.date %}
+  <li><a href="{{ p.url | absolute_url }}">{{ p.title | strip | strip_html | smartify | normalize_whitespace }}</a>&nbsp;&mdash;&nbsp;{{ p.excerpt | strip | strip_html | smartify | truncatewords:50 | normalize_whitespace }}
+  </li>
+  {% assign enddate = p.date -%}
   {% else %}
-    {% break %}
+  {% break %}
   {% endif %}
-{% endfor -%}
+  {% endfor -%}
 </ul>
 {% endcapture -%}
 
@@ -36,7 +36,9 @@ is_archive: true
 <article>
 
   <header>
-    <h1>{{ endmonth }} {{ endday }}{% if endyear != startyear %},&nbsp;{{ endyear }}{% endif %}&ndash;{% if endmonth != startmonth %}{{ startmonth }}&nbsp;{% endif %}{{ startday }}, {{ startyear }}</h1>
+    <h1>{{ endmonth }} {{ endday }}{% if endyear != startyear %},&nbsp;{{
+      endyear }}{% endif %}&ndash;{% if endmonth != startmonth %}{{ startmonth
+      }}&nbsp;{% endif %}{{ startday }}, {{ startyear }}</h1>
   </header>
 
   {{ yearlist }}

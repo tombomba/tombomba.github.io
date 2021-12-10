@@ -1,4 +1,6 @@
 ---
+layout: post
+style: micro
 title: "About"
 permalink: /about/
 is_about: true

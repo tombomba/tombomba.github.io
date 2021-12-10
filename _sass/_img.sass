@@ -57,7 +57,7 @@ article > img
   article > img
 
     &.left.pull
-      margin-left: -1em
+      margin-left: calc(var(--shim) * -1)
 
     &.left.tilt
       transform: rotate(-2deg)
@@ -67,3 +67,12 @@ article > img
 
     &.right.tilt
       transform: rotate(3deg)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 64em)
+
+  article > img
+
+    &.right.pull
+      margin-right: -2em

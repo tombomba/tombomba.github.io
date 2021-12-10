@@ -6,17 +6,37 @@
 @import reset, fonts, colors, body, wrap
 
 article
+
   header 
     h1
       font-size: var(--hs)
       line-height: var(--lh--tight)
+  
+  div.feature
+    h1
+      font-size: var(--hs)
+      line-height: var(--lh--tight)
+      margin-bottom: 2px
     p
       margin: 0
-      font-size: 1em
-      line-height: var(--lh)
-      color: $mix-color
+
   ul
     margin: 0
     list-style-type: none
+    &.recent
+      li
+        margin-top: 2em
+        h2
+          margin: 0
+          font-size: 1em
+          line-height: var(--lh--tight)
+          margin-bottom: 3px
+        p
+          margin: 0
 
+//-----------------------------------------------------------------------------
 
+@media screen and (min-width: 40em)
+
+  article ul li h2
+    margin-bottom: 0

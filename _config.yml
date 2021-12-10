@@ -34,6 +34,7 @@ defaults:
       type: posts   # limit to posts
     values:
       layout: post
+      style: post
       is_post: true # automatically set is_post=true for all posts
   -
     scope:

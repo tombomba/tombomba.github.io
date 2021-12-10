@@ -43,7 +43,7 @@
     <meta name="twitter:image:src" content="{{ page.media.file | default: 'default-social.png' | prepend: site.img }}">
 
     <!-- css -->
-    <link rel="stylesheet" href="{{ page.style | default: 'main' | prepend: site.css | append: '.css' }}">
+    <link rel="stylesheet" href="{{ page.style | default: page.layout | prepend: site.css | append: '.css' }}">
 
     <!-- goog -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,18 +67,18 @@
 
     <div class="hr"></div>
 
-      {% if page.is_page or page.is_home %}<ul><li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li><li><a href="https://letterboxd.com/{{ site.socials }}">Letterboxd</a></li><li><a href="/feed.xml">RSS</a></li></ul>{% endif %}
+    {% if page.is_page or page.is_home %}<ul><li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li><li><a href="https://letterboxd.com/{{ site.socials }}">Letterboxd</a></li><li><a href="/feed.xml">RSS</a></li></ul>{% endif %}
 
-      <div class="copydate">
-        {% if page.is_post %}
-          <p>This page published {{ page.date |  date: "%B %-d, %Y" }}</p>
-        {% else %}
-          <p>{{ site.title }} last updated {{ site.posts.first.date | date: "%B %-d, %Y" }}</p>
-        {% endif %}
-        <p>Copyright &copy; {% unless page.is_about %}<a href="/about/">{{ site.author }}</a>{% else %}{{ site.author }}{% endunless %}</p>
-      </div>
+    <div class="copydate">
+      {% if page.is_post %}
+        <p>This page published {{ page.date |  date: "%B %-d, %Y" }}</p>
+      {% else %}
+        <p>{{ site.title }} last updated {{ site.posts.first.date | date: "%B %-d, %Y" }}</p>
+      {% endif %}
+      <p>Copyright &copy; {% unless page.is_about %}<a href="/about/">{{ site.author }}</a>{% else %}{{ site.author }}{% endunless %}</p>
+    </div>
 
-  </footer><!--- testing push vs code -->
+  </footer>
 
 </body>
 </html>

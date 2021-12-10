@@ -1,0 +1,40 @@
+//-----------------------------------------------------------------------------
+// header and footer defaults for homepage and archive
+//-----------------------------------------------------------------------------
+
+header[role="banner"]
+  div.hr
+    display: none
+
+article
+  margin-top: calc(4em - var(--shim))
+  div.hr
+    margin-top: 2em
+
+footer
+  margin-top: 4em
+  ul
+    margin-top: calc(4em - var(--shim))
+  div.hr
+    max-width: 33%
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 23em)
+
+  header[role="banner"] h1
+    font-size: var(--hs--xl)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 32em)
+
+  header[role="banner"]
+    margin-left: calc(var(--shim) * -1)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40em)
+
+  header[role="banner"] h1
+    transform: rotate(-3deg)

@@ -1,5 +1,6 @@
 ---
 title: "Video killed the radio star"
+style: micro
 media:
   youtube: nNpvWBuTfrc
   ratio: 560x315

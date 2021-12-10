@@ -54,6 +54,7 @@ defaults:
       type: "genres"
     values:
       layout: "tag"
+      style: archive
       is_page: true
 
 excerpt_separator: <!--more-->

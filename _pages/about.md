@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "About"
 permalink: /about/
 is_about: true

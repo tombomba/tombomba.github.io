@@ -1,18 +1,10 @@
 ---
-layout: default
-style: page
-title: "404!"
+layout: micro
+title: "Oops"
 permalink: /404.html
 ---
-<article>
-<header>
-  <h1>{{ page.title }}</h1>
-  <p>Page not found. Try another?</p>
-</header>
+{% capture txt %}
+The page you're looking for was not found. If you're having trouble locating a destination on _{{ site.title }},_ try visiting the [homepage]({{ site.url }}), or browsing [a list of recent posts]({{ '/posts/' | prepend: site.url }}). If you're really stuck, [@ me](https://twitter.com/{{ site.socials }}).
+{% endcapture -%}
 
-<ul class="plain">
-  {% for p in site.posts limit:7 %}<li><a href="{{ p.url | prepend: site.url }}">{{ p.title | strip | strip_html | normalize_whitespace | smartify }}</a></li>{% endfor %}
-</ul>
-
-<p>If you are having trouble locating a destination, try visiting the <a href="{{ site.url }}">homepage</a>, or browsing posts from <a href="/posts/">this year</a>.<p>
-</article>
+{{ txt | smartify | markdownify }}

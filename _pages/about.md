@@ -1,11 +1,9 @@
 ---
-layout: default
-style: page
+layout: micro
 title: "About"
 permalink: /about/
 is_about: true
 ---
-<article>
 {% capture bio %}
 There are quite a few critics online who are smart and skilled and say interesting things. This website is my attempt to join them. I made it for fun, but also to express ideas I don't see routinely expressed.
 
@@ -17,4 +15,3 @@ The site was built on an old Mac using Jekyll, Atom, and Pixelmator, while liste
 {% endcapture -%}
 
 {{ bio | smartify | markdownify }}
-</article>

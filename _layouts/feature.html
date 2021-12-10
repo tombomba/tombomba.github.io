@@ -1,0 +1,18 @@
+---
+layout: default
+---
+{% assign copy = content | strip | normalize_whitespace %}
+{% assign raw = page.title | strip | normalize_whitespace %}
+{% assign wordcount = copy | number_of_words -%}
+
+{% include --generate-titlef.html title=raw %}
+{% include --fix-kramdown-tags.html -%}
+
+<article><!-- {{ copy | number_of_words }} -->
+
+  {% capture hed %}<header><h1>{{ titlef }}</h1><p>{% endcapture %}
+  {% assign copy = copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed  -%}
+
+  {{ copy }}
+
+</article>

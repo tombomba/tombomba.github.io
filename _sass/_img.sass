@@ -14,6 +14,7 @@ article > img
     padding-top: var(--shim)
   &.pull-top
     margin-top: 0
+    padding-top: var(--shim)
   &.border
     border: 0
   &.edged
@@ -44,6 +45,8 @@ article > img
       margin-top: var(--shim)
       padding-top: 0
       background-color: $bg-color
+    &.pull-top
+      padding: 0
     &.border
       border: 1px solid $text-color
 
@@ -52,9 +55,6 @@ article > img
 @media screen and (min-width: 48em)
 
   article > img
-
-    &.pull-top
-      margin-top: -0.5em
 
     &.left.pull
       margin-left: -1em
@@ -67,12 +67,3 @@ article > img
 
     &.right.tilt
       transform: rotate(3deg)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 60em)
-
-  article > img
-
-    &.right.pull
-      margin-right: -2em

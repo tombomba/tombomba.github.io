@@ -3,16 +3,10 @@
 ---
 
 @charset "utf-8"
-@import reset, fonts, colors, body, img
-
-header[role="banner"]
-  div.hr
-    display: none
+@import reset, fonts, colors, body, wrap
 
 article
-  margin-top: calc(4em - var(--shim))
-
-  header
+  header 
     h1
       font-size: var(--hs)
       line-height: var(--lh--tight)
@@ -22,42 +16,7 @@ article
       line-height: var(--lh)
       color: $mix-color
   ul
-    margin: 1em 0 0 0
+    margin: 0
     list-style-type: none
-    &.plain
-      list-style-type: disc
-      li
-        margin: 0
-  div.hr
-    margin-top: 2em
 
-footer
-  margin-top: calc(4em - var(--shim))
-  ul
-    margin-top: 4em
-  div.hr
-    max-width: 33%
 
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 23em)
-
-  header[role="banner"] h1
-    font-size: var(--hs--xl)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 32em)
-
-  header[role="banner"]
-    margin-left: calc(var(--shim) * -1)
-
-  footer ul li
-    margin-right: 0.5em
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40em)
-
-  header[role="banner"] h1
-    transform: rotate(-3deg)

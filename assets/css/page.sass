@@ -3,7 +3,7 @@
 ---
 
 @charset "utf-8"
-@import reset, fonts, colors, body, img
+@import reset, fonts, colors, body
 
 header[role="banner"]
   display: flex
@@ -13,7 +13,7 @@ header[role="banner"]
     margin-left: var(--shim)
 
 article
-  margin-top: calc(2em - var(--shim))
+  margin-top: 2em
 
   header
     h1, p
@@ -22,15 +22,13 @@ article
     h1
       .punc::after
         content: '.'
-      &::after
-        content: '\20'
+        &::after
+          content: '\20'
 
   ul
-    margin-top: 2em
-    &.plain
-      margin-top: 1em
-      li
-        margin: 0
+    margin-top: 1em
+    li
+      margin: 0
 
   div.hr
     margin-top: 2em
@@ -39,19 +37,14 @@ footer
   margin-top: 2em
   ul
     margin-top: 2em
-  div.copydate
-    margin-top: 1em
-    p
-      font-size: var(--fs--sm)
-      line-height: var(--lh)
-      color: $mix-color
-      a:link,
-      a:visited
-        color: $mix-color
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 32em)
+@media screen and (min-width: 50em)
 
-  footer ul li
-    margin-right: 0.5em
+  header[role="banner"]
+    max-width: calc(1em + 3px + var(--page-width ))
+    margin-left: -3px
+
+  footer
+    max-width: calc(1em + var(--page-width ))

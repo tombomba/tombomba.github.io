@@ -13,8 +13,7 @@ header[role="banner"]
     margin-left: var(--shim)
 
 article
-  margin-top: 2em
-
+  margin-top: calc(2em - var(--shim))
   header
     h1, p
       display: inline
@@ -24,32 +23,13 @@ article
         content: '.'
       &::after
         content: '\20'
-  span.byline
-    font-style: italic
 
 footer
   margin-top: 2em
-  ul
-    margin-top: 2em
-  div.hr
-    margin-top: 2em
+  ul,
+  div.hr,
   div.copydate
     margin-top: 2em
-    p
-      margin: 0
-      font-size: var(--fs--sm)
-      line-height: var(--lh)
-      color: $mix-color
-      a:link,
-      a:visited
-        color: $mix-color
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 32em)
-
-  footer ul li
-    margin-right: 0.5em
 
 //-----------------------------------------------------------------------------
 
@@ -61,13 +41,3 @@ footer
 
   footer
     max-width: calc(1em + var(--page-width ))
-
-//-----------------------------------------------------------------------------
-
-//@media screen and (min-width: 70em)
-
-  header[role="banner"]
-    max-width: calc(2em + 3px + var(--page-width ))
-
-  footer
-    max-width: calc(2em + var(--page-width ))

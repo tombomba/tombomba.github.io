@@ -42,7 +42,7 @@
     <meta name="twitter:creator" content="@{{ site.socials }}">
     <meta name="twitter:image:src" content="{{ page.media.file | default: 'default-social.png' | prepend: site.img }}">
 
-    <!-- css -->
+    <!-- css {{ page.style | default: page.layout }}-->
     <link rel="stylesheet" href="{{ page.style | default: page.layout | prepend: site.css | append: '.css' }}">
 
     <!-- goog -->
@@ -52,7 +52,7 @@
 
 </head>
 
-<body>
+<body><!-- {{ page.layout }} -->
 
   <header role="banner">
     <h1><a href="{{ site.url }}">{{ site.displayname | default: site.title }}</a></h1>

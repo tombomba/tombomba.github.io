@@ -3,7 +3,7 @@ title: "Oops!"
 permalink: /404.html
 ---
 {% capture txt %}
-Dunno what happened, but your page was not found. Try visiting the [homepage]({{ site.url }}), or browsing posts from earlier [this month]({{ '/posts/' | prepend: site.url }}). 
+Dunno what happened, but your page was not found. If you're having trouble locating a post on _{{ site.title }},_ try browsing posts from [this week]({{ site.url }}) or [this month]({{ '/posts/' | prepend: site.url }}). 
 {% endcapture -%}
 
 {{ txt | smartify | markdownify }}

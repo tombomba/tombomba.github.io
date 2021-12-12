@@ -1,7 +1,10 @@
 ---
 title: "Brechtian who? Brechtian what?"
 ---
+
 Etiam semper tellus id dolor maximus, ac pharetra elit bibendum. Duis elementum erat sed convallis venenatis. Ut ultrices arcu at justo sollicitudin, id fermentum ipsum consequat. Praesent sagittis enim id scelerisque mattis. <!--more--> Suspendisse ac imperdiet massa. Mauris quam dolor, euismod a venenatis eu, aliquet non felis. Integer eget sagittis lacus. Curabitur aliquet rutrum elit, nec pulvinar lacus malesuada in. Pellentesque ac tempor ante, sit amet vulputate felis.
+
+![testing]({{ 'niagara-1953.jpg' | prepend: site.img }}){: width="280" .right }
 
 Nunc sit amet viverra mi. Proin pellentesque viverra leo. Nulla rutrum rutrum consequat. Cras mauris dolor, aliquam quis efficitur sed, convallis eu tortor. Nunc vulputate, leo id pretium dapibus, mi nulla commodo turpis, vitae auctor nibh magna a turpis. Aenean fermentum quis est vel lobortis. Aenean sed auctor arcu, nec luctus mi. Donec libero mauris, sodales nec aliquam a, malesuada sed dolor.
 

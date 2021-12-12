@@ -1,0 +1,18 @@
+{% assign p = include.page %}
+{% assign copy = content | strip | normalize_whitespace %}
+{% include --generate-titlef.html title=p.title %}
+{% include --fix-kramdown-tags.html -%}
+
+<article><!-- {{ copy | number_of_words }} -->
+  
+  {% capture hed %}
+  <header class="{{ hedsize }}">
+    <h1>{{ titlef }}</h1>
+  <p>{% endcapture %}
+
+  {% assign hed = hed | strip | normalize_whitespace %}
+  {% assign copy = copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed  -%}
+
+  {{ copy }}
+
+</article>

@@ -1,16 +1,38 @@
 {% assign p = include.page %}
-{% assign copy = content | strip | normalize_whitespace %}
-{% include --generate-titlef.html title=p.title %}
+{% assign copy = include.content | strip | normalize_whitespace %}
+{% assign raw = p.title | strip | normalize_whitespace %}
+{% assign wordcount = copy | number_of_words -%}
+
+{% if wordcount > 250 %}
+  {% assign hedsize = 'post' %}
+{% else %}
+  {% assign hedsize = 'micro' %}
+{% endif %}
+
+{% assign punc = '!!QQ!!' %}
+{% assign lastchar = raw | slice: -1 %}
+{% case lastchar %}
+  {% when '"' or "'" or '\"' or "\'" %}
+    {% assign grabstring = raw.size | times: 1 | minus: 1 %}
+    {% assign raw = raw | slice: 0, grabstring | append: punc | append: lastchar %}
+  {% when '!' or '?' or '.' %}
+    {% comment %} make no changes to string {% endcomment %}
+  {% else %}
+    {% assign raw = raw | append: punc %}
+{% endcase -%}
+
+{% include --generate-titlef.html title=raw %}
 {% include --fix-kramdown-tags.html -%}
 
-<article><!-- {{ copy | number_of_words }} -->
-  
-  {% capture hed %}
-  <header class="{{ hedsize }}">
-    <h1>{{ titlef }}</h1>
-  <p>{% endcapture %}
+{% assign titlef = titlef | replace_first: '!!QQ!!', '<span class="punc"></span>' -%}
 
-  {% assign hed = hed | strip | normalize_whitespace %}
+{% capture datef -%}&nbsp;<span class="byline">&mdash;&nbsp;{{ p.author | default: site.author }}, <time pubdate datetime="{{ p.date | date: "%FT%T%:z" }}">{{ p.date | date_to_string }}</time></span>{% endcapture -%}
+{% assign copysize = copy | size | minus: 4 %}
+{% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
+
+<article><!-- {{ copy | number_of_words }} -->
+
+  {% capture hed %}<header class="{{ hedsize }}"><h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1><p>{% endcapture %}
   {% assign copy = copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed  -%}
 
   {{ copy }}

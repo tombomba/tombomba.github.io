@@ -1,11 +1,4 @@
 ---
 title: "Video killed the radio star"
-style: micro
-media:
-  youtube: nNpvWBuTfrc
-  ratio: 560x315
-  #caption: "Matrix Resurrections (Warner, 2021)"
 ---
-Nunc sed pharetra felis, id convallis leo. Aliquam in felis vitae felis aliquam ultricies. Vestibulum mollis nibh vel nisl tristique accumsan. Proin ac porta nibh. Phasellus blandit nec leo quis viverra. Aliquam erat volutpat. Etiam ac accumsan lectus. Mauris rutrum justo ac imperdiet cursus. Sed posuere mauris at eros convallis lobortis.<!--more--> Morbi tincidunt dapibus felis sed sodales. Etiam elit est, porttitor a justo eget, commodo aliquet lacus. Nunc nec lobortis dui. Aliquam erat volutpat. Donec a tincidunt neque, sed vehicula lectus. Vestibulum sed purus pulvinar, tristique turpis in, rutrum diam. Donec neque velit, convallis sed tempor ut, congue vel augue.
-
-Fusce posuere efficitur quam eget egestas. Praesent at augue vel lacus fermentum lobortis ut nec orci. Suspendisse suscipit maximus sapien quis lacinia. Proin tortor nulla, maximus eu fermentum sed, fringilla eget erat. Integer auctor vitae metus non rhoncus. Etiam a tincidunt dolor. Quisque sed ultricies justo, non vehicula tellus. Aliquam at arcu pulvinar sapien feugiat rhoncus. Pellentesque eleifend accumsan felis, sed fringilla mauris laoreet a. Sed pharetra, libero eu consectetur vestibulum, erat urna cursus est, ut ultrices tortor nisl sit amet erat. Ut.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac orci vitae nulla egestas ultrices vel at arcu. Nullam posuere ipsum odio, sed commodo ipsum fringilla a.<!--more--> Praesent scelerisque, erat in efficitur faucibus, ipsum quam viverra erat, ut porta lectus quam id ipsum. Quisque pretium massa ex, vitae dictum leo blandit ac. Proin malesuada facilisis leo quis hendrerit. Suspendisse sodales sollicitudin leo, eu lacinia elit eleifend a. Sed vel ultricies erat. Nullam sed nunc accumsan, egestas enim nec, facilisis dui.

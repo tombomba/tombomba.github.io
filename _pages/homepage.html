@@ -6,7 +6,15 @@ is_home: true
 permalink: /index.html
 ---
 <article>
+  <ul>
+  {% for p in site.posts limit:7 %}
+    {% include --display-list-item.html title=p.title excerpt=p.excerpt url=p.url %}
+  {% endfor -%}
+    <li><p><a href="{{ 'posts' | absolute_url }}">Previously&hellip;</a></p></li>
+  </ul>
+</article>
 
+  {% comment %} !! old style suck !! 
   <div class="feature">
     <h1><a href="{{ site.posts.first.url | absolute_url }}">{{ site.posts.first.title | strip | strip_html | smartify | normalize_whitespace }}</a></h1>
     <p>{{ site.posts.first.excerpt | strip | strip_html | smartify | normalize_whitespace }}</p>
@@ -27,5 +35,4 @@ permalink: /index.html
 
     <li><p><a href="{{ 'posts' | absolute_url }}">Previously&hellip;</a></p></li>
   </ul>
-
-</article>
+  {% endcomment %}

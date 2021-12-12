@@ -12,15 +12,6 @@ article > img
   &.top
     margin-top: 0
     padding-top: var(--shim)
-  &.pull-top
-    margin-top: 0
-    padding-top: var(--shim)
-  &.border
-    border: 0
-  &.edged
-    border-radius: 0
-  &.transparent
-    background-color: $body-color
 
 //-----------------------------------------------------------------------------
 
@@ -32,23 +23,19 @@ article > img
     &.left
       display: inline
       float: left
-      margin-right: calc(var(--shim) + 1em)
-      margin-bottom: 1em
+      margin-right: 1em
+      margin-bottom: var(--shim)
 
     &.right
       display: inline
       float: right
-      margin-left: calc(var(--shim) + 1em)
-      margin-bottom: 1em
+      margin-left: 1em
+      margin-bottom: var(--shim)
 
     &.top
       margin-top: var(--shim)
       padding-top: 0
       background-color: $bg-color
-    &.pull-top
-      padding: 0
-    &.border
-      border: 1px solid $text-color
 
 //-----------------------------------------------------------------------------
 
@@ -56,11 +43,24 @@ article > img
 
   article > img
 
+    &.top.pull
+      margin-top: -1em
+
+    &.left,
+    &.right
+      margin-bottom: 1em
+
+    &.left
+      margin-right: 1em
+
+    &.right
+      margin-left: 1em
+
     &.left.pull
-      margin-left: calc(var(--shim) * -1)
+      margin-left: -1em
 
     &.left.tilt
-      transform: rotate(-2deg)
+      transform: rotate(-3deg)
 
     &.right.pull
       margin-right: -1em
@@ -73,6 +73,9 @@ article > img
 @media screen and (min-width: 64em)
 
   article > img
+
+    &.left.pull
+      margin-left: -2em
 
     &.right.pull
       margin-right: -2em

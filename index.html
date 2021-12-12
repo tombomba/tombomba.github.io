@@ -1,31 +1,21 @@
 ---
-layout: default
-style: archive
-socials: true
 is_home: true
 permalink: /index.html
 ---
-<article>
 
-  <div class="feature">
-    <h1><a href="{{ site.posts.first.url | absolute_url }}">{{ site.posts.first.title | strip | strip_html | smartify | normalize_whitespace }}</a></h1>
-    <p>{{ site.posts.first.excerpt | strip | strip_html | smartify | normalize_whitespace }}</p>
-  </div>
+{% include html-head.html %}
 
-  <ul class="recent"><!-- 1 week -->
-  {% assign scope = 604800 %}
-  {% assign today = site.posts.first.date | date: '%s' -%}
-  {% for p in site.posts offset:1 %}
-    {% assign current = p.date | date: '%s' %}
-    {% assign range = today | times: 1 |  minus: current -%}
-    {% if scope > range %}
-    <li><h2><a href="{{ p.url | absolute_url }}">{{ p.title | strip | smartify | normalize_whitespace }}</a></h2><p>{{ p.excerpt | strip | strip_html | smartify | truncatewords:50 | normalize_whitespace }}</p></li>
-    {% else %}
-      {% break %}
-    {% endif -%}
-  {% endfor -%}
+{% assign scope = 604800 %}
+{% assign today = site.posts.first.date | date: '%s' -%}
+{% for p in site.posts %}
+  {% assign current = p.date | date: '%s' %}
+  {% assign range = today | times: 1 |  minus: current -%}
+  {% if scope > range %}
+    {% unless forloop.first %}<div class="hr double"></div>{% endunless %}
+    {% include post-detail.html page=p content=p.content is_home=true %}
+  {% else %}
+    {% break %}
+  {% endif -%}
+{% endfor -%}
 
-    <li><p><a href="{{ 'posts' | absolute_url }}">Previously&hellip;</a></p></li>
-  </ul>
-  
-</article>
+{% include html-foot.html %}

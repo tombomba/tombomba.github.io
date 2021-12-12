@@ -47,7 +47,7 @@ layout: default
 {% if page.media %}
 <aside>
   <div class="hr"></div>
-  <h2>Recent {{ site.displayname | downcase }}</h2>
+  <!-- <h2>Recent {{ site.displayname | downcase }}</h2> -->
   <ul>
   {% if page.id == site.posts.first.id %}
     {% for x in site.posts limit:3 offset:1 %}

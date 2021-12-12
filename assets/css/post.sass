@@ -7,18 +7,37 @@
 
 article
   margin-top: 4em
-  header
+  
+  header h1
+    a:link,
+    a:visited
+      color: $text-color
+      text-decoration: none
+    a:hover
+      text-decoration: underline
+
+  header.post
     h1
       font-size: var(--hs)
       line-height: var(--lh--tight)
-  div.byline 
-    margin-top: 1em
-    p
+ 
+  header.micro
+    h1,p
       display: inline
-      margin: 0
+    h1
+      font-size: 1em
+      line-height: var(--lh)
+      &::after
+        content: '\00A0\2014\020'
+        font-weight: 400
+
+  time
+    font-style: italic
+    color: $mix-color  
+    a:link,
+    a:visited
       color: $mix-color
-      &:first-of-type
-        text-transform: uppercase
-        &::after
-          content: '\20\/\20'
+      text-decoration: none
+    a:hover
+      text-decoration: underline
   

@@ -8,7 +8,7 @@
     <base href="{{ site.url }}">
 
     <title>{% if page.is_home %}{{ site.title }}{% else %}{{ page.title }}{% endif %}</title>
-    <meta name="description" content="{{ page.description | default: site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">
+    <meta name="description" content="{{ page.description | default: site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 140 }}">
     <link rel="author" type="text/plain" href="{{ 'humans.txt' | absolute_url }}">
     {% if page.id %}<link rel="canonical" href="{{ page.url | default: '' | absolute_url }}">{% endif %}
 

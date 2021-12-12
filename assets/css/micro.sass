@@ -10,10 +10,10 @@ header[role="banner"]
   align-items: center
   div.hr
     width: 100%
-    margin-left: var(--shim)
+    margin-left: 1em
 
 article
-  margin-top: calc(2em - var(--shim))
+  margin-top: 2em
 
   header
     h1, p
@@ -21,7 +21,8 @@ article
       font-size: 1em
     h1
       .punc::after
-        content: '.'
+        font-weight: 400
+        content: '\00A0\2014\20'
       &::after
         content: '\20'
 

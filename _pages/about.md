@@ -3,6 +3,7 @@ layout: post
 style: micro
 title: "About"
 permalink: /about/
+socials: true
 is_about: true
 ---
 {% capture bio %}

@@ -1,11 +1,12 @@
 ---
 layout: post
 style: micro
-title: "Oops!"
+title: "Page not found!"
+is_404: true
 permalink: /404.html
 ---
 {% capture txt %}
-Page not found! If you're having trouble locating a destination on _{{ site.title }},_ try browsing posts from [this week]({{ site.url }}) or [this month]({{ '/posts/' | prepend: site.url }}). 
+If you're having trouble locating a destination on _{{ site.title }},_ try browsing posts from [this week]({{ site.url }}) or [this month]({{ '/posts/' | prepend: site.url }}). 
 {% endcapture -%}
 
 {{ txt | smartify | markdownify }}

@@ -5,6 +5,15 @@ layout: default
 {% assign raw = page.title | strip | normalize_whitespace %}
 {% assign wordcount = copy | number_of_words -%}
 
+{% if wordcount > 200 or copy contains '<img' %}
+  {% assign pagesize = 'post' %}
+{% else %}
+  {% assign pagesize = 'micro' %}
+{% endif -%}
+{% if page.media %}
+  {% assign pagesize = 'micro' %}
+{% endif -%}
+
 {% assign punc = '!!QQ!!' %}
 {% assign lastchar = raw | slice: -1 %}
 {% case lastchar %}
@@ -34,3 +43,18 @@ layout: default
   {{ copy }}
 
 </article>
+
+{% if pagesize == 'micro' %}
+<aside>
+  <div class="hr"></div>
+  <ul>
+    {% if page.previous %}
+    {% include --display-list-item.html title=page.previous.title excerpt=page.previous.excerpt url=page.previous.url %}
+    {% endif -%}
+    {% if page.next %}
+    {% include --display-list-item.html title=page.next.title excerpt=page.next.excerpt
+    url=page.next.url %}
+    {% endif -%}
+  </ul>
+</aside>
+{% endif %}

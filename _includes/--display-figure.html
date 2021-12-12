@@ -3,7 +3,7 @@
   {% assign w = aspectr[0] | times: 1.0 -%}
   {% assign h = aspectr[1] | times: 1.0 -%}
   {% assign percent = h | divided_by: w | times: 100 | round: 2 -%}
-  <figure><!-- {{ w }} x {{ h }} | {{ percent }}% -->
+  <figure class="{% if include.media.caption %}thin{% else %}fat{% endif %}"><!-- {{ w }} x {{ h }} | {{ percent }}% -->
     <div class="wrap" style="padding-bottom:{{ percent }}%">
       {% if include.media.vimeo %}
         <iframe src="https://player.vimeo.com/video/{{ include.media.vimeo }}?badge=0&color=0000FF&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

@@ -10,21 +10,26 @@ article > img
   border-radius: 4px
   &.top
     margin-top: var(--shim)
+  &.left,
+  &.right,
   &.center
     margin-left: auto
     margin-right: auto
   &.wide
     margin-left: -1em
     margin-right: -1em
+    border-radius: 0
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 23em)
 
   article > img
+
     &.wide
-      margin-left: 0
-      margin-right: 0
+      margin-left: auto
+      margin-right: auto
+      border-radius: 4px
 
 //-----------------------------------------------------------------------------
 
@@ -33,6 +38,10 @@ article > img
   article > img
 
     margin-top: calc(1em + var(--shim))
+
+    &.wide
+      margin-left: 0
+      margin-right: 0
 
     &.left
       display: inline

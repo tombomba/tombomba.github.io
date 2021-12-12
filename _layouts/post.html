@@ -44,17 +44,24 @@ layout: default
 
 </article>
 
-{% if pagesize == 'micro' %}
+{% if page.media %}
 <aside>
   <div class="hr"></div>
+  <h2>Recent {{ site.displayname | downcase }}</h2>
   <ul>
+  {% if page.id == site.posts.first.id %}
+    {% for x in site.posts limit:3 offset:1 %}
+    {% include --display-list-item.html title=x.title excerpt=x.excerpt url=x.url truncate=30 %}
+    {% endfor %}
+  {% else %}
     {% if page.previous %}
     {% include --display-list-item.html title=page.previous.title excerpt=page.previous.excerpt url=page.previous.url %}
-    {% endif -%}
+    {% endif %}
     {% if page.next %}
     {% include --display-list-item.html title=page.next.title excerpt=page.next.excerpt
     url=page.next.url %}
-    {% endif -%}
+    {% endif %}
+  {% endif -%}
   </ul>
 </aside>
-{% endif %}
+{% endif -%}

@@ -1,6 +1,4 @@
 ---
-layout: feature
-style: feature
 title: "Video killed the radio star"
 media:
   youtube: nNpvWBuTfrc

@@ -1,11 +1,11 @@
 ---
-title: "The quick brown fox jumps over the lazy dog "
+title: "Niagara (1953)"
 style: micro
 media:
   file: niagara-1953.jpg
   ratio: 768x432
   alt: "This is a test image"
-  caption: "Photo by Clarence Hupple."
+  #caption: "Photo by Clarence Hupple."
 ---
 Nam lacinia dictum felis, eget tempus purus faucibus in. Nunc scelerisque gravida viverra. Nulla interdum luctus iaculis. Aenean vitae mi leo. Suspendisse finibus molestie nibh. Duis pulvinar, nunc et convallis congue, erat lacus posuere neque, in euismod ex odio sit amet tortor. <!--more --> Sed erat felis, scelerisque id vulputate sed, dapibus non turpis. Duis in dolor mi. Sed aliquet nisl sed ex auctor tristique. Donec interdum vel ipsum sed ornare. Sed in felis auctor, accumsan odio non, luctus eros. In vulputate massa justo, at porttitor magna dapibus a. Integer euismod, dolor id rhoncus molestie, ligula tortor tempor lacus, a tempor odio neque vel sapien.
 

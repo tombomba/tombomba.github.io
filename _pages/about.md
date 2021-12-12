@@ -1,6 +1,5 @@
 ---
 layout: post
-style: micro
 title: "About"
 permalink: /about/
 socials: true
@@ -11,9 +10,9 @@ There are quite a few critics online who are smart and skilled and say interesti
 
 My name is Tom Bomba. I knocked around New York University's cinema studies program before I "dropped out of college to get an education." I've spent my time since producing various forms of digital media.
 
-_{{ site.title }}_ is intentionally basic, a sorta mental note to myself not to write as if I'm submitting for publication. The name is a loose reference to work by [Pauline Kael](https://genius.com/Pauline-kael-trash-art-and-the-movies-i-annotated) and [Jeffrey Sconce](https://duckduckgo.com/?q=jeffrey+sconce+trashing+the+academy+taste+excess+and+the+emerging+politics+of+cinematic+style).
+_{{ site.title }}_ is intentionally basic, a sorta mental note to myself not to write as if I'm submitting for publication. The name is a loose reference to work by Pauline Kael and Jeffrey Sconce.
 
-The site was built on an old Mac using Jekyll, Atom, and Pixelmator, while listening to [KCRW](https://www.kcrw.com/) Los Angeles.
+The site was built on an old Mac using Jekyll, Atom, and Pixelmator, while listening to KCRW Los Angeles.
 {% endcapture -%}
 
 {{ bio | smartify | markdownify }}

@@ -53,6 +53,8 @@ header[role="banner"],
 main[role="main"],
 footer
   max-width: var(--page-width)
+  margin-left: auto
+  margin-right: auto
 
 header[role="banner"] h1
   font-family: 'Slackey', $sans
@@ -152,7 +154,7 @@ time
 @media screen and (min-width: 40em)
 
   body
-    padding: 1em 2em
+    padding: calc(2em - var(--shim)) 2em 2em 2em
 
 //-----------------------------------------------------------------------------
 
@@ -177,4 +179,5 @@ time
     --hs--xl: 261.1%
 
   body
-    padding: calc(4em - var(--shim)) 4em
+    padding-left: 4em
+    padding-right: 4em

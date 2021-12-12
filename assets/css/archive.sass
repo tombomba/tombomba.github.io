@@ -23,10 +23,18 @@ article
   ul
     margin: 0
     list-style-type: none
+    &.recent
+      h2
+        font-size: 1em
+        line-height: var(--lh--tight)
+        margin-bottom: 3px
+      p
+        margin: 0
+
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40em)
 
-  article ul li h2
+  article ul.recent li h2
     margin-bottom: 0

@@ -7,8 +7,8 @@
     <ul><li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li><li><a href="https://letterboxd.com/{{ site.socials }}">Letterboxd</a></li><li><a href="/feed.xml">RSS</a></li></ul>
 
     <div class="copydate">
-      <p>{{ site.title }} last updated {{ site.posts.first.date | date_to_string }}</p>
-      <p>Copyright &copy; {% unless page.is_about %}<a href="/about/">{{ site.author }}</a>{% else %}{{ site.author }}{% endunless %}</p>
+      <p>{{ site.title }} last updated {{ site.posts.first.date | date: '%-d %b, %Y' }}</p>
+      <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {% unless page.is_about %}<a href="/about/">{{ site.author }}</a>{% else %}{{ site.author }}{% endunless %}</p>
     </div>
 
   </footer>

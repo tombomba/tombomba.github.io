@@ -21,16 +21,14 @@
     {% endif %}
     </time>
   {% endcapture %}
-  {% assign dstring = dstring | strip | normalize_whitespace %}
+  {% assign datef = datef | strip | normalize_whitespace %}
   {% assign copysize = copy | size | minus: 4 %}
   {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
 {% endif -%}
 
 <article><!-- {{ copy | number_of_words }} -->
-
   {% capture hed %}<header class="{{ hedsize }}"><h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1><p>{% endcapture %}
   {% assign copy = copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hed -%}
 
   {{ copy }}
-
 </article>

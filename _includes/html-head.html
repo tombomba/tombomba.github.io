@@ -43,7 +43,7 @@
     <meta name="twitter:image:src" content="{{ page.media.file | default: 'default-social.png' | prepend: site.img }}">
 
     <!-- css {{ page.style | default: 'archive' }}-->
-    <link rel="stylesheet" href="{{ page.style | default: 'archive' | prepend: site.css | append: '.css' }}">
+    <link rel="stylesheet" href="{{ 'post' | default: 'archive' | prepend: site.css | append: '.css' }}">
 
     <!-- goog -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

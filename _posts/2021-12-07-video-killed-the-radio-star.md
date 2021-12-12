@@ -4,7 +4,7 @@ style: micro
 media:
   youtube: nNpvWBuTfrc
   ratio: 560x315
-  caption: "Matrix Resurrections (Warner, 2021)"
+  #caption: "Matrix Resurrections (Warner, 2021)"
 ---
 Nunc sed pharetra felis, id convallis leo. Aliquam in felis vitae felis aliquam ultricies. Vestibulum mollis nibh vel nisl tristique accumsan. Proin ac porta nibh. Phasellus blandit nec leo quis viverra. Aliquam erat volutpat. Etiam ac accumsan lectus. Mauris rutrum justo ac imperdiet cursus. Sed posuere mauris at eros convallis lobortis. Morbi tincidunt dapibus felis sed sodales. Etiam elit est, porttitor a justo eget, commodo aliquet lacus. Nunc nec lobortis dui. Aliquam erat volutpat. Donec a tincidunt neque, sed vehicula lectus. Vestibulum sed purus pulvinar, tristique turpis in, rutrum diam. Donec neque velit, convallis sed tempor ut, congue vel augue.
 

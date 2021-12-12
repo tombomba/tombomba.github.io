@@ -56,17 +56,20 @@ footer
   margin-left: auto
   margin-right: auto
 
-header[role="banner"] h1
-  font-family: 'Slackey', $sans
-  font-size: var(--hs--lg)
-  font-weight: 400
-  line-height: var(--lh--flat)
-  text-transform: uppercase
-  text-shadow: -3px 3px 0px $shock-color
-  a:link,
-  a:visited
-    color: $logo-color
-    text-decoration: none
+header[role="banner"] 
+  div.logo h1
+    margin: 0
+    padding: 0
+    font-family: 'Slackey', $sans
+    font-size: var(--hs--lg)
+    font-weight: 400
+    line-height: var(--lh--flat)
+    text-transform: uppercase
+    text-shadow: -3px 3px 0px $shock-color
+    a:link,
+    a:visited
+      color: $logo-color
+      text-decoration: none
 
 article
   h2, h3, h4, h5, h6
@@ -154,7 +157,7 @@ time
 @media screen and (min-width: 40em)
 
   body
-    padding: calc(2em - var(--shim)) 2em 2em 2em
+    padding: 2em
 
 //-----------------------------------------------------------------------------
 

@@ -1,6 +1,7 @@
 ---
+layout: feature
+style: feature
 title: "Video killed the radio star"
-style: micro
 media:
   youtube: nNpvWBuTfrc
   ratio: 560x315
@@ -11,5 +12,3 @@ Nunc sed pharetra felis, id convallis leo. Aliquam in felis vitae felis aliquam 
 <!--more-->
 
 Fusce posuere efficitur quam eget egestas. Praesent at augue vel lacus fermentum lobortis ut nec orci. Suspendisse suscipit maximus sapien quis lacinia. Proin tortor nulla, maximus eu fermentum sed, fringilla eget erat. Integer auctor vitae metus non rhoncus. Etiam a tincidunt dolor. Quisque sed ultricies justo, non vehicula tellus. Aliquam at arcu pulvinar sapien feugiat rhoncus. Pellentesque eleifend accumsan felis, sed fringilla mauris laoreet a. Sed pharetra, libero eu consectetur vestibulum, erat urna cursus est, ut ultrices tortor nisl sit amet erat. Ut.
-
-<!-- this is a bullshit change for testing -->

@@ -18,7 +18,7 @@ safe: true
 future: false
 theme: null
 
-permalink: /posts/:title-:short_year:y_day:output_ext
+permalink: /:short_year/:month/:title:output_ext
 timezone: America/Los_Angeles
 
 collections:

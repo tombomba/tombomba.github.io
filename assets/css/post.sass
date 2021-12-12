@@ -3,12 +3,12 @@
 ---
 
 @charset "utf-8"
-@import reset, fonts, colors, body, wrap, img
+@import reset, fonts, colors, body, wrap, figure, img
 
 article
   margin-top: 4em
   
-  header h1
+  div.wrap h1
     a:link,
     a:visited
       color: $text-color
@@ -16,12 +16,12 @@ article
     a:hover
       text-decoration: underline
 
-  header.post
+  div.post.wrap
     h1
       font-size: var(--hs)
       line-height: var(--lh--tight)
  
-  header.micro
+  div.micro.wrap
     h1,p
       display: inline
     h1

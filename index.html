@@ -2,17 +2,15 @@
 is_home: true
 permalink: /index.html
 ---
-
 {% include html-head.html %}
-
 {% assign scope = 604800 %}
 {% assign today = site.posts.first.date | date: '%s' -%}
 {% for p in site.posts %}
   {% assign current = p.date | date: '%s' %}
   {% assign range = today | times: 1 |  minus: current -%}
   {% if scope > range %}
-    {% unless forloop.first %}<div class="hr double"></div>{% endunless %}
-    {% include post-detail.html page=p content=p.content is_home=true %}
+    {% unless forloop.first %}<div class="hr double"></div>{% endunless -%}
+    {% include post-detail.html page=p content=p.content is_home=true -%}
   {% else %}
     {% break %}
   {% endif -%}

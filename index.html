@@ -8,7 +8,7 @@ permalink: /index.html
 <article>
   <ul>
   {% for p in site.posts limit:7 %}
-    {% include --display-list-item.html title=p.title excerpt=p.excerpt url=p.url %}
+    {% include --display-list-item.html title=p.title excerpt=p.excerpt url=p.url is_home=true %}
   {% endfor -%}
     <li><p><a href="{{ 'posts' | absolute_url }}">Previously&hellip;</a></p></li>
   </ul>

@@ -2,6 +2,7 @@
 layout: post
 style: post
 title: "About"
+excerpt: "Yer basic information about the site..."
 permalink: /about/
 socials: true
 is_about: true

@@ -3,7 +3,7 @@
 {% assign raw = p.title | strip | normalize_whitespace %}
 {% assign wordcount = copy | number_of_words -%}
 
-{% if wordcount > 175 or copy contains '<img' %}
+{% if wordcount > 150 %}
   {% assign hedsize = 'post' %}
 {% else %}
   {% assign hedsize = 'micro' %}
@@ -13,21 +13,13 @@
 {% include --fix-kramdown-tags.html -%}
 
 {% if p.date %}
-  {% capture datef %}{% assign dstring = p.date | date: '%-d %b' %}&nbsp;<time datetime="{{ p.date | date: "%FT%T%:z" }}" pubdate itemprop="datePublished">
-    {% if include.is_home %}
-      <a href="{{ p.url | absolute_url }}">({{ dstring}})</a>
-    {% else%}
-      ({{ dstring }})
-    {% endif %}
-    </time>
-  {% endcapture %}
-  {% assign datef = datef | strip | normalize_whitespace %}
+  {% include --generate-datef.html date=p.date format='%-d %b' is_home=include.is_home %}
   {% assign copysize = copy | size | minus: 4 %}
   {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
 {% endif -%}
 
 <article><!-- {{ copy | number_of_words }} -->
-  {% capture hedbox %}<div class="{{ hedsize }} hed"><h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1><p>{% endcapture %}
+  {% capture hedbox %}<div class="{{ p.style | default: hedsize }} hed"><h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1><p>{% endcapture %}
   {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
 
   {{ copy }}

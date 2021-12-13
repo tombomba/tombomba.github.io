@@ -27,8 +27,8 @@
 {% endif -%}
 
 <article><!-- {{ copy | number_of_words }} -->
-  {% capture hed %}<div class="{{ hedsize }} wrap"><h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1><p>{% endcapture %}
-  {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hed -%}
+  {% capture hedbox %}<div class="{{ hedsize }} hed"><h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1><p>{% endcapture %}
+  {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
 
   {{ copy }}
 

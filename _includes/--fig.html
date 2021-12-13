@@ -1,0 +1,7 @@
+{% assign w = include.width | default: 640 | times: 1.0 -%}
+{% assign h = include.height | default: 360 | times: 1.0 -%}
+<div class="figure" markdown="1"><!-- {{ w }} x {{ h }} | {{ h | divided_by: w | times: 100 | round: 2 }}% -->
+  <div class="aspectratio" style="--aspect-ratio:{{ w }}/{{ h }};">
+    <img src="{{ include.file | prepend: site.img }}" alt="{{ include.alt | default: include.file | strip_html | strip | normalize_whitespace | truncate:140 }}">
+  </div>
+</div>

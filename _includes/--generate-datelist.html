@@ -1,0 +1,13 @@
+{% assign year = include.year | default: site.posts.first.date | date: '%Y'-%}
+{% assign year_url = year | prepend: '/' | prepend: site.url -%}
+{% assign startpoint = include.start | default: 1 | times: 1 %}
+{% assign endpoint = include.end | default: 12 | times: 1 %}
+
+<li><a href="{{ year_url | relative_url }}">{{ year }}</a></li>
+{% for i in (startpoint..endpoint) %}
+  {% assign i = i | times: 1.0 %}
+  {% if i > 9 %}
+    {% assign month_url = i | prepend: '/' %}{% else %}{% assign month_url = i | prepend: '0' | prepend: '/' %}
+  {% endif -%}
+  <li><a href="{{ year_url | append: month_url | relative_url }}/">{{ i | prepend: '-' | prepend: year | append: '-01' | date: '%b' }}</a></li><!-- {{  }} -->
+{% endfor %}

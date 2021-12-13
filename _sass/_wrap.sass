@@ -3,12 +3,17 @@
 //-----------------------------------------------------------------------------
 
 header[role="banner"]
+  display: flex
+  align-items: center
+  justify-content: space-between
   div.logo
     display: flex
     align-items: center
     justify-content: space-between
-  div.hr
+  div.ascii
     display: none
+    line-height: var(--lh--tight)
+    color: darken($body-color, 20%)
 
 footer
   margin-top: 4em
@@ -24,6 +29,8 @@ footer
   header[role="banner"] 
     div.logo h1
       font-size: var(--hs--xl)
+    div.ascii
+      display: block
 
 //-----------------------------------------------------------------------------
 

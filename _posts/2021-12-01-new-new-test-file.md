@@ -1,5 +1,5 @@
 ---
-title: "Niagara (1953)"
+title: "The quick brown fox jumps over the lazy dog"
 ---
 {% include --fig.html file="niagara-1953.jpg" width=768 height=432 %}
 

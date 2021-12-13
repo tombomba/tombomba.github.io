@@ -4,11 +4,13 @@
 
     <div class="hr"></div>
 
+    {% if page.is_home or page.is_archive %}
     <ul class="archive">
       {% include --generate-year-list.html year=2021 start=1 end=12 -%}
     </ul> 
-      
-    <ul class="socials"><li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li><li><a href="https://letterboxd.com/{{ site.socials }}">Letterboxd</a></li><li><a href="/feed.xml">RSS</a></li></ul>
+    {% endif -%}  
+
+    <ul><li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li><li><a href="https://letterboxd.com/{{ site.socials }}">Letterboxd</a></li><li><a href="/feed.xml">RSS</a></li></ul>
 
     <div class="copydate">
       <p>{{ site.title }} last updated {{ site.posts.first.date | date: '%-d %b %Y' }}</p>

@@ -1,5 +1,6 @@
 ---
 layout: post
+style: post
 title: "About"
 permalink: /about/
 socials: true

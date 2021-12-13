@@ -26,6 +26,9 @@ collections:
     collections_dir: _pages
     output: true
     permalink: "/:path/"
+  archives:
+    collections_dir: _archives
+    output: true
 
 defaults:
   -
@@ -40,7 +43,19 @@ defaults:
       path: "_pages"
       type: "pages"
     values:
+      layout: post
+      style: post
       is_page: true
+  -
+    scope:
+      path: "_archives"
+      type: "archives"
+    values:
+      layout: archive
+      style: post
+      excerpt: "A simple list of older posts"
+      is_page: true
+      is_archive: true
 
 excerpt_separator: <!--more-->
 

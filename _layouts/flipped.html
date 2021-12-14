@@ -1,0 +1,30 @@
+---
+layout: default
+---
+{% assign copy = content | strip | normalize_whitespace %}
+{% include --generate-titlef.html title=page.title %}
+
+{% capture datef %}&nbsp;<time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">({{ page.date | date: '%-d %b' }})</time>{% endcapture -%}
+{% assign copysize = copy | size | minus: 4 %}
+{% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
+
+<header role="banner">
+  <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+</header>
+
+<main role="main">
+
+  <article><!-- {{ copy | number_of_words }} -->
+
+    {% capture hedbox %}<header><h1>{{ titlef }}</h1><p>{% endcapture -%}
+    {% assign copy = copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hedbox -%}
+
+    {{ copy | strip | normalize_whitespace }}
+
+  </article>
+
+</main>
+
+<footer>
+  <h1><a href="{{ site.url }}" title="{{ site.title }}">{{ page.emoji | default: site.emoji }}</a></h1>
+</footer>

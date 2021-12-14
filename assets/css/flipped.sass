@@ -16,7 +16,7 @@ header[role="banner"]
   display: flex
   flex-flow: row wrap 
   align-items: center
-  justify-content: space-between
+  justify-content: flex-start
   margin-bottom: -3px
   h1
     padding-right: var(--shim)
@@ -26,10 +26,15 @@ header[role="banner"]
     font-weight: 400
     text-transform: lowercase
     text-shadow: -3px 3px 0px $shock-color
-    a:link,
-    a:visited
+    a:link, a:visited
       color: $logo-color
       text-decoration: none
+  p
+    font-size: var(--hs--md)
+    line-height: var(--flat)
+    a:link, a:visited, a:hover
+      text-decoration: none
+
 
 article
   margin-top: 2em

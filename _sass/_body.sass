@@ -1,0 +1,60 @@
+//-----------------------------------------------------------------------------
+
+html
+  box-sizing: border-box
+
+*, *:before, *:after
+  box-sizing: inherit
+
+@-ms-viewport
+  width: device-width
+
+::selection
+  background: $select-color
+
+::-moz-selection
+  background: $select-color
+
+body
+
+  font-family: $serif
+  font-size: var(--fs)
+  line-height: var(--lh)
+
+  background-color: $body-color
+  color: $text-color
+
+  text-rendering: optimizeSpeed
+  -ms-text-size-adjust: auto
+  -webkit-text-size-adjust: auto
+
+header[role="banner"],
+main[role="main"],
+footer
+  max-width: var(--page-width)
+  margin-left: auto
+  margin-right: auto
+
+a
+  text-decoration: underline
+  text-decoration-skip-ink: auto
+  &:link
+    color: $link-color
+  &:visited
+    color: $visited-color
+  &:hover
+    text-decoration: none
+  &:active
+    color: $active-color
+
+time
+  white-space: nowrap
+
+.hr
+  margin: 0
+  padding: 0
+  height: 0
+  border: 0
+  border-top: 1px solid $border-dark
+  border-bottom: 2px solid $border-light
+  background-color: $body-color

@@ -3,12 +3,12 @@
     "short_name": "Trash Diary",
     "icons": [
         {
-            "src": "/android-chrome-192x192.png?v=bluedot",
+            "src": "/android-chrome-192x192.png?v=pizza",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-512x512.png?v=bluedot",
+            "src": "/android-chrome-512x512.png?v=pizza",
             "sizes": "512x512",
             "type": "image/png"
         }

@@ -9,7 +9,8 @@
 {% assign startpoint = include.start | default: 1 | times: 1 %}
 {% assign endpoint = include.end | default: 12 | times: 1 -%}
 
-  <li><a href="{{ short_year | absolute_url }}">{{ year }}</a></li>
+{% capture dateitems %}
+<li><a href="{{ short_year | absolute_url }}">{{ year }}</a></li>
 {% for i in (startpoint..endpoint) %}
   {% assign i = i | times: 1.0 -%}
   {% if i > 9 %}
@@ -19,3 +20,6 @@
   {% endif -%}
   <li><a href="{{ short_year | append: month_url | absolute_url }}">{{ i | prepend: '-' | prepend: year | append: '-01' | date: '%b' }}</a></li>
 {% endfor -%}
+{% endcapture -%}
+{% assign dateitems = dateitems | strip | normalize_whitespace -%}
+{{ dateitems }}

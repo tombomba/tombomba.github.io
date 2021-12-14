@@ -1,2 +1,0 @@
-{% assign trunc = include.truncate | default: '50' -%}
-<li><a href="{{ include.url | absolute_url }}">{{ include.title | strip | strip_html | smartify | normalize_whitespace }}</a>&nbsp;&mdash;&nbsp;{{ include.excerpt | strip | strip_html | smartify | truncatewords: trunc | normalize_whitespace }} {% if include.date %}{% include --generate-datef.html date=include.date format='%-d %b' is_home=true %}{{ datef }}{% endif %}</li>

@@ -1,4 +1,0 @@
-{% assign format = include.format | default: '%-d %B %Y' -%}
-{% assign mydate = include.date | date: format -%}
-{% capture datef %}&nbsp;<time datetime="{{ include.date | date: "%FT%T%:z" }}" pubdate itemprop="datePublished">({% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ mydate }}</a>{% else %}{{ mydate }}{% endif -%})</time>{% endcapture -%}
-{% assign datef = datef | strip | normalize_whitespace -%}

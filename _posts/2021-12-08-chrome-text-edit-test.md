@@ -1,6 +1,7 @@
 ---
+layout: "flipped"
 title: "This is a new page from chrome text editor"
-# ![testing]({{ 'test-image.jpg' | prepend: site.img }}){: .top .left .third }
+emoji: "👾"
 ---
 
 {% include --fig.html file="test-image.jpg" width=768 height=482 %}

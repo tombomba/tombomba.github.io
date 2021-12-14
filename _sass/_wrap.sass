@@ -6,7 +6,7 @@ header[role="banner"]
   height: calc(var(--shim--lh) * 2)
   display: flex
   align-items: center
-  justify-content: space-between
+  justify-content: flex-start
   div.logo
     display: flex
     align-items: center
@@ -77,4 +77,6 @@ footer
     div.logo h1
       transform: rotate(-3deg)
     div.ascii
-      transform: rotate(3deg)
+      margin-left: var(--shim)
+      padding-bottom: 1em
+      transform: rotate(-3deg)

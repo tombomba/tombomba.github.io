@@ -1,6 +1,4 @@
 //-----------------------------------------------------------------------------
-// header and footer defaults
-//-----------------------------------------------------------------------------
 
 header[role="banner"]
   height: calc(var(--shim--lh) * 2)
@@ -29,28 +27,6 @@ header[role="banner"]
     line-height: var(--lh--tight)
     color: darken($body-color, 20%)
 
-footer
-  ul
-    display: flex
-    flex-flow: row wrap
-    justify-content: center
-    list-style-type: none
-    margin-top: 1em
-    li
-      margin-right: 0.25em
-      font-size: var(--fs--sm)
-      line-height: var(--lh)
-      color: $mix-color
-      a:link,
-      a:visited
-        color: $mix-color
-      &:not(:last-of-type)::after
-        content: '-'
-        padding-left: 0.25em
-        color: $mix-color
-  div.hr
-    max-width: 33%
-
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 23em)
@@ -61,7 +37,7 @@ footer
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 32em)
+@media screen and (min-width: 30em)
 
   header[role="banner"]
     div.logo
@@ -82,4 +58,4 @@ footer
 
   header[role="banner"]
     div.logo h1
-      transform: rotate(-3deg)
+      transform: rotate(-3deg)      

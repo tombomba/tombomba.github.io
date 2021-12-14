@@ -1,0 +1,20 @@
+---
+layout: post
+style: post
+title: "404!"
+excerpt: "404 Page Not Found error"
+is_404: true
+permalink: /404.html
+---
+<p>The page you requested was not found. Try one of these?</p>
+<ul class="plain">
+{% for p in site.posts limit:5 %}
+  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+{% endfor %}
+</ul>
+
+{% capture txt %}
+If you're having trouble locating a destination on _{{ site.title }},_ try visiting the [homepage]({{ site.url }}) or browsing posts from [this month]({{ site.posts.first.date | date: '%m'| prepend: absolute_url }}) or [this year]({{ site.posts.first.date | date: '%y' | prepend: absolute_url }}).
+{% endcapture -%}
+
+{{ txt | smartify | markdownify }}

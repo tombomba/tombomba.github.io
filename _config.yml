@@ -1,6 +1,5 @@
-title: "Trash Diary"
-displayname: "Trash!"
-description: "Short notes on dark genres"
+title: "Trash!"
+description: "A media diary, a small collage, a dumb blog"
 domain: "www.trashdiary.com"
 
 url: "https://www.trashdiary.com"
@@ -18,17 +17,8 @@ safe: true
 future: false
 theme: null
 
-permalink: /:short_year/:month/:title:output_ext
+permalink: /posts/:title:output_ext
 timezone: America/Los_Angeles
-
-collections:
-  pages:
-    collections_dir: _pages
-    output: true
-    permalink: "/:path/"
-  archives:
-    collections_dir: _archives
-    output: true
 
 defaults:
   -
@@ -36,26 +26,7 @@ defaults:
       path: ""      # empty string for all files
       type: posts   # limit to posts
     values:
-      layout: post
       is_post: true # automatically set is_post=true for all posts
-  -
-    scope:
-      path: "_pages"
-      type: "pages"
-    values:
-      layout: post
-      style: post
-      is_page: true
-  -
-    scope:
-      path: "_archives"
-      type: "archives"
-    values:
-      layout: archive
-      style: post
-      excerpt: "A simple list of older posts"
-      is_page: true
-      is_archive: true
 
 excerpt_separator: <!--more-->
 

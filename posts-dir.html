@@ -1,7 +1,6 @@
 ---
 style: archive
 title: "Posts"
-socials: true
 permalink: /posts/
 ---
 {% capture yearlist %}
@@ -31,6 +30,8 @@ permalink: /posts/
 {% assign endmonth = enddate | date: '%B' %}
 {% assign endyear = enddate | date: '%Y' -%}
 
+{% include html-head.html %}
+
 <article>
 
   <header>
@@ -40,3 +41,5 @@ permalink: /posts/
   {{ yearlist }}
 
 </article>
+
+{% include html-foot.html %}

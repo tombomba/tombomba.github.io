@@ -8,7 +8,7 @@
 article
   margin-top: 4em
 
-  div.hed 
+  div.hed
     h1
       a:link,
       a:visited
@@ -21,7 +21,7 @@ article
     h1
       font-size: var(--hs)
       line-height: var(--lh--tight)
- 
+
   div.micro.hed
     h1,p
       display: inline
@@ -46,10 +46,24 @@ article
 
   time
     font-style: italic
-    color: $mix-color  
+    color: $mix-color
     a:link,
     a:visited
       color: $mix-color
       text-decoration: none
     a:hover
       text-decoration: underline
+
+aside
+  margin-top: 4em
+  ul
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    margin: 1em 0
+    list-style-type: none
+    li
+      margin-right: 0.5em
+      line-height: var(--lh)
+      &:first-of-type
+        font-weight: 700

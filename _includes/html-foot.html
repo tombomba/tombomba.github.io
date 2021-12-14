@@ -1,21 +1,18 @@
+
+    {% if page.is_home or page.is_archive %}
+    <aside>
+      <div class="hr"></div>
+
+      <ul class="archive">{%- include --generate-year-list.html year=2021 start=1 end=12 -%}</ul>
+      <div class="hr"></div>
+    </aside>
+    {% endif -%}
+
   </main>
 
   <footer>
 
-    <div class="hr"></div>
-
-    {% if page.is_home or page.is_archive %}
-    <ul class="archive">
-      {% include --generate-year-list.html year=2021 start=1 end=12 -%}
-    </ul> 
-    {% endif -%}  
-
-    <ul><li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li><li><a href="https://letterboxd.com/{{ site.socials }}">Letterboxd</a></li><li><a href="/feed.xml">RSS</a></li></ul>
-
-    <div class="copydate">
-      <p>{{ site.title }} last updated {{ site.posts.first.date | date: '%-d %b %Y' }}</p>
-      <p>Copyright &copy; {% unless page.is_about %}<a href="/about/">{{ site.author }}</a>{% else %}{{ site.author }}{% endunless %}</p>
-    </div>
+    <ul><li>&copy; {{ site.posts.first.date | date: '%Y' }} {% unless page.is_about %}<a href="/about/">{{ site.author }}</a>{% else %}{{ site.author }}{% endunless %}</li><li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li><li><a href="https://letterboxd.com/{{ site.socials }}">Letterboxd</a></li></ul>
 
   </footer>
 

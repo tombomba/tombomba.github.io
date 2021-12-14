@@ -1,7 +1,7 @@
 //-----------------------------------------------------------------------------
 // header and footer defaults
 //-----------------------------------------------------------------------------
-    
+
 header[role="banner"]
   height: calc(var(--shim--lh) * 2)
   display: flex
@@ -30,23 +30,23 @@ header[role="banner"]
     color: darken($body-color, 20%)
 
 footer
-  margin-top: 4em
   ul
-    list-style: none
-    &:first-of-type
-      margin-top: 4em
-    &:nth-of-type(2)
-      margin-top: 2em
-    &.archive li:first-of-type
-      font-weight: 700
-  div.copydate
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    list-style-type: none
     margin-top: 1em
-    p
+    li
+      margin-right: 0.25em
       font-size: var(--fs--sm)
       line-height: var(--lh)
       color: $mix-color
       a:link,
       a:visited
+        color: $mix-color
+      &:not(:last-of-type)::after
+        content: '-'
+        padding-left: 0.25em
         color: $mix-color
   div.hr
     max-width: 33%
@@ -55,7 +55,7 @@ footer
 
 @media screen and (min-width: 23em)
 
-  header[role="banner"] 
+  header[role="banner"]
     div.logo h1
       font-size: var(--hs--xl)
 
@@ -63,24 +63,17 @@ footer
 
 @media screen and (min-width: 32em)
 
-  header[role="banner"] 
+  header[role="banner"]
     div.logo h1
       margin-left: -6px
     div.ascii
       display: block
 
-  footer ul
-    display: flex
-    flex-flow: row wrap
-    li
-      margin-right: 0.5em
-      line-height: var(--lh)
-
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40em)
 
-  header[role="banner"] 
+  header[role="banner"]
     div.logo h1
       transform: rotate(-3deg)
     div.ascii

@@ -10,7 +10,7 @@ permalink: /index.html
   {% assign range = today | times: 1 |  minus: current -%}
   {% if scope > range %}
     {% unless forloop.first %}<div class="hr double"></div>{% endunless -%}
-    {% include post-detail.html page=p content=p.content is_home=true -%}
+    {% include article-post.html page=p content=p.content is_home=true -%}
   {% else -%}
     {% break -%}
   {% endif -%}

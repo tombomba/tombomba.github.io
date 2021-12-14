@@ -1,0 +1,25 @@
+{% assign p = include.page %}
+{% assign copy = include.content | strip | normalize_whitespace %}
+{% assign raw = p.title | strip | normalize_whitespace %}
+{% assign wordcount = copy | number_of_words -%}
+
+{% if wordcount > 150 %}
+  {% assign hedsize = 'post' %}
+{% else %}
+  {% assign hedsize = 'micro' %}
+{% endif -%}
+
+{% include --generate-titlef.html title=raw %}
+
+{% if p.date %}
+  {% assign copysize = copy | size | minus: 4 %}
+  {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
+{% endif -%}
+
+<article><!-- {{ copy | number_of_words }} -->
+  {% capture hedbox %}<div class="{{ p.style | default: hedsize }} hed"><h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1><p>{% endcapture %}
+  {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
+
+  {{ copy }}
+
+</article>

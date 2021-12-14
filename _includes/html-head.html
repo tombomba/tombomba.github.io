@@ -40,15 +40,6 @@
   <!-- goog -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap&text={{ site.title | strip | remove:' ' | upcase }}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap&text={{ site.title | upcase }}{{ site.title.downcase }}" rel="stylesheet">
 
 </head>
-
-<body>
-  <header role="banner">
-    <div class="logo">
-      <h1><a href="{{ site.url }}" title="{{ site.title }}">{{ site.title }}&#x1F355;</a></h1>
-    </div>
-  </header>
-
-  <main role="main">

@@ -1,0 +1,42 @@
+---
+style: archive
+title: "Posts"
+socials: true
+permalink: /posts/
+---
+{% capture yearlist %}
+<ul class="archive"><!-- 30.44 days -->
+  {% assign scope = 2629743 %}
+  {% assign today = site.posts.first.date | date: '%s' -%}
+  {% for p in site.posts %}
+    {% assign current = p.date | date: '%s' %}
+    {% assign range = today | times: 1 | minus: current %}
+    {% if scope > range %}
+      <li><a href="{{ p.url | absolute_url }}">{{ p.title | strip | strip_html | smartify | normalize_whitespace }}</a>&nbsp;&mdash;&nbsp;{{ p.excerpt | strip | strip_html | smartify | truncatewords:50 | normalize_whitespace }}</li>
+      {% assign enddate = p.date -%}
+    {% else %}
+      {% break %}
+    {% endif %}
+  {% endfor -%}
+</ul>
+{% endcapture -%}
+
+{% assign startdate = site.posts.first.date -%}
+
+{% assign startday = startdate | date: '%-d' %}
+{% assign startmonth = startdate | date: '%B' %}
+{% assign startyear = startdate | date: '%Y' -%}
+
+{% assign endday = enddate | date: '%-d' %}
+{% assign endmonth = enddate | date: '%B' %}
+{% assign endyear = enddate | date: '%Y' -%}
+
+<article>
+
+  <header>
+    <h1>{{ endmonth }} {{ endday }}{% if endyear != startyear %},&nbsp;{{ endyear }}{% endif %}&ndash;{% if endmonth != startmonth %}{{ startmonth }}&nbsp;{% endif %}{{ startday }}, {{ startyear }}</h1>
+  </header>
+
+  {{ yearlist }}
+
+</article>

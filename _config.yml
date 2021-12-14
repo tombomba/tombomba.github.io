@@ -20,29 +20,13 @@ theme: null
 permalink: /posts/:title:output_ext
 timezone: America/Los_Angeles
 
-collections:
-  archives:
-    collections_dir: _archives
-    output: true
-
 defaults:
   -
     scope:
       path: ""      # empty string for all files
       type: posts   # limit to posts
     values:
-      layout: post
       is_post: true # automatically set is_post=true for all posts
-  -
-    scope:
-      path: "_archives"
-      type: "archives"
-    values:
-      layout: archive
-      style: post
-      excerpt: "A simple list of older posts"
-      is_page: true
-      is_archive: true
 
 excerpt_separator: <!--more-->
 

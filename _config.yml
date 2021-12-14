@@ -22,10 +22,6 @@ permalink: /:short_year/:month/:title:output_ext
 timezone: America/Los_Angeles
 
 collections:
-  pages:
-    collections_dir: _pages
-    output: true
-    permalink: "/:path/"
   archives:
     collections_dir: _archives
     output: true
@@ -38,14 +34,6 @@ defaults:
     values:
       layout: post
       is_post: true # automatically set is_post=true for all posts
-  -
-    scope:
-      path: "_pages"
-      type: "pages"
-    values:
-      layout: post
-      style: post
-      is_page: true
   -
     scope:
       path: "_archives"

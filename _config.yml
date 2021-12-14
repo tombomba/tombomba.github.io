@@ -2,6 +2,8 @@ title: "Trash!"
 description: "A media diary, a small collage, a dumb blog"
 domain: "www.trashdiary.com"
 
+emoji: "🗑️"
+
 url: "https://www.trashdiary.com"
 cdn: "https://www.trashdiary.com/assets/"
 img: "https://www.trashdiary.com/assets/img/"

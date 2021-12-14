@@ -1,0 +1,102 @@
+---
+#
+---
+
+@charset "utf-8"
+@import reset, fonts, colors, body, article, images
+
+body
+  padding: var(--shim--lh) 1em
+  display: flex
+  flex-direction: column
+
+header[role="banner"]
+  width: 100%
+  order: 1
+  display: flex
+  flex-flow: row wrap 
+  align-items: center
+  justify-content: space-between
+  margin-bottom: -3px
+  h1
+    padding-right: var(--shim)
+    font-family: 'Slackey', $sans
+    font-size: var(--hs--lg)
+    line-height: var(--lh--flat)
+    font-weight: 400
+    text-transform: lowercase
+    text-shadow: -3px 3px 0px $shock-color
+    a:link,
+    a:visited
+      color: $logo-color
+      text-decoration: none
+
+article
+  margin-top: 2em
+  margin-bottom: calc(var(--shim--lh) * 2)
+  header
+    h1,p
+      display: inline
+    h1
+      font-size: 1em
+      line-height: var(--lh)
+      &::after
+        content: '\00A0\2014\020'
+        font-weight: 400
+  figure
+    margin-bottom: var(--shim--lh)
+  time
+    font-style: italic
+    color: $mix-color
+    a:link,
+    a:visited
+      color: $mix-color
+      text-decoration: none
+    a:hover
+      text-decoration: underline
+
+footer
+  order: -1
+  width: 100% 
+  display: flex
+  align-items: center
+  background-color: darken($body-color, 3%)
+  border-radius: 0 4px 4px 0
+  h1
+    font-size: var(--shim--lh)
+    line-height: var(--lh--flat)
+    background-color: $body-color
+    padding-right: 9px
+    a:link,
+    a:visited, 
+    a:hover
+      text-decoration: none
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30em)
+
+  body
+    padding: 2em
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40em)
+  
+  article
+    figure
+      margin-left: calc(var(--shim--lh) * -1)
+      margin-right: calc(var(--shim--lh) * -1)
+
+  footer
+    h1
+      margin-left: -9px
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50em)
+
+  article
+    figure
+      margin-left: calc(var(--shim--lh) * -2)
+      margin-right: calc(var(--shim--lh) * -2)

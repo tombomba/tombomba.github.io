@@ -14,7 +14,7 @@ header[role="banner"]
   width: 100%
   order: 1
   display: flex
-  flex-flow: row wrap 
+  flex-flow: row wrap
   align-items: center
   justify-content: flex-start
   margin-bottom: -3px
@@ -30,7 +30,7 @@ header[role="banner"]
       color: $logo-color
       text-decoration: none
   p
-    font-size: var(--hs--md)
+    font-size: var(--hs--xl)
     line-height: var(--flat)
     a:link, a:visited, a:hover
       text-decoration: none
@@ -62,20 +62,21 @@ article
 
 footer
   order: -1
-  width: 100% 
+  width: 100%
   display: flex
   align-items: center
-  background-color: darken($body-color, 3%)
-  border-radius: 0 4px 4px 0
   h1
     font-size: var(--shim--lh)
     line-height: var(--lh--flat)
     background-color: $body-color
     padding-right: 9px
     a:link,
-    a:visited, 
+    a:visited,
     a:hover
       text-decoration: none
+  div.hr
+    flex: 1
+    width: 100%
 
 //-----------------------------------------------------------------------------
 
@@ -91,7 +92,7 @@ footer
   header[role="banner"]
     h1
       margin-left: -6px
-  
+
   article
     figure
       margin-left: calc(var(--shim--lh) * -1)

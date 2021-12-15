@@ -10,7 +10,11 @@ layout: default
 
 <header role="banner">
   <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
-  <p><a href="{{ site.url }}">&#9758; &#9758; &#9758;</a></p>
+  <ul>
+    <li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li>
+    <li><a href="http://letterboxd.com/{{ site.socials }}">Letterboxd</a></li>
+    <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
+  </ul>
 </header>
 
 <main role="main">
@@ -25,6 +29,16 @@ layout: default
   </article>
 
 </main>
+
+<aside>
+  <h2>Meanwhile&hellip;</h2>
+  <ul>
+  {% for p in site.posts limit:5 offset:1 %}
+    {% include --display-list-item.html title=p.title excerpt=p.excerpt url=p.url %}
+  {% endfor -%}
+  </ul>
+  <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} <a href="{{ 'about' | absolute_url }}">{{ site.author }}</a></p>
+</aside>
 
 <footer>
   <h1><a href="{{ site.url }}" title="{{ site.title }}">{{ page.emoji | default: site.emoji }}</a></h1>

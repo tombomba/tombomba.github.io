@@ -12,14 +12,7 @@ body
 
 header[role="banner"]
   width: 100%
-  order: 1
-  display: flex
-  flex-flow: row wrap
-  align-items: center
-  justify-content: flex-start
-  margin-bottom: -3px
   h1
-    padding-right: var(--shim)
     font-family: 'Slackey', $sans
     font-size: var(--hs--lg)
     line-height: var(--lh--flat)
@@ -29,16 +22,24 @@ header[role="banner"]
     a:link, a:visited
       color: $logo-color
       text-decoration: none
-  p
-    font-size: var(--hs--xl)
-    line-height: var(--flat)
-    a:link, a:visited, a:hover
-      text-decoration: none
-
+  ul
+    display: flex
+    align-items: center
+    margin-top: var(--shim)
+    list-style-type: none   
+    li
+      font-size: var(--fs--sm)
+      line-height: var(--lh--tight)
+      margin-left: 0.25em
+      color: $mix-color
+      &:not(:first-of-type)::before
+        content: '-'
+        padding-right: 0.25em  
+  div.hr
+    display: none
 
 article
-  margin-top: 2em
-  margin-bottom: calc(var(--shim--lh) * 2)
+  margin-top: var(--shim--lh)
   header
     h1,p
       display: inline
@@ -60,16 +61,37 @@ article
     a:hover
       text-decoration: underline
 
+aside
+  order: 2
+  margin-top: calc(var(--shim--lh) * 2)
+  h2
+    margin-top: 0
+    font-size: 1em
+    line-height: var(--lh--tight)
+  ul
+    margin-top: 0
+    list-style-type: none
+    li
+      margin-top: 1em
+  p
+    margin-top: calc(var(--shim--lh) * 2)
+    font-style: italic
+    text-align: center
+    color: $mix-color
+    a:link, a:visited
+      color: $mix-color
+
 footer
-  order: -1
+  order: 1
+  margin-top: calc(var(--shim--lh) * 2)
   width: 100%
   display: flex
   align-items: center
+  justify-content: space-between
   h1
     font-size: var(--shim--lh)
     line-height: var(--lh--flat)
     background-color: $body-color
-    padding-right: 9px
     a:link,
     a:visited,
     a:hover
@@ -77,6 +99,7 @@ footer
   div.hr
     flex: 1
     width: 100%
+    margin-left: var(--shim)
 
 //-----------------------------------------------------------------------------
 
@@ -85,22 +108,28 @@ footer
   body
     padding: 2em
 
+  header[role="banner"]
+    display: flex
+    align-items: center
+    justify-content: space-between
+    h1
+      margin-left: -6px
+
+  footer
+    h1
+      margin-left: -3px
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40em)
 
   header[role="banner"]
-    h1
-      margin-left: -6px
+    ul
+      margin-top: 0
 
   article
     figure
       margin-left: calc(var(--shim--lh) * -1)
       margin-right: calc(var(--shim--lh) * -1)
-
-  footer
-    h1
-      margin-left: -9px
 
 //-----------------------------------------------------------------------------
 

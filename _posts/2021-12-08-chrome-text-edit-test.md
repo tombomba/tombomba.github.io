@@ -1,7 +1,7 @@
 ---
 layout: "flipped"
 title: "This is a new page from chrome text editor"
-emoji: "🍕"
+#emoji: "🍕"
 ---
 
 {% include --fig.html file="test-image.jpg" width=768 height=482 %}

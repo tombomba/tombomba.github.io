@@ -4,7 +4,7 @@ layout: default
 {% assign copy = content | strip | normalize_whitespace %}
 {% include --generate-titlef.html title=page.title %}
 
-{% capture datef %}&nbsp;<time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">({{ page.date | date: '%-d %b' }})</time>{% endcapture -%}
+{% capture datef %}<span class="byline">&nbsp;(<time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date: '%-d %b' }}</time>)</span>{% endcapture -%}
 {% assign copysize = copy | size | minus: 4 %}
 {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
 
@@ -26,5 +26,14 @@ layout: default
 </main>
 
 <footer>
-  <div class="icon"><span><a href="{{ site.url }}" title="{{ site.title }}">{{ page.emoji | default: site.emoji }}</a></span></div>
+  <div class="icon"><a href="{{ site.url }}" title="{{ site.title }}">{{ page.emoji | default:
+      site.emoji }}</a>
+  </div>
+  <div class="hr"></div>
+  <ul>
+    <li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li>
+    <li><a href="http://letterboxd.com/{{ site.socials }}">Letterboxd</a></li>
+    <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
+  </ul>
+
 </footer>

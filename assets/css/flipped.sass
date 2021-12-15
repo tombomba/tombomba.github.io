@@ -15,11 +15,11 @@ header[role="banner"]
   width: 100%
   display: flex
   align-items: center
-  justify-content: flex-start
+  justify-content: space-between
   margin-top: calc(var(--shim--lh) * 2)
   h1
     font-family: 'Slackey', $sans
-    font-size: var(--hs--lg)
+    font-size: var(--shim--lh)
     line-height: var(--lh--flat)
     font-weight: 400
     text-transform: lowercase
@@ -27,6 +27,9 @@ header[role="banner"]
     a:link, a:visited
       color: $logo-color
       text-decoration: none
+  div.hr
+    width: 100%
+    margin-left: var(--shim)
 
 article
   margin-top: var(--shim--lh)
@@ -41,7 +44,7 @@ article
         font-weight: 400
   figure
     margin-bottom: var(--shim--lh)
-  time
+  span.byline
     font-style: italic
     color: $mix-color
     a:link,
@@ -55,30 +58,45 @@ footer
   order: -1
   margin-top: 0
   width: 100%
-  div.icon
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  ul
     display: flex
     align-items: center
-    justify-content: flex-start
-    background-color: $body-color
-    background-color: darken($body-color, 3%)
-    border-radius: 0 4px 4px 0
-    font-size: 0
-    line-height: 1
-    span
-      display: flex
-      align-items: center
-      margin-left: -6px
-      padding-right: 9px
-      font-size: 32px
-      line-height: 1
-      background-color: $body-color
-      a:link, a:visited, a:hover
-        text-decoration: none
-      
-
+    list-style-type: none   
+    li
+      font-size: var(--fs--sm)
+      line-height: var(--lh--flat)
+      margin-left: 0.25em
+      color: $mix-color
+      &:not(:first-of-type)::before
+        content: '-'
+        padding-right: 0.25em   
+  div.icon
+    font-size: var(--shim--lh)
+    line-height: var(--lh--flat)
+    a:link, a:visited, a:hover
+      text-decoration: none    
+  div.hr
+    flex: 1
+    width: 100%
+    margin: 0 var(--shim)
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30em)
 
   body
     padding: 2em
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40em)
+
+  header[role="banner"]
+    h1
+      margin-left: -6px
+
+  footer
+    div.icon
+      margin-left: -3px

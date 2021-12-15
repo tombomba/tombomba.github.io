@@ -30,6 +30,7 @@ defaults:
       type: posts   # limit to posts
     values:
       is_post: true # automatically set is_post=true for all posts
+      goog: true
 
 excerpt_separator: <!--more-->
 

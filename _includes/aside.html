@@ -1,0 +1,57 @@
+<aside>
+  <h2>More {{ site.title | downcase }}</h2>
+  <ul>
+    {% for p in site.posts limit:5 offset:1 %}
+    {% include --display-list-item.html title=p.title excerpt=p.excerpt url=p.url %}
+    {% endfor -%}
+  </ul>
+  <div class="hr"></div>
+  <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} <a
+      href="{{ 'about' | absolute_url }}">{{ site.author }}</a></p>
+</aside>
+<ul>
+  <li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li>
+  <li><a href="http://letterboxd.com/{{ site.socials }}">Letterboxd</a></li>
+  <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
+</ul>
+
+<!---
+  ul
+    display: flex
+    align-items: center
+    list-style-type: none   
+    padding-right: var(--shim)
+    li
+      font-size: var(--fs--xs)
+      line-height: var(--lh--flat)
+      margin-left: 0.25em
+      color: $mix-color
+      &:not(:first-of-type)::before
+        content: '-'
+        padding-right: 0.25em
+
+aside
+  order: 2
+  margin-top: calc(var(--shim--lh) * 2)
+  h2
+    margin-top: 0
+    font-size: 1em
+    line-height: var(--lh--tight)
+  ul
+    margin-top: 0
+    list-style-type: none
+    li
+      margin-top: 1em
+  p
+    margin-top: var(--shim--lh)
+    font-size: var(--fs--sm)
+    line-height: var(--lh--tight)
+    font-style: italic
+    text-align: center
+    color: $mix-color
+    a:link, a:visited
+      color: $mix-color
+  div.hr
+    margin-top: calc(var(--shim--lh) * 2)
+
+-->

@@ -11,32 +11,22 @@ body
   flex-direction: column
 
 header[role="banner"]
+  order: 1
   width: 100%
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  margin-top: calc(var(--shim--lh) * 2)
   h1
     font-family: 'Slackey', $sans
     font-size: var(--hs--lg)
     line-height: var(--lh--flat)
     font-weight: 400
-    text-transform: uppercase
+    text-transform: lowercase
     text-shadow: -3px 3px 0px $shock-color
     a:link, a:visited
       color: $logo-color
-      text-decoration: none
-  ul
-    display: flex
-    align-items: center
-    margin-top: var(--shim)
-    list-style-type: none   
-    li
-      font-size: var(--fs--sm)
-      line-height: var(--lh--tight)
-      margin-left: 0.25em
-      color: $mix-color
-      &:not(:first-of-type)::before
-        content: '-'
-        padding-right: 0.25em  
-  div.hr
-    display: none
+      text-decoration: none  
 
 article
   margin-top: var(--shim--lh)
@@ -61,47 +51,31 @@ article
     a:hover
       text-decoration: underline
 
-aside
-  order: 2
-  margin-top: calc(var(--shim--lh) * 2)
-  h2
-    margin-top: 0
-    font-size: 1em
-    line-height: var(--lh--tight)
-  ul
-    margin-top: 0
-    list-style-type: none
-    li
-      margin-top: 1em
-  p
-    margin-top: calc(var(--shim--lh) * 2)
-    font-size: var(--fs--sm)
-    line-height: var(--lh--tight)
-    font-style: italic
-    text-align: center
-    color: $mix-color
-    a:link, a:visited
-      color: $mix-color
-
 footer
-  order: 1
-  margin-top: calc(var(--shim--lh) * 2)
+  order: -1
+  margin-top: 0
   width: 100%
   display: flex
   align-items: center
-  justify-content: space-between
-  h1
-    font-size: var(--shim--lh)
-    line-height: var(--lh--flat)
-    background-color: $body-color
-    a:link,
-    a:visited,
-    a:hover
-      text-decoration: none
-  div.hr
-    flex: 1
-    width: 100%
-    margin-left: var(--shim)
+  justify-content: flex-start
+  background-color: darken($body-color, 3%)
+  border-radius: 0 4px 4px 0
+  div.wrap
+    display: flex
+    align-items: center
+    justify-content: center
+    div.icon
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: var(--shim--lh)
+      line-height: var(--lh--flat)
+      background-color: $body-color
+      padding-right: var(--shim)
+      a:link,
+      a:visited,
+      a:hover
+        text-decoration: none
 
 //-----------------------------------------------------------------------------
 
@@ -109,36 +83,3 @@ footer
 
   body
     padding: 2em
-
-  header[role="banner"]
-    display: flex
-    align-items: center
-    justify-content: space-between
-    h1
-      margin-left: -6px
-
-  footer
-    h1
-      margin-left: -3px
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40em)
-
-  header[role="banner"]
-    align-items: baseline
-    ul
-      margin-top: 0
-
-  article
-    figure
-      margin-left: calc(var(--shim--lh) * -1)
-      margin-right: calc(var(--shim--lh) * -1)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 50em)
-
-  article
-    figure
-      margin-left: calc(var(--shim--lh) * -2)
-      margin-right: calc(var(--shim--lh) * -2)

@@ -4,7 +4,7 @@ layout: default
 {% assign copy = content | strip | normalize_whitespace %}
 {% include --generate-titlef.html title=page.title -%}
 
-{% capture datef %}<span class="byline">&nbsp;(<time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date: '%-d %b' }}</time>)</span>{% endcapture -%}
+{% capture datef %}<span class="datestamp">&nbsp;(<time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date: '%-d %b' }}</time>)</span>{% endcapture -%}
 {% assign copysize = copy | size | minus: 4 %}
 {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
 
@@ -27,14 +27,14 @@ layout: default
 </main>
 
 <aside>
-{% include aside.html page=page %}
+{% include --display-recent-list.html page=page %}
 </aside>
 
 <footer>
   <div class="hr"></div>
   <ul>
     <li class="copyright">Copyright &copy; {{ site.posts.first.date | date: '%Y' }}</li> 
-    <li><a href="{{ 'about' | absolute_url }}">{{ site.author }}</a></li>
+    <li><a href="{{ 'about' | absolute_url }}" aria-label="About the author">{{ site.author }}</a></li>
     <li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li>
     <li><a href="http://letterboxd.com/{{ site.socials }}">Letterboxd</a></li>
     <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>

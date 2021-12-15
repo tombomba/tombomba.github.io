@@ -6,7 +6,7 @@
 @import reset, font, color, body, article, image
 
 body
-  padding: var(--shim--lh) 1em
+  padding: 2em 1em
   display: flex
   flex-direction: column
 
@@ -15,15 +15,10 @@ header[role="banner"]
   display: flex
   align-items: center
   justify-content: space-between
-  h1
-    //font-family: 'Sedgwick Ave Display', $sans
-    a:link, a:visited
-      color: blue
   div.hr
     flex: 1
     width: 100%
     margin-left: var(--shim)
-    //margin-bottom: 9px
 
 article
   margin-top: 2em
@@ -38,7 +33,7 @@ article
         font-weight: 400
   figure
     margin-bottom: var(--shim--lh)
-  span.byline
+  span.datestamp
     font-style: italic
     color: $mix-color
     a:link,
@@ -75,7 +70,6 @@ footer
         color: $mix-color 
   div.hr
     width: 100%
-    margin: 0 var(--shim)
 
 //-----------------------------------------------------------------------------
 

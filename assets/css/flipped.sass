@@ -58,15 +58,14 @@ footer
   display: flex
   align-items: center
   justify-content: space-between
+  background-color: darken($body-color, 3%)
+  border-radius: 0 4px 4px 0
   div.icon
+    padding-right: var(--shim)
+    background-color: $body-color
     img
-      width: calc(var(--shim--lh) * 1.5)
-      height: calc(var(--shim--lh) * 1.5)
-      margin-left: -6px
-  div.hr
-    flex: 1
-    width: 100%
-    margin-left: var(--shim)
+      width: var(--shim--lh)
+      height: var(--shim--lh)
 
 //-----------------------------------------------------------------------------
 
@@ -74,12 +73,3 @@ footer
 
   body
     padding: 2em
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40em)
-
-  footer
-    div.icon
-      img
-        margin-left: -6px

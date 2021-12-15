@@ -55,17 +55,25 @@ footer
   order: -1
   margin-top: 0
   width: 100%
-  display: flex
-  align-items: center
-  justify-content: space-between
-  background-color: darken($body-color, 3%)
-  border-radius: 0 4px 4px 0
   div.icon
+    display: flex
+    align-items: center
+    justify-content: flex-start
     padding-right: var(--shim)
     background-color: $body-color
-    img
-      width: var(--shim--lh)
-      height: var(--shim--lh)
+    background-color: darken($body-color, 3%)
+    border-radius: 0 4px 4px 0
+    span
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      display: inline-block
+      padding-right: var(--shim)
+      font-size: 32px
+      line-height: 1
+      background-color: $body-color
+      a:link, a:visited, a:hover
+        text-decoration: none
 
 //-----------------------------------------------------------------------------
 

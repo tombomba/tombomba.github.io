@@ -1,0 +1,43 @@
+---
+#
+---
+
+@charset "utf-8"
+@import reset, font, color, body, article, image
+
+body
+  padding: 2rem 1rem
+  font-size: 1rem
+  line-height: 1.7
+
+header[role="banner"],
+main[role="main"],
+aside,
+footer
+  max-width: 25rem
+
+header[role="banner"]
+  h1
+    font-family: $serif
+    font-size: 2rem
+    line-height: 1
+    font-weight: 700
+    font-style: italic
+    text-transform: capitalize
+    text-shadow: none
+    text-align: center
+    a:link, a:visited
+      color: $link-color
+
+article
+  margin-top: 2rem
+  figure
+    margin-bottom: 1.7rem
+
+footer
+  margin-top: 2rem
+  h1
+    font-size: 1.25rem
+    font-weight: 700
+    line-height: 1
+    text-align: center

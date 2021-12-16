@@ -1,20 +1,38 @@
 ---
-layout: post
-style: post
+layout: default
+style: "about"
 title: "About"
-excerpt: "Basic information about the site..."
-permalink: /about/
-socials: true
-is_about: true
+excerpt: "About the author"
+fbog: bomtomba-400x400.png
+goog: false
+emoji: '🎉'
 ---
-{% capture bio %}
-There are quite a few critics online who are smart and skilled and say interesting things. This website is my attempt to join them. I made it for fun, but also to express ideas I don't see routinely expressed.
+{% capture bio %}There are quite a few critics online who are smart and skilled and say interesting
+things. This website is my attempt to join them. I made it for fun, but also to express ideas I
+don't see routinely expressed.
 
-My name is Tom Bomba. I knocked around New York University's cinema studies program before I "dropped out of college to get an education." I've spent my time since producing various forms of digital media.
+My name is Tom Bomba. I knocked around New York University's cinema studies program before I
+"dropped out of college to get an education." I've spent my time since producing various forms of
+digital media.
 
-_{{ site.title }}_ is intentionally basic, a sorta mental note to myself not to write as if I'm submitting for publication. The name is a loose reference to work by Pauline Kael and Jeffrey Sconce.
+_{{ site.name }}_ is intentionally basic, the design made crude as a sorta mental note to myself not to write as if I'm
+submitting for publication. The name is a loose reference to work by Pauline Kael and Jeffrey
+Sconce.
 
-The site was built on an old Mac using Jekyll, Atom, and Pixelmator, while listening to KCRW Los Angeles.
-{% endcapture -%}
+The site was built on an old Mac using Jekyll, VS Code, and Pixelmator, while listening to KCRW Los
+Angeles.{% endcapture -%}
 
-{{ bio | smartify | markdownify }}
+<header role="banner">
+  <h1>{{ page.title }}</h1>
+</header>
+
+<main role="main">
+  <article>
+  {% include --fig.html file="bomtomba-400x400.png" width=400 height=400 alt="This is actually a picture of Jackie Gleason in Smokey and the Bandit" %}
+  {{ bio | smartify | markdownify | strip | normalize_whitespace }}
+  </article>
+</main>
+
+<footer>
+  <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+</footer>

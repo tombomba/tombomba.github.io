@@ -40,13 +40,6 @@
   <!-- css -->
   <link rel="stylesheet" href="{{ page.style | default: page.layout | prepend: site.css | append: '.css' }}">
 
-  {% if page.goog %}
-  <!-- goog -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap&text={{ site.title | upcase |  remove: ' ' }}B!" rel="stylesheet">
-  {% endif %}
-
 </head>
 
 <body><!-- {{ page.layout | default: 'Zoinks!' }} -->

@@ -1,0 +1,8 @@
+{% assign xlimit = include.limit | default: 3 -%}
+{% assign xoffset = include.offset | default: 1 %}
+<aside><!-- limited to {{ xlimit }} -->
+  <div class="hr"></div>
+  <ul>
+  {% for x in site.posts limit:xlimit offset:xoffset %}{% include --display-list-item.html title=x.title url=x.url excerpt=x.excerpt %}{% endfor -%}
+  </ul>
+</aside>

@@ -1,42 +1,37 @@
----
-layout: default
----
+
 {% assign copy = content | strip | normalize_whitespace %}
-{% include --generate-titlef.html title=page.title -%}
+{% assign wordcount = copy | number_of_words -%}
+{% if wordcount < 150 %}{% assign hedsize = 'micro' %}{% endif %}
+
+{% if copy contains '<p><img' %}
+  {% assign copy = copy | replace: '<p><img','<img' | replace: ' /></p>','>' %}
+{% endif -%}
 
 {% capture datef %}<span class="datestamp">&nbsp;(<time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date: '%-d %b' }}</time>)</span>{% endcapture -%}
 {% assign copysize = copy | size | minus: 4 %}
 {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
 
-<header role="banner">
-  <h1><a href="{{ site.url }}">{{ site.name }}!</a></h1>
-  <div class="hr"></div>
-</header>
+{% include --generate-titlef.html title=page.title -%}
+
+{% include htm-open.html %}
+{% include std-banner.html %}
 
 <main role="main">
 
-  <article><!-- {{ copy | number_of_words }} -->
+  <article><!-- {{ wordcount }} -->
 
-    {% capture hedbox %}<header><h1>{{ titlef }}</h1><p>{% endcapture -%}
-    {% assign copy = copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hedbox -%}
-
+    {% capture hedbox %}<header class="{{ hedsize | default: 'full' }}"><h1>{{ titlef }}</h1><p>{% endcapture -%}
+    {% assign copy = copy | replace_first: '</p>','</p></header>' | replace_first: '<p>',hedbox -%}
     {{ copy | strip | normalize_whitespace }}
 
   </article>
 
 </main>
 
-<aside>
-{% include --display-recent-list.html page=page %}
-</aside>
+{% if page.previous or page.next %}
+  {% include aside-previous.html title=page.title url=page.url excerpt=page.excerpt previous=page.previous
+next=page.next %}
+{% endif %}
 
-<footer>
-  <div class="hr"></div>
-  <ul>
-    <li class="copyright">Copyright &copy; {{ site.posts.first.date | date: '%Y' }}</li> 
-    <li><a href="{{ 'about' | absolute_url }}" aria-label="About the author">{{ site.author }}</a></li>
-    <li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li>
-    <li><a href="http://letterboxd.com/{{ site.socials }}">Letterboxd</a></li>
-    <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
-  </ul>
-</footer>
+{% include std-footer.html %}
+{% include htm-close.html %}

@@ -3,26 +3,14 @@
 ---
 
 @charset "utf-8"
-@import reset, font, color, body, article, image
+@import reset, font, color, body, article, image, banner, footer
 
 body
   padding: 2em 1em
-  display: flex
-  flex-direction: column
-
-header[role="banner"]
-  width: 100%
-  display: flex
-  align-items: center
-  justify-content: space-between
-  div.hr
-    flex: 1
-    width: 100%
-    margin-left: var(--shim)
 
 article
-  margin-top: 2em
-  header
+  margin-top: var(--shim--lh)
+  header.micro
     h1,p
       display: inline
     h1
@@ -31,6 +19,10 @@ article
       &::after
         content: '\00A0\2014\020'
         font-weight: 400
+  header.full
+    h1
+      font-size: var(--hs)
+      line-height: var(--lh--tight)
   figure
     margin-bottom: var(--shim--lh)
   span.datestamp
@@ -51,43 +43,9 @@ aside
     li:not(:first-of-type)
       margin-top: 1em
 
-footer
-  width: 100%
-  margin-top: 2em
-  ul 
-    display: flex
-    flex-flow: row wrap
-    align-items: center
-    justify-content: center
-    margin: 2em 0 0 0 
-    list-style-type: none
-    li
-      margin-right: 0.25em
-      color: $mix-color
-      &:not(:last-of-type)::after
-        content: '-'
-        padding-left: 0.25em
-        color: $mix-color 
-  div.hr
-    width: 100%
-
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30em)
 
   body
     padding: 2em
-
-  footer
-    ul
-      li
-        font-size: var(--fs--sm)
-        line-height: var(--lh--flat)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40em)
-
-  header[role="banner"]
-    h1
-      margin-left: -3px

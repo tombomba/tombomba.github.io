@@ -1,19 +1,20 @@
 ---
+style: archive
 is_home: true
 goog: true
 permalink: /index.html
 ---
-{% include html-head.html -%}
-{% assign scope = 2629743 -%}
-{% assign today = site.posts.first.date | date: '%s' -%}
-{% for p in site.posts -%}
-  {% assign current = p.date | date: '%s' -%}
-  {% assign range = today | times: 1 |  minus: current -%}
-  {% if scope > range %}
-    {% unless forloop.first %}<div class="hr double"></div>{% endunless -%}
-    {% include article-post.html page=p content=p.content is_home=true -%}
-  {% else -%}
-    {% break -%}
-  {% endif -%}
-{% endfor -%}
-{% include html-foot.html -%}
+{% include htm-open.html %}
+{% include std-banner.html %}
+
+<main role="main">
+  <article>
+    <ul>
+      {% for x in site.posts limit:7 %}{% include --display-list-item.html title=x.title url=x.url excerpt=x.excerpt %}{% endfor -%}
+      <li><a href="{{ 'posts' | absolute_url }}">More&hellip;</a></li>
+    </ul>
+  </article>
+</main>
+
+{% include std-footer.html %}
+{% include htm-close.html %}

@@ -1,6 +1,8 @@
 ---
+title: "Recent posts"
 style: archive
-title: "Posts"
+excerpt: "A short list of recent posts"
+goog: false
 permalink: /posts/
 ---
 {% capture yearlist %}
@@ -30,16 +32,31 @@ permalink: /posts/
 {% assign endmonth = enddate | date: '%B' %}
 {% assign endyear = enddate | date: '%Y' -%}
 
-{% include html-head.html %}
+{% capture titlef %}{{ endmonth }} {{ endday }}{% if endyear != startyear %},&nbsp;{{ endyear }}{% endif %}&ndash;{% if endmonth != startmonth %}{{ startmonth }}&nbsp;{% endif %}{{ startday }}, {{ startyear }}{% endcapture %}
+{% assign titlef_override = titlef | replace: '&nbsp;', ' ' | replace: '&ndash;', '-' %}
 
-<article>
+{% include htm-open.html %}
 
-  <header>
-    <h1>{{ endmonth }} {{ endday }}{% if endyear != startyear %},&nbsp;{{ endyear }}{% endif %}&ndash;{% if endmonth != startmonth %}{{ startmonth }}&nbsp;{% endif %}{{ startday }}, {{ startyear }}</h1>
-  </header>
+<header role="banner">
+  <div class="icon"><a href="{{ site.url }}"><img src="{{ 'trash-diary.png' | prepend: site.img }}" width="48" height="48" alt="{{ site.title }}"></a></div>
+  <div class="hr"></div>
+</header>
 
-  {{ yearlist }}
+<main role="main">
 
-</article>
+  <article>
 
-{% include html-foot.html %}
+    <header>
+      <h1>{{ titlef }}</h1>
+    </header>
+
+    <div class="hr double"></div>
+
+    {{ yearlist }}
+
+  </article>
+
+</main>
+
+{% include std-footer.html %}
+{% include htm-close.html -%}

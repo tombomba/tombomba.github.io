@@ -3,38 +3,31 @@
 ---
 
 @charset "utf-8"
-@import reset, font, color, body, banner, footer
+@import reset, font, color, body, article, image, banner, footer
+
+body
+  padding: 2em 1em
 
 article
-  margin-top: 4em
+  margin-top: var(--shim--lh)
   header
     h1
-      font-size: var(--hs)
+      font-size: var(--hs--md)
       line-height: var(--lh--tight)
-
-  div.feature
-    h1
-      font-size: var(--hs)
-      line-height: var(--lh--tight)
-      margin-bottom: 2px
     p
       margin: 0
-
+      color: $mix-color
   ul
     margin: 0
     list-style-type: none
-    &.recent
-      h2
-        font-size: 1em
-        line-height: var(--lh--tight)
-        margin-bottom: 3px
-      p
-        margin: 0
-
+    li:first-of-type
+      margin-top: 2em
+  div.hr.double
+    margin-top: 2em
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 40em)
+@media screen and (min-width: 30em)
 
-  article ul.recent li h2
-    margin-bottom: 0
+  body
+    padding: 2em

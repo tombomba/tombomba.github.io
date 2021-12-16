@@ -1,23 +1,39 @@
 //-----------------------------------------------------------------------------
 
 footer
-  ul
+  width: 100%
+  margin-top: 2em
+  ul 
     display: flex
-    flex-flow: row wrap
+    flex-flow: column
+    align-items: center
     justify-content: center
+    margin: 2em 0 0 0 
     list-style-type: none
-    margin-top: 1em
     li
-      margin-right: 0.25em
-      font-size: var(--fs--sm)
-      line-height: var(--lh)
       color: $mix-color
-      a:link,
-      a:visited
-        color: $mix-color
-      &:not(:last-of-type)::after
-        content: '-'
-        padding-left: 0.25em
-        color: $mix-color
+      &.copyright
+        order: 99
   div.hr
-    max-width: 33%
+    width: 100%
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 32em)
+
+  footer
+    ul 
+      flex-flow: row wrap
+      li
+        font-size: var(--fs--sm)
+        line-height: var(--lh--flat)
+        color: $mix-color
+        &.copyright
+          order: -1
+          font-style: italic
+        &:nth-last-child(-n+3)::before
+          content: '-'
+          padding-right: 0.25em
+          color: $mix-color
+        &:not(:last-of-type)
+          margin-right: 0.25em

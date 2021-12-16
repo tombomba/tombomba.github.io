@@ -1,6 +1,5 @@
 ---
-layout: default
-style: "about"
+style: about
 title: "About"
 excerpt: "About the author"
 fbog: bomtomba-400x400.png
@@ -8,33 +7,29 @@ goog: false
 emoji: '🎉'
 permalink: "/about/"
 ---
-{% capture bio %}There are quite a few critics online who are smart and skilled and say interesting
-things. This website is my attempt to join them. I made it for fun, but also to express ideas I
-don't see routinely expressed.
+{% capture bio %}There are quite a few critics online who are smart and skilled and say interesting things. This website is my attempt to join them. I made it for fun, but also to express ideas I don't see routinely expressed.
 
-My name is Tom Bomba. I knocked around New York University's cinema studies program before I
-"dropped out of college to get an education." I've spent my time since producing various forms of
-digital media.
+My name is Tom Bomba. I knocked around NYU's cinema studies program before I "dropped out of college to get an education." I've spent my time since producing various forms of digital media.
 
-_{{ site.name }}_ is intentionally basic, the design made crude as a sorta mental note to myself not to write as if I'm
-submitting for publication. The name is a loose reference to work by Pauline Kael and Jeffrey
-Sconce.
+_{{ site.name }}_ is intentionally basic, a sorta mental note to myself not to write as if I'm submitting for publication. The name is a loose reference to work by Pauline Kael and Jeffrey Sconce.
 
 The site was built on an old Mac using Jekyll, VS Code, and Pixelmator, while listening to KCRW Los
 Angeles.{% endcapture -%}
 
-<header role="banner">
-  <h1>{{ page.title }}</h1>
-</header>
+{% include htm-open.html %}
 
 <main role="main">
   <article>
-  {% include --fig.html file="bomtomba-400x400.png" width=400 height=400 alt="This is actually a picture of Jackie Gleason in Smokey and the Bandit" %}
+  <a href="{{ site.url }}"><img src="{{ 'bomtomba-400x400.png' | prepend: site.img }}" width=200 height=200 alt="{{ site.title | upcase }} DOT COM"></a>
+  <h1>{{ page.title }} {{ site.title | replace: ' ', '&nbsp;' }}</h1>
+  <div class="hr"></div>
   {{ bio | smartify | markdownify | strip | normalize_whitespace }}
   </article>
 </main>
 
 <footer>
   <div class="hr"></div>
-  <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+  <p><a href="{{ site.url }}">{{ site.title }}</a> &copy;&nbsp;{{ site.author | replace: ' ', '&nbsp;' }}</p>
 </footer>
+
+{% include htm-close.html %}

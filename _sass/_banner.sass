@@ -1,61 +1,27 @@
-//-----------------------------------------------------------------------------
-
 header[role="banner"]
-  height: calc(var(--shim--lh) * 2)
+  width: 100%
   display: flex
   align-items: center
-  justify-content: flex-start
-  div.logo
-    display: flex
-    align-items: center
-    justify-content: space-between
-    h1
-      margin: 0
-      padding: 0
-      font-family: 'Slackey', $sans
-      font-size: var(--hs--lg)
-      font-weight: 400
-      line-height: var(--lh--flat)
-      text-transform: uppercase
-      text-shadow: -3px 3px 0px $shock-color
-      a:link,
-      a:visited
-        color: $logo-color
-        text-decoration: none
-  div.ascii
-    display: none
-    line-height: var(--lh--tight)
-    color: darken($body-color, 20%)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 23em)
-
-  header[role="banner"]
-    div.logo h1
-      font-size: var(--hs--xl)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 30em)
-
-  header[role="banner"]
-    div.logo
-      h1
-        margin-left: -6px
-      &::after
-        content: '*:･ﾟ✧*:･ﾟ✧'
-        color: $shock-color
-        transform: rotate(-3deg)
-        margin-left: var(--shim)
-        padding-bottom: 1em
-    div.ascii
-      display: block
+  justify-content: space-between
+  h1
+    font-family: 'Slackey', $sans
+    font-size: var(--hs--lg)
+    line-height: var(--lh--flat)
+    font-weight: 700
+    text-transform: uppercase
+    text-shadow: -3px 3px 0px $shock-color
+    a:link, a:visited
+      color: $logo-color
+      text-decoration: none
+  div.hr
+    flex: 1
+    width: 100%
+    margin-left: var(--shim)
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40em)
 
-  header[role="banner"]
-    div.logo h1
-      transform: rotate(-3deg)      
+  //header[role="banner"]
+    h1
+      margin-left: -3px

@@ -1,7 +1,9 @@
+---
+layout: default
+---
 
 {% assign copy = content | strip | normalize_whitespace %}
-{% assign wordcount = copy | number_of_words -%}
-{% if wordcount < 150 %}{% assign hedsize = 'micro' %}{% endif %}
+{% include --generate-titlef.html title=page.title -%}
 
 {% if copy contains '<p><img' %}
   {% assign copy = copy | replace: '<p><img','<img' | replace: ' /></p>','>' %}
@@ -11,14 +13,13 @@
 {% assign copysize = copy | size | minus: 4 %}
 {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
 
-{% include --generate-titlef.html title=page.title -%}
-
-{% include htm-open.html %}
-{% include std-banner.html %}
+<header role="banner">
+  <h1><a href="{{ site.url }}">{{ site.title | upcase }}</a></h1>
+</header>
 
 <main role="main">
 
-  <article><!-- {{ wordcount }} -->
+  <article><!-- {{ copy | number_of_words }} -->
 
     {% capture hedbox %}<header class="{{ hedsize | default: 'full' }}"><h1>{{ titlef }}</h1><p>{% endcapture -%}
     {% assign copy = copy | replace_first: '</p>','</p></header>' | replace_first: '<p>',hedbox -%}
@@ -27,11 +28,3 @@
   </article>
 
 </main>
-
-{% if page.previous or page.next %}
-  {% include aside-previous.html title=page.title url=page.url excerpt=page.excerpt previous=page.previous
-next=page.next %}
-{% endif %}
-
-{% include std-footer.html %}
-{% include htm-close.html %}

@@ -36,7 +36,7 @@
   <meta name="twitter:image:src" content="{{ page.fbog | default: 'default-social.png' | prepend: site.img }}">
 
   <!-- css -->
-  <link rel="stylesheet" href="{{ page.layout | prepend: site.css | append: '.css' }}">
+  <link rel="stylesheet" href="{{ page.style | default: page.layout | prepend: site.css | append: '.css' }}">
 
   {% if page.goog -%}
   <!-- goog -->

@@ -1,0 +1,42 @@
+WIRED SCHEMES!
+
+$key: random(6);
+
+$one-color: #06f, #c06, #393, #f30, #09f, #099;
+$two-color: #6ff, #fc0, #9f0, #fc0, #9f3, #fc0;
+$primary-color: nth($one-color, $key);
+$secondary-color: nth($two-color, $key);
+$select-color: $secondary-color;
+
+$key:           random(6)
+$one-color:     #06f, #c06, #393, #f30, #09f, #099
+$two-color:     #6ff, #fc0, #9f0, #fc0, #9f3, #fc0
+$three-color:   #fde, #fde, #fde, #fde, #fde, #fde
+
+$logo-color:    nth($one-color, $key) !default
+$shock-color:   nth($two-color, $key) !default
+$select-color:  $shock-color !default
+
+LINK: #36C
+VISITED: #939
+
+a {
+    text-decoration: underline;
+    &:link { color: #36c; }
+    &:visited { color: #939; }
+    &:active { color: $secondary-color; text-decoration: none; }
+    &:hover { color: #f30; text-decoration: none; }
+}
+
+*/
+
+/*
+
+ORIGINAL BROWSER DEFAULTS:
+
+background: #C0C0C0
+a:link: #0000FF;
+a:visited: #800080;
+a:active: #FF0000;
+
+*/

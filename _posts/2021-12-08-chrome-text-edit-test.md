@@ -1,8 +1,7 @@
 ---
-layout: "flipped"
+layout: "bahoo"
 title: "This is a new page from chrome text editor"
 #emoji: "🍕"
-#googfont: 'Sedgwick Ave Display'
 ---
 
 {% include --fig.html file="test-image.jpg" width=768 height=482 %}

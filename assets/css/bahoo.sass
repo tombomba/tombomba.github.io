@@ -6,11 +6,11 @@
 @import reset, font, color, body, article, image, banner, footer
 
 body
-  padding: 2em 1em
+  padding: var(--shim) 1em
 
 article
-  margin-top: var(--shim--lh)
-  header.micro
+  margin-top: var(--shim)
+  header
     h1,p
       display: inline
     h1
@@ -19,12 +19,6 @@ article
       &::after
         content: '\00A0\2014\020'
         font-weight: 400
-  header.full
-    h1
-      font-size: var(--hs)
-      line-height: var(--lh--tight)
-  figure
-    margin-bottom: var(--shim--lh)
   span.datestamp
     font-style: italic
     color: $mix-color
@@ -42,10 +36,3 @@ aside
     list-style-type: none
     li:not(:first-of-type)
       margin-top: 1em
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 30em)
-
-  body
-    padding: 2em

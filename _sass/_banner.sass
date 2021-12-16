@@ -1,27 +1,20 @@
 header[role="banner"]
   width: 100%
   display: flex
+  flex-flow: row wrap
   align-items: center
-  justify-content: space-between
+  justify-content: flex-start
   h1
-    font-family: 'Slackey', $sans
+    margin-right: 0.25em
     font-size: var(--hs--lg)
     line-height: var(--lh--flat)
-    font-weight: 700
-    text-transform: uppercase
-    text-shadow: -3px 3px 0px $shock-color
+    text-transform: lowercase
     a:link, a:visited
       color: $logo-color
       text-decoration: none
-  div.hr
-    flex: 1
-    width: 100%
-    margin-left: var(--shim)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40em)
-
-  //header[role="banner"]
-    h1
-      margin-left: -3px
+  p
+    font-size: var(--hs--lg)
+    line-height: var(--lh--tight)
+    font-weight: 700
+    text-transform: lowercase
+    color: darken($body-color, 33%)

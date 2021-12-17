@@ -1,8 +1,8 @@
 ---
 title: "This is a new page from chrome text editor"
 emoji: "🍕"
-meta:
-  homelink: "Fusce turpis nulla"
+keyphrase: "Fusce turpis nulla"
+fbog: test-image.jpg
 # {% include --fig.html file="test-image.jpg" width=768 height=482 %}
 ---
 

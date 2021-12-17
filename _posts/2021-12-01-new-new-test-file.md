@@ -1,9 +1,7 @@
 ---
 title: "The quick brown fox jumps over the lazy dog"
-meta:
-  homelink: "nunc et convallis congue"
+keyphrase: "nunc et convallis congue"
 ---
-
 Nam lacinia dictum felis, eget tempus purus faucibus in. Nunc scelerisque gravida viverra. Nulla interdum luctus iaculis. Aenean vitae mi leo. Suspendisse finibus molestie nibh. Duis pulvinar, nunc et convallis congue, erat lacus posuere neque, in euismod ex odio sit amet tortor. Sed erat felis, scelerisque id vulputate sed, dapibus non turpis. Duis in dolor mi. Sed aliquet nisl sed ex auctor tristique.
 
 <!--more-->

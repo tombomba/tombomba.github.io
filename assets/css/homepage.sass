@@ -3,20 +3,18 @@
 ---
 
 @charset "utf-8"
-@import reset, font, color, body, article, image, banner
+@import reset, font, color, body, article, banner-alt, footer-alt
 
 body
   padding: var(--shim) 1em
 
 article
-  margin-top: var(--shim--lg)
+  margin-top: var(--shim)
   section
     margin: var(--shim) 0
     p
       margin: 0
-      &.date
-        font-size: var(--fs--sm)
-        line-height: var(--lh--tight)
+      span.day
         color: $mix-color
         a:link, a:visited
           color: $mix-color
@@ -26,24 +24,3 @@ article
     div.hr
       width: 100%
       margin-top: var(--shim)
-
-footer
-  margin-top: var(--shim)
-  ul
-    display: flex
-    flex-flow: column
-    list-style-type: none
-    li
-      text-align: center
-      color: $mix-color
-      &.copyright
-        order: 99
-  div.hr
-    width: 100%
-
-//-----------------------------------------------------------------------------
-
-//@media screen and (min-width: 32rem)
-
-  article
-    

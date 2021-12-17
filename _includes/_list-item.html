@@ -1,1 +1,4 @@
-<li><a href="{{ include.url | absolute_url }}">{{ include.title | strip | strip_html | smartify | normalize_whitespace }}</a>&nbsp;&mdash;&nbsp;{{ include.excerpt | strip | strip_html | smartify | truncatewords:35 | normalize_whitespace }}</li>
+<li>
+  <h2><a href="{{ include.url | absolute_url }}">{{ include.title | strip | strip_html | smartify | normalize_whitespace }}</a></h2>
+  <p>{{ include.excerpt | strip | strip_html | smartify | normalize_whitespace }}</p>
+</li>

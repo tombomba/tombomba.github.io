@@ -1,0 +1,51 @@
+footer
+  margin-top: var(--shim)
+  ul.datelist
+    margin: var(--shim) 0
+    display: flex
+    flex-flow: row wrap
+    align-items: center
+    justify-content: center
+    list-style-type: none
+    li
+      &.year
+        font-weight: 700
+      &:not(:last-of-type)
+        margin-right: 0.66em
+  ul.nav
+    margin-top: var(--shim)
+    display: flex
+    flex-flow: column
+    list-style-type: none
+    li
+      text-align: center
+      color: $mix-color
+      &.copyright
+        order: 99
+        font-style: italic
+  div.hr
+    width: 100%
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 32rem)
+
+  footer
+    ul.datelist
+      li
+        line-height: var(--lh--tight)
+    ul.nav
+      flex-flow: row wrap
+      align-items: center
+      justify-content: center
+      li
+        font-size: var(--fs--sm)
+        line-height: var(--lh--tight)
+        &.copyright
+          order: -1
+        &:nth-last-child(-n+3)
+          padding-left: 0.25em
+          &::before
+            content: '-'
+            margin-right: 0.25em
+    

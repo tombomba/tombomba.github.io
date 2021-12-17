@@ -33,7 +33,7 @@ layout: default
   <article><!-- {{ copy | number_of_words }} -->
 
     {%- capture hedbox %}
-      <header>
+      <header class="{{ hedsize | default: 'sm' }}">
         <h1>{{ titlef }}</h1>
         <p>
     {% endcapture %}

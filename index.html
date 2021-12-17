@@ -5,7 +5,7 @@ is_home: true
 goog: true
 permalink: /index.html
 ---
-{% include banner.html %}
+{% include banner-alt.html %}
 
 <main role="main">
   <article>
@@ -14,29 +14,18 @@ permalink: /index.html
     {% unless forloop.first %}<div class="hr"></div>{% endunless %}
     <section>
     {% assign blurb = p.excerpt | strip | strip_html | smartify | truncatewords:100 | normalize_whitespace -%}
-    {% if p.meta.homelink %}
-      {% assign keyphrase = p.meta.homelink | strip | strip_html | smartify | normalize_whitespace %}
+    {% if p.keyphrase %}
+      {% assign match = p.keyphrase | strip | strip_html | smartify | normalize_whitespace %}
     {% else %}
-      {% assign keyphrase = blurb | truncatewords: 3, '' | smartify %}
+      {% assign match = blurb | truncatewords: 3, '' | smartify %}
     {% endif -%}
-    {% capture link %}<a href="{{ p.url | absolute_url }}">{{ keyphrase }}</a>{% endcapture -%}
+    {% capture link %}<a href="{{ p.url | absolute_url }}">{{ match }}</a>{% endcapture -%}
 
-    <p class="blurb">{{ blurb | replace_first: keyphrase, link }}</p>
-
+    <p class="blurb">{{ blurb | replace_first: match, link }}</p>
     </section>
     {% endfor -%}
 
   </article>
 </main>
 
-<footer>
-  <div class="hr"></div>
-  <div class="hr"></div>
-  <ul>
-    <li class="copyright">Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</li>
-    <li><a href="{{ 'about' | absolute_url }}">About</a></li>
-    <li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li>
-    <li><a href="https://letterboxd.com/{{ site.socials }}">Letterboxd</a></li>
-    <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
-  </ul>
-</footer>
+{% include footer-alt.html %}

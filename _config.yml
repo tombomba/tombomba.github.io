@@ -20,7 +20,7 @@ safe: true
 future: false
 theme: null
 
-permalink: /:short_year/:month/:title/
+permalink: /:short_year/:month/:title:output_ext
 timezone: America/Los_Angeles
 
 collections:

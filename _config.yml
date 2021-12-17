@@ -23,6 +23,12 @@ theme: null
 permalink: /:short_year/:month/:title/
 timezone: America/Los_Angeles
 
+collections:
+  archives:
+    collections_dir: _archives
+    output: true
+    permalink: "/:path/"
+
 defaults:
   -
     scope:
@@ -31,6 +37,14 @@ defaults:
     values:
       layout: post
       is_post: true
+      goog: true
+  -
+    scope:
+      path: ""
+      type: "archives"
+    values:
+      layout: "archive"
+      style: "archive"
       goog: true
 
 excerpt_separator: <!--more-->

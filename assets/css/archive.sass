@@ -3,31 +3,47 @@
 ---
 
 @charset "utf-8"
-@import reset, font, color, body, article, image, banner, footer
+@import reset, font, color, body, article, banner-alt, footer-alt
 
 body
-  padding: 2em 1em
+  padding: var(--shim) 1em
 
 article
-  margin-top: var(--shim--lh)
+  margin-top: var(--shim)
   header
     h1
-      font-size: var(--hs--md)
+      font-size: var(--hs)
       line-height: var(--lh--tight)
-    p
-      margin: 0
-      color: $mix-color
   ul
     margin: 0
     list-style-type: none
-    li:first-of-type
-      margin-top: 2em
-  div.hr.double
-    margin-top: 2em
+    li
+      h2, p
+        display: inline
+      h2
+        font-size: 1em
+        line-height: var(--lh)
+        &::after
+          content: "\00A0\2014\20"
+          font-weight: 400
+          color: $mix-color
+      p
+        margin: 0
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30em)
 
   body
-    padding: 2em
+    padding: var(--shim) 2em
+
+  article
+    ul
+      li
+        margin-top: var(--shim)
+        h2, p
+          display: block
+        h2
+          //line-height: var(--lh--tight)
+          &::after
+            content: ''

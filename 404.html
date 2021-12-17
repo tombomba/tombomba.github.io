@@ -9,7 +9,7 @@ permalink: /404.html
 ---
 {% capture txt %}
 If you're having trouble locating a destination, try visiting the
-[homepage]({{ site.url }}) or browsing this [list of recent posts]({{ 'posts' | absolute_url }}).
+[homepage]({{ site.url }}) or browsing posts from [this month]({{ site.posts.first.date | date: '%y/%m' | absolute_url }}) or [this year]({{ site.posts.first.date | date: '%y' | absolute_url }}).
 {% endcapture -%}
 
 <header role="banner">

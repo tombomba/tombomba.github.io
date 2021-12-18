@@ -29,8 +29,8 @@ defaults:
       path: ""      # empty string for all files
       type: posts   # limit to posts
     values:
-      layout: bahoo
-      is_post: true # automatically set is_post=true for all posts
+      layout: post
+      is_post: true
       goog: true
 
 excerpt_separator: <!--more-->

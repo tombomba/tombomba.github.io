@@ -1,6 +1,6 @@
 ---
 layout: default
-style: bahoo
+style: homepage
 is_home: true
 goog: true
 permalink: /index.html
@@ -9,10 +9,23 @@ permalink: /index.html
 
 <main role="main">
   <article>
-    <ul>
-      {% for x in site.posts limit:7 %}{% include _list-item.html title=x.title url=x.url excerpt=x.excerpt %}{% endfor -%}
-      <li><a href="{{ 'posts' | absolute_url }}">More&hellip;</a></li>
-    </ul>
+    
+    {% for p in site.posts limit: 10 %}
+    {% unless forloop.first %}<div class="hr"></div>{% endunless %}
+    <section>
+    {% assign blurb = p.excerpt | strip | strip_html | smartify | truncatewords:100 | normalize_whitespace -%}
+    {% if p.meta.homelink %}
+      {% assign keyphrase = p.meta.homelink | strip | strip_html | smartify | normalize_whitespace %}
+    {% else %}
+      {% assign keyphrase = blurb | truncatewords: 3, '' | smartify %}
+    {% endif -%}
+    {% capture link %}<a href="{{ p.url | absolute_url }}">{{ keyphrase }}</a>{% endcapture -%}
+
+    <p class="blurb">{{ blurb | replace_first: keyphrase, link }}</p>
+
+    </section>
+    {% endfor -%}
+
   </article>
 </main>
 

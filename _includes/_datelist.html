@@ -1,15 +1,19 @@
-{% assign prev_mo = '99' %}
-{% assign prev_yr = '99' %}
-{% assign sorted = site.posts | sorted %}
-{% for item in sorted %}
-  {% assign curr_mo = item.date | date: '%m' %}
-  {% assign curr_yr = item.date | date: '%y' %}
-  {%- if curr_yr != prev_yr %}
-    <li class="year"><a href="{{ item.date | date: '%b' | absolute_url }}">{{ item.date | date: '%Y' }}</a></li>
+{% if include.year -%}
+  {% assign curr_yr = include.year | times: 1 -%}
+{% else -%}
+  {% assign curr_yr = site.posts.first.date | date: '%Y' | times: 1 -%}
+{% endif -%}
+
+<li class="year"><a href="{{ curr_yr | slice: -2,2 | absolute_url }}">{{ curr_yr }}</a></li>
+
+{% assign prev_mo = 99 | times: 1 -%}
+{% for item in site.posts reversed -%}
+  {% assign post_mo = item.date | date: '%m' | times: 1 -%}
+  {% assign post_yr = item.date | date: '%Y' | times: 1 -%}
+  {% if post_yr == curr_yr -%}
+    {% if prev_mo != post_mo -%}
+      <li><a href="{{ item.date | date: '%y/%m' | absolute_url }}">{{ item.date | date: '%b' }}</a></li>
+    {% endif -%}
   {% endif -%}
-  {%- if curr_mo != prev_mo %}
-    <li><a href="{{ item.date | date: '%y/%m' | absolute_url }}">{{ item.date | date: '%b' }}</a></li>
-  {% endif -%}
-  {% assign prev_mo = curr_mo %}
-  {% assign prev_yr = curr_yr %}
+  {% assign prev_mo = post_mo -%}
 {% endfor -%}

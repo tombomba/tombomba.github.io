@@ -1,20 +1,19 @@
 ---
+layout: default
 style: archive
 is_home: true
 goog: true
 permalink: /index.html
 ---
-{% include htm-open.html %}
-{% include std-banner.html %}
+{% include banner.html %}
 
 <main role="main">
   <article>
     <ul>
-      {% for x in site.posts limit:7 %}{% include --display-list-item.html title=x.title url=x.url excerpt=x.excerpt %}{% endfor -%}
+      {% for x in site.posts limit:7 %}{% include _list-item.html title=x.title url=x.url excerpt=x.excerpt %}{% endfor -%}
       <li><a href="{{ 'posts' | absolute_url }}">More&hellip;</a></li>
     </ul>
   </article>
 </main>
 
-{% include std-footer.html %}
-{% include htm-close.html %}
+{% include footer.html %}

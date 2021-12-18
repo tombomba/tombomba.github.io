@@ -1,11 +1,5 @@
 <footer>
   <div class="hr"></div>
-  <ul>
-    <li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li>
-    <li><a href="https://letterboxd.com/{{ site.socials }}">Letterboxd</a></li>
-    <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
-  </ul>
-
   <div class="copydate">
     {% if page.is_post %}
       <p>This page published {{ page.date | date_to_long_string }}</p>

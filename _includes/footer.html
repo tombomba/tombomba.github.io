@@ -10,7 +10,7 @@
     {% if page.is_post %}
       <p>This page published {{ page.date | date_to_long_string }}</p>
     {% else -%}
-      <p>{{ site.title }} updated {{ site.posts.first.date | date: '%-d %b %Y' }}</p>
+      <p>{{ site.title }} updated {{ site.posts.first.date | date_to_long_string }}</p>
     {% endif %}
 
     <p>Copyright &copy; <a href="{{ 'about' | absolute_url }}" aria-label="About the author">{{ site.author }}</a></p>

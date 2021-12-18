@@ -1,0 +1,3 @@
+{% capture datef %}<span class="datestamp">&nbsp;(<time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date: '%-d %b' }}</time>)</span>{% endcapture -%}
+{% assign copysize = copy | size | minus: 4 %}
+{% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}

@@ -9,16 +9,15 @@ body
   padding: var(--shim) 1em
 
 article
-  margin-top: var(--shim)
+  margin-top: var(--shim--lg)
   header
     h1,p
       display: inline
     h1
       font-size: 1em
       line-height: var(--lh)
-      &::after
-        content: '\00A0\2014\020'
-        font-weight: 400
+    span.punc::after
+      content: '.\020'
   span.datestamp
     font-style: italic
     color: $mix-color

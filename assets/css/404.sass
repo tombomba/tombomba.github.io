@@ -6,7 +6,7 @@
 @import reset, font, color, body, article
 
 body
-  padding: 2em 1em
+  padding: var(--shim) 1em
 
 header[role="banner"]
   h1
@@ -19,13 +19,13 @@ header[role="banner"]
     text-shadow: none
 
 article
-  margin-top: 2rem
+  margin-top: var(--shim)
   ul
     li
       margin-top: 0
 
 footer
-  margin-top: 2rem
+  margin-top: var(--shim)
   p
     margin-top: 0
     font-size: var(--fs--sm)
@@ -33,7 +33,7 @@ footer
     a:link, a:visited
       color: $mix-color
   div.hr
-    margin-bottom: 2rem
+    margin-bottom: var(--shim)
 
 //-----------------------------------------------------------------------------
 

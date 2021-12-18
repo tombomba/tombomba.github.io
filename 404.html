@@ -1,6 +1,7 @@
 ---
-style: 404
-title: "404! 💥"
+layout: default
+style: "404"
+title: "404!"
 excerpt: "404 Error: Page Not Found"
 goog: false
 emoji: '💥'
@@ -11,10 +12,8 @@ If you're having trouble locating a destination on _{{ site.title }},_ try visit
 [homepage]({{ site.url }}) or browsing this [list of recent posts]({{ 'posts' | absolute_url }}).
 {% endcapture -%}
 
-{% include htm-open.html %}
-
 <header role="banner">
-  <h1>{{ page.title }}</h1>
+  <h1>{{ page.title }} 💥</h1>
 </header>
 
 <main role="main">
@@ -31,8 +30,6 @@ If you're having trouble locating a destination on _{{ site.title }},_ try visit
 
 <footer>
   <div class="hr"></div>
-  <p>{{ site.title }} last updated {{ site.posts.first.date | date: '%-d %b %Y' }}</p>
+  <p>{{ site.title }} updated {{ site.posts.first.date | date_to_long_string }}</p>
   <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} <a href="{{ 'about' | absolute_url }}">{{ site.author }}</a></p>
 </footer>
-
-{% include htm-close.html %}

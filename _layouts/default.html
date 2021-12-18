@@ -13,7 +13,7 @@
   {% if page.id %}<link rel="canonical" href="{{ page.url | default: '' | absolute_url }}">{% endif %}
 
   <!-- icons -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 105 55'><text y='.80em' font-size='80'>{{ page.emoji | default: '🗑️' }}</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 105 55'><text y='.80em' font-size='80'>{{ page.emoji | default: site.emoji }}</text></svg>">
 
   <!-- rss (atom) feed -->
   <link rel="alternate" title="{{ site.title }}" type="application/atom+xml" href="{{ 'feed.xml' | absolute_url }}">
@@ -38,7 +38,13 @@
   {%- endunless %}
 
   <!-- css -->
-  <link rel="stylesheet" href="{{ page.style | default: page.layout | prepend: site.css | append: '.css' }}">
+  <link rel="stylesheet" href="{{ page.style | default: 'bahoo' | prepend: site.css | append: '.css' }}">
+
+  {% if page.goog %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap&text={{ site.title | upcase }}{{ site.name | upcase }}" rel="stylesheet">
+  {% endif %}
 
 </head>
 

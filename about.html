@@ -1,4 +1,5 @@
 ---
+layout: default
 style: about
 title: "About"
 excerpt: "About the author"
@@ -16,8 +17,6 @@ _{{ site.name }}_ is intentionally basic, a sorta mental note to myself not to w
 The site was built on an old Mac using Jekyll, VS Code, and Pixelmator, while listening to KCRW Los
 Angeles.{% endcapture -%}
 
-{% include htm-open.html %}
-
 <main role="main">
   <article>
   <a href="{{ site.url }}"><img src="{{ 'bomtomba-400x400.png' | prepend: site.img }}" width=200 height=200 alt="{{ site.title | upcase }} DOT COM"></a>
@@ -31,5 +30,3 @@ Angeles.{% endcapture -%}
   <div class="hr"></div>
   <p><a href="{{ site.url }}">{{ site.title }}</a> &copy;&nbsp;{{ site.author | replace: ' ', '&nbsp;' }}</p>
 </footer>
-
-{% include htm-close.html %}

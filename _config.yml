@@ -1,8 +1,9 @@
-title: "Trash"
+title: "Trash Diary"
+name: "Trash!"
 description: "A media diary, a small collage, a dumb blog"
 domain: "www.trashdiary.com"
 
-emoji: "🗑️"
+emoji: "✨"
 
 url: "https://www.trashdiary.com"
 cdn: "https://www.trashdiary.com/assets/"
@@ -19,7 +20,7 @@ safe: true
 future: false
 theme: null
 
-permalink: /posts/:title:output_ext
+permalink: /:short_year/:month/:title/
 timezone: America/Los_Angeles
 
 defaults:

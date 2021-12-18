@@ -1,30 +1,47 @@
 ---
 layout: default
 ---
-
 {% assign copy = content | strip | normalize_whitespace %}
-{% include --generate-titlef.html title=page.title -%}
+{% assign raw = page.title | strip | normalize_whitespace %}
 
-{% if copy contains '<p><img' %}
-  {% assign copy = copy | replace: '<p><img','<img' | replace: ' /></p>','>' %}
-{% endif -%}
+{% assign punc = '!!QQ!!' %}
+{% assign lastchar = raw | slice: -1 %}
+{% case lastchar %}
+  {% when '"' or "'" or '\"' or "\'" %}
+    {% assign grabstring = raw.size | times: 1 | minus: 1 %}
+    {% assign raw = raw | slice: 0, grabstring | append: punc | append: lastchar %}
+  {% when '!' or '?' or '.' %}
+    {% comment %} make no changes to string {% endcomment %}
+  {% else %}
+    {% assign raw = raw | append: punc %}
+{% endcase -%}
 
-{% capture datef %}<span class="datestamp">&nbsp;(<time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date: '%-d %b' }}</time>)</span>{% endcapture -%}
-{% assign copysize = copy | size | minus: 4 %}
-{% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
+{%- include _titlef.html title=raw %}
+{%- include _kramdown-images.html %}
+
+{% assign titlef = titlef | replace_first: '!!QQ!!', '<span class="punc"></span>' -%}
 
 <header role="banner">
-  <h1><a href="{{ site.url }}">{{ site.title | upcase }}</a></h1>
+  <h1><a href="{{ site.url }}">{{ site.name }}</a></h1>
+  <div class="sparkle"></div>
 </header>
 
 <main role="main">
 
   <article><!-- {{ copy | number_of_words }} -->
 
-    {% capture hedbox %}<header class="{{ hedsize | default: 'full' }}"><h1>{{ titlef }}</h1><p>{% endcapture -%}
-    {% assign copy = copy | replace_first: '</p>','</p></header>' | replace_first: '<p>',hedbox -%}
-    {{ copy | strip | normalize_whitespace }}
+    {%- capture hedbox %}
+      <header>
+        <h1>{{ titlef }}</h1>
+        <p>
+    {% endcapture %}
+
+    {%- assign copy = copy | replace_first: '</p>','</p></header>' | replace_first: '<p>',hedbox | strip | normalize_whitespace %}
+    
+    {{ copy }}
 
   </article>
 
 </main>
+
+{% include std-footer.html %}

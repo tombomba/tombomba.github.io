@@ -1,12 +1,15 @@
-{% assign year = include.year | append: '-01-01' | default: site.posts.first.date | date: '%y' %}
-{% assign year_url = year | absolute_url %}
-
-{% assign startpoint = include.start | default: 1 | plus: 0 %}
-{% assign endpoint = include.end | default: 12 | plus: 0 -%}
-
-<li class="year"><a href="{{ year_url }}">20{{ year }}</a></li>
-{% for i in (startpoint..endpoint) -%}
-  {% assign i = i | plus: 0 -%}
-  {% if i > 9 %}{% assign month_url = i | prepend: '/' %}{% else %}{% assign month_url = i | prepend: '0' | prepend: '/' %}{% endif -%}
-  <li><a href="{{ year_url | append: month_url | absolute_url }}/">{{ i | prepend: '-' | prepend: year | append: '-01' | date: '%b' }}</a></li>
+{% assign prev_mo = '99' %}
+{% assign prev_yr = '99' %}
+{% assign sorted = site.posts | sorted %}
+{% for item in sorted %}
+  {% assign curr_mo = item.date | date: '%m' %}
+  {% assign curr_yr = item.date | date: '%y' %}
+  {%- if curr_yr != prev_yr %}
+    <li class="year"><a href="{{ item.date | date: '%b' | absolute_url }}">{{ item.date | date: '%Y' }}</a></li>
+  {% endif -%}
+  {%- if curr_mo != prev_mo %}
+    <li><a href="{{ item.date | date: '%y/%m' | absolute_url }}">{{ item.date | date: '%b' }}</a></li>
+  {% endif -%}
+  {% assign prev_mo = curr_mo %}
+  {% assign prev_yr = curr_yr %}
 {% endfor -%}

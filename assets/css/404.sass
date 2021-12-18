@@ -3,7 +3,7 @@
 ---
 
 @charset "utf-8"
-@import reset, font, color, body, article
+@import reset, font, color, body, article, footer
 
 body
   padding: var(--shim) 1em
@@ -26,6 +26,9 @@ article
 
 footer
   margin-top: var(--shim)
+  ul
+    margin-top: var(--shim)
+    display: none
   p
     margin-top: 0
     font-size: var(--fs--sm)
@@ -33,11 +36,11 @@ footer
     a:link, a:visited
       color: $mix-color
   div.hr
-    margin-bottom: var(--shim)
+    width: 100%
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30em)
 
   body
-    padding: 2em
+    padding: var(--shim) 2em

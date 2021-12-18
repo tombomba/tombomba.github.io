@@ -28,8 +28,4 @@ If you're having trouble locating a destination on _{{ site.title }},_ try visit
 
 </main>
 
-<footer>
-  <div class="hr"></div>
-  <p>{{ site.title }} updated {{ site.posts.first.date | date_to_long_string }}</p>
-  <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} <a href="{{ 'about' | absolute_url }}">{{ site.author }}</a></p>
-</footer>
+{% include footer.html %}

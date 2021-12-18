@@ -1,11 +1,25 @@
 //----------------------------------------------------------------------------
 
+//$key:           random(6)
+  $one-color:     #06F, #C06, #393, #f30, #09F, #099
+  $two-color:     #6FF, #FC0, #9F0, #FC0, #9F3, #FC0
+
+//$primary-color: nth($one-color, $key)
+  $secondary-color: nth($two-color, $key)
+  $select-color: $secondary-color
+
+//$logo-color:    nth($one-color, $key) !default
+  $shock-color:   nth($two-color, $key) !default
+  $select-color:  $shock-color !default
+
+//----------------------------------------------------------------------------
+
 $body-color:    #EAEAEA !default
 $text-color:    #161616 !default
 $shadow-color:  darken($body-color, 12%) !default
 
 $mix-color:     mix($body-color, $text-color, 36%) !default
-$bg-color:      darken($body-color, 5%) !default
+$bg-color:      darken($body-color, 7%) !default
 
 $logo-color:    #F00 !default
 $select-color:  #FFC !default
@@ -15,7 +29,7 @@ $visited-color: #800080 !default
 $active-color:  #F00 !default
 
 $border-dark:   #C0C0C0 !default
-$border-light:  #F3F3F3 !default
+$border-light:  #FBFBFB !default
 
 //----------------------------------------------------------------------------
 

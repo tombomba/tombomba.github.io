@@ -1,5 +1,4 @@
 ---
-layout: bahoo
 title: "Video killed the radio star"
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac orci vitae nulla egestas ultrices vel at arcu. Nullam posuere ipsum odio, sed commodo ipsum fringilla a.<!--more-->

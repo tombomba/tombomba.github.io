@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Recent posts"
 style: archive
 excerpt: "A short list of recent posts"
@@ -6,7 +7,7 @@ goog: false
 permalink: /posts/
 ---
 {% capture yearlist %}
-<ul class="archive"><!-- 30.44 days -->
+<ul><!-- 30.44 days -->
   {% assign scope = 2629743 %}
   {% assign today = site.posts.first.date | date: '%s' -%}
   {% for p in site.posts %}
@@ -35,12 +36,7 @@ permalink: /posts/
 {% capture titlef %}{{ endmonth }} {{ endday }}{% if endyear != startyear %},&nbsp;{{ endyear }}{% endif %}&ndash;{% if endmonth != startmonth %}{{ startmonth }}&nbsp;{% endif %}{{ startday }}, {{ startyear }}{% endcapture %}
 {% assign titlef_override = titlef | replace: '&nbsp;', ' ' | replace: '&ndash;', '-' %}
 
-{% include htm-open.html %}
-
-<header role="banner">
-  <div class="icon"><a href="{{ site.url }}"><img src="{{ 'trash-diary.png' | prepend: site.img }}" width="48" height="48" alt="{{ site.title }}"></a></div>
-  <div class="hr"></div>
-</header>
+{% include banner.html %}
 
 <main role="main">
 
@@ -58,5 +54,4 @@ permalink: /posts/
 
 </main>
 
-{% include std-footer.html %}
-{% include htm-close.html -%}
+{% include footer.html %}

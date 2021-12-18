@@ -9,7 +9,7 @@ body
   padding: var(--shim) 1em
 
 article
-  margin-top: var(--shim)
+  margin-top: calc(1em + var(--shim--sm))
   header
     h1
       font-size: var(--hs)
@@ -29,6 +29,8 @@ article
           color: $mix-color
       p
         margin: 0
+  div.hr
+    margin-top: var(--shim)
 
 //-----------------------------------------------------------------------------
 
@@ -44,6 +46,5 @@ article
         h2, p
           display: block
         h2
-          //line-height: var(--lh--tight)
           &::after
             content: ''

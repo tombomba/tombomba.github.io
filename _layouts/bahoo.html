@@ -1,8 +1,13 @@
 ---
 layout: default
 ---
-{% assign copy = content | strip | normalize_whitespace %}
-{% assign raw = page.title | strip | normalize_whitespace %}
+{% assign copy = content | strip | normalize_whitespace -%}
+{% assign raw = page.title | strip | normalize_whitespace -%}
+{% assign wordcount = copy | number_of_words -%}
+
+{% if wordcount > 200 %}
+  {% assign hedsize = 'md' %}
+{% endif -%}
 
 {% assign punc = '!!QQ!!' %}
 {% assign lastchar = raw | slice: -1 %}
@@ -31,7 +36,7 @@ layout: default
   <article><!-- {{ copy | number_of_words }} -->
 
     {%- capture hedbox %}
-      <header>
+      <header class="{{ hedsize | default: 'sm' }}">
         <h1>{{ titlef }}</h1>
         <p>
     {% endcapture %}

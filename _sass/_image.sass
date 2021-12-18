@@ -26,32 +26,27 @@ article > img
   display: block
   max-width: 100%
   height: auto
-  margin-top: var(--shim--lh)
-  margin-bottom: var(--shim--lh)
+  margin-top: var(--shim)
+  margin-bottom: var(--shim)
   background-color: $bg-color
   border-radius: 4px
   &.top
-    margin-top: var(--shim)
+    margin-top: var(--shim--sm)
   &.left,
   &.right,
   &.center
     margin-left: auto
     margin-right: auto
-  &.wide
-    margin-left: -1em
-    margin-right: -1em
-    border-radius: 0
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 23em)
+@media screen and (min-width: 25em)
 
   article > img
-
-    &.wide
-      margin-left: auto
-      margin-right: auto
-      border-radius: 4px
+    &.left,
+    &.right,
+      margin-left: 0
+      margin-right: 0
 
 //-----------------------------------------------------------------------------
 
@@ -59,7 +54,7 @@ article > img
 
   article > img
 
-    margin-top: calc(1em + var(--shim))
+    margin-top: 0
 
     &.wide
       margin-left: 0

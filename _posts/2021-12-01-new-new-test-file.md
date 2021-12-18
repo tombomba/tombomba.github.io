@@ -1,8 +1,14 @@
 ---
 title: "The quick brown fox jumps over the lazy dog"
+meta:
+  homelink: "nunc et convallis congue"
 ---
 
-Nam lacinia dictum felis, eget tempus purus faucibus in. Nunc scelerisque gravida viverra. Nulla interdum luctus iaculis. Aenean vitae mi leo. Suspendisse finibus molestie nibh.<!--more --> Duis pulvinar, nunc et convallis congue, erat lacus posuere neque, in euismod ex odio sit amet tortor. Sed erat felis, scelerisque id vulputate sed, dapibus non turpis. Duis in dolor mi. Sed aliquet nisl sed ex auctor tristique. Donec interdum vel ipsum sed ornare. Sed in felis auctor, accumsan odio non, luctus eros. In vulputate massa justo, at porttitor magna dapibus a. Integer euismod, dolor id rhoncus molestie, ligula tortor tempor lacus, a tempor odio neque vel sapien.
+Nam lacinia dictum felis, eget tempus purus faucibus in. Nunc scelerisque gravida viverra. Nulla interdum luctus iaculis. Aenean vitae mi leo. Suspendisse finibus molestie nibh. Duis pulvinar, nunc et convallis congue, erat lacus posuere neque, in euismod ex odio sit amet tortor. Sed erat felis, scelerisque id vulputate sed, dapibus non turpis. Duis in dolor mi. Sed aliquet nisl sed ex auctor tristique.
+
+<!--more-->
+
+Donec interdum vel ipsum sed ornare. Sed in felis auctor, accumsan odio non, luctus eros. In vulputate massa justo, at porttitor magna dapibus a. Integer euismod, dolor id rhoncus molestie, ligula tortor tempor lacus, a tempor odio neque vel sapien.
 
 Fusce porttitor rhoncus enim sed fringilla. Proin porttitor justo ac dolor condimentum ultrices. Sed facilisis pretium erat, non sollicitudin lorem efficitur quis. Nullam rhoncus urna non interdum pharetra. Suspendisse eget rhoncus purus. Nullam consequat nunc sit amet tortor tempus feugiat. In nec nisi pellentesque, tempus ipsum et, pharetra nibh. Aenean in vehicula neque, a gravida risus. Ut ac laoreet enim, vel eleifend orci. In magna diam, venenatis a feugiat placerat, rhoncus vel sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed velit odio, venenatis id magna vitae, gravida lacinia arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi at lobortis neque, vel condimentum mi. Quisque suscipit ante ut felis varius finibus. In vel tellus non est dictum fringilla.
 

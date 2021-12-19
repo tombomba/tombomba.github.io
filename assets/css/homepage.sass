@@ -16,24 +16,12 @@ article
       display: inline
     h1
       font-size: 1em
-      a:link, a:visited
-        color: $text-color
-        text-decoration: none
-      a:hover
-        text-decoration: underline
       &::after
         content: '\20'
-    span.punc::after
-      content: '.'
+      span.punc::after
+        content: '.'
     p
       margin: 0
-      span.day
-        color: $mix-color
-        a:link, a:visited
-          color: $mix-color
-          text-decoration: none
-        a:hover
-          text-decoration: underline
     div.hr
       width: 100%
       margin-top: var(--shim)

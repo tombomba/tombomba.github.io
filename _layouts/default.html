@@ -43,7 +43,7 @@
   {% if page.goog %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap&text={{ site.title | upcase }}{{ site.name | upcase }}!" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap&text={{ site.name | default: site.title | upcase | remove: ' ' }}!" rel="stylesheet">
   {% endif %}
 
 </head>

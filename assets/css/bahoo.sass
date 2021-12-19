@@ -9,15 +9,15 @@ body
   padding: var(--shim) 1em
 
 article
-  margin-top: var(--shim--lg)
+  margin-top: calc(var(--shim--lg) - var(--shim--xs))
   header
     h1,p
       display: inline
     h1
       font-size: 1em
       line-height: var(--lh)
-    span.punc::after
-      content: '.\020'
+      span.punc::after
+        content: '.\020'
   span.datestamp
     font-style: italic
     color: $mix-color
@@ -43,5 +43,7 @@ footer
       h1
         font-size: var(--hs)
         line-height: var(--lh--tight)
-      span.punc::after
-        content: ''
+        span.widont
+          white-space: nowrap
+        span.punc::after
+          content: ''

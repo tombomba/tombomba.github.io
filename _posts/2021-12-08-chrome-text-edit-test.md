@@ -1,7 +1,8 @@
 ---
 title: "This is a new page from chrome text editor"
-emoji: "🍕"
+dek: "I hope you know, this means war" 
 keyphrase: "Fusce turpis nulla"
+emoji: "🍕"
 fbog: test-image.jpg
 # {% include --fig.html file="test-image.jpg" width=768 height=482 %}
 ---

@@ -1,5 +1,6 @@
 ---
-title: "Brechtian who? Brechtian what?"
+title: "The quick brown fox jumps over the lazy dog"
+dek: "Brechtian who? Brechtian what?"
 keyphrase: "Ut ultrices arcu at justo sollicitudin"
 ---
 

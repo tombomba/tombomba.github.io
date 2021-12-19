@@ -2,29 +2,14 @@
 layout: default
 ---
 {% assign copy = content | strip | normalize_whitespace -%}
-{% assign raw = page.title | strip | normalize_whitespace -%}
 {% assign wordcount = copy | number_of_words -%}
+
+{% include _titlef.html title=page.title %}
+{% include _kramdown-images.html %}
 
 {% if wordcount > 150 %}
   {% assign hedsize = 'md' %}
 {% endif -%}
-
-{% assign punc = '!!QQ!!' %}
-{% assign lastchar = raw | slice: -1 %}
-{% case lastchar %}
-  {% when '"' or "'" or '\"' or "\'" %}
-    {% assign grabstring = raw.size | times: 1 | minus: 1 %}
-    {% assign raw = raw | slice: 0, grabstring | append: punc | append: lastchar %}
-  {% when '!' or '?' or '.' %}
-    {% comment %} make no changes to string {% endcomment %}
-  {% else %}
-    {% assign raw = raw | append: punc %}
-{% endcase -%}
-
-{%- include _titlef.html title=raw %}
-{%- include _kramdown-images.html %}
-
-{% assign titlef = titlef | replace_first: '!!QQ!!', '<span class="punc"></span>' -%}
 
 {% include banner.html %}
 
@@ -36,9 +21,9 @@ layout: default
       <header class="{{ hedsize | default: 'sm' }}">
         <h1>{{ titlef }}</h1>
         <p>
-    {% endcapture %}
+    {% endcapture -%}
 
-    {%- assign copy = copy | replace_first: '</p>','</p></header>' | replace_first: '<p>',hedbox | strip | normalize_whitespace %}
+    {%- assign copy = copy | replace_first: '</p>','</p></header>' | replace_first: '<p>',hedbox | strip | normalize_whitespace -%}
     
     {{ copy }}
 

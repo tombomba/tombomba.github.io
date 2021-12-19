@@ -34,12 +34,8 @@ permalink: /index.html
 
           {% capture linkphrase %}<a href="{{ p.url | absolute_url }}">{{ keyphrase }}</a>{% endcapture -%}
 
-          {% if p.plug %}
-            {% include _titlef.html title=p.plug %}
-          {% else %}
-            {% include _titlef.html title=p.title %}
-          {% endif -%}
-
+          {% include _titlef.html title=p.title -%}
+          
           <h1><a href="{{ p.url | absolute_url }}">{{ titlef }}</a></h1>
           <p>{{ blurb | replace_first: keyphrase, linkphrase }}</p>
         

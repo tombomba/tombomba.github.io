@@ -9,22 +9,24 @@ permalink: /index.html
 
 <main role="main">
   <article>
-    
     {% for p in site.posts limit:10 %}
     {% unless forloop.first %}<div class="hr"></div>{% endunless %}
     <section>
     {% assign blurb = p.excerpt | strip | strip_html | smartify | truncatewords:100 | normalize_whitespace -%}
     {% if p.keyphrase %}
-      {% assign match = p.keyphrase | strip | strip_html | smartify | normalize_whitespace %}
-    {% else %}
-      {% assign match = blurb | truncatewords: 3, '' | smartify %}
+      {% assign matchphrase = p.keyphrase | strip | strip_html | smartify | normalize_whitespace %}
+    {% else -%}
+      {% assign matchphrase = blurb | truncatewords: 3, '' | smartify %}
     {% endif -%}
-    {% capture link %}<a href="{{ p.url | absolute_url }}">{{ match }}</a>{% endcapture -%}
+    {% capture link %}<a href="{{ p.url | absolute_url }}">{{ matchphrase }}</a>{% endcapture -%}
 
-    <p class="blurb">{{ blurb | replace_first: match, link }}</p>
+    {% if p.dek %}{% include _titlef.html title=p.dek %}{% else %}{% include _titlef.html title=p.title %}{% endif -%}
+
+    <h1><a href="{{ p.url | absolute_url }}">{{ titlef }}</a></h1>
+    <p class="blurb">{{ blurb | replace_first: matchphrase, link }}</p>
+    
     </section>
-    {% endfor -%}
-
+    {% endfor %}
   </article>
 </main>
 

@@ -5,7 +5,6 @@ layout: default
 {% assign wordcount = copy | number_of_words -%}
 
 {% include _titlef.html title=page.title %}
-{% include _kramdown-images.html %}
 
 {% if wordcount > 150 %}
   {% assign hedsize = 'md' %}

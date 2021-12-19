@@ -65,7 +65,7 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - _notes
+  - _library
   - _snips
   - .gitignore
   - .DS_Store

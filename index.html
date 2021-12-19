@@ -23,8 +23,10 @@ permalink: /index.html
         {% unless forloop.first %}<div class="hr"></div>{% endunless %}
       
         <section>
-      
-          {% assign blurb = p.excerpt | strip | strip_html | smartify | truncatewords: 150 | normalize_whitespace -%}
+
+          {% include _titlef.html title=p.title -%}
+
+          {% assign blurb = p.excerpt | strip | strip_html | smartify | normalize_whitespace -%}
 
           {% if p.keyphrase %}
             {% assign keyphrase = p.keyphrase | strip | strip_html | smartify | normalize_whitespace %}
@@ -33,16 +35,14 @@ permalink: /index.html
           {% endif -%}
 
           {% capture linkphrase %}<a href="{{ p.url | absolute_url }}">{{ keyphrase }}</a>{% endcapture -%}
-
-          {% include _titlef.html title=p.title -%}
           
           <h1><a href="{{ p.url | absolute_url }}">{{ titlef }}</a></h1>
           <p>{{ blurb | replace_first: keyphrase, linkphrase }}</p>
         
         </section>
 
-      {% else -%}
-        {% break -%}
+      {% else %}
+        {% break %}
       {% endif -%}
 
     {% endfor -%}

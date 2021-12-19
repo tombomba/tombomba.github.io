@@ -1,0 +1,31 @@
+---
+layout: default
+style: homepage
+is_home: true
+goog: true
+permalink: /index.html
+published: false
+---
+{% include banner-alt.html %}
+
+<main role="main">
+  <article><!-- 30.44 days -->
+    <ul>
+
+    {% assign scope = 2629743 %}
+    {% assign today = site.posts.first.date | date: '%s' -%}
+    {% for p in site.posts %}
+      {% assign current = p.date | date: '%s' %}
+      {% assign range = today | times: 1 |  minus: current -%}
+      {% if scope > range %}
+        {% include _list-item.html title=p.title excerpt=p.excerpt date=p.date url=p.url %}
+      {% else %}
+        {% break %}
+      {% endif %}
+    {% endfor -%}
+
+    </ul>
+  </article>
+</main>
+
+{% include footer-alt.html %}

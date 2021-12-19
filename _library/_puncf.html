@@ -1,0 +1,15 @@
+{% assign raw = include.title | default: 'Zoinks!' | strip | normalize_whitespace -%}
+
+{% assign punc = '!!SUPAPUNC!!' %}
+{% assign lastchar = raw | slice: -1 %}
+{% case lastchar %}
+  {% when '"' or "'" or '\"' or "\'" %}
+    {% assign grabsize = raw.size | times: 1 | minus: 1 %}
+    {% assign raw = raw | slice: 0, grabsize | append: punc | append: lastchar %}
+  {% when '!' or '?' or '.' %}
+    {% comment %} make no changes to string {% endcomment %}
+  {% else %}
+    {% assign raw = raw | append: punc %}
+{% endcase -%}
+
+{% assign puncf = raw | replace_first: '!!SUPAPUNC!!', '<span class="punc"></span>' -%}

@@ -1,0 +1,51 @@
+---
+layout: default
+style: homepage
+is_home: true
+goog: true
+permalink: /index.html
+published: false
+---
+{% include banner-alt.html %}
+
+<main role="main">
+  <article><!-- 30.44 days -->
+
+    {% assign scope = 2629743 %}
+    {% assign today = site.posts.first.date | date: '%s' -%}
+
+    {% for p in site.posts %}
+
+      {% assign current = p.date | date: '%s' %}
+      {% assign range = today | times: 1 |  minus: current -%}
+
+      {% if scope > range %}
+
+        {% unless forloop.first %}<div class="hr"></div>{% endunless %}
+      
+        <section>
+
+          {% assign blurb = p.excerpt | strip | strip_html | smartify | normalize_whitespace -%}
+
+          {% if p.keyphrase %}
+            {% assign keyphrase = p.keyphrase | strip | strip_html | smartify | normalize_whitespace %}
+          {% else %}
+            {% assign keyphrase = blurb | truncatewords: 3, '' | smartify | normalize_whitespace %}
+          {% endif -%}
+
+          {% capture linkphrase %}<a href="{{ p.url | absolute_url }}">{{ keyphrase }}</a>{% endcapture -%}
+          
+          <p>{{ blurb | replace_first: keyphrase, linkphrase }} <span class="daystamp">[<a href="{{ p.url | absolute_url }}">{{ p.date | date: '%d %b' }}</a>]</span></p>
+        
+        </section>
+
+      {% else %}
+        {% break %}
+      {% endif -%}
+
+    {% endfor -%}
+
+  </article>
+</main>
+
+{% include footer-alt.html %}

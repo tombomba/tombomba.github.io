@@ -1,0 +1,23 @@
+{% assign raw = include.title | default: 'Zoinks!' | strip | strip_html | normalize_whitespace -%}
+
+{% assign punc = '!!QQ!!' %}
+{% assign lastchar = raw | slice: -1 %}
+{% case lastchar %}
+  {% when '"' or "'" or '\"' or "\'" %}
+    {% assign grabstring = raw.size | times: 1 | minus: 1 %}
+    {% assign raw = raw | slice: 0, grabstring | append: punc | append: lastchar %}
+  {% when '!' or '?' or '.' %}
+    {% comment %} make no changes to string {% endcomment %}
+  {% else %}
+    {% assign raw = raw | append: punc %}
+{% endcase -%}
+
+{% assign t = raw | split: ' ' -%}
+{% if t.size > 1 %}
+  {% assign sub = t.last | prepend: '!QQ!' -%}
+  {% assign titlef = t | pop | push: sub | join: ' ' | replace: ' !QQ!', '&nbsp;' -%}
+{% else -%}
+  {% assign titlef = t[0] %}
+{% endif -%}
+
+{% assign titlef = titlef | smartify | replace_first: '!!QQ!!', '<span class="punc"></span>' -%}

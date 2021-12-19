@@ -3,7 +3,7 @@
 ---
 
 @charset "utf-8"
-@import reset, font, color, body, article, image, banner, footer
+@import reset, font, color, body, article, image, banner
 
 body
   padding: var(--shim) 1em
@@ -29,6 +29,15 @@ article
 
 footer
   margin-top: var(--shim)
+  ul
+    display: flex
+    flex-flow: column
+    list-style-type: none
+    li
+      text-align: center
+      color: $mix-color
+      &.copyright
+        order: 99
   div.hr
     width: 100%
 

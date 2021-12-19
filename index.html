@@ -10,7 +10,7 @@ permalink: /index.html
 <main role="main">
   <article>
     
-    {% for p in site.posts limit: 10 %}
+    {% for p in site.posts limit:10 %}
     {% unless forloop.first %}<div class="hr"></div>{% endunless %}
     <section>
     {% assign blurb = p.excerpt | strip | strip_html | smartify | truncatewords:100 | normalize_whitespace -%}
@@ -29,4 +29,14 @@ permalink: /index.html
   </article>
 </main>
 
-{% include footer.html %}
+<footer>
+  <div class="hr"></div>
+  <div class="hr"></div>
+  <ul>
+    <li class="copyright">Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</li>
+    <li><a href="{{ 'about' | absolute_url }}">About</a></li>
+    <li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li>
+    <li><a href="https://letterboxd.com/{{ site.socials }}">Letterboxd</a></li>
+    <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
+  </ul>
+</footer>

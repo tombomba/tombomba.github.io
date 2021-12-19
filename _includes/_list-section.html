@@ -1,0 +1,5 @@
+<section>
+  {% include _titlef.html title=include.title -%}
+  <h1><a href="{{ include.url | absolute_url }}">{{ titlef }}</a></h1>
+  <p>{{ include.excerpt | strip | strip_html | smartify | truncatewords: 100 | normalize_whitespace }}{% if include.date %} <span class="daystamp">[<a href="{{ include.url | absolute_url }}">{{ include.date | date: '%d %b' }}</a>]</span>{% endif %}</p>
+</section>

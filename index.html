@@ -1,11 +1,14 @@
 ---
 layout: default
-style: homepage
+style: directory
 is_home: true
 goog: true
 permalink: /index.html
 ---
-{% include banner-alt.html %}
+<header role="banner" class="embiggen">
+  <h1><a href="{{ site.url }}">{{ site.name | default: site.title }}!</a></h1>
+  <div class="hr"></div>
+</header>
 
 <main role="main">
   <article><!-- 30.44 days -->
@@ -19,17 +22,8 @@ permalink: /index.html
       {% assign range = today | times: 1 |  minus: current -%}
 
       {% if scope > range %}
-
         {% unless forloop.first %}<div class="hr"></div>{% endunless %}
-      
-        <section>
-
-          {% include _titlef.html title=p.title -%}
-          
-          <h1><a href="{{ p.url | absolute_url }}">{{ titlef }}</a></h1>
-          <p>{{ p.excerpt | strip | strip_html | smartify | truncatewords: 100 | normalize_whitespace }} <span class="daystamp">[<a href="{{ p.url | absolute_url }}">{{ p.date | date: '%d %b' }}</a>]</span></p>
-        
-        </section>
+        {% include _list-section.html title=p.title excerpt=p.excerpt date=p.date url=p.url %}
 
       {% else %}
         {% break %}

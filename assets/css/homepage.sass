@@ -3,28 +3,13 @@
 ---
 
 @charset "utf-8"
-@import reset, font, color, body, article, banner-alt, footer-alt
+@import reset, font, color, body, article, section, banner-alt, footer-alt
 
 body
   padding: var(--shim) 1em
 
 article
   margin-top: var(--shim)
-  section
-    margin: var(--shim) 0
-    h1, p
-      display: inline
-    h1
-      font-size: 1em
-      &::after
-        content: '\20'
-      span.punc::after
-        content: '.'
-    p
-      margin: 0
-    div.hr
-      width: 100%
-      margin-top: var(--shim)
 
 //-----------------------------------------------------------------------------
 
@@ -38,8 +23,5 @@ article
 
 @media screen and (min-width: 30em)
 
-  article
-    section
-      h1
-        span.widont
-          white-space: nowrap
+  body
+    padding: var(--shim) 2em

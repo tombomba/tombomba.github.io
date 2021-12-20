@@ -44,6 +44,7 @@ defaults:
       type: "archives"
     values:
       layout: "directory"
+      is_page: true
       goog: true
 
 excerpt_separator: <!--more-->

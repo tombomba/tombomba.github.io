@@ -13,7 +13,7 @@ article
   header
     margin-top: var(--shim)
     h1
-      font-size: var(--hs)
+      font-size: var(--hs--md)
       line-height: var(--lh--flat)
   section
     margin-top: var(--shim)
@@ -23,9 +23,8 @@ article
       font-size: 1em
       &::after
         content: '\00A0\2014\20'
+        font-weight: 400
         color: $mix-color
-      //span.punc::after
-        content: '.'
     p
       margin: 0
   img.xo
@@ -49,6 +48,10 @@ article
 
   body
     padding: var(--shim) 2em
+
+  header[role="banner"]
+    h1
+      font-size: var(--hs--xl)
 
   article
     section

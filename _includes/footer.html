@@ -2,7 +2,7 @@
   <div class="hr"></div>
   <div class="copydate">
     {% if page.is_post %}
-      <p>This page published {{ page.date | date_to_long_string }}</p>
+      <p>This page published <time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
     {% else -%}
       <p>{{ site.title }} updated {{ site.posts.first.date | date_to_long_string }}</p>
     {% endif %}

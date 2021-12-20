@@ -1,8 +1,10 @@
 <footer>
+  {% unless page.is_post %}
   <div class="hr"></div>
   <ul class="datelist">
   {% include _datelist.html year=2021 %}
   </ul>
+  {% endunless %}
   <div class="hr"></div>
   <ul class="nav">
     <li class="copyright">Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</a></li>

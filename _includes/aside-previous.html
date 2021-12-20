@@ -1,0 +1,15 @@
+<aside><!-- next/ previous -->
+  <div class="hr"></div>
+  {% if include.previous %}
+    <div class="np prev">
+      <h2>Previous</h2>
+      <p><a href="{{ include.previous.url | absolute_url }}">{{ include.previous.title | strip | strip_html | smartify | normalize_whitespace }}</a></p>
+    </div>
+  {% endif -%}
+  {% if include.next %}
+    <div class="np next">
+      <h2>Next</h2>
+      <p><a href="{{ include.next.url | absolute_url }}">{{ include.next.title | strip | strip_html | smartify | normalize_whitespace }}</a></p>
+    </div>
+  {% endif -%}
+</aside>

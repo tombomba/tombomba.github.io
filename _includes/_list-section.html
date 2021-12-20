@@ -1,5 +1,4 @@
 <section>
-  {% include _titlef.html title=include.title -%}
-  <h1><a href="{{ include.url | absolute_url }}">{{ titlef }}</a></h1>
-  <p>{{ include.excerpt | strip | strip_html | smartify | truncatewords: 100 | normalize_whitespace }}{% if include.date %} <span class="daystamp">[<a href="{{ include.url | absolute_url }}">{{ include.date | date: '%d %b' }}</a>]</span>{% endif %}</p>
+  <h1><a href="{{ include.url | absolute_url }}">{{ include.title | strip | strip_html | smartify | normalize_whitespace }}</a></h1>
+  <p>{{ include.excerpt | truncatewords: 100 | strip | strip_html | smartify | normalize_whitespace }}{% if include.date %}&nbsp;<span class="daystamp">(<a href="{{ include.url | absolute_url }}">{{ include.date | date: '%d %b' }}</a>)</span>{% endif %}</p>
 </section>

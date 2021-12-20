@@ -1,0 +1,60 @@
+---
+#
+---
+
+@charset "utf-8"
+@import reset, font, color, body, article, figure, banner, footer
+
+body
+  padding: var(--shim) 1em
+
+article
+  margin-top: var(--shim)
+  header
+    h1,p
+      display: inline
+    h1
+      font-size: 1em
+      line-height: var(--lh)
+      span.punc::after
+        content: '.\020'
+  figure
+    margin-bottom: var(--shim--sm)
+    figcaption
+      margin-top: 12px
+      font-size: var(--fs--xs)
+      line-height: var(--lh--tight)
+aside
+  margin-top: var(--shim)
+  div.prev
+    margin-top: var(--shim)
+  div.np
+    h2, p
+      margin: 0
+    h2
+      font-size: 1em
+      line-height: var(--lh--tight)
+    &.next
+      margin-top: var(--shim)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 23em)
+
+  figure.narrow
+    max-width: calc(var(--page-width) / 2)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30em)
+
+  aside
+    div.np
+      h2, p
+        display: inline
+      h2
+        line-height: var(--lh)
+        &::after
+          content: ':\20'
+      &.next
+        margin-top: 0

@@ -43,8 +43,7 @@ defaults:
       path: ""
       type: "archives"
     values:
-      layout: "archive"
-      style: "directory"
+      layout: "directory"
       goog: true
 
 excerpt_separator: <!--more-->

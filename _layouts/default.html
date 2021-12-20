@@ -38,7 +38,7 @@
   {%- endunless %}
 
   <!-- css -->
-  <link rel="stylesheet" href="{{ page.style | default: 'bahoo' | prepend: site.css | append: '.css' }}">
+  <link rel="stylesheet" href="{{ page.style | default: page.layout | prepend: site.css | append: '.css' }}">
 
   {% if page.goog %}
   <!-- goog -->

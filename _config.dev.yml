@@ -10,4 +10,4 @@ css: "http://localhost:4000/assets/css/"
 
 safe: false
 future: true
-show_drafts: false
+show_drafts: true

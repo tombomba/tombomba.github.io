@@ -5,10 +5,7 @@ is_home: true
 goog: true
 permalink: /index.html
 ---
-<header role="banner" class="embiggen">
-  <h1><a href="{{ site.url }}">{{ site.name | default: site.title }}!</a></h1>
-  <div class="hr"></div>
-</header>
+{% include banner.html %}
 
 <main role="main">
   <article><!-- 30.44 days -->
@@ -34,4 +31,4 @@ permalink: /index.html
   </article>
 </main>
 
-{% include footer-alt.html %}
+{% include footer.html %}

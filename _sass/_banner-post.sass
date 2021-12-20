@@ -1,0 +1,42 @@
+header[role="banner"]
+  display: flex
+  flex-flow: row wrap
+  align-items: center
+  justify-content: flex-start
+  div.sparkle
+    height: auto
+    overflow: hidden
+    margin-left: var(--shim--xs)
+    &::after
+      content: '*:･ﾟ✧*:･ﾟ✧'
+      font-size: var(--fs)
+      line-height: var(--lh--flat)
+      color: $shadow-color
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 24em)
+
+  header[role="banner"]
+    h1
+      margin-left: -3px
+      font-size: var(--hs--xl)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 48em)
+
+  header[role="banner"]
+    h1,
+    div.sparkle
+      transform: rotate(-3deg)
+    div.sparkle
+      margin-bottom: 1.0625em
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 64em)
+
+  header[role="banner"]
+    h1
+      margin-left: -6px

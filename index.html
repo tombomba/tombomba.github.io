@@ -19,8 +19,7 @@ permalink: /index.html
       {% assign range = today | times: 1 |  minus: current -%}
 
       {% if scope > range %}
-        {% unless forloop.first %}<div class="hr"></div>{% endunless %}
-        {% include _list-section.html title=p.title excerpt=p.excerpt date=p.date url=p.url %}
+        {% include _list-section.html title=p.title excerpt=p.excerpt url=p.url %}
 
       {% else %}
         {% break %}

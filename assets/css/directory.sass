@@ -15,6 +15,18 @@ article
     h1
       font-size: var(--hs)
       line-height: var(--lh--flat)
+  section
+    margin: var(--shim) 0
+    h1, p
+      display: inline
+    h1
+      font-size: 1em
+      &::after
+        content: '\20'
+      span.punc::after
+        content: '.'
+    p
+      margin: 0
   img.ad
     display: block
     max-width: 100%
@@ -27,6 +39,7 @@ article
     outline-style: solid
     outline-color: inherit
   div.hr
+    width: 100%
     margin-top: var(--shim)
 
 //-----------------------------------------------------------------------------
@@ -35,3 +48,9 @@ article
 
   body
     padding: var(--shim) 2em
+
+  article
+    section
+      h1
+        span.widont
+          white-space: nowrap

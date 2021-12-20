@@ -1,0 +1,50 @@
+---
+layout: default
+---
+{% assign copy = content | strip | normalize_whitespace -%}
+{% assign wordcount = copy | number_of_words %}
+
+{% include banner.html %}
+{% include _titlef.html title=page.title -%}
+
+{% capture figure %}
+{% assign w = page.media.width | default: 640 | times: 1.0 %}
+{% assign h = page.media.height | default: 360 | times: 1.0 -%}
+<figure class="{% if h > w %}narrow{% else %}wide{% endif %}">
+  <!-- {{ w }} x {{ h }} | {{ h | divided_by: w | times: 100 | round: 2 }}% -->
+  <div class="aspectratio" style="--aspect-ratio:{{ w }}/{{ h }};">
+    <img src="{{ page.media.image | default: 'test-image.jpg' | prepend: site.img }}" alt="{{ page.media.alt | default: '' | strip_html | strip | normalize_whitespace | truncate:140 }}">
+  </div>
+  {% if page.media.caption %}<figcaption>{{ page.media.caption | strip | smartify | normalize_whitespace }}{% endif %}</figcaption>
+</figure>
+{% endcapture -%}
+
+{% capture datef %}<span class="daystamp">&nbsp;(<time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date: '%-d %b' }}</time>)</span>{% endcapture -%}
+{% assign copysize = copy | size | minus: 4 %}
+{% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
+
+<main role="main">
+
+  <article><!-- {{ copy | number_of_words }} -->
+
+    {{ figure | strip | normalize_whitespace }}
+    
+    {% capture hedbox %}
+      <header>
+        <h1>{{ titlef }}</h1>
+        <p>
+    {% endcapture -%}
+
+    {% assign copy = copy | replace_first: '</p>','</p></header>' | replace_first: '<p>',hedbox | strip | normalize_whitespace -%}
+    
+    {{ copy }}
+
+  </article>
+
+  {% if wordcount > 150 %}
+    {% include aside-previous.html previous=page.previous next=page.next %}
+  {% endif %}
+
+</main>
+
+{% include footer.html %}

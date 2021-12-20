@@ -16,18 +16,19 @@ article
       font-size: var(--hs)
       line-height: var(--lh--flat)
   section
-    margin: var(--shim) 0
+    margin-top: var(--shim)
     h1, p
       display: inline
     h1
       font-size: 1em
       &::after
-        content: '\20'
-      span.punc::after
+        content: '\00A0\2014\20'
+        color: $mix-color
+      //span.punc::after
         content: '.'
     p
       margin: 0
-  img.ad
+  img.xo
     display: block
     max-width: 100%
     height: auto

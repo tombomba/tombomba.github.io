@@ -1,37 +1,24 @@
 ---
-layout: default
-style: about
-title: "About"
+layout: suck
+title: "About Tom Bomba"
 excerpt: "About the author"
-fbog: bomtomba-400x400.png
-goog: false
+media: 
+  image: bomtomba-400x400.png
+  alt: "This is your life"
+goog: true
 emoji: '🎉'
 permalink: "/about/"
 ---
-{% capture bio %}There are quite a few critics online who are smart and skilled and say interesting things. This website is my attempt to join them. I made it for fun, but also to express ideas I don't see routinely expressed.
+{% capture bio %}
+
+There are quite a few critics online who are smart and skilled and say interesting things. This website is my attempt to join them. I made it for fun, but also to express ideas I don't see routinely expressed.
 
 My name is Tom Bomba. I knocked around NYU's cinema studies program before I "dropped out of college to get an education." I've spent my time since producing various forms of digital media.
 
-_{{ site.title }}_ is intentionally basic, the design a sorta mental note to myself not to write as if I'm submitting for publication. The name is a loose reference to an essay by Pauline Kael and a paper by Jeffrey Sconce.
+_{{ site.title }}_ is intentionally basic, the design a sorta mental note to myself not to write as if I'm submitting for publication. The name is a loose reference to work by Pauline Kael and Jeffrey Sconce.
 
-The site was built using VS Code and Pixelmator, while listening to KCRW Los&nbsp;Angeles.{% endcapture -%}
+The site was built using VS Code and Pixelmator, while listening to KCRW Los&nbsp;Angeles.
 
-<main role="main">
-  <article>
-    <img src="{{ 'bomtomba-400x400.png' | prepend: site.img }}" width=200 height=200 alt="{{ site.title | upcase }} DOT COM">
-    <h1>{{ page.title }} {{ site.title | replace: ' ', '&nbsp;' }}</h1>
-    <div class="hr"></div>
-    {{ bio | smartify | markdownify | strip | normalize_whitespace }}
-  </article>
-</main>
+{% endcapture -%}
 
-<footer>
-  <div class="hr"></div>
-  <ul>
-    <li><a href="{{ site.url }}">Home</a></li>
-    <li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li>
-    <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
-  </ul>
-  <div class="hr"></div>
-  <p>Copyright &copy;&nbsp;{{ site.posts.first.date | date: '%Y' }} {{ site.author | replace: ' ', '&nbsp;' }}</p>
-</footer>
+{{ bio | strip | smartify | markdownify | normalize_whitespace }}

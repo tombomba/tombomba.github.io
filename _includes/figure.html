@@ -5,5 +5,5 @@
   <div class="aspectratio" style="--percent:{{ percent }}%;">
     <img src="{{ include.media.image | default: 'test-image.jpg' | prepend: site.img }}" alt="{{ include.media.alt | default: '' | strip | normalize_whitespace }}">
   </div>
-  {% if include.media.caption %}<figcaption>{{ include.media.caption | strip | smartify | normalize_whitespace }}{% endif %}</figcaption>
+  {% if include.media.caption %}<figcaption>{{ include.media.caption | strip | smartify | markdownify | normalize_whitespace }}</figcaption>{% endif %}
 </figure>

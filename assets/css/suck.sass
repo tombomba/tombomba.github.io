@@ -3,7 +3,7 @@
 ---
 
 @charset "utf-8"
-@import reset, font-stack, color, font-16px, body, article
+@import reset, font-stack, font-16px, color, body, article
 
 \:root
   --page-width: 25em
@@ -22,7 +22,7 @@ header[role="banner"]
     font-size: var(--hs--lg)
 
 article
-  margin-top: calc(var(--shim) * 3)
+  margin-top: var(--shim--lg)
   header
     margin-top: var(--shim)
     h1
@@ -43,7 +43,7 @@ article
     margin-top: var(--shim)
 
 footer
-  margin-top: calc(var(--shim) * 3)
+  margin-top: var(--shim--lg)
   ul
     margin: 1em 0
     display: flex
@@ -56,7 +56,7 @@ footer
       &:not(:last-of-type)
         margin-right: 0.6875em
   p
-    margin-top: 1em
+    margin-top: var(--shim)
     font-size: var(--sm)
     line-height: var(--lh--tight)
     font-style: italic

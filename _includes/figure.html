@@ -1,8 +1,7 @@
 {% assign mw = include.media.width | default: 640 | times: 1.0 %}
 {% assign mh = include.media.height | default: 360 | times: 1.0 -%}
 {% assign percent = mh | divided_by: mw | times: 100 | round: 2 %}
-<figure class="{% if h > w %}narrow{% else %}wide{% endif %}">
-  <!-- {{ mw }} x {{ mh }} | {{ mh | divided_by: mw | times: 100 | round: 2 }}% -->
+<figure class="{% if h > w %}narrow{% else %}wide{% endif %}"><!-- {{ mw }} x {{ mh }} | {{ mh | divided_by: mw | times: 100 | round: 2 }}% -->
   <div class="aspectratio" style="--percent:{{ percent }}%;">
     <img src="{{ include.media.image | default: 'test-image.jpg' | prepend: site.img }}" alt="{{ include.media.alt | default: '' | strip | normalize_whitespace }}">
   </div>

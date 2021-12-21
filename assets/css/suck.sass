@@ -13,14 +13,16 @@ header[role="banner"]
   flex-flow: row wrap
   align-items: center
   justify-content: center
-  h1
-    font-size: var(--hs--md)
+  div.hr
+    width: 100%
+    margin: var(--shim--sm) 0
 
 article
+  margin-top: var(--shim--sm)
   header
     margin-top: var(--shim)
     h1
-      font-size: var(--hs--md)
+      font-size: var(--hs)
       line-height: var(--lh--tight)
       font-style: italic
       text-align: center
@@ -30,7 +32,7 @@ article
     margin-top: var(--shim)
   img
     display: block
-    margin: var(--shim--lg) auto 0 auto
+    margin: 0 auto
     border-radius: 50%
     background-color: $bg-color
   div.hr
@@ -39,6 +41,7 @@ article
 footer
   margin-top: var(--shim)
   ul
+    margin: 1em 0
     display: flex
     flex-flow: row wrap
     align-items: center
@@ -49,17 +52,12 @@ footer
       &:not(:last-of-type)
         margin-right: 0.6875em
   p
-    margin: 0
-    &:first-of-type
-      margin-top: var(--shim)
+    margin-top: var(--shim)
     font-style: italic
     text-align: center
     color: $mix-color
     a:link, a:visited
       color: $mix-color
-  div.hr
-    width: 100%
-    margin: var(--shim) 0
 
 //-----------------------------------------------------------------------------
 
@@ -67,3 +65,7 @@ footer
 
   body
     padding: var(--shim) 2em
+
+  //header[role="banner"]
+    h1
+      font-size: var(--hs--xl)

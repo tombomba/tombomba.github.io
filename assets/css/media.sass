@@ -16,7 +16,7 @@ article
       span.punc::after
         content: '.\020'
   figure
-    margin-bottom: var(--shim--tight)
+    margin-bottom: var(--shim)
     figcaption
       p
         font-size: var(--fs--xs)
@@ -29,3 +29,17 @@ article
   article
     figure.narrow
       max-width: calc(var(--page-width) / 2)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30em)
+
+  article
+    header.md
+      h1,p
+        display: block
+      h1
+        font-size: var(--hs)
+        line-height: var(--lh--tight)
+        span.punc::after
+          content: ''

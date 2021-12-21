@@ -1,9 +1,11 @@
 ---
-title: "Five wizards boxing a lazy fox and fat hound"
+layout: feature
+title: "We promptly judged antique ivory buckles for the next prize"
 media:
-  image: bomtomba-400x400.png
-  alt: "foo me!"
-date: 2021-12-19 12:34 -0700
+  image: test-image.jpg
+  alt: "A test image!"
+  caption: "Pack my box with five dozen liquor jugs (Warners, 1949)."
+date: 2021-12-21 09:34 -0700
 ---
 This is a test page in the newly unhidden drafts. Ut semper iaculis mauris a ultricies. Donec facilisis laoreet orci a facilisis.<!--more--> Pellentesque a nibh elit. Nam vitae ipsum at arcu elementum tincidunt. Proin et nisi mollis, convallis magna in, viverra neque. Aliquam erat volutpat. Proin consequat lorem a augue porttitor, ultricies imperdiet nunc interdum. Donec elementum mi sit amet nisi gravida, ut consectetur metus pulvinar.
 

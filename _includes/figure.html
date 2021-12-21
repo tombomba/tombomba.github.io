@@ -1,0 +1,9 @@
+{% assign w = include.media.width | default: 640 | times: 1.0 %}
+{% assign h = include.media.height | default: 360 | times: 1.0 -%}
+<figure class="{% if h > w %}narrow{% else %}wide{% endif %}">
+  <!-- {{ w }} x {{ h }} | {{ h | divided_by: w | times: 100 | round: 2 }}% -->
+  <div class="aspectratio" style="--aspect-ratio:{{ w }}/{{ h }};">
+    <img src="{{ include.media.image | default: 'test-image.jpg' | prepend: site.img }}" alt="{{ include.media.alt | default: '' | strip | normalize_whitespace }}">
+  </div>
+  {% if include.media.caption %}<figcaption>{{ include.media.caption | strip | smartify | normalize_whitespace }}{% endif %}</figcaption>
+</figure>

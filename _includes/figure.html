@@ -1,3 +1,4 @@
+{%- capture this_media -%}
 {% assign mw = include.media.width | default: 640 | times: 1.0 %}
 {% assign mh = include.media.height | default: 360 | times: 1.0 -%}
 {% assign percent = mh | divided_by: mw | times: 100 | round: 2 %}
@@ -7,3 +8,6 @@
   </div>
   {% if include.media.caption %}<figcaption>{{ include.media.caption | strip | smartify | markdownify | normalize_whitespace }}</figcaption>{% endif %}
 </figure>
+{%- endcapture -%}
+
+{{ this_media | strip | normalize_whitespace }}

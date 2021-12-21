@@ -42,7 +42,7 @@ article
         a:hover
           text-decoration: underline
   figure
-    margin: var(--shim--tight) 0
+    margin: var(--shim) 0
     figcaption
       p
         font-size: var(--fs--xs)
@@ -55,17 +55,16 @@ aside
     list-style-type: none
     li
       margin-top: var(--shim--tight)
+      &:first-of-type
+        margin-top: var(--shim)
       h2, p
         display: inline
       h2
         font-size: 1em
         &::after
-          content: '\202F\2014\202F'
+          content: '\00A0\2014\0020'
           font-weight: 400
           color: $mix-color 
-
-footer
-  margin-top: var(--shim)
 
 //-----------------------------------------------------------------------------
 

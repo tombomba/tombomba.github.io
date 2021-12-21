@@ -21,11 +21,17 @@ If you're having trouble locating a destination, try visiting the
   <article>
     <p>The page you requested was not found. Try one of these?</p>
     <ul>
-    {% for p in site.posts limit:5 %}<li><a href="{{ p.url | absolute_url }}">{{ p.title }}</a></li>{% endfor %}
+    {% for p in site.posts limit:5 %}<li><a href="{{ p.url | absolute_url }}">{{ p.title | strip | smartify | normalize_whitespace }}</a></li>{% endfor %}
     </ul>
-    {{ txt | smartify | markdownify | strip | normalize_whitespace }}
+    {{ txt | strip | smartify | markdownify | normalize_whitespace }}
   </article>
 
 </main>
 
-{% include footer.html %}
+<footer>
+  <div class="hr"></div>
+  <div class="copydate">
+    <p>{{ site.name }} last updated {{ site.posts.first.date | date_to_string }}</p>
+    <p>Copyright &copy; <a href="{{ 'about' | absolute_url }}" aria-label="About the author">{{ site.author }}</a></p>
+  </div>
+</footer>

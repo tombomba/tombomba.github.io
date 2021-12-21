@@ -1,0 +1,89 @@
+---
+#
+---
+
+@charset "utf-8"
+@import reset, font, color, body, article, figure, aside, footer
+
+header[role="banner"]
+  max-width: calc(var(--page-width) + var(--shim--double))
+  display: flex
+  flex-flow: row wrap 
+  align-items: center
+  justify-content: space-between
+  h1
+    margin: 0 var(--sliver)
+    font-size: var(--hs--md)
+  div.hr
+    flex: 1
+    width: 100%
+
+article
+  margin-top: calc(var(--shim) * 3)
+  header
+    h1
+      font-size: var(--hs)
+      line-height: var(--lh--tight)
+      text-align: center
+      span.widont
+        white-space: nowrap
+    div.byline
+      margin-top: 1em
+      p
+        margin-top: 0
+        font-size: var(--fs--sm)
+        &:first-of-type
+          line-height: var(--lh--tight)
+        text-align: center
+        color: $mix-color
+        a:link, a:visited
+          color: $mix-color
+          text-decoration: none
+        a:hover
+          text-decoration: underline
+  figure
+    margin: var(--shim--tight) 0
+    figcaption
+      p
+        font-size: var(--fs--xs)
+        line-height: var(--lh--tight)
+
+aside
+  margin-top: var(--shim)
+  ul
+    margin: 0
+    list-style-type: none
+    li
+      margin-top: var(--shim--tight)
+      h2, p
+        display: inline
+      h2
+        font-size: 1em
+        &::after
+          content: '\202F\2014\202F'
+          font-weight: 400
+          color: $mix-color 
+
+footer
+  margin-top: var(--shim)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 23em)
+
+  article
+    header
+      h1
+        font-size: var(--hs--md)
+    figure.narrow
+      max-width: calc(var(--page-width) / 2)
+      margin: 0 auto
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 60rem)
+
+  article
+    figure
+      margin-left: calc(var(--shim) * -1)
+      margin-right: calc(var(--shim) * -1)

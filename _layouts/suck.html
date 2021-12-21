@@ -7,22 +7,19 @@ layout: default
 
 <header role="banner">
   <h1><a href="{{ site.url }}">{{ site.name | default: site.title }}!</a></h1>
-  <div class="hr"></div>
 </header>
 
 <main role="main">
 
   <article><!-- {{ copy | number_of_words }} -->
 
-    <img src="{{ page.media.image | prepend: site.img }}" width="{{ page.media.width | default: 200 }}" height="{{ page.media.height | default: 200 }}" alt="{{ page.media.alt | default: '' }}">
+    <img src="{{ page.media.image | prepend: site.img }}" width="{{ page.media.width | default: 240 }}" height="{{ page.media.height | default: 240 }}" alt="{{ page.media.alt | default: '' }}">
 
     <header>
       <h1>{{ titlef }}</h1>
     </header>
 
     {{ figure | strip | normalize_whitespace }}
-
-    <div class="hr"></div>
 
     {{ copy }}
 

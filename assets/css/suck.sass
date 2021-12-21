@@ -3,7 +3,10 @@
 ---
 
 @charset "utf-8"
-@import reset, font-stack, color, font-16px, font-17px, body, article
+@import reset, font-stack, color, font-16px, body, article
+
+\:root
+  --page-width: 30em
 
 body
   padding: var(--shim) 1em
@@ -13,16 +16,15 @@ header[role="banner"]
   flex-flow: row wrap
   align-items: center
   justify-content: center
-  div.hr
-    width: 100%
-    margin: var(--shim--sm) 0
+  h1
+    font-size: var(--hs--lg)
 
 article
-  margin-top: var(--shim--sm)
+  margin-top: calc(var(--shim) * 3)
   header
     margin-top: var(--shim)
     h1
-      font-size: var(--hs)
+      font-size: var(--hs--md)
       line-height: var(--lh--tight)
       font-style: italic
       text-align: center
@@ -39,7 +41,7 @@ article
     margin-top: var(--shim)
 
 footer
-  margin-top: var(--shim)
+  margin-top: calc(var(--shim) * 3)
   ul
     margin: 1em 0
     display: flex
@@ -52,7 +54,9 @@ footer
       &:not(:last-of-type)
         margin-right: 0.6875em
   p
-    margin-top: var(--shim)
+    margin-top: 1em
+    font-size: var(--sm)
+    line-height: var(--lh--tight)
     font-style: italic
     text-align: center
     color: $mix-color
@@ -65,7 +69,3 @@ footer
 
   body
     padding: var(--shim) 2em
-
-  //header[role="banner"]
-    h1
-      font-size: var(--hs--xl)

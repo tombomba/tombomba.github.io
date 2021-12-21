@@ -1,6 +1,6 @@
 ---
 layout: suck
-title: "Five wizards boxing a lazy fox"
+title: "Five wizards boxing a lazy fox and fat hound"
 media:
   image: bomtomba-400x400.png
   alt: "foo me!"

@@ -13,15 +13,19 @@ header[role="banner"]
   flex-flow: row wrap
   align-items: center
   justify-content: center
+  h1
+    font-size: var(--hs--md)
 
 article
   header
     margin-top: var(--shim)
     h1
-      font-size: var(--hs)
+      font-size: var(--hs--md)
       line-height: var(--lh--tight)
       font-style: italic
       text-align: center
+      span.widont
+        white-space: nowrap
   p:first-of-type
     margin-top: var(--shim)
   img
@@ -56,14 +60,6 @@ footer
   div.hr
     width: 100%
     margin: var(--shim) 0
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 30em)
-
-  header[role="banner"]
-    h1
-      font-size: var(--hs--xl)
 
 //-----------------------------------------------------------------------------
 

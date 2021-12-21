@@ -5,9 +5,6 @@
 @charset "utf-8"
 @import reset, font, color, body, article, figure, aside, banner, footer
 
-body
-  padding: var(--shim) 1em
-
 article
   margin-top: var(--shim)
   header
@@ -31,10 +28,3 @@ article
 
   figure.narrow
     max-width: calc(var(--page-width) / 2)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 30em)
-
-  body
-    padding: var(--shim) 2em

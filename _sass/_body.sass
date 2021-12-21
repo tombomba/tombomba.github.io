@@ -13,6 +13,8 @@ body
   -ms-text-size-adjust: auto
   -webkit-text-size-adjust: auto
 
+  padding: var(--shim) 1em
+
 header[role="banner"],
 main[role="main"],
 aside,
@@ -57,3 +59,19 @@ time
   border-top: 1px solid $border-dark
   border-bottom: 2px solid $border-light
   background-color: $body-color
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30rem)
+
+  body
+    padding-left: 2em
+    padding-right: 2em
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 62rem)
+
+  body
+    padding-left: 0
+    padding-right: 0

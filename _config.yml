@@ -20,14 +20,8 @@ safe: true
 future: false
 theme: null
 
-permalink: /:short_year/:month/:title:output_ext
+permalink: /posts/:title:output_ext
 timezone: America/Los_Angeles
-
-collections:
-  archives:
-    collections_dir: _archives
-    output: true
-    permalink: "/:path/"
 
 defaults:
   -
@@ -46,8 +40,6 @@ defaults:
       layout: "directory"
       is_page: true
       goog: true
-
-excerpt_separator: <!--more-->
 
 markdown: kramdown
 kramdown:

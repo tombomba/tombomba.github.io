@@ -1,0 +1,33 @@
+
+{% assign title_arr = include.title | default: 'Oh noes!' | strip | normalize_whitespace | split: ' ' -%}
+{% assign new_title = '' | split: '' -%}
+
+{% for word in title_arr %}
+
+  {% if forloop.rindex == 2 %}
+    {% assign wordf = word | prepend: '!!WO!!' -%}
+
+  {% elsif forloop.rindex == 1 %}
+    {% assign lastchar = word | slice: -1 %}
+    {% case lastchar %}
+      {% when '"' or "'" %}
+        {% assign punc_word = word | append: '!!PUNC!!' | append: lastchar -%}
+      {% when '?' or '!' or '.' %}
+        {% assign punc_word = word -%}
+      {% else %}
+        {% assign punc_word = word | append: '!!PUNC!!' -%}
+    {% endcase -%}
+    {% assign wordf = punc_word | append: '!!WC!!' -%}
+  
+  {% else %}
+    {% assign wordf = word -%}
+  {% endif -%}
+
+  {% assign new_title = new_title | push: wordf -%}
+
+{% endfor -%}
+
+{% assign titlef = new_title | join: ' ' %}
+{% assign titlef = titlef | replace: '!!PUNC!!', '<span class="punc"></span>' %}
+{% assign titlef = titlef | replace: '!!WO!!', '<span class="widont">' %}
+{% assign titlef = titlef | replace: '!!WC!!', '</span>' | strip | normalize_whitespace -%}

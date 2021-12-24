@@ -12,18 +12,8 @@ header[role="banner"]
   flex-flow: row wrap
   align-items: center
   justify-content: flex-start
-  //div.sparkle
-    height: auto
-    overflow: hidden
-    margin-left: var(--sliver)
-    &::after
-      content: '*:･ﾟ✧*:･ﾟ✧'
-      font-size: var(--fs)
-      line-height: var(--lh--flat)
-      color: $shadow-color
 
 article
-  margin-top: calc(var(--shim--double) - var(--sliver))
   header
     h1,p
       display: inline
@@ -32,20 +22,10 @@ article
       line-height: var(--lh)
       span.punc::after
         content: '.\020'
-  span.datestamp
-    font-style: italic
-    color: $mix-color
-    a:link,
-    a:visited
-      color: $mix-color
-      text-decoration: none
-    a:hover
-      text-decoration: underline
 
 footer
-  margin-top: var(--shim--double)
+  margin-top: 4em
   div.copydate
-    margin-top: var(--shim--double)
     p
       margin-top: 0
       font-size: var(--fs--sm)
@@ -84,25 +64,20 @@ footer
 @media screen and (min-width: 40em)
 
   header[role="banner"]
-    h1,
-    div.sparkle
+    h1
       transform: rotate(-3deg)
-    div.sparkle
-      margin-bottom: 1.0625em
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 60em)
+@media screen and (min-width: 50em)
 
   header[role="banner"]
     h1
       margin-left: -6px
-    div.sparkle
-      margin-bottom: 1.125em
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 70em)
+@media screen and (min-width: 60em)
 
     header[role="banner"]
       h1

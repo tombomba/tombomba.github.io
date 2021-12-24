@@ -10,10 +10,7 @@ layout: default
   {% assign hedsize = 'md' %}
 {% endif -%}
 
-<header role="banner">
-  <h1><a href="{{ site.url }}">{{ site.name }}!</a></h1>
-  <div class="sparkle"></div>
-</header>
+{% include banner.html %}
 
 <main role="main">
 
@@ -33,9 +30,4 @@ layout: default
 
 </main>
 
-<footer>
-  <div class="copydate">
-    <p>This page published <time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
-    <p>Copyright &copy; <a href="{{ 'about' | absolute_url }}" aria-label="About the author">{{ site.author }}</a></p>
-  </div>
-</footer>
+{% include footer.html %}

@@ -1,5 +1,5 @@
 ---
-layout: feature
+#layout: feature
 title: "We promptly judged antique ivory buckles for the next prize"
 media:
   image: test-image.jpg

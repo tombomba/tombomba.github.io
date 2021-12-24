@@ -3,7 +3,7 @@
 ---
 
 @charset "utf-8"
-@import reset, font, color, body, article
+@import reset, font, color, body, article, banner, footer
 
 //-----------------------------------------------------------------------------
 
@@ -25,24 +25,6 @@ article
 
 footer
   margin-top: 4em
-  div.copydate
-    p
-      margin-top: 0
-      font-size: var(--fs--sm)
-      color: $mix-color
-      a:link, a:visited
-        color: $mix-color
-  div.hr
-    display: none
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 24em)
-
-  header[role="banner"]
-    h1
-      margin-left: -3px
-      font-size: var(--hs--xl)
 
 //-----------------------------------------------------------------------------
 
@@ -58,27 +40,3 @@ footer
         color: black
         span.punc::after
           content: ''
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40em)
-
-  header[role="banner"]
-    h1
-      transform: rotate(-3deg)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 50em)
-
-  header[role="banner"]
-    h1
-      margin-left: -6px
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 60em)
-
-    header[role="banner"]
-      h1
-        margin-left: -9px

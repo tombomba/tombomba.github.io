@@ -4,6 +4,8 @@ title: "We promptly judged antique ivory buckles for the next prize"
 dek: "This is a run-on sentence masquerading as meaningful text so there."
 media:
   image: test-image.jpg
+  width: 768
+  height: 482
   alt: "A test image!"
   caption: "Pack my box with five dozen liquor jugs (Warners, 1949)."
 date: 2021-12-21 09:34 -0700

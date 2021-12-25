@@ -7,8 +7,18 @@
 
 //-----------------------------------------------------------------------------
 
-article
-  header.sm
+article.post
+  header
+    h1
+      font-size: var(--hs)
+      line-height: var(--lh--tight)
+      font-style: italic
+  figure
+    margin-top: var(--shim)
+    padding-top: var(--sliver)
+  
+article.micro
+  header
     h1,p
       display: inline
     h1
@@ -18,17 +28,12 @@ article
         content: '.'
       &::after
         content: '\0020'
-  header.md
-    h1
-      font-size: var(--hs)
-      line-height: var(--lh--tight)
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30rem)
 
-  article
-    header.md
+  article.post
+    header
       h1
         font-size: var(--hs--md)
-        font-style: italic

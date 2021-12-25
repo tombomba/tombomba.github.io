@@ -21,9 +21,9 @@ article
     margin-top: 0
 
   figure
-    margin-bottom: var(--shim)
+    margin-bottom: var(--shim--tight)
     figcaption
-      margin-top: var(--sliver)
+      margin-top: 0.66em
       p
         margin-top: 0
         font-size: var(--fs--xs)
@@ -43,11 +43,10 @@ article
         font-size: var(--fs--sm)
         line-height: var(--lh--tight)
         color: $mix-color
-        a:link, a:visited 
+        a:link, a:visited
           color: $mix-color
         &:first-of-type::after
           content: '\00A0\/\0020'
-          color: $mix-color
 
 //-----------------------------------------------------------------------------
 

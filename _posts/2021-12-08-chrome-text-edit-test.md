@@ -1,5 +1,11 @@
 ---
 title: "This is a new page from chrome 'text editor'"
+media:
+  image: test-image.jpg
+  width: 768
+  height: 482
+  alt: "Getting a little bored now"
+  caption: "Another test!" 
 emoji: "🍕"
 # {% include --fig.html file="test-image.jpg" width=768 height=482 %}
 ---

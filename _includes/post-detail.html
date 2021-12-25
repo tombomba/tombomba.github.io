@@ -6,10 +6,14 @@
 
   <header>
     <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
-    {% if p.date %}{% include _byline.html date=p.date avi='bomtomba-400x400.png' %}{% endif %}
+    {% if p.dek %}<p class="dek">{{ p.dek | strip | smartify | normalize_whitespace }}</p>{% endif %}
   </header>
 
-  {% if p.media %}{% include figure.html media=p.media %}{% endif -%}
+  {% if p.media %}
+    {% include figure.html media=p.media %}
+  {% endif -%}
+
+  {% if p.date %}{% include _byline.html date=p.date %}{% endif -%}
 
   {{ copy | strip | normalize_whitespace }}
 

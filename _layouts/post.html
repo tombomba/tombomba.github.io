@@ -1,32 +1,11 @@
 ---
 layout: default
 ---
-{% assign copy = content | strip | normalize_whitespace -%}
-{% assign wordcount = copy | number_of_words -%}
-
-{% include _titlef.html title=page.title %}
-
-{% if wordcount > 150 %}
-  {% assign hedsize = 'md' %}
-{% endif -%}
-
 {% include banner.html %}
 
 <main role="main">
 
-  <article><!-- {{ copy | number_of_words }} -->
-
-    {%- capture hedbox %}
-      <header class="{{ hedsize | default: 'sm' }}">
-        <h1>{{ titlef }}</h1>
-        <p>
-    {% endcapture -%}
-
-    {%- assign copy = copy | replace_first: '</p>','</p></header>' | replace_first: '<p>',hedbox | strip | normalize_whitespace -%}
-    
-    {{ copy }}
-
-  </article>
+  {% include post-detail.html page=page content=content %}
 
 </main>
 

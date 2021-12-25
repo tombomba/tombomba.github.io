@@ -1,0 +1,16 @@
+{% if page.previous or page.next %}
+    <aside>
+      {% if page.previous %}
+      <div class="np prev">
+        <h2>Previous</h2>
+        <p><a href="{{ page.previous.url | absolute_url }}">{{ page.previous.title | strip | strip_html | smartify | normalize_whitespace }}</a></p>
+      </div>
+      {% endif %}
+      {% if page.next %}
+      <div class="np next">
+        <h2>Next</h2>
+        <p><a href="{{ page.next.url | absolute_url }}">{{ page.next.title | strip | strip_html | smartify | normalize_whitespace }}</a></p>
+      </div>
+      {% endif %}
+    </aside>
+    {% endif %}

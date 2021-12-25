@@ -1,0 +1,22 @@
+{% assign title_arr = include.title | default: 'You forgot the page title, dummy!' | strip | normalize_whitespace | split: ' ' -%}
+{% assign new_title = '' | split: '' -%}
+
+{% for word in title_arr %}
+
+  {% if forloop.rindex == 2 %}
+    {% assign wordf = word | prepend: '!!OPENSPAN!!' -%}
+
+  {% elsif forloop.rindex == 1 %}
+    {% assign wordf = word | append: '!!CLOSESPAN!!' -%}
+  
+  {% else %}
+    {% assign wordf = word -%}
+  {% endif -%}
+
+  {% assign new_title = new_title | push: wordf -%}
+
+{% endfor -%}
+
+{% assign titlef = new_title | join: ' ' %}
+{% assign titlef = titlef | replace: '!!OPENSPAN!!', '<span class="widont">' %}
+{% assign titlef = titlef | replace: '!!CLOSESPAN!!', '</span>' | strip | normalize_whitespace -%}

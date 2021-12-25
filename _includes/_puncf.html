@@ -1,0 +1,13 @@
+{% assign raw = include.title | default: 'Oh noes, punk!' | strip | normalize_whitespace %}
+
+{% assign lastchar = raw | slice: -1 %}
+{% case lastchar %}
+  {% when '"' or "'" %}
+    {% assign titlef = raw | append: '!!PUNC!!' | append: lastchar %}
+  {% when '?' or '!' or '.' %}
+    {% comment %} do nothing {% endcomment %}
+  {% else %}
+    {% assign titlef = raw | append: '!!PUNC!!' %}
+{% endcase -%}
+  
+{% assign titlef = titlef | replace: '!!PUNC!!', '<span class="punc"></span>' %}

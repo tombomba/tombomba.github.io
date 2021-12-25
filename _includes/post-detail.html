@@ -7,7 +7,7 @@
   {% include _puncf.html title=p.title %}
 {% else %}
   {% assign hedsize = 'md' %}
-  {% include _titlef.html title=p.title %}
+  {% include _widont.html title=p.title %}
 {% endif %}
 
 <article><!-- {{ p.layout }}: {{ copy | number_of_words }} -->
@@ -21,10 +21,24 @@
       <h1>
       {% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}
       </h1>
+      {% if hedsize =='md' %}<!--byline-->{% endif %}
       <p>
   {% endcapture %}
 
+  {% capture byline %}
+    <div class="byline">
+      <div class="avatar">
+        <a href="{{ 'about' | absolute_url }}"><img src="{{ 'bomtomba-400x400.png' | prepend: site.img }}" alt="{{ page.author | default: site.author }}"></a>
+      </div>
+      <div class="bio">
+        <p><a href="{{ 'about' | absolute_url }}" aria-label="About the author">{{ page.author | default: site.author }}</a></p>
+        <p><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_string }}</time></p>
+      </div>
+    </div>
+  {% endcapture %}
+
   {% assign copy = copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hedbox %}
+  {% if hedsize == 'md' %}{% assign copy = copy | replace: '<!--byline-->', byline %}{% endif %}
   {{ copy | strip | normalize_whitespace }}
 
 </article>

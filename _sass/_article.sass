@@ -1,19 +1,19 @@
 article
-  margin-top: var(--shim--double)
+  margin-top: calc(var(--shim--double) - var(--sliver))
 
   h2, h3, h4, h5, h6
     font-size: 1em
   
   p
-    margin-top: var(--shim)
+    margin-top: var(--shim--tight)
   
   ul, ol
     margin: 1em 0 0 var(--shim--tight)
     li
-      margin-top: var(--shim)
+      margin-top: var(--shim--tight)
   
   blockquote
-    padding-left: var(--shim)
+    padding-left: var(--shim--tight)
     border-left: thin solid $mix-color
   
   blockquote,

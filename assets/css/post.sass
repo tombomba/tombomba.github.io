@@ -8,7 +8,7 @@
 //-----------------------------------------------------------------------------
 
 article
-  header
+  header.sm
     h1,p
       display: inline
     h1
@@ -16,6 +16,30 @@ article
       line-height: var(--lh)
       span.punc::after
         content: '.\020'
+  header.md
+    h1
+      font-size: var(--hs)
+      line-height: var(--lh--tight)
+    div.byline
+      display: flex
+      flex-flow: row wrap
+      align-items: center
+      justify-content: flex-start
+      margin-top: var(--shim--tight)
+      div.avatar
+        display: none
+      div.bio
+        p
+          display: inline
+          margin: 0
+          font-size: var(--fs--sm)
+          line-height: var(--lh--tight)
+          &:first-of-type::after
+            content: '\00A0\/\0020'
+            color: $mix-color
+          color: $mix-color
+          a:link, a:visited 
+            color: $mix-color
 
 //-----------------------------------------------------------------------------
 
@@ -23,12 +47,25 @@ article
 
   article
     header.md
-      h1,p
-        display: block
       h1
         font-size: var(--hs--md)
-        line-height: var(--lh--tight)
         font-style: italic
-        letter-spacing: -0.1px
-        span.punc::after
-          content: ''
+      div.byline
+        div.avatar
+          display: block
+          margin-right: var(--sliver)
+          img
+            width: var(--shim)
+            height: var(--shim)
+            border-radius: 50%
+            background-color: $bg-color
+
+//-----------------------------------------------------------------------------
+
+//@media screen and (min-width: 50rem)
+
+  article
+    header.md
+      h1
+        font-size: var(--hs--lg)
+        line-height: var(--lh--tight)

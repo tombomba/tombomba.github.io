@@ -1,13 +1,14 @@
 footer
-  display: flex
-  flex-flow: column
-  align-items: center
-  justify-content: center
-  height: var(--shim--double)
+  margin-top: var(--shim--tight)
   ul.nav
+    margin: 0 auto
+    max-width: var(--page-width)
     display: flex
     flex-flow: row wrap
+    align-items: center
+    justify-content: center
     list-style-type: none
+    height: var(--shim--double)
     li
       font-size: var(--fs--sm)
       line-height: var(--lh--tight)
@@ -17,7 +18,7 @@ footer
       &:not(:first-of-type)::before
         content: '-'
         padding-right: 0.33em
-        color: $mix-color
+        color: $mix-color 
   div.hr
     width: 100%
 

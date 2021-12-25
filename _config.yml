@@ -37,7 +37,6 @@ defaults:
     values:
       layout: post
       is_post: true
-      goog: true
   -
     scope:
       path: ""
@@ -45,7 +44,6 @@ defaults:
     values:
       layout: "directory"
       is_page: true
-      goog: true
 
 markdown: kramdown
 kramdown:

@@ -1,0 +1,65 @@
+---
+#
+---
+
+@charset "utf-8"
+@import reset, font-stack, font-16px, color, body, article
+
+\:root
+  --page-width: 26em
+
+header[role="banner"]
+  display: flex
+  flex-flow: row wrap
+  align-items: center
+  justify-content: center
+  h1
+    font-size: var(--hs--lg)
+    padding: 0 6px
+  div.hr
+    flex: 1
+    width: 100% 
+
+article
+  margin-top: var(--shim--double)
+  header
+    margin-top: var(--shim)
+    h1
+      font-size: var(--hs)
+      line-height: var(--lh--tight)
+      font-style: italic
+      text-align: center
+      span.widont
+        white-space: nowrap
+  p:first-of-type
+    margin-top: var(--shim)
+  img
+    display: block
+    margin: 0 auto
+    border-radius: 50%
+    background-color: $bg-color
+  div.hr
+    margin-top: var(--shim)
+
+footer
+  margin-top: var(--shim--double)
+  ul
+    margin: 1em 0
+    display: flex
+    flex-flow: row wrap
+    align-items: center
+    justify-content: center
+    list-style-type: none
+    li
+      line-height: var(--lh--tight)
+      &:not(:last-of-type)
+        margin-right: 0.6875em
+  p
+    margin-top: var(--shim)
+    font-size: var(--sm)
+    line-height: var(--lh--tight)
+    font-style: italic
+    text-align: center
+    color: $mix-color
+    a:link, a:visited
+      color: $mix-color

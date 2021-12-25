@@ -10,4 +10,4 @@
     {% assign titlef = raw | append: '!!PUNC!!' %}
 {% endcase -%}
   
-{% assign titlef = titlef | replace: '!!PUNC!!', '<span class="punc"></span>' %}
+{% assign titlef = titlef | replace: '!!PUNC!!', '<span class="punc"></span>' | strip | smartify | normalize_whitespace %}

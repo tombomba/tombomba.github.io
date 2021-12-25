@@ -19,4 +19,4 @@
 
 {% assign titlef = new_title | join: ' ' %}
 {% assign titlef = titlef | replace: '!!OPENSPAN!!', '<span class="widont">' %}
-{% assign titlef = titlef | replace: '!!CLOSESPAN!!', '</span>' | strip | normalize_whitespace -%}
+{% assign titlef = titlef | replace: '!!CLOSESPAN!!', '</span>' | strip | smartify | normalize_whitespace -%}

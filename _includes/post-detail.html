@@ -2,7 +2,7 @@
 {% assign copy = include.content | strip | normalize_whitespace -%}
 {% assign wordcount = copy | number_of_words %}
 
-{% if p.media or wordcount < 150 %}
+{% if wordcount < 150 %}
   {% assign hedsize = 'sm' %}
   {% include _puncf.html title=p.title %}
 {% else %}

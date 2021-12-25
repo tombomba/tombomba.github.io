@@ -1,6 +1,7 @@
 ---
 #layout: feature
 title: "We promptly judged antique ivory buckles for the next prize"
+dek: "This is another run-on sentence masquerading as a meaningful bit of text so I can continue to test this fucking website."
 media:
   image: test-image.jpg
   alt: "A test image!"

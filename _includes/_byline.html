@@ -5,7 +5,7 @@
   </div>
   {% endif %}
   <div class="bio">
-    <p><a href="{{ 'about' | absolute_url }}" aria-label="About the author">{{ include.author | default: site.author }}</a></p>
+    <p>By <a href="{{ 'about' | absolute_url }}" aria-label="About the author">{{ include.author | default: site.author }}</a></p>
     <p><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ include.date | default: site.time | date_to_string }}</time></p>
   </div>
 </div>

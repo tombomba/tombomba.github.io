@@ -3,18 +3,24 @@ header[role="banner"]
   flex-flow: column
   align-items: center
   justify-content: center
+  height: var(--shim--double)
   h1
-    font-family: 'Slackey', cursive
+    font-family: 'Oswald', $system
     font-size: var(--hs--lg)
     line-height: var(--lh--flat)
-    font-weight: 400
+    font-weight: 700
     text-transform: uppercase
-    text-shadow: -3px 3px $shadow-color
     a:link, a:visited
-      color: $logo-color
+      color: $link-color
       text-decoration: none  
   div.hr
     flex: 1
     width: 100%
-    margin-top: 1em
   
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30rem)
+
+  header[role="banner"]
+    h1
+      font-size: var(--hs--xl)

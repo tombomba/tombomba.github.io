@@ -4,7 +4,7 @@ layout: default
 {% assign copy = content | strip | normalize_whitespace -%}
 {% assign wordcount = copy | number_of_words -%}
 
-{% include _titlef.html title=page.title %}
+{% include _widont.html title=page.title %}
 
 {% if wordcount > 150 %}
   {% assign hedsize = 'md' %}

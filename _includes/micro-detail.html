@@ -1,16 +1,14 @@
 {% assign p = include.page %}
 {% assign copy = include.content | strip | normalize_whitespace -%}
-{% include _puncf.html title=page.title %}
+{% include _puncf.html title=page.title -%}
 
 <article class="micro"><!-- {{ copy | number_of_words }} -->
 
-  {% if p.media %}
-    {% include figure.html media=p.media %}
-  {% endif %}
+  {% if p.media %}{% include figure.html media=p.media %}{% endif -%}
 
-{% capture datef %}<span class="daystamp">&nbsp;(<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date: '%-d %b' }}</time>)</span>{% endcapture -%}
-{% assign copysize = copy | size | minus: 4 %}
-{% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
+  {% capture datef %}<span class="daystamp">&nbsp;(<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date: '%-d %b' }}</time>)</span>{% endcapture -%}
+  {% assign copysize = copy | size | minus: 4 %}
+  {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
 
   {% capture hedbox %}
     <header>
@@ -22,9 +20,9 @@
       {% endif %}
       </h1>
       <p>
-  {% endcapture %}
-
-  {% assign copy = copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hedbox %}
+  {% endcapture -%}
+  {% assign copy = copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hedbox -%}
+  
   {{ copy | strip | normalize_whitespace }}
 
 </article>

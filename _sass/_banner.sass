@@ -6,19 +6,24 @@ header[role="banner"]
     justify-content: space-between
     height: var(--shim--double)
     div.text
-      flex: 2 1
+      flex: 2 1 50%
       display: flex
       align-items: center
       justify-content: center
     div.group
-      flex: 0 0 calc(64px + var(--sliver))
+      flex: 1 1 25%
       display: flex
       flex-flow: row wrap
       align-items: center
-      justify-content: space-between
+      &.left
+        justify-content: flex-start
+      &.right
+        justify-content: flex-end
+        img
+          margin-left: var(--sliver)
   h1
     font-family: $black
-    font-size: var(--hs--lg)
+    font-size: var(--hs--md)
     line-height: 1
     font-weight: 900
     text-transform: uppercase
@@ -35,3 +40,11 @@ header[role="banner"]
     background-color: $bg-color
   div.hr
     width: 100%
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30rem)
+
+  header[role="banner"]
+    h1
+      font-size: var(--hs--lg)

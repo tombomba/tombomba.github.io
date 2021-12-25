@@ -20,9 +20,21 @@ article
   li + p,
     margin-top: 0
 
+  figure
+    margin-bottom: calc(1em + var(--shim))
+    padding-top: var(--shim)
+    figcaption
+      p
+        font-size: var(--fs--xs)
+        line-height: var(--lh--tight)
+
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30rem)
+
+  article
+    figure.narrow
+      max-width: calc(var(--page-width) / 2)
 
   span.widont
     white-space: nowrap

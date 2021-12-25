@@ -1,7 +1,6 @@
 ---
-layout: default
-style: "404"
-title: "404!"
+layout: post
+title: "Page not found"
 excerpt: "404 Error: Page Not Found"
 goog: false
 emoji: '💥'
@@ -9,29 +8,7 @@ permalink: /404.html
 ---
 {% capture txt %}
 If you're having trouble locating a destination, try visiting the
-[homepage]({{ site.url }}) or browsing posts from [this month]({{ site.posts.first.date | date: '%y/%m' | absolute_url }}) or [this year]({{ site.posts.first.date | date: '%y' | absolute_url }}).
+[homepage]({{ site.url }}) or browsing posts from earlier [this year]({{ 'posts' | absolute_url }}).
 {% endcapture -%}
 
-<header role="banner">
-  <h1>{{ page.title }} 💥</h1>
-</header>
-
-<main role="main">
-
-  <article>
-    <p>The page you requested was not found. Try one of these?</p>
-    <ul>
-    {% for p in site.posts limit:5 %}<li><a href="{{ p.url | absolute_url }}">{{ p.title | strip | smartify | normalize_whitespace }}</a></li>{% endfor %}
-    </ul>
-    {{ txt | strip | smartify | markdownify | normalize_whitespace }}
-  </article>
-
-</main>
-
-<footer>
-  <div class="hr"></div>
-  <div class="copydate">
-    <p>{{ site.title }} last updated {{ site.posts.first.date | date_to_string }}</p>
-    <p>Copyright &copy; <a href="{{ 'about' | absolute_url }}" aria-label="About the author">{{ site.author }}</a></p>
-  </div>
-</footer>
+{{ txt | strip | smartify | markdownify | normalize_whitespace }}

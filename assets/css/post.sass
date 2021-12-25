@@ -17,9 +17,6 @@ article
       span.punc::after
         content: '.\020'
 
-footer
-  margin-top: 4em
-
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30rem)
@@ -29,8 +26,9 @@ footer
       h1,p
         display: block
       h1
-        font-size: var(--hs)
+        font-size: var(--hs--md)
         line-height: var(--lh--tight)
-        color: black
+        font-style: italic
+        letter-spacing: -0.1px
         span.punc::after
           content: ''

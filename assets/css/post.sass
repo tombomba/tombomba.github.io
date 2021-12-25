@@ -15,7 +15,9 @@ article
       font-size: 1em
       line-height: var(--lh)
       span.punc::after
-        content: '.\020'
+        content: '.'
+      &::after
+        content: '\0020'
   header.md
     h1
       font-size: var(--hs)
@@ -30,13 +32,3 @@ article
       h1
         font-size: var(--hs--md)
         font-style: italic
-
-//-----------------------------------------------------------------------------
-
-//@media screen and (min-width: 50rem)
-
-  article
-    header.md
-      h1
-        font-size: var(--hs--lg)
-        line-height: var(--lh--tight)

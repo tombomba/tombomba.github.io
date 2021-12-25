@@ -1,11 +1,19 @@
 ---
 layout: default
 ---
+{% assign wordcount = content | number_of_words %}
+
 {% include banner.html %}
 
 <main role="main">
 
-  {% include post-detail.html page=page content=content %}
+  {% if wordcount > 150 %}
+    {% include post-detail.html page=page content=content %}
+  
+  {% else %}
+    {% include micro-detail.html page=page content=content %}
+
+  {% endif %}
 
 </main>
 

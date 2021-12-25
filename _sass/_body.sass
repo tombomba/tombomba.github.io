@@ -19,6 +19,8 @@ body
   -ms-text-size-adjust: auto
   -webkit-text-size-adjust: auto
 
+  padding: 0 1em
+
 aside,
 main[role="main"],
 footer
@@ -49,3 +51,17 @@ time
   border-top: 1px solid $border-dark
   border-bottom: 2px solid $border-light
   background-color: $body-color
+  &.single
+    margin-top: var(--shim)
+  &.double
+    margin-top: var(--shim--double)
+
+.daystamp
+  white-space: nowrap
+  font-style: italic
+  color: $mix-color
+  a:link, a:visited
+    color: $mix-color
+    text-decoration: none
+  a:hover
+    text-decoration: underline

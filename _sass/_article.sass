@@ -45,11 +45,15 @@ article
         margin: 0
         font-size: var(--fs--sm)
         line-height: var(--lh--tight)
-        color: $mix-color
         a:link, a:visited
-          color: $mix-color
-        &:first-of-type::after
-          content: '\00A0\/\0020'
+          color: $text-color
+          text-decoration: none
+        a:hover
+          text-decoration: underline
+        &:first-of-type
+          font-weight: 700
+          &::after
+            content: '\00A0\/\0020'
 
 //-----------------------------------------------------------------------------
 

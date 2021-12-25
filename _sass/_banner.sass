@@ -11,7 +11,8 @@ header[role="banner"]
       align-items: center
       justify-content: center
     div.group
-      flex: 0 0 calc(64px + var(--sliver))
+      border: 1px solid green
+      flex: 0 0 calc(96px + var(--sliver))
       display: flex
       flex-flow: row wrap
       align-items: center
@@ -26,8 +27,11 @@ header[role="banner"]
       color: $link-color
       text-decoration: none  
   img
-    width: var(--shim)
-    height: var(--shim)
+    width: 32px
+    height: 32px
+    &.embiggen
+      width: 48px
+      height: 48px
     border-radius: 50%
     background-color: $bg-color
   div.hr

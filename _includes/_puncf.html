@@ -3,7 +3,8 @@
 {% assign lastchar = raw | slice: -1 %}
 {% case lastchar %}
   {% when '"' or "'" %}
-    {% assign titlef = raw | append: '!!PUNC!!' | append: lastchar %}
+    {% assign grabstring = raw.size | minus: 1 %}
+    {% assign titlef = raw | slice: 0, grabstring | append: '!!PUNC!!' | append: lastchar %}
   {% when '?' or '!' or '.' %}
     {% comment %} do nothing {% endcomment %}
   {% else %}

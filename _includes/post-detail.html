@@ -2,7 +2,7 @@
 {% assign copy = include.content | strip | normalize_whitespace -%}
 {% include _widont.html title=p.title %}
 
-<article class="{{ p.layout }}"><!-- {{ copy | number_of_words }} -->
+<article class="post"><!-- {{ copy | number_of_words }} -->
 
   <header>
     <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>

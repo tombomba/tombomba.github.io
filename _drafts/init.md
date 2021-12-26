@@ -1,12 +1,6 @@
 ---
 title: "We promptly judged antique ivory buckles for the next prize"
 dek: "This is a run-on sentence masquerading as meaningful text so there."
-media:
-  image: test-image.jpg
-  width: 768
-  height: 482
-  alt: "A test image!"
-  caption: "Pack my box with five dozen liquor jugs (Warners, 1949)."
 date: 2021-12-21 09:34 -0700
 ---
 This is a test page in the newly unhidden drafts. Ut semper iaculis mauris a ultricies. Donec facilisis laoreet orci a facilisis.<!--more--> Pellentesque a nibh elit. Nam vitae ipsum at arcu elementum tincidunt. Proin et nisi mollis, convallis magna in, viverra neque. Aliquam erat volutpat. Proin consequat lorem a augue porttitor, ultricies imperdiet nunc interdum. Donec elementum mi sit amet nisi gravida, ut consectetur metus pulvinar.

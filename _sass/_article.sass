@@ -5,6 +5,9 @@ article
     h1
       a:link, a:visited
         color: $text-color
+        text-decoration: underline
+      a:hover
+        text-decoration: none
 
   h2, h3, h4, h5, h6
     font-size: 1em
@@ -41,15 +44,21 @@ article
     display: flex
     flex-flow: row wrap
     align-items: center
-    margin-top: var(--shim--tight)
     div.avatar
       display: none
     div.bio
       p
         display: inline
         margin: 0
-        font-size: var(--fs--sm)
-        line-height: var(--lh--tight)
+        color: $mix-color
+        a:link, a:visited
+          color: $mix-color
+        &:nth-of-type(2)::before
+          content: '\00A0\/\0020'
+
+  span.highlight
+    padding: 3px 0
+    background-color: $shock-color
 
 //-----------------------------------------------------------------------------
 

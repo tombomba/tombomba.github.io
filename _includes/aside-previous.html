@@ -1,15 +1,15 @@
-<aside><!-- next/ previous -->
+<aside><!-- next / prev -->
+
   <div class="hr"></div>
+
+ {% if include.next %}
+    {% assign txt = include.next.dek | default: include.next.excerpt | truncatewords: 20 | strip | strip_html | smartify | normalize_whitespace %}
+    {% include _list-section.html title=include.next.title text=txt url=include.next.url htag='h2' %}
+  {% endif -%}
+
   {% if include.previous %}
-    <div class="np prev">
-      <h2>Previous</h2>
-      <p><a href="{{ include.previous.url | absolute_url }}">{{ include.previous.title | strip | strip_html | smartify | normalize_whitespace }}</a></p>
-    </div>
+    {% assign txt = include.previous.dek | default: include.previous.excerpt | truncatewords: 20 | strip | strip_html | smartify | normalize_whitespace %}
+    {% include _list-section.html title=include.previous.title text=txt url=include.previous.url htag='h2' %}
   {% endif -%}
-  {% if include.next %}
-    <div class="np next">
-      <h2>Next</h2>
-      <p><a href="{{ include.next.url | absolute_url }}">{{ include.next.title | strip | strip_html | smartify | normalize_whitespace }}</a></p>
-    </div>
-  {% endif -%}
+
 </aside>

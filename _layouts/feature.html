@@ -1,35 +1,11 @@
 ---
 layout: default
 ---
-{% assign copy = content | strip | normalize_whitespace -%}
-{% assign wordcount = copy | number_of_words %}
-{% include _widont.html title=page.title %}
-
-<header role="banner">
-  <div class="hr"></div>
-  <h1><a href="{{ site.url }}">{{ site.name | default: site.title }}</a></h1>
-  <div class="hr"></div>
-</header>
+{% include banner.html %}
 
 <main role="main">
 
-  <article><!-- {{ copy | number_of_words }} -->
-
-    <header>
-      <h1>{{ titlef }}</h1>
-      <div class="byline">
-        <p><a href="{{ 'about' | absolute_url }}">{{ page.author | default: site.author }}</a></p>
-        <p><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
-      </div>
-    </header>
-    
-    {% include figure.html media=page.media -%}
-
-    {{ copy }}
-
-  </article>
-
-  {% include aside-limit.html %}
+  {% include detail-feature.html page=page content=content %}
 
 </main>
 

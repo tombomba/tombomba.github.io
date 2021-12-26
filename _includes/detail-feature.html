@@ -2,10 +2,13 @@
 {% assign copy = include.content | strip | normalize_whitespace -%}
 {% include _widont.html title=p.title %}
 
-<article class="post"><!-- {{ copy | number_of_words }} -->
+{% assign hedcount = p.title | size %}
+{% if hedcount < 20 %}{% assign hedsize = 'embiggen' %}{% endif %}
+
+<article class="feature"><!-- {{ copy | number_of_words }} -->
 
   <header>
-    <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
+    <h1 class="{{ hedsize | default: 'norm' }}">{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
     {% if p.dek and p.media %}<p class="dek">{{ p.dek | strip | smartify | normalize_whitespace }}</p>{% endif %}
   </header>
 

@@ -7,11 +7,11 @@ layout: default
 
 <main role="main">
 
-  {% if wordcount > 150 %}
-    {% include post-detail.html page=page content=content %}
+{% if wordcount > 150 %}
+    {% include detail-text.html page=page content=content %}
   
   {% else %}
-    {% include micro-detail.html page=page content=content %}
+    {% include detail-micro.html page=page content=content %}
 
   {% endif %}
 

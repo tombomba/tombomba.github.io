@@ -18,23 +18,7 @@ layout: default
 </main>
 
 {% if page.previous or page.next %}
-
-<aside><!-- next / prev -->
-
-  <div class="hr"></div>
-
- {% if page.next %}
-    {% assign txt = page.next.dek | default: page.next.excerpt | truncatewords: 20 %}
-    {% include _list-section.html title=page.next.title text=txt url=page.next.url htag='h2' %}
-  {% endif -%}
-
-  {% if page.previous %}
-    {% assign txt = page.previous.dek | default: page.previous.excerpt | truncatewords: 20 %}
-    {% include _list-section.html title=page.previous.title text=txt url=page.previous.url htag='h2' %}
-  {% endif -%}
-
-</aside>
-
+  {% include aside-previous.html previous=page.previous next=page.next %}
 {% endif %}
 
 {% include footer.html %}

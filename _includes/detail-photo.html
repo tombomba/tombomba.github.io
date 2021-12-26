@@ -5,12 +5,10 @@
 
 <article class="photo"><!-- {{ copy | number_of_words }} -->
 
-  {% if p.media %}
-    {% include figure.html media=p.media %}
-  {% endif -%}
+  {% include figure.html media=p.media %}
 
   <header>
-    <h1 class="{{ hedsize | default: 'md' }}">{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
+    <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
     {% if p.date %}{% include _byline.html date=p.date %}{% endif %}
   </header>
   

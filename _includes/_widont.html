@@ -1,4 +1,4 @@
-{% assign title_arr = include.title | default: 'You forgot the page title, dummy!' | strip | normalize_whitespace | split: ' ' -%}
+{% assign title_arr = include.title | default: 'Empty?!' | strip | normalize_whitespace | split: ' ' -%}
 {% assign new_title = '' | split: '' -%}
 
 {% for word in title_arr %}

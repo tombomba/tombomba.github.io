@@ -27,7 +27,7 @@ header[role="banner"]
     line-height: 1
     font-weight: 900
     text-transform: uppercase
-    text-shadow: -5px 0px $shock-color
+    text-shadow: 3px 3px 0px $shock-color
     a:link, a:visited
       color: $logo-color
       text-decoration: none  
@@ -37,23 +37,7 @@ header[role="banner"]
     &.embiggen
       width: 48px
       height: 48px
-    border-radius: 50%
+    border-radius: 4px
     background-color: $bg-color
   div.hr
     width: 100%
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
-  header[role="banner"]
-    h1
-      font-size: var(--hs--lg)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 80rem)
-
-  header[role="banner"]
-    h1
-      font-size: var(--hs--xl)

@@ -19,15 +19,51 @@ article.feature
     margin: var(--shim--tight) 0 var(--shim) 0
     padding-top: var(--sliver)
   div.byline
+    margin-top: var(--shim--tight)
     div.bio
       p
+        font-size: var(--fs--sm)
+        line-height: var(--lh)
+        color: $text-color
         a:link, a:visited
           color: $text-color
         &:first-of-type
           font-weight: 700
-          &::after
-            content: '\00A0\/\0020'
-            font-weight: 400
+          text-transform: none
+
+article.text
+  header
+    h1
+      font-size: var(--hs--md)
+      line-height: var(--lh--tight)
+  div.byline
+    margin-top: var(--shim--tight)
+    div.bio
+      p
+        margin: 0
+        font-size: var(--fs--sm)
+        line-height: var(--lh--tight)
+        &:first-of-type
+          text-transform: uppercase
+
+article.photo
+  header
+    h1
+      font-size: var(--hs)
+      line-height: var(--lh--tight)
+  figure
+    margin-bottom: var(--shim)
+    padding-bottom: var(--sliver)
+    figcaption
+      margin-bottom: calc(var(--sliver) * -1)
+  div.byline
+    div.bio
+      p
+        margin: 0
+        font-size: var(--fs--xs)
+        line-height: var(--lh--tight)
+        &:first-of-type
+          text-transform: uppercase
 
 article.micro
   header
@@ -40,29 +76,7 @@ article.micro
         content: '.'
       &::after
         content: '\0020'
-
-article.text
-  header
-    h1
-      font-size: var(--hs)
-      line-height: var(--lh--tight)
-  figure
-    margin-bottom: var(--shim)
-    padding-bottom: var(--sliver)
-    figcaption
-      margin-bottom: calc(var(--sliver) * -1)
-  div.byline
-    div.bio
-      p 
-        margin-top: 0
-        color: $mix-color
-        a:link, a:visited
-          color: $mix-color
-        &:first-of-type
-          text-transform: uppercase
-          &::after
-            content: '\00A0\/\0020'
-
+  
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 20rem)
@@ -84,11 +98,6 @@ article.text
         margin-top: 0.33em
         line-height: var(--lh--tight)
 
-  article.text
-    header
-      h1.embiggen
-        font-size: var(--hs--md)
-
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 50rem)
@@ -98,7 +107,6 @@ article.text
     figure
       margin-left: calc(var(--shim) * -1)
       margin-right: calc(var(--shim) * -1)
-
 
 //-----------------------------------------------------------------------------
 

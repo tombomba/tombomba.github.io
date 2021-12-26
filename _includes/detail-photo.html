@@ -1,0 +1,19 @@
+{% assign p = include.page %}
+{% assign copy = include.content | strip | normalize_whitespace -%}
+
+{% include _widont.html title=p.title %}
+
+<article class="photo"><!-- {{ copy | number_of_words }} -->
+
+  {% if p.media %}
+    {% include figure.html media=p.media %}
+  {% endif -%}
+
+  <header>
+    <h1 class="{{ hedsize | default: 'md' }}">{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
+    {% if p.date %}{% include _byline.html date=p.date %}{% endif %}
+  </header>
+  
+  {{ copy | strip | normalize_whitespace }}
+
+</article>

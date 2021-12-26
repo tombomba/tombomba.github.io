@@ -27,8 +27,9 @@ header[role="banner"]
     line-height: 1
     font-weight: 900
     text-transform: uppercase
+    text-shadow: -5px 0px $shock-color
     a:link, a:visited
-      color: $link-color
+      color: $logo-color
       text-decoration: none  
   img
     width: 32px
@@ -43,8 +44,16 @@ header[role="banner"]
 
 //-----------------------------------------------------------------------------
 
-//@media screen and (min-width: 30rem)
+@media screen and (min-width: 40rem)
 
   header[role="banner"]
     h1
       font-size: var(--hs--lg)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 80rem)
+
+  header[role="banner"]
+    h1
+      font-size: var(--hs--xl)

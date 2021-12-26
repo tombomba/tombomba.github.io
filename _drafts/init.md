@@ -1,5 +1,4 @@
 ---
-#layout: feature
 title: "We promptly judged antique ivory buckles for the next prize"
 dek: "This is a run-on sentence masquerading as meaningful text so there."
 media:

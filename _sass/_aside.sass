@@ -10,8 +10,19 @@ aside
     &:first-of-type
       margin-top: var(--shim)
     h1, h2, h3, h4, h5, h6
-      margin: 0
+      display: inline
       font-size: 1em
-      font-weight: 400
+      font-weight: 700
     p 
+      display: inline
       margin: 0
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30rem)
+
+  aside
+    section
+      h1, h2, h3, h4, h5, h6, p
+        display: block
+        font-weight: 400

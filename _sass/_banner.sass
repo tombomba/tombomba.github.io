@@ -29,7 +29,7 @@ header[role="banner"]
     text-transform: uppercase
     a:link, a:visited
       color: $logo-color
-      text-shadow: -3px 3px $shock-color
+      text-shadow: -3px 3px 3px $shock-color, 3px -3px 3px $shock-color
       text-decoration: none
     a:hover
       color: $shock-color
@@ -45,3 +45,19 @@ header[role="banner"]
     background-color: $bg-color
   div.hr
     width: 100%
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30rem)
+
+  header[role="banner"]
+    h1
+      font-size: var(--hs--lg)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 60rem)
+
+  header[role="banner"]
+    h1
+      font-size: var(--hs--xl)

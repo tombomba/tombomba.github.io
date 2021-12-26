@@ -1,33 +1,57 @@
 ---
 layout: default
-style: directory
 is_home: true
-goog: true
 permalink: /index.html
 ---
+{% assign firstpost = site.posts.first %}
+{% assign copy = site.posts.first.content %}
+{% assign wordcount = copy | number_of_words %}
+
 {% include banner.html %}
 
 <main role="main">
-  <article><!-- 30.44 days -->
 
-    {% assign scope = 2629743 %}
-    {% assign today = site.posts.first.date | date: '%s' -%}
+  {% case firstpost.layout %}
+  
+  {% when 'feature' %}
+    {% include detail-feature.html page=firstpost content=copy is_home=true %}
+  
+  {% when 'micro' %}
+    {% include detail-micro.html page=firstpost content=copy is_home=true %}
+  
+  {% else %}
 
-    {% for p in site.posts %}
+    {% if wordcount > 150 %}
+      {% include detail-text.html page=firstpost content=copy is_home=true %}
+  
+    {% else %}
+      {% include detail-micro.html page=firstpost content=copy is_home=true %}
+  
+    {% endif %}
 
-      {% assign current = p.date | date: '%s' %}
-      {% assign range = today | times: 1 |  minus: current -%}
-
-      {% if scope > range %}
-        {% include _list-section.html title=p.title excerpt=p.excerpt url=p.url %}
-
-      {% else %}
-        {% break %}
-      {% endif -%}
-
-    {% endfor -%}
-
-  </article>
+  {% endcase %}
+  
 </main>
+
+<aside><!-- 30.44 days -->
+
+  {% assign scope = 2629743 %}
+  {% assign today = site.posts.first.date | date: '%s' -%}
+
+  {% for p in site.posts offset: 1 %}
+
+    {% assign current = p.date | date: '%s' %}
+    {% assign range = today | times: 1 |  minus: current -%}
+
+    {% if scope > range %}
+      {% include _list-section.html title=p.title excerpt=p.excerpt url=p.url %}
+
+    {% else %}
+      {% break %}
+    {% endif -%}
+
+  {% endfor -%}
+
+</aside>
 
 {% include footer.html %}

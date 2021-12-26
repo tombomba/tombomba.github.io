@@ -34,6 +34,7 @@ permalink: /index.html
 </main>
 
 <aside><!-- recents -->
+
   <div class="hr"></div>
   {% for p in site.posts limit: 7 offset: 1 %}
     {% assign txt = p.dek | default: p.excerpt | truncatewords: 20 -%}

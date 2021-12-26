@@ -1,27 +1,27 @@
 aside
-  margin-top: var(--shim)
-  div.prev
-    margin-top: var(--shim)
-  div.np
-    h2, p
-      margin: 0
-    h2
-      font-size: 1em
-      line-height: var(--lh--tight)
-    &.next
+  margin-top: var(--shim--double)
+  
+  section
+    max-width: var(--page-width)
+    margin-top: var(--shim--tight) 
+    &:first-of-type
       margin-top: var(--shim)
+    margin-left: auto
+    margin-right: auto
+    h1, h2, h3, h4, h5, h6
+      display: inline
+      margin: 0
+      font-size: 1em
+      font-weight: 400
+    p 
+      display: inline
+      margin: 0
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30rem)
 
   aside
-      div.np
-        h2, p
-          display: inline
-        h2
-          line-height: var(--lh)
-          &::after
-            content: ':\20'
-        &.next
-          margin-top: 0
+    section
+      h1, h2, h3, h4, h5, h6, p
+        display: block

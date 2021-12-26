@@ -27,10 +27,14 @@ header[role="banner"]
     line-height: 1
     font-weight: 900
     text-transform: uppercase
-    text-shadow: 3px 3px 0px $shock-color
     a:link, a:visited
       color: $logo-color
-      text-decoration: none  
+      text-shadow: -3px 3px $shock-color
+      text-decoration: none
+    a:hover
+      color: $shock-color
+      text-shadow: -2px 2px $logo-color
+      
   img
     width: 32px
     height: 32px

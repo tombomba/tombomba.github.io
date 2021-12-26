@@ -1,6 +1,6 @@
 {% assign p = include.page %}
 {% assign copy = include.content | strip | normalize_whitespace -%}
-{% include _puncf.html title=page.title -%}
+{% include _puncf.html title=p.title -%}
 
 <article class="micro"><!-- {{ copy | number_of_words }} -->
 

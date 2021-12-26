@@ -9,5 +9,4 @@
   {% if include.media.caption %}<figcaption>{{ include.media.caption | strip | smartify | markdownify | normalize_whitespace }}</figcaption>{% endif %}
 </figure>
 {%- endcapture -%}
-
 {{ this_media | strip | normalize_whitespace }}

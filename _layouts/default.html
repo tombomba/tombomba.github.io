@@ -25,7 +25,7 @@
   <meta property="og:description" content="{{ page.excerpt | default: site.description | strip | strip_html | normalize_whitespace | xml_escape | truncate:280 }}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:type" content="blog">
-  <meta property="og:image" content="{{ page.fbog | default: 'default-social.png' | prepend: site.img }}">
+  <meta property="og:image" content="{{ page.media.image | default: 'default-social.png' | prepend: site.img }}">
 
   <!-- twitter  -->
   <meta name="twitter:title" content="{{ page.title | default: site.title }}">
@@ -34,11 +34,11 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@{{ site.socials }}">
   <meta name="twitter:creator" content="@{{ site.socials }}">
-  <meta name="twitter:image:src" content="{{ page.fbog | default: 'default-social.png' | prepend: site.img }}">
+  <meta name="twitter:image:src" content="{{ page.media.image | default: 'default-social.png' | prepend: site.img }}">
   {%- endunless %}
 
   <!-- css -->
-  <link rel="stylesheet" href="{{ page.style | default: page.layout | prepend: site.css | append: '.css' }}">
+  <link rel="stylesheet" href="{{ page.style | default: 'main' | prepend: site.css | append: '.css' }}">
 
 </head>
 

@@ -1,7 +1,7 @@
 <div class="byline">
   {% if include.avi %}
   <div class="avatar">
-    <a href="{{ 'about' | absolute_url }}"><img src="{{ include.avi | default: 'bomtomba-avi.png' | prepend: site.img }}" alt="{{ include.author | default: site.author }}"></a>
+    <img src="{{ include.avi | prepend: site.img }}" alt="{{ include.author | default: site.author }}">
   </div>
   {% endif %}
   <div class="bio">

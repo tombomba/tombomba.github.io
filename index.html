@@ -33,14 +33,13 @@ permalink: /index.html
   
 </main>
 
-<aside class="home"><!-- recents -->
+<aside class="dir"><!-- recents -->
 
   <div class="hr"></div>
 
-  {% for p in site.posts limit: 7 offset: 1 %}
-    {% assign txt = p.dek | default: p.excerpt | truncatewords: 20 -%}
-    {% include _list-section.html title=p.title text=txt url=p.url htag='h3' %}
-  {% endfor -%}
+  {% for p in site.posts limit: 7 %}
+  {% include _list-section.html title=p.title text=p.excerpt url=p.url date=p.date htag='h2' %}
+  {% endfor %}
 
 </aside>
 

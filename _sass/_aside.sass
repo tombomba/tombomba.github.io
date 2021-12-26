@@ -1,13 +1,14 @@
 aside
-  margin-top: var(--shim)
-  
+  margin-top: var(--shim--double)
+  &.home
+    margin-top: var(--shim)
   section
     max-width: var(--page-width)
-    margin-top: var(--shim--tight) 
-    &:first-of-type
-      margin-top: var(--shim)
     margin-left: auto
     margin-right: auto
+    margin-top: var(--shim--tight)
+    &:first-of-type
+      margin-top: var(--shim)
     h1, h2, h3, h4, h5, h6
       display: inline
       margin: 0

@@ -1,7 +1,7 @@
 <footer class="{% if page.is_post or page.is_home %}post{% else %}page{% endif %}">
   <div class="hr"></div>
   <ul class="nav">
-    <li>{% if page.is_home %}{{ site.title }}{% else %}<a href="{{ site.url }}">{{ site.title }}</a>{% endif %}</li>
+    {% unless page.is_home %}<li><a href="{{ site.url }}">{{ site.title }}</a></li>{% endunless %}
     <li><a href="{{ 'posts' | absolute_url }}">Archive</a></li>
     {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}" aria-label="About this website">About</a></li>{% endunless %}
     <li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li>

@@ -35,7 +35,7 @@ defaults:
       path: ""      # empty string for all files
       type: posts   # limit to posts
     values:
-      layout: post
+      layout: text
       is_post: true
   -
     scope:

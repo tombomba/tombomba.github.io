@@ -1,6 +1,7 @@
 header[role="banner"]
+  border-bottom: $dash
   div.flexwrap
-    max-width: calc(var(--page-width) + var(--shim--quad))
+    max-width: var(--page-width)
     margin: var(--shim--tight) auto
     display: flex
     flex-flow: column
@@ -34,9 +35,6 @@ header[role="banner"]
   img
     width: 32px
     height: 32px
-    &.embiggen
-      width: 48px
-      height: 48px
     border-radius: 4px
     background-color: $bg-color
   div.hr
@@ -44,7 +42,7 @@ header[role="banner"]
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 20rem)
+//@media screen and (min-width: 20rem)
 
   header[role="banner"]
     h1
@@ -67,10 +65,21 @@ header[role="banner"]
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 40rem)
+//@media screen and (min-width: 40rem)
 
   header[role="banner"]
     div.flexwrap
       margin: 0 auto
       height: var(--shim--double)
+
+//-----------------------------------------------------------------------------
+
+//@media screen and (min-width: 60rem)
+
+  header[role="banner"]
+    h1
+      font-size: var(--hs--xl)
+    img
+      width: 48px
+      height: 48px
    

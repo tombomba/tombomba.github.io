@@ -1,26 +1,62 @@
 footer
-  &.post
-    margin-top: var(--shim)
+  border-top: $dash
   &.page
     margin-top: var(--shim--double)
-  ul.nav
-    margin: var(--shim) auto
+  &.post 
+    margin-top: var(--shim)
+  div.flexwrap
+    margin: var(--shim) auto var(--shim--tight) auto
     max-width: var(--page-width)
     display: flex
-    flex-flow: row wrap
+    flex-flow: column
     align-items: center
     justify-content: center
-    list-style-type: none
-    li
-      font-size: var(--fs--sm)
-      line-height: var(--lh--tight)
-      color: $mix-color
-      &:not(:first-of-type)
-        margin-left: 0.33em
-      &:not(:first-of-type)::before
-        content: '-'
-        padding-right: 0.33em
-        color: $mix-color 
-  div.hr
-    width: 100%
+    ul
+      margin: 0
+      list-style-type: none 
+      li
+        display: inline-block
+        font-family: $black
+        font-size: var(--fs--sm)
+        line-height: var(--lh--tight)
+        font-weight: 900
+        text-transform: uppercase
+        img
+          width: 32px
+          height: 32px
+          border-radius: 4px
+        a:link, a:visited
+          color: $logo-color
+          text-shadow: -3px 3px 4px $shock-color, 3px -3px 4px $shock-color
+          text-decoration: none
+        a:hover
+          color: $shock-color
+          text-shadow: -3px 3px 6px $logo-color, 3px -3px 6px $logo-color
+      &.sitenav
+        li:not(:last-of-type)
+          margin-right: 0.66em
+      &.socials
+        margin-top: 0.7em
+        li:not(:first-of-type)
+          margin-left: 0.66em
 
+    
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30rem)
+
+  footer
+    div.flexwrap
+      flex-flow: row wrap
+      justify-content: space-between
+      ul.socials
+        margin: 0
+
+//-----------------------------------------------------------------------------
+
+//@media screen and (min-width: 40rem)
+
+  footer
+    div.flexwrap
+      margin: 0 auto
+      height: var(--shim--double)

@@ -7,7 +7,7 @@ layout: default
 
 <main role="main">
 
-{% if wordcount > 150 %}
+{% if wordcount > 150 or page.shove_layout %}
     {% include detail-text.html page=page content=content %}
   
   {% else %}

@@ -1,11 +1,26 @@
 ---
 layout: text
-title: "About the site"
+title: "Here's everything I know about how to survive in the modern world"
 excerpt: "About the author"
 emoji: '🎉'
 is_about: true
+shove_layout: true
 permalink: "/about/"
 ---
+{% capture bio %}
+My name is Tom Bomba. I knocked around NYU's cinema studies program before I "dropped out of college to get an education." I've spent my time since producing various forms of digital media.
+
+The site looks this way on purpose. The design is driven by nostalgia for the old web, when more things seemed possible, and sits as a constant reminder to me not to write as if I'm submitting for publication. The name is a loose reference to work by Pauline Kael and Jeffrey Sconce. 
+
+_{{ site.title }}_ began as a hobby years ago. Back then I listened to KCRW Los Angeles, carelessly, while working on it, and I didn't know the singers or the names of the songs. Right now I'm listening to KPISS.fm, and I still don't know the singers or the name of the songs. By this I mean to tell you that I discovered there is sometimes a small pleasure in a practiced ignorance.
+
+I can go on, and it'll bore you. Chances are the sentence you're reading right now will be considered and reworked and then discarded. Much like the other writing on this site, it may take a different form in the future.
+
+Oh, p.s., the various icons littered around are courtesy of Twemoji, twitter dot com's open source emoji program. I am legally (and ethically, I think) required to tell you this by using them. So now you know.
+
+{% endcapture -%}
+
+{% comment %}
 {% capture bio %}
 There are quite a few critics online who are smart and skilled and say interesting things. This website is my attempt to join them. I made it for fun, but also to express ideas I don't see routinely expressed.
 
@@ -17,5 +32,6 @@ The site was built on an ancient Macintosh using VS Code and Pixelmator, while l
 
 The various icons lying around are courtesy of Twitter's open source emoji program.
 {% endcapture -%}
+{% endcomment %}
 
 {{ bio | strip | smartify | markdownify | normalize_whitespace }}

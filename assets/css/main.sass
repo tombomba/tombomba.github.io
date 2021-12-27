@@ -34,8 +34,9 @@ article.feature
 article.text
   header
     h1
-      font-size: var(--hs--md)
+      font-size: var(--hs)
       line-height: var(--lh--tight)
+      font-style: italic
   div.byline
     margin-top: var(--shim--tight)
     div.bio
@@ -101,6 +102,7 @@ article.micro
 @media screen and (min-width: 50rem)
 
   article.feature,
+  article.photo,
   article.video
     figure
       margin-left: calc(var(--shim) * -1)
@@ -111,6 +113,7 @@ article.micro
 @media screen and (min-width: 70rem)
 
   article.feature,
+  article.photo,
   article.video
     figure
       margin-left: calc(var(--shim) * -2)

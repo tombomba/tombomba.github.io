@@ -1,28 +1,22 @@
 header[role="banner"]
   div.flexwrap
     max-width: calc(var(--page-width) + var(--shim--quad))
-    margin: 0 auto
+    margin: var(--shim--tight) auto
     display: flex
-    flex-flow: row wrap
+    flex-flow: column
     align-items: center
     justify-content: center
-    height: var(--shim--double)
     div.text
-      flex: 2 1 50%
       display: flex
       align-items: center
-      justify-content: flex-start
-    div.group
-      flex: 1 1 25%
+      justify-content: center
+    div.icon
       display: flex
       flex-flow: row wrap
       align-items: center
-      &.left
-        justify-content: flex-start
-      &.right
-        justify-content: flex-end
-        img
-          margin-left: var(--sliver)
+      margin-top: 1em
+      img
+        margin-left: var(--sliver)
   h1
     font-family: $black
     font-size: var(--hs--md)
@@ -37,7 +31,6 @@ header[role="banner"]
     a:hover
       color: $shock-color
       text-shadow: -3px 3px 3px $logo-color, 3px -3px 3px $logo-color
-      
   img
     width: 32px
     height: 32px
@@ -51,7 +44,7 @@ header[role="banner"]
 
 //-----------------------------------------------------------------------------
 
-//@media screen and (min-width: 30rem)
+@media screen and (min-width: 20rem)
 
   header[role="banner"]
     h1
@@ -59,8 +52,25 @@ header[role="banner"]
 
 //-----------------------------------------------------------------------------
 
-//@media screen and (min-width: 60rem)
+@media screen and (min-width: 30rem)
 
   header[role="banner"]
-    h1
-      font-size: var(--hs--xl)
+    div.flexwrap
+      flex-flow: row wrap
+      div.text
+        flex: 2 1 50%
+        justify-content: flex-start
+      div.icon
+        flex: 1 1 25%
+        justify-content: flex-end
+        margin-top: 0
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  header[role="banner"]
+    div.flexwrap
+      margin: 0 auto
+      height: var(--shim--double)
+   

@@ -11,6 +11,6 @@
   
   {{ copy | strip | normalize_whitespace }}
 
-  {% if p.date %}{% include _byline.html date=p.date %}{% endif %}
+  {% if p.date %}{% include _byline.html date=p.date url=p.url is_home=include.is_home %}{% endif %}
 
 </article>

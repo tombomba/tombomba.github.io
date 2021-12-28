@@ -1,30 +1,29 @@
 //----------------------------------------------------------------------------
 
-// $key:           random(6)
-  $one-color:     #06F, #C06, #393, #f30, #09F, #099  
-  $two-color:     #6FF, #FC0, #9F0, #FC0, #9F3, #FC0
-  $primary-color: nth($one-color, $key)
-  $secondary-color: nth($two-color, $key)
+$key:           random(6)
+$one-color:     #06F, #C06, #393, #f30, #09F, #099  
+$two-color:     #6FF, #FC0, #9F0, #FC0, #9F3, #FC0
+$primary-color: nth($one-color, $key)
+$secondary-color: nth($two-color, $key)
 
 //----------------------------------------------------------------------------
 
-$body-color:    #EDEDED !default
-$text-color:    #212121 !default
-$shadow-color:  darken($body-color, 16%) !default
+$body-color:    #F3F3F3 !default
+$text-color:    #161616 !default
+$shadow-color:  #C0C0C0 !default
 
-$logo-color:    #393 !default
-$shock-color:   #9F0 !default
+$logo-color:    $primary-color !default
+$shock-color:   $secondary-color !default
 $select-color:  $shock-color !default
 
-$mix-color:     mix($body-color, $text-color, 35%) !default
-$bg-color:      darken($body-color, 7%) !default
+$mix-color:     #636363 !default
 
 $link-color:    #36C !default
 $visited-color: #939 !default
 $active-color:  #F90 !default
 $tap-color:     #FC6 !default
 
-$border-dark:   #C0C0C0 !default
-$border-light:  #F3F3F3  !default
+$border-dark:   #C8C8C8 !default
+$border-light:  #FFF  !default
 
-$dash:          thin dashed $shadow-color
+$bg-color:      $border-dark !default

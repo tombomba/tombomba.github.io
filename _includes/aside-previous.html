@@ -1,13 +1,26 @@
 <aside><!-- next / prev -->
-  <div class="hr"></div>
- {% if include.next %}
-    {% assign txt = include.next.dek | default: include.next.excerpt | truncatewords: 20 | strip | strip_html | smartify | normalize_whitespace %}
-    {% include _list-section.html title=include.next.title text=txt url=include.next.url htag='h2' %}
-  {% endif -%}
 
-  {% if include.previous %}
-    {% assign txt = include.previous.dek | default: include.previous.excerpt | truncatewords: 20 | strip | strip_html | smartify | normalize_whitespace %}
-    {% include _list-section.html title=include.previous.title text=txt url=include.previous.url htag='h2' %}
+  <div class="hr"></div>
+ 
+ {% if include.id == site.posts.first.id %}
+
+    {% for extra in site.posts limit: 3 offset: 1 %}
+      {% assign txt = extra.dek | default: extra.excerpt | truncatewords: 20 | strip | strip_html | smartify | normalize_whitespace %}
+      {% include _list-section.html title=extra.title text=txt url=extra.url htag='h2' %}
+    {% endfor -%}
+    
+ {% else -%}
+
+  {% if include.next %}
+      {% assign txt = include.next.dek | default: include.next.excerpt | truncatewords: 20 | strip | strip_html | smartify | normalize_whitespace %}
+      {% include _list-section.html title=include.next.title text=txt url=include.next.url htag='h2' %}
+    {% endif -%}
+
+    {% if include.previous %}
+      {% assign txt = include.previous.dek | default: include.previous.excerpt | truncatewords: 20 | strip | strip_html | smartify | normalize_whitespace %}
+      {% include _list-section.html title=include.previous.title text=txt url=include.previous.url htag='h2' %}
+    {% endif -%}
+
   {% endif -%}
 
 </aside>

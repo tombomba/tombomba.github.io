@@ -18,7 +18,7 @@ layout: default
 </main>
 
 {% if page.previous or page.next %}
-  {% include aside-previous.html previous=page.previous next=page.next %}
+  {% include aside-previous.html id=page.id previous=page.previous next=page.next %}
 {% endif %}
 
 {% include footer.html %}

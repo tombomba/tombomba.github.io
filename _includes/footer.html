@@ -2,8 +2,8 @@
   <div class="hr"></div>
   <div class="flexwrap">
     <ul class="sitenav">
-      <li><a href="{{ site.url }}">{{ site.title }}</a></li>
-      <li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>
+      {% unless page.is_home %}<li><a href="{{ site.url }}">{{ site.title }}</a></li>{% endunless %}
+      {% unless page.is_about %}<li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>{% endunless %}
       <li><a href="{{ 'about' | absolute_url }}">About</a></li>
     </ul>
     <ul class="socials">

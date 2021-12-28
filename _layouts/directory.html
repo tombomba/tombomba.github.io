@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+{% assign raw = page.permalink | split: '/' | shift %}
+{% assign raw_year = raw[0] | prepend: '20' %}
+{% assign raw_month = raw[1] %}
+
+{% if raw_month %}
+  {% assign is_month_index = true %}
+{% else %}
+  {% assign is_year_index = true %}
+{% endif -%}
+
+{% include banner.html %}
+
+<main role="main">
+
+  <article class="dir">
+
+    <header><h1>{{ page.title }}</h1></header>
+
+    {% for x in site.posts %}
+      {% assign current_month = x.date | date: "%m" %}
+      {% assign current_year = x.date | date: "%Y" -%}
+      {% if is_month_index and current_month == raw_month and current_year == raw_year %}
+        {% include _list-section.html title=x.title text=x.excerpt url=x.url %}
+      {% endif -%}
+      {% if is_year_index and current_year == raw_year %}
+        {% include _list-section.html title=x.title text=x.excerpt date=x.date url=x.url %}
+      {% endif -%}
+    {% endfor -%}
+
+  </article>
+
+</main>
+
+{% include footer.html %}

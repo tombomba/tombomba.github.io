@@ -9,7 +9,7 @@
 
   <header>
     <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
-    {% if p.date %}{% include _byline.html date=p.date %}{% endif %}
+    {% if p.date %}{% include _byline.html date=p.date url=p.url is_home=include.is_home %}{% endif %}
   </header>
   
   {{ copy | strip | normalize_whitespace }}

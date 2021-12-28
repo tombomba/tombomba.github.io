@@ -1,4 +1,0 @@
-<li>
-  <h2><a href="{{ include.url | absolute_url }}">{{ include.title | strip | strip_html | smartify | normalize_whitespace }}</a></h2>
-  <p>{{ include.excerpt | strip | strip_html | truncatewords: 100 | smartify | normalize_whitespace }} {% if include.date %}<span class="daystamp">[<a href="{{ include.url | absolute_url }}">{{ include.date | date: '%d %b' }}</a>]</span>{% endif %}</p>
-</li>

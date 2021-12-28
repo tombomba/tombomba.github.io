@@ -1,13 +1,13 @@
 {% assign title_arr = include.title | default: 'Empty?!' | strip | normalize_whitespace | split: ' ' -%}
+{% assign tsize = title_arr | size | times: 1 %}
 {% assign new_title = '' | split: '' -%}
-{% assign tsize = new_title | size | times: 1 %}
 
 {% for word in title_arr %}
 
-  {% if tsize > 2 and forloop.rindex == 2 %}
+  {% if forloop.rindex == 2 and tsize > 2 %}
     {% assign wordf = word | prepend: '!!OPENSPAN!!' -%}
 
-  {% elsif tsize > 2 and forloop.rindex == 1 %}
+  {% elsif forloop.rindex == 1 and tsize > 2 %}
     {% assign wordf = word | append: '!!CLOSESPAN!!' -%}
 
   {% else %}

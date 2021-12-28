@@ -5,7 +5,8 @@
   </div>
   {% endif %}
   <div class="bio">
+    {% assign pubdate = include.date | default: site.time | date_to_string %}
     <p>{% if include.by %}By {% endif %}<a href="{{ 'about' | absolute_url }}" aria-label="About the author">{{ include.author | default: site.author }}</a></p>
-    <p><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ include.date | default: site.time | date_to_string }}</time></p>
+    <p><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ pubdate }}</a>{% else %}{{ pubdate }}{% endif %}</time></p>
   </div>
 </div>

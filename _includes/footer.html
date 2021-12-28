@@ -2,11 +2,13 @@
   <div class="hr"></div>
   <div class="flexwrap">
     <ul class="sitenav">
-      <li><a href="{{ site.url }}"><img src="{{ 'bomtomba-400x400.png' | prepend: site.img }}" alt="FPO"></a></li>
+      <li><a href="{{ site.url }}">{{ site.title }}</a></li>
+      <li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>
+      <li><a href="{{ 'about' | absolute_url }}">About</a></li>
     </ul>
     <ul class="socials">
-      <li class="sub"><a href="https://twitter.com/{{ site.socials }}"><img src="{{ 'bomtomba-400x400.png' | prepend: site.img }}" alt="FPO"></a></li>
-      <li class="sub"><a href="{{ 'feed.xml' | absolute_url }}"><img src="{{ 'bomtomba-400x400.png' | prepend: site.img }}" alt="FPO"></a></li>
+      <li><a href="https://twitter.com/{{ site.socials }}" target="_twttr">Twitter</a></li>
+      <li><a href="{{ 'feed.xml' | absolute_url }}" target="_rss">RSS</a></li>
     </ul>
   </div>
 </footer>

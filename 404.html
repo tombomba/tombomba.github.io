@@ -6,9 +6,11 @@ goog: false
 emoji: '💥'
 permalink: /404.html
 ---
-{% capture txt %}
-If you're having trouble locating a destination, try visiting the
-[homepage]({{ site.url }}) or browsing posts from earlier [this year]({{ 'posts' | absolute_url }}).
-{% endcapture -%}
 
-{{ txt | strip | smartify | markdownify | normalize_whitespace }}
+<p>Try another?</p>
+
+<ul class="plain">
+  {% for p in site.posts limit: 5 %}<li><a href="{{ p.url | absolute_url }}">{{ p.title | strip | strip_html | smartify | normalize_whitespace }}</a></li>{% endfor %}
+</ul>
+
+<p>If you&rsquo;re having trouble locating a destination on <i>{{ site.title }},</i> try visiting the <a href="{{ site.url }}">homepage</a>. Also, you can browse posts from <a href="{{ site.posts.first.date | date: '%y/%m/' | absolute_url }}">this month</a> or <a href="{{ site.posts.first.date | date: '%y' | absolute_url }}">this year</a>.</p>

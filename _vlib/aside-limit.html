@@ -1,0 +1,19 @@
+
+{% assign xid = include.id | default: site.posts.first.id -%}
+{% assign xlimit = include.limit | default: 3 | plus: 0 %}
+<aside>
+  <div class="hr"></div>
+  <ul>
+  {% assign count = 0 -%}
+  {% for p in site.posts %}
+    {% if count < xlimit %}
+      {% unless xid == p.id %}
+        {% include _list-item.html title=p.title url=p.url excerpt=p.excerpt -%}
+        {% assign count = count | plus: 1 -%}
+      {% endunless %} 
+    {% else -%}
+      {% break %}
+    {% endif -%}
+  {% endfor -%}
+  </ul>
+</aside>

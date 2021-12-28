@@ -37,7 +37,7 @@ permalink: /index.html
 
   <div class="hr"></div>
 
-  {% for p in site.posts limit: 5 offset: 1 %}
+  {% for p in site.posts limit: 7 offset: 1 %}
   {% include _list-section.html title=p.title text=p.excerpt url=p.url date=p.date htag='h2' %}
   {% endfor %}
 

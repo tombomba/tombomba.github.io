@@ -1,0 +1,43 @@
+article
+  header
+    h1
+      font-size: var(--hs)
+      line-height: var(--lh--tight)
+
+aside
+  margin-top: var(--shim)
+ 
+section
+  max-width: var(--page-width)
+  margin-left: auto
+  margin-right: auto
+  margin-top: var(--shim--tight)
+  &:first-of-type
+    margin-top: var(--shim)
+  h1, h2, h3, h4, h5, h6
+    display: inline
+    font-size: 1em
+  p 
+    display: inline
+    margin: 0
+
+ul.datelist
+  display: flex
+  flex-flow: row wrap
+  align-items: center
+  justify-content: flex-start
+  max-width: var(--page-width)
+  margin: var(--shim) auto 0 auto
+  list-style-type: none
+  li
+    margin-right: 0.66em
+    &:first-of-type
+      font-weight: 700
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30rem)
+
+  section
+    h1, h2, h3, h4, h5, h6, p
+      display: block

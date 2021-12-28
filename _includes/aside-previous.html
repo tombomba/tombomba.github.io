@@ -1,5 +1,5 @@
 <aside><!-- next / prev -->
-
+  <div class="hr"></div>
  {% if include.next %}
     {% assign txt = include.next.dek | default: include.next.excerpt | truncatewords: 20 | strip | strip_html | smartify | normalize_whitespace %}
     {% include _list-section.html title=include.next.title text=txt url=include.next.url htag='h2' %}

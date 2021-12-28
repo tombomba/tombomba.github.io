@@ -16,7 +16,7 @@
     {% include figure.html media=p.media %}
   {% endif -%}
   
-  {% if p.date %}{% include _byline.html date=p.date avi='bomtomba-400x400.png' by=true %}{% endif -%}
+  {% if p.date %}{% include _byline.html date=p.date url=p.url avi='bomtomba-400x400.png' is_home=include.is_home by=true %}{% endif -%}
 
   {{ copy | strip | normalize_whitespace }}
 

@@ -3,16 +3,13 @@
   <div class="flexwrap">
     <ul class="sitenav">
       <li><a href="{{ site.url }}"><img src="{{ 'trash.png' | prepend: site.ico }}" alt="Home"></a></li>
-     
-    </ul>
-    <ul class="socials">
-      <li><a href="https://twitter.com/{{ site.socials }}" target="_twttr"><img src="{{ 'blue-bird.png' | prepend: site.ico }}" alt="@{{ site.socials }}"></a></li>
-      <li><a href="{{ 'feed.xml' | absolute_url }}" target="_rss"><img src="{{ 'feed.png' | prepend: site.ico }}" alt="RSS (Atom) feed"></a></li>
+      <li><a href="https://twitter.com/{{ site.socials }}" target="_twttr"><img src="{{ 'blue-bird.png' | prepend: site.ico }}" alt="Twitter"></a></li>
+      <li><a href="{{ 'feed.xml' | absolute_url }}" target="_rss"><img src="{{ 'feed.png' | prepend: site.ico }}" alt="RSS (Atom)"></a></li>
     </ul>
   </div>
 </footer>
 
-<!--
-  {% unless page.is_archive %}<li><a href="{{ 'archive' | absolute_url }}"><img src="{{ 'hamburger.png' | prepend: site.ico }}" alt="Archive"></a></li>{% endunless %}
-  {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}" aria-label="About this website"><img src="{{ 'cold-face.png' | prepend: site.ico }}" alt="{{ site.author }}"></a></li>{% endunless %}
--->
+{% comment %}
+ {% unless page.is_archive %}<li><a href="{{ 'archive' | absolute_url }}"><img src="{{ 'card-index.png' | prepend: site.ico }}" alt="Archive"></a></li>{% endunless %}
+{% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}"><img src="{{ 'nerd-face.png' | prepend: site.ico }}" alt="About"></a></li>{% endunless %}
+{% endcomment %}

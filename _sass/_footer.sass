@@ -2,65 +2,40 @@ footer
   &.page
     margin-top: var(--shim--double)
   &.post 
-    margin-top: var(--shim)
-  div.flexwrap
+    margin-top: var(--shim)    
+  ul
     margin: var(--shim) auto
     max-width: var(--page-width)
     display: flex
-    flex-flow: column
+    flex-flow: row wrap
     align-items: center
-    justify-content: center
-    ul
-      margin: 0
-      list-style-type: none 
-      li
-        display: inline-block
-        font-family: $black
-        font-size: var(--fs--sm)
-        line-height: var(--lh--tight)
-        text-transform: uppercase
-        color: $mix-color
-        img
-          width: var(--icon--lg)
-          height: var(--icon--lg)
-          border-radius: 4px
-        a:link, a:visited
-          color: $logo-color
-          text-shadow: -3px 3px 4px $shock-color, 3px -3px 4px $shock-color
-          text-decoration: none
-        a:hover
-          color: $shock-color
-          text-shadow: -3px 3px 6px $logo-color, 3px -3px 6px $logo-color
-      &.sitenav
-        li:not(:last-of-type)
-          margin-right: 0.33em
-      &.socials
-        margin-top: 1em
-        li:not(:first-of-type)
-          margin-left: 0.66em
-
-    
+    justify-content: space-around
+    list-style-type: none
+    li
+      display: inline-block
+      img
+        width: var(--icon--md)
+        height: var(--icon--md)
+ 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30rem)
 
   footer
-    div.flexwrap
-      flex-flow: row wrap
-      justify-content: space-between
-      ul
-        li
-          img
-            width: var(--icon--md)
-            height: var(--icon--md)
-        &.socials
-          margin-top: 0
+    ul
+      li
+        &:not(:last-of-type)
+          margin-right: 0.8em
+        &:nth-last-child(2)
+          flex: 1
+          margin-top: 0.125em
+          text-align: right
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40rem)
 
   footer
-    div.flexwrap
+    ul
       margin: 0 auto
       height: var(--shim--double)

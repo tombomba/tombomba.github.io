@@ -19,7 +19,7 @@ header[role="banner"]
         margin-left: var(--sliver)
   h1
     font-family: $black
-    font-size: var(--hs--lg)
+    font-size: var(--hs--md)
     line-height: 1
     font-weight: 400
     text-transform: uppercase
@@ -32,20 +32,21 @@ header[role="banner"]
       color: $shock-color
       text-shadow: -3px 3px 3px $logo-color, 3px -3px 3px $logo-color
   img
-    width: 32px
-    height: 32px
-    border-radius: 4px
-    background-color: $bg-color
+    width: var(--icon--md)
+    height: var(--icon--md)
   div.hr
     width: 100%
 
 //-----------------------------------------------------------------------------
 
-//@media screen and (min-width: 20rem)
+@media screen and (min-width: 20rem)
 
   header[role="banner"]
     h1
-      font-size: var(--hs--md)
+      font-size: var(--hs--lg)
+    img
+      width: var(--icon--lg)
+      height: var(--icon--lg)
 
 //-----------------------------------------------------------------------------
 
@@ -63,6 +64,9 @@ header[role="banner"]
         margin-top: 0
     h1
       font-size: var(--hs--md)
+    img
+      width: var(--icon--md)
+      height: var(--icon--md)
 
 //-----------------------------------------------------------------------------
 
@@ -72,15 +76,3 @@ header[role="banner"]
     div.flexwrap
       margin: 0 auto
       height: var(--shim--double)
-
-//-----------------------------------------------------------------------------
-
-//@media screen and (min-width: 60rem)
-
-  header[role="banner"]
-    h1
-      font-size: var(--hs--xl)
-    img
-      width: 48px
-      height: 48px
-   

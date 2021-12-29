@@ -21,4 +21,5 @@ Software: VS Code, Pixelmator, Jekyll, Git
 - Barry Gifford, "Out of the Past: Adventures in Film Noir"
 - Tom Spurgeon, "Comics Reporter"
 - Jessa Crispin, "Book Slut"
+- Tavi Gevinson, "Rookie"
 - Brian Collins, "Horror Movie a Day"

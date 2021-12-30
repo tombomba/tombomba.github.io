@@ -13,21 +13,16 @@ footer
     list-style-type: none
     li
       display: inline-block
-      font-family: $black
-      font-size: var(--fs--sm)
-      line-height: var(--lh)
-      font-weight: 400
-      text-transform: uppercase
-      color: $mix-color
-      &:not(:first-of-type)
-        margin-top: var(--sliver)
-      a:link, a:visited
-        color: $logo-color
-        text-shadow: -3px 3px 3px $shock-color, 3px -3px 3px $shock-color
-        text-decoration: none
-      a:hover
-        color: $shock-color
-        text-shadow: -3px 3px 3px $logo-color, 3px -3px 3px $logo-color
+      &.copydate
+        font-size: var(--fs--sm)
+        color: $mix-color
+        span
+          display: none
+        a:link, a:visited
+          color: $mix-color
+          text-decoration: none
+        a:hover
+          text-decoration: underline
       img
         width: var(--icon--lg)
         height: var(--icon--lg)
@@ -44,10 +39,11 @@ footer
           margin-top: 0
         &:not(:last-of-type)
           margin-right: 0.8em
-        &:nth-last-of-type(2)
+        &.copydate
           flex: 1
-          margin-top: 0.2em
-          text-align: right
+          font-size: var(--fs--xs)
+          span
+            display: inline
         img
           width: var(--icon--md)
           height: var(--icon--md)

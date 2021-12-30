@@ -7,9 +7,9 @@ footer
     margin: var(--shim) auto
     max-width: var(--page-width)
     display: flex
-    flex-flow: column
+    flex-flow: row wrap
     align-items: center
-    justify-content: center
+    justify-content: space-around
     list-style-type: none
     li
       display: inline-block
@@ -29,8 +29,8 @@ footer
         color: $shock-color
         text-shadow: -3px 3px 3px $logo-color, 3px -3px 3px $logo-color
       img
-        width: var(--icon--md)
-        height: var(--icon--md)
+        width: var(--icon--lg)
+        height: var(--icon--lg)
  
 //-----------------------------------------------------------------------------
 
@@ -38,7 +38,6 @@ footer
 
   footer
     ul
-      flex-flow: row wrap 
       justify-content: flex-start
       li
         &:not(:first-of-type)
@@ -49,6 +48,9 @@ footer
           flex: 1
           margin-top: 0.2em
           text-align: right
+        img
+          width: var(--icon--md)
+          height: var(--icon--md)
 
 //-----------------------------------------------------------------------------
 

@@ -1,0 +1,24 @@
+---
+layout: default
+---
+{% assign wordcount = content | number_of_words %}
+
+{% include banner.html %}
+
+<main role="main">
+
+{% if wordcount > 150 %}
+    {% include detail-photo.html page=page content=content %}
+  
+  {% else %}
+    {% include detail-micro.html page=page content=content %}
+
+  {% endif %}
+
+</main>
+
+{% if page.previous or page.next %}
+  {% include aside-previous.html id=page.id previous=page.previous next=page.next %}
+{% endif %}
+
+{% include footer.html %}

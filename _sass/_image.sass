@@ -1,0 +1,97 @@
+//-----------------------------------------------------------------------------
+// Image styles!
+//-----------------------------------------------------------------------------
+
+article > img
+  display: block
+  max-width: 100%
+  height: auto
+  margin-top: var(--shim)
+  margin-bottom: var(--shim)
+  background-color: $bg-color
+  border-radius: 4px
+  &.top
+    margin-top: 0
+  &.left,
+  &.right,
+  &.center
+    margin-left: auto
+    margin-right: auto
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 25rem)
+
+  article > img
+    &.left,
+    &.right,
+      margin-left: 0
+      margin-right: 0
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 37rem)
+
+  article > img
+
+    margin-top: 0
+
+    &.wide
+      margin-left: 0
+      margin-right: 0
+
+    &.left
+      display: inline
+      max-width: 40%
+      float: left
+      margin-right: 1em
+      margin-bottom: var(--shim)
+
+    &.right
+      display: inline
+      float: right
+      margin-left: 1em
+      margin-bottom: var(--shim)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 48rem)
+
+  article > img
+
+    &.top.pull
+      margin-top: -0.25em
+
+    &.left,
+    &.right
+      margin-bottom: 1em
+
+    &.left
+      margin-right: var(--shim--tight)
+
+    &.right
+      margin-left: var(--shim--tight)
+
+    &.left.pull
+      margin-left: -1em
+
+    &.left.tilt
+      transform: rotate(-3deg)
+
+    &.right.pull
+      margin-right: -1em
+
+    &.right.tilt
+      transform: rotate(3deg)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 64rem)
+
+  article > img
+
+    &.left.pull
+      margin-left: -2em
+
+    &.right.pull
+      margin-right: -2em

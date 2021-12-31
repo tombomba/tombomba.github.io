@@ -1,0 +1,16 @@
+---
+layout: default
+---
+{% include banner.html %}
+
+<main role="main">
+
+  {% include detail-feature.html page=page content=content %}
+
+</main>
+
+{% if page.previous or page.next %}
+  {% include aside-previous.html id=page.id previous=page.previous next=page.next %}
+{% endif %}
+
+{% include footer.html %}

@@ -7,18 +7,25 @@ layout: default
 
 <main role="main">
 
-{% if wordcount > 150 or page.shove_layout %}
+{% if page.media %}
+  {% include detail-micro.html page=page content=content %}
+
+{% else %}
+  
+  {% if wordcount > 150 or page.shove_layout %}
     {% include detail-text.html page=page content=content %}
   
   {% else %}
     {% include detail-micro.html page=page content=content %}
 
-  {% endif %}
+  {% endif -%}
 
-</main>
+{% endif -%}
 
 {% if page.previous or page.next %}
   {% include aside-previous.html id=page.id previous=page.previous next=page.next %}
 {% endif %}
+
+</main>
 
 {% include footer.html %}

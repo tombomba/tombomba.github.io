@@ -1,0 +1,25 @@
+---
+layout: null
+permalink: /humans.txt
+---
+/* TEAM */
+
+Author: {{ site.author }}
+Site: {{ site.url }}
+Twitter: @{{ site.socials }}
+Letterboxd: /{{ site.socials }}
+
+/* SITE */
+
+Last update: {{ site.time | date: "%Y/%m/%d" }}
+Standards: HTML5, CSS3
+Software: VS Code, Pixelmator, Jekyll, Git
+
+/* INFLUENCES */
+
+- Greil Marcus, "Real Life Rock Top 10"
+- Barry Gifford, "Out of the Past: Adventures in Film Noir"
+- Tom Spurgeon, "Comics Reporter"
+- Jessa Crispin, "Book Slut"
+- Tavi Gevinson, "Rookie"
+- Brian Collins, "Horror Movie a Day"

@@ -44,44 +44,11 @@ article
         font-size: var(--fs--xs)
         line-height: var(--lh--tight)
 
-  div.byline
-    display: flex
-    flex-flow: row wrap
-    align-items: center
-    div.avatar
-      display: none
-    div.bio
-      p
-        display: inline
-        margin: 0
-        color: $mix-color
-        a:link, a:visited
-          color: $mix-color
-          text-decoration: none
-        a:hover
-          text-decoration: underline
-        &:nth-of-type(2)::before
-          content: '\00A0\/\0020'
-
-  span.highlight
-    padding: 3px 0
-    background-color: $shock-color
-
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30rem)
 
   article
-
-    div.byline
-      div.avatar
-        display: block
-        margin-right: var(--sliver)
-        img
-          width: var(--shim)
-          height: var(--shim)
-          border-radius: 50%
-          background-color: $bg-color
 
     figure.narrow
       max-width: calc(var(--page-width) / 2)

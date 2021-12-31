@@ -7,30 +7,6 @@
 
 //-----------------------------------------------------------------------------
 
-article.feature
-  header
-    h1
-      font-size: var(--hs)
-      line-height: var(--lh--tight)
-      font-style: italic
-    p.dek
-      color: $mix-color
-  figure
-    margin: var(--shim--tight) 0 var(--shim) 0
-    padding-top: var(--sliver)
-  div.byline
-    margin-top: var(--shim--tight)
-    div.bio
-      p
-        font-size: var(--fs--sm)
-        line-height: var(--lh)
-        color: $text-color
-        a:link, a:visited
-          color: $text-color
-        &:first-of-type
-          font-weight: 700
-          text-transform: none
-
 article.text
   header
     h1
@@ -38,30 +14,24 @@ article.text
       line-height: var(--lh--tight)
       font-style: italic
   div.byline
-    margin-top: var(--shim--tight)
-    div.bio
-      p
-        margin: 0
-        line-height: var(--lh--tight)
-
-article.photo
-  header
-    h1
-      font-size: var(--hs)
-      line-height: var(--lh--tight)
-  figure
-    margin-bottom: var(--shim)
-    padding-bottom: var(--sliver)
-    figcaption
-      margin-bottom: calc(var(--sliver) * -1)
-  div.byline
-    div.bio
-      p
-        margin: 0
-        font-size: var(--fs--xs)
-        line-height: var(--lh--tight)
-        &:first-of-type
-          text-transform: uppercase
+      margin-top: var(--shim--tight)
+      display: flex
+      flex-flow: row wrap
+      align-items: center
+      div.avatar
+        display: none
+      div.bio
+        p
+          display: inline
+          margin: 0
+          color: $mix-color
+          a:link, a:visited
+            color: $mix-color
+            text-decoration: none
+          a:hover
+            text-decoration: underline
+          &:nth-of-type(2)::before
+            content: '\00A0\/\0020'
 
 article.micro
   header
@@ -75,11 +45,26 @@ article.micro
       &::after
         content: '\0020'
 
+aside.nextprev
+  margin-top: var(--shim)
+  section
+    max-width: var(--page-width)
+    margin-top: var(--shim--tight)
+    &:first-of-type
+      margin-top: var(--shim)
+    margin-left: auto
+    margin-right: auto
+    h1, h2, h3, h4, h5, h6
+      display: inline
+      font-size: 1em
+    p 
+      display: inline
+      margin: 0
+
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 20rem)
 
-  article.feature,
   article.text
     header
       h1
@@ -89,28 +74,17 @@ article.micro
 
 @media screen and (min-width: 30rem)
 
-  article.feature
-    header
-      h1.embiggen
-        font-size: var(--hs--lg)
-      p.dek
-        margin-top: 0.33em
-        line-height: var(--lh--tight)
+  article.text
+    div.byline
+      div.avatar
+        display: block
+        margin-right: var(--sliver)
+        img
+          width: var(--shim)
+          height: var(--shim)
+          border-radius: 50%
 
-//-----------------------------------------------------------------------------
-
-//@media screen and (min-width: 40rem)
-
-  article.feature
-    figure
-      margin-left: calc(var(--shim) * -1)
-      margin-right: calc(var(--shim) * -1)
-
-//-----------------------------------------------------------------------------
-
-//@media screen and (min-width: 60rem)
-
-  article.feature
-    figure
-      margin-left: calc(var(--shim) * -2)
-      margin-right: calc(var(--shim) * -2)
+  aside.nextprev
+    section
+      h1, h2, h3, h4, h5, h6, p
+        display: block

@@ -1,10 +1,8 @@
 <footer class="{% if page.is_post or page.is_home %}post{% else %}page{% endif %}">
   <div class="hr"></div>
-  <div class="flexwrap">
-    <ul class="sitenav">
-      <li><a href="{{ site.url }}"><img src="{{ 'trash.png' | prepend: site.ico }}" alt="{{ site.title }}"></a></li>
-      <li class="copydate"><span>Copyright</span> &copy; {{ site.posts.first.date | date: '%Y' }} <span><a href="{{ 'about' | absolute_url }}">{{ site.author }}</a></span></li>
-      <li><a href="{{ 'feed.xml' | absolute_url }}" target="_rss"><img src="{{ 'feed.png' | prepend: site.ico }}" alt="RSS (Atom)"></a></li>
-    </ul>
-  </div>
+  <ul>
+    <li><a href="{{ site.url }}"><img src="{{ 'trash.png' | prepend: site.ico }}" alt="{{ site.title }}"></a></li>
+    <li class="copydate"><span>Copyright</span> &copy; {{ site.posts.first.date | date: '%Y' }} <span><a href="{{ 'about' | absolute_url }}">{{ site.author }}</a></span></li>
+    <li><a href="{{ 'feed.xml' | absolute_url }}" target="_rss"><img src="{{ 'feed.png' | prepend: site.ico }}" alt="RSS (Atom)"></a></li>
+  </ul>
 </footer>

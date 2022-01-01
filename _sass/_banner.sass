@@ -18,8 +18,8 @@ header[role="banner"]
       img
         margin-left: var(--sliver)
   h1
-    font-family: $black
-    font-size: var(--hs)
+    font-family: 'Slackey', cursive
+    font-size: var(--hs--md)
     line-height: 1
     font-weight: 900
     text-transform: uppercase
@@ -31,6 +31,10 @@ header[role="banner"]
     a:hover
       color: $shock-color
       text-shadow: -3px 3px 3px $logo-color, 3px -3px 3px $logo-color
+  div.sparkles::after
+    content: '*:･ﾟ✧*:･ﾟ✧'
+    line-height: 1
+    color: $shadow-color
   img
     width: var(--icon--md)
     height: var(--icon--md)

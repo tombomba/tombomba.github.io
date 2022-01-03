@@ -17,10 +17,10 @@ permalink: /index.html
   
       {% assign wordcount = p.content | number_of_words %}
       {% unless forloop.first %}<div class="hr buffer"></div>{% endunless %}
-      {% if p.media %}
+      {% if p.media or p.push == 'micro' %}
         {% include detail-micro.html page=p content=p.content is_home=true %}
       {% else %}
-        {% if wordcount > 150 %}
+        {% if wordcount > 150 or p.push == 'text' %}
           {% include detail-text.html page=p content=p.content is_home=true %}
         {% else %}
           {% include detail-micro.html page=p content=p.content is_home=true %}

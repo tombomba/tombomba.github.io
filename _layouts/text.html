@@ -7,12 +7,12 @@ layout: default
 
 <main role="main">
 
-{% if page.media %}
+{% if page.media or page.push == 'micro' %}
   {% include detail-micro.html page=page content=content %}
 
 {% else %}
   
-  {% if wordcount > 150 or page.shove_layout %}
+  {% if wordcount > 150 or page.push == 'text' %}
     {% include detail-text.html page=page content=content %}
   
   {% else %}

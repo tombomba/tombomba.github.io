@@ -1,73 +1,17 @@
 header[role="banner"]
-  div.flexwrap
-    max-width: var(--page-width)
-    margin: 1em auto
-    display: flex
-    flex-flow: column
-    align-items: center
-    justify-content: center
-    div.text
-      display: flex
-      align-items: center
-      justify-content: center
-    div.icon
-      display: flex
-      flex-flow: row wrap
-      align-items: center
-      margin-top: 1em
-      img
-        margin-left: var(--sliver)
+  max-width: var(--page-width)
+  margin-top: var(--shim)
   h1
-    margin-top: 3px
-    font-family: 'Slackey', cursive
-    font-size: var(--hs--md)
+    font-size: 1em  
     line-height: 1
-    font-weight: 900
-    text-transform: uppercase
-    color: $logo-color
-    a:link, a:visited
-      color: $logo-color
-      text-shadow: -3px 3px 3px $shock-color, 3px -3px 3px $shock-color
-      text-decoration: none
-    a:hover
-      color: $shock-color
-      text-shadow: -3px 3px 3px $logo-color, 3px -3px 3px $logo-color
-  div.sparkles::after
-    content: '*:･ﾟ✧*:･ﾟ✧'
-    line-height: 1
-    color: $shadow-color
-  img
-    width: var(--icon--md)
-    height: var(--icon--md)
+  p
+    color: $mix-color
+  div.icon
+    margin-bottom: var(--shim)
+    img
+      width: var(--shim-2x)
+      height: var(--shim-2x)
+      border-radius: 6px
   div.hr
-    width: 100%
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 30rem)
-
-  header[role="banner"]
-    div.flexwrap
-      flex-flow: row wrap
-      div.text
-        flex: 2 1 50%
-        justify-content: flex-start
-      div.icon
-        flex: 1 1 25%
-        justify-content: flex-end
-        margin-top: 0
-    //h1
-      font-size: var(--hs--lg)
-    //img
-      width: var(--icon--lg)
-      height: var(--icon--lg)
-
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
-  header[role="banner"]
-    div.flexwrap
-      margin: 0 auto
-      height: var(--shim--double)
+    max-width: var(--shim-4x)
+    margin-top: var(--shim-2x)

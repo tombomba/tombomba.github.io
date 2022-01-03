@@ -3,88 +3,21 @@
 ---
 
 @charset "utf-8"
-@import reset, font, color, body, banner, article, figure, directory, footer
+@import reset, font, color, body, banner, article, figure, footer
 
 //-----------------------------------------------------------------------------
 
 article.text
   header
     h1
-      font-size: var(--hs)
-      line-height: var(--lh--tight)
-      font-style: italic
-  div.byline
-      margin-top: var(--shim--tight)
-      display: flex
-      flex-flow: row wrap
-      align-items: center
-      div.avatar
-        display: none
-      div.bio
-        p
-          display: inline
-          margin: 0
-          color: $mix-color
-          a:link, a:visited
-            color: $mix-color
-            text-decoration: none
-          a:hover
-            text-decoration: underline
-          &:nth-of-type(2)::before
-            content: '\00A0\/\0020'
+      font-size: var(--hed-size)
+      line-height: var(--hed-lh)
 
 article.micro
   header
-    h1,p
+    h1, p
       display: inline
     h1
       font-size: 1em
-      line-height: var(--lh)
-      span.punc::after
-        content: '.'
-      &::after
-        content: '\0020'
-
-aside.nextprev
-  margin-top: var(--shim)
-  section
-    max-width: var(--page-width)
-    margin-top: var(--shim--tight)
-    &:first-of-type
-      margin-top: var(--shim)
-    margin-left: auto
-    margin-right: auto
-    h1, h2, h3, h4, h5, h6
-      display: inline
-      font-size: 1em
-    p 
-      display: inline
-      margin: 0
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 20rem)
-
-  article.text
-    header
-      h1
-        font-size: var(--hs--md)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 30rem)
-
-  article.text
-    div.byline
-      div.avatar
-        display: block
-        margin-right: var(--sliver)
-        img
-          width: var(--shim)
-          height: var(--shim)
-          border-radius: 50%
-
-  aside.nextprev
-    section
-      h1, h2, h3, h4, h5, h6, p
-        display: block
+    span.punc::after
+      content: "."

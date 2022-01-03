@@ -2,14 +2,19 @@ footer
   max-width: var(--page-width)
   margin-top: var(--shim-2x)
   margin-bottom: var(--shim)
-
   ul
-    margin-top: var(--shim-2x)
+    margin-top: var(--shim)
+    &:first-of-type
+      margin-top: var(--shim-2x)
+    margin-top: var(--shim)
     display: flex
     flex-flow: row wrap
     list-style-type: none
-    li:not(:last-of-type)
-      margin-right: 0.8em
+    li
+      &.year
+        font-weight: bold
+      &:not(:last-of-type)
+        margin-right: 0.8em
   div.copydate
     margin-top: var(--shim)
     p

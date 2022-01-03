@@ -4,7 +4,7 @@
 
 <article class="micro"><!-- {{ copy | number_of_words }} -->
 
-  {% if p.media %}{% include figure.html media=p.media %}{% endif -%}
+  {% if p.media %}{% include figure.html media=p.media is_home=include.is_home %}{% endif -%}
 
   {% capture hedbox %}
     <header>

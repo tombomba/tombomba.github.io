@@ -17,7 +17,7 @@
 
   <div class="copydate">
     {% if page.is_page %}
-      <p>{{ site.title | capitalize }} last updated {{ site.posts.first.date | date_to_long_string }}</p>
+      <p>{{ site.title }} last updated {{ site.posts.first.date | date_to_long_string }}</p>
     {% else %}  
       <p>This page published {{ page.date | date_to_long_string }}</p>
     {% endif -%}

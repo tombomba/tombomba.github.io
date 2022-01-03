@@ -1,3 +1,11 @@
+---
+# DEFAULT POST STYLES
+---
+
+@charset "utf-8"
+@import reset, font, color, body, banner, figure, footer
+
+//-----------------------------------------------------------------------------
 article
 
   max-width: var(--page-width)
@@ -5,12 +13,37 @@ article
 
   header
     h1
+      font-size: var(--hed-size)
+      
+        line-height: var(--hed-lh)
       color: $text-color
       a:link, a:visited
         color: $text-color
         text-decoration: none
       a:hover
         text-decoration: underline
+
+  &.text
+    header
+      h1
+        font-size: var(--hed-size)
+        line-height: var(--hed-lh)
+
+  &.micro
+    header
+      h1, p
+        display: inline
+      h1
+        font-size: 1em
+      span.punc::after
+        content: "."
+
+  section
+    margin-top: var(--shim)
+    h1
+      font-size: 1em
+    p
+      margin-top: 0
 
   h2, h3, h4, h5, h6
     font-size: 1em
@@ -55,3 +88,4 @@ article
 
     span.widont
       white-space: nowrap
+

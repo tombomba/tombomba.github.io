@@ -1,18 +1,18 @@
 header[role="banner"]
   max-width: var(--page-width)
-  h1
-    font-size: 1em  
-    line-height: 1
-  p
-    color: $mix-color
   div.icon
     max-width: var(--shim-2x)
     margin-bottom: var(--shim)
     img
       width: var(--shim-2x)
       height: var(--shim-2x)
-      border-radius: 4px
+      border-radius: 50%
       background-color: $logo-color
+      -webkit-transition: background-color 1000ms linear
+      -ms-transition: background-color 1000ms linear
+      transition: background-color 1000ms linear
+      &:hover
+        background-color: $shock-color
   div.hr
     max-width: var(--shim-4x)
     margin-top: var(--shim-2x)

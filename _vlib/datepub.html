@@ -1,0 +1,6 @@
+ {% if p.date %}
+    {% assign pubdatex = p.date | date: '%-d %b' %}
+    {% capture datef %}<span class="daystamp">&nbsp;(<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ pubdatex }}</a>{% else %}{{ pubdatex }}{% endif %}</time>)</span>{% endcapture -%}
+    {% assign copysize = copy | size | minus: 4 %}
+    {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
+  {% endif -%}

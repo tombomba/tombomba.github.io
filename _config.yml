@@ -45,6 +45,7 @@ defaults:
     values:
       layout: "directory"
       is_page: true
+      is_archive: true
 
 markdown: kramdown
 kramdown:

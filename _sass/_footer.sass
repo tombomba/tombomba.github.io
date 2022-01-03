@@ -1,58 +1,19 @@
 footer
-  &.page
-    margin-top: var(--shim--double)
-  &.post 
-    margin-top: var(--shim)    
+  max-width: var(--page-width)
+  margin-top: var(--shim-2x)
+  margin-bottom: var(--shim)
+
   ul
-    margin: var(--shim) auto
-    max-width: var(--page-width)
+    margin-top: var(--shim-2x)
     display: flex
     flex-flow: row wrap
-    align-items: center
-    justify-content: space-around
     list-style-type: none
-    li
-      display: inline-block
-      &.copydate
-        font-size: var(--fs--sm)
-        color: $mix-color
-        span
-          display: none
-        a:link, a:visited
-          color: $mix-color
-          text-decoration: none
-        a:hover
-          text-decoration: underline
-      img
-        width: var(--icon--lg)
-        height: var(--icon--lg)
- 
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 30rem)
-
-  footer
-    ul
-      justify-content: flex-start
-      li
-        &:not(:first-of-type)
-          margin-top: 0
-        &:not(:last-of-type)
-          margin-right: 0.8em
-        &.copydate
-          flex: 1
-          font-size: var(--fs--xs)
-          span
-            display: inline
-        img
-          width: var(--icon--md)
-          height: var(--icon--md)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
-  footer
-    ul
-      margin: 0 auto
-      height: var(--shim--double)
+    li:not(:last-of-type)
+      margin-right: 0.8em
+  div.copydate
+    margin-top: var(--shim)
+    p
+      font-size: var(--font-size-sm)
+      color: $mix-color
+  div.hr
+    max-width: var(--shim-4x)

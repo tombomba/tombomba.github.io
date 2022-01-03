@@ -1,8 +1,16 @@
-<footer class="{% if page.is_post or page.is_home %}post{% else %}page{% endif %}">
+<footer>
   <div class="hr"></div>
   <ul>
-    <li><a href="{{ site.url }}"><img src="{{ 'trash.png' | prepend: site.ico }}" alt="{{ site.title }}"></a></li>
-    <li class="copydate"><span>Copyright</span> &copy; {{ site.posts.first.date | date: '%Y' }} <span><a href="{{ 'about' | absolute_url }}">{{ site.author }}</a></span></li>
-    <li><a href="{{ 'feed.xml' | absolute_url }}" target="_rss"><img src="{{ 'feed.png' | prepend: site.ico }}" alt="RSS (Atom)"></a></li>
+    {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}
+    <li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li>
+    <li><a href="{{ 'feed.xml' | absolute_url }}" target="_rss">RSS</a></li>
   </ul>
+  <div class="copydate">
+    {% if page.is_page %}
+      <p>{{ site.domain | capitalize }} last updated {{ site.posts.first.date | date_to_long_string }}</p>
+    {% else %}  
+      <p>This page published {{ page.date | date_to_long_string }}</p>
+    {% endif -%}
+    <p>Copyright &copy; {{ site.time | date: '%Y' }} {{ site.author }}</p>
+  </div>
 </footer>

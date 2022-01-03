@@ -15,6 +15,10 @@ body
 
   padding: 0 1em
 
+main[role="main"]
+  max-width: var(--page-width)
+  margin: 0 auto
+
 a
   text-decoration: underline
   text-decoration-skip-ink: auto
@@ -47,6 +51,9 @@ time
   border-top: 1px solid $border-dark
   border-bottom: 2px solid $border-light
   background-color: $body-color
+  &.buffer
+    max-width: var(--shim-4x)
+    margin-top: var(--shim-2x)
 
 .daystamp
   white-space: nowrap

@@ -5,7 +5,7 @@ media:
   image: gold-diggers-of-1933.jpg
   width: 800
   height: 600
-tags: musical
+tags: musical, romance
 ---
 
 A blueblood songwriter falls in love with a Broadway showgirl, but his family won't hear of it. A brother and an uncle come around to stop the affair, so the showgirl's friends, a trio of down and outers, decide to scam Mr Hoity and Mr Toity. And why not? If someone thinks you cheap and vulgar you might as well play the part and play them, too. What follows is witty rejoinder on top of witty rejoinder, rat-a-tat-tat style, with crazy plans and mad hijinks, and dancing, of course, and more and more hijinks. By the end it's a case of mistaken identity (you don't say), and confusion and revelation, then love all around and a smattering of marriages (oh, what a surprise). It's a familiar story with familiar beats, bookended by grand musical numbers staged by Busby Berekely.

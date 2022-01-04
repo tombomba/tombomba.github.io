@@ -20,7 +20,7 @@ permalink: /index.html
       {% if p.media or p.push == 'micro' %}
         {% include detail-micro.html page=p content=p.content is_home=true %}
       {% else %}
-        {% if wordcount > 150 or p.push == 'text' %}
+        {% if wordcount > 250 or p.push == 'text' %}
           {% include detail-text.html page=p content=p.content is_home=true %}
         {% else %}
           {% include detail-micro.html page=p content=p.content is_home=true %}

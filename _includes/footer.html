@@ -1,11 +1,10 @@
 <footer>
   
-  <div class="hr"></div>
+  <div class="hr buffer"></div>
   
   {% if page.is_home or page.is_archive %}
     <ul class="datelist">
       {% include _datelist.html year=2022 %}
-      {% include _datelist.html year=2021 %}
     </ul>
   {% endif -%}
 

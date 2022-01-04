@@ -1,6 +1,10 @@
 ---
-title: "Gold Diggers of 1933"
+title: "Gold Diggers of 1933 (1933)"
 push: micro
+media: 
+  image: gold-diggers-of-1933.jpg
+  width: 800
+  height: 600
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis, mauris sed commodo venenatis, ante erat eleifend quam, in finibus nulla magna sit amet ante. Aenean luctus consectetur nisl sed imperdiet. Integer tempus commodo nibh, eu tristique urna lobortis et. Donec varius ullamcorper erat, ut sodales nisl viverra consequat. Sed luctus eros ut sagittis pharetra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ligula nulla, suscipit id dui id, condimentum lacinia metus. Etiam lobortis dui eget eros sagittis vestibulum id in tortor. Praesent condimentum, justo a fringilla egestas, nunc tellus luctus erat, in porta magna magna vel odio.

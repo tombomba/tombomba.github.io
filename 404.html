@@ -10,7 +10,7 @@ permalink: /404.html
 <p>Try another?</p>
 
 <ul class="plain">
-  {% for p in site.posts limit: 7 %}<li><a href="{{ p.url | absolute_url }}">{{ p.title | strip | strip_html | smartify | normalize_whitespace }}</a></li>{% endfor %}
+  {% for p in site.posts limit: 5 %}<li><a href="{{ p.url | absolute_url }}">{{ p.title | strip | strip_html | smartify | normalize_whitespace }}</a></li>{% endfor %}
 </ul>
 
 <p>If you&rsquo;re having trouble locating a destination on <i>{{ site.title }},</i> try visiting the <a href="{{ site.url }}">homepage</a> or browsing posts from <a href="{{ site.posts.first.date | date: '%y/%m/' | absolute_url }}">this month</a> and <a href="{{ site.posts.first.date | date: '%y' | absolute_url }}">this year</a>.</p>

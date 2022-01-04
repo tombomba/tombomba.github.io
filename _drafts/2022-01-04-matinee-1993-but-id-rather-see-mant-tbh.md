@@ -1,5 +1,6 @@
 ---
 title: "Matinee (1993)"
+tags: comedy, horror
 ---
 
 I mean. It's okay. There's nothing really out and out _wrong_ but the story and the characters are a trifle.

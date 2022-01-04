@@ -1,8 +1,20 @@
 header[role="banner"]
   max-width: var(--page-width)
+  div.text
+    margin-top: var(--shim)
+    h1
+      font-size: 1em
+      a:link, a:visited
+        color: $text-color
+        text-decoration: none
+      a:hover
+        text-decoration: underline
+    p
+      margin: 0
+      font-size: var(--font-size-sm)
+      line-height: var(--hed-lh) 
   div.icon
     max-width: var(--shim-2x)
-    margin-bottom: var(--shim)
     img
       width: var(--shim-2x)
       height: var(--shim-2x)
@@ -13,6 +25,3 @@ header[role="banner"]
       transition: background-color 1000ms linear
       &:hover
         background-color: $shock-color
-  div.hr
-    max-width: var(--shim-4x)
-    margin-top: var(--shim-2x)

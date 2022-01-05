@@ -10,8 +10,10 @@ layout: default
 {% if page.media or page.push == 'micro' %}
   {% include detail-micro.html page=page content=content %}
 
+{% elsif page.content contains '<img' %}
+  {% include detail-inline.html page=page content=content %}
+
 {% else %}
-  
   {% if wordcount > 250 or page.push == 'text' %}
     {% include detail-text.html page=page content=content %}
   

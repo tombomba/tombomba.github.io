@@ -2,6 +2,13 @@
 {% assign copy = include.content | strip | normalize_whitespace -%}
 {% include _puncf.html title=p.title -%}
 
+{% if p.date and include.is_home %}
+  {% assign pubdatex = p.date | date: '%-d %b' %}
+  {% capture datef %}<span class="daystamp">&nbsp;(<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ pubdatex }}</a>{% else %}{{ pubdatex }}{% endif %}</time>)</span>{% endcapture -%}
+  {% assign copysize = copy | size | minus: 4 %}
+  {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
+{% endif -%}
+
 <article class="micro"><!-- {{ copy | number_of_words }} -->
 
   {% if p.media %}{% include figure.html media=p.media is_home=include.is_home %}{% endif -%}

@@ -14,7 +14,7 @@ layout: default
   {% include detail-inline.html page=page content=content %}
 
 {% else %}
-  {% if wordcount > 250 or page.push == 'text' %}
+  {% if wordcount > site.wordcount_breakpoint or page.push == 'text' %}
     {% include detail-text.html page=page content=content %}
   
   {% else %}

@@ -27,7 +27,7 @@ permalink: /index.html
         {% include detail-inline.html page=p content=p.content is_home=true %}
 
       {% else %}
-        {% if wordcount > 250 or p.push == 'text' %}
+        {% if wordcount > site.wordcount_breakpoint or p.push == 'text' %}
           {% include detail-text.html page=p content=p.content is_home=true %}
   
         {% else %}

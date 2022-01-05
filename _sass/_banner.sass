@@ -24,3 +24,22 @@ header[role="banner"]
       transition: background-color 1000ms linear
       &:hover
         background-color: $shock-color
+
+//-----------------------------------------------------------------------------
+
+//@media screen and (min-width: 40rem)
+
+  header[role="banner"]
+    div.flexwrap
+      display: flex
+      flex-flow: row wrap
+      align-items: center
+      justify-content: flex-start
+    div.text
+      margin-top: 0
+      h1
+        line-height: var(--hed--lh)
+    div.icon
+      margin-right: 1em
+      img
+        border-radius: 4px

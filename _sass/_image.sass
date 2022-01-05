@@ -7,13 +7,11 @@ article > img
   max-width: 100%
   height: auto
   margin-top: var(--shim)
-  margin-bottom: var(--shim)
-  background-color: $bg-color
+  margin-bottom: calc(var(--shim) + var(--nudge))
   border-radius: 4px
   &.top
-    margin-top: 0
-  &.left,
-  &.right,
+    margin-top: var(--nudge)
+    background-color: $body-color
   &.center
     margin-left: auto
     margin-right: auto
@@ -23,6 +21,7 @@ article > img
 @media screen and (min-width: 25rem)
 
   article > img
+
     &.left,
     &.right,
       margin-left: 0
@@ -34,7 +33,10 @@ article > img
 
   article > img
 
-    margin-top: 0
+    background-color: $bg-color
+
+    &.top
+      margin-top: 0
 
     &.wide
       margin-left: 0
@@ -45,13 +47,13 @@ article > img
       max-width: 40%
       float: left
       margin-right: 1em
-      margin-bottom: var(--shim)
+      margin-bottom: var(--nudge)
 
     &.right
       display: inline
       float: right
       margin-left: 1em
-      margin-bottom: var(--shim)
+      margin-bottom: var(--nudge)
 
 //-----------------------------------------------------------------------------
 
@@ -59,39 +61,36 @@ article > img
 
   article > img
 
-    &.top.pull
-      margin-top: -0.25em
-
     &.left,
     &.right
       margin-bottom: 1em
 
     &.left
-      margin-right: var(--shim--tight)
+      margin-right: var(--shim)
 
     &.right
-      margin-left: var(--shim--tight)
+      margin-left: var(--shim)
 
     &.left.pull
-      margin-left: -1em
+      margin-left: calc(var(--shim) * -1)
 
     &.left.tilt
       transform: rotate(-3deg)
 
     &.right.pull
-      margin-right: -1em
+      margin-right: calc(var(--shim) * -1)
 
     &.right.tilt
       transform: rotate(3deg)
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 64rem)
+@media screen and (min-width: 60rem)
 
   article > img
 
     &.left.pull
-      margin-left: -2em
+      margin-left: calc(var(--shim) * -2)
 
     &.right.pull
-      margin-right: -2em
+      margin-right: calc(var(--shim) * -2)

@@ -17,6 +17,8 @@ css_dir: /assets/css/
 author: Tom Bomba
 socials: bomtomba
 
+wordcount_breakpoint: 200
+
 safe: true
 future: false
 theme: null

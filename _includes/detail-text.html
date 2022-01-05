@@ -12,7 +12,7 @@
   {{ copy | strip | normalize_whitespace }}
 
   {% if p.date and include.is_home %}
-    <p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished"><a href="{{ p.url | absolute_url }}">{{  p.date | date_to_string }}</time></p>
+  <p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished"><a href="{{ p.url | absolute_url }}">{{  p.date | date_to_string }}</time></p>
   {% endif %}
 
 </article>

@@ -1,5 +1,6 @@
 ---
 title: "Man in the Shadow (Universal, 1957)"
+tags: noir, crime
 ---
 
 Solid b-picture written by Gene Coon. Gene Coon!!!

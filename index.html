@@ -22,6 +22,9 @@ permalink: /index.html
       
       {% if p.layout == 'quote' or p.push == 'quote' %}
         {% include detail-quote.html page=p content=p.content is_home=true %}
+
+      {% elsif p.layout == 'photo' or p.push == 'photo' %}
+        {% include detail-photo.html page=p content=p.content is_home=true %}
       
       {% elsif p.media or p.push == 'micro' %}
         {% include detail-micro.html page=p content=p.content is_home=true %}

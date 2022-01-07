@@ -40,13 +40,17 @@ article
 
   &.quote
     div.copywrap
-      h1, p:first-of-type
+      h1, blockquote, p:first-of-type
         display: inline
       h1
         font-size: 1em
         line-height: var(--font-lh)
         &::after
           content: ':'
+      blockquote
+        margin: 0
+        border: 0
+        padding: 0
       p:first-of-type::before
         content: '\201C'
       p:last-of-type::after

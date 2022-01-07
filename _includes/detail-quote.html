@@ -6,7 +6,9 @@
 
   <div class="copywrap">
     <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
-    {{ copy | strip | normalize_whitespace }}
+    <blockquote cite="{{ p.via }}">
+      {{ copy | strip | normalize_whitespace }}
+    </blockquote>
   </div>
 
   {% if p.date and include.is_home %}

@@ -12,16 +12,15 @@ article
   max-width: var(--page-width)
   margin-top: var(--shim-2x)
 
-  header
-    h1
-      font-size: var(--hed-size)
-      line-height: var(--hed-lh)
+  h1
+    font-size: var(--hed-size)
+    line-height: var(--hed-lh)
+    color: $text-color
+    a:link, a:visited
       color: $text-color
-      a:link, a:visited
-        color: $text-color
-        text-decoration: none
-      a:hover
-        text-decoration: underline
+      text-decoration: none
+    a:hover
+      text-decoration: underline
 
   &.text
     header
@@ -38,6 +37,20 @@ article
         line-height: var(--font-lh)
       span.punc::after
         content: "."
+
+  &.quote
+    div.copywrap
+      h1, p:first-of-type
+        display: inline
+      h1
+        font-size: 1em
+        line-height: var(--font-lh)
+        &::after
+          content: ':'
+      p:first-of-type::before
+        content: '\201C'
+      p:last-of-type::after
+        content: '\201D'
 
   section
     margin-top: var(--shim)

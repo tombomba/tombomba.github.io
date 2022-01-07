@@ -1,0 +1,18 @@
+{% assign p = include.page %}
+{% assign copy = include.content | strip | normalize_whitespace -%}
+{% assign titlef = p.source | default: p.title | strip | strip_html | smartify | normalize_whitespace %}
+
+<article class="quote"><!-- {{ copy | number_of_words }} -->
+
+  <div class="copywrap">
+    <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
+    {{ copy | strip | normalize_whitespace }}
+  </div>
+
+  {% if p.date and include.is_home %}
+  <p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished"><a href="{{ p.url | absolute_url }}">{{  p.date | date_to_string }}</time></p>
+  {% else %}
+  <p class="daystamp">via <a href="{{ p.via }}" target="_via">{{ p.via | remove:'http://' | remove:'https://' | remove: 'www.' | split:'/' | first | strip }}</a></p>
+  {% endif %}
+
+</article>

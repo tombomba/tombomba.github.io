@@ -20,7 +20,10 @@ permalink: /index.html
       {% assign wordcount = p.content | number_of_words %}
       {% unless forloop.first %}<div class="hr buffer"></div>{% endunless -%}
       
-      {% if p.media or p.push == 'micro' %}
+      {% if p.layout == 'quote' or p.push == 'quote' %}
+        {% include detail-quote.html page=p content=p.content is_home=true %}
+      
+      {% elsif p.media or p.push == 'micro' %}
         {% include detail-micro.html page=p content=p.content is_home=true %}
 
       {% elsif p.content contains '<img' %}

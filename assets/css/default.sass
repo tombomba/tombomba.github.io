@@ -12,15 +12,14 @@ article
   max-width: var(--page-width)
   margin-top: var(--shim-2x)
 
-  h1
-    font-size: var(--hed-size)
-    line-height: var(--hed-lh)
-    color: $text-color
-    a:link, a:visited
+  header
+    h1
       color: $text-color
-      text-decoration: none
-    a:hover
-      text-decoration: underline
+      a:link, a:visited
+        color: $text-color
+        text-decoration: none
+      a:hover
+        text-decoration: underline
 
   &.text
     header
@@ -45,6 +44,11 @@ article
       h1
         font-size: 1em
         line-height: var(--font-lh)
+        a:link, a:visited
+          color: $text-color
+          text-decoration: none
+        a:hover
+          text-decoration: underline
         &::after
           content: ':'
       blockquote

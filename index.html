@@ -16,36 +16,21 @@ permalink: /index.html
     {% assign current = p.date | date: '%s' -%}
     {% assign range = today | times: 1 |  minus: current -%}
     {% if scope > range %}
-  
-      {% assign wordcount = p.content | number_of_words %}
+
       {% unless forloop.first %}<div class="hr buffer"></div>{% endunless -%}
+
+    <article class="{{ p.layout | default: 'text' }}">
       
-      {% if p.layout == 'quote' or p.push == 'quote' %}
-        {% include detail-quote.html page=p content=p.content is_home=true %}
+      {% capture my_layout %}detail-{{ p.layout }}.html{% endcapture -%}
+      {% include {{ my_layout }} page=p content=p.content is_home=true -%}
 
-      {% elsif p.layout == 'photo' or p.push == 'photo' %}
-        {% include detail-photo.html page=p content=p.content is_home=true %}
-      
-      {% elsif p.media or p.push == 'micro' %}
-        {% include detail-micro.html page=p content=p.content is_home=true %}
+      {% include _pubdate.html date=p.date url=p.url %}
 
-      {% elsif p.content contains '<img' %}
-        {% include detail-inline.html page=p content=p.content is_home=true %}
+    </article>
 
-      {% else %}
-        {% if wordcount > site.wordcount_breakpoint or p.push == 'text' %}
-          {% include detail-text.html page=p content=p.content is_home=true %}
-  
-        {% else %}
-          {% include detail-micro.html page=p content=p.content is_home=true %}
-
-        {% endif -%}
-
-      {% endif -%}
-  
     {% else -%}
       {% break -%}
-    {% endif -%}
+  {% endif -%}
   {% endfor -%}
   
 </main>

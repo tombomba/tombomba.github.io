@@ -3,129 +3,73 @@
 ---
 
 @charset "utf-8"
-@import reset, font, color, body, banner, figure, footer
+@import reset, font, color, body, banner, article, figure, footer
 
 //-----------------------------------------------------------------------------
 
-article
-
-  max-width: var(--page-width)
-  margin-top: var(--shim-2x)
-
+article.text
   header
     h1
-      color: $text-color
+      font-size: var(--hed-size)
+      line-height: var(--hed-lh)
+
+article.micro
+  header
+    h1, p
+      display: inline
+    h1
+      font-size: 1em
+      line-height: var(--font-lh)
+    span.punc::after
+      content: "."
+
+article.photo
+  header
+    margin-bottom: calc(var(--nudge) * -1)
+    h1
+      font-size: var(--hed-size)
+      line-height: var(--hed-lh)
+  div.figwrap
+    padding-bottom: var(--nudge)
+
+article.poster
+  header
+    h1, p
+      display: inline
+    h1
+      font-size: 1em
+      line-height: var(--font-lh)
+    span.punc::after
+      content: "."
+
+article.quote
+  div.postwrap
+    h1, blockquote, p:first-of-type
+      display: inline
+    h1
+      font-size: 1em
+      line-height: var(--font-lh)
       a:link, a:visited
         color: $text-color
         text-decoration: none
-      a:hover
+      a:hover 
         text-decoration: underline
-
-  &.text
-    header
-      h1
-        font-size: var(--hed-size)
-        line-height: var(--hed-lh)
-
-  &.micro
-    header
-      h1, p
-        display: inline
-      h1
-        font-size: 1em
-        line-height: var(--font-lh)
-      span.punc::after
-        content: "."
-
-  &.photo
-    header
-      margin-bottom: calc(var(--nudge) * -1)
-      h1
-        font-size: var(--hed-size)
-        line-height: var(--hed-lh)
-    div.figwrap
-      padding-bottom: var(--nudge)
-
-  &.quote
-    div.copywrap
-      h1, blockquote, p:first-of-type
-        display: inline
-      h1
-        font-size: 1em
-        line-height: var(--font-lh)
-        a:link, a:visited
-          color: $text-color
-          text-decoration: none
-        a:hover
-          text-decoration: underline
-        &::after
-          content: ':'
-      blockquote
-        margin: 0
-        border: 0
-        padding: 0
+      &::after
+        content: ':'
+    blockquote
+      margin: 0
+      padding: 0
+      border: 0
       p:first-of-type::before
         content: '\201C'
       p:last-of-type::after
         content: '\201D'
 
-  section
-    margin-top: var(--shim)
-    h1
-      font-size: 1em
-    p
-      margin-top: 0
-
-  h2, h3, h4, h5, h6
-    font-size: 1em
-  
-  p
-    margin-top: var(--shim)
-  
-  ul, ol
-    margin: var(--shim) 0 0 var(--shim)
-    li
-      margin-top: 0
-    &.plain
-      li
-        margin-top: 0
-  
-  blockquote
-    padding-left: var(--shim)
-    border-left: thin solid $mix-color
-  
-  blockquote,
-  li + p,
-    margin-top: 0
-
-  figure
-    figcaption
-      margin-top: var(--nudge)
-      p
-        margin-top: 0
-        font-size: var(--font-size-xs)
-  
-  div.figwrap
-    margin-bottom: var(--shim)
-    padding-top: var(--nudge)
-  
-  div.colorwrap
-    background-color: $bg-color
-    border-radius: 4px
-
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30rem)
 
-  article
-
-    &.photo
-      figure
-        img
-          border-radius: 4px 0 0 4px
-
-    figure.narrow
-      max-width: calc(var(--page-width) / 2)
-
-    span.widont
-      white-space: nowraptd
+  article.poster
+    figure
+      img
+        border-radius: 4px 0px 0px 4px

@@ -17,8 +17,8 @@ css_dir: /assets/css/
 author: Tom Bomba
 socials: bomtomba
 
-safe: true
 future: false
+
 theme: null
 
 permalink: /:short_year/:month/:title:output_ext

@@ -10,5 +10,5 @@ ico: "http://localhost:4000/assets/ico/"
 css: "http://localhost:4000/assets/css/"
 
 safe: false
-future: true
+future: false
 show_drafts: true

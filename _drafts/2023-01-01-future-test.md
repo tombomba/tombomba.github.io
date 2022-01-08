@@ -1,10 +1,10 @@
 ---
 title: "Future post"
+published: false
 ---
-
-config = {{ site.future }}<br>{{ site.future | inspect }}
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et ipsum volutpat, suscipit neque a, pellentesque eros. Nullam pellentesque sodales nisi sit amet lobortis. Nulla fermentum augue nec tortor iaculis fermentum. Aliquam maximus, sem id venenatis rutrum, eros lectus rhoncus leo, non aliquet risus sapien nec ex. Nulla finibus sapien tortor, vel ullamcorper lorem facilisis in. Pellentesque non nisi a mi cursus tristique nec viverra nibh. Aliquam venenatis fringilla imperdiet.
+
+## Config: {{ site.future }}
 
 Nulla nec dui nec nunc mattis egestas. Nullam vitae massa vel mauris posuere dignissim. Donec tincidunt urna vitae placerat rutrum. Aliquam dapibus iaculis elit, vitae semper urna sodales eget. Nullam in nibh erat. Cras non magna condimentum, aliquam felis eu, lacinia metus. Cras at ex ut elit accumsan porttitor vitae lobortis augue. Integer tincidunt turpis lectus, sed hendrerit lacus ullamcorper sed. Vestibulum eu iaculis dui. Donec facilisis enim sit amet ante sodales efficitur. Cras accumsan fringilla lacus ac congue. Fusce ante erat, pharetra eu ligula eget, blandit rhoncus libero.
 

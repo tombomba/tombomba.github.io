@@ -7,23 +7,10 @@ layout: default
 
 <main role="main">
 
-{% if page.media or page.push == 'micro' %}
-  {% include detail-micro.html page=page content=content %}
-
-{% elsif page.content contains '<img' %}
-  {% include detail-inline.html page=page content=content %}
-
-{% else %}
-  {% if wordcount > site.wordcount_breakpoint or page.push == 'text' %}
+  <article class="text">
     {% include detail-text.html page=page content=content %}
+  </article>
   
-  {% else %}
-    {% include detail-micro.html page=page content=content %}
-
-  {% endif -%}
-
-{% endif -%}
-
 </main>
 
 {% include footer.html %}

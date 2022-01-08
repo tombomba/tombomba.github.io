@@ -4,9 +4,11 @@ layout: default
 {% include banner.html %}
 
 <main role="main">
-  
-  {% include detail-micro.html page=page content=content %}
 
+  <article class="micro">
+    {% include detail-micro.html page=page content=content %}
+  </article>
+  
 </main>
 
 {% include footer.html %}

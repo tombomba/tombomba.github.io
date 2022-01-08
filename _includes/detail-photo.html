@@ -2,19 +2,10 @@
 {% assign copy = include.content | strip | normalize_whitespace -%}
 
 {% include _widont.html title=p.title %}
+{% include _figure.html media=p.media %}
 
-<article class="photo"><!-- {{ copy | number_of_words }} -->
-
-  {% include figure.html media=p.media %}
-
-  <header>
-    <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
-  </header>
+<header>
+  <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
+</header>
   
-  {{ copy | strip | normalize_whitespace }}
-
-  {% if p.date and include.is_home %}
-  <p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished"><a href="{{ p.url | absolute_url }}">{{  p.date | date_to_string }}</time></p>
-  {% endif %}
-
-</article>
+{{ copy | strip | normalize_whitespace }}

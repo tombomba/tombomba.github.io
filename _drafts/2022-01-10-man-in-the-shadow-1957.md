@@ -1,5 +1,4 @@
 ---
-layout: poster
 title: "Man in the Shadow (Universal, 1957)"
 media: 
   image: the-man-in-the-shadow-1957-poster-376x504.jpg

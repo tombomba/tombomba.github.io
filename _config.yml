@@ -28,6 +28,10 @@ collections:
     collections_dir: _archives
     output: true
     permalink: "/:path/"
+  pages:
+    collections_dir: _pages
+    output: true
+    permalink: "/:path/"
 
 defaults:
   -
@@ -40,11 +44,16 @@ defaults:
   -
     scope:
       path: ""
+      type: "pages"
+    values:
+      is_page: true
+  -
+    scope:
+      path: ""
       type: "archives"
     values:
-      layout: "directory"
+      layout: "archives"
       is_page: true
-      is_archive: true
 
 markdown: kramdown
 kramdown:

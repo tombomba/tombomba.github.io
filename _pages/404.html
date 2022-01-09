@@ -1,12 +1,12 @@
 ---
 layout: text
-title: "Oh no! 404!"
+title: "Page not found"
 excerpt: "404 Error: Page Not Found"
 emoji: '💥'
 permalink: /404.html
 ---
 
-<p>Your page was not found on this server. Try another?</p>
+<p>Try another?</p>
 
 <ul class="plain">
   {% for p in site.posts limit: 5 %}<li><a href="{{ p.url | absolute_url }}">{{ p.title | strip | strip_html | smartify | normalize_whitespace }}</a></li>{% endfor %}

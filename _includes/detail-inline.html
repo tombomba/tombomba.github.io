@@ -1,9 +1,7 @@
 {% assign p = include.page %}
 {% assign copy = include.content | strip | normalize_whitespace -%}
 {% include _kram_image.html %}
-{% include _puncf.html title=p.title -%}
-
-<article class="inline {% if include.is_home %}home{% else %}post{% endif %}">
+{% include _widont.html title=p.title -%}
 
 {% capture hedbox %}
   <header>
@@ -19,9 +17,3 @@
 {% assign copy = copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hedbox -%}
 
 {{ copy | strip | normalize_whitespace }}
-
-{% if include.is_home %}
-  {% include _permalink.html url=p.url %}
-{% endif -%}
-
-</article>

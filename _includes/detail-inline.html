@@ -3,7 +3,7 @@
 {% include _kram_image.html %}
 {% include _puncf.html title=p.title -%}
 
-<article class="inline">
+<article class="inline {% if include.is_home %}home{% else %}post{% endif %}">
 
 {% capture hedbox %}
   <header>

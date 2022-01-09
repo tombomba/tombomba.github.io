@@ -3,7 +3,7 @@
 
 {% include _widont.html title=p.title %}
 
-<article class="text">
+<article class="text {% if include.is_home %}home{% else %}post{% endif %}">
 
 <header>
   <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>

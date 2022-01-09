@@ -1,4 +1,4 @@
-<footer class="{% if page.is_home %}home{% else %}post{% endif %}">
+<footer class="{% if page.is_home %}home{% elsif page.is_post %}post{% else %}page{% endif %}">
     
   {% if page.is_page %}
     <ul class="datelist">

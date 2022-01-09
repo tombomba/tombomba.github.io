@@ -1,10 +1,9 @@
 {% assign p = include.page %}
 {% assign copy = include.content | strip | normalize_whitespace -%}
+{% include _kram_image.html %}
 {% include _puncf.html title=p.title -%}
 
-<article class="micro">
-
-{% if p.media %}{% include _figure.html media=p.media %}{% endif -%}
+<article class="inline">
 
 {% capture hedbox %}
   <header>

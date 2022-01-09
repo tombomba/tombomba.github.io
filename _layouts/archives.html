@@ -16,7 +16,7 @@ layout: default
 
 <main role="main">
 
-  <article>
+  <article class="archive post">
 
     <header><h1>{{ page.title }}</h1></header>
 
@@ -24,10 +24,10 @@ layout: default
       {% assign current_month = x.date | date: "%m" %}
       {% assign current_year = x.date | date: "%Y" -%}
       {% if is_month_index and current_month == raw_month and current_year == raw_year %}
-        {% include _list-section.html title=x.title text=x.excerpt url=x.url %}
+        {% include _list-section.html title=x.title text=x.excerpt url=x.url htag='h2' %}
       {% endif -%}
       {% if is_year_index and current_year == raw_year %}
-        {% include _list-section.html title=x.title text=x.excerpt date=x.date url=x.url %}
+        {% include _list-section.html title=x.title text=x.excerpt date=x.date url=x.url htag='h2' %}
       {% endif -%}
     {% endfor -%}
 

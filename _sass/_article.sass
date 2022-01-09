@@ -3,12 +3,17 @@
 article
 
   max-width: var(--page-width)
-  margin-top: var(--shim-3x)
+  &.post
+    margin-top: var(--shim-3x)
+  &.home
+    margin-top: var(--shim-3x)
   &:not(:first-of-type)
     margin-top: var(--shim-4x)
 
   header
     h1
+      font-size: var(--hed-size-md)
+      line-height: var(--hed-lh)
       color: $text-color
       a:link, a:visited
         color: $text-color

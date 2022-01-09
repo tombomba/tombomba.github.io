@@ -3,15 +3,17 @@
 ---
 
 @charset "utf-8"
-@import reset, font, color, body, banner, article, figure, footer
+@import reset, font, color, body, banner, article, figure, image, footer
 
 //-----------------------------------------------------------------------------
 
 article.text
   header
     h1
-      font-size: var(--hed-size)
+      font-size: var(--hed-size-md)
       line-height: var(--hed-lh)
+  p:first-of-type
+    margin-top: var(--shim-p)
 
 article.micro
   header
@@ -20,56 +22,27 @@ article.micro
     h1
       font-size: 1em
       line-height: var(--font-lh)
-    span.punc::after
-      content: "."
+      &::after
+        content: '\00A0\2014\0020'
+        font-weight: 400
+        color: $mix-color
 
-article.photo
+article.inline
   header
-    margin-bottom: calc(var(--nudge) * -1)
     h1
       font-size: var(--hed-size)
       line-height: var(--hed-lh)
-  div.figwrap
-    padding-bottom: var(--nudge)
+    //p
+      margin-top: var(--shim-p)
 
-article.poster
+article.archive
   header
-    h1, p
-      display: inline
     h1
+      font-size: var(--hed-size)
+      line-height: var(--hed-lh)
+  section
+    margin-top: var(--shim)
+    h2
       font-size: 1em
-      line-height: var(--font-lh)
-    span.punc::after
-      content: "."
-
-article.quote
-  div.postwrap
-    h1, blockquote, p:first-of-type
-      display: inline
-    h1
-      font-size: 1em
-      line-height: var(--font-lh)
-      a:link, a:visited
-        color: $text-color
-        text-decoration: none
-      a:hover 
-        text-decoration: underline
-      &::after
-        content: ':'
-    blockquote
+    p
       margin: 0
-      padding: 0
-      border: 0
-      p:first-of-type::before
-        content: '\201C'
-      p:last-of-type::after
-        content: '\201D'
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 30rem)
-
-  article.poster
-    figure
-      img
-        border-radius: 4px 0px 0px 4px

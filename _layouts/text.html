@@ -6,10 +6,17 @@ layout: default
 {% include banner.html %}
 
 <main role="main">
+    
+{% if page.media %}
+  {% include detail-micro.html page=page content=content %}
 
-  <article class="text">
-    {% include detail-text.html page=page content=content %}
-  </article>
+{% elsif page.content contains '<img' -%}
+  {% include detail-inline.html page=page content=content %}
+
+{% else -%}
+  {% include detail-text.html page=page content=content %}
+
+{% endif -%}
   
 </main>
 

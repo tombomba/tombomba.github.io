@@ -1,5 +1,4 @@
 ---
-layout: poster
 title: "Man in the Shadow (Universal, 1957)"
 media: 
   image: the-man-in-the-shadow-1957-poster-376x504.jpg
@@ -7,6 +6,7 @@ media:
   height: 504
   alt: "The Man in the Shadow 1957 movie poster"
 tags: noir, crime
+published: false
 ---
 
 Solid b-picture written by Gene Coon. Gene Coon!!! And Orson Welles, of all people, as the heavy. Great opening, 10 minutes or so of silent footage, no dialogue, as a coupla cowhands drag a ranchero out of the bunkhouse and into the toolshed to beat the hell out of him. He fights back. The overhead light knocked, moving, throwing the figures into light and shadow. And then one of the picks up an axe handle and brains him dead. You think, but why?

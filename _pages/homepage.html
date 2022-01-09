@@ -1,7 +1,6 @@
 ---
 layout: default
 is_home: true
-is_page: true
 permalink: /index.html
 ---
 {% include banner.html %}
@@ -16,17 +15,14 @@ permalink: /index.html
     {% assign current = p.date | date: '%s' -%}
     {% assign range = today | times: 1 |  minus: current -%}
     {% if scope > range %}
-
-      {% unless forloop.first %}<div class="hr buffer"></div>{% endunless -%}
-
-    <article class="{{ p.layout | default: 'text' }}">
       
-      {% capture my_layout %}detail-{{ p.layout }}.html{% endcapture -%}
-      {% include {{ my_layout }} page=p content=p.content is_home=true -%}
-
-      {% include _pubdate.html date=p.date url=p.url %}
-
-    </article>
+    {% if p.media %}
+      {% include detail-micro.html page=p content=p.content is_home=true %}  
+    {% elsif p.content contains '<img' %}
+      {% include detail-inline.html page=p content=p.content is_home=true %}  
+    {% else %}
+      {% include detail-text.html page=p content=p.content is_home=true %}  
+    {% endif -%}
 
     {% else -%}
       {% break -%}

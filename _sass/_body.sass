@@ -42,8 +42,22 @@ a
 \::selection
   background: $select-color
 
-time
+time,
+.widont
   white-space: nowrap
+
+.logo
+  font-weight: 700
+  text-transform: lowercase
+  color: $logo-color
+  &::after
+    content: '.'
+    color: $logo-color
+  a:link, a:visited
+    color: $logo-color
+    text-decoration: none
+  a:hover
+    text-decoration: underline
 
 .hr
   margin: 0
@@ -69,21 +83,7 @@ time
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 20rem)
-
-  body
-    padding: var(--shim) 1em
-
-//-----------------------------------------------------------------------------
-
 @media screen and (min-width: 40rem)
 
   body
-    padding: var(--shim)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 60rem)
-
-  body
-    padding: var(--shim-2x)
+    padding: 0 var(--shim)

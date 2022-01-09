@@ -3,12 +3,12 @@
 article
 
   max-width: var(--page-width)
-  margin-top: var(--shim-2x)
+  margin-top: var(--shim-3x)
+  &:not(:first-of-type)
+    margin-top: var(--shim-4x)
 
   header
     h1
-      font-size: var(--hed-size)
-      line-height: var(--hed-lh)
       color: $text-color
       a:link, a:visited
         color: $text-color
@@ -16,21 +16,20 @@ article
       a:hover
         text-decoration: underline
 
-  section
-    margin-top: var(--shim)
-    h1
-      font-size: 1em
-    p
-      margin-top: 0
-
-  h2, h3, h4, h5, h6
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    margin-top: var(--shim-p)
     font-size: 1em
   
   p
-    margin-top: var(--shim)
+    margin-top: var(--shim-p)
   
-  ul, ol
-    margin: var(--shim) 0 0 var(--shim)
+  ul,
+  ol
+    margin: var(--shim-p) 0 0 var(--shim-p)
     li
       margin-top: 0
     &.plain
@@ -38,37 +37,18 @@ article
         margin-top: 0
   
   blockquote
-    padding-left: var(--shim)
-    border-left: thin solid $bg-color
+    padding-left: var(--shim-p)
+    border-left: thin solid $shock-color
   
   blockquote,
   li + p,
     margin-top: 0
 
-  figure
-    margin-bottom: var(--shim)
-
-  figcaption
-    margin-top: var(--nudge)
-    p
-      margin-top: 0
-      font-size: var(--font-size-xs)
-
-  div.figwrap
-    padding-top: var(--nudge)
-
-  div.colorwrap
-    background-color: $bg-color
-    border-radius: 4px
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 30rem)
-
-  article
-
-    figure.narrow
-      max-width: calc(var(--page-width) / 2)
-
-    span.widont
-      white-space: nowrap
+  .permalink
+    font-size: var(--hed-size)
+    line-height: 1
+    font-weight: 700
+    color: $logo-color
+    a:link, a:visited
+      color: $logo-color
+      text-decoration: none

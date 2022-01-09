@@ -1,17 +1,18 @@
 footer
   max-width: var(--page-width)
+  margin-top: var(--shim-4x)
+  margin-bottom: var(--shim)
   ul
-    margin-top: var(--shim-2x)
+    margin: 0
     display: flex
     flex-flow: row wrap
     list-style-type: none
     li
-      &.year
-        font-weight: bold
+      @extend .logo
       &:not(:last-of-type)
         margin-right: 0.8em
   div.copydate
-    margin-top: var(--shim)
+    margin-top: var(--shim-p)
     p
       font-size: var(--font-size-sm)
       color: $mix-color

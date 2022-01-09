@@ -1,8 +1,6 @@
 ---
-layout: photo
-title: "'Gold Diggers of 1933' and that ha-cha-cha"
-slug: "gold-diggers-of-1933-ha-cha-cha"
-push: micro
+title: "'Gold Diggers of 1933' and ha-cha-cha"
+slug: "gold-diggers-of-1933-and-ha-cha-cha"
 excerpt: "\"We've got a lot of what it takes to get along! We're in the money! The skies are sunny! Ol' Man Depression, you are through, you done us wrong!\""
 media: 
   image: gold-diggers-of-1933.jpg

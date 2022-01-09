@@ -1,0 +1,34 @@
+---
+layout: default
+is_home: true
+permalink: /index.html
+---
+{% include banner.html %}
+
+<main role="main">
+
+  {% assign scope = 2629743 -%}
+  {% assign today = site.posts.first.date | date: '%s' -%}
+  
+  {% for p in site.posts -%}
+
+    {% assign current = p.date | date: '%s' -%}
+    {% assign range = today | times: 1 |  minus: current -%}
+    {% if scope > range %}
+      
+    {% if p.media %}
+      {% include detail-micro.html page=p content=p.content is_home=true %}  
+    {% elsif p.content contains '<img' %}
+      {% include detail-inline.html page=p content=p.content is_home=true %}  
+    {% else %}
+      {% include detail-text.html page=p content=p.content is_home=true %}  
+    {% endif -%}
+
+    {% else -%}
+      {% break -%}
+  {% endif -%}
+  {% endfor -%}
+  
+</main>
+
+{% include footer.html %}

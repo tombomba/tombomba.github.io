@@ -17,16 +17,26 @@ permalink: /index.html
     {% if scope > range %}
       
     {% if p.media %}
-      {% include detail-micro.html page=p content=p.content is_home=true %}  
+    <article class="micro home">
+      {% include detail-micro.html page=p content=p.content is_home=true %}
+
     {% elsif p.content contains '<img' %}
-      {% include detail-inline.html page=p content=p.content is_home=true %}  
+    <article class="inline home">
+      {% include detail-inline.html page=p content=p.content is_home=true %}
+
     {% else %}
-      {% include detail-text.html page=p content=p.content is_home=true %}  
+    <article class="text home">
+      {% include detail-text.html page=p content=p.content is_home=true %}
+
     {% endif -%}
+
+      {% include _permalink.html url=p.url %}
+
+    </article>
 
     {% else -%}
       {% break -%}
-  {% endif -%}
+    {% endif -%}
   {% endfor -%}
   
 </main>

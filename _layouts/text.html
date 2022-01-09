@@ -6,18 +6,22 @@ layout: default
 {% include banner.html %}
 
 <main role="main">
-    
-{% if page.media %}
+
+  {% if page.media %}
+  <article class="micro {% if page.is_post %}post{% else %}page{% endif %}">
   {% include detail-micro.html page=page content=content %}
 
-{% elsif page.content contains '<img' -%}
+  {% elsif page.content contains '<img' -%}
+  <article class="inline {% if page.is_post %}post{% else %}page{% endif %}">
   {% include detail-inline.html page=page content=content %}
 
-{% else -%}
+  {% else -%}
+  <article class="text {% if page.is_post %}post{% else %}page{% endif %}">
   {% include detail-text.html page=page content=content %}
 
-{% endif -%}
-  
+  {% endif -%}
+  </article>
+
 </main>
 
 {% include footer.html %}

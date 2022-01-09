@@ -57,7 +57,7 @@ article > img
   article > img
 
     &.top.pull
-      margin-top: calc(var(--nudge) * -1)
+      margin-top: -1em
 
     &.left,
     &.right
@@ -87,8 +87,17 @@ article > img
 
   article > img
 
+    &.top.pull
+      margin-top: calc(var(--shim) * -1)
+
+    &.left
+      margin-right: var(--shim)
+
+    &.right
+      margin-left: var(--shim)
+
     &.left.pull
-      margin-left: calc(var(--shim-p) * -2)
+      margin-left: calc(var(--shim) * -2)
 
     &.right.pull
-      margin-right: calc(var(--shim-p) * -2)
+      margin-right: calc(var(--shim) * -2)

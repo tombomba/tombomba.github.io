@@ -7,13 +7,15 @@
 
 //-----------------------------------------------------------------------------
 
-article.post
+article
   @extend .clearfix
   header
     margin-bottom: var(--shim-2x)
     h1
       font-size: var(--hed-size-md)
       line-height: var(--hed-lh)
+      span.punc::after
+        content: '.'
   aside
     margin-top: var(--shim)
     &::before
@@ -28,13 +30,3 @@ article.post
       line-height: 1
       font-weight: 700
       color: $logo-color
-
-article.page
-  header
-  margin-bottom: var(--shim-2x)
-  h1
-    font-size: var(--hed-size-lg)
-    line-height: var(--hed-lh)
-    text-transform: lowercase
-    span.punc::after
-      content: '.'

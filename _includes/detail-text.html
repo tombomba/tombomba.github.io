@@ -12,7 +12,6 @@
 {{ copy }}
 
 {% if include.is_home or p.previous %}
-  <div class="buffer"></div>
   <aside>
   {% if include.is_home %}
   {% for x in site.posts limit: 7 offset: 1 %}

@@ -17,12 +17,13 @@ article.post
       span.punc::after
         content: '.'
   aside
-    margin-top: var(--shim)
+    margin-top: var(--shim-2x)
+    border-top: 2px dotted $shadow-color
   div.buffer
     margin-top: var(--shim)
     &::after
-      content: "\2022"
-      font-size: 20px
+      content: "\25A0"
+      font-family: $black
       line-height: 1
       font-weight: 700
       color: $logo-color

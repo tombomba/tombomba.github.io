@@ -69,6 +69,17 @@ time
   &.buffer
     max-width: var(--shim-4x)
     margin-top: var(--shim-2x)
+  &.shim
+    max-width: var(--shim-4x)
+    margin-top: var(--shim)
+    
+.dot
+  margin-top: var(--shim)
+  &::before
+    content: '\2022'
+    font-size: var(--hed-size)
+    line-height: 1
+    color: $logo-color
 
 .daystamp
   white-space: nowrap

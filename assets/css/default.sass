@@ -7,53 +7,31 @@
 
 //-----------------------------------------------------------------------------
 
-article.tester
+article
   margin-top: 0
+  @extend .clearfix
   header
     margin-bottom: var(--shim-2x)
     h1
       font-size: var(--hed-size-md)
       line-height: var(--hed-lh)
       text-transform: lowercase
-    span.punc::after
-      content: '.'
-
-article.text
-  header
-    h1
-      font-size: var(--hed-size-md)
-      line-height: var(--hed-lh)
-  p:first-of-type
-    margin-top: var(--shim-p)
-
-article.micro
-  header
-    h1, p
-      display: inline
-    h1
-      font-size: 1em
-      line-height: var(--font-lh)
-      &::after
-        content: '\00A0\2014\0020'
-        font-weight: 400
-        color: $mix-color
-
-article.inline
-  header
-    h1
-      font-size: var(--hed-size)
-      line-height: var(--hed-lh)
-  
-article.static
-  header
-    h1
-      font-size: var(--hed-size)
-      line-height: var(--hed-lh)
+      span.punc::after
+        content: '.'
   section
     margin-top: var(--shim)
-    h2
+    h1, h2, h3, h4
       margin-top: 0
       font-size: 1em
     p
       margin: 0
-   
+  aside
+    margin-top: var(--shim)
+  div.buffer
+    margin-top: var(--shim)
+    &::after
+      content: "\2022"
+      font-size: 20px
+      line-height: 1
+      font-weight: 700
+      color: $logo-color

@@ -1,8 +1,10 @@
 <footer class="{% if page.is_home %}home{% elsif page.is_post %}post{% else %}page{% endif %}">
-    
+
+  {% if page.is_home %}
   <ul class="datelist">
     {% include _datelist.html year=2022 %}
   </ul>
+  {% endif %}
 
   <ul>
     {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}" aria-label="More information about this website">About</a></li>{% endunless %}
@@ -11,7 +13,12 @@
   </ul>
 
   <div class="copydate">
-    <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</p>
+    {% if page.is_page %}
+    <p>{{ site.title }} last updated {{ site.posts.first.date | date_to_string }}</p>
+    {% else %}
+    <p>This page published {{ page.date | date_to_string }}</p>
+    {% endif %}
+    <p>Copyright &copy; {{ site.author }}</p>
   </div>
 
 </footer>

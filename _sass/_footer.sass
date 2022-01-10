@@ -1,6 +1,6 @@
 footer
   margin-top: var(--shim-4x)
-  max-width: var(--page-width)
+  max-width: calc(var(--page-width) + var(--shim-2x))
   margin-bottom: var(--shim)
   ul
     margin: 0
@@ -14,7 +14,10 @@ footer
       &:not(:last-of-type)
         margin-right: 0.8em
   div.copydate
+    max-width: var(--page-width)
     margin-top: var(--shim)
+    margin-left: auto
+    margin-right: auto
     p
       font-size: var(--font-size-sm)
       color: $mix-color

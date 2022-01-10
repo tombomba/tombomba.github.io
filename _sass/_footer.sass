@@ -9,13 +9,12 @@ footer
   margin-bottom: var(--shim)
   ul
     margin: 0
+    &:first-of-type
+      margin-top: var(--shim)
     display: flex
     flex-flow: row wrap
     list-style-type: none
     li
-      @extend .logo
-      &.year
-        font-weight: 700
       &:not(:last-of-type)
         margin-right: 0.8em
   div.copydate

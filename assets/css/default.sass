@@ -14,9 +14,6 @@ article
     h1
       font-size: var(--hed-size-md)
       line-height: var(--hed-lh)
-      text-transform: lowercase
-      span.punc::after
-        content: '.'
   section
     margin-top: var(--shim)
     h1, h2, h3, h4
@@ -25,12 +22,13 @@ article
     p
       margin: 0
   aside
-    margin-top: var(--shim)
+    margin-top: var(--shim-2x)
+    border-top: 2px dotted $shadow-color
   div.buffer
     margin-top: var(--shim)
     &::after
-      content: "\2022"
-      font-size: var(--hed-size)
-      line-height: var(--hed--lh)
+      content: "\25A0"
+      font-family: $black
+      line-height: 1
       font-weight: 700
       color: $logo-color

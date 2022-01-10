@@ -15,9 +15,9 @@
 
   <div class="copydate">
     {% if page.is_page %}
-    <p>{{ site.title }} last updated {{ site.posts.first.date | date_to_string }}</p>
+    <p>Updated {{ site.posts.first.date | date_to_string }}</p>
     {% else -%}
-    <p>This page published {{ page.date | date_to_string }}</p>
+    <p>Published {{ page.date | date_to_string }}</p>
     {% endif %}
     <p>Copyright &copy; {{ site.author }}</p>
   </div>

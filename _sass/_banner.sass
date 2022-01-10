@@ -2,10 +2,20 @@ header[role="banner"]
   max-width: var(--page-width)
   margin-top: var(--shim)
   display: flex
-  flex-flow: row wrap
-  align-items: center
+  flex-flow: column
   h1
     @extend .logo
-    font-size: var(--hed-size-md)
+    font-size: var(--hed-size)
     font-weight: 700
     line-height: var(--hed-lh)
+  p
+    font-size: var(--hed-size)
+    font-weight: 700
+    line-height: var(--hed-lh)
+    text-transform: lowercase
+    color: $mix-color
+    &::after
+      content: '.'
+  div.hr
+    max-width: var(--shim-4x)
+    margin-top: var(--shim)

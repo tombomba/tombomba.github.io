@@ -7,18 +7,15 @@ permalink: /index.html
 
 <main role="main">
 
-  <article class="post">
+  <article class="page">
 
-    {% include detail-text.html page=site.posts.first content=site.posts.first.content is_home=true %}
+  <header><h1>{{ site.description }}<span class="punc"></span></h1></header>
 
-    <div class="buffer"></div>
-    <aside>
-    {% for x in site.posts limit: 7 offset: 1 %}
-      {% assign txt = x.dek | default: x.excerpt %}
-      {% include _list-section.html title=x.title text=txt date=x.date url=x.url htag='h2' %}
-    {% endfor %}
-    </aside>
-
+  {% for x in site.posts limit: 7 %}
+    {% assign txt = x.dek | default: x.excerpt %}
+    {% include _list-section.html title=x.title text=txt date=x.date url=x.url htag='h2' %}
+  {% endfor %}
+   
   </article>
 
 </main>

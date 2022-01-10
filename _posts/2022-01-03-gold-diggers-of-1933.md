@@ -1,7 +1,7 @@
 ---
 title: "Cheap and vulgar and ha-cha-cha"
 slug: "gold-diggers-of-1933-and-ha-cha-cha"
-excerpt: "\"Gold Diggers of 1933\" has the same kinda dizzy you might find in vaudeville, or low theater, or whatever it’s called, those 18th century operas produced for the workaday stiffs, now made fresh by Hollywood."
+dek: "\"Gold Diggers of 1933\" has the same kinda dizzy you might find in vaudeville, or low theater, or whatever it’s called, those 18th century operas produced for the workaday stiffs, now made fresh with the moneyed sense of Old Hollywood."
 media: 
   image: gold-diggers-of-1933.jpg
   width: 800
@@ -12,6 +12,8 @@ tags: musical, romance
 ---
 
 A blueblood songwriter falls in love with a Broadway showgirl, but his family won't hear of it. His brother and uncle come around to stop the affair and protect the family interest. So the showgirl's friends, a trio of down and outers, decide to scam Mr Hoity and Mr Toity and run them out. And why not? If someone thinks you cheap and vulgar you might as well play the part and play them, too.
+
+<!--more-->
 
 "Gold Diggers of 1933" (Warners, 1933) is rejoinder on top of rejoinder, and rat-a-tat-tat witticisms, with crazy plans and mad hijinks, and dancing, and then more hijinks. By the end it's a case of mistaken identity or two (you don't say), and confusion and revelation, and finally love all around and a smattering of proposals and (oh, what a surprise) happily-ever-after. It's a familiar story with familiar beats, with plenty of good jokes, and bookended by grand musical numbers staged by Busby Berekely.
 

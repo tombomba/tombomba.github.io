@@ -7,6 +7,17 @@
 
 //-----------------------------------------------------------------------------
 
+article.tester
+  margin-top: 0
+  header
+    margin-bottom: var(--shim-2x)
+    h1
+      font-size: var(--hed-size-md)
+      line-height: var(--hed-lh)
+      text-transform: lowercase
+    span.punc::after
+      content: '.'
+
 article.text
   header
     h1
@@ -45,4 +56,4 @@ article.static
       font-size: 1em
     p
       margin: 0
-
+   

@@ -1,25 +1,25 @@
 ---
 layout: default
 ---
+{% assign copy = content | strip | normalize_whitespace %}
+{% include _kram_image.html %}
+{% include _cccombof.html title=page.title %}
 {% assign wordcount = content | number_of_words %}
 
 {% include banner.html %}
 
 <main role="main">
 
-  {% if page.media %}
-  <article class="micro {% if page.is_post %}post{% else %}page{% endif %}">
-  {% include detail-micro.html page=page content=content %}
+  <article class="tester post">
 
-  {% elsif page.content contains '<img' -%}
-  <article class="inline {% if page.is_post %}post{% else %}page{% endif %}">
-  {% include detail-inline.html page=page content=content %}
+    <header>
+      <h1>{{ titlef }}</h1>
+    </header>
 
-  {% else -%}
-  <article class="text {% if page.is_post %}post{% else %}page{% endif %}">
-  {% include detail-text.html page=page content=content %}
+    {% if page.media %}{% include _figure.html media=page.media %}{% endif %}
 
-  {% endif -%}
+    {{ copy }}
+
   </article>
 
 </main>

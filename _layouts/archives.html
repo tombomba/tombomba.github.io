@@ -15,9 +15,11 @@ layout: page
   {% assign current_month = x.date | date: "%m" %}
   {% assign current_year = x.date | date: "%Y" -%}
   {% if is_month_index and current_month == raw_month and current_year == raw_year %}
-    {% include _list-section.html title=x.title text=x.excerpt url=x.url htag='h2' %}
+    {% assign txt = x.dek | default: x.excerpt %}
+    {% include _list-section.html title=x.title text=txt url=x.url htag='h2' %}
   {% endif -%}
   {% if is_year_index and current_year == raw_year %}
-    {% include _list-section.html title=x.title text=x.excerpt date=x.date url=x.url htag='h2' %}
+    {% assign txt = x.dek | default: x.excerpt %}
+    {% include _list-section.html title=x.title text=txt date=x.date url=x.url htag='h2' %}
   {% endif -%}
 {% endfor -%}

@@ -5,7 +5,7 @@ article
   max-width: var(--page-width)
 
   header
-    margin-bottom: var(--shim-2x)
+    margin-bottom: calc(var(--shim-2x) - var(--nudge))
     h1
       color: $text-color
       a:link, a:visited
@@ -53,3 +53,11 @@ article
     a:link, a:visited
       color: $logo-color
       text-decoration: none
+
+  .buffer
+    margin-top: var(--shim)
+    &::after
+      content: '\2022'
+      font-size: var(--hed-size)
+      line-height: 1
+      color: $logo-color

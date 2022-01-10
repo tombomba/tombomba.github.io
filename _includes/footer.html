@@ -7,7 +7,6 @@
   {% endif -%}
 
   <ul>
-    {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}
     {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}" aria-label="More information about this website">About</a></li>{% endunless %}
     <li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li>
     <li><a href="{{ 'feed.xml' | absolute_url }}" target="_rss">RSS</a></li>

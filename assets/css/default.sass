@@ -12,13 +12,16 @@ article.post
   header
     margin-bottom: var(--shim-2x)
     h1
-      font-size: var(--hed-size-lg)
+      font-size: var(--hed-size-md)
       line-height: var(--hed-lh)
       span.punc::after
         content: '.'
   aside
-    margin-top: var(--shim-2x)
-    border-top: 2px dotted $shadow-color
+    margin-top: var(--shim)
+    &::before
+      content: '\2022'
+      font-weight: bold
+      color: $logo-color
   div.buffer
     margin-top: var(--shim)
     &::after

@@ -7,7 +7,7 @@
 
 //-----------------------------------------------------------------------------
 
-article
+article.post
   margin-top: var(--nudge)
   @extend .clearfix
   header
@@ -16,10 +16,12 @@ article
       line-height: var(--hed-lh)
   aside
     margin-top: var(--shim)
-  div.buffer
-    margin-top: var(--shim)
-    &::after
-      content: '\2022'
-      font-size: 20px
-      line-height: 1
-      color: $logo-color
+
+article.page  
+  header
+    h1
+      font-size: var(--hed-size-md)
+      line-height: var(--hed-lh)
+      text-transform: lowercase
+    span.punc::after
+      content: '.'

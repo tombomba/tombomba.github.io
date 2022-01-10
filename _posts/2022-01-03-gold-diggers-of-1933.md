@@ -1,7 +1,7 @@
 ---
 title: "Cheap and vulgar and ha-cha-cha"
 slug: "gold-diggers-of-1933-and-ha-cha-cha"
-dek: "\"Gold Diggers of 1933\" has the same kinda dizzy you might find in vaudeville, or low theater, or whatever it’s called, those 18th century operas produced for the workaday stiffs, now made fresh with the moneyed sense of Old Hollywood."
+dek: "\"Gold Diggers of 1933\" is a sorta dizzy low theater made fresh with the moneyed sense of Old Hollywood."
 media: 
   image: gold-diggers-of-1933.jpg
   width: 800

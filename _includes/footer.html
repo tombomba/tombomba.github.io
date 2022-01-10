@@ -11,12 +11,7 @@
   </ul>
 
   <div class="copydate">
-    {% if page.is_page %}
-    <p>Updated {{ site.posts.first.date | date_to_long_string }}</p>
-    {% else -%}
-    <p>Published {{ page.date | date_to_long_string }}</p>
-    {% endif %}
-    <p>Copyright &copy; {{ site.author }}</p>
+    <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</p>
   </div>
 
 </footer>

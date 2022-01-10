@@ -11,19 +11,12 @@
 
 {{ copy }}
 
-{% if include.is_home or p.previous %}
-  <aside>
-  {% if include.is_home %}
-  {% for x in site.posts limit: 7 offset: 1 %}
-    {% assign txt = x.dek | default: x.excerpt %}
-    {% include _list-section.html title=x.title text=txt url=x.url htag='h2' %}
-  {% endfor %}
-  </aside>
-  {% else %}
-    {% if p.previous %}
-      {% assign txt = p.previous.dek | default: p.previous.excerpt %}
-      {% include _list-section.html title=p.previous.title text=txt url=p.previous.url htag='h2' %}
-    {% endif %}
-  {% endif %}
-  </aside>
+{% if include.is_home %}
+<div class="buffer"></div>
+<aside>
+{% for x in site.posts limit: 7 offset: 1 %}
+  {% assign txt = x.dek | default: x.excerpt %}
+  {% include _list-section.html title=x.title text=txt url=x.url htag='h2' %}
+{% endfor %}
+</aside>
 {% endif %}

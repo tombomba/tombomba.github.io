@@ -1,7 +1,7 @@
 {% assign p = include.page %}
 {% assign copy = include.content | strip | normalize_whitespace %}
 {% include _kram_image.html %}
-{% include _cccombof.html title=p.title %}
+{% include _widont.html title=p.title %}
 
 <header>
   <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>

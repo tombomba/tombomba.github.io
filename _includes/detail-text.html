@@ -11,12 +11,4 @@
 
 {{ copy }}
 
-{% if include.is_home %}
-<div class="buffer"></div>
-<aside>
-{% for x in site.posts limit: 7 offset: 1 %}
-  {% assign txt = x.dek | default: x.excerpt %}
-  {% include _list-section.html title=x.title text=txt url=x.url htag='h2' %}
-{% endfor %}
-</aside>
-{% endif %}
+{% include _pubdate.html date=p.date url=p.url %}

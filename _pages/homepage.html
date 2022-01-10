@@ -11,6 +11,14 @@ permalink: /index.html
 
     {% include detail-text.html page=site.posts.first content=site.posts.first.content is_home=true %}
 
+    <div class="buffer"></div>
+    <aside>
+    {% for x in site.posts limit: 7 offset: 1 %}
+      {% assign txt = x.dek | default: x.excerpt %}
+      {% include _list-section.html title=x.title text=txt date=x.date url=x.url htag='h2' %}
+    {% endfor %}
+    </aside>
+
   </article>
 
 </main>

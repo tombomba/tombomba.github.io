@@ -14,8 +14,12 @@ article
       a:hover
         text-decoration: underline
 
-  section
+  aside
     margin-top: var(--shim)
+
+  section
+    &:not(:first-of-type)
+      margin-top: var(--shim)
     h1, h2, h3, h4
       margin-top: 0
       font-size: 1em
@@ -53,11 +57,3 @@ article
     a:link, a:visited
       color: $logo-color
       text-decoration: none
-
-  .buffer
-    margin-top: var(--shim)
-    &::after
-      content: '\2022'
-      font-size: var(--hed-size)
-      line-height: 1
-      color: $logo-color

@@ -8,7 +8,6 @@
 //-----------------------------------------------------------------------------
 
 article
-  margin-top: 0
   @extend .clearfix
   header
     margin-bottom: var(--shim-2x)
@@ -31,7 +30,7 @@ article
     margin-top: var(--shim)
     &::after
       content: "\2022"
-      font-size: 20px
-      line-height: 1
+      font-size: var(--hed-size)
+      line-height: var(--hed--lh)
       font-weight: 700
       color: $logo-color

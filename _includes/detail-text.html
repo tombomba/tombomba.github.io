@@ -1,10 +1,30 @@
 {% assign p = include.page %}
-{% assign copy = include.content | strip | normalize_whitespace -%}
-
-{% include _widont.html title=p.title %}
+{% assign copy = include.content | strip | normalize_whitespace %}
+{% include _kram_image.html %}
+{% include _cccombof.html title=p.title %}
 
 <header>
   <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
 </header>
 
-{{ copy | strip | normalize_whitespace }}
+{% if p.media %}{% include _figure.html media=p.media %}{% endif %}
+
+{{ copy }}
+
+{% if include.is_home or p.previous %}
+  <div class="buffer"></div>
+  <aside>
+  {% if include.is_home %}
+  {% for x in site.posts limit: 7 offset: 1 %}
+    {% assign txt = x.dek | default: x.excerpt %}
+    {% include _list-section.html title=x.title text=txt url=x.url htag='h2' %}
+  {% endfor %}
+  </aside>
+  {% else %}
+    {% if p.previous %}
+      {% assign txt = p.previous.dek | default: p.previous.excerpt %}
+      {% include _list-section.html title=p.previous.title text=txt url=p.previous.url htag='h2' %}
+    {% endif %}
+  {% endif %}
+  </aside>
+{% endif %}

@@ -8,6 +8,7 @@
 //-----------------------------------------------------------------------------
 
 article.post
+  margin-top: var(--nudge)
   @extend .clearfix
   header
     h1
@@ -22,3 +23,10 @@ article.post
       font-size: 20px
       line-height: 1
       color: $logo-color
+
+article.page
+  header
+    h1
+      font-size: var(--hed-size)
+      line-height: var(--hed-lh)
+      text-transform: lowercase

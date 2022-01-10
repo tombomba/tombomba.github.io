@@ -5,5 +5,12 @@ header[role="banner"]
   flex-flow: column
   h1
     @extend .logo
-    font-size: var(--hed-size-md)
+    font-size: var(--hed-size)
     line-height: var(--hed-lh)
+  p
+    font-size: var(--hed-size)
+    line-height: var(--hed-lh)
+    font-weight: 700
+    color: $mix-color
+    &::after
+      content: '.'

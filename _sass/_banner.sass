@@ -4,8 +4,9 @@ header[role="banner"]
   display: flex
   flex-flow: column
   h1
-    font-weight: 400
+    font-size: var(--hed-size-md)
     line-height: var(--hed-lh)
+    text-transform: lowercase
     color: $logo-color
     &::after
       content: '.'
@@ -17,13 +18,9 @@ header[role="banner"]
       text-decoration: underline
     &.text
       font-size: var(--hed-size)
-    &.page,
-    &.archives,
-    &.default
-      font-size: var(--hed-size-lg)
     &.home
-      font-size: var(--hed-size-xl)
+      font-size: var(--hed-size-md)
     &.inline
-      font-size: var(--hed-size-xl)
+      font-size: var(--hed-size-lg)
     &.micro
-      font-size: var(--hed-size-xl)
+      font-size: var(--hed-size-lg)

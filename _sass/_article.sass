@@ -3,28 +3,7 @@
 article
 
   max-width: var(--page-width)
-
-  header
-    margin-bottom: calc(var(--shim-2x) - var(--nudge))
-    h1
-      color: $text-color
-      a:link, a:visited
-        color: $text-color
-        text-decoration: none
-      a:hover
-        text-decoration: underline
-
-  aside
-    margin-top: var(--shim)
-
-  section
-    &:not(:first-of-type)
-      margin-top: var(--shim)
-    h1, h2, h3, h4
-      margin-top: 0
-      font-size: 1em
-    p
-      margin: 0
+  @extend .clearfix
 
   h2, h3, h4, h5, h6
     margin-top: var(--shim)
@@ -48,12 +27,3 @@ article
   blockquote,
   li + p,
     margin-top: 0
-
-  .permalink
-    font-size: var(--hed-size)
-    line-height: 1
-    font-weight: 700
-    color: $logo-color
-    a:link, a:visited
-      color: $logo-color
-      text-decoration: none

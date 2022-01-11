@@ -6,10 +6,13 @@ header[role="banner"]
   h1
     @extend .logo
     line-height: var(--hed-lh)
-  &.post
-    h1
+    &.text
       font-size: var(--hed-size)
-  &.home,
-  &.page
-    h1
-      font-size: var(--hed-size-md)
+    &.page,
+    &.archives,
+    &.default
+      font-size: var(--hed-size-md)   
+    &.inline
+      font-size: var(--hed-size-lg)
+    &.micro
+      font-size: var(--hed-size-lg)

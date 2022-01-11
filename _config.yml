@@ -48,7 +48,6 @@ defaults:
       path: "diary/_posts"
       type: posts
     values:
-      category: penishead
       layout: micro
       is_post: true
   -

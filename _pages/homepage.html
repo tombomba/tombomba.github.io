@@ -4,14 +4,10 @@ is_home: true
 permalink: /index.html
 ---
 {% include banner.html %}
-{% assign filler = site.data.taglines | sample: 1 %}
-{% include _cccombof.html title=filler %}
 
 <main role="main">
 
   <article class="home page">
-
-  <header><h1>{{ titlef }}</h1></header>
 
   {% assign scope = 2629743 -%}
   {% assign today = site.posts.first.date | date: '%s' -%}
@@ -20,7 +16,7 @@ permalink: /index.html
     {% assign range = today | times: 1 |  minus: current -%}
     {% if scope > range -%}
       {% assign txt = p.dek | default: p.excerpt %}
-      {% include _list-section.html title=p.title text=txt date=p.date url=p.url htag='h2' %}
+      {% include _list-section.html title=p.title text=txt date=p.date url=p.url %}
     {% else -%}
       {%- break %}
     {% endif -%}

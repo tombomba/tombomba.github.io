@@ -7,19 +7,54 @@
 
 //-----------------------------------------------------------------------------
 
-article.post
-  margin-top: var(--nudge)
-  @extend .clearfix
-  header
-    h1
-      font-size: var(--hed-size-md)
-      line-height: var(--hed-lh)
+article
+  
+  &.text
+    margin-top: var(--nudge)
+    header
+      margin-bottom: calc(var(--shim-2x) - var(--nudge))
+      h1
+        font-size: var(--hed-size-md)
+        line-height: var(--hed-lh)
 
-article.page  
-  header
-    h1
-      font-size: var(--hed-size-md)
-      line-height: var(--hed-lh)
-      text-transform: lowercase
-    span.punc::after
-      content: '.'
+  &.micro
+    margin-top: var(--shim)
+    header
+      h1, p
+        display: inline
+        margin: 0
+      h1
+        font-size: 1em
+        line-height: var(--lh)
+        &::after
+          content: '\00A0\2014\0020'
+          font-weight: 400
+          color: $mix-color
+
+  &.inline
+    margin-top: var(--shim-2x)
+    header
+      h1
+        font-size: var(--hed-size)
+        line-height: var(--hed-lh)
+    p
+      margin-top: var(--shim-p)
+
+  &.page
+    margin-top: 0
+    header
+      margin-bottom: calc(var(--shim-p) * 2)
+      h1
+        font-size: var(--hed-size-md)
+        line-height: var(--hed-lh)
+        text-transform: lowercase
+        span.punc::after
+          content: '.'
+    section
+      &:not(:first-of-type)
+        margin-top: var(--shim)
+      h1, h2, h3, h4
+        margin-top: 0
+        font-size: 1em
+      p
+        margin: 0

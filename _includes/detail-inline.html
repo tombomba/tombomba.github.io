@@ -3,17 +3,7 @@
 {% include _kram_image.html %}
 {% include _widont.html title=p.title -%}
 
-{% capture hedbox %}
-  <header>
-    <h1>
-    {% if include.is_home %}
-      <a href="{{ p.url | absolute_url }}">{{ titlef }}</a>
-    {% else %}
-      {{ titlef }}
-    {% endif %}
-    </h1>
-    <p>
-{% endcapture -%}
+{% capture hedbox %}<header><h1>{{ titlef }}</h1><p>{% endcapture -%}
 {% assign copy = copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hedbox -%}
 
-{{ copy | strip | normalize_whitespace }}
+{{ copy }}

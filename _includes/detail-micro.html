@@ -1,6 +1,6 @@
 {% assign p = include.page %}
 {% assign copy = include.content | strip | normalize_whitespace -%}
-{% assign titlef = p.title | strip | smartify %}
+{% include _puncf.html title=p.title %}
 
 {% if p.media %}{% include _figure.html media=p.media %}{% endif -%}
 

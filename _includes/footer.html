@@ -10,7 +10,7 @@
 
   <ul>
     {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}" aria-label="More information about this website">About</a></li>{% endunless %}
-    <li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li>
+    <li><a href="https://twitter.com/{{ site.socials }}" target="_twttr">Twitter</a></li>
     <li><a href="{{ 'feed.xml' | absolute_url }}" target="_rss">RSS</a></li>
   </ul>
 

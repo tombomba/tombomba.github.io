@@ -11,9 +11,23 @@ permalink: /index.html
 
   <header><h1>{{ site.description }}<span class="punc"></span></h1></header>
 
-  {% for x in site.posts limit: 7 %}
-    {% assign txt = x.dek | default: x.excerpt %}
-    {% include _list-section.html title=x.title text=txt date=x.date url=x.url htag='h2' %}
+  {% assign scope = 2629743 %}
+  {% assign today = site.posts.first.date | date: '%s' %}
+  
+  {% for p in site.posts %}
+
+    {% assign current = p.date | date: '%s' %}
+    {% assign range = today | times: 1 |  minus: current %}
+
+    {% if scope > range %}
+      {% assign txt = p.dek | default: p.excerpt %}
+      {% include _list-section.html title=p.title text=txt date=p.date url=p.url htag='h2' %}
+
+    {% else %}
+      {% break %}
+
+    {% endif %}
+
   {% endfor %}
    
   </article>

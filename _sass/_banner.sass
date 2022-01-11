@@ -4,8 +4,17 @@ header[role="banner"]
   display: flex
   flex-flow: column
   h1
-    @extend .logo
+    font-weight: 400
     line-height: var(--hed-lh)
+    color: $logo-color
+    &::after
+      content: '.'
+      color: $logo-color
+    a:link, a:visited
+      color: $logo-color
+      text-decoration: none
+    a:hover
+      text-decoration: underline
     &.text
       font-size: var(--hed-size)
     &.page,
@@ -18,11 +27,3 @@ header[role="banner"]
       font-size: var(--hed-size-xl)
     &.micro
       font-size: var(--hed-size-xl)
-  p
-    font-size: var(--hed-size-md)
-    line-height: 1
-    font-weight: 700
-    text-transform: lowercase
-    color: $text-color
-    span.punc::after
-      content: '.'

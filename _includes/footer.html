@@ -1,6 +1,8 @@
 <footer class="{% if page.is_home %}home{% elsif page.is_post %}post{% else %}page{% endif %}">
 
-  {% if page.is_page %}
+  <div class="hr"></div>
+
+  {% if page.is_home or page.is_archive %}
   <ul class="datelist">
     {% include _datelist.html year=2022 %}
   </ul>

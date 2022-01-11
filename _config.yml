@@ -55,6 +55,7 @@ defaults:
       type: "archives"
     values:
       layout: "archives"
+      is_archive: true
       is_page: true
 
 markdown: kramdown

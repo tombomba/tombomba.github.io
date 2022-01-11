@@ -1,5 +1,5 @@
-title: "Bomtomba"
-name: "Bomtomba"
+title: "Trash Diary"
+name: "Trash"
 description: "A media diary"
 domain: "www.trashdiary.com"
 
@@ -42,6 +42,14 @@ defaults:
       type: posts   # limit to posts
     values:
       layout: text
+      is_post: true
+  -
+    scope:
+      path: "diary/_posts"
+      type: posts
+    values:
+      category: penishead
+      layout: micro
       is_post: true
   -
     scope:

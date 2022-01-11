@@ -35,9 +35,9 @@ article > img
     background-color: $bg-color
 
     &.top
-      margin-top: 0
+      margin-top: var(--nudge)
 
-    &.top.pull
+    &.top.yank
       margin-top: calc(var(--nudge) * -1)
 
     &.left
@@ -59,7 +59,7 @@ article > img
 
   article > img
 
-    &.top.tilt.pull
+    &.top.tilt.yank
       margin-top: calc(var(--nudge) * -2)
 
     &.left,

@@ -1,15 +1,8 @@
 ---
 layout: page
-title: "404"
+title: "Page not found"
 excerpt: "404 Error: Page Not Found"
 emoji: '💥'
 permalink: /404.html
 ---
-
-<p>Page not found. Try another?</p>
-
-<ul class="plain">
-  {% for p in site.posts limit: 5 %}<li><a href="{{ p.url | absolute_url }}">{{ p.title | strip | strip_html | smartify | normalize_whitespace }}</a></li>{% endfor %}
-</ul>
-
 <p>If you are having trouble locating a destination, try visiting the <a href="{{ site.url }}">homepage</a> or browsing posts from <a href="{{ site.posts.first.date | date: '%y/%m/' | absolute_url }}">this month</a> and <a href="{{ site.posts.first.date | date: '%y' | absolute_url }}">this year</a>.</p>

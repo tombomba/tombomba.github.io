@@ -16,7 +16,7 @@ A blueblood songwriter falls in love with a Broadway showgirl, but his family wo
 
 <!--more-->
 
-"Gold Diggers of 1933" (Warners, 1933) is rejoinder on top of rejoinder, and rat-a-tat-tat witticisms, with crazy plans and mad hijinks, and dancing, and then more hijinks. By the end it's a case of mistaken identity or two (you don't say), and confusion and revelation, and finally love all around and a smattering of proposals and (oh, what a surprise) happily-ever-after. It's a familiar story with familiar beats, with plenty of good jokes, and bookended by grand musical numbers staged by Busby Berekely.
+"Gold Diggers of 1933" (Warners, 1933) is rat-a-tat-tat witticisms, and rejoinder on top of rejoinder, with crazy plans and mad hijinks, and dancing, and then more hijinks. By the end it's a case of mistaken identity or two (you don't say), and confusion and revelation, and finally love all around and a smattering of proposals and (oh, what a surprise) happily-ever-after. It's a familiar story with familiar beats, with plenty of good jokes, and bookended by grand musical numbers staged by Busby Berekely.
 
 "Gold Diggers" has the same kinda dizzy you might find in vaudeville, or low theater, or whatever it's called, those 18th century operas produced for the workaday stiffs, now made fresh with the moneyed sense of Old Hollywood and given over to a sorta art deco bohemianism---everybody in this world is good looking and fashionable and well appointed, rich or poor.
 

@@ -1,3 +1,0 @@
-{% if copy contains '<p><img' %}
-  {% assign copy = copy | replace: '<p><img','<img' | replace: ' /></p>','>' %}
-{% endif -%}

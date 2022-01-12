@@ -9,9 +9,6 @@ permalink: /index.html
 
   <article class="home default">
 
-  style={{ page.style }}<br>
-  layout={{ page.layout }}<br>
-
   {% assign scope = 2629743 -%}
   {% assign today = site.posts.first.date | date: '%s' -%}
   {%- for p in site.posts %}

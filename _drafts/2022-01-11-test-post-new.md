@@ -2,7 +2,7 @@
 title: "Images and metaphors"
 ---
 
-![Titane]({{ 'titane-2021-poster.jpg' | prepend: site.img }}){: width="222" height="302" .top .left }
+![Titane]({{ 'titane-2021-poster.jpg' | prepend: site.img }}){: width="222" height="302" .top .pull .left }
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id neque quis est elementum sagittis. Praesent sit amet ligula sodales, viverra diam vel, fringilla nisi. Mauris euismod feugiat risus id convallis. Nunc ac commodo nisl. Integer id ante non nisi efficitur placerat. Fusce ligula turpis, venenatis non sapien eget, vulputate suscipit ante. In tempor nulla purus, vestibulum tristique ante hendrerit eu. Nullam ornare mi sit amet varius maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed egestas elit, at auctor nisl. In sollicitudin vehicula arcu in imperdiet. Vivamus non turpis ipsum. Integer ut urna imperdiet, scelerisque diam vel, viverra velit. In hac habitasse platea dictumst.
 

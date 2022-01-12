@@ -55,7 +55,6 @@ defaults:
       path: ""
       type: "pages"
     values:
-      style: page
       is_page: true
   -
     scope:
@@ -63,7 +62,6 @@ defaults:
       type: "archives"
     values:
       layout: "archives"
-      style: page
       is_archive: true
       is_page: true
 

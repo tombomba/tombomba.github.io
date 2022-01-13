@@ -1,5 +1,6 @@
 ---
 title: "Images and metaphors"
+published: false
 ---
 
 ![Titane]({{ 'titane-2021-poster.jpg' | prepend: site.img }}){: width="222" height="302" .top .flat .pull .left }

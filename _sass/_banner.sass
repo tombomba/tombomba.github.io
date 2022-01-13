@@ -4,7 +4,7 @@ header[role="banner"]
   display: flex
   flex-flow: column
   h1
-    font-size: var(--hed-size-lg)
+    font-size: var(--hed-size)
     line-height: var(--hed-lh)
     font-weight: 900
     text-transform: lowercase
@@ -20,7 +20,9 @@ header[role="banner"]
     &.text
       font-size: var(--hed-size)
     &.page,
-    &.archives
+    &.archives,
+    &.default
       font-size: var(--hed-size-md)
-    &.home
+    &.inline,
+    &.micro
       font-size: var(--hed-size-lg)

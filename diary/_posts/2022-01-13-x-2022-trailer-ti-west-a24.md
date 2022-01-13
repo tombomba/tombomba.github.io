@@ -10,7 +10,7 @@ media:
   caption: >
     Photo: "X" (A24, 2022)
   alt: >
-    Some serious "Texas Chain Saw" vibes here
+    Some serious "Texas Chain Saw" here
 tags: trailer
 ---
 

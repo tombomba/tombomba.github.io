@@ -1,6 +1,8 @@
 ---
 title: >
   Trailer: 'X'
+excerpt: > 
+  Ti West upends his style with self conscious grindhouse, and maybe working like he wants to play to a different audience.
 media: 
   image: x-2022-trailer.jpg
   width: 768

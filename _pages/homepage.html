@@ -9,7 +9,7 @@ permalink: /index.html
 
   <article class="home page">
 
-  <header><h1>{{ site.description }}</h1></header>
+  <header><h1>{{ site.description }}<span class="punc"></span></h1></header>
 
   {% assign scope = 2629743 -%}
   {% assign today = site.posts.first.date | date: '%s' -%}

@@ -16,4 +16,4 @@ tags: trailer
 
 [Here](https://www.youtube.com/watch?v=Awg3cWuHfoc) or [here](https://www.youtube.com/results?search_query=trailer+x+2022+ti+west+a24). Very faux grindhouse vibe, Ti West mixing sub-genres. The visuals and scenarios look almost period boilerplate. Sex, race, horror, check, check, check. I hope the film will have a point of view, something to say, and won't simply regurgitate 50 year old exploitation tropes.
 
-Ti West's previous features usually gave you something to think about and something to talk about. Maybe that'll be true again. He's been out of the public eye for awhile; his last release was 5 or 6 years ago. "X" catches my interest because West seems to be upending his style, like he wants to play to a different audience. A curious impulse in an established career.
+Because Ti West's previous features usually gave you something to think about and something to talk about. Maybe that'll be true again. He's been out of the public eye for awhile; his last release was 5 or 6 years ago. "X" catches my interest because West seems to be upending his style, like he wants to play to a different audience. A curious impulse in an established career.

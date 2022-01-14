@@ -3,6 +3,8 @@
 {% include _kram_image.html %}
 {% include _widont.html title=p.title %}
 
+<div class="hr shim"></div>
+
 <header>
   <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
 </header>
@@ -10,3 +12,5 @@
 {% if p.media %}{% include _figure.html media=p.media %}{% endif %}
 
 {{ copy }}
+
+{% include _pubdate.html date=p.date url=p.url %}

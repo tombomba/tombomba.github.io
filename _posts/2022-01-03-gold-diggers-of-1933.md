@@ -1,5 +1,5 @@
 ---
-layout: micro
+layout: diary
 title: "Cheap and vulgar and ha-cha-cha"
 slug: "gold-diggers-of-1933-and-ha-cha-cha"
 dek: "\"Gold Diggers of 1933\" is a sorta dizzy low theater made fresh with the moneyed sense of Old Hollywood."

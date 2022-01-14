@@ -9,7 +9,7 @@ permalink: /index.html
 
   <article class="home page">
 
-  <header><h1>{{ site.description }}<span class="punc"></span></h1></header>
+  <div class="hr shim"></div>
 
   {% assign scope = 2629743 -%}
   {% assign today = site.posts.first.date | date: '%s' -%}
@@ -18,7 +18,7 @@ permalink: /index.html
     {% assign range = today | times: 1 |  minus: current -%}
     {% if scope > range -%}
       {% assign txt = p.dek | default: p.excerpt %}
-      {% include _list-section.html title=p.title text=txt date=p.date url=p.url %}
+      {% include _list-section.html title=p.title text=txt url=p.url layout='home' %}
     {% else -%}
       {%- break %}
     {% endif -%}

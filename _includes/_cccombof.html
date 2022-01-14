@@ -1,4 +1,3 @@
-
 {% assign title_arr = include.title | default: 'Oh noes!' | strip | normalize_whitespace | split: ' ' -%}
 {% assign new_title = '' | split: '' -%}
 
@@ -27,7 +26,7 @@
 
 {% endfor -%}
 
-{% assign titlef = new_title | join: ' ' %}
-{% assign titlef = titlef | replace: '!!PUNC!!', '<span class="punc"></span>' %}
-{% assign titlef = titlef | replace: '!!WO!!', '<span class="widont">' %}
-{% assign titlef = titlef | replace: '!!WC!!', '</span>' | strip | smartify | normalize_whitespace -%}
+{% assign cccombof = new_title | join: ' ' %}
+{% assign cccombof = cccombof | replace: '!!PUNC!!', '<span class="punc"></span>' %}
+{% assign cccombof = cccombof | replace: '!!WO!!', '<span class="widont">' %}
+{% assign cccombof = cccombof | replace: '!!WC!!', '</span>' | strip | smartify | normalize_whitespace -%}

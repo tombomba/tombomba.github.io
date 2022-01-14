@@ -1,7 +1,8 @@
 ---
+layout: micro
 title: "Man in the Shadow (Universal, 1957)"
 media: 
-  image: test-poster.jpg
+  image: man-in-the-shadow-1957-poster.jpg
   width: 376
   height: 504
   alt: "The Man in the Shadow 1957 movie poster"

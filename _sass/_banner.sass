@@ -17,12 +17,11 @@ header[role="banner"]
       text-decoration: none
     a:hover
       text-decoration: underline
-    &.text
-      font-size: var(--hed-size)
-    &.page,
-    &.archives,
-    &.default
-      font-size: var(--hed-size-md)
-    &.inline,
-    &.micro
-      font-size: var(--hed-size-lg)
+  p
+    margin: 0
+    font-size: var(--hed-size)
+    line-height: var(--hed-lh)
+    font-weight: 700
+    text-transform: lowercase
+    &::after
+      content: '.'

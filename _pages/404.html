@@ -1,8 +1,14 @@
 ---
-layout: page
+layout: default
 title: "Page not found"
 excerpt: "404 Error: Page Not Found"
 emoji: '💥'
 permalink: /404.html
 ---
-<p>If you are having trouble locating a destination, try visiting the <a href="{{ site.url }}">homepage</a> or browsing posts from <a href="{{ site.posts.first.date | date: '%y/%m/' | absolute_url }}">this month</a> and <a href="{{ site.posts.first.date | date: '%y' | absolute_url }}">this year</a>.</p>
+
+<main role="main">
+  <article class="error">
+    <header><h1>{{ page.title }}</h1></header>
+    <p>If you are having trouble locating a destination on <i>{{ site.title }},</i> try visiting the <a href="{{ site.url }}">homepage</a> or browsing posts from <a href="{{ site.posts.first.date | date: '%y/%m/' | absolute_url }}">this month</a> and <a href="{{ site.posts.first.date | date: '%y' | absolute_url }}">this year</a>.</p>
+  </article>
+</main>

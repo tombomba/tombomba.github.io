@@ -1,11 +1,11 @@
 ---
-layout: diary
+layout: micro
 categories: diary
 title: >
   The quick brown fox jumps over
 ---
 
-![A Woolsey International Prodution]({{ 'matinee-1993-poster.jpg' | prepend: site.img }}){: width="222" height="331" .top .pull .yank .tilt .left }
+![A Woolsey International Prodution]({{ 'matinee-1993-poster.jpg' | prepend: site.img }}){: width="222" height="331" .top .pull .left }
 
 Nulla non odio varius, eleifend ex quis, condimentum urna. Maecenas fringilla, felis volutpat cursus elementum, enim diam tincidunt ex, sed ornare tellus mauris vitae ipsum.<!--more--> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet velit rhoncus, vulputate urna nec, vehicula risus. Quisque sit amet ex nisl. Maecenas bibendum facilisis ligula, ut porttitor leo pharetra eget. Nam vel finibus lacus. Quisque ac massa nec lorem molestie accumsan vitae eget enim. Proin vel arcu eros. Sed aliquet egestas enim, id hendrerit lorem auctor id. Mauris faucibus mattis auctor.
 

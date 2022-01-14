@@ -16,8 +16,28 @@ article
         font-size: var(--hed-size-md)
         line-height: var(--hed-lh)
 
+  &.diary
+    header
+      margin-top: var(--shim-2x)
+      h1
+        font-size: var(--hed-size-md)
+        line-height: var(--hed-lh)
+    figure
+      margin-top: var(--shim)
+    div.hr.shim
+      margin-top: var(--shim-2x)
+    & > img
+      &.top,
+      &.top.tilt.yank,
+      &.top.yank,
+      &.pull.tilt
+        margin-top: calc(var(--shim) + var(--nudge))
+      &.left.tilt,
+      &.right.tilt
+        transform: rotate(0deg)
+
   &.micro
-    margin-top: var(--shim)
+    margin-top: var(--shim-2x)
     header
       h1, p
         display: inline
@@ -31,10 +51,10 @@ article
           color: $mix-color
 
   &.inline
-    margin-top: var(--shim-2x)
+    margin-top: var(--shim-3x)
     header
       h1
-        font-size: var(--hed-size)
+        font-size: var(--hed-size-md)
         line-height: var(--hed-lh)
     h2, h3, h4, h5, h6, p
       margin-top: var(--shim-p)
@@ -43,18 +63,27 @@ article
   
   &.page
     header
-      margin-bottom: calc(var(--shim-p) * 2)
+      margin-top: var(--shim-2x)
       h1
-        font-size: var(--hed-size-md)
+        font-size: var(--hed-size)
         line-height: var(--hed-lh)
-        text-transform: lowercase
-        span.punc::after
-          content: '.'
     section
-      &:not(:first-of-type)
-        margin-top: var(--shim)
+      margin-top: var(--shim)
+      &.home:first-of-type
+        margin-top: var(--shim-2x)
       h1, h2, h3, h4
         margin-top: 0
         font-size: 1em
       p
         margin: 0
+    div.hr.shim
+      margin-top: var(--shim-2x)
+
+  &.error
+    margin: var(--shim) 0
+    header
+      h1
+        font-size: var(--hed-size)
+        line-height: var(--hed-lh)
+    p
+      margin-top: var(--shim-p)

@@ -34,15 +34,11 @@ article > img
 
     background-color: $bg-color
 
-    &.top
+    &.top 
       margin-top: 0
 
-    &.top.flat
+    &.flat
       margin-top: var(--nudge)
-
-    &.top.yank,
-    &.pull.tilt
-      margin-top: calc(var(--nudge) * -1)
 
     &.left
       display: inline
@@ -63,30 +59,21 @@ article > img
 
   article > img
 
-    &.top.tilt.yank
-      margin-top: calc(var(--nudge) * -2)
-
     &.left,
     &.right
       margin-bottom: 1em
 
     &.left
-      margin-right: var(--shim-p)
+      margin-right: var(--shim-n)
 
     &.right
-      margin-left: var(--shim-p)
+      margin-left: var(--shim-n)
 
     &.left.pull
-      margin-left: calc(var(--shim-p) * -1)
-
-    &.left.tilt
-      transform: rotate(-3deg)
+      margin-left: calc(var(--shim) * -1)
 
     &.right.pull
-      margin-right: calc(var(--shim-p) * -1)
-
-    &.right.tilt
-      transform: rotate(3deg)
+      margin-right: calc(var(--shim) * -1)
 
 //-----------------------------------------------------------------------------
 

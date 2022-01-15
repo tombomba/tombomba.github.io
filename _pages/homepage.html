@@ -3,28 +3,44 @@ layout: default
 is_home: true
 permalink: /index.html
 ---
+{% assign p = site.posts.first %}
+{% assign copy = site.posts.first.excerpt | strip | normalize_whitespace %}
+{% include _kram_image.html %}
+{% include _widont.html title=p.title %}
 {% include banner.html %}
+
+{% capture contd %}<span class="contd">&nbsp;<a href="{{ p.url | absolute_url }}" aria-label="Continued">[&hellip;]</a></span>{% endcapture -%}
+{% assign copysize = copy | size | minus: 4 %}
+{% assign copy = copy | slice: 0, copysize | append: contd | append: '</p>' -%}
 
 <main role="main">
 
-  <article class="home page">
+  <article class="teaser post">
 
-  <div class="hr shim"></div>
+    <header>
+      <h1><a href="{{ p.url | absolute_url }}">{{ titlef }}</a></h1>
+    </header>
 
-  {% assign scope = 2629743 -%}
-  {% assign today = site.posts.first.date | date: '%s' -%}
-  {%- for p in site.posts %}
-    {% assign current = p.date | date: '%s' -%}
-    {% assign range = today | times: 1 |  minus: current -%}
-    {% if scope > range -%}
-      {% assign txt = p.dek | default: p.excerpt %}
-      {% include _list-section.html title=p.title text=txt url=p.url layout='home' %}
-    {% else -%}
-      {%- break %}
-    {% endif -%}
-  {%- endfor %}
-   
+    {% if p.media %}{% include _figure.html media=p.media %}{% endif %}
+
+    {{ copy }}
+
   </article>
+
+  <aside>
+    <div class="hr shim"></div>
+    {% for p in site.posts limit: 7 offset: 1 %}
+      {% assign txt = p.description | default: p.excerpt %}
+      {% include _section.html title=p.title text=txt url=p.url is_home=true %}
+    {% endfor %}
+  </aside>
+
+  <aside>
+    <div class="hr shim"></div>
+    <ul class="datelist">
+      {% include _datelist.html year=2022 %}
+    </ul>
+  </aside>
 
 </main>
 

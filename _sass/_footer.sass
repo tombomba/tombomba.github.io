@@ -1,24 +1,32 @@
 footer
-  margin-top: var(--shim-2x)
-  max-width: var(--page-width)
-  margin-bottom: var(--shim)
   ul
-    margin: 0
-    &:first-of-type
-      margin-top: var(--shim-2x)
+    max-width: var(--page-width)
+    margin: var(--shim-p) auto
     display: flex
-    flex-flow: row wrap
+    flex-flow: column
+    align-items: center
+    justify-content: center
     list-style-type: none
     li
-      &:not(:last-of-type)
-        margin-right: 0.8em
-  div.copydate
-    margin-top: var(--shim)
-    p
       font-size: var(--font-size-sm)
       color: $mix-color
-      a:link, a:visited
-        color: $mix-color
-  div.hr
-    max-width: var(--shim-4x)
-    margin-top: var(--shim-2x)
+      &.copydate
+        order: 99
+        font-style: italic
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30rem)
+
+  footer
+    ul
+      flex-flow: row wrap
+      li
+        line-height: 1
+        &.copydate
+          order: -1
+        &:not(:last-of-type)::after
+          content: '-'
+          padding: 0 var(--nudge)
+          font-weight: normal
+          color: $mix-color

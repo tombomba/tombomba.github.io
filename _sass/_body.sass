@@ -15,11 +15,9 @@ body
 
   padding: 0 1em
 
-header[role="banner"],
-main[role="main"],
-footer
-  max-width: var(--page-width)
-  margin: 0 auto
+main[role="main"]
+  margin-top: calc(var(--shim-2x) - var(--nudge))
+  margin-bottom: var(--shim-p)
 
 a
   text-decoration: underline
@@ -53,12 +51,10 @@ time
   border-top: 1px solid $border-dark
   border-bottom: 2px solid $border-light
   background-color: $body-color
-  &.buffer
-    max-width: var(--shim-4x)
-    margin-top: var(--shim-2x)
   &.shim
-    max-width: var(--shim-4x)
-    margin-top: var(--shim)
+    margin-top: var(--shim-p)
+  &.shim-2x
+    margin-top: var(--shim-2x)
 
 .daystamp
   white-space: nowrap

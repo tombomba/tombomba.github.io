@@ -1,13 +1,42 @@
 ---
 layout: default
 ---
+{% assign copy = content | strip | normalize_whitespace %}
+{% include _kram_image.html %}
+{% include _widont.html title=page.title %}
 {% include banner.html %}
 
 <main role="main">
 
-  <article class="{{ page.layout }} post">
-    {% include detail-text.html page=page content=content %}
+  <article class="text post">
+    
+    <header><h1>{{ titlef }}</h1></header>
+
+    {% if page.media %}
+      {% include _figure.html media=page.media %}
+    {% endif %}
+
+    {{ copy }}
+
+    {% include _pubdate.html date=page.date %}
+
   </article>
+
+  {% if page.next or page.previous %}
+  <aside>
+    <div class="hr shim"></div>
+    <div class="wrap">
+      {% if page.next %}
+        {% assign ntxt = page.next.description | default: page.next.excerpt %}
+        {% include _section.html title=page.next.title text=ntxt url=page.next.url htag='h2' %}
+      {% endif %}
+      {% if page.previous %}
+        {% assign ptxt = page.previous.description | default: page.previous.excerpt %}
+        {% include _section.html title=page.previous.title text=ptxt url=page.previous.url htag='h2' %}
+      {% endif %}
+    </div>
+  </aside>
+  {% endif %}
 
 </main>
 

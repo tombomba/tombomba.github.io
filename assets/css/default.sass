@@ -7,83 +7,65 @@
 
 //-----------------------------------------------------------------------------
 
-article
-  
-  &.text
-    header
-      margin-bottom: calc(var(--shim-2x) - var(--nudge))
-      h1
-        font-size: var(--hed-size-md)
-        line-height: var(--hed-lh)
+article.teaser,
+article.text
+  header
+    margin-bottom: var(--shim)
+    h1
+      font-size: var(--hed-size-md)
+      line-height: var(--hed-lh)
+      font-style: italic
 
-  &.diary
-    header
-      margin-top: var(--shim-2x)
-      h1
-        font-size: var(--hed-size-md)
-        line-height: var(--hed-lh)
-    figure
-      margin-top: var(--shim)
-    div.hr.shim
-      margin-top: var(--shim-2x)
-    & > img
-      &.top,
-      &.top.tilt.yank,
-      &.top.yank,
-      &.pull.tilt
-        margin-top: calc(var(--shim) + var(--nudge))
-      &.left.tilt,
-      &.right.tilt
-        transform: rotate(0deg)
+article.page
+  margin-bottom: var(--shim-2x)
+  header
+    h1
+      font-size: var(--hed-size)
+      line-height: var(--hed-lh)
+      font-style: italic
 
-  &.micro
-    margin-top: var(--shim-2x)
-    header
-      h1, p
-        display: inline
-        margin: 0
-      h1
-        font-size: 1em
-        line-height: var(--lh)
-        &::after
-          content: '\00A0\2014\0020'
-          font-weight: 400
-          color: $mix-color
-
-  &.inline
-    margin-top: var(--shim-3x)
-    header
-      h1
-        font-size: var(--hed-size-md)
-        line-height: var(--hed-lh)
-    h2, h3, h4, h5, h6, p
-      margin-top: var(--shim-p)
-    ul, ol
-      margin: var(--shim-p) 0 0 var(--shim-p)
-  
-  &.page
-    header
-      margin-top: var(--shim-2x)
-      h1
-        font-size: var(--hed-size)
-        line-height: var(--hed-lh)
-    section
-      margin-top: var(--shim)
-      &.home:first-of-type
-        margin-top: var(--shim-2x)
-      h1, h2, h3, h4
-        margin-top: 0
-        font-size: 1em
-      p
-        margin: 0
-    div.hr.shim
-      margin-top: var(--shim-2x)
-
-  &.error
-    margin: var(--shim) 0
-    header
-      h1
-        font-size: var(--hed-size)
-        line-height: var(--hed-lh)
+article.directory
+  margin-bottom: var(--shim-2x)
+  header
+    h1
+      font-size: var(--hed-size)
+      line-height: var(--hed-lh)
+      font-style: italic
+  section
+    margin-top: var(--shim)
+    h1, h2, h3, h4, h5, h6
+      margin: 0
+      font-size: 1em
+      line-height: var(--font-lh)
     p
+      margin: 0
+
+aside
+  section
+    max-width: var(--page-width)
+    margin: var(--shim) auto 0 auto
+    &:first-of-type
       margin-top: var(--shim-p)
+    h1, h2, h3, h4, h5, h6
+      margin: 0
+      font-size: 1em
+      line-height: var(--font-lh)
+    p
+      margin: 0
+  ul.datelist
+    max-width: var(--page-width)
+    margin: var(--shim-p) auto 0 auto
+    display: flex
+    flex-flow: row wrap
+    align-items: baseline
+    justify-content: center
+    list-style-type: none
+    li
+      line-height: var(--hed-lh)
+      &.year
+        font-weight: bold
+      &:not(:last-of-type)::after
+        content: '-'
+        padding: 0 var(--nudge)
+        font-weight: normal
+        color: $mix-color

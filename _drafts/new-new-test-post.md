@@ -1,11 +1,11 @@
 ---
-title: "Images and metaphors"
+title: "'Titane': Images and metaphors and little else"
 published: false
 ---
 
-![Titane]({{ 'titane-2021-poster.jpg' | prepend: site.img }}){: width="222" height="302" .top .flat .pull .left }
+![Titane]({{ 'titane-2021-poster.jpg' | prepend: site.img }}){: width="222" height="302" .top .flat .left }
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id neque quis est elementum sagittis. Praesent sit amet ligula sodales, viverra diam vel, fringilla nisi. Mauris euismod feugiat risus id convallis. Nunc ac commodo nisl. Integer id ante non nisi efficitur placerat. Fusce ligula turpis, venenatis non sapien eget, vulputate suscipit ante. In tempor nulla purus, vestibulum tristique ante hendrerit eu. Nullam ornare mi sit amet varius maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed egestas elit, at auctor nisl. In sollicitudin vehicula arcu in imperdiet. Vivamus non turpis ipsum. Integer ut urna imperdiet, scelerisque diam vel, viverra velit. In hac habitasse platea dictumst.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id neque quis est elementum sagittis. Praesent sit amet ligula sodales, viverra diam vel, fringilla nisi. Mauris euismod feugiat risus id convallis. Nunc ac commodo nisl. Integer id ante non nisi efficitur placerat. Fusce ligula turpis, venenatis non sapien eget, vulputate suscipit ante. In tempor nulla purus, vestibulum tristique ante hendrerit eu. Nullam ornare mi sit amet varius maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed egestas elit, at auctor nisl. In sollicitudin vehicula arcu in imperdiet. Vivamus non turpis ipsum. Integer ut urna imperdiet, scelerisque diam vel, viverra velit. In hac habitasse platea dictumst.<!--more-->
 
 Nullam vel mi turpis. Fusce et faucibus lectus. Maecenas vulputate sit amet ipsum non vehicula. Duis commodo fermentum felis a lobortis. Nullam dictum, velit nec bibendum porttitor, tellus turpis placerat odio, vel condimentum diam purus eu massa. Sed laoreet tincidunt arcu vitae porttitor. Vivamus interdum eu dolor porttitor tempus.
 

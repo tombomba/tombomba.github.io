@@ -11,16 +11,14 @@ header[role="banner"]
       font-size: var(--hed-size)
       line-height: 1
       color: $logo-color
-      text-shadow: -2px 2px 2px $shock-color, 2px -2px 2px $shock-color
       text-transform: uppercase
-      &:hover
-        text-shadow: -6px 6px 6px $shock-color, 6px -6px 6px $shock-color
-      &::after
-        content: '!!!'
-        color: $logo-color
       a:link, a:visited
         color: $logo-color
-        text-decoration: none
+        text-shadow: -6px 6px 6px $shock-color, 6px -6px 6px $shock-color
+        text-decoration: none  
+        &::after
+          content: '!!!'
+          color: $logo-color
     div.sparkles
       margin-top: 3px
       &::after 

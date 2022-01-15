@@ -7,12 +7,11 @@ header[role="banner"]
     justify-content: flex-start
     img
       display: block
-      margin-right: 0.8em
+      margin-right: var(--nudge)
       width: 32px
       height: 32px
     h1
       flex: 1
-      margin-top: 3px
       font-family: 'Slackey', cursive
       font-size: var(--hed-size)
       font-weight: normal
@@ -22,23 +21,15 @@ header[role="banner"]
       a:link, a:visited
         color: $logo-color
         text-decoration: none  
-    div.sparkles
-      margin-top: 3px
-      &::after 
-        font-size: 1em
-        line-height: 1
-        font-weight: normal
-        color: $shadow-color
-    div.sparkles.right::after
-      content: '✧･ﾟ: *✧･ﾟ:*'
-    div.sparkles.left::after 
-      content: '*:･ﾟ✧*:･ﾟ✧'
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30rem)
-  
+
   header[role="banner"]
-    div.logo
-      h1
-        margin-left: -3px
+    div.sparkles::after 
+      content: '✧･ﾟ: *✧･ﾟ:*'
+      font-size: 1em
+      line-height: 1
+      font-weight: normal
+      color: $shadow-color

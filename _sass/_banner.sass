@@ -8,10 +8,11 @@ header[role="banner"]
     h1
       margin-top: 3px
       font-family: 'Slackey', cursive
-      font-size: var(--hed-size)
+      font-size: var(--hed-size-md)
+      font-weight: normal
       line-height: 1
       color: $logo-color
-      text-shadow: -3px 3px $shadow-color
+      //text-shadow: -3px 3px $shadow-color
       text-transform: uppercase
       a:link, a:visited
         color: $logo-color
@@ -19,11 +20,14 @@ header[role="banner"]
     div.sparkles
       margin-top: 3px
       &::after 
-        content: '*:･ﾟ✧*:･ﾟ✧'
         font-size: 1em
         line-height: 1
         font-weight: normal
         color: $shadow-color
+    div.sparkles.right::after
+      content: '✧･ﾟ: *✧･ﾟ:*'
+    div.sparkles.left::after 
+      content: '*:･ﾟ✧*:･ﾟ✧'
 
 //-----------------------------------------------------------------------------
 

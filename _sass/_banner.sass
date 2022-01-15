@@ -4,15 +4,20 @@ header[role="banner"]
     margin: 1em auto
     display: flex
     align-items: center
-    justify-content: space-between
+    justify-content: flex-start
+    img
+      display: block
+      margin-right: 0.8em
+      width: 32px
+      height: 32px
     h1
+      flex: 1
       margin-top: 3px
       font-family: 'Slackey', cursive
-      font-size: var(--hed-size-md)
+      font-size: var(--hed-size)
       font-weight: normal
       line-height: 1
       color: $logo-color
-      //text-shadow: -3px 3px $shadow-color
       text-transform: uppercase
       a:link, a:visited
         color: $logo-color

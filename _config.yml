@@ -38,17 +38,17 @@ collections:
 defaults:
   -
     scope:
-      path: ""      # empty string for all files
-      type: posts   # limit to posts
+      path: "_posts"
+      type: posts
     values:
       layout: text
       is_post: true
   -
     scope:
-      path: "diary/_posts"
+      path: "filler/_posts"
       type: posts
     values:
-      layout: diary
+      layout: text
       is_post: true
   -
     scope:

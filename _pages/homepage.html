@@ -15,18 +15,24 @@ permalink: /index.html
 
 <main role="main">
 
-  <article class="teaser post">
+  <article class="teaser">
 
+    <!-- headline -->
     <header>
       <h1><a href="{{ p.url | absolute_url }}">{{ titlef }}</a></h1>
     </header>
 
-    {% if p.media %}{% include _figure.html media=p.media %}{% endif %}
+    {% if p.media %}
+    <!-- media -->
+    {% include _figure.html media=p.media %}
+    {% endif %}
 
+    <!-- copy: {{ copy | number_of_words }} words -->
     {{ copy }}
 
   </article>
 
+  <!-- recents -->
   <aside>
     <div class="hr shim"></div>
     {% for p in site.posts limit: 7 offset: 1 %}
@@ -35,6 +41,7 @@ permalink: /index.html
     {% endfor %}
   </aside>
 
+  <!-- archives -->
   <aside>
     <div class="hr shim"></div>
     <ul class="datelist">

@@ -8,21 +8,26 @@ layout: default
 
 <main role="main">
 
-  <article class="text post">
+  <article class="text">
     
+    <!-- headline -->
     <header><h1>{{ titlef }}</h1></header>
 
     {% if page.media %}
-      {% include _figure.html media=page.media %}
+    <!-- media -->
+    {% include _figure.html media=page.media %}
     {% endif %}
 
+    <!-- copy:: {{ copy | number_of_words }} words -->
     {{ copy }}
 
-    <p class="daystamp"><time datetime="{{ include.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ include.date | date_to_string }}</time></p>
+    <!-- pubdate -->
+    <p class="daystamp"><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_string }}</time></p>
 
   </article>
 
   {% if page.next or page.previous %}
+  <!-- next / prev -->
   <aside>
     <div class="hr shim"></div>
     {% if page.next %}

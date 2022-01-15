@@ -9,6 +9,6 @@ tags: quote
 
 <!--more -->
 
-fontAragon was a French poet who hung around with André Breton and who was both a surrealist and a communist. Delluc was a writer, critic, and filmmaker who wrote one of the first books on Charlie Chaplin. I wasn't familiar with either before I stumbled across this quote on socials. I don't know the source of it. I think it perfectly describes the movies, or the love of the movies, or what drives someone to the them. "Until the people in the audience make their seats rattle."
+Aragon was a French poet who hung around with André Breton and who was both a surrealist and a communist. Delluc was a writer, critic, and filmmaker who wrote one of the first books on Charlie Chaplin. I wasn't familiar with either before I stumbled across this quote on socials. I don't know the source of it. I think it perfectly describes the movies, or the love of the movies, or what drives someone to the them. "Until the people in the audience make their seats rattle."
 
 I put this page up and took it down. But I like the sound of Aragon, his rhythm, his use of language. I wanted to remember his words. So up again it goes.

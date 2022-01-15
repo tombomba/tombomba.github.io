@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: "About"
 excerpt: "About the author"
 push: text
@@ -16,5 +16,18 @@ _{{ site.title }}_ is intentionally basic, the design a sorta mental note to mys
 Everything here was built on an old Macintosh using VS Code and Pixelmator, while listening to KCRW Los Angeles.
 {% endcapture -%}
 
-{{ bio | strip | smartify | markdownify | normalize_whitespace }}
+{% include banner.html %}
 
+<main role="main">
+
+  <article class="about">
+
+    <header><h1>{{ page.title }}</h1></header>
+
+    {{ bio | strip | smartify | markdownify | normalize_whitespace }}
+
+  </article>
+
+</main>
+
+{% include footer.html %}

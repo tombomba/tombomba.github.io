@@ -4,24 +4,23 @@ header[role="banner"]
     margin: 1em auto
     display: flex
     align-items: center
+    justify-content: center
     img
       display: block
       margin-right: var(--nudge)
       width: var(--shim-n)
       height: var(--shim-n)
     h1
-      flex: 1
-      margin-top: 2px
+      margin-top: 3px
       font-family: 'Rubik Beastly', $black
       font-size: var(--hed-size)
       font-weight: normal
       line-height: 1
-      //letter-spacing: -1px
       color: $logo-color
       text-transform: uppercase
       a:link, a:visited
         color: $logo-color
-        text-decoration: none  
+        text-decoration: none
 
 //-----------------------------------------------------------------------------
 
@@ -31,12 +30,13 @@ header[role="banner"]
     div.logo
       margin: 0 auto
       height: var(--shim-2x)
+      justify-content: space-between
       h1
+        flex: 1
         margin-top: 3px
-      div.sparkles
-        &::after 
-          content: '✧･ﾟ: *✧･ﾟ:*'
-          font-size: 1em
-          line-height: 1
-          font-weight: normal
-          color: $shadow-color
+      div.sparkles::after 
+        content: '✧･ﾟ: *✧･ﾟ:*'
+        font-size: 1em
+        line-height: 1
+        font-weight: normal
+        color: $shadow-color

@@ -8,13 +8,13 @@ header[role="banner"]
     img
       display: block
       margin-right: var(--nudge)
-      width: 32px
-      height: 32px
+      width: var(--shim-n)
+      height: var(--shim-n)
     h1
       flex: 1
-      margin-top: 2px 
+      margin-top: 2px
       font-family: 'Slackey', cursive
-      font-size: var(--hed-size-md)
+      font-size: var(--hed-size)
       font-weight: normal
       line-height: 1
       color: $logo-color
@@ -28,9 +28,10 @@ header[role="banner"]
 @media screen and (min-width: 30rem)
 
   header[role="banner"]
-    div.sparkles::after 
-      content: '✧･ﾟ: *✧･ﾟ:*'
-      font-size: 1em
-      line-height: 1
-      font-weight: normal
-      color: $shadow-color
+    div.logo
+      div.sparkles::after 
+        content: '✧･ﾟ: *✧･ﾟ:*'
+        font-size: 1em
+        line-height: 1
+        font-weight: normal
+        color: $shadow-color

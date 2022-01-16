@@ -26,7 +26,17 @@ layout: default
 
   </article>
 
-  {% if page.next or page.previous %}
+  {% if page.id == site.posts.first.id %}
+  <!-- recent 3 -->
+  <aside>
+    <div class="hr shim"></div>
+    {% for x in site.posts limit: 3 offset: 1 %}
+      {% assign xtxt = x.description | default: x.excerpt %}
+      {% include _section.html title=x.title text=xtxt url=x.url htag='h2' %}
+    {% endfor %}
+  </aside>
+
+  {% elsif page.next or page.previous %}
   <!-- next / prev -->
   <aside>
     <div class="hr shim"></div>
@@ -39,6 +49,7 @@ layout: default
       {% include _section.html title=page.previous.title text=ptxt url=page.previous.url htag='h2' %}
     {% endif %}
   </aside>
+
   {% endif %}
 
 </main>

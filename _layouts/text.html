@@ -52,6 +52,14 @@ layout: default
 
   {% endif %}
 
+  {% assign page_year = page.date | date: '%Y' | times: 1 %}
+  <aside>
+    <div class="hr shim"></div>
+    <ul class="datelist">
+      {% include _datelist.html year=page_year %}
+    </ul>
+  </aside>
+
 </main>
 
 {% include footer.html %}

@@ -5,10 +5,10 @@
 article > img
   display: block
   max-width: 100%
-  height: auto
   margin-top: var(--shim)
-  margin-bottom: calc(var(--shim) + var(--nudge))
+  margin-bottom: var(--shim)
   border-radius: 4px
+  background-color: $bg-color
   &.top
     margin-top: var(--nudge)
   &.center
@@ -17,22 +17,9 @@ article > img
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 25rem)
-
-  article > img
-
-    &.left,
-    &.right,
-      margin-left: 0
-      margin-right: 0
-
-//-----------------------------------------------------------------------------
-
 @media screen and (min-width: 37rem)
 
   article > img
-
-    background-color: $bg-color
 
     &.top 
       margin-top: 0

@@ -45,6 +45,13 @@ defaults:
       is_post: true
   -
     scope:
+      path: "_drafts"
+      type: posts
+    values:
+      layout: text
+      is_post: true
+  -
+    scope:
       path: "filler/_posts"
       type: posts
     values:

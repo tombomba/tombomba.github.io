@@ -32,13 +32,23 @@ permalink: /index.html
 
   </article>
 
-  <!-- recents -->
+  <!-- 30.44 days -->
   <aside>
     <div class="hr shim"></div>
-    {% for p in site.posts limit: 7 offset: 1 %}
-      {% assign txt = p.description | default: p.excerpt %}
-      {% include _section.html title=p.title text=txt url=p.url is_home=true %}
-    {% endfor %}
+    
+    {% assign scope = 2629743 -%}
+    {% assign today = site.posts.first.date | date: '%s' -%}
+    {% for p in site.posts -%}
+      {% assign current = p.date | date: '%s' -%}
+      {% assign range = today | times: 1 |  minus: current -%}
+      {% if scope > range %}
+        {% assign txt = p.description | default: p.excerpt %}
+        {% include _section.html title=p.title text=txt url=p.url is_home=true %}
+      {% else -%}
+        {% break -%}
+      {% endif -%}
+    {% endfor -%}
+
   </aside>
 
   <!-- archives -->

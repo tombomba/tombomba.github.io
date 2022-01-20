@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Who knew Art Carney had range?"
 slug: "the-late-show-1977-who-knew-art-carney-had-range"
 excerpt: "\"The Late Show\" has a TV cast and a TV title and sometimes a movie-of-the-week feel, but it's worth watching if you're a fan of the stars or the period."

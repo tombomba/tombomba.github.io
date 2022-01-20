@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Prom Night (1980)"
 slug: prom-night-1980-borrows-from-better-movies
 tags: horror

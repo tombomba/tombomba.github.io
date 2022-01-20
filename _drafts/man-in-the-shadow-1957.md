@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Man in the Shadow (Universal, 1957)"
 media: 
   image: man-in-the-shadow-1957-poster.jpg

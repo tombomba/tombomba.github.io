@@ -41,14 +41,14 @@ defaults:
       path: "_posts"
       type: posts
     values:
-      layout: text
+      layout: post
       is_post: true
   -
     scope:
       path: "filler/_posts"
       type: posts
     values:
-      layout: text
+      layout: post
       is_post: true
   -
     scope:

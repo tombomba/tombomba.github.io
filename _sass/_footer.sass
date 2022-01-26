@@ -1,15 +1,14 @@
 footer
-  margin-top: var(--shim-p)
-  ul
-    max-width: var(--page-width)
-    margin: var(--shim) auto
+  max-width: var(--page-width)
+  margin: var(--shim-p) auto var(--shim) auto
+  ul.nav
+    margin: var(--shim-p) 0 0 0
+    list-style-type: none
     display: flex
     flex-flow: column
     align-items: center
     justify-content: center
-    list-style-type: none
     li
-      font-size: var(--font-size-sm)
       color: $mix-color
       &.copydate
         order: 99
@@ -21,17 +20,19 @@ footer
 @media screen and (min-width: 30rem)
 
   footer
-    ul
-      margin: 0 auto
-      height: var(--shim-2x)
+    ul.nav
+      margin-top: 1em
       flex-flow: row wrap
       li
-        line-height: 1
+        font-size: var(--font-size-sm)
+        line-height: var(--hed-lh)
+        color: $mix-color
         &.copydate
           order: -1
           margin-top: 0
         &:not(:last-of-type)::after
           content: '-'
           padding: 0 var(--nudge)
-          font-weight: normal
-          color: $mix-color
+    p
+      font-size: var(--font-size-sm)
+      line-height: var(--hed-lh)

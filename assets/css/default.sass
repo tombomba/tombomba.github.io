@@ -8,7 +8,7 @@
 //-----------------------------------------------------------------------------
 
 article.post
-  margin-top: calc(var(--shim-2x) - var(--nudge))
+  margin-top: var(--shim-p)
   header
     margin-bottom: calc(var(--nudge) * -1)
     h1
@@ -21,12 +21,12 @@ article.post
 article.directory,
 article.about,
 article.error
-  margin-top: var(--shim-2x)
-  margin-bottom: var(--shim-2x)
+  margin-top: var(--shim-p)
   header
     h1
       font-size: var(--hed-size)
       line-height: var(--hed-lh)
+      font-style: italic
   section
     margin-top: var(--shim)
     h1, h2, h3, h4, h5, h6
@@ -36,10 +36,11 @@ article.error
     p
       margin: 0
 
-aside
+main > aside
+  max-width: var(--page-width)
+  margin: var(--shim) auto 0 auto
   section
-    max-width: var(--page-width)
-    margin: var(--shim) auto 0 auto
+    margin-top: var(--shim)
     &:first-of-type
       margin-top: var(--shim-p)
     h1, h2, h3, h4, h5, h6
@@ -48,20 +49,3 @@ aside
       line-height: var(--font-lh)
     p
       margin: 0
-  ul.datelist
-    max-width: var(--page-width)
-    margin: var(--shim-p) auto 0 auto
-    display: flex
-    flex-flow: row wrap
-    align-items: baseline
-    justify-content: center
-    list-style-type: none
-    li
-      line-height: var(--hed-lh)
-      &.year
-        font-weight: bold
-      &:not(:last-of-type)::after
-        content: '-'
-        padding: 0 var(--nudge)
-        font-weight: normal
-        color: $mix-color

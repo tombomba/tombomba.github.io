@@ -1,7 +1,8 @@
 <header role="banner">
-  <div class="logo">
-    <h1><a href="{{ site.url }}">{{ site.name | default: site.title }}!</a></h1>
-    <div class="sparkles right"></div>
-  </div>
+  {% if page.is_foo %}
+  <div class="text"><h1><a href="{{ site.url }}">{{ site.title }}</a></h1></div>
+  {% else %}
+  <div class="icon"><a href="{{ site.url }}"><img src="{{ 'sparkles.png' | prepend: site.img }}" alt="{{ site.title }}"></a></div>
+  {% endif -%}
   <div class="hr"></div>
 </header>

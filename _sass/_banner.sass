@@ -1,37 +1,43 @@
 header[role="banner"]
-  div.logo
-    max-width: var(--page-width)
-    margin: 1em auto
-    display: flex
-    align-items: center
-    justify-content: center
+  max-width: var(--page-width)
+  margin: var(--shim) auto
+  height: var(--shim-p)
+  display: flex
+  flex-flow: row wrap
+  align-items: center
+  justify-content: space-between
+  div.text
     h1
-      margin-top: 3px
       font-family: 'Slackey', cursive
-      font-size: var(--hed-size-md)
-      font-weight: 900
+      font-size: var(--hed-size)
       line-height: 1
-      letter-spacing: -1px
-      color: $logo-color
-      text-transform: uppercase
+      font-weight: normal
+      text-shadow: -2px 2px $shadow-color
       a:link, a:visited
         color: $logo-color
         text-decoration: none
+  div.icon
+    img
+      width: var(--shim-p)
+      height: var(--shim-p)
+  div.hr
+    margin-left: 1em
+    flex: 1
+    width: 100%
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 20rem)
+
+  header[role="banner"]
+    div.text
+      h1
+        font-size: var(--hed-size-md)
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30rem)
 
   header[role="banner"]
-    div.logo
-      margin: 0 auto
-      height: var(--shim-2x)
-      justify-content: space-between
-      h1
-        flex: 1
-      div.sparkles::after 
-        content: '✧･ﾟ: *✧･ﾟ:*'
-        font-size: 1em
-        line-height: 1
-        font-weight: normal
-        color: $shadow-color
+    div.icon
+      margin-left: -2px

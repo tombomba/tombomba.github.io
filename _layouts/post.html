@@ -26,40 +26,6 @@ layout: default
 
   </article>
 
-  {% if page.id == site.posts.first.id %}
-  <!-- recent 3 -->
-  <aside>
-    <div class="hr shim"></div>
-    {% for x in site.posts limit: 3 offset: 1 %}
-      {% assign xtxt = x.description | default: x.excerpt %}
-      {% include _section.html title=x.title text=xtxt url=x.url htag='h2' %}
-    {% endfor %}
-  </aside>
-
-  {% elsif page.next or page.previous %}
-  <!-- next / prev -->
-  <aside>
-    <div class="hr shim"></div>
-    {% if page.next %}
-      {% assign ntxt = page.next.description | default: page.next.excerpt %}
-      {% include _section.html title=page.next.title text=ntxt url=page.next.url htag='h2' %}
-    {% endif %}
-    {% if page.previous %}
-      {% assign ptxt = page.previous.description | default: page.previous.excerpt %}
-      {% include _section.html title=page.previous.title text=ptxt url=page.previous.url htag='h2' %}
-    {% endif %}
-  </aside>
-
-  {% endif %}
-
-  {% assign page_year = page.date | date: '%Y' | times: 1 %}
-  <aside>
-    <div class="hr shim"></div>
-    <ul class="datelist">
-      {% include _datelist.html year=page_year %}
-    </ul>
-  </aside>
-
 </main>
 
 {% include footer.html %}

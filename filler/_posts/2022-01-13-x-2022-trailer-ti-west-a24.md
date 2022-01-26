@@ -1,6 +1,7 @@
 ---
 title: >
   Ti West's upcoming 'X'
+slug: ti-wests-upcoming-x
 description: > 
   Ti West upends his style with self conscious grindhouse, and maybe working like he wants to play to a different audience.
 media: 

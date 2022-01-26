@@ -28,7 +28,7 @@ layout: default
       {% endif -%}
       {% if is_year_index and current_year == raw_year %}
         {% assign txt = x.description | default: x.excerpt %}
-        {% include _section.html title=x.title text=txt date=x.date url=x.url htag='h2' %}
+        {% include _section.html title=x.title text=txt url=x.url htag='h2' %}
       {% endif -%}
     {% endfor -%}
 

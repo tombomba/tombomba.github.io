@@ -8,11 +8,13 @@
 //-----------------------------------------------------------------------------
 
 article.post
-  margin-top: var(--shim-2x)
+  margin-top: calc(var(--shim-2x) - var(--nudge))
   header
+    margin-bottom: calc(var(--nudge) * -1)
     h1
-      font-size: var(--hed-size-md)
+      font-size: var(--hed-size)
       line-height: var(--hed-lh)
+      font-style: italic
   figure
     margin-top: var(--shim)
 

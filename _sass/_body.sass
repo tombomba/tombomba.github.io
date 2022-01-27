@@ -15,6 +15,10 @@ body
 
   padding: 0 1em
 
+main[role="main"]
+  max-width: var(--page-width)
+  margin: 0 auto
+
 a
   text-decoration: underline
   text-decoration-skip-ink: auto
@@ -52,6 +56,8 @@ time
     margin-top: var(--shim-p)
   &.shim-2x
     margin-top: var(--shim-2x)
+  &.short
+    max-width: var(--shim-4x)
 
 .daystamp
   white-space: nowrap

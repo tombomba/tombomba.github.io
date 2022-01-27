@@ -1,21 +1,14 @@
 ---
 layout: default
 ---
-{% assign copy = content | strip | normalize_whitespace %}
-{% include _kram_image.html %}
-{% include _widont.html title=page.title %}
 {% include banner.html %}
 
 <main role="main">
 
-  <article class="post"><!-- {{ copy | number_of_words }} -->
+  <article class="post"><!-- {{ content | number_of_words }} -->
 
-    <header>
-      <h1>{{ titlef }}</h1>
-    </header>
-
-    {{ copy }}
-
+    {% include post-detail.html page=page content=content %}
+  
   </article>
 
 </main>

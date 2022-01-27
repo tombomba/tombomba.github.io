@@ -6,7 +6,7 @@ header[role="banner"]
     align-items: center
     h1
       font-family: 'Slackey', cursive
-      font-size: var(--hed-size-lg)
+      font-size: var(--hed-size)
       line-height: 1
       a:link, a:visited
         color: $logo-color
@@ -15,3 +15,21 @@ header[role="banner"]
   div.hr
     max-width: var(--shim-4x)
     margin-top: var(--shim-2x)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 20rem)
+
+  header[role="banner"]
+    div.text
+      h1
+        font-size: var(--hed-size-md)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30rem)
+
+  header[role="banner"]
+    div.text
+      h1
+        font-size: var(--hed-size-lg)

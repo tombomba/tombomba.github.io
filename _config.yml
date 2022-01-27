@@ -44,13 +44,6 @@ defaults:
       is_post: true
   -
     scope:
-      path: "filler/_posts"
-      type: posts
-    values:
-      layout: post
-      is_post: true
-  -
-    scope:
       path: "_pages"
       type: "pages"
     values:

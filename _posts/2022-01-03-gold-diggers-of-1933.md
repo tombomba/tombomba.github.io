@@ -7,6 +7,7 @@ media:
   image: gold-diggers-of-1933.jpg
   width: 800
   height: 600
+  caption: "Photo: Gold Diggers of 1933 (Warners, 1933)"
   alt: "Check out those gams! Ha-cha-cha!"
 tags: musical, romance
 ---

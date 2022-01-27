@@ -6,12 +6,19 @@ layout: default
 {% include _widont.html title=page.title %}
 {% include banner.html %}
 
+{% if page.media %}
+  {% assign hedsize = 'sm' %}
+{% else %}
+  {% assign hedsize = 'md' %}
+{% endif -%}
+
 <main role="main">
 
   <article class="post"><!-- {{ copy | number_of_words }} -->
 
-    
-    <header><h1>{{ titlef }}</h1></header>
+    <header>
+      <h1 class="{{ hedsize | default: 'md' }}">{{ titlef }}</h1>
+    </header>
 
     {% if page.media %}
     {% include _figure.html media=page.media %}
@@ -19,7 +26,7 @@ layout: default
 
     {{ copy }}
 
-    <p class="daystamp"><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_string }}</time></p>
+     <p class="daystamp"><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_string }}</time></p>
 
   </article>
 

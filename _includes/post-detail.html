@@ -7,6 +7,10 @@
   <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
 </header>
 
-{% if p.media %}{% include _figure.html p=page.media %}{% endif %}
+{% if p.media %}{% include _figure.html media=p.media %}{% endif %}
 
 {{ copy }}
+
+{% assign p = '' %}
+{% assign copy = '' %}
+{% assign titlef = '' %}

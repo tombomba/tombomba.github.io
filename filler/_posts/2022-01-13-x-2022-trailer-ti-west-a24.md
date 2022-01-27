@@ -1,4 +1,5 @@
 ---
+layout: micro
 title: >
   Ti West's upcoming 'X'
 slug: ti-wests-upcoming-x

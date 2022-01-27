@@ -3,12 +3,15 @@
   <div class="hr"></div>
 
   <ul class="nav">
-    {% if page.is_page %}<li class="copydate">{{ site.title }} &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</li>{% else %}<li><a href="{{ site.url }}">{{ site.title }}</a></li>{% endif %}
-    {% unless page.is_archive %}<li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>{% endunless %}
     {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}
+    <li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li>
     <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
   </ul>
 
-  <p class="copydate"></p>
+  <div class="copydate">
+    {% if page.is_post %}<p>This page published {{ page.date | date_to_long_string }}</p>{% endif %}
+    {% if page.is_page %}<p>{{ site.title }} last updated {{ site.time | date_to_long_string }}</p>{% endif %}
+    <p>Copyright &copy; {{ site.author }}</p>
+  </div>
   
 </footer>

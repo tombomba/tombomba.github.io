@@ -3,8 +3,18 @@
 article
 
   max-width: var(--page-width)
-  margin: 0 auto
+  margin-top: var(--shim-2x)
+  margin-left: auto
+  margin-right: auto
   @extend .clearfix
+
+  header
+    h1
+      a:link, a:visited
+        color: $text-color
+        text-decoration: none
+      a:hover
+        text-decoration: underline
 
   h2, h3, h4, h5, h6
     margin-top: var(--shim)

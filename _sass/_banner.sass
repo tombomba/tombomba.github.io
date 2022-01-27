@@ -1,25 +1,14 @@
 header[role="banner"]
   max-width: var(--page-width)
-  margin: var(--shim) auto
-  height: var(--shim-p)
-  display: flex
-  flex-flow: row wrap
-  align-items: center
-  justify-content: space-between
-  div.icon
-    img
-      width: var(--shim)
-      height: var(--shim)
-      margin-bottom: 2px
+  margin: var(--shim-2x) auto 0 auto
+  h1
+    font-size: 1em
+    line-height: var(--hed-lh)
+    a:link, a:visited
+      color: $text-color
+      text-decoration: none
+    a:hover
+      text-decoration: underline
   div.hr
-    margin-left: 1em
-    flex: 1
-    width: 100%
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 30rem)
-
-  header[role="banner"]
-    div.icon
-      margin-left: -2px
+    max-width: var(--shim-4x)
+    margin-top: var(--shim-2x)

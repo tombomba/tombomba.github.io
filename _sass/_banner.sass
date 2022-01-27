@@ -6,33 +6,15 @@ header[role="banner"]
   flex-flow: row wrap
   align-items: center
   justify-content: space-between
-  div.text
-    h1
-      font-family: 'Slackey', cursive
-      font-size: var(--hed-size)
-      line-height: 1
-      font-weight: normal
-      text-shadow: -2px 2px $shadow-color
-      a:link, a:visited
-        color: $logo-color
-        text-decoration: none
   div.icon
     img
-      width: var(--shim-p)
-      height: var(--shim-p)
+      width: var(--shim)
+      height: var(--shim)
+      margin-bottom: 2px
   div.hr
     margin-left: 1em
     flex: 1
     width: 100%
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 20rem)
-
-  header[role="banner"]
-    div.text
-      h1
-        font-size: var(--hed-size-md)
 
 //-----------------------------------------------------------------------------
 

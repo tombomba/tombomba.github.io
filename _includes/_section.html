@@ -1,5 +1,5 @@
 {% assign htag = include.htag | default: 'h1' %}
 <section>
   <{{ htag}}><a href="{{ include.url | absolute_url }}">{{ include.title | strip | strip_html | smartify | normalize_whitespace }}</a></{{ htag }}>
-  <p>{{ include.text | strip | strip_html | smartify | truncatewords: 35 | normalize_whitespace }}{% if include.date %}&nbsp;<span class="daystamp">(<a href="{{ include.url | absolute_url }}">{{ include.date | date: '%d %b' }}</a>)</span>{% endif %}</p>
+  <p>{{ include.text | strip | strip_html | smartify | normalize_whitespace }}{% if include.date %}&nbsp;<span class="daystamp">(<a href="{{ include.url | absolute_url }}">{{ include.date | date: '%d %b' }}</a>)</span>{% endif %}</p>
 </section>

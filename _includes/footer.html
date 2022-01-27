@@ -3,7 +3,7 @@
   <div class="hr"></div>
 
   <ul class="nav">
-    {% if page.is_page %}<li class="copydate">{{ site.title }} &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</li>{% else %}<li><a href="{{ site.url }}">Home</a></li>{% endif %}
+    {% if page.is_page %}<li class="copydate">{{ site.title }} &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</li>{% else %}<li><a href="{{ site.url }}">{{ site.title }}</a></li>{% endif %}
     {% unless page.is_archive %}<li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>{% endunless %}
     {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}
     <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>

@@ -24,7 +24,7 @@ article
     margin-top: var(--shim)
   
   ul, ol
-    margin: var(--shim) 0 0 var(--shim)
+    margin: var(--shim) 0 0 1em
     li
       margin-top: 0
     &.plain
@@ -32,9 +32,21 @@ article
         margin-top: 0
   
   blockquote
-    padding-left: var(--shim)
-    border-left: thin solid $shadow-color
+    padding-left: 1em
+    border-left: thin solid $shock-color
   
   blockquote,
   li + p,
     margin-top: 0
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  article
+
+    ul, ol
+      margin-left: var(--shim)
+
+    blockquote
+      padding-left: var(--shim)

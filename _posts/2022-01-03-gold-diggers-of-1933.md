@@ -1,13 +1,13 @@
 ---
-layout: micro
-title: "Cheap and vulgar and ha-cha-cha"
+title: "'Gold Diggers' and the ha-cha-cha"
 slug: "gold-diggers-of-1933-ha-cha-cha"
 description: "\"Gold Diggers of 1933\" is a sorta dizzy low theater made fresh with the moneyed sense of Old Hollywood."
 media: 
   image: gold-diggers-of-1933.jpg
   width: 800
   height: 600
-  alt: "Photo: Gold Diggers of 1933 (Warners, 1933)"
+  caption: >
+    Photo: A scene from "Gold Diggers of 1933"
 tags: musical, romance
 ---
 

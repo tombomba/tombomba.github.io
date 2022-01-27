@@ -1,6 +1,7 @@
 ---
 title: >
   Louis Aragon: "I like films..."
+slug: louis-aragon-i-like-films
 description: >
   "I like films without stupidity, the ones in which people kill each other and make love. I like films in which the characters are good-looking..."
 tags: quote

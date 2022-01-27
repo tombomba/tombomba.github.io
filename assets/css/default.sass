@@ -12,11 +12,24 @@ article.post
   header
     margin-bottom: calc(var(--nudge) * -1)
     h1
-      font-size: var(--hed-size)
+      font-size: var(--hed-size-md)
       line-height: var(--hed-lh)
       font-style: italic
   figure
     margin-top: var(--shim)
+
+article.micro
+  margin-top: var(--shim-p)
+  header
+    h1, p
+      display: inline
+    h1
+      font-size: 1em
+      line-height: var(--font-lh)
+      &::after
+        content: '\00A0\2014\0020'
+        font-weight: normal
+        color: $mix-color
 
 article.directory,
 article.about,

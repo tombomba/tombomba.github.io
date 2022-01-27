@@ -3,48 +3,32 @@ layout: default
 is_home: true
 permalink: /index.html
 ---
-{% assign p = site.posts.first %}
-{% assign copy = site.posts.first.excerpt | strip | normalize_whitespace %}
-{% include _kram_image.html %}
-{% include _widont.html title=p.title %}
 {% include banner.html %}
-
-{% capture contd %}<span class="contd">&nbsp;<a href="{{ p.url | absolute_url }}" aria-label="Continued">[&hellip;]</a></span>{% endcapture -%}
-{% assign copysize = copy | size | minus: 4 %}
-{% assign copy = copy | slice: 0, copysize | append: contd | append: '</p>' -%}
 
 <main role="main">
 
-  <article class="post teaser">
+  {% assign scope = 2629743 -%}
+  {% assign today = site.posts.first.date | date: '%s' -%}
+  
+  {% for p in site.posts %}
 
-    <header>
-      <h1><a href="{{ p.url | absolute_url }}">{{ titlef }}</a></h1>
-    </header>
+    {% assign current = p.date | date: '%s' -%}
+    {% assign range = today | times: 1 |  minus: current -%}
 
-    {% if p.media %}
-    {% include _figure.html media=p.media %}
-    {% endif %}
+    {% if scope > range %}
 
-    <!-- copy: {{ copy | number_of_words }} words -->
-    {{ copy }}
+      {% unless forloop.first %}<div class="hr short shim-2x"></div>{% endunless %}
 
-  </article>
+      <article class="{{ p.layout | default: 'text' }}">
+        {% include post-detail.html page=p content=p.content is_home=true %}
+        {% include _pubdate.html date=p.date url=p.url is_home=true %}
+      </article>
 
-  <aside><!-- 30.44 -->
-    <div class="hr shim"></div>
-    {% assign scope = 2629743 -%}
-    {% assign today = site.posts.first.date | date: '%s' -%}
-    {% for p in site.posts offset: 1 -%}
-      {% assign current = p.date | date: '%s' -%}
-      {% assign range = today | times: 1 |  minus: current -%}
-      {% if scope > range %}
-        {% assign txt = p.description | default: p.excerpt %}
-        {% include _section.html title=p.title text=txt url=p.url is_home=true %}
-      {% else -%}
-        {% break -%}
-      {% endif -%}
-    {% endfor -%}
-  </aside>
+    {% else %}
+      {% break %}
+    {% endif -%}
+
+  {% endfor %}
   
 </main>
 

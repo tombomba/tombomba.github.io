@@ -10,9 +10,6 @@ img: "https://www.trashdiary.com/assets/img/"
 ico: "https://www.trashdiary.com/assets/ico/"
 css: "https://www.trashdiary.com/assets/css/"
 
-img_dir: /assets/img/
-css_dir: /assets/css/
-
 author: Tom Bomba
 socials: bomtomba
 

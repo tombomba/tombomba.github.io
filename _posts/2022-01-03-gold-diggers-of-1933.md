@@ -11,7 +11,7 @@ media:
   height: 600
   caption: >
     Photo: A scene from "Gold Diggers of 1933"
-image: gold-diggers-of-1933.jpg
+image: /assets/img/gold-diggers-of-1933.jpg
 tags: comedy musical romance
 ---
 

@@ -282,7 +282,6 @@ PLATFORMS
 DEPENDENCIES
   github-pages (= 223)
   jekyll-feed (~> 0.6)
-  jekyll-seo-tag
   jekyll-sitemap (~> 1.2)
   nokogiri (>= 1.12.5)
 

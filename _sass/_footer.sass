@@ -1,7 +1,7 @@
 footer
   max-width: var(--page-width)
   margin: var(--shim-2x) auto
-  ul.nav
+  ul
     margin: var(--shim-2x) 0 0 0
     list-style-type: none
     display: flex
@@ -9,10 +9,10 @@ footer
     align-items: center
     li
       margin-right: 0.8em
+      &.year
+        font-weight: bold
   div.copydate
     margin-top: var(--shim)
     p
       font-size: var(--font-size-sm)
       color: $mix-color
-  div.hr
-    max-width: var(--shim-4x)

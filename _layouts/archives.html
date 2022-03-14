@@ -26,7 +26,7 @@ layout: default
         {% include _section.html title=x.title text=x.excerpt url=x.url htag='h2' %}
       {% endif -%}
       {% if is_year_index and current_year == raw_year %}
-        {% include _section.html title=x.title text=x.excerpt url=x.url htag='h2' %}
+        {% include _section.html title=x.title text=x.excerpt date=x.date url=x.url htag='h2' %}
       {% endif -%}
     {% endfor -%}
 

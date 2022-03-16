@@ -1,0 +1,25 @@
+{% assign p = include.page %}
+{% assign copy = include.content | strip | normalize_whitespace -%}
+{% include _kram_image.html %}
+{% include _widont.html title=p.title %}
+
+<article class="inline"><!-- {{ copy | number_of_words }} -->
+
+  {% capture hedbox %}
+    <header>
+      <h1>
+      {% if include.is_home %}
+        <a href="{{ p.url | absolute_url }}">{{ titlef }}</a>
+      {% else %}
+        {{ titlef }}
+      {% endif %}
+      </h1>
+      <p>
+  {% endcapture -%}
+  {% assign copy = copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hedbox -%}
+  
+  {{ copy | strip | normalize_whitespace }}
+
+  {% if p.date %}{% include _byline.html date=p.date url=p.url is_home=include.is_home %}{% endif -%}
+
+</article>

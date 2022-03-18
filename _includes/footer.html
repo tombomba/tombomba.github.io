@@ -17,8 +17,7 @@
   </ul>
 
   <div class="copydate">
-    {% if page.is_post %}<p>This page published {{ page.date | date_to_long_string }}</p>{% endif %}
-    {% if page.is_page %}<p>Site last updated {{ site.time | date_to_long_string }}</p>{% endif -%}
+    <p>Site last updated {{ site.time | date_to_long_string }}</p>
     <p>Copyright &copy; {{ site.author }}</p>
   </div>
   

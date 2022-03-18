@@ -21,7 +21,6 @@ permalink: /index.html
 
       <article class="{{ p.layout | default: 'text' }}">
         {% include post-detail.html page=p content=p.content is_home=true %}
-        {% include _pubdate.html date=p.date url=p.url is_home=true %}
       </article>
 
     {% else %}

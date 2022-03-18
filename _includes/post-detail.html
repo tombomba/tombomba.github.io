@@ -1,16 +1,24 @@
 {% assign p = include.page %}
 {% assign copy = include.content | strip | normalize_whitespace %}
 {% include _kram_image.html %}
-{% include _widont.html title=p.title %}
+{% include _puncf.html title=p.title %}
 
-{% if p.media %}{% include _figure.html media=p.media %}{% endif %}
+{% if p.media %}
+  {% assign hedsize = 'micro' %}
+  {% include _figure.html media=p.media %}
+{% endif -%}
 
-<header>
-  <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
-</header>
+{% capture datef %}<span class="datestamp">&nbsp;(<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date: '%-d %b' }}</time>)</span>{% endcapture -%}
+{% assign copysize = copy | size | minus: 4 %}
+{% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
 
-{{ copy }}
+{% capture hedbox %}<div class="hed {{ hedsize | default: 'plain' }}"><h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1><p>{% endcapture -%}
+
+{% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}  
+{{ copy | strip | normalize_whitespace }}
 
 {% assign p = '' %}
 {% assign copy = '' %}
 {% assign titlef = '' %}
+{% assign hedsize = '' %}
+{% assign hedbox = '' %}

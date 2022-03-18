@@ -8,10 +8,16 @@
 //-----------------------------------------------------------------------------
 
 article.post
-  header
+  div.hed
     h1
-      font-size: var(--hed-size)
-      line-height: var(--hed-lh)
+      font-size: 1em
+      line-height: var(--font-lh)
+      &::after
+        content: '\0020'
+    h1, p
+      display: inline
+    span.punc::after
+      content: '.'
 
 article.directory,
 article.about,

@@ -1,23 +1,19 @@
 <footer>
-  
-  {% if page.is_home or page.is_archive %}
+
   <div class="hr short"></div>
 
-  <ul class="datelist">
-    {% include _datelist.html year=2022 %}
-  </ul>
-  {% endif -%}
-
-  <div class="hr short shim-2x"></div>
-
   <ul class="nav">
-    {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}
     {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}
+    <li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li>
     <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
   </ul>
 
   <div class="copydate">
-    <p>Site last updated {{ site.time | date_to_long_string }}</p>
+    {% if page.is_post %}
+      <p>This page published {{ page.date | date_to_long_string }}</p>
+    {% else %}
+      <p>Site last updated {{ site.time | date_to_long_string }}</p>
+    {% endif %}
     <p>Copyright &copy; {{ site.author }}</p>
   </div>
   

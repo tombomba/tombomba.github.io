@@ -4,13 +4,7 @@ layout: default
 {% include banner.html %}
 
 <main role="main">
-
-  <article class="post"><!-- {{ content | number_of_words }} -->
-
-    {% include post-detail.html page=page content=content %}
-  
-  </article>
-
+  {% include post-detail.html page=page content=content %}
 </main>
 
 {% include footer.html %}

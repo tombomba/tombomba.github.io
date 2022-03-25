@@ -16,12 +16,8 @@ permalink: /index.html
     {% assign range = today | times: 1 |  minus: current -%}
 
     {% if scope > range %}
-
       {% unless forloop.first %}<div class="hr short shim-2x"></div>{% endunless %}
-
-      <article class="{{ p.layout | default: 'text' }}">
-        {% include post-detail.html page=p content=p.content is_home=true %}
-      </article>
+      {% include post-detail.html page=p content=p.content is_home=true %}
 
     {% else %}
       {% break %}

@@ -4,7 +4,22 @@ layout: default
 {% include banner.html %}
 
 <main role="main">
+  
   {% include post-detail.html page=page content=content %}
+
+  <aside class="nextprev">
+    <div class="hr"></div>
+
+    {% if page.next %}
+      <p><b>Next:</b> <a href="{{ page.next.url | absolute_url }}">{{ page.next.title | strip | smartify | normalize_whitespace }}</a></p>
+    {% endif %}
+    {% if page.previous %}
+      <p><b>Previous:</b> <a href="{{ page.previous.url | absolute_url }}">{{ page.previous.title | strip | smartify | normalize_whitespace }}</a></p> 
+    {% endif %}
+    </dl>
+ 
+  </aside>
+
 </main>
 
 {% include footer.html %}

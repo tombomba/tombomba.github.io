@@ -1,7 +1,7 @@
 {% assign p = include.page %}
 {% assign copy = include.content | strip | normalize_whitespace %}
 {% include _kram_image.html %}
-{% include _puncf.html title=p.title %}
+{% include _widont.html title=p.title %}
 
 {% capture datef %}<span class="datestamp">&nbsp;(<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date: '%-d %b' }}</time>)</span>{% endcapture -%}
 {% assign copysize = copy | size | minus: 4 %}

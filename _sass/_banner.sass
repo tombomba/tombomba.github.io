@@ -1,6 +1,6 @@
 header[role="banner"]
   max-width: var(--page-width)
-  margin: var(--shim) auto 0 auto
+  margin: 2em auto 0 auto
   display: flex
   flex-direction: row wrap
   align-items: center
@@ -8,31 +8,18 @@ header[role="banner"]
     display: flex
     align-items: center
     h1
-      font-family: 'Rubik Beastly', cursive
-      font-size: var(--hed-size-md)
+      margin-left: -4px
+      font-family: 'Slackey', cursive
+      font-size: var(--hed-size-xl)
       line-height: 1
       font-weight: 400
       text-transform: uppercase
+      text-shadow: -4px 4px $shadow-color
+      transform: rotate(-4deg)
     a:link, a:visited
       color: $logo-color
       text-decoration: none
-  div.icon
-    display: flex
-    align-items: center
-    justify-content: center
-    width: var(--shim-2x)
-    height: var(--shim-2x)
-    margin: 0 auto
-    background-color: #099
-    border-radius: 4px
-    img
-      display: block
-      width: var(--shim-p)
-      height: var(--shim-p)
   div.hr
     flex: 1
     width: 100%
-    &.left
-      margin-right: 1em
-    &.right
-      margin-left: 1em
+    margin: 0 0 0 1em

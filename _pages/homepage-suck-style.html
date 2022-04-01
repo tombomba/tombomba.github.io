@@ -1,0 +1,25 @@
+---
+layout: default
+is_home: true
+#permalink: /index.html
+published: false
+---
+{% assign p = site.posts.first %}
+{% assign copy = p.content %}
+{% include banner.html %}
+
+<main role="main">
+
+  {% include post-detail.html page=p content=p.content is_home=true %}
+
+  <aside class="toplist">
+    <div class="hr"></div>
+    {% for p in site.posts limit:7 offset:1 %}
+    {% assign txt = p.description | default: p.excerpt | strip | strip_html | smartify | normalize_whitespace %}
+    {% include _section.html title=p.title url=p.url text=txt date=p.date is_home=true htag='h2' %}
+    {% endfor %}
+  </aside>
+
+</main>
+
+{% include footer.html %}

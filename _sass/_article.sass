@@ -1,13 +1,8 @@
 //-----------------------------------------------------------------------------
 
 article
-
   max-width: var(--page-width)
-  margin-top: var(--shim)
-  margin-left: auto
-  margin-right: auto
-  &:not(:first-of-type)
-    margin-top: var(--shim)
+  margin: 4em auto 0 auto
   @extend .clearfix
 
   header
@@ -19,14 +14,14 @@ article
         text-decoration: underline
 
   h2, h3, h4, h5, h6
-    margin-top: var(--shim-n)
+    margin-top: 1em
     font-size: 1em
   
   p
-    margin-top: var(--shim-n)
+    margin-top: 1em
   
   ul, ol
-    margin: var(--shim-n) 0 0 1em
+    margin: 1em 0 0 1em
     li
       margin-top: 0
     &.plain
@@ -50,14 +45,3 @@ article
     a:hover
       text-decoration: underline
       
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
-  article
-
-    ul, ol
-      margin-left: var(--shim-n)
-
-    blockquote
-      padding-left: var(--shim-n)

@@ -9,9 +9,16 @@
 
 article.post
   header
+    h1, p
+      display: inline
     h1
-      font-size: var(--hed-size)
-      line-height: var(--hed-lh)
+      font-size: 1em
+      line-height: var(--font-lh)
+      &::after
+        content: '\2014\0020'
+        font-size: 1em
+        font-weight: 400
+        color: $mix-color
 
 article.archive
 article.about,
@@ -29,3 +36,8 @@ article.error
       line-height: var(--font-lh)
     p
       margin: 0
+
+aside.nextprev
+  margin-top: var(--shim-p)
+  p:first-of-type
+    margin-top: var(--shim)

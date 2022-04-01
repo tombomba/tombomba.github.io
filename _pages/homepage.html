@@ -16,7 +16,7 @@ permalink: /index.html
     {% assign range = today | times: 1 |  minus: current -%}
 
     {% if scope > range %}
-      {% unless forloop.first %}<div class="hr short shim-2x"></div>{% endunless %}
+      {% unless forloop.first %}<div class="hr shim short centered"></div>{% endunless %}
       {% include post-detail.html page=p content=p.content is_home=true %}
 
     {% else %}

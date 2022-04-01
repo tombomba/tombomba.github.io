@@ -1,5 +1,5 @@
 ---
-title: "'Gold Diggers' and the ha-cha-cha"
+title: "Gold Diggers of 1933"
 slug: "gold-diggers-of-1933-ha-cha-cha"
 description: >
   "Gold Diggers of 1933" is a sorta dizzy low theater made fresh with the moneyed sense of Old Hollywood.

@@ -1,5 +1,3 @@
-//-----------------------------------------------------------------------------
-
 body
   font-family: $serif
   font-size: var(--font-size)
@@ -14,6 +12,29 @@ body
 
   padding: 0 1em
 
+header[role="banner"]
+  max-width: var(--page-width)
+  margin: 2em auto 0 auto
+  display: flex
+  align-items: center
+  justify-content: space-between
+  h1
+    font-family: var(--swap-font), cursive
+    line-height: 1
+    font-weight: 400
+    color: $logo-color
+    text-shadow: -3px 3px $shock-color
+    a:link, a:visited
+      color: $logo-color
+      text-decoration: none
+  div.sparkles
+    margin-top: 1.5px
+    &::after
+      content: '*:･ﾟ✧*:･ﾟ✧'
+      font-weight: 400
+      line-height: 1
+      color: $shadow-color
+
 main[role="main"]
   max-width: var(--page-width)
   margin: 0 auto
@@ -27,11 +48,6 @@ a
     color: $visited-color
   &:hover
     text-decoration: none
-  &:active
-    color: $active-color
-  &:focus
-    outline-color: $active-color
-    border-color: $active-color
 
 \:-moz-selection
   background: $select-color
@@ -39,51 +55,44 @@ a
 \::selection
   background: $select-color
 
-time
-  white-space: nowrap
-
-section
-  margin-top: var(--shim-n)
-  &:first-of-type
-    margin-top: var(--shim)
-  h1, h2, h3, h4, h5, h6, p
+footer
+  max-width: var(--page-width)
+  margin: 4em auto 2em auto
+  ul
     margin: 0
-    font-size: 1em
-    line-height: var(--font-lh)
-    font-weight: 400
-
-.hr
-  margin: 0
-  padding: 0
-  height: 0
-  border: 0
-  line-height: 1
-  border-top: 1px solid $border-dark
-  border-bottom: 2px solid $border-light
-  background-color: $body-color
-  &.shim
-    margin-top: var(--shim)
+    display: flex
+    align-items: baseline
+    list-style-type: none
+    li
+      color: $mix-color
 
 .daystamp
   white-space: nowrap
   font-style: italic
   color: $mix-color
   a:link, a:visited
-    color: $mix-color
     text-decoration: none
+    color: $mix-color
   a:hover
     text-decoration: underline
 
-//-----------------------------------------------------------------------------
+.hr
+  margin: 0
+  padding: 0
+  height: 0
+  border: 0
+  flex: 1
+  line-height: 1
+  border-top: 1px solid $border-dark
+  border-bottom: 2px solid $border-light
+  background-color: $body-color
 
-@media screen and (min-width: 30rem)
-
-  span.widont
-    white-space: nowrap
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
-  body
-    padding: 0 var(--shim)
+.sparkles
+  margin-top: 1px
+  &::after
+    content: '*:･ﾟ✧*:･ﾟ✧'
+    font-size: 1em
+    line-height: 1
+    font-weight: 400
+    color: $shadow-color
+ 

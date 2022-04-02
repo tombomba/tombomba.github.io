@@ -1,8 +1,7 @@
 figure
-  margin-bottom: var(--shim-p)
-  padding-bottom: var(--nudge)
+  margin-bottom: 1.6em
   figcaption
-    margin-top: var(--nudge)
+    margin-top: 0.33em
     background-color: $body-color
     p
       margin: 0
@@ -28,11 +27,3 @@ figure
     background: $bg-color url(../img/default-image-icon.png) no-repeat center center
   img
     border-radius: 4px
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 30rem)
-
-  article
-    figure.narrow
-      max-width: calc(var(--page-width) / 2)

@@ -1,0 +1,44 @@
+---
+layout: page
+title: "Archive"
+goog: "Sancreek"
+banner: "Trash Diary"
+label: "archive"
+is_archive: true
+permalink: "/archive/"
+---
+{% capture supalist %}
+{% assign scope = 31556926 -%}
+{% assign today = site.posts.first.date | date: '%s' -%}
+
+{% for p in site.posts %}
+
+  {% assign current = p.date | date: '%s' -%}
+  {% assign range = today | times: 1 |  minus: current -%}
+  {% if forloop.first %}{% assign startdate = p.date %}{% endif %}
+
+  {% if scope > range %}
+    {% include _section.html title=p.title url=p.url text=p.excerpt %}
+    {% assign enddate = p.date %}
+
+  {% else %}
+    {% break %}
+  {% endif -%}
+
+{% endfor %}
+{% endcapture -%}
+
+
+{% assign startday = startdate | date: '%-d' -%}
+{% assign startmonth = startdate | date: '%b' -%}
+{% assign startyear = startdate | date: '%Y' -%}
+
+{% assign endday = enddate | date: '%-d' -%}
+{% assign endmonth = enddate | date: '%b' -%}
+{% assign endyear = enddate | date: '%Y' -%}
+
+<div class="hed">
+  <h1>{{ endmonth }} {{ endday }}{% if endyear != startyear %},&nbsp;{{ endyear }}{% endif %}&ndash;{% if endmonth != startmonth %}{{ startmonth }}&nbsp;{% endif %}{{ startday }}, {{ startyear }}</h1>
+</div>
+
+{{ supalist }}

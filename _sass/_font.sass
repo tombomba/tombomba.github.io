@@ -3,10 +3,58 @@
 // $max-width: 37.389em
 // $line-height: 1.83
 
-//----------------------------------------------------------------------------
+// $max-width: 38.222em
+// $line-height: 1.75
 
 //----------------------------------------------------------------------------
 
-@import font-stack, font-16px, font-17px, font-18px
+$sans: Verdana, "Verdana Ref", Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", sans-serif
+
+$serif: Georgia, Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", serif
+
+$black: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif
+
+$mono: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace
+
+$system: system, system-ui, -apple-system, BlinkMacSystemFont, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif
 
 //-----------------------------------------------------------------------------
+
+\:root
+
+  --swap-font: 'Sancreek'
+
+  --page-width: 32em
+
+  --font-size: 100%
+  --font-size-xs: 81.3%
+  --font-size-sm: 87.5%
+  --font-lh: 1.6875
+
+  --hed-size: 125%
+  --hed-size-sm: 112.5%
+  --hed-size-md: 162.5%
+  --hed-size-lg: 206.3%
+  --hed-size-xl: 262.5%
+  --hed-lh: 1.34375
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 34rem)
+
+  \:root
+
+    --page-width: 37.389em
+
+    --font-size: 112.5%
+    --font-size-sm: 88.88%
+    --font-size-xs: 77.77%
+    --font-lh: 1.83
+
+    --hed-size: 127.8%
+    --hed-size-sm: 111.11%
+    --hed-size-md: 161.1%
+    --hed-size-lg: 205.6%
+    --hed-size-xl: 261.1%
+    --hed-lh: 1.415
+    

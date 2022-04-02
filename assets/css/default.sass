@@ -13,10 +13,17 @@ article.post
       font-size: var(--hed-size)
       line-height: var(--hed-lh)
 
+article.about
+  div.hed
+    h1
+      font-size: var(--hed-size)
+      line-height: 1.3
+      font-weight: 700
+      font-style: italic
+
 article.archive,
-article.about,
 article.error
-  margin-top: var(--shim-2x)
+  margin-top: 2em
   header
     h1
       font-size: var(--hed-size)
@@ -31,8 +38,3 @@ aside.toplist
       &::after
         content: '\00A0\2014\0020'
         color: $mix-color
-
-aside.nextprev
-  margin-top: var(--shim-p)
-  p:first-of-type
-    margin-top: var(--shim)

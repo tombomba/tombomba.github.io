@@ -1,12 +1,12 @@
-//-----------------------------------------------------------------------------
-
 article
   max-width: var(--page-width)
-  margin: 4em auto 0 auto
+  margin: 0 auto
   @extend .clearfix
 
-  header
+  div.hed
     h1
+      font-size: var(--hed-size)
+      line-height: var(--hed-lh)
       a:link, a:visited
         color: $text-color
         text-decoration: none
@@ -16,7 +16,7 @@ article
   h2, h3, h4, h5, h6
     margin-top: 1em
     font-size: 1em
-  
+
   p
     margin-top: 1em
   
@@ -30,18 +30,23 @@ article
   
   blockquote
     padding-left: 1em
-    border-left: thin solid $shock-color
+    border-left: thin solid $border-dark
   
   blockquote,
   li + p,
     margin-top: 0
 
-  span.datestamp
-    font-style: italic
-    color: $mix-color
-    a:link, a:visited
-      color: $mix-color
-      text-decoration: none
-    a:hover
-      text-decoration: underline
-      
+  section
+    h1, h2, h3, h4, h5, h6
+      font-size: 1em
+      font-weight: 400
+    p
+      margin: 0
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 25rem)
+
+  article
+    span.widont
+      white-space: nowrap

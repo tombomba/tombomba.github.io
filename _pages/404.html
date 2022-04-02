@@ -1,13 +1,19 @@
 ---
 layout: default
-title: "404"
-description: "404 Error: Page Not Found"
+title: "404!"
+description: "Server error 404 - page not found"
 emoji: '💥'
 permalink: /404.html
 ---
 <main role="main">
   <article class="error">
-    <header><h1>Page not found</h1></header>
-    <p>If you are having trouble locating a destination on <i>{{ site.title }},</i> try visiting the <a href="{{ site.url }}">homepage</a> or browsing posts from <a href="{{ site.posts.first.date | date: '%y/%m/' | absolute_url }}">this month</a> and <a href="{{ site.posts.first.date | date: '%y' | absolute_url }}">this year</a>.</p>
+    <header><h1>{{ page.title }} 💥</h1></header>
+    <p>Oops. Your page was not found. Try another?</p>
+    <ul>
+      {% for p in site.posts limit:5 %}
+        <li><a href="{{ p.url | absolute_url }}">{{ p.title | strip | smartify | normalize_whitespace }}</a></li>
+      {% endfor %}
+    </ul>
+    <p>I don't know what happened. Maybe check the <a href="{{ site.url }}">homepage</a> or the <a href="{{ 'archive' | absolute_url }}">archive</a>. Or hit me up <a href="https://twitter.com/{{ site.socials }}">on socials</a> and I'll see what I can do.</p>
   </article>
 </main>

@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+{% assign copy = content %}
+{% include _puncf.html title=page.title %}
+
+<header role="banner">
+  <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+  <div class="sparkles"></div>
+</header>
+
+<main role="main">
+
+  <article class="text">
+
+  {% if page.media %}
+    {% include _figure.html media=page.media %}
+  {% endif %}
+
+  {% capture hedbox %}<div class="hed"><h1>{{ titlef }}</h1><p>{% endcapture -%}
+  {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
+
+    {{ copy }}
+
+  </article>
+
+</main>
+
+<footer>
+
+  <ul>
+    <li><a href="{{ site.url }}">Home</a></li>
+    <li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>
+    <li><a href="{{ 'about' | absolute_url }}">About</a></li>
+  </ul>
+
+  <div class="copydate">
+    <p>This page published {{ page.date | date_to_long_string }}</p>
+    <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</p>
+  </div>
+
+</footer>

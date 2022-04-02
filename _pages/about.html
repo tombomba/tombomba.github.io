@@ -1,30 +1,19 @@
 ---
-layout: default
+layout: page
 title: "About"
-description: "About the author"
+description: "Me, me, me, me, me, me"
+banner: "Trash Diary"
+goog: "Sancreek"
+emoji: 🍕
+label: "about"
 is_about: true
 permalink: "/about/"
 ---
 {% capture bio %}
-This website is my 1,000 piece puzzle on the dining room table, my model airplane in the den, my handmade canoe in the garage. I began working on it years ago, to join what seemed vital online conversation, and return now in fits and starts.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet neque nec sapien condimentum, a bibendum ante finibus. Praesent tincidunt, ex nec fermentum scelerisque, est mi molestie nisi, id luctus metus ipsum id tellus. Sed nec ornare urna, non mattis tellus. Aliquam nunc magna, elementum quis neque id, pharetra auctor erat. Suspendisse vitae lacinia massa. Aliquam pulvinar nisl nisl, vel feugiat ante rutrum at. Etiam ut nulla magna. Duis eu quam fringilla, viverra quam eget, aliquet quam. Aliquam laoreet mi a pharetra mattis.
 
-My name is Tom Bomba. I once flirted with NYU's cinema studies program but found that words like _filmic_ and _split diopter_ made me cringe. My interest in the movies remains with writing, with story and characters, and not _mise-en-scène_.
-
-_{{ site.title }}_ is intentionally basic, the design a mental note to myself not to write as if I'm submitting for publication. The site was built on an old Macintosh while listening to KCRW Los Angeles.
+Nullam iaculis velit risus, vel faucibus libero mattis non. Donec nec ultricies dui, mattis pulvinar erat. Etiam efficitur ullamcorper nisl. Donec interdum eros vel ex elementum, commodo facilisis ipsum pulvinar. Aenean malesuada urna varius mattis tempor. Maecenas non diam a nisl dictum pharetra et vitae justo. Nulla faucibus vel mi non ornare. Sed pretium eleifend elit vitae rutrum. Phasellus dictum, neque non fringilla ultrices, velit urna imperdiet.
 {% endcapture -%}
 
-{% include banner.html %}
-
-<main role="main">
-
-  <article class="about">
-
-    <header><h1>{{ page.title }}</h1></header>
-
-    {{ bio | strip | smartify | markdownify | normalize_whitespace }}
-
-  </article>
-
-</main>
-
-{% include footer.html %}
+<div class="hed"><h1>Is this a blog about trash or a <span class="widont">trashy blog?</span></h1></div>
+{{ bio | smartify | markdownify | normalize_whitespace }}

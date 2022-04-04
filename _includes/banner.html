@@ -1,4 +1,7 @@
 <header role="banner" class="{{ page.label | default: page.layout }}">
-  <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
-  <div class="sparkles"></div>
+  <div class="logo">
+    <div class="hr left"></div>
+    <h1><a href="{{ site.url }}">{{ site.nickname | default: site.title }}</a></h1>
+    <div class="hr right"></div>
+  </div>
 </header>

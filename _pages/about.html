@@ -1,9 +1,7 @@
 ---
-layout: page
+layout: default
 title: "About"
 description: "Me, me, me, me, me, me"
-banner: "Trash Diary"
-goog: "Sancreek"
 emoji: 🍕
 label: "about"
 is_about: true
@@ -15,5 +13,20 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet neque nec
 Nullam iaculis velit risus, vel faucibus libero mattis non. Donec nec ultricies dui, mattis pulvinar erat. Etiam efficitur ullamcorper nisl. Donec interdum eros vel ex elementum, commodo facilisis ipsum pulvinar. Aenean malesuada urna varius mattis tempor. Maecenas non diam a nisl dictum pharetra et vitae justo. Nulla faucibus vel mi non ornare. Sed pretium eleifend elit vitae rutrum. Phasellus dictum, neque non fringilla ultrices, velit urna imperdiet.
 {% endcapture -%}
 
-<div class="hed"><h1>Is this a blog about trash or a <span class="widont">trashy blog?</span></h1></div>
-{{ bio | smartify | markdownify | normalize_whitespace }}
+{% include banner.html %}
+
+<main role="main">
+
+  <article class="about">
+
+    <div class="hed">
+      <h1>Is this a blog about trash or a <span class="widont">trashy blog?</span></h1>
+    </div>
+    
+    {{ bio | smartify | markdownify }}
+  
+  </article>
+
+</main>
+
+{% include footer.html %}

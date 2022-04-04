@@ -36,12 +36,12 @@
   <meta name="twitter:image:src" content="{{ page.image | default: '/assets/img/default-fbog.png' | absolute_url }}">
 
   <!-- css -->
-  <link rel="stylesheet" href="{{ page.layout | default: 'default' | prepend: site.css | append: '.css' }}?v={{ site.time | date: '%T' | remove: ':' }}">
+  <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css | append: '.css' }}?v={{ site.time | date: '%T' | remove: ':' }}">
 
   <!-- goog -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family={% if page.goog %}{{ page.goog | replace: ' ', '+' }}{% else %}Sancreek{% endif %}&display=swap&text=TtRrAaSsHhDdIiYyLlCcOo!">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sancreek&display=swap&text={{ site.title | remove: ' ' | upcase }}">
 
 </head>
 

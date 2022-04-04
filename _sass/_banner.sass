@@ -2,24 +2,36 @@ header[role="banner"]
   max-width: var(--page-width)
   margin: 2em auto 0 auto
   display: flex
-  flex-direction: row wrap
   align-items: center
-  div.text
-    display: flex
-    align-items: center
-    h1
-      margin-left: -3px
-      font-family: 'Slackey', cursive
-      font-size: var(--hed-size-xl)
-      line-height: 1
-      font-weight: 400
-      text-transform: uppercase
-      text-shadow: -3px 3px $shadow-color
-      transform: rotate(-3deg)
+  justify-content: space-between
+  h1
+    font-family: 'Sancreek', serif
+    font-size: var(--hed-size-lg)
+    text-transform: uppercase
+    line-height: 1
+    font-weight: 400
+    color: $logo-color
+    text-shadow: -2px 2px $shock-color
     a:link, a:visited
       color: $logo-color
       text-decoration: none
-  div.hr
-    flex: 1
-    width: 100%
-    margin: 0 0 0 1em
+  div.sparkles
+    display: none
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 25rem)
+
+  header[role="banner"]
+    h1
+      font-size: var(--hed-size-xl)
+      text-shadow: -3px 3px $shock-color
+    div.sparkles
+      display: block
+      margin-top: 3px
+      &::after
+        content: '*:･ﾟ✧*:･ﾟ✧'
+        font-size: 1em
+        line-height: 1
+        font-weight: 400
+        color: $shadow-color

@@ -1,25 +1,35 @@
 ---
-layout: page
-banner: 'Trash Diary'
-goog: "Sancreek"
+layout: default
 label: "home"
 is_home: true
 permalink: /index.html
 ---
 
-{% assign scope = 2629743 -%}
-{% assign today = site.posts.first.date | date: '%s' -%}
+{% include banner.html %}
 
-{% for p in site.posts %}
+<main role="main">
 
-  {% assign current = p.date | date: '%s' -%}
-  {% assign range = today | times: 1 |  minus: current -%}
+  <article class="home">
 
-  {% if scope > range %}
-    {% include _section.html title=p.title url=p.url text=p.excerpt date=p.date is_home=true %}
+    {% assign scope = 2629743 -%}
+    {% assign today = site.posts.first.date | date: '%s' -%}
 
-  {% else %}
-    {% break %}
-  {% endif -%}
+    {% for p in site.posts %}
 
-{% endfor %}
+      {% assign current = p.date | date: '%s' -%}
+      {% assign range = today | times: 1 |  minus: current -%}
+
+      {% if scope > range %}
+        {% include _section.html title=p.title url=p.url text=p.excerpt date=p.date is_home=true %}
+
+      {% else %}
+        {% break %}
+      {% endif -%}
+
+    {% endfor %}
+
+  </article>
+
+</main>
+
+{% include footer.html %}

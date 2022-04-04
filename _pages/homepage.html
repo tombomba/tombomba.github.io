@@ -14,19 +14,22 @@ permalink: /index.html
     {% assign scope = 2629743 -%}
     {% assign today = site.posts.first.date | date: '%s' -%}
 
+    <ul>
     {% for p in site.posts %}
 
       {% assign current = p.date | date: '%s' -%}
       {% assign range = today | times: 1 |  minus: current -%}
 
       {% if scope > range %}
-        {% include _section.html title=p.title url=p.url text=p.excerpt date=p.date is_home=true %}
+        {% include _section.html title=p.title url=p.url text=p.excerpt is_home=true %}
 
       {% else %}
         {% break %}
       {% endif -%}
 
     {% endfor %}
+      <li><h1><a href="{{ 'archive' | absolute_url }}">A glorious list of internet victories</a></h1><p>Kinder, gentler posts from the past year.</p></li>
+    </ul>
 
   </article>
 

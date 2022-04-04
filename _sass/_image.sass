@@ -2,92 +2,47 @@
 // Image styles!
 //-----------------------------------------------------------------------------
 
-article > img
-  display: block
-  max-width: 100%
-  margin: 0 0 1.33em 0
-  border-radius: 4px
-  background-color: $bg-color
-  &.top
-    margin-top: 0.33em
-  &.center
-    margin-left: auto
-    margin-right: auto
+div.fig
+
+  margin-bottom: var(--shim-p)
+  padding-top: var(--nudge)
+  overflow: hidden
+
+  img
+
+    --width: 240px
+    --height: calc(var(--width) * 1.5)
+
+    display: block
+    margin: 0 auto
+    width: var(--width)
+    height: var(--height)
+    object-fit: cover
+    object-position: 50% 50%
+    border-radius: 4px
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 37rem)
+@media screen and (min-width: 20rem)
 
-  article > img
-
-    margin: 0 0 1em 0
-
-    &.top 
-      margin-top: 0.66em
-
-    &.left
-      display: inline
-      max-width: 40%
-      float: left
-      margin-right: 1em
-      margin-bottom: 0.33em
-
-    &.right
-      display: inline
-      float: right
-      margin-left: 1em
-      margin-bottom: 0.33em
+  div.fig
+    img
+      --width: 280px
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 48rem)
+@media screen and (min-width: 30rem)
 
-  article > img
-
-    &.left,
-    &.right
-      margin-bottom: 1em
-
-    &.left
-      margin-right: 1em
-
-    &.right
-      margin-left: 1em
-
-    &.left.tug,
-    &.left.pull
-      margin-left: -1em
-
-    &.right.tug,
-    &.right.pull
-      margin-right: -1em
-
-    &.left.tilt
-      transform: rotate(-3deg)
-
-    &.right.tilt
-      transform: rotate(3deg)
+  div.fig
+    img
+      --width: 360px
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 60rem)
+@media screen and (min-width: 40rem)
 
-  article > img
-
-    &.left
-      margin-right: 2em
-
-    &.right
-      margin-left: 2em
-
-    &.left.tug
-      margin-left: -2em
-
-    &.right.tug
-      margin-right: -2em 
-
-    &.left.pull
-      margin-left: -3em
-
-    &.right.pull
-      margin-right: -3em
+  div.fig
+    float: right
+    img
+      margin: 0 0 1em var(--shim-n)
+      --width: 226px

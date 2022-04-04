@@ -12,6 +12,8 @@ image: /assets/img/gold-diggers-of-1933.jpg
 tags: comedy musical romance
 ---
 
+!['Fresh' is past its sell-by date]({{ 'gold-diggers-of-1933.jpg' | prepend: site.img }}){: .tv }
+
 A blueblood songwriter falls in love with a Broadway showgirl, but his family won't hear of it. His brother and uncle come around to stop the affair and protect the family interest. So the showgirl's friends, a trio of down and outers, decide to scam Mr Hoity and Mr Toity and run them out. And why not? If someone thinks you cheap and vulgar you might as well play the part and play them, too.
 
 <!--more-->

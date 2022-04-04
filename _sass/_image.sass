@@ -4,15 +4,10 @@
 
 div.fig
 
-  margin-bottom: var(--shim-p)
+  margin-bottom: var(--shim)
   padding-top: var(--nudge)
   overflow: hidden
-
   img
-
-    --width: 240px
-    --height: calc(var(--width) * 1.5)
-
     display: block
     margin: 0 auto
     width: var(--width)
@@ -20,6 +15,17 @@ div.fig
     object-fit: cover
     object-position: 50% 50%
     border-radius: 4px
+
+    --width: 240px
+
+    &.screen
+      --height: calc(var(--width) / 1.77)
+    &.poster 
+      --height: calc(var(--width) * 1.5)
+    &.tv
+      --height: calc(var(--width) / 1.33)
+    &.square
+      --height: var(--width)
 
 //-----------------------------------------------------------------------------
 
@@ -42,7 +48,8 @@ div.fig
 @media screen and (min-width: 40rem)
 
   div.fig
-    float: right
-    margin: 0 0 var(--nudge) var(--shim-n)
+    margin: 0 0 var(--shim) 0
+    transform: rotate(-3deg)
     img
-      --width: 226px
+      --width: 580px
+      border: 1em solid $bg-light

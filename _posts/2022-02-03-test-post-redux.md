@@ -1,5 +1,5 @@
 ---
-layout: text
+layout: micro
 title: "The quick brown fox jumps over the lazy dog"
 description: "Nunc quis risus aliquam, porttitor turpis ac, auctor massa. Maecenas dapibus mauris purus, in placerat augue consectetur elementum. Aenean et varius orci."
 ---

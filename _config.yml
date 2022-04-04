@@ -2,7 +2,7 @@ title: "Trash diary"
 description: "Short notes on dark genres"
 domain: "www.mymoviepage.com"
 
-emoji: "✨"
+emoji: "🗑️"
 
 url: "https://www.mymoviepage.com"
 cdn: "https://www.mymoviepage.com/assets/"
@@ -36,7 +36,6 @@ defaults:
       path: "_posts"
       type: posts
     values:
-      layout: post
       is_post: true
   -
     scope:
@@ -69,9 +68,5 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - _vlib
-  - _snips
   - .gitignore
   - .DS_Store
-  - favicon-package.zip
-  - s3_website.yml

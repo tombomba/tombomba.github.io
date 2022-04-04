@@ -5,6 +5,16 @@ layout: default
 {% include banner.html %}
 {% include _puncf.html title=page.title %}
 
+{% if copy contains '<p><img' %}
+  {% assign copy = copy | replace: '<p><img', '<div class="fig"><img' | replace: ' /></p>', '></div>' %}
+{% endif -%}
+
+{% if page.date %}
+{% capture datef %}&#32;<span class="daystamp">(<time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_string }}</time>)</span>{% endcapture -%}
+{% assign copysize = copy | size | minus: 4 %}
+{% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
+{% endif -%}
+
 <main role="main">
 
   <article class="micro"><!-- wc: {{ copy | number_of_words }} -->

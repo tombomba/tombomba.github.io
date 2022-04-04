@@ -2,20 +2,38 @@ footer
   max-width: var(--page-width)
   margin: var(--shim-p) auto
   ul
-    margin: 1em 0 0 0
-    &:nth-of-type(2)
-      margin-top: 1em
+    margin-top: var(--shim-p)
+    margin-left: 0
     display: flex
+    flex-direction: column
     align-items: center
-    justify-content: center
     list-style-type: none
     li
-      font-size: var(--font-size-sm)
       color: $mix-color
-      &:not(:last-of-type)::after
-        content: '-'
-        padding: 0 0.33em
-        color: $mix-color
+      &.copydate
+        order: 99
+        margin-top: 1em
+        font-size: var(--font-size-sm)
 
 footer.home
   padding-top: var(--nudge)
+
+  //-----------------------------------------------------------------------------
+
+@media screen and (min-width: 32rem)
+
+  footer
+    ul
+      margin-top: 1em
+      flex-direction: row
+      align-items: baseline
+      justify-content: center
+      li
+        font-size: var(--font-size-sm)
+        &.copydate
+          margin-top: 0
+          order: -1
+        &:not(:last-of-type)::after
+          content: '-'
+          padding: 0 0.33em
+          color: $mix-color

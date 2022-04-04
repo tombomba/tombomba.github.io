@@ -1,0 +1,21 @@
+---
+layout: default
+---
+{% assign copy = content | strip | normalize_whitespace %}
+{% include banner.html %}
+{% include _puncf.html title=page.title %}
+
+<main role="main">
+
+  <article class="micro"><!-- wc: {{ copy | number_of_words }} -->
+
+  {% capture hedbox %}<div class="hed"><h1>{{ titlef }}</h1><p>{% endcapture -%}
+  {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
+
+    {{ copy }}
+
+  </article>
+
+</main>
+
+{% include footer.html %}

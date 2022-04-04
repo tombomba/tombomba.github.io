@@ -1,5 +1,5 @@
 ---
-layout: picture
+layout: micro
 title: "That ha-cha-cha"
 description: >
   "Gold Diggers of 1933" is a sorta dizzy low theater made fresh with the moneyed sense of Old Hollywood.

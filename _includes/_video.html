@@ -1,0 +1,14 @@
+{% assign mw = include.video.width | default: 640 | times: 1.0 -%}
+{% assign mh = include.video.height | default: 360 | times: 1.0 -%}
+{% assign percent = mh | divided_by: mw | times: 100 | round: 2 -%}
+
+<div class="figure video">
+
+  <div class="aspectratio" style="--percent:{{ percent }}%;">
+    <iframe src="https://www.youtube-nocookie.com/embed/{{ include.video.youtube }}?controls=0" title="YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></iframe>
+  </div>
+
+  {% if include.video.caption %}<figcaption>{{ include.video.caption | strip | smartify | markdownify | normalize_whitespace }}</figcaption>{% endif -%}
+
+</div>
+

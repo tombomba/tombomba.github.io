@@ -1,0 +1,156 @@
+//-----------------------------------------------------------------------------
+// Image styles!
+//-----------------------------------------------------------------------------
+
+.figure
+  display: block
+  margin-bottom: var(--shim)
+  img
+    background-color: $bg-color
+    border-radius: 4px
+
+.figure.video
+  figcaption
+    margin-top: var(--nudge)
+    background-color: $body-color
+    p
+      margin: 0
+      font-size: var(--font-size-xs)
+      line-height: var(--hed-lh)
+  .aspectratio
+    position: relative
+    height: 0
+    overflow: hidden
+    width: 100%
+    padding-top: var(--percent)
+    // calc(100% / (var(--aspect-ratio)))
+    iframe,
+    object,
+    embed,
+    img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: $bg-color
+
+.figure.block 
+  position: relative
+  width: 100%
+  height: 0
+  overflow: hidden
+  padding-top: 56.25%
+  &.wide
+    padding-top: 56.25%
+  &.classic
+    padding-top: 75%
+  &.square
+    padding-top: 100%
+
+  .fixed
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+.figure.inline
+  img
+    display: block
+    margin: 0 auto
+    width: var(--width)
+    height: var(--height)
+    object-fit: cover
+    object-position: 50% 50%
+    --width: 200px
+    &.square
+      --height: var(--width)
+    &.classic
+      --height: calc(var(--width) / 1.33)
+    &.poster
+      --width: 180px
+      --height: calc(var(--width) * 1.5)
+    &.wide
+      --height: calc(var(--width) / 1.77)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 20rem)
+
+  .figure.inline
+    img
+      --width: 280px
+      &.poster
+        --width: 260px
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30rem)
+
+  .figure.inline
+    img
+      --width: 340px
+      &.poster
+        --width: 280px
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  .figure.inline
+
+    &.left,
+    &.right
+      img
+        --width: 224px
+
+    &.left
+      float: left
+      margin-right: var(--shim)
+      &.tilt
+        transform: rotate(-3deg)
+      &.pull
+        margin-left: calc(var(--shim) * -1)
+      &.shadow
+        img
+          border-radius: 0
+          box-shadow: calc(var(--nudge) * -1) var(--nudge) $shadow-color
+
+    &.right
+      float: right
+      margin-left: var(--shim)
+      &.tilt
+        transform: rotate(3deg)
+      &.pull
+        margin-right: calc(var(--shim) * -1)
+      &.shadow
+        img
+          border-radius: 0
+          box-shadow: var(--nudge) var(--nudge) $shadow-color
+
+    &.center
+      margin-bottom: var(--shim-p)
+      img
+        --width: 540px
+      &.tilt
+        margin-bottom: var(--shim-p)
+        transform: rotate(-3deg)
+      &.shadow
+        padding-bottom: var(--nudge)
+        img
+          border-radius: 0
+          box-shadow: calc(var(--nudge) * -1) var(--nudge) $shadow-color
+
+    &.pull
+      img
+        --width: 256px
+
+    &.border
+      img
+        border: 1em solid $border-light
+
+    &.outline
+      img
+        border-radius: 0
+        outline: thin solid $text-color

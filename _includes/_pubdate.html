@@ -1,1 +1,0 @@
-<p class="daystamp"><time datetime="{{ include.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{% if include.is_home %}<a href="{{ include.url | absolute_url }}">{{ include.date | date_to_string }}</a>{% else %}{{ include.date | date_to_string }}{% endif %}</time></p>

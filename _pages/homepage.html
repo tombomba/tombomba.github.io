@@ -9,28 +9,22 @@ permalink: /index.html
 
 <main role="main">
 
-  <article class="home">
+{% for p in site.posts limit:10 %}
+  
+  <article class="micro"><!-- wc: {{ p.content | number_of_words }} -->
+    {% unless forloop.first %}
+      <div class="spark {% if p.image or p.video %}fat{% else %}thin{% endif %}"></div>
+    {% endunless -%}
+    {% include micro-detail.html page=p content=p.content is_home=true %}
+  </article>
 
-    {% assign scope = 2629743 -%}
-    {% assign today = site.posts.first.date | date: '%s' -%}
+{% endfor -%}
 
+  <article class="extra">
+    <div class="spark"></div>
     <ul>
-    {% for p in site.posts %}
-
-      {% assign current = p.date | date: '%s' -%}
-      {% assign range = today | times: 1 |  minus: current -%}
-
-      {% if scope > range %}
-        {% include _section.html title=p.title url=p.url text=p.excerpt is_home=true %}
-
-      {% else %}
-        {% break %}
-      {% endif -%}
-
-    {% endfor %}
-      <li><h1><a href="{{ 'archive' | absolute_url }}">A glorious list of internet victories</a></h1><p>Kinder, gentler posts from the past year.</p></li>
+      {% include _datelist.html year=2022 %}
     </ul>
-
   </article>
 
 </main>

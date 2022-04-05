@@ -4,15 +4,12 @@ description: >
   "Gold Diggers of 1933" is a sorta dizzy low theater made fresh with the moneyed sense of Old Hollywood.
 excerpt: >
   "Gold Diggers of 1933" has the same kinda dizzy you might find in vaudeville, or low theater, or whatever it's called, those 18th century operas produced for the workaday stiffs, now made fresh with the moneyed sense of Old Hollywood and given over to a sorta art deco bohemianism.
-media: 
-  image: gold-diggers-of-1933.jpg
-  width: 800
-  height: 600
-image: /assets/img/gold-diggers-of-1933.jpg
-tags: comedy musical romance
+image: 
+  file: gold-diggers-of-1933.jpg
+  style: inline classic center
+  css:  border tilt
+  alt: "Gold Diggers of 1933"
 ---
-
-!['Fresh' is past its sell-by date]({{ 'gold-diggers-of-1933.jpg' | prepend: site.img }}){: .tv }
 
 A blueblood songwriter falls in love with a Broadway showgirl, but his family won't hear of it. His brother and uncle come around to stop the affair and protect the family interest. So the showgirl's friends, a trio of down and outers, decide to scam Mr Hoity and Mr Toity and run them out. And why not? If someone thinks you cheap and vulgar you might as well play the part and play them, too.
 

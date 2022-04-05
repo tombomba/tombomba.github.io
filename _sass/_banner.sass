@@ -1,13 +1,14 @@
 header[role="banner"]
   max-width: var(--page-width)
-  margin: var(--shim) auto 0 auto
+  margin: var(--shim-n) auto 0 auto
   div.logo
     display: flex
+    flex-flow: row wrap
     align-items: center
-    justify-content: space-between
+    justify-content: center
     h1
-      font-family: 'Rock 3D', serif
-      font-size: var(--hed-size-lg)
+      font-family: 'Rock 3D', cursive
+      font-size: var(--hed-size-xl)
       text-transform: uppercase
       line-height: 1
       font-weight: 900
@@ -16,35 +17,14 @@ header[role="banner"]
       a:link, a:visited
         color: $logo-color
         text-decoration: none
-    div.sparkles
-      display: none
-    div.hr
-      flex: 1
-      margin-top: 3px
-      &.left
-        margin-right: 0.33em
-      &.right
-        margin-left: 0.33em
-
-//-----------------------------------------------------------------------------
+   
+//--------------------------f---------------------------------------------------
 
 @media screen and (min-width: 34rem)
 
   header[role="banner"]
     div.logo
       h1
-        margin-left: -3px
         text-shadow: -3px 3px $shock-color, 3px -3px $shock-color
         &:hover
           text-shadow: 6px -6px $shock-color, -6px 6px $shock-color
-    div.sparkles
-      display: block
-      margin-top: 3px
-      &::after
-        content: '*:･ﾟ✧*:･ﾟ✧'
-        font-size: 1em
-        line-height: 1
-        font-weight: 400
-        color: $shadow-color
-    div.hr.left
-      display: none

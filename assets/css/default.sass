@@ -3,7 +3,7 @@
 ---
 
 @charset "utf-8"
-@import reset, font, color, body, banner, article, figure, image, footer
+@import reset, font, color, body, banner, article, footer, media
 
 article.micro
   div.hed
@@ -42,7 +42,19 @@ article.archive
 article.home 
   ul 
     li:first-of-type
-      margin-top: 0.25em
+      margin-top: 0
+
+article.extra
+  ul
+    margin: 0
+    display: flex
+    justify-content: center
+    list-style-type: none
+    li
+      &.year
+        font-weight: 700
+      &:not(:last-of-type)
+        margin-right: var(--nudge)
 
 article.error
   p

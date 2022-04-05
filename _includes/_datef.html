@@ -1,0 +1,4 @@
+{% capture datef %}{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ include.date | date: '%d %b' }}</a>{% else %}{{ include.date | date_to_string }}{% endif -%}{% endcapture -%}
+  {% capture datestring %}&#32;<span class="daystamp">(<time datetime="{{ include.date | date: '%FT%T%:z' }}" pubdate itemprop="datePublished">{{ datef }}</time>)</span>{% endcapture -%}
+  {% assign copysize = copy | size | minus: 4 -%}
+  {% assign copy = copy | slice: 0, copysize | append: datestring | append: '</p>' -%}

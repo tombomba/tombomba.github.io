@@ -11,4 +11,10 @@
     {% assign titlef = raw | append: '!!PUNC!!' %}
 {% endcase -%}
   
-{% assign titlef = titlef | replace: '!!PUNC!!', '<span class="punc"></span>' | strip | smartify | normalize_whitespace %}
+{% assign titlef = titlef | replace: '!!PUNC!!', '<span class="punc"></span>' | strip | smartify | normalize_whitespace -%}
+
+{% if include.is_home %}
+  {% capture titlestring %}<a href="{{ include.url | absolute_url }}">{{ titlef }}</a>{% endcapture %}
+{% else %}
+  {% assign titlestring = titlef %}
+{% endif -%}

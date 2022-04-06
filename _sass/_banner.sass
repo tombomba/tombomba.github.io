@@ -5,9 +5,8 @@ header[role="banner"]
     display: flex
     flex-flow: row wrap
     align-items: center
-    justify-content: space-between
+    justify-content: center
     h1
-      margin-left: -2px
       font-family: 'Rock 3D', cursive
       font-size: var(--hed-size-lg)
       text-transform: uppercase
@@ -23,18 +22,29 @@ header[role="banner"]
       width: 100%
       margin-top: 3px
       &.left
-        margin-right: 1em
+        margin-right: var(--nudge)
       &.right
-        margin-left: 1em
+        margin-left: var(--nudge)
    
-//--------------------------f---------------------------------------------------
+//------------------------------------------------------------------------------
 
-@media screen and (min-width: 34rem)
+@media screen and (min-width: 30rem)
 
   header[role="banner"]
     div.logo
-      margin-left: -3px
       h1
         text-shadow: -3px 3px $shock-color, 3px -3px $shock-color
         &:hover
           text-shadow: 6px -6px $shock-color, -6px 6px $shock-color
+
+//------------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  header[role="banner"]
+    div.logo
+      div.hr
+        &.left
+          margin-right: 1em
+        &.right
+          margin-left: 1em

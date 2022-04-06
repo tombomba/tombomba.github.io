@@ -16,28 +16,18 @@ article.micro
     span.punc:after
       content: '.'
 
-article.home,
 article.archive
   div.hed
     h1
       font-size: var(--font-size-xx)
       line-height: var(--hed-lh)
-    div.hr
-      margin-top: var(--shim)
-  ul
-    margin: 0
-    list-style-type: none
-    li
+  section
+    &:not(:first-of-type)
       margin-top: var(--shim-n)
-      h1, h2, h3, p
-        display: inline
-        margin: 0
-        font-size: 1em
-        font-weight: 400
-      h1, h2, h3
-        &::after
-          content: '\00A0\2014\0020'
-          color: $mix-color
+    h1, h2, h3, p
+      margin: 0
+      font-size: 1em
+      font-weight: 400      
 
 article.home 
   ul 
@@ -54,7 +44,14 @@ article.extra
       &.year
         font-weight: 700
       &:not(:last-of-type)
-        margin-right: var(--nudge)
+        margin-right: 0.6em
+
+article.about
+  margin-top: var(--buffer)
+  div.hed
+    h1
+      font-size: var(--font-size-xx)
+      line-height: var(--hed-lh)
 
 article.error
   p

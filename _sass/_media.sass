@@ -58,7 +58,8 @@
 .figure.inline
   img
     display: block
-    margin: 0 auto
+    margin-left: auto
+    margin-right: auto
     width: var(--width)
     height: var(--height)
     object-fit: cover
@@ -112,7 +113,7 @@
       &.tilt
         transform: rotate(-3deg)
       &.pull
-        margin: 0
+        margin-top: 0
         margin-left: calc(var(--shim) * -1)
       &.shadow
         img
@@ -151,7 +152,8 @@
 
     &.border
       img
-        border: 1em solid $border-light
+        border-radius: 0
+        border: var(--nudge) solid $border-light
 
     &.outline
       img

@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+{% assign copy = content | strip | normalize_whitespace %}
+{% include _widont.html title=page.title url=page.url %}
+
+{% include banner.html %}
+
+<main role="main"><!-- {{ copy | number_of_words }} -->
+
+  <article class="{{ page.label | default: page.layout }}">
+
+    {% if page.image %}{% include _imagef.html image=page.image %}{% endif -%}
+
+    <div class="hed"><h1>{{ titlef }}</h1>
+
+    {{ copy }}
+
+  </article>
+
+</main>
+
+{% include footer.html %}

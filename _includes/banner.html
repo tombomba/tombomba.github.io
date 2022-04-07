@@ -1,7 +1,9 @@
 <header role="banner" class="{{ page.label | default: page.layout }}">
   <div class="logo">
-    <h1><a href="{{ site.url }}">!!!</a></h1>
+    <div class="hr left"></div>
+    <div class="icon">
+      <a href="{{ site.url }}" title="{{ site.title }}">{% include skull.svg %}<span></span></a>
+    </div>
     <div class="hr right"></div>
   </div>
-
 </header>

@@ -5,34 +5,9 @@
 @charset "utf-8"
 @import reset, font, color, body, banner, article, footer, media
 
-article.post
-  div.hed
-    h1
-      font-size: var(--hed-size)
-      line-height: var(--hed-lh)
-    p
-      margin-top: 0
-      color: $mix-color
-  
-article.micro
-  div.hed
-    h1, p
-      display: inline
-      font-size: 1em
-      line-height: var(--font-lh)
-    h1::after
-      content: '\0020'
-    span.punc:after
-      content: '.'
-
 article.archive
-  div.hed
-    h1
-      font-size: var(--font-size-xx)
-      line-height: var(--hed-lh)
   section
-    &:not(:first-of-type)
-      margin-top: var(--shim-n)
+    margin-top: var(--shim-n)
     h1, h2, h3, p
       margin: 0
       font-size: 1em

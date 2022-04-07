@@ -11,7 +11,7 @@ permalink: /index.html
 
 {% for p in site.posts limit:10 %}
   
-  {% unless forloop.first %}<div class="hr buffer home"></div> {% endunless -%}
+  {% unless forloop.first %}<div class="hr buffer"></div> {% endunless -%}
   <article class="post"><!-- {{ p.content | number_of_words }}-->
     {% include post-detail.html page=p content=p.content is_home=true %}
   </article>

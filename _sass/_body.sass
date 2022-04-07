@@ -42,17 +42,18 @@ a
   a:hover
     text-decoration: underline
 
-.hr
+div.hr
   margin: 0
   padding: 0
-  height: 0
   border: 0
-  border-top: 1px solid $border-dark
-  border-bottom: 2px solid $border-light
+  height: 0
+  border-top: thin solid $border-dark
+  border-bottom: medium solid $border-light
   background-color: $body-color
   &.buffer
     margin-top: var(--shim-2x)
     width: var(--shim-4x)
+    font-size: 1em
 
 .spark
   margin: var(--shim-2x) 0

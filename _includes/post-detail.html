@@ -1,0 +1,14 @@
+{% assign p = include.page %}
+{% assign copy = include.content | strip | normalize_whitespace %}
+
+{% include _widont.html title=p.title url=p.url is_home=include.is_home %}
+
+<div class="hed">
+  <h1>{{ titlef }}</h1>
+</div>
+
+{% if p.image %}{% include _imagef.html image=p.image %}{% endif -%}
+
+{{ copy }}
+
+<p class="daystamp">{{ p.date | date_to_string }}</p>

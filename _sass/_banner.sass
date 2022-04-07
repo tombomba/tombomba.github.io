@@ -1,23 +1,31 @@
 header[role="banner"]
   max-width: var(--page-width)
-  margin: 1em auto 0 auto
+  margin: var(--shim-n) auto 0 auto
   div.logo
     display: flex
     flex-flow: row wrap
     align-items: center
     justify-content: center
     div.icon
-      margin: 0 1em
+      margin: 0 1em 0 -3px
       display: flex
       align-items: center
       justify-content: center
-      width: var(--shim-2x)
-      height: var(--buffer)
       svg
         width: var(--buffer)
         height: var(--buffer)
         fill: $logo-color
         filter: drop-shadow(-3px 3px $shock-color)
+        &:hover
+          animation-name: spin
+          animation-duration: 500ms
+          animation-iteration-count: 1
+          animation-timing-function: linear
+          @keyframes spin
+            from
+              transform: rotate(0deg)
+            to
+              transform: rotate(360deg)
     div.hr
       flex: 1
       width: 100%      

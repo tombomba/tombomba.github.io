@@ -5,8 +5,13 @@
 @charset "utf-8"
 @import reset, font, color, body, banner, article, footer, media
 
-article.micro,
-article.about
+article.post
+  div.hed
+    h1
+      font-size: var(--hed-size)
+      line-height: var(--hed-lh)
+  
+article.micro
   div.hed
     h1, p
       display: inline
@@ -46,6 +51,12 @@ article.extra
         font-weight: 700
       &:not(:last-of-type)
         margin-right: 0.6em
+
+article.about
+  div.hed
+    h1
+      font-size: var(--hed-size)
+      line-height: var(--hed-lh)
 
 article.error
   p

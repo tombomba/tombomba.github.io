@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+{% include banner.html %}
+
+<main role="main">
+
+  <article class="{{ page.label | default: page.layout }}"><!-- wc: {{ content | number_of_words }} -->
+
+    {% include post-detail.html page=page content=content %}
+
+  </article>
+
+</main>
+
+{% include footer.html %}

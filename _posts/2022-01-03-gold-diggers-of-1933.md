@@ -7,7 +7,6 @@ excerpt: >
 image: 
   file: gold-diggers-of-1933.jpg
   style: inline classic center
-  css:  tilt
   alt: "Gold Diggers of 1933"
 ---
 

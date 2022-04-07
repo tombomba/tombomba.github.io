@@ -1,50 +1,25 @@
 header[role="banner"]
   max-width: var(--page-width)
-  margin: var(--shim-n) auto 0 auto
+  margin: 1em auto 0 auto
   div.logo
     display: flex
     flex-flow: row wrap
     align-items: center
     justify-content: center
-    h1
-      font-family: 'Rock 3D', cursive
-      font-size: var(--hed-size-lg)
-      text-transform: uppercase
-      line-height: 1
-      font-weight: 900
-      color: $logo-color
-      text-shadow: -2px 2px $shock-color, 2px -2px $shock-color
-      a:link, a:visited
-        color: $logo-color
-        text-decoration: none
-    div.hr
-      flex: 1
-      width: 100%
-      margin-top: 3px
-      &.left
-        margin-right: var(--nudge)
-      &.right
-        margin-left: var(--nudge)
-   
-//------------------------------------------------------------------------------
-
-@media screen and (min-width: 30rem)
-
-  header[role="banner"]
-    div.logo
-      h1
-        text-shadow: -3px 3px $shock-color, 3px -3px $shock-color
-        &:hover
-          text-shadow: 6px -6px $shock-color, -6px 6px $shock-color
-
-//------------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
-  header[role="banner"]
-    div.logo
-      div.hr
-        &.left
-          margin-right: 1em
-        &.right
-          margin-left: 1em
+    div.icon
+      margin: 0 1em
+      display: flex
+      align-items: center
+      justify-content: center
+      width: var(--shim-2x)
+      height: var(--shim-2x)
+      background-color: $logo-color
+      border-radius: 50%
+      svg
+        width: var(--shim-p)
+        height: var(--shim-p)
+        fill: $shock-color
+  div.hr
+    margin-top: 1em
+    flex: 1
+    width: 100%      

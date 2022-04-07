@@ -3,10 +3,11 @@ layout: post
 title: "'Fresh' is rotten"
 description: >
   Nunc quis risus aliquam, porttitor turpis ac, auctor massa. Maecenas dapibus mauris purus, in placerat augue consectetur elementum. Aenean et varius orci.
-#image: 
-#  file: fresh-2022-poster.jpg
-#  style: inline poster right 
-#  alt: "'Fresh' movie poster, 2022"
+image: 
+  file: fresh-2022-poster.jpg
+  style: inline poster left 
+  css: pull tilt
+  alt: "'Fresh' movie poster, 2022"
 ---
 Ut diam risus, ultricies a commodo a, scelerisque quis lacus. Fusce consectetur sit amet lacus nec posuere. Morbi quis erat lobortis, pulvinar ipsum vel, maximus augue. Vivamus consequat ac tortor ut vehicula. Suspendisse quis ante vestibulum, pretium mauris quis, tempor dui.<!--more--> Nam congue mauris et enim malesuada, sed placerat dolor aliquet. Suspendisse dui orci, ornare eu elementum bibendum, tristique vitae lectus. Ut accumsan rutrum purus in iaculis. Nunc et lacus nisi. Vestibulum elementum iaculis scelerisque. Curabitur quis gravida neque. Maecenas eu tincidunt est, nec blandit quam. Praesent sagittis leo tincidunt risus iaculis, vitae vehicula dolor tincidunt. Quisque non consectetur sapien.
 

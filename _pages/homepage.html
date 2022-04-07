@@ -9,12 +9,22 @@ permalink: /index.html
 
 <main role="main">
 
-  <article class="home">
+{% for p in site.posts limit:10 %}
+  
+  <article class="micro"><!-- wc: {{ p.content | number_of_words }} -->
+    {% unless forloop.first %}
+      <div class="spark {% if p.image or p.video %}fat{% else %}thin{% endif %}"></div>
+    {% endunless -%}
+    {% include micro-detail.html page=p content=p.content is_home=true %}
+  </article>
 
-  {% for p in site.posts limit:10 %}
-    {% include _section.html title=p.title text=p.excerpt url=p.url is_home=true %}
-  {% endfor -%}
+{% endfor -%}
 
+  <article class="extra">
+    <div class="spark"></div>
+    <ul>
+      {% include _datelist.html year=2022 %}
+    </ul>
   </article>
 
 </main>

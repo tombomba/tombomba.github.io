@@ -2,31 +2,13 @@
 layout: default
 ---
 
-{% assign copy = content | strip | normalize_whitespace %}
-{% include _puncf.html title=page.title url=page.url %}
-
 {% include banner.html %}
 
 <main role="main">
 
   <article class="{{ page.label | default: page.layout }}"><!-- wc: {{ content | number_of_words }} -->
 
-    {% if page.date %}
-      {% include _datef.html date=page.date url=page.url %}
-    {% endif -%}
-
-    {% if page.image %}
-      {% include _imagef.html image=page.image %}
-    {% endif -%}
-
-    {% if page.video %}
-      {% include _video.html video=page.video %}
-    {% endif -%}
-
-    {% capture hedbox %}<div class="hed"><h1>{{ titlestring }}</h1><p>{% endcapture -%}
-    {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
-
-    {{ copy }}
+    {% include micro-detail.html page=page content=content %}
 
   </article>
 

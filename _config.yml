@@ -1,6 +1,5 @@
 title: "Bomtomba"
 description: "A media diary, a small collage, a dumb blog"
-domainf: "Bomtomba.com"
 domain: "www.mymoviepage.com"
 
 emoji: "⚫"
@@ -22,6 +21,10 @@ permalink: /:title:output_ext
 timezone: America/Los_Angeles
 
 collections:
+  archives:
+    collections_dir: _archives
+    output: true
+    permalink: "/:path/"
   pages:
     collections_dir: _pages
     output: true
@@ -33,7 +36,7 @@ defaults:
       path: "_posts"
       type: posts
     values:
-      layout: micro
+      layout: post
       is_post: true
   -
     scope:
@@ -41,6 +44,13 @@ defaults:
       type: "pages"
     values:
       is_page: true
+  -
+    scope:
+      path: "_archives"
+      type: "archives"
+    values:
+      layout: "archives"
+      is_archive: true
 
 markdown: kramdown
 kramdown:

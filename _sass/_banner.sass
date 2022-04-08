@@ -5,6 +5,8 @@ header[role="banner"]
     img
       width: var(--shim-2x)
       height: var(--shim-2x)
-      background-color: $logo-color
       border-radius: 50%
-    
+      background-color: $logo-color
+      transition: background-color 1000ms linear
+      &:hover
+        background-color: $shock-color

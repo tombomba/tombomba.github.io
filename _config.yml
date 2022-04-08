@@ -20,12 +20,6 @@ excerpt_separator: <!--more-->
 permalink: /:year/:month/:title:output_ext
 timezone: America/Los_Angeles
 
-collections:
-  archive:
-    collections_dir: _archive
-    output: true
-    path: ":/path"
-
 defaults:
   -
     scope:
@@ -34,13 +28,6 @@ defaults:
     values:
       layout: post
       is_post: true
-  -
-    scope:
-      path: "_archive"
-      type: archive
-    values:
-      layout: archive
-      is_archive: true
  
 markdown: kramdown
 kramdown:

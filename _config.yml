@@ -1,5 +1,5 @@
-title: "My movie page"
-description: "A media diary, a small collage, a dumb blog"
+title: "Troubleday"
+description: "Short notes on dark genres"
 domain: "www.mymoviepage.com"
 
 emoji: "✨"
@@ -17,17 +17,30 @@ theme: null
 
 excerpt_separator: <!--more-->
 
-permalink: /:title-:short_year:month:day:output_ext
+permalink: /:year/:month/:title:output_ext
 timezone: America/Los_Angeles
+
+collections:
+  archive:
+    collections_dir: _archive
+    output: true
+    path: ":/path"
 
 defaults:
   -
     scope:
-      path: "_posts"
+      path: ""
       type: posts
     values:
       layout: post
       is_post: true
+  -
+    scope:
+      path: "_archive"
+      type: archive
+    values:
+      layout: archive
+      is_archive: true
  
 markdown: kramdown
 kramdown:

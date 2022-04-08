@@ -2,7 +2,7 @@
 layout: default
 ---
 {% assign raw = page.permalink | split: '/' | shift %}
-{% assign raw_year = raw[0] | prepend: '20' %}
+{% assign raw_year = raw[0] %}
 {% assign raw_month = raw[1] %}
 
 {% if raw_month %}

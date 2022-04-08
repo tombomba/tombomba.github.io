@@ -19,7 +19,7 @@
     {% else %}
       <p>{{ site.domain | remove: 'www.' | capitalize }} last updated {{ site.time | date_to_long_string }}</p>
     {% endif %}
-    <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }}<p>
+    <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}<p>
   </div>
   
 </footer>

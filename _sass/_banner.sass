@@ -2,11 +2,22 @@ header[role="banner"]
   max-width: var(--page-width)
   margin: var(--shim-2x) auto 0 auto
   div.icon
-    img
-      width: var(--shim-2x)
-      height: var(--shim-2x)
-      background-color: $logo-color 
-      border-radius: 50%
-      transition: background-color 1000ms linear
-      &:hover
-        background-color: $shock-color
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    width: var(--shim-2x)
+    height: var(--shim-2x)
+    border-radius: 50%
+    background-color: $logo-color
+    svg
+      width: var(--shim)
+      height: var(--shim)
+      fill: $shock-color
+    span
+      position: absolute 
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      z-index: 1

@@ -40,12 +40,6 @@ defaults:
       is_post: true
   -
     scope:
-      path: "_pages"
-      type: "pages"
-    values:
-      is_page: true
-  -
-    scope:
       path: "_archives"
       type: "archives"
     values:

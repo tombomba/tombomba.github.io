@@ -2,7 +2,7 @@
 
   <div class="hr buffer"></div>
 
-  {% if page.is_page %}
+  {% if page.is_home %}
   <ul>
     {% include _datelist.html year=2022 %}
   </ul>
@@ -19,7 +19,7 @@
     {% else %}
       <p>{{ site.domain | remove: 'www.' | capitalize }} last updated {{ site.time | date_to_long_string }}</p>
     {% endif %}
-    <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {% unless page.is_about %}<a href="{{ 'about' | absolute_url }}">{{ site.author }}</a>{% else %}{{ site.author }}{% endunless %}<p>
+    <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }}<p>
   </div>
   
 </footer>

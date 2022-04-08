@@ -1,6 +1,15 @@
 header[role="banner"]
   max-width: var(--page-width)
   margin: var(--shim-2x) auto 0 auto
+  div.logo
+    h1
+      font-size: 1em
+      line-height: var(--hed-lh)
+      a:link, a:visited
+        text-decoration: none
+        color: $text-color
+      a:hover
+        text-decoration: underline
   div.icon
     position: relative
     display: flex
@@ -10,24 +19,3 @@ header[role="banner"]
     height: var(--shim-2x)
     border-radius: 50%
     background-color: $logo-color
-    svg
-      width: var(--shim)
-      height: var(--shim)
-      fill: $shock-color
-    span
-      position: absolute 
-      width: 100%
-      height: 100%
-      top: 0
-      left: 0
-      z-index: 1
-    &:hover
-      animation-name: spin
-      animation-duration: 500ms
-      animation-iteration-count: 1
-      animation-timing-function: linear
-    @keyframes spin
-      from
-        transform: rotate(0deg)
-      to
-        transform: rotate(360deg)

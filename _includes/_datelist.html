@@ -4,7 +4,7 @@
   {% assign curr_yr = site.posts.first.date | date: '%Y' | times: 1 -%}
 {% endif -%}
 
-<li class="year"><a href="{{ curr_yr | slice: -2,2 | absolute_url }}">{{ curr_yr }}</a></li>
+<li class="year"><a href="{{ curr_yr | absolute_url }}">{{ curr_yr }}</a></li>
 
 {% assign prev_mo = 99 | times: 1 -%}
 {% for item in site.posts reversed -%}
@@ -12,7 +12,7 @@
   {% assign post_yr = item.date | date: '%Y' | times: 1 -%}
   {% if post_yr == curr_yr -%}
     {% if prev_mo != post_mo -%}
-      <li><a href="{{ item.date | date: '%y/%m' | absolute_url }}">{{ item.date | date: '%b' }}</a></li>
+      <li><a href="{{ item.date | date: '%Y/%m' | absolute_url }}">{{ item.date | date: '%b' }}</a></li>
     {% endif -%}
   {% endif -%}
   {% assign prev_mo = post_mo -%}

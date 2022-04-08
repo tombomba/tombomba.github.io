@@ -1,0 +1,24 @@
+---
+layout: default
+title: "About"
+description: "Probably more than you wanted to know"
+label: "about"
+is_about: true
+permalink: /about.html
+---
+{% capture bio %}
+Lorem ipsum dolor sit amet, "consectetur adipiscing elit." Sed viverra viverra sapien non laoreet. Duis in suscipit tortor. Donec rhoncus ligula eleifend tempor pulvinar. Maecenas commodo erat lectus, sed aliquet risus faucibus eget. Nunc a est et augue semper feugiat. Nunc ultricies, urna sed euismod scelerisque, tellus orci sollicitudin lectus, sit amet rutrum nisl mi sed purus. Curabitur nec gravida dui. Pellentesque dapibus turpis mi, a commodo nisi euismod id. In ultricies justo sed est imperdiet sagittis. Donec eu semper nunc. Vestibulum congue scelerisque varius.
+
+Aliquam est enim, cursus ut sollicitudin ac, tincidunt ut ligula. Vivamus eu tempus tellus. Nullam malesuada id lacus nec ultricies. Etiam finibus, ligula eget ultrices blandit, mi tellus efficitur diam, et volutpat justo orci in enim. Aliquam erat volutpat. 'Aliquam ligula turpis, dapibus eget turpis at, vehicula molestie ipsum. Nam sit amet bibendum felis. Aliquam nec blandit nisi. Vivamus dapibus risus eu nunc tincidunt sodales.'
+{% endcapture %}
+
+{% include banner.html %}
+
+<main role="main">
+  <article class="post">
+    <div class="hed"><h1>{{ page.title }}</h1></div>
+    {{ bio | strip | smartify | markdownify | normalize_whitespace }}
+  </article>
+</main>
+
+{% include footer.html %}

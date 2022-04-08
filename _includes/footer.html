@@ -9,7 +9,6 @@
   {% endif %}
 
   <ul>
-    {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}
     <li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li>
     <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
   </ul>
@@ -20,7 +19,7 @@
     {% else %}
       <p>{{ site.domain | remove: 'www.' | capitalize }} last updated {{ site.time | date_to_long_string }}</p>
     {% endif %}
-    <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}<p>
+    <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {% unless page.is_about %}<a href="{{ 'about' | absolute_url }}">{{ site.author }}</a>{% else %}{{ site.author }}{% endunless %}<p>
   </div>
   
 </footer>

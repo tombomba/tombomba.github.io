@@ -17,7 +17,7 @@ theme: null
 
 excerpt_separator: <!--more-->
 
-permalink: /:year/:month/:title:output_ext
+permalink: /:title-:short_year:month:day:output_ext
 timezone: America/Los_Angeles
 
 defaults:

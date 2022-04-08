@@ -22,7 +22,7 @@ permalink: "/archive/"
       {% if forloop.first %}{% assign startdate = p.date %}{% endif %}
 
       {% if scope > range %}
-        {% include _section.html title=p.title url=p.url text=p.excerpt %}
+        {% include _section.html title=p.title text=p.excerpt date=p.date url=p.url %}
         {% assign enddate = p.date %}
 
       {% else %}

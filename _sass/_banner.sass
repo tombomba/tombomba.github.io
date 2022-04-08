@@ -2,20 +2,25 @@ header[role="banner"]
   max-width: var(--page-width)
   margin: var(--shim-2x) auto 0 auto
   div.logo
-    h1
-      font-size: 1em
-      line-height: var(--hed-lh)
-      a:link, a:visited
-        text-decoration: none
-        color: $text-color
-      a:hover
-        text-decoration: underline
-  div.icon
-    position: relative
     display: flex
     align-items: center
-    justify-content: center
-    width: var(--shim-2x)
-    height: var(--shim-2x)
-    border-radius: 50%
-    background-color: $logo-color
+    h1
+      margin-left: -3px
+      font-family: 'Sarina', cursive
+      font-size: var(--hed-size-md)
+      line-height: 1
+      font-weight: 400
+      color: $logo-color
+      text-shadow: -3px 3px $shock-color
+      a:link, a:visited
+        text-decoration: none
+        color: $logo-color
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 20rem)
+
+  header[role="banner"]
+    div.logo
+      h1
+        font-size: var(--hed-size-lg)

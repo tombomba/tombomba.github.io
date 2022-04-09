@@ -43,7 +43,9 @@
   padding-top: 56.25%
   &.wide
     padding-top: 56.25%
-  &.classic
+  &.academy
+    padding-top: 72.72%
+  &.tv
     padding-top: 75%
   &.square
     padding-top: 100%
@@ -65,8 +67,10 @@
     --width: 200px
     &.square
       --height: var(--width)
-    &.classic
+    &.tv
       --height: calc(var(--width) / 1.33)
+    &.academy
+      --height: calc(var(--width) / 1.375)
     &.poster
       --width: 180px
       --height: calc(var(--width) * 1.5)

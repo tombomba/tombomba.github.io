@@ -12,6 +12,9 @@ article
         text-decoration: none
       a:hover
         text-decoration: underline
+    p
+      margin: 0
+      color: $mix-color
 
   h2, h3, h4, h5, h6
     margin-top: var(--shim-n)
@@ -42,6 +45,25 @@ article
       font-weight: 400
     p
       margin: 0
+
+article.archive
+  margin-top: var(--shim-2x)
+  section
+    margin-top: var(--shim)
+    h1, h2, h3, p
+      margin: 0
+      font-size: 1em
+      font-weight: 400
+
+article.about
+  margin-top: var(--shim-2x)
+
+article.error
+  margin-top: var(--shim-2x)
+  p
+    margin-top: 0
+    text-align: center
+    color: $mix-color
 
 //-----------------------------------------------------------------------------
 

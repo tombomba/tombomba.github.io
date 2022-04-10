@@ -3,10 +3,10 @@
 
 {% include _widont.html title=p.title url=p.url is_home=include.is_home %}
 
+  {% if p.image %}{% include _imagef.html image=p.image %}{% endif -%}
+
   <div class="hed">
     <h1>{{ titlestring }}</h1>
   </div>
-
-  {% if p.image %}{% include _imagef.html image=p.image %}{% endif -%}
 
   {{ copy }}

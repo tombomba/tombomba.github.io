@@ -7,15 +7,15 @@ is_about: true
 permalink: /about.html
 ---
 {% capture bio %}
-Lorem ipsum dolor sit amet, "consectetur adipiscing elit." Sed viverra viverra sapien non laoreet. Duis in suscipit tortor. Donec rhoncus ligula eleifend tempor pulvinar. Maecenas commodo erat lectus, sed aliquet risus faucibus eget. Nunc a est et augue semper feugiat. Nunc ultricies, urna sed euismod scelerisque, tellus orci sollicitudin lectus, sit amet rutrum nisl mi sed purus. Curabitur nec gravida dui. Pellentesque dapibus turpis mi, a commodo nisi euismod id. In ultricies justo sed est imperdiet sagittis. Donec eu semper nunc. Vestibulum congue scelerisque varius.
+My name is Tom Bomba. This is my website, which exists for me somewhere between hobby and obsession. I once flirted with NYU's cinema studies program but found phrases like _split diopter_ made me cringe. My interest in movies remains with story and characters, and not with _mise-en-scène._
 
-Aliquam est enim, cursus ut sollicitudin ac, tincidunt ut ligula. Vivamus eu tempus tellus. Nullam malesuada id lacus nec ultricies. Etiam finibus, ligula eget ultrices blandit, mi tellus efficitur diam, et volutpat justo orci in enim. Aliquam erat volutpat. 'Aliquam ligula turpis, dapibus eget turpis at, vehicula molestie ipsum. Nam sit amet bibendum felis. Aliquam nec blandit nisi. Vivamus dapibus risus eu nunc tincidunt sodales.'
+Needless to say, I do not have bona fides. No bylines, credentials, or passes. I am not a journalist. But I do like to talk about the media I view, and so here we are. Whatever this site is now, and whatever it turns out to be, I hope you enjoy it.
 {% endcapture %}
 
 {% include banner.html %}
 
 <main role="main">
-  <article class="post">
+  <article class="about">
     <div class="hed"><h1>{{ page.title }}</h1></div>
     {{ bio | strip | smartify | markdownify | normalize_whitespace }}
   </article>

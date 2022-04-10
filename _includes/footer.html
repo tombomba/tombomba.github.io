@@ -1,6 +1,6 @@
 <footer class="{{ page.label | default: page.layout }}">
 
-  <div class="hr buffer"></div>
+  <div class="hr"></div>
 
   <ul>
     {% unless page.is_archive %}<li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>{% endunless %}
@@ -8,14 +8,14 @@
     <li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li>
     <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
   </ul>
-
+  
   <div class="copydate">
     {% if page.is_post %}
-    <p>This page published <time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
+    <p>Published {{ page.date | date_to_long_string }}</p>
     {% else %}
-    <p>{{ site.domain | remove: 'www.' | capitalize }} last updated <span class="nowrap">{{ site.time | date_to_long_string }}</span></p>
+    <p>Site updated {{ site.time | date_to_long_string }}</p>
     {% endif %}
-    <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} <span class="nowrap">{{ site.author }}</span></p>
+    <p>Copyright &copy; {{ site.author }}</p>
   </div>
-  
+
 </footer>

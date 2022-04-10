@@ -1,12 +1,26 @@
 header[role="banner"]
   max-width: var(--page-width)
   margin: var(--shim-2x) auto 0 auto
-  div.icon
-    img
-      width: var(--shim-2x)
-      height: var(--shim-2x)
-      border-radius: 50%
-      background-color: $logo-color
-      transition: background-color 1000ms linear
-      &:hover
-        background-color: $shock-color
+  div.logo
+    display: flex
+    flex-flow: row wrap
+    align-items: center
+    h1
+      font-size: var(--hed-size-md)
+      line-height: 1
+      text-transform: lowercase
+      color: $logo-color
+      a:link, a:visited
+        color: $logo-color
+        text-decoration: none
+      a:hover
+        text-decoration: underline
+
+//-----------------------------------------------------------------------------
+
+//@media screen and (min-width: 20rem)
+
+  header[role="banner"]
+    div.logo
+      h1
+        font-size: var(--hed-size-lg)

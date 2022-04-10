@@ -1,23 +1,19 @@
 footer
   max-width: var(--page-width)
-  margin: var(--shim-2x) auto
+  margin: var(--shim-2x) auto 
   ul
-    margin: var(--shim-2x) 0 0 0 
+    margin: var(--shim-2x) 0 0 0
     display: flex
     flex-flow: column
     list-style-type: none
-    li:not(:last-of-type)
-      margin-right: 0.66em
   div.copydate
     margin-top: var(--shim)
-    font-size: var(--font-size-sm)
-    color: $mix-color
     p
-      display: inline
-      &::after
-        content: '.\0020'
-    span.nowrap
-      white-space: nowrap
+      margin: 0
+      font-size: var(--font-size-sm)
+      color: $mix-color
+  div.hr
+    max-width: var(--shim-4x)
 
 //-----------------------------------------------------------------------------
 
@@ -26,8 +22,6 @@ footer
   footer
     ul
       flex-flow: row wrap
-    div.copydate
-      p
-        display: block
-        &::after
-          content: ''
+      li
+        margin-right: 1em
+        color: $mix-color

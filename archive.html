@@ -22,7 +22,7 @@ permalink: "/archive/"
       {% if forloop.first %}{% assign startdate = p.date %}{% endif %}
 
       {% if scope > range %}
-        {% include _section.html title=p.title text=p.excerpt date=p.date url=p.url %}
+        {% include _section.html title=p.title text=p.excerpt url=p.url %}
         {% assign enddate = p.date %}
 
       {% else %}
@@ -43,7 +43,7 @@ permalink: "/archive/"
     {% assign endyear = enddate | date: '%Y' -%}
 
     <div class="hed">
-      <h1>Archive: {{ endmonth }}{% if endyear != startyear %},&nbsp;{{ endyear }}{% endif %}&ndash;{% if endmonth != startmonth %}{{ startmonth }}&nbsp;{% endif %}{{ startyear }}</h1>
+      <h1>{{ endmonth }} {{ endday }}{% if endyear != startyear %},&nbsp;{{ endyear }}{% endif %}&ndash;{% if endmonth != startmonth %}{{ startmonth }}&nbsp;{% endif %}{{ startday }}, {{ startyear }}</h1>
     </div>
 
     {{ supalist }}

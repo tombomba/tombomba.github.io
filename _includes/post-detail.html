@@ -2,15 +2,16 @@
 {% assign copy = include.content | strip %}
 
 {% include _widont.html title=p.title url=p.url is_home=include.is_home %}
-
-  {% if p.image %}{% include _imagef.html image=p.image %}{% endif -%}
+{% assign charcount = p.title | size %}
 
   <div class="hed">
     <h1>{{ titlestring }}</h1>
-    <div class="byline">
-      <p>{{ p.author | default: site.author }}</p>
+    <div class="byline {% if charcount > 40 %}fat{% else %}thin{% endif %}">
+      <p> {{ p.author | default: site.author }}</p>
       <p><time datetime="{{ p.date | date: '%FT%T%:z' }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time></p>
     </div>
   </div>
+
+  {% if p.image %}{% include _imagef.html image=p.image %}{% endif -%}
 
   {{ copy }}

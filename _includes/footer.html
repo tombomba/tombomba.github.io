@@ -1,7 +1,5 @@
 <footer class="{{ page.label | default: page.layout }}">
 
-  <div class="hr"></div>
-
   <ul>
     {% unless page.is_archive %}<li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>{% endunless %}
     {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}
@@ -9,13 +7,4 @@
     <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
   </ul>
   
-  <div class="copydate">
-    {% if page.is_post %}
-    <p>Published {{ page.date | date_to_long_string }}</p>
-    {% else %}
-    <p>Site updated {{ site.time | date_to_long_string }}</p>
-    {% endif %}
-    <p>Copyright &copy; {{ site.author }}</p>
-  </div>
-
 </footer>

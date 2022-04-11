@@ -1,19 +1,24 @@
 footer
   max-width: var(--page-width)
-  margin: var(--shim-2x) auto 
+  margin: var(--shim-4x) auto var(--shim) auto
   ul
-    margin: var(--shim-2x) 0 0 0
+    margin: 0
     display: flex
     flex-flow: column
     list-style-type: none
-  div.copydate
-    margin-top: var(--shim)
-    p
-      margin: 0
-      font-size: var(--font-size-sm)
-      color: $mix-color
-  div.hr
-    max-width: var(--shim-4x)
+    li
+      font-size: var(--font-size-xx)
+      font-weight: 700
+      text-transform: lowercase
+      color: $logo-color
+      a:link, a:visited
+        color: $logo-color
+        text-decoration: none
+      a:hover
+        text-decoration: underline
+
+footer.home
+  margin-top: var(--shim-3x)
 
 //-----------------------------------------------------------------------------
 

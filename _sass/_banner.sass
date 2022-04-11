@@ -1,31 +1,63 @@
 header[role="banner"]
   max-width: var(--page-width)
-  margin: var(--shim-n) auto 0 auto
+  margin: 0 auto
+  height: var(--buffer)
   display: flex
   align-items: center
   justify-content: center
-  div.logo
-    margin: 0 1em
-    display: flex
-    align-items: center
-    justify-content: center
-    width: var(--shim-2x)
+  border-bottom: thin dashed $border-dark
+  div.wrap
+    margin-bottom: calc(var(--buffer) * -1)
+    padding: 0 1em
+    background-color: $body-color
+    div.logo
+      display: flex
+      align-items: center
+      justify-content: center
+      width: var(--buffer)
+      height: var(--buffer)
+      svg
+        width: var(--shim-p)
+        height: var(--shim-p)
+        fill: $logo-color
+        filter: drop-shadow(-2px 2px $shock-color) drop-shadow(2px 2px $shock-color)
+        &:hover
+          animation-name: spin
+          animation-duration: 500ms
+          animation-iteration-count: infinite
+          animation-timing-function: linear
+      @keyframes spin
+          from
+            transform: rotate(0deg)
+          to
+            transform: rotate(360deg)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30rem)
+
+  header[role="banner"]
+    div.wrap
+      div.logo
+        svg
+          width: var(--buffer)
+          height: var(--buffer)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  header[role="banner"]
     height: var(--shim-2x)
-    background-color: $logo-color
-    border-radius: 50%
-    svg
-      width: var(--shim-p)
-      height: var(--shim-p)
-      fill: $shock-color
-      &:hover
-        animation-name: spin
-        animation-duration: 500ms
-        animation-iteration-count: infinite
-        animation-timing-function: linear
-    @keyframes spin
-        from
-          transform: rotate(0deg)
-        to
-          transform: rotate(360deg)
-  div.dash
-    flex: 1
+    div.wrap
+      margin-bottom: calc(var(--shim-2x) * -1)
+      div.logo
+        width: var(--shim-2x)
+        height: var(--shim-2x)
+        background-color: $logo-color
+        border-radius: 50%
+        svg
+          width: var(--shim-p)
+          height: var(--shim-p)
+          fill: $shock-color
+          filter: none

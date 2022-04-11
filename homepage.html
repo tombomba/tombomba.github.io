@@ -9,12 +9,16 @@ permalink: /index.html
 
 <main role="main">
 
-{% for p in site.posts limit:10 %}
-  <article class="post"><!-- {{ p.content | number_of_words }}-->
-      {% include post-detail.html page=p content=p.content is_home=true %}
-      <p class="permalink"><a href="{{ p.url | absolute_url }}">&#9679;</a></p>
+  <article class="post"><!-- {{ site.posts.first.content | number_of_words }}-->
+  {% include post-detail.html page=site.posts.first content=site.posts.first.content is_home=true %}
   </article>
-{% endfor -%}
+
+  <aside class="home">
+    {% for p in site.posts limit:7 offset:1 %}
+      {% include _section.html title=p.title text=p.excerpt url=p.url htag='h2' %}
+    {% endfor -%}
+
+  </aside>
 
 </main>
 

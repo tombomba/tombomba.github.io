@@ -5,3 +5,59 @@
 @charset "utf-8"
 @import reset, font, color, body, banner, article, footer, media
 
+article
+  div.hed
+    margin-top: var(--buffer)
+    padding-bottom: var(--buffer)
+    border-bottom: thin dashed $border-dark
+    h1
+      font-size: var(--hed-size)
+      line-height: var(--hed-lh)
+      text-align: center
+      a:link, a:visited
+        color: $text-color
+    div.byline
+      margin-top: var(--shim-n)
+      text-align: center
+      p
+        display: inline
+        margin: 0
+        font-size: var(--font-size-sm)
+        color: $mix-color
+        &:nth-of-type(2)::before
+          content: '\0020/\0020'
+          color: $mix-color
+
+article > p:first-of-type
+  margin-top: var(--shim-p)
+
+aside.home
+  margin-top: var(--buffer)
+  border-top: thin dashed $border-dark
+  section
+    margin-top: var(--shim)
+    &:first-of-type
+      margin-top: var(--buffer)
+    h2
+      font-size: 1em
+      font-weight: 400
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 20rem)
+
+  article
+    div.hed
+      h1
+        font-size: var(--hed-size-md)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30rem)
+
+  article
+    div.hed
+      margin-top: var(--shim-2x)
+      padding: 0 var(--shim) var(--shim-2x) var(--shim)
+      div.byline
+        margin-top: 1em

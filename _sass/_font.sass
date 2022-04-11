@@ -19,19 +19,17 @@ $system: system, system-ui, -apple-system, BlinkMacSystemFont, ".SFNSText-Regula
 
 \:root
 
-  --page-width: 32em
+  --page-width: 34em
 
   --font-size: 100%
   --font-size-xs: 81.3%
   --font-size-sm: 87.5%
-  --font-size-xx: 112.5%
-  --font-lh: 1.6875
 
-  --hed-size: 125%
-  --hed-size-sm: 112.5%
+  --hed-size-lg: 206.25%
   --hed-size-md: 162.5%
-  --hed-size-lg: 206.3%
-  --hed-size-xl: 262.5%
+  --hed-size: 125%
+
+  --font-lh: 1.6875
   --hed-lh: 1.34375
 
   --shim: 1.6875em
@@ -49,32 +47,59 @@ $system: system, system-ui, -apple-system, BlinkMacSystemFont, ".SFNSText-Regula
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 30rem)
+@media screen and (min-width: 20rem)
 
   \:root
 
-    --page-width: 37.389em
+    --font-size: 106.25%
+    --font-size-sm: 88.235294117%
+    --font-size-xs: 76.470588235%
+
+    --hed-size-lg: 205.882352941%
+    --hed-size-md: 164.705882353%
+    --hed-size: 129.411764706%
+
+    --font-lh: 1.64705882353
+    --hed-lh: 1.32352941176
+
+    --shim: 1.64705882353em
+    --nudge: 0.32352941176em
+
+    --shim-n: 1.32352941176em
+    --shim-p: 1.97058823529em
+
+    --shim-2x: 3.29411764706em
+    --shim-3x: 4.94117647059em
+    --shim-4x: 6.58823529412em
+
+    --buffer: 2.64705882352em
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 60rem)
+
+  \:root
 
     --font-size: 112.5%
-    --font-size-sm: 88.88%
-    --font-size-xs: 77.77%
-    --font-size-xx: 111.1111%
-    --font-lh: 1.83
+    --font-size-sm: 88.235294117%
+    --font-size-xs: 76.470588235%
 
-    --hed-size: 127.8%
-    --hed-size-sm: 111.11%
-    --hed-size-md: 161.1%
-    --hed-size-lg: 205.6%
-    --hed-size-xl: 261.1%
-    --hed-lh: 1.415
+    --hed-size-lg: 205.555555556%
+    --hed-size-md: 161.111111111%
+    --hed-size: 127.777777778%
 
-    --shim: 1.83em
-    --nudge: 0.415em
+    --font-lh: 1.66666666667
+    --hed-lh: 1.33333333333
 
-    --shim-n: 1.415em
-    --shim-p: 2.245em
+    --shim: 1.66666666667em
+    --nudge: 0.33333333333em
 
-    --shim-2x: 3.66em
-    --shim-4x: 7.32em
+    --shim-n: 1.33333333333em
+    --shim-p: 2em
 
-    --buffer: 2.83em
+    --shim-2x: 3.33333333334em
+    --shim-3x: 5.00000000001em
+    --shim-4x: 6.66666666668em
+
+    --buffer: 2.66666666666em
+

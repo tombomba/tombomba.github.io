@@ -48,19 +48,21 @@ div.hr
   border: 0
   height: 0
   border-top: thin solid $border-dark
-  border-bottom: medium solid $border-light
+  //border-bottom: medium solid $border-light
   background-color: $body-color
-  &.buffer
-    margin-top: calc(var(--shim-2x) + 1px)
-    width: var(--shim-4x)
-    font-size: 1em
 
+div.dash
+  margin: 0
+  padding: 0
+  border: 0
+  height: 0
+  border-top: thin dashed $border-dark
+  background-color: $body-color
+ 
 .permalink
   display: flex
   align-items: center
-  font-size: 20px
+  font-size: 1em
   line-height: 1
-  color: $mix-color
   a:link, a:visited
-    color: $mix-color
     text-decoration: none

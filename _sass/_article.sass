@@ -1,32 +1,18 @@
 article
   max-width: var(--page-width)
-  margin: var(--shim-2x) auto 0 auto
-  &:not(:first-of-type)
-    margin-top: var(--shim-3x)
+  margin-left: auto
+  margin-right: auto
   @extend .clearfix
 
-  div.hed
-    h1
-      font-size: var(--hed-size)
-      line-height: var(--hed-lh)
-      a:link, a:visited
-        color: $text-color
-        text-decoration: none
-      a:hover
-        text-decoration: underline
-    p
-      margin: 0
-      color: $mix-color
-
   h2, h3, h4, h5, h6
-    margin-top: var(--shim-n)
+    margin-top: var(--shim)
     font-size: 1em
 
   p
-    margin-top: var(--shim-n)
+    margin-top: var(--shim)
   
   ul, ol
-    margin: var(--shim) 0 0 var(--shim-n)
+    margin: var(--shim) 0 0 var(--shim)
     li
       margin-top: 0
     &.plain
@@ -34,7 +20,7 @@ article
         margin-top: 0
   
   blockquote
-    padding-left: var(--shim-n)
+    padding-left: var(--shim)
     border-left: thin solid $border-dark
   
   blockquote,
@@ -49,16 +35,12 @@ article
       margin: 0
 
 article.archive
-  margin-top: var(--shim-2x)
   section
     margin-top: var(--shim)
     h1, h2, h3, p
       margin: 0
       font-size: 1em
       font-weight: 400
-
-article.about
-  margin-top: var(--shim-2x)
 
 article.error
   margin-top: var(--shim-2x)

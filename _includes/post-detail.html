@@ -7,6 +7,10 @@
 
   <div class="hed">
     <h1>{{ titlestring }}</h1>
+    <div class="byline">
+      <p>{{ p.author | default: site.author }}</p>
+      <p><time datetime="{{ p.date | date: '%FT%T%:z' }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time></p>
+    </div>
   </div>
 
   {{ copy }}

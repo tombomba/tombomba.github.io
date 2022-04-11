@@ -11,14 +11,13 @@ permalink: /index.html
 
   <article class="post"><!-- {{ site.posts.first.content | number_of_words }}-->
   {% include post-detail.html page=site.posts.first content=site.posts.first.content is_home=true %}
-  </article>
-
-  <aside class="home">
+   <aside class="nextprev">
     {% for p in site.posts limit:7 offset:1 %}
       {% include _section.html title=p.title text=p.excerpt url=p.url htag='h2' %}
     {% endfor -%}
 
   </aside>
+  </article>
 
 </main>
 

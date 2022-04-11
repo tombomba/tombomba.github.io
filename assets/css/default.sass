@@ -7,9 +7,7 @@
 
 article
   div.hed
-    margin-top: var(--buffer)
-    padding-bottom: var(--buffer)
-    border-bottom: thin dashed $border-dark
+    margin: var(--shim-2x) 0 var(--shim-p) 0
     h1
       font-size: var(--hed-size)
       line-height: var(--hed-lh)
@@ -28,23 +26,17 @@ article
           content: '\0020/\0020'
           color: $mix-color
 
-article > p:first-of-type
-  margin-top: var(--shim-p)
-
-aside.home
-  margin-top: var(--buffer)
+aside.nextprev
+  max-width: var(--page-width)
+  margin: var(--shim-2x) auto 0 auto
   border-top: thin dashed $border-dark
   section
-    margin-top: var(--shim)
     &:first-of-type
-      margin-top: var(--buffer)
-    h2
-      font-size: 1em
-      font-weight: 400
+      margin-top: var(--shim-2x)
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 20rem)
+@media screen and (min-width: 30rem)
 
   article
     div.hed
@@ -53,11 +45,10 @@ aside.home
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 30rem)
+@media screen and (min-width: 40rem)
 
   article
     div.hed
-      margin-top: calc(var(--shim-2x) - var(--nudge))
-      padding: 0 var(--shim-n) var(--shim-2x) var(--shim-n)
-      div.byline
-        margin-top: 1em
+      margin: var(--shim-3x) 0 var(--shim-2x) 0
+      div.byline.thin
+        margin-top: var(--nudge)

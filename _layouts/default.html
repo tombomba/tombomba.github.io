@@ -36,12 +36,12 @@
   <meta name="twitter:image:src" content="{{ page.image.file | default: 'default-social.jpg' | prepend: site.img }}">
 
   <!-- css -->
-  <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css | append: '.css' }}?v={{ site.time | date: '%T' | remove: ':' }}">
+  <link rel="stylesheet" href="{{ page.style | default: page.layout | prepend: site.css | append: '.css' }}?v={{ site.time | date: '%T' | remove: ':' }}">
 
   <!-- goog -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rock+3D&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sarina&display=swap&text={{ site.title | remove: ' ' | downcase }}" rel="stylesheet">
 
 </head>
 

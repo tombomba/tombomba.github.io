@@ -10,7 +10,7 @@ body
   -ms-text-size-adjust: auto
   -webkit-text-size-adjust: auto
 
-  padding: 0 1em
+  padding: 1em
 
 main[role="main"]
   margin: 0 auto
@@ -48,27 +48,25 @@ section
   a:hover
     text-decoration: underline
 
-div.hr
+.hr
   margin: 0
   padding: 0
   border: 0
   height: 0
   border-top: thin solid $border-dark
-  //border-bottom: medium solid $border-light
+  border-bottom: medium solid $border-light
   background-color: $body-color
 
-div.dash
-  margin: 0
-  padding: 0
-  border: 0
-  height: 0
-  border-top: thin dashed $border-dark
-  background-color: $body-color
- 
-.permalink
-  display: flex
-  align-items: center
-  font-size: 1em
-  line-height: 1
-  a:link, a:visited
-    text-decoration: none
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 32rem)
+
+  body
+    padding: var(--shim)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  body
+    padding-bottom: var(--shim-2x)

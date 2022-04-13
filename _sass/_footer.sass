@@ -1,35 +1,15 @@
 footer
   max-width: var(--page-width)
-  margin: var(--buffer) auto 1em auto
-  border-top: thin dashed $border-dark
+  margin: 0 auto
   ul
-    margin: 1em 0 0 0
+    margin: 0 0 0
     display: flex
-    flex-flow: column
-    align-items: center
-    justify-content: center
+    flex-flow: row wrap
     list-style-type: none
     li
+      margin-right: 0.66em
+  div.copydate
+    margin-top: var(--shim)
+    p
+      font-size: var(--font-size-sm)
       color: $mix-color
-      &.copydate
-        order: 99
-        margin-top: 1em
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 30rem)
-
-  footer
-    margin-bottom: var(--shim)
-    ul.socials
-      flex-flow: row wrap
-      justify-content: center
-      li
-        font-size: var(--font-size-sm)
-        &.copydate
-          order: -1
-          margin: 0
-        &:not(:last-of-type)::after
-          content: '-'
-          padding: 0 0.33em
-          color: $mix-color

@@ -1,49 +1,36 @@
 header[role="banner"]
   max-width: var(--page-width)
   margin: 0 auto
-  height: var(--buffer)
   display: flex
   align-items: center
-  justify-content: center
-  border-bottom: thin dashed $border-dark
-  div.wrap
-    margin-bottom: calc(var(--buffer) * -1)
-    padding: 0 1em
-    background-color: $body-color
-    div.logo
-      position: relative
-      display: flex
-      align-items: center
-      justify-content: center
-      width: var(--buffer)
-      height: var(--buffer)
-      background-color: $logo-color
-      border-radius: 50%
-      svg
-        width: var(--shim)
-        height: var(--shim)
-        fill: $shock-color
-      span
-        position: absolute 
-        width: 100%
-        height: 100%
-        top: 0
-        left: 0
-        z-index: 1
+  justify-content: space-between
+  div.logo
+    display: flex
+    align-items: center
+    justify-content: space-between
+    transform: rotate(-10deg)
+    svg
+      $shock-2: rgba($shock-color, 0.5)
+      width: var(--shim-2x)
+      height: var(--shim-2x)
+      fill: $logo-color
+      filter: drop-shadow(0 -1em $shock-color) drop-shadow(0 -2em $shock-2)
+      opacity: 0.8
+      &:hover
+        opacity: 1
+  div.sparkles
+    margin-top: 3px
+    transform: rotate(5deg)
+    &::after
+      content: '*:･ﾟ✧*:･ﾟ✧'
+      color: $shadow-color
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40rem)
 
   header[role="banner"]
-    div.wrap
-      div.logo:hover
-        animation-name: spin
-        animation-duration: 1000ms
-        animation-iteration-count: infinite
-        animation-timing-function: linear
-      @keyframes spin 
-        from
-          transform: rotate(0deg)
-        to 
-          transform: rotate(360deg)
+    div.logo
+      margin-left: -1em
+    div.sparkles
+      margin-right: -1em

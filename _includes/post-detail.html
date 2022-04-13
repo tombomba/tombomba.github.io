@@ -3,14 +3,8 @@
 
 {% include _widont.html title=p.title url=p.url is_home=include.is_home %}
 
-  <div class="hed {% if p.image %}thin{% else %}fat{% endif %}">
-    <h1>{{ titlestring }}</h1>
-    <div class="byline">
-      <p> {{ p.author | default: site.author }}</p>
-      <p><time datetime="{{ p.date | date: '%FT%T%:z' }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time></p>
-    </div>
-  </div>
-
   {% if p.image %}{% include _imagef.html image=p.image %}{% endif -%}
+
+  <div class="hed"><h1>{{ titlestring }}</h1></div>
 
   {{ copy }}

@@ -6,16 +6,11 @@ layout: default
 
 <main role="main">
 
-  <article class="{{ page.label | default: page.layout }}"><!-- wc: {{ content | number_of_words }} -->
+  <article class="{{ page.label | default: page.layout }}"><!--{{ content | number_of_words }}-->
 
   {% include post-detail.html page=page content=content %}
 
   </article>
-
-  <aside class="nextprev">
-    {% if page.previous %}{% include _section.html title=page.previous.title text=page.previous.excerpt url=page.previous.url htag='h2' %}{% endif -%}
-    {% if page.next %}{% include _section.html title=page.next.title text=page.next.excerpt url=page.next.url htag='h2' %}{% endif -%}
-  </aside>
 
 </main>
 

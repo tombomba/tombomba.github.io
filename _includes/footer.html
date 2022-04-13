@@ -1,9 +1,18 @@
 <footer class="{{ page.label | default: page.layout }}">
 
-  <ul class="socials">
-    <li class="copydate">Copyright &copy; {{ site.posts.first.date | date: '%Y'}} {{ site.author }}</li>
+  <ul>
+    {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}
     <li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li>
     <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
   </ul>
+
+  <div class="copydate">
+    {% if page.is_post %}
+      <p>This page published {{ page.date | date_to_long_string }}</p>
+    {% else %}
+      <p>Site updated {{ site.time | date_to_long_string }}</p>
+    {% endif %}
+    <p>Copyright &copy; {{ site.author }}</p>
+  </div>
   
 </footer>

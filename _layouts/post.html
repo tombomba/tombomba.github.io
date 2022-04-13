@@ -12,11 +12,9 @@ layout: default
 
   </article>
 
-  <aside class="recents">
-    <div class="nextprev">
-      {% if page.previous %}{% include _section.html title=page.previous.title text=page.previous.excerpt url=page.previous.url htag='h2' %}{% endif -%}
-      {% if page.next %}{% include _section.html title=page.next.title text=page.next.excerpt url=page.next.url htag='h2' %}{% endif -%}
-    </div>
+  <aside class="nextprev">
+    {% if page.previous %}{% include _section.html title=page.previous.title text=page.previous.excerpt url=page.previous.url htag='h2' %}{% endif -%}
+    {% if page.next %}{% include _section.html title=page.next.title text=page.next.excerpt url=page.next.url htag='h2' %}{% endif -%}
   </aside>
 
 </main>

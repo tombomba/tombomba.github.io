@@ -7,9 +7,10 @@
 
 article.post
   div.hed
-    margin: var(--shim-2x) 0 var(--shim-p) 0
-    padding-bottom: var(--shim-p)
-    border-bottom: thin dashed $border-dark
+    margin: var(--shim-2x) 0 var(--shim) 0
+    &.fat
+      padding-bottom: var(--shim)
+      border-bottom: thin dashed $border-dark
     h1
       font-size: var(--hed-size)
       line-height: var(--hed-lh)
@@ -42,7 +43,7 @@ aside.nextprev
     div.hed
       margin-top: var(--shim-3x)
 
-  aside.recents
+  aside.nextprev
     margin-top: var(--shim-2x)
     section:first-of-type
       margin-top: var(--shim-2x)

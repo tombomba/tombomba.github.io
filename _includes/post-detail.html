@@ -3,7 +3,7 @@
 
 {% include _widont.html title=p.title url=p.url is_home=include.is_home %}
 
-  <div class="hed">
+  <div class="hed {% if p.image %}thin{% else %}fat{% endif %}">
     <h1>{{ titlestring }}</h1>
     <div class="byline">
       <p> {{ p.author | default: site.author }}</p>

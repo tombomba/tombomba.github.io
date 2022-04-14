@@ -39,9 +39,6 @@ footer
 @media screen and (min-width: 30rem)
 
   footer.alt
-    margin-top: var(--shim-3x)
-    &.about
-      margin-top: var(--shim-2x)
     ul
       margin-top: 1em
       flex-flow: row wrap
@@ -53,3 +50,12 @@ footer
         &:not(:last-of-type)::after
           content: '-'
           padding: 0 var(--nudge)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  footer.alt
+    margin-top: var(--shim-3x)
+    &.about
+      margin-top: var(--shim-2x)

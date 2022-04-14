@@ -1,0 +1,18 @@
+{% assign myfig = include.image.style | split: ' ' -%}
+{% assign figstyle = myfig[0] | strip -%}
+{% assign figratio = myfig[1] | strip -%}
+{% assign figfloat = myfig[2] | strip -%}
+
+{% if figstyle == 'wide' %}
+
+<figure class="image--wide {{ figratio | default: 'square' }}--wide">
+  <img src="{{ include.image.file | prepend: site.img }}" class="fixed" alt="{{ include.image.alt }}">
+</figure>
+
+{% elsif figstyle == 'narrow' -%}
+
+<figure class="image--narrow {{ figfloat | default: 'right' }}">
+  <img src="{{ include.image.file | prepend: site.img }}" class="{{ figratio | default: 'square' }}--narrow" alt="{{ include.image.alt }}">
+</figure>
+
+{% endif -%}

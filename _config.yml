@@ -26,7 +26,7 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: post
+      layout: post-2
       is_post: true
  
 markdown: kramdown

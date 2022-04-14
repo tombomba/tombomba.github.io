@@ -28,13 +28,11 @@ article.home
     margin-top: var(--buffer)
     &:first-of-type
       margin: 0
-    div.image--thumb
-      float: right
-      margin: var(--nudge) 0 1em 1em
     div.text
+      margin-top: 1em
       h1, h2, h3, h4, h5, h6, p
-        font-size: 1em
         display: inline
+        font-size: 1em
       p
         margin: 0
 
@@ -46,26 +44,18 @@ article.about
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 20rem)
-
-  article.home
-      section
-        div.text
-          h1, h2, h3, h4, h5, h6, p
-            display: block
-
-//-----------------------------------------------------------------------------
-
 @media screen and (min-width: 30rem)
 
   article.home
     section
-      margin-top: var(--shim)
       display: flex
       div.image--thumb
-        margin: var(--nudge) 1em 0 0
+        img
+          margin-right: 1em
       div.text
-        margin-top: 0
+        margin: 0
+        h1, h2, h3, h4, h5, h6, p
+          display: block
 
 //-----------------------------------------------------------------------------
 
@@ -79,8 +69,5 @@ article.about
     section
       align-items: center
       div.image--thumb
-        margin-right: var(--shim-n)
         img
-          --width: var(--shim-4x)
-      div.text
-        margin-top: 0
+          margin-right: var(--shim-n)

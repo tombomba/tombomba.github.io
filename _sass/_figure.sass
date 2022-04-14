@@ -32,11 +32,11 @@ figure
 
 .image--thumb
   img
-    --width: 220px
+    --width: 200px
     display: block
     margin: 0
     width: var(--width)
-    height: var(--width)
+    height: calc(var(--width) / 1.77)
     object-fit: cover
     object-position: 50% 50%
     border-radius: 4px
@@ -66,7 +66,8 @@ figure
 
 @media screen and (min-width: 20rem)
 
-  .image--narrow
+  .image--narrow,
+  .image--thumb
     img
       --width: 280px
 
@@ -76,7 +77,12 @@ figure
 
   .image--narrow
     img
-      --width: 320px
+      --width: 420px
+
+  .image--thumb
+    img
+      width: var(--shim-4x)
+      height: var(--shim-4x)
 
 //-----------------------------------------------------------------------------
 

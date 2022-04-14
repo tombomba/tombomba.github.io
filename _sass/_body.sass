@@ -10,7 +10,7 @@ body
   -ms-text-size-adjust: auto
   -webkit-text-size-adjust: auto
 
-  padding: 1em
+  padding: 0 1em
 
 main[role="main"]
   margin: 0 auto
@@ -31,20 +31,11 @@ a
 \::selection
   background: $select-color
 
-section
-  h1, h2, h3, h4, h5, h6
-    font-size: 1em
-    font-weight: 400
-  p
-    margin: 0
-
 .daystamp
   white-space: nowrap
   font-style: italic
-  color: $mix-color
   a:link, a:visited
     text-decoration: none
-    color: $mix-color
   a:hover
     text-decoration: underline
 
@@ -62,11 +53,4 @@ section
 @media screen and (min-width: 32rem)
 
   body
-    padding: var(--shim)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
-  body
-    padding-bottom: var(--shim-2x)
+    padding: 0 var(--shim)

@@ -1,0 +1,26 @@
+---
+layout: default
+---
+{% include banner.html %}
+{% include _widont.html title=page.title %}
+{% assign copy = page.content | strip | normalize_whitespace -%}
+
+<main role="main">
+
+  <article class="{{ page.label | default: page.layout }}"><!--{{ content | number_of_words }}-->
+
+    {% if page.image %}
+      {% include _figure.html image=page.image %}
+      {% if page.image.style contains 'wide' %}{% assign hedsize = 'micro' %}{% endif %}
+    {% endif -%}
+
+    {% capture hedbox %}<header class="{{ hedsize | default: 'text' }}"><h1>{{ titlestring }}</h1><p>{% endcapture -%}
+    {% assign copy = copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hedbox -%}
+  
+    {{ copy }}
+
+  </article>
+
+</main>
+
+{% include footer.html %}

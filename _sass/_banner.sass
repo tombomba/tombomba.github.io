@@ -1,29 +1,40 @@
 header[role="banner"]
   max-width: var(--page-width)
-  margin: 0 auto
+  margin: var(--shim) auto 0 auto
   display: flex
   align-items: center
   justify-content: space-between
+  --logo-size: var(--buffer)
   div.logo
     display: flex
     align-items: center
-    justify-content: space-between
     transform: rotate(-10deg)
     svg
+      width: var(--logo-size)
+      height: var(--logo-size)
       $shock-2: rgba($shock-color, 0.5)
-      width: var(--shim-2x)
-      height: var(--shim-2x)
       fill: $logo-color
       filter: drop-shadow(0 -1em $shock-color) drop-shadow(0 -2em $shock-2)
       opacity: 0.8
       &:hover
         opacity: 1
-  div.sparkles
-    margin-top: 3px
-    transform: rotate(5deg)
+    &.home,
+    &.page
+      --logo-size: var(--shim-2x)
+  div.doodad
+    color: $shadow-color
+    &.left,
+    &.right
+      transform: rotate(3deg)
     &::after
       content: '*:･ﾟ✧*:･ﾟ✧'
-      color: $shadow-color
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  div.doodad
+    margin-top: 3px
 
 //-----------------------------------------------------------------------------
 
@@ -31,6 +42,6 @@ header[role="banner"]
 
   header[role="banner"]
     div.logo
-      margin-left: -1em
-    div.sparkles
+      margin-left: calc(var(--nudge) * -1)
+    div.doodad.right
       margin-right: -1em

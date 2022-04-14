@@ -16,7 +16,7 @@ I am not a journalist. I have no bona fides. But I do like to talk about the med
 
 <main role="main">
   <article class="about">
-    <div class="hed"><h1>{{ page.title }}</h1></div>
+    <header><h1>{{ page.title }}</h1></header>
     {{ bio | strip | smartify | markdownify | normalize_whitespace }}
   </article>
 </main>

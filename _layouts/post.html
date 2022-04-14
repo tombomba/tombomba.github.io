@@ -11,7 +11,9 @@ layout: default
 
     {% if page.image %}
       {% include _figure.html image=page.image %}
-      {% if page.image.style contains 'wide' %}{% assign hedsize = 'micro' %}{% endif %}
+      {% if page.image.style contains 'wide' or page.image.style contains 'flush' %}
+        {% assign hedsize = 'micro' %}
+      {% endif -%}
     {% endif -%}
 
     {% capture hedbox %}<header class="{{ hedsize | default: 'text' }}"><h1>{{ titlestring }}</h1><p>{% endcapture -%}

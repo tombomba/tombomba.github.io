@@ -11,7 +11,8 @@ permalink: /index.html
 
   <article class="home">
   {% for p in site.posts limit:10 %}
-    {% include _section.html title=p.title text=p.excerpt url=p.url htag='h2' %}
+    {% assign htxt = p.description | default: p.excerpt | strip %}
+    {% include _section.html title=p.title image=p.image text=htxt url=p.url %}
   {% endfor -%} 
   </article>
 

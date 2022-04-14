@@ -3,22 +3,70 @@
 ---
 
 @charset "utf-8"
-@import reset, font, color, body, banner, article, footer, media
+@import reset, font, color, body, banner, newfig, article, footer
 
-article.post,
-article.about
-  div.hed
+article.post-2
+  margin-top: var(--shim-2x)
+
+  header.text
     h1
-      font-size: var(--font-size-xx)
+      font-size: var(--hed-size)
       line-height: var(--hed-lh)
-  div.figure
-    margin: var(--shim-p) 0
 
-aside.nextprev
-  max-width: var(--page-width)
-  margin: var(--buffer) auto 0 auto
-  border-top: thin dashed $border-dark
+  header.micro
+    h1, p
+      display: inline
+      font-size: 1em
+      line-height: var(--font-lh)
+    h1::after
+      content: '\0020\2014\0020'
+      font-weight: 400
+      color: $mix-color
+
+article.home
   section
-    margin-top: var(--shim)
+    margin-top: var(--shim-2x)
     &:first-of-type
-      margin-top: var(--buffer)
+      margin: 0
+    div.text
+      margin-top: var(--shim-n)
+      h1, h2, h3, h4, h5, h6, p
+        font-size: 1em
+        display: inline
+      p
+        margin: 0
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30rem)
+
+  article.home
+    section
+      margin-top: var(--shim)
+      display: flex
+      div.image--thumb
+        margin: var(--nudge) 1em 0 0
+        img
+          --width: var(--shim-3x)
+      div.text
+        margin-top: 0
+        h1, h2, h3, h4, h5, h6, p
+          display: block
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  article.post-2
+    header.text
+      padding-top: var(--shim)
+
+  article.home
+    section
+      align-items: center
+      div.image--thumb
+        margin-right: var(--shim-n)
+        img
+          --width: var(--shim-4x)
+      div.text
+        margin-top: 0

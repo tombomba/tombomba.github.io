@@ -92,35 +92,35 @@ figure
     float: left
     img
       --width: 200px
-      margin: 0 1em 1em 0
+      margin: 0 var(--shim-n) 1em 0
+      transform: rotate(-3deg)
 
   .image--narrow.right
     float: right
     img
       --width: 200px
-      margin: 0 0 1em 1em
+      margin: 0 0 1em var(--shim-n)
+      transform: rotate(3deg)
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 60rem)
+@media screen and (min-width: 50rem)
 
   .image--narrow.left
     img
       --width: 220px
       margin-left: calc(var(--shim) * -1)
       margin-right: var(--shim)
-      transform: rotate(-3deg)
 
   .image--narrow.right
     img
       --width: 220px
       margin-right: -1em
       margin-left: var(--shim)
-      transform: rotate(3deg)
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 60rem)
+@media screen and (min-width: 70rem)
 
   .image--narrow.left
     img

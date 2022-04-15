@@ -32,7 +32,7 @@ layout: default
       <div class="hr"></div>
       {% for x in site.posts limit:3 offset:1 %}
         {% assign xtxt = x.description | default: x.excerpt | strip | truncatewords: 22 %}
-        {% include _section.html title=x.title image=x.image text=xtxt url=p.url %}
+        {% include _section.html title=x.title image=x.image text=xtxt url=x.url %}
       {% endfor -%}
     </aside>
   {% else %}

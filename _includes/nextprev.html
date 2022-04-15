@@ -1,0 +1,11 @@
+<aside class="nextprev">
+  <div class="hr"></div>
+  {% if include.previous %}
+    {% assign ptxt = include.previous.description | default: include.previous.excerpt | strip | truncatewords: 22 %}
+    {% include _section.html title=include.previous.title image=include.previous.image text=ptxt url=include.previous.url %}
+  {% endif %}
+  {% if include.next %}
+    {% assign ntxt = include.next.description | default: include.next.excerpt | strip | truncatewords: 22 %}
+    {% include _section.html title=include.next.title image=include.next.image text=ntxt url=include.next.url %}
+  {% endif %} 
+</aside>

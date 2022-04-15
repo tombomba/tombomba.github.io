@@ -2,7 +2,6 @@
 layout: default
 ---
 {% include banner.html %}
-{% include _widont.html title=page.title %}
 {% assign copy = page.content | strip | normalize_whitespace -%}
 
 {% capture datestring %}&#32;<span class="daystamp">(<time datetime="{{ page.date | date: '%FT%T%:z' }}" pubdate itemprop="datePublished">{{ page.date | date: '%d %b' }}</time>)</span>{% endcapture -%}
@@ -17,12 +16,14 @@ layout: default
       {% include _figure.html image=page.image %}
     {% endif -%}
 
-    {% capture hedbox %}<header><h1>{{ titlestring }}</h1><p>{% endcapture -%}
+    {% capture hedbox %}<header><h1>{{ page.title | strip | smartify | normalize_whitespace }}</h1><p>{% endcapture -%}
     {% assign copy = copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hedbox -%}
     
     {{ copy }}
 
   </article>
+
+  {% include nextprev.html previous=page.previous next=page.next %}
 
 </main>
 

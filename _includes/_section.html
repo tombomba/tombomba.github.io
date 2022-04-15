@@ -2,9 +2,9 @@
 
 <section>
 
-  {% if include.image %}
-    <div class="image--thumb"><a href="{{ include.url | absolute_url }}"><img src="{{ include.image.file | prepend: site.img }}" class="square--narrow" alt="{{ include.image.alt }}"></a></div>
-  {% endif -%}
+  <div class="image--thumb">
+    <a href="{{ include.url | absolute_url }}"><img src="{{ include.image.file | default: 'shim.gif' | prepend: site.img }}" class="square--narrow" alt="{{ include.image.alt }}"></a>
+  </div>
 
   <div class="text">
    <{{ htag }}><a href="{{ include.url | absolute_url }}">{{ include.title | strip | smartify }}</a></{{ htag }}>

@@ -1,6 +1,6 @@
 <header role="banner" class="icon {{ page.label | default: page.layout }}">
   <div class="logo {% if page.is_home %}home{% elsif page.is_post %}post{% else %}page{% endif %}">
-     <a href="{{ site.url }}" aria-label="{{ site.title }} homepage">{% include icon-skull.svg %}<span></span></a>
+     <a href="{{ site.url }}" aria-label="{{ site.title }} homepage">{% include skull.svg %}<span></span></a>
   </div>
   <div class="doodad {{ page.image.style | default: 'nofx' }}"></div>
 </header>

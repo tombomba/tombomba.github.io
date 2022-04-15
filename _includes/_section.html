@@ -2,9 +2,11 @@
 
 <section>
 
-  <div class="image--thumb">
-    <a href="{{ include.url | absolute_url }}"><img src="{{ include.image.file | default: 'shim.gif' | prepend: site.img }}" class="square--narrow" alt="{{ include.image.alt }}"></a>
-  </div>
+  {% if include.image.file %}
+    <div class="image--thumb"><a href="{{ include.url | absolute_url }}"><img src="{{ include.image.file | default: 'shim.gif' | prepend: site.img }}" class="square--narrow" alt="{{ include.image.alt }}"></a></div>
+  {% else -%}
+    <div class="image--default"><a href="{{ include.url | absolute_url }}">{% include skull.svg %}<span></span></a></div>
+  {% endif -%}
 
   <div class="text">
    <{{ htag }}><a href="{{ include.url | absolute_url }}">{{ include.title | strip | smartify }}</a></{{ htag }}>

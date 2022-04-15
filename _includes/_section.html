@@ -3,9 +3,9 @@
 <section>
 
   {% if include.image.file %}
-    <div class="image--thumb"><a href="{{ include.url | absolute_url }}"><img src="{{ include.image.file | default: 'shim.gif' | prepend: site.img }}" class="square--narrow" alt="{{ include.image.alt }}"></a></div>
+    <div class="image--thumb"><a href="{{ include.url | absolute_url }}"><img src="{{ include.image.file | prepend: site.img }}" class="square--narrow" alt="{{ include.image.alt }}"></a></div>
   {% else -%}
-    <div class="image--default"><a href="{{ include.url | absolute_url }}">{% include skull.svg %}<span></span></a></div>
+    <div class="image--default"><a href="{{ include.url | absolute_url }}">{% include icon-message.svg %}<span></span></a></div>
   {% endif -%}
 
   <div class="text">

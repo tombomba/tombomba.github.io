@@ -8,7 +8,7 @@ header[role="banner"]
   div.logo
     display: flex
     align-items: center
-    transform: rotate(-10deg)
+    transform: rotate(-8deg)
     svg
       width: var(--logo-size)
       height: var(--logo-size)
@@ -31,7 +31,7 @@ header[role="banner"]
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 40rem)
+@media screen and (min-width: 30rem)
 
   div.doodad
     margin-top: 3px
@@ -45,3 +45,10 @@ header[role="banner"]
       margin-left: calc(var(--nudge) * -1)
     div.doodad.right
       margin-right: -1em
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50rem)
+
+  div.doodad.right
+    margin-right: calc(var(--shim) * -1)

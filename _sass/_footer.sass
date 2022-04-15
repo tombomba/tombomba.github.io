@@ -22,7 +22,8 @@ footer
       max-width: var(--shim-4x)
 
   &.alt
-    margin: var(--shim-2x) auto var(--shim) auto
+    max-width: calc(var(--page-width) + var(--shim-4x))
+    margin: var(--shim-2x) auto var(--shim-p) auto
     ul
       margin-top: var(--shim)
       flex-flow: column
@@ -31,6 +32,7 @@ footer
         &.copydate
           order: 99
           margin-top: 1em
+          font-style: italic
 
 //-----------------------------------------------------------------------------
 

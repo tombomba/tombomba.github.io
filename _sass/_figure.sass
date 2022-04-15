@@ -21,7 +21,7 @@ figure
 .image--narrow
   img
     display: block
-    margin-bottom: var(--shim-p)
+    margin-bottom: var(--shim)
     width: var(--width)
     height: var(--height)
     object-fit: cover
@@ -50,12 +50,12 @@ figure
   justify-content: center
   width: var(--width)
   height: calc(var(--width) / 1.77)
-  background-color: $link-color
+  background-color: $shock-color
   border-radius: 4px
   svg
-    width: var(--buffer)
-    height: var(--buffer)
-    fill: $border-light
+    width: var(--shim-p)
+    height: var(--shim-p)
+    fill: $logo-color
   span
     position: absolute 
     width: 100%
@@ -75,7 +75,11 @@ figure
   padding-top: 100%
 
 .boxed--narrow
+  --height: calc(var(--width) / 1.85)
+.hidef--narrow
   --height: calc(var(--width) / 1.77)
+.golden--narrow
+  --height: calc(var(--width) / 1.618)
 .poster--narrow
   --height: calc(var(--width) * 1.5)
 .academy--narrow

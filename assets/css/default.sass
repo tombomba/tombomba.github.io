@@ -6,28 +6,29 @@
 @import reset, font, color, body, banner, figure, article, footer
 
 article.post
-  margin-top: var(--shim-2x)
-
-  header.text
+  header
     h1
       font-size: var(--hed-size)
       line-height: var(--hed-lh)
 
-  header.micro
+article.micro
+  header
     h1, p
       display: inline
       font-size: 1em
       line-height: var(--font-lh)
     h1::after
-      content: '\0020\2014\0020'
+      content: '\00A0\2014\0020'
       font-weight: 400
       color: $mix-color
 
-article.home
+article.home,
+aside.nextprev,
+aside.recents
   section
     margin-top: var(--buffer)
     &:first-of-type
-      margin: 0
+      margin-top: 0
     div.text
       margin-top: 1em
       h1, h2, h3, h4, h5, h6, p
@@ -43,11 +44,26 @@ article.about
       font-size: var(--hed-size)
       line-height: var(--hed-lh)
 
+aside.nextprev,
+aside.recents
+  max-width: calc(var(--page-width) + var(--shim-4x))
+  margin: var(--shim-2x) auto 0 auto
+  padding-top: 3px
+  section
+    max-width: var(--page-width)
+    margin-left: auto
+    margin-right: auto
+    &:first-of-type
+      margin-top: var(--shim-p)
+      padding-top: var(--nudge)
+
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30rem)
 
-  article.home
+  article.home,
+  aside.nextprev,
+  aside.recents
     section
       display: flex
       div.image--thumb
@@ -63,13 +79,16 @@ article.about
 @media screen and (min-width: 40rem)
 
   article.post
-    header.text
+    header.fat
       padding-top: var(--shim)
 
-  article.home
+  article.home,
+  aside.nextprev,
+  aside.recents
     section
       margin-top: var(--shim)
       align-items: center
       div.image--thumb
         img
           margin-right: var(--shim-n)
+

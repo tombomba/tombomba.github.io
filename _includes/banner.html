@@ -2,5 +2,5 @@
   <div class="logo {% if page.is_home %}home{% elsif page.is_post %}post{% else %}page{% endif %}">
      <a href="{{ site.url }}" aria-label="{{ site.title }} homepage">{% include skull.svg %}<span></span></a>
   </div>
-  <div class="doodad {{ page.image.style | default: 'nofx' }}"></div>
+  <div class="doodad {{ page.label | default: page.layout }} {{ page.image.style | default: 'nofx' }}"></div>
 </header>

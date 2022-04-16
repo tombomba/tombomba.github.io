@@ -16,17 +16,9 @@ header[role="banner"]
       $shock-2: rgba($shock-color, 0.5)
       fill: $logo-color
       filter: drop-shadow(0 -1em $shock-color) drop-shadow(0 -2em $shock-2)
-      opacity: 0.8
+      opacity: 0.75
       &:hover
         opacity: 1
-    span
-      position: absolute 
-      width: 100%
-      height: 100%
-      top: 0
-      left: 0
-      z-index: 1
-      background-image: url('../img/shim.gif')
     &.home,
     &.page
       --logo-size: var(--shim-2x)
@@ -51,9 +43,11 @@ header[role="banner"]
 
   header[role="banner"]
     div.logo
-      margin-left: calc(var(--nudge) * -1)
-    div.doodad.right
-      margin-right: -1em
+      margin-left: -0.33em
+    div.doodad
+      &.archive,
+      &.right,
+        margin-right: -1em
 
 //-----------------------------------------------------------------------------
 

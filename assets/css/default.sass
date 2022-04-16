@@ -22,6 +22,24 @@ article.micro
       font-weight: 400
       color: $mix-color
 
+article.archive
+  &:not(:first-of-type)
+    margin-top: var(--shim)
+  header
+    margin: 0
+    padding: var(--nudge) 
+    background-color: $bg-color
+    border-radius: 2px
+    h1
+      font-size: 1em
+      line-height: var(--hed-lh)
+  ul
+    margin: var(--shim) 0 0 var(--shim)
+    list-style-type: square
+    color: $logo-color
+    li
+      margin: 0
+
 article.about
   header
     h1
@@ -34,7 +52,6 @@ article.error
     text-align: center
 
 article.home,
-article.archive,
 aside.nextprev,
 aside.recents
   section
@@ -62,25 +79,17 @@ aside.recents
       margin-top: var(--shim-p)
       padding-top: var(--nudge)
 
-aside.datelist
-  max-width: calc(var(--page-width) + var(--shim-4x))
-  margin: var(--shim-2x) auto 0 auto
-  padding-top: 3px
-  ul
-    margin: 1em auto 0 auto
-    display: flex
-    flex-flow: row wrap
-    list-style-type: none
-    li
-      margin-right: 0.66em
-      color: $mix-color
-
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30rem)
 
+  article.archive
+    &:not(:first-of-type)
+      margin-top: var(--shim-2x)
+    header
+      border-radius: 4px
+
   article.home,
-  article.archive,
   aside.nextprev,
   aside.recents
     section
@@ -95,25 +104,21 @@ aside.datelist
         h1, h2, h3, h4, h5, h6, p
           display: block
 
-  aside.datelist
-    ul
-      justify-content: center
-      li
-        margin: 0
-        &:not(:last-of-type)::after
-          content: '-'
-          padding: 0 0.33em
-
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40rem)
+
+  article.archive
+    header
+      margin: 0 -1em
+      h1
+        margin: 0 1em
 
   article.post
     header.fat
       padding-top: var(--shim)
 
   article.home,
-  article.archive,
   aside.nextprev,
   aside.recents
     section

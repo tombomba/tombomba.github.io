@@ -1,19 +1,24 @@
 {% assign myfig = include.image.style | split: ' ' -%}
 {% assign figstyle = myfig[0] | strip -%}
-{% assign figratio = myfig[1] | strip -%}
-{% assign figfloat = myfig[2] | strip -%}
-{% assign figfx    = myfig[3] | strip -%}
 
 {% if figstyle == 'wide' %}
 
-<figure class="image--wide {{ figratio | default: 'square' }}--wide">
+  {% assign mw = myfig[1] | default: 640 | times: 1.0 %}
+  {% assign mh = myfig[2] | default: 480 | times: 1.0 %}
+  {% assign ratio = mw | divided_by: mh %}
+
+  <figure class="image--wide" style="--percent: {{ ratio }}">
   <img src="{{ include.image.file | prepend: site.img }}" class="fixed" alt="{{ include.image.alt }}">
-</figure>
+  </figure>
 
 {% elsif figstyle == 'narrow' -%}
 
-<figure class="image--narrow {{ figfloat | default: 'right' }} {{ figfx | default: 'nofx' }}">
+  {% assign figratio = myfig[1] | strip -%}
+  {% assign figfloat = myfig[2] | strip -%}
+  {% assign figfx    = myfig[3] | strip -%}
+
+  <figure class="image--narrow {{ figfloat | default: 'right' }} {{ figfx | default: 'nofx' }}">
   <img src="{{ include.image.file | prepend: site.img }}" class="{{ figratio | default: 'square' }}--narrow" alt="{{ include.image.alt }}">
-</figure>
+  </figure>
 
 {% endif -%}

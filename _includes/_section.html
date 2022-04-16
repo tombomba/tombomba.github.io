@@ -2,12 +2,8 @@
 
 <section>
 
-  {% if include.image.file %}
-    <div class="image--thumb"><a href="{{ include.url | absolute_url }}"><img src="{{ include.image.file | prepend: site.img }}" class="square--narrow" alt="{{ include.image.alt }}"></a></div>
-  {% else -%}
-    <div class="image--default"><a href="{{ include.url | absolute_url }}">{% include skull.svg %}<span></span></a></div>
-  {% endif -%}
-
+  <div class="image--thumb"><a href="{{ include.url | absolute_url }}"><img src="{{ include.image.file | default: 'bomtomba.jpg' | prepend: site.img }}" class="square--narrow" alt="{{ include.image.alt }}"></a></div>
+  
   <div class="text">
    <{{ htag }}><a href="{{ include.url | absolute_url }}">{{ include.title | strip | smartify }}</a></{{ htag }}>
    <p>{{ include.text | strip | strip_html | smartify }}{% if include.date %} <span class="daystamp">({{ include.date | date: '%d %b' }})</span>{% endif %}</p>

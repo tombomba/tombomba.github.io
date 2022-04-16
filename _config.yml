@@ -17,14 +17,10 @@ theme: null
 
 excerpt_separator: <!--more-->
 
-permalink: /:year/:month/:title:output_ext
+permalink: /posts/:title:output_ext
 timezone: America/Los_Angeles
 
 collections:
-  archive:
-    collections_dir: _archive
-    output: true
-    permalink: "/:path/"
   pages:
     collections_dir: _pages
     output: true
@@ -43,14 +39,6 @@ defaults:
       path: "_pages"
       type: "pages"
     values:
-      is_page: true
-  -
-    scope:
-      path: "_archive"
-      type: "archive"
-    values:
-      layout: "archive"
-      is_archive: true
       is_page: true
  
 markdown: kramdown

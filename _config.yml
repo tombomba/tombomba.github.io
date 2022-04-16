@@ -2,7 +2,7 @@ title: "Dead on Main"
 description: "A media diary, a small collage, a dumb blog"
 domain: "www.mymoviepage.com"
 
-emoji: "💀"
+emoji: "✨"
 
 url: "https://www.mymoviepage.com"
 cdn: "https://www.mymoviepage.com/assets/"
@@ -20,6 +20,16 @@ excerpt_separator: <!--more-->
 permalink: /:title-:short_year:month:day:output_ext
 timezone: America/Los_Angeles
 
+collections:
+  archives:
+    collections_dir: _archives
+    output: true
+    permalink: "/:path/"
+  pages:
+    collections_dir: _pages
+    output: true
+    permalink: "/:path/"
+
 defaults:
   -
     scope:
@@ -28,6 +38,20 @@ defaults:
     values:
       layout: post
       is_post: true
+  -
+    scope:
+      path: "_pages"
+      type: "pages"
+    values:
+      is_page: true
+  -
+    scope:
+      path: "_archives"
+      type: "archives"
+    values:
+      layout: "archives"
+      is_archive: true
+      is_page: true
  
 markdown: kramdown
 kramdown:

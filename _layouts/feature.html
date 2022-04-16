@@ -1,0 +1,29 @@
+---
+layout: default
+---
+{% include banner.html %}
+{% include _widont.html title=page.title %}
+{% assign copy = page.content | strip | normalize_whitespace -%}
+
+<main role="main"><!--{{ content | number_of_words }}-->
+
+  <article class="{{ page.label | default: page.layout }}">
+
+    <header>
+      <h1>{{ titlestring | strip | smartify | normalize_whitespace }}</h1>
+      <p><time datetime="{{ page.date | date: '%FT%T%:z' }}" pubdate itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
+    </header>
+
+    {% if page.image %}
+      {% include _figure.html image=page.image %}
+    {% endif -%}
+    
+    {{ copy }}
+
+  </article>
+
+  {% include nextprev.html previous=page.previous next=page.next %}
+
+</main>
+
+{% include footer.html %}

@@ -9,9 +9,11 @@
     {% assign xratio = mh | divided_by: mw | times: 100 | round: 2 %}
   {% endif -%}
 
-  <figure class="image--wide" style="--percent: {{ xratio | default: '56.25' }}%;">
-  <img src="{{ include.image.file | prepend: site.img }}" class="fixed" alt="{{ include.image.alt }}">
-  {% if include.image.caption %}<figcaption>{{ include.image.caption }}</figcaption>{% endif %}
+  <figure class="full">
+    <div class="image--wide" style="--percent: {{ xratio | default: '56.25' }}%;">
+      <img src="{{ include.image.file | prepend: site.img }}" class="fixed" alt="{{ include.image.alt }}">
+    </div>
+    {% if include.image.caption %}<figcaption>{{ include.image.caption | smartify | normalize_whitespace | strip }}</figcaption>{% endif %}
   </figure>
 
 {% elsif figstyle == 'narrow' -%}

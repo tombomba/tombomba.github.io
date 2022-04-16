@@ -17,12 +17,12 @@ theme: null
 
 excerpt_separator: <!--more-->
 
-permalink: /:title-:short_year:month:day:output_ext
+permalink: /:year/:month/:title:output_ext
 timezone: America/Los_Angeles
 
 collections:
-  archives:
-    collections_dir: _archives
+  archive:
+    collections_dir: _archive
     output: true
     permalink: "/:path/"
   pages:
@@ -46,10 +46,10 @@ defaults:
       is_page: true
   -
     scope:
-      path: "_archives"
-      type: "archives"
+      path: "_archive"
+      type: "archive"
     values:
-      layout: "archives"
+      layout: "archive"
       is_archive: true
       is_page: true
  

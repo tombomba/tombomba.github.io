@@ -3,12 +3,15 @@
 
 {% if figstyle == 'wide' %}
 
-  {% assign mw = myfig[1] | default: 640 | times: 1.0 %}
-  {% assign mh = myfig[2] | default: 480 | times: 1.0 %}
-  {% assign ratio = mw | divided_by: mh %}
+  {% assign mw = myfig[1] | default: 640 | times: 1.0 -%}
+  {% assign mh = myfig[2] | default: 480 | times: 1.0 -%}
+  {% if mw > 0 and mh > 0 %}
+    {% assign xratio = mh | divided_by: mw | times: 100 | round: 2 %}
+  {% endif -%}
 
-  <figure class="image--wide" style="--percent: {{ ratio }}">
+  <figure class="image--wide" style="--percent: {{ xratio | default: '56.25' }}%;">
   <img src="{{ include.image.file | prepend: site.img }}" class="fixed" alt="{{ include.image.alt }}">
+  {% if include.image.caption %}<figcaption>{{ include.image.caption }}</figcaption>{% endif %}
   </figure>
 
 {% elsif figstyle == 'narrow' -%}

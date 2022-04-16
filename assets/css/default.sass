@@ -22,7 +22,19 @@ article.micro
       font-weight: 400
       color: $mix-color
 
+article.about
+  header
+    h1
+      font-size: var(--hed-size)
+      line-height: var(--hed-lh)
+
+article.error
+  p
+    line-height: 1
+    text-align: center
+
 article.home,
+article.archive,
 aside.nextprev,
 aside.recents
   section
@@ -32,17 +44,10 @@ aside.recents
     div.text
       margin-top: 1em
       h1, h2, h3, h4, h5, h6, p
+        margin: 0
         display: inline
         font-size: 1em
         font-weight: 400
-      p
-        margin: 0
-
-article.about
-  header
-    h1
-      font-size: var(--hed-size)
-      line-height: var(--hed-lh)
 
 aside.nextprev,
 aside.recents
@@ -57,16 +62,28 @@ aside.recents
       margin-top: var(--shim-p)
       padding-top: var(--nudge)
 
-article.error
-  p
-    line-height: 1
-    text-align: center
-
+aside.datelist
+  max-width: calc(var(--page-width) + var(--shim-4x))
+  margin: var(--shim-2x) auto 0 auto
+  padding-top: 3px
+  ul
+    margin: 1em auto 0 auto
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    list-style-type: none
+    li
+      color: $mix-color
+      &:not(:last-of-type)::after
+        content: '-'
+        padding: 0 0.33em
+        
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30rem)
 
   article.home,
+  article.archive,
   aside.nextprev,
   aside.recents
     section
@@ -90,6 +107,7 @@ article.error
       padding-top: var(--shim)
 
   article.home,
+  article.archive,
   aside.nextprev,
   aside.recents
     section

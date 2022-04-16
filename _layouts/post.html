@@ -15,7 +15,7 @@ layout: default
 
     {% if page.image %}
       {% include _figure.html image=page.image %}
-      {% if page.image.style contains 'right' or page.image.style contains 'left' %}
+      {% if page.image.style contains 'tilt' %}
         {% assign padsize = 'fat' %}
       {% endif -%}
     {% endif -%}

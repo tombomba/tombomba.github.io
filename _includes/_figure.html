@@ -2,6 +2,7 @@
 {% assign figstyle = myfig[0] | strip -%}
 {% assign figratio = myfig[1] | strip -%}
 {% assign figfloat = myfig[2] | strip -%}
+{% assign figfx    = myfig[3] | strip -%}
 
 {% if figstyle == 'wide' %}
 
@@ -11,7 +12,7 @@
 
 {% elsif figstyle == 'narrow' -%}
 
-<figure class="image--narrow {{ figfloat | default: 'right' }}">
+<figure class="image--narrow {{ figfloat | default: 'right' }} {{ figfx | default: 'nofx' }}">
   <img src="{{ include.image.file | prepend: site.img }}" class="{{ figratio | default: 'square' }}--narrow" alt="{{ include.image.alt }}">
 </figure>
 

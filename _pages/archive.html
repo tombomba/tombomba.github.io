@@ -17,7 +17,7 @@ permalink: "/posts/"
     <header><h1>{{ group.name }}</h1></header>
     <ul>
     {% for post in group.items %}
-      <li><a href="{{ post.url | absolute_url }}">{{ post.title | strip | smartify | normalize_whitespace }}</a></li>
+      <li><a href="{{ post.url | absolute_url }}">{{ post.title | smartify | normalize_whitespace | strip }}</a></li>
     {% endfor %}
     </ul>
   </article>  

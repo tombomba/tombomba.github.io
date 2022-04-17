@@ -2,9 +2,9 @@
 
 <section>
 
-  <div class="image--thumb"><a href="{{ include.url | absolute_url }}"><img src="{{ include.image.file | default: 'bomtomba.jpg' | prepend: site.img }}" class="square--narrow" alt="{{ include.image.alt }}"></a></div>
+  <div class="image--thumb trick"><a href="{{ include.url | absolute_url }}"><img src="{{ include.image.file | default: 'bomtomba.jpg' | prepend: site.img }}" class="square--narrow" alt="{{ include.image.alt }}"></a></div>
   
-  <div class="text">
+  <div class="text trick">
    <{{ htag }}><a href="{{ include.url | absolute_url }}">{{ include.title | strip | smartify }}</a></{{ htag }}>
    <p>{{ include.text | strip | strip_html | smartify }}{% if include.date %} <span class="daystamp">({{ include.date | date: '%d %b' }})</span>{% endif %}</p>
   </div>

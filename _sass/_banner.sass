@@ -16,7 +16,7 @@ header[role="banner"]
     &:hover
       opacity: 1
   &.small
-    --logo-size: var(--shim-n)
+    --logo-size: var(--shim)
   &.medium
     --logo-size: var(--buffer)
   &.large
@@ -42,21 +42,15 @@ header[role="banner"]
 .center
   align-items: center
   justify-content: center
-  width: var(--buffer)
-  height: var(--buffer)
-  background-color: $logo-color
-  border-radius: 50%
   margin: 0 1em
   svg
-    fill: $shock-color
+    fill: $logo-color
     opacity: 1
   &.tilt
     transform: rotate(8deg)
-  //&.shadow
+  &.shadow
     svg
-      filter: drop-shadow(-0.33em 0 $shock-color) drop-shadow(0.33em 0 $shock-color)
+      filter: drop-shadow(-0.33em 0 $shock-color) drop-shadow(0.33em 0 $shock-fade)
 .hr
   flex: 1
-  border-top: thin dashed $border-dark
-  border-bottom: 0
-  border-radius: 4px
+  margin-top: 3px

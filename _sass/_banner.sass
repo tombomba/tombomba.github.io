@@ -3,53 +3,60 @@ header[role="banner"]
   margin: var(--shim) auto 0 auto
   display: flex
   align-items: center
+
+.logo
+  display: flex
+  align-items: center
+  --logo-size: var(--shim)
+  svg
+    width: var(--logo-size)
+    height: var(--logo-size)
+    fill: $logo-color
+    opacity: 0.8
+    &:hover
+      opacity: 1
+  &.small
+    --logo-size: var(--shim-n)
+  &.medium
+    --logo-size: var(--buffer)
+  &.large
+    --logo-size: var(--shim-2x)
+  &.xlarge
+    --logo-size: var(--shim-4x)
+
+.left
+  margin-right: 1em
+  align-items: left
   justify-content: space-between
-  --logo-size: var(--buffer)
-  div.logo
-    display: flex
-    align-items: center
+  &.tilt 
     transform: rotate(-8deg)
+  &.shadow
     svg
-      width: var(--logo-size)
-      height: var(--logo-size)
-      $shock-2: rgba($shock-color, 0.5)
-      fill: $logo-color
-      filter: drop-shadow(0 -1em $shock-color) drop-shadow(0 -2em $shock-2)
-      opacity: 0.8
-      &:hover
-        opacity: 1
-    &.home,
-    &.page
-      --logo-size: var(--shim-2x)
-  div.doodad
-    color: $shadow-color
-    &.tilt
-      transform: rotate(3deg)
-    &::after
-      content: '*:･ﾟ✧*:･ﾟ✧'
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 30rem)
-
-  div.doodad
-    margin-top: 3px
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
-  header[role="banner"]
-    div.logo
-      margin-left: -0.33em
-    div.doodad
-      &.archive,
-      &.right,
-        margin-right: -1em
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 50rem)
-
-  div.doodad.right
-    margin-right: calc(var(--shim) * -1)
+      filter: drop-shadow(0 -1em $shock-color) drop-shadow(0 -2em $shock-fade)
+.right
+  margin-left: 1em
+  align-items: right
+  justify-content: space-between
+  &.tilt
+    transform: rotate(8deg)
+.center
+  align-items: center
+  justify-content: center
+  width: var(--buffer)
+  height: var(--buffer)
+  background-color: $logo-color
+  border-radius: 50%
+  margin: 0 1em
+  svg
+    fill: $shock-color
+    opacity: 1
+  &.tilt
+    transform: rotate(8deg)
+  //&.shadow
+    svg
+      filter: drop-shadow(-0.33em 0 $shock-color) drop-shadow(0.33em 0 $shock-color)
+.hr
+  flex: 1
+  border-top: thin dashed $border-dark
+  border-bottom: 0
+  border-radius: 4px

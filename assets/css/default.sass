@@ -28,28 +28,6 @@ article.feature
         &:nth-of-type(2)::before
           content: '\0020/\0020'
 
-article.xxx
-  div.hed
-    margin: var(--shim-2x) 0 var(--shim) 0
-    &.fat
-      padding-bottom: var(--shim)
-      border-bottom: thin dashed $border-dark
-    h1
-      font-size: var(--hed-size)
-      line-height: var(--hed-lh)
-      text-align: center
-    div.byline
-      margin-top: var(--nudge)
-      text-align: center
-      p
-        display: inline
-        margin: 0
-        font-size: var(--font-size-sm)
-        color: $mix-color
-        &:nth-of-type(2)::before
-          content: '\0020/\0020'
-
-
 article.micro
   header
     h1, p
@@ -138,8 +116,6 @@ aside.recents
       div.image--thumb
         img
           margin-right: 1em
-      div.image--default
-        margin-right: 1em
       div.text
         margin: 0
         h1, h2, h3, h4, h5, h6, p
@@ -168,9 +144,10 @@ aside.recents
       div.image--thumb
         img
           margin-right: var(--shim-n)
-      div.image--default
-        margin-right: var(--shim-n)
-  
+      div.text:hover + div.image--thumb
+        img
+          filter: saturate(4)
+
   aside.nextprev,
   aside.recents
     section:first-of-type

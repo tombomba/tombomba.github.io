@@ -115,11 +115,12 @@ figure.full
     &.tilt
       transform: rotate(3deg)
 
-  .image--thumb
+  .image--thumb:hover
     img
-      filter: saturate(1)
-      &:hover
-        filter: saturate(0)
+      filter: saturate(4)
+    & + div.text
+      a:link, a:visited
+        text-decoration: none 
 
 //-----------------------------------------------------------------------------
 

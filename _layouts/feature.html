@@ -11,7 +11,10 @@ layout: default
 
     <header>
       <h1>{{ titlestring | strip | smartify | normalize_whitespace }}</h1>
-      <p><time datetime="{{ page.date | date: '%FT%T%:z' }}" pubdate itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
+      <div class="byline">
+        <p>{{ page.author | default: site.author }}</p>
+        <p><time datetime="{{ page.date | date: '%FT%T%:z' }}" pubdate itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
+      </div>
     </header>
 
     {% if page.image %}

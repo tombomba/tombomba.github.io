@@ -1,13 +1,16 @@
 <footer class="{{ page.label | default: page.layout }}">
 
-  <div class="hr"></div>
+  <div class="hr short"></div>
 
-  <ul class="hoo long center">
-    <li class="copydate">Copyright &copy;{% if page.layout == 'wide' %}&#32;{{ page.date | date: '%Y' }}{% endif %} {{ site.author }}</li>
+  <ul class="flatlist short">
     {% unless page.is_archive %}<li><a href="{{ 'posts' | absolute_url }}">Archive</a></li>{% endunless %}
     {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}
-    <li><a href="https://twitter.com/{{ site.socials }}" target="_socials">Twitter</a></li>
     <li><a href="{{ 'feed.xml' | absolute_url }}" target="_feed">RSS</a></li>
   </ul>
+
+  <div class="copynotice">
+    <p>This page published <time datetime="{{ page.date | date: '%FT%T%:z' }}" pubdate itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
+    <p>Copyright &copy; {{ site.author }}</p>
+  </div>
 
 </footer>

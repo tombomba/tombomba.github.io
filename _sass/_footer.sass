@@ -1,21 +1,63 @@
 footer
   max-width: var(--page-width)
-  margin: var(--shim-2x) auto
+  margin: var(--shim-2x) auto var(--shim-p) auto
   padding-top: 3px
+
   ul
-    margin: var(--shim) 0 0 0
+    margin-left: 0
     display: flex
-    flex-flow: column
     list-style-type: none
     li
       color: $mix-color
-      &.copydate
-        order: 99
-        margin-top: 1em
 
-footer.post,
-footer.micro,
-  margin-top: var(--shim-p)
+    &.datelist
+      padding: 1em
+      li.year
+        font-weight: bold
+
+    &.flatlist
+      flex-flow: row wrap
+      li
+        margin-right: 0.66em
+        line-height: var(--hed-lh)
+
+    &.hoo
+      flex-direction: column
+      li.copydate
+        order: 99
+        margin-top: var(--shim)
+
+    &.center
+      flex-flow-column
+      align-items: center
+      justify-content: center
+
+    &.long
+      margin-top: var(--shim)
+
+    &.short
+      margin-top: var(--shim-2x)
+
+  div.copynotice
+    margin-top: var(--shim)
+    p
+      font-size: var(--font-size-sm)
+      color: $mix-color
+
+  div.hr.short
+    width: var(--shim-4x)
+
+  div.foo
+    height: var(--shim)
+    background-color: $bg-color
+    border-radius: 4px
+
+footer.narrow,
+footer.wide,
+footer.text
+  margin-bottom: var(--shim-2x)
+footer.home
+  max-width: calc(var(--page-width) + var(--shim-2x))
 footer.archive
   max-width: calc(var(--page-width) + 2em)
 
@@ -25,15 +67,16 @@ footer.archive
 
   footer
     ul
-      margin-top: 1em
-      flex-flow: row wrap
-      align-items: center
-      justify-content: center
-      li
-        font-size: var(--font-size-sm)
-        &.copydate
-          order: -1
-          margin: 0
-        &:not(:last-of-type)::after
-          content: '-'
-          padding: 0 var(--nudge)
+      &.center
+        flex-flow: row wrap
+      &.hoo
+        margin-top: 1em
+        li
+          font-size: var(--font-size-sm)
+          line-height: var(--hed-lh)
+          &.copydate
+            order: -1
+            margin: 0
+          &:not(:last-of-type)::after
+            content: '-'
+            padding: 0 0.33em

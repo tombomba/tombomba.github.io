@@ -1,0 +1,8 @@
+{% assign myfig = include.image.style | split: ' ' -%}
+{% assign figratio = myfig[0] | strip -%}
+{% assign figfloat = myfig[1] | strip -%}
+{% assign figfx    = myfig[2] | strip -%}
+
+<figure class="image--narrow {{ figfloat | default: 'right' }} {{ figfx | default: 'nofx' }}">
+  <img src="{{ include.image.file | prepend: site.img }}" class="{{ figratio | default: 'square' }}--ratio" alt="{{ include.image.alt }}">
+</figure>

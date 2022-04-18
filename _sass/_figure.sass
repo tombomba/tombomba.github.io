@@ -98,6 +98,9 @@ figure.full
       transform: rotate(-3deg)
       img
         margin-bottom: var(--buffer)
+    &.saturate
+      img
+        filter: saturate(2)
 
   .image--narrow.left
     float: left
@@ -129,7 +132,7 @@ figure.full
   .image--narrow.left
     img
       --width: 240px
-      margin-left: calc(var(--shim) * -1)
+      margin-left: -1em
       margin-right: var(--shim)
 
   .image--narrow.right
@@ -144,9 +147,9 @@ figure.full
 
   .image--narrow.left
     img
-      margin-left: calc(var(--shim) * -2)
+      margin-left: -3em
 
   .image--narrow.right
     img
       --width: 240px
-      margin-right: calc(var(--shim) * -1)
+      margin-right: -1.5em

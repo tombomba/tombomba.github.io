@@ -1,0 +1,22 @@
+---
+layout: default
+---
+{% assign copy = content | strip | normalize_whitespace %}
+{% include banner.html %}
+
+<main role="main"><!--{{ content | number_of_words }}-->
+
+  <article class="{{ page.label | default: page.layout }}">
+
+    {% include _figure-wide.html image=page.image %}
+
+    {% capture hedbox %}<header><h1>{{ page.title | strip | smartify | normalize_whitespace }}</h1><p>{% endcapture -%}
+    {% assign copy = copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hedbox -%}
+
+    {{ copy }}
+
+  </article>
+
+</main>
+
+{% include footer-alt.html %}

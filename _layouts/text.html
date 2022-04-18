@@ -1,0 +1,20 @@
+---
+layout: default
+---
+{% assign copy = content | strip | normalize_whitespace %}
+{% include _widont.html title=page.title %}
+{% include banner.html %}
+
+<main role="main"><!--{{ content | number_of_words }}-->
+
+  <article class="{{ page.label | default: page.layout }}">
+
+    <header><h1>{{ titlestring }}</h1></header>
+
+    {{ copy }}
+
+  </article>
+
+</main>
+
+{% include footer-alt.html %}

@@ -4,14 +4,11 @@ header[role="banner"]
   display: flex
   align-items: center
   justify-content: space-between
+  --logo-size: var(--buffer)
 
 .logo
   margin-right: 1em
   transform: rotate(-8deg)
-  &.post
-    --logo-size: var(--buffer)
-  &.page
-    --logo-size: var(--shim-2x)
   svg
     width: var(--logo-size)
     height: var(--logo-size)
@@ -28,9 +25,17 @@ header[role="banner"]
   &::after
     content: '*:･ﾟ✧*:･ﾟ✧'
 
+header[role="banner"].home,
+header[role="banner"].archive,
+header[role="banner"].about,
+header[role="banner"].text
+  --logo-size: var(--shim-2x)
+
+//-----------------------------------------------------------------------------
+
 @media screen and (min-width: 30rem)
 
-  div.doodad
+  .doodad
     margin-top: 3px
 
 //-----------------------------------------------------------------------------
@@ -40,14 +45,9 @@ header[role="banner"]
   header[role="banner"]
     .logo
       margin-left: -0.33em
-    .doodad
-      &.archive,
-      &.right,
-        margin-right: -1em
 
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 50rem)
-
-  .doodad.right
-    margin-right: -1.5em
+  .doodad
+    &.archive
+      margin-right: -1em
+    &.shift
+      transform: rotate(3deg)

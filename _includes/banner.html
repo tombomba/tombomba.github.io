@@ -1,6 +1,6 @@
-<header role="banner">
-  <div class="logo {% if page.is_post %}post{% else %}page{% endif %}">
+<header role="banner" class="{{ page.label | default: page.layout }}">
+  <div class="logo">
     <a href="{{ site.url }}" title="{{ site.title }}">{% include skull.svg %}</a>
   </div>
- <div class="doodad {% if page.image.style contains 'tilt' %}tilt{% else %}nofx{% endif %}"></div>
+ <div class="doodad {% if page.image.style contains 'right' %}shift{% else %}nofx{% endif %}"></div>
 </header>

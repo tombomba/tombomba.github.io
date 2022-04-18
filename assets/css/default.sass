@@ -53,9 +53,7 @@ article.error
     line-height: 1
     text-align: center
 
-article.home,
-aside.nextprev,
-aside.recents
+article.home
   section
     margin-top: var(--shim-p)
     &:first-of-type
@@ -66,19 +64,6 @@ aside.recents
         margin: 0
         display: inline
         font-size: 1em
-
-aside.nextprev,
-aside.recents
-  max-width: calc(var(--page-width) + var(--shim-2x))
-  margin: var(--shim-2x) auto 0 auto
-  padding-top: 3px
-  section
-    max-width: var(--page-width)
-    margin-left: auto
-    margin-right: auto
-    &:first-of-type
-      margin-top: var(--shim-p)
-      padding-top: var(--nudge)
 
 //-----------------------------------------------------------------------------
 
@@ -94,16 +79,15 @@ aside.recents
     header
       border-radius: 4px
 
-  article.home,
-  aside.nextprev,
-  aside.recents
+  article.home
     section
       display: flex
       div.image--thumb
-        img
-          margin-right: 1em
+        order: -1
       div.text
         margin: 0
+        padding-left: 1em
+        flex: 1
         h1, h2, h3, h4, h5, h6, p
           display: block
 
@@ -121,19 +105,11 @@ aside.recents
     header.tilt
       padding-top: var(--shim)
 
-  article.home,
-  aside.nextprev,
-  aside.recents
+  article.home
     section
-      margin-top: var(--shim)
+      margin-top: var(--shim-p)
       align-items: center
-      div.image--thumb
-        img
-          margin-right: var(--shim-n)
-
-  aside.nextprev,
-  aside.recents
-    section:first-of-type
-      padding-top: 0
+      div.text
+        padding-left: var(--shim-n)
 
 

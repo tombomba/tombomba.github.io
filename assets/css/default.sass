@@ -5,13 +5,8 @@
 @charset "utf-8"
 @import reset, font, color, body, banner, figure, article, footer
 
-article.post
-  header
-    h1
-      font-size: var(--hed-size)
-      line-height: var(--hed-lh)
-
-article.micro
+article.wide,
+article.flush
   header
     h1, p
       display: inline
@@ -19,7 +14,18 @@ article.micro
       line-height: var(--font-lh)
     h1::after
       content: '\00A0\2014\0020'
-      font-weight: 400
+      font-weight: normal
+      color: $mix-color
+
+article.narrow
+  header.micro
+    h1, p
+      display: inline
+      font-size: 1em
+      line-height: var(--font-lh)
+    h1::after
+      content: '\00A0\2014\0020'
+      font-weight: normal
       color: $mix-color
 
 article.archive
@@ -42,12 +48,6 @@ article.archive
     li
       margin: 0
 
-article.about
-  header
-    h1
-      font-size: var(--hed-size)
-      line-height: var(--hed-lh)
-
 article.error
   p
     line-height: 1
@@ -57,7 +57,7 @@ article.home,
 aside.nextprev,
 aside.recents
   section
-    margin-top: var(--buffer)
+    margin-top: var(--shim-p)
     &:first-of-type
       margin-top: 0
     div.text
@@ -66,11 +66,10 @@ aside.recents
         margin: 0
         display: inline
         font-size: 1em
-        font-weight: 400
 
 aside.nextprev,
 aside.recents
-  max-width: var(--page-width)
+  max-width: calc(var(--page-width) + var(--shim-2x))
   margin: var(--shim-2x) auto 0 auto
   padding-top: 3px
   section
@@ -84,6 +83,10 @@ aside.recents
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30rem)
+
+  article.narrow
+    header.fat
+      padding-top: var(--shim)
 
   article.archive
     &:not(:first-of-type)
@@ -114,8 +117,8 @@ aside.recents
       h1
         margin: 0 1em
 
-  article.post
-    header.fat
+  article.narrow
+    header.tilt
       padding-top: var(--shim)
 
   article.home,

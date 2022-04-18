@@ -8,7 +8,7 @@ figure
     line-height: var(--hed-lh)
 
 figure.full
-  margin: var(--shim) 0
+  margin: 0 0 var(--shim-p) 0
 
 .image--wide
   display: block
@@ -50,17 +50,21 @@ figure.full
     border-radius: 4px
     background-color: $bg-color
 
-.boxed--narrow
-  --height: calc(var(--width) / 1.85)
-.hd--narrow
-  --height: calc(var(--width) / 1.77)
-.poster--narrow
-  --height: calc(var(--width) * 1.5)
-.academy--narrow
-  --height: calc(var(--width) / 1.375)
-.tv--narrow
+.standard-ratio
   --height: calc(var(--width) / 1.33)
-.square--narrow
+.academy--ratio
+  --height: calc(var(--width) / 1.375)
+.european-ratio
+  --height: calc(var(--width) / 1.66)
+.video-ratio
+  --height: calc(var(--width) / 1.78)
+.american-ratio
+  --height: calc(var(--width) / 1.85)
+.anamorphic-ratio
+  --height: calc(var(--width) / 2.39)
+.ultra-ratio
+  --height: calc(var(--width) / 2.75)
+.square--ratio
   --height: var(--width)
 
 //-----------------------------------------------------------------------------
@@ -91,7 +95,7 @@ figure.full
 
   .image--narrow.flush
     float: none
-    margin: 0
+    margin-bottom: var(--shim-p)
     img
       --width: 420px
     &.tilt
@@ -129,15 +133,19 @@ figure.full
 
 @media screen and (min-width: 48rem)
 
+  .image--narrow.flush
+    img
+      --width: 480px
+
   .image--narrow.left
     img
-      --width: 240px
+      --width: 220px
       margin-left: -1em
       margin-right: var(--shim)
 
   .image--narrow.right
     img
-      --width: 220px
+      --width: 240px
       margin-right: -1em
       margin-left: var(--shim)
 
@@ -145,11 +153,22 @@ figure.full
 
 @media screen and (min-width: 64rem)
 
+  //figure.full
+    margin-left: calc(var(--shim) * -1)
+    margin-right: calc(var(--shim) * -1)
+
   .image--narrow.left
     img
-      margin-left: -3em
+      margin-left: calc(var(--shim) * -2)
 
   .image--narrow.right
     img
-      --width: 240px
-      margin-right: -1.5em
+      margin-right: calc(var(--shim) * -1)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 72rem)
+
+  .image--narrow.flush
+    img
+      --width: 612px

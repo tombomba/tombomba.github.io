@@ -2,12 +2,6 @@
 layout: default
 ---
 {% include banner.html %}
-{% include _widont.html title=page.title %}
-{% assign copy = page.content | strip | normalize_whitespace -%}
-
-{% capture datestring %}&#32;<span class="daystamp">(<time datetime="{{ page.date | date: '%FT%T%:z' }}" pubdate itemprop="datePublished">{{ page.date | date_to_string }}</time>)</span>{% endcapture -%}
-{% assign copysize = copy | size | minus: 4 -%}
-{% assign copy = copy | slice: 0, copysize | append: datestring | append: '</p>' -%}
 
 <main role="main"><!--{{ content | number_of_words }}-->
 

@@ -5,17 +5,16 @@
 @charset "utf-8"
 @import reset, font, color, body, banner, figure, article, footer
 
-article.wide,
-article.flush
+article.wide
   header
     h1, p
       display: inline
       font-size: 1em
       line-height: var(--font-lh)
     h1::after
-      content: '\00A0\2014\0020'
-      font-weight: normal
-      color: $mix-color
+      content: '\0020'
+    .punc::after
+      content: '.'
 
 article.narrow
   header.micro
@@ -54,12 +53,13 @@ article.error
     text-align: center
 
 article.home
+  margin-top: var(--buffer)
   section
-    margin-top: var(--shim-p)
+    margin-top: var(--shim-2x)
     &:first-of-type
       margin-top: 0
     div.text
-      margin-top: 1em
+      margin-top: var(--shim-n)
       h1, h2, h3, h4, h5, h6, p
         margin: 0
         display: inline
@@ -81,13 +81,13 @@ article.home
 
   article.home
     section
-      display: flex
+      margin-top: var(--shim-p)
       div.image--thumb
-        order: -1
+        float: right
+        margin-top: var(--nudge)
+        margin-left: 1em
       div.text
         margin: 0
-        padding-left: 1em
-        flex: 1
         h1, h2, h3, h4, h5, h6, p
           display: block
 
@@ -107,9 +107,15 @@ article.home
 
   article.home
     section
-      margin-top: var(--shim-p)
-      align-items: center
-      div.text
-        padding-left: var(--shim-n)
+      display: flex
+      margin-top: var(--buffer)
+      div.image--thumb
+        margin: var(--nudge) 0 0 0
+        &.right
+          margin-left: var(--shim-n)
+          order: 99
+        &.left
+          margin-right: var(--shim-n)
+          order: -1
 
 

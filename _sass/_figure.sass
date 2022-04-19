@@ -40,15 +40,16 @@ figure.full
 .image--thumb
   border-radius: 4px
   img
-    --width: 200px
     display: block
     margin: 0
     width: var(--width)
-    height: calc(var(--width) / 1.77)
+    height: calc(var(--width) / 1.66)
     object-fit: cover
     object-position: 50% 50%
     border-radius: 4px
     background-color: $bg-color
+    --width: 200px
+
 
 .standard-ratio
   --height: calc(var(--width) / 1.33)
@@ -82,12 +83,12 @@ figure.full
 
   .image--narrow
     img
-      --width: 380px
+      --width: 320px
 
   .image--thumb
     img
-      width: var(--shim-4x)
-      height: var(--shim-4x)
+      width: var(--shim-3x)
+      height: var(--shim-3x)
 
 //-----------------------------------------------------------------------------
 
@@ -122,12 +123,13 @@ figure.full
     &.tilt
       transform: rotate(3deg)
 
-  .image--thumb:hover
+  .image--thumb
     img
-      filter: saturate(2)
-    & + div.text
-      a:link, a:visited
-        text-decoration: none 
+      width: var(--shim-4x)
+      height: var(--shim-4x)
+    &:hover
+      img
+        filter: saturate(2)
 
 //-----------------------------------------------------------------------------
 
@@ -153,10 +155,6 @@ figure.full
 
 @media screen and (min-width: 64rem)
 
-  //figure.full
-    margin-left: calc(var(--shim) * -1)
-    margin-right: calc(var(--shim) * -1)
-
   .image--narrow.left
     img
       margin-left: calc(var(--shim) * -2)
@@ -164,11 +162,3 @@ figure.full
   .image--narrow.right
     img
       margin-right: calc(var(--shim) * -1)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 72rem)
-
-  .image--narrow.flush
-    img
-      --width: 612px

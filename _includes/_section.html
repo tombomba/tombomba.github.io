@@ -1,12 +1,14 @@
 {% assign htag = include.htag | default: 'h1' -%}
 
 <section>
-  
+
+  {% if include.image.file %}
+  <div class="image--thumb {% cycle 'right', 'left' %}"><a href="{{ include.url | absolute_url }}"><img src="{{ include.image.file | default: 'bomtomba.jpg' | prepend: site.img }}" class="square--narrow" alt="{{ include.image.alt }}"></a></div>
+  {% endif %}
+
   <div class="text trick">
    <{{ htag }}><a href="{{ include.url | absolute_url }}">{{ include.title | strip | smartify }}</a></{{ htag }}>
    <p>{{ include.text | strip | strip_html | smartify }}{% if include.date %} <span class="daystamp">({{ include.date | date: '%d %b' }})</span>{% endif %}</p>
   </div>
-
-  <div class="image--thumb trick"><a href="{{ include.url | absolute_url }}"><img src="{{ include.image.file | default: 'bomtomba.jpg' | prepend: site.img }}" class="square--narrow" alt="{{ include.image.alt }}"></a></div>
 
 </section>

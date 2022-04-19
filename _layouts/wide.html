@@ -2,7 +2,12 @@
 layout: default
 ---
 {% assign copy = content | strip | normalize_whitespace %}
+{% include _puncf.html title=page.title %}
 {% include banner.html %}
+
+{% capture datef %}<span class="daystamp">&nbsp;({{ page.author | default: site.author }}, <time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date: '%d %b' }}</time>)</span>{% endcapture -%}
+{% assign copysize = copy | size | minus: 4 %}
+{% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
 
 <main role="main"><!--{{ content | number_of_words }}-->
 
@@ -10,7 +15,7 @@ layout: default
 
     {% include _figure-wide.html image=page.image %}
 
-    {% capture hedbox %}<header><h1>{{ page.title | strip | smartify | normalize_whitespace }}</h1><p>{% endcapture -%}
+    {% capture hedbox %}<header><h1>{{ titlestring }}</h1><p>{% endcapture -%}
     {% assign copy = copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hedbox -%}
 
     {{ copy }}
@@ -19,4 +24,4 @@ layout: default
 
 </main>
 
-{% include footer-alt.html %}
+{% include footer.html %}

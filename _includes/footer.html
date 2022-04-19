@@ -2,9 +2,8 @@
 
   <div class="hr"></div>
 
-  <ul class="hoo long center">
-    <li class="copydate">Copyright &copy;{% if page.layout == 'wide' %}&#32;{{ page.date | date: '%Y' }}{% endif %} {{ site.author }}</li>
-    {% unless page.is_archive %}<li><a href="{{ 'posts' | absolute_url }}">Archive</a></li>{% endunless %}
+  <ul class="{% if page.is_post %}post{% else %}page{% endif %} hoo long center dashed">
+    {% if page.is_post %}<li><a href="{{ site.url }}">Home</a></li>{% else %}<li class="copydate">Copyright &copy;{% if page.layout == 'wide' %}&#32;{{ page.date | date: '%Y' }}{% endif %} {{ site.author }}</li>{% endif %}
     {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}
     <li><a href="https://twitter.com/{{ site.socials }}" target="_socials">Twitter</a></li>
     <li><a href="{{ 'feed.xml' | absolute_url }}" target="_feed">RSS</a></li>

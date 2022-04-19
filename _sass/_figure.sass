@@ -98,11 +98,16 @@ figure.full
     float: none
     margin-bottom: var(--shim-p)
     img
+      margin-left: auto
+      margin-right: auto
       --width: 420px
     &.tilt
       transform: rotate(-3deg)
       img
-        margin-bottom: var(--buffer)
+        margin-bottom: var(--shim-2x)
+    &.border
+      img
+        border: 1em solid $border-light
     &.saturate
       img
         filter: saturate(2)

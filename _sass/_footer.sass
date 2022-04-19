@@ -52,6 +52,9 @@ footer
     background-color: $bg-color
     border-radius: 4px
 
+footer.home
+  margin-top: var(--buffer)
+  padding-top: var(--nudge)
 footer.narrow,
 footer.wide,
 footer.text
@@ -69,12 +72,14 @@ footer.archive
         flex-flow: row wrap
       &.hoo
         margin-top: 1em
+        li.copydate
+          order: -1
+          margin: 0
+      &.page
         li
           font-size: var(--font-size-sm)
           line-height: var(--hed-lh)
-          &.copydate
-            order: -1
-            margin: 0
-          &:not(:last-of-type)::after
-            content: '-'
-            padding: 0 0.33em
+      &.dashed
+        li:not(:last-of-type)::after
+          content: '-'
+          padding: 0 0.33em

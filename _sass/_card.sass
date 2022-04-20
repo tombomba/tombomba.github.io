@@ -1,0 +1,35 @@
+ul.cards
+  margin: 0
+  list-style-type: none
+  li
+    .text
+      margin-top: 1em
+      h1, h2, h3, h4, h5, h6, p
+        margin: 0
+        font-size: 1em
+
+ul.cards.home 
+  li
+    margin-top: var(--buffer)
+    &:first-of-type
+      margin: 0
+
+ul.cards.text
+  margin-top: var(--shim-p)
+  li
+    margin-top: var(--shim-n)
+    &:first-of-type
+      margin-top: 0
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  ul.cards
+    li
+      display: flex
+      .text
+        margin-top: 0
+  
+  ul.cards.text
+    li
+      align-items: center

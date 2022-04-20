@@ -4,50 +4,48 @@ header[role="banner"]
   display: flex
   align-items: center
   justify-content: space-between
-  --logo-size: var(--buffer)
+  --logo-size: 42px
+  .logo.text
+    margin-right: 1em
+    margin-left: -1px
+    display: flex
+    align-items: center
+    h1
+      font-family: 'Sarina', cursive
+      font-size: var(--hed-size-md)
+      font-weight: 400
+      line-height: 1
+      text-transform: lowercase
+      a:link, a:visited
+        color: $logo-fade
+        text-decoration: none
+        text-shadow: -2px 2px $shock-color
 
-.logo
-  margin-right: 1em
-  transform: rotate(-8deg)
-  svg
-    width: var(--logo-size)
-    height: var(--logo-size)
-    fill: $logo-color
-    opacity: 0.8
-    filter: drop-shadow(0 -1em $shock-color) drop-shadow(0 -2em $shock-fade)
-    &:hover
-      opacity: 1
+  .logo.icon
+    margin-right: 1em
+    svg
+      width: var(--logo-size)
+      height: var(--logo-size)
+      fill: $logo-color
+      opacity: 0.8
+      filter: drop-shadow(-3px 3px $shock-color)
+      transform: rotate(-12deg)
+      &:hover
+        opacity: 1
+    a:link, a:visited
+      text-decoration: none
 
-.doodad
-  color: $shadow-color
-  &.tilt
-    transform: rotate(3deg)
-  &::after
-    content: '*:･ﾟ✧*:･ﾟ✧'
+  .hr
+    flex: 1
+    margin-top: 3px
 
-header[role="banner"].home,
-header[role="banner"].archive,
-header[role="banner"].about,
-header[role="banner"].text
-  --logo-size: var(--shim-2x)
+header[role="banner"].home
+  --logo-size: 47px
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30rem)
 
-  .doodad
-    margin-top: 3px
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
   header[role="banner"]
-    .logo
-      margin-left: -0.33em
-
-  .doodad
-    &.archive
-      margin-right: -1em
-    &.shift
-      transform: rotate(3deg)
+    .logo.icon
+      margin-left: -9px

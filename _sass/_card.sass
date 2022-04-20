@@ -16,13 +16,14 @@ ul.cards.home
       margin: 0
 
 ul.cards.post
-  margin-top: calc(var(--shim-p) + var(--nudge))
-  padding: 0 1em
-  li
-    margin-top: var(--buffer)
+  margin-top: var(--shim-2x)
+  padding: var(--shim-p) 0
+  border-top: thin dashed $border-dark
+  border-bottom: thin dashed $border-dark
+  li 
+    margin-top: var(--shim-n)
     &:first-of-type
       margin-top: 0
-      padding-top: var(--nudge)
 
 //-----------------------------------------------------------------------------
 
@@ -35,13 +36,6 @@ ul.cards.post
         margin-top: 0
         h1, h2, h3, h4, h5, h6, p
           display: block
-  
-  ul.cards.post
-    padding: 0
-    li
-      margin-top: var(--shim)
-      &:first-of-type
-        padding: 0
 
 //-----------------------------------------------------------------------------
 

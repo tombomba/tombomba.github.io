@@ -3,7 +3,7 @@
 <li>
 
   {% if include.image.file %}
-    <figure class="thumb {% if include.is_home %}{% cycle 'right', 'left' %}{% else %}left{% endif %}"><a href="{{ include.url | absolute_url }}"><img src="{{ include.image.file | prepend: site.img }}" alt="{{ include.image.alt }}"></a></figure>
+    <figure class="thumb {% if include.is_home %}home {% cycle 'right', 'left' %}{% else %}left{% endif %}"><a href="{{ include.url | absolute_url }}"><img src="{{ include.image.file | prepend: site.img }}" alt="{{ include.image.alt }}"></a></figure>
   {% else %}
     {% unless include.is_home %}<figure class="thumb left"><a href="{{ include.url | absolute_url }}"><img src="{{ 'bomtomba.jpg' | prepend: site.img }}" alt=""></a></figure>{% endunless %}
   {% endif -%}

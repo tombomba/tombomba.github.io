@@ -25,13 +25,22 @@ is_archive: true
     
   {% if is_month_index and group.name contains target_yr and group.name contains target_mo %}
     {% include _dir_list_core.html name=group.name items=group.items %}
+    {% assign print_success = true %}
   {% endif %}
 
   {% if is_year_index and group.name contains target_yr %}
     {% include _dir_list_core.html name=group.name items=group.items %}
+    {% assign print_success = true %}
   {% endif %}
 
 {% endfor -%}
+
+  {% unless print_success %}
+  <article class="future">
+    <p>📆</p>
+    <p><strong>No listings found...yet!</strong></p>
+  </article>
+  {% endunless -%}
 
 </main>
 

@@ -1,6 +1,6 @@
 {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y %m'" -%}
 
-<ul class="datelist">
+<section class="padwrap">
 {% for i in posts_by_year %}
   
   {% assign d = i.name | split: ' ' %}
@@ -10,9 +10,16 @@
 
   {% assign display_mo = yr | append: '-' | append: mo | append: '-01' | date: '%b' -%}
 
-  {% if curr_yr != prev_yr %}<li class="year"><a href="{{ yr | absolute_url }}">{{ yr }}</a></li>{% endif %}
-  <li><a href="{{ yr | append: '/' | append: mo | absolute_url }}">{{ display_mo }}</a></li>
+  {% if curr_yr != prev_yr %}
+  {% unless forloop.first %}</ul>{% endunless %}
+  <ul class="datelist">
+    <li class="year"><a href="{{ yr | absolute_url }}">{{ yr }}</a></li>
+  {% endif %}
+
+    <li><a href="{{ yr | append: '/' | append: mo | absolute_url }}">{{ display_mo }}</a></li>
+  
   {% assign prev_yr = curr_yr -%}
+  {% if forloop.last %}</ul>{% endif -%}
 
 {% endfor -%}
-</ul>
+</section>

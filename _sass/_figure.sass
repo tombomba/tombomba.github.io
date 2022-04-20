@@ -3,21 +3,19 @@ figure
     border-radius: 4px
     background-color: $bg-color
   figcaption
-    margin-top: 0.66em
-    font-size: var(--font-size-sm)
-    line-height: var(--hed-lh)
+    font-size: var(--font-size-xs)
 
-figure.full
-  margin: 0 0 var(--shim-p) 0
-
-.image--wide
-  display: block
-  margin: 0 auto
-  position: relative
-  width: 100%
-  height: 0
-  overflow: hidden
-  padding-top: var(--percent)
+figure.video
+  margin: var(--shim) 0 var(--shim-p) 0
+  max-width: var(--video-max-width)
+  .wrap
+    position: relative
+    display: block
+    margin: 0 auto
+    width: 100%
+    height: 0
+    overflow: hidden
+    padding-top: var(--percent)
   .fixed
     position: absolute
     top: 0
@@ -25,145 +23,96 @@ figure.full
     width: 100%
     height: 100%
 
-.image--narrow
+figure.photo
   img
+    --width: 12em
     display: block
-    margin-bottom: var(--shim)
+    margin-left: auto
+    margin-right: auto
+    width: var(--width)
+    height: var(--width)
+    object-fit: cover
+    object-position: 50% 50%
+    &.ratio--tv
+      --height: calc(var(--width) / 1.33)
+    &.ratio--academy
+      --height: calc(var(--width) / 1.375)
+    &.ratio--poster
+      --height: calc(var(--width) * 1.5)
+    &.ratio--european
+      --height: calc(var(--width) / 1.66)
+    &.ratio--hd
+      --height: calc(var(--width) / 1.78)
+    &.ratio--american
+      --height: calc(var(--width) / 1.85)
+    &.ratio--anamorphic
+      --height: calc(var(--width) / 2.39)
+    &.ratio--ultra
+      --height: calc(var(--width) / 2.75)
+    &.ratio--square
+      --height: var(--width)
+
+figure.thumb
+  img
+    --width: 12em
+    --height: calc(var(--width) / 1.66)
+    display: block
     width: var(--width)
     height: var(--height)
     object-fit: cover
     object-position: 50% 50%
-    border-radius: 4px
-    background-color: $bg-color
-    --width: 200px
-
-.image--thumb
-  border-radius: 4px
-  img
-    display: block
-    margin: 0
-    width: var(--width)
-    height: calc(var(--width) / 1.66)
-    object-fit: cover
-    object-position: 50% 50%
-    border-radius: 4px
-    background-color: $bg-color
-    --width: 200px
-
-
-.standard-ratio
-  --height: calc(var(--width) / 1.33)
-.academy--ratio
-  --height: calc(var(--width) / 1.375)
-.european-ratio
-  --height: calc(var(--width) / 1.66)
-.video-ratio
-  --height: calc(var(--width) / 1.78)
-.american-ratio
-  --height: calc(var(--width) / 1.85)
-.anamorphic-ratio
-  --height: calc(var(--width) / 2.39)
-.ultra-ratio
-  --height: calc(var(--width) / 2.75)
-.square--ratio
-  --height: var(--width)
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 20rem)
 
-  .image--narrow,
-  .image--thumb
+  figure.photo,
+  figure.thumb
     img
-      --width: 280px
+      --width: 15em
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30rem)
 
-  .image--narrow
+  figure.photo,
+  figure.thumb
     img
-      --width: 320px
-
-  .image--thumb
-    img
-      width: var(--shim-3x)
-      height: var(--shim-3x)
+      --width: 20em
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40rem)
 
-  .image--narrow.flush
-    float: none
-    margin-bottom: var(--shim-p)
+  figure.photo
+    margin: var(--shim-p) 0 var(--nudge) 0
     img
-      margin-left: auto
-      margin-right: auto
-      --width: 420px
-    &.tilt
-      transform: rotate(-3deg)
-      img
-        margin-bottom: var(--shim-2x)
-    &.border
-      img
-        border: 1em solid $border-light
-    &.saturate
-      img
-        filter: saturate(2)
+      --width: 204px
+    &.left
+      float: left
+      margin-right: 1em
+    &.right
+      float: right
+      margin-left: 1em
 
-  .image--narrow.left
-    float: left
+  figure.thumb
+    margin: var(--nudge) 0
     img
-      --width: 200px
-      margin: 0 var(--shim-n) 1em 0
-    &.tilt
-      transform: rotate(-3deg)
-
-  .image--narrow.right
-    float: right
-    img
-      --width: 200px
-      margin: 0 0 1em var(--shim-n)
-    &.tilt
-      transform: rotate(3deg)
-
-  .image--thumb
-    img
-      width: var(--shim-4x)
-      height: var(--shim-4x)
-    &:hover
-      img
-        filter: saturate(2)
+      --width: var(--shim-4x)
+      --height: var(--shim-4x)
+    &.right
+      order: 2
+      margin-left: var(--shim-n)
+    &.thumb.left
+      order: -1
+      margin-right: var(--shim-n)
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 48rem)
+@media screen and (min-width: 50rem)
 
-  .image--narrow.flush
-    img
-      --width: 480px
-
-  .image--narrow.left
-    img
-      --width: 220px
-      margin-left: -1em
+  figure.photo
+    &.left
       margin-right: var(--shim)
-
-  .image--narrow.right
-    img
-      --width: 240px
-      margin-right: -1em
+    &.right
       margin-left: var(--shim)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 64rem)
-
-  .image--narrow.left
-    img
-      margin-left: calc(var(--shim) * -2)
-
-  .image--narrow.right
-    img
-      margin-right: calc(var(--shim) * -1)

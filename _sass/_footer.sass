@@ -2,84 +2,56 @@ footer
   max-width: var(--page-width)
   margin: var(--shim-2x) auto var(--shim-p) auto
   padding-top: 3px
+  &.home
+    margin-top: calc(var(--buffer) + var(--nudge))
+  &.text,
+  &.micro
+    margin-top: var(--shim-p)
 
-  ul
-    margin-left: 0
+  ul.socials
+    margin: var(--shim) 0 0 0
     display: flex
+    flex-flow: column
+    align-items: center
+    justify-content: center
     list-style-type: none
     li
       color: $mix-color
-
-    &.datelist
-      padding: 1em
-      li.year
-        font-weight: bold
-
-    &.flatlist
-      flex-flow: row wrap
-      li
-        margin-right: 0.66em
-        line-height: var(--hed-lh)
-
-    &.hoo
-      flex-direction: column
-      li.copydate
+      &.copydate
         order: 99
         margin-top: var(--shim)
 
-    &.center
-      flex-flow-column
-      align-items: center
-      justify-content: center
+  ul.datelist
+    margin: 0
+    padding: 1em
+    display: flex
+    flex-flow: row wrap
+    align-items: center
+    justify-content: center
+    list-style-type: none
+    li
+      margin-right: 0.66em
+      &.year
+        font-weight: 700
 
-    &.long
-      margin-top: var(--shim)
-
-    &.short
-      margin-top: var(--shim-2x)
-
-  div.copynotice
-    margin-top: var(--shim)
-    p
-      font-size: var(--font-size-sm)
-      color: $mix-color
-
-  div.hr.short
-    width: var(--shim-4x)
-
-  div.foo
-    height: var(--shim)
-    background-color: $bg-color
-    border-radius: 4px
-
-footer.home
-  margin-top: var(--buffer)
-  padding-top: var(--nudge)
-footer.narrow,
-footer.wide,
-footer.text
-  margin-bottom: var(--shim-2x)
 footer.archive
-  max-width: calc(var(--page-width) + 2em)
+  margin-top: calc(var(--buffer) + var(--nudge))
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30rem)
 
   footer
-    ul
-      &.center
-        flex-flow: row wrap
-      &.hoo
-        margin-top: 1em
-        li.copydate
+
+    ul.socials
+      margin-top: 1em
+      flex-flow: row wrap
+      li
+        font-size: var(--font-size-sm)
+        line-height: var(--hed-lh)
+        &.copydate
           order: -1
           margin: 0
-      &.page
-        li
-          font-size: var(--font-size-sm)
-          line-height: var(--hed-lh)
-      &.dashed
-        li:not(:last-of-type)::after
+        &:not(:last-of-type)::after
           content: '-'
           padding: 0 0.33em

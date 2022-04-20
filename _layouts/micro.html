@@ -20,18 +20,6 @@ layout: default
 
     {{ copy }}
 
-    <section class="recents">
-      <div class="hr"></div>
-      <ul class="text cards">
-        {% if page.next %}
-        {% include _card.html title=page.next.title image=page.next.image text=page.next.description url=page.next.url %}
-        {% endif %}
-        {% if page.previous %}
-        {% include _card.html title=page.previous.title image=page.previous.image text=page.previous.description url=page.previous.url %}
-        {% endif -%}
-      </ul>
-    </section>
-
   </article>
 
 </main>

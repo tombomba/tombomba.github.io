@@ -26,11 +26,12 @@ figure.video
 figure.photo
   img
     --width: 12em
+    --height: var(--width)
     display: block
     margin-left: auto
     margin-right: auto
     width: var(--width)
-    height: var(--width)
+    height: var(--height)
     object-fit: cover
     object-position: 50% 50%
     &.ratio--tv
@@ -85,15 +86,14 @@ figure.thumb
 @media screen and (min-width: 40rem)
 
   figure.photo
-    margin: var(--shim-p) 0 var(--nudge) 0
     img
-      --width: 204px
+      --width: 11em
     &.left
       float: left
-      margin-right: 1em
+      margin: var(--shim-p) 1em var(--nudge) 0
     &.right
       float: right
-      margin-left: 1em
+      margin: var(--shim-p) 0 var(--nudge) 1em
 
   figure.thumb
     margin: var(--nudge) 0

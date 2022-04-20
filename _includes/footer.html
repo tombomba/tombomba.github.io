@@ -1,11 +1,8 @@
 <footer class="{{ page.label | default: page.layout }}">
 
   {% if page.is_home %}
-    <div class="hr"></div>
     {% include _datelist.html %}
   {% endif -%}
-
-  <div class="hr"></div>
 
   <ul class="socials">
     <li class="copydate">Copyright &copy; {{ site.author }}</li>

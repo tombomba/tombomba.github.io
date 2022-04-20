@@ -1,16 +1,16 @@
 footer
   max-width: var(--page-width)
-  margin: var(--shim-2x) auto var(--shim-p) auto
+  margin: var(--shim-p) auto
   padding-top: 3px
   &.home,
   &.archive
-    margin-top: calc(var(--buffer) + var(--nudge))
+    margin-top: var(--buffer)
   &.text,
   &.micro
-    margin-top: calc(var(--shim-p) + var(--nudge))
+    margin: var(--shim) auto var(--shim-2x) auto
 
   ul.socials
-    margin: var(--shim) 0 0 0
+    margin: 0
     display: flex
     flex-flow: column
     align-items: center
@@ -42,7 +42,6 @@ footer
   footer
 
     ul.socials
-      margin-top: 1em
       flex-flow: row wrap
       li
         font-size: var(--font-size-sm)

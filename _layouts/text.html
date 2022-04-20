@@ -2,7 +2,7 @@
 layout: default
 ---
 {% assign copy = content | strip | normalize_whitespace %}
-{% include _widont.html title=page.title %}
+{% include widont.html title=page.title %}
 {% include banner.html %}
 
 <main role="main"><!--{{ content | number_of_words }}-->
@@ -17,21 +17,11 @@ layout: default
       </div>
     </header>
 
-    {% if page.image %}{% include _fignew.html image=page.image %}{% endif %}
+    {% if page.image %}{% include fignew.html image=page.image %}{% endif %}
     
     {{ copy }}
 
-    <section class="recents">
-      <div class="hr"></div>
-      <ul class="text cards">
-        {% if page.next %}
-        {% include _card.html title=page.next.title image=page.next.image text=page.next.description url=page.next.url %}
-        {% endif %}
-        {% if page.previous %}
-        {% include _card.html title=page.previous.title image=page.previous.image text=page.previous.description url=page.previous.url %}
-        {% endif -%}
-      </ul>
-    </section>
+    {% include nextprev.html previous=page.previous next=page.next %}
 
   </article>
 

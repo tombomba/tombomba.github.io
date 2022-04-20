@@ -49,7 +49,7 @@ defaults:
       path: "_archives"
       type: "archives"
     values:
-      layout: archive
+      layout: archive-dir
       is_archive: true
  
 markdown: kramdown

@@ -1,0 +1,39 @@
+---
+layout: default
+---
+{% assign copy = content | strip | normalize_whitespace %}
+{% include _puncf.html title=page.title %}
+{% include banner.html %}
+
+{% capture datef %}<span class="daystamp">&nbsp;(<time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date: '%d %b' }}</time>)</span>{% endcapture -%}
+{% assign copysize = copy | size | minus: 4 %}
+{% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
+
+<main role="main"><!--{{ content | number_of_words }}-->
+
+  <article class="{{ page.label | default: page.layout }}">
+
+    {% if page.image %}{% include _fignew.html image=page.image %}{% endif %}
+
+    {% capture hedbox %}<div class="wrap"><h1>{{ titlestring }}</h1><p>{% endcapture -%}
+    {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
+
+    {{ copy }}
+
+    <section class="recents">
+      <div class="hr"></div>
+      <ul class="text cards">
+        {% if page.next %}
+        {% include _card.html title=page.next.title image=page.next.image text=page.next.description url=page.next.url %}
+        {% endif %}
+        {% if page.previous %}
+        {% include _card.html title=page.previous.title image=page.previous.image text=page.previous.description url=page.previous.url %}
+        {% endif -%}
+      </ul>
+    </section>
+
+  </article>
+
+</main>
+
+{% include footer.html %}

@@ -24,25 +24,11 @@ is_archive: true
 {% for group in posts_by_year_month %}
     
   {% if is_month_index and group.name contains target_yr and group.name contains target_mo %}
-  <article class="archive">
-    <header><h1>{{ group.name }}</h1></header>
-    <ul>
-    {% for post in group.items %}
-      <li><a href="{{ post.url | absolute_url }}">{{ post.title | smartify | normalize_whitespace | strip }}</a></li>
-    {% endfor %}
-    </ul>
-  </article>
+    {% include _dir_list_core.html name=group.name items=group.items %}
   {% endif %}
 
   {% if is_year_index and group.name contains target_yr %}
-  <article class="archive">
-    <header><h1>{{ group.name }}</h1></header>
-    <ul>
-    {% for post in group.items %}
-      <li><a href="{{ post.url | absolute_url }}">{{ post.title | smartify | normalize_whitespace | strip }}</a></li>
-    {% endfor %}
-    </ul>
-  </article>
+    {% include _dir_list_core.html name=group.name items=group.items %}
   {% endif %}
 
 {% endfor -%}

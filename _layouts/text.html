@@ -12,7 +12,7 @@ layout: default
 
     <header>
       <h1>{{ titlestring }}</h1>
-      <div class="byline {% if hedlength > 40 %}fat{% else %}thin{% endif %}">
+      <div class="byline {% if hedlength > 48 %}fat{% else %}thin{% endif %}">
         <p>{{ page.author | default: site.author }}</p>
         <p><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date: '%d %b %Y' }}</time></p>
       </div>

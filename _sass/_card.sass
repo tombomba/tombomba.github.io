@@ -5,6 +5,7 @@ ul.cards
     .meta
       margin-top: 1em
       h1, h2, h3, h4, h5, h6, p
+        display: inline
         margin: 0
         font-size: 1em
 
@@ -16,10 +17,13 @@ ul.cards.home
 
 ul.cards.post
   margin-top: calc(var(--shim-p) + var(--nudge))
+  padding: 0 1em
   li
-    margin-top: var(--shim)
+    margin-top: var(--buffer)
     &:first-of-type
       margin-top: 0
+      padding-top: var(--nudge)
+
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40rem)
@@ -29,7 +33,13 @@ ul.cards.post
       display: flex
       .meta
         margin-top: 0
+        h1, h2, h3, h4, h5, h6, p
+          display: block
   
   ul.cards.post
+    padding: 0
     li
+      margin-top: var(--shim)
+      &:first-of-type
+        padding: 0
       align-items: center

@@ -1,25 +1,26 @@
-{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y %m'" -%}
+{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%m %Y'" -%}
+{% assign curr_year = site.posts.first.date | date: '%Y' %}
 
-<section class="padwrap">
-{% for i in posts_by_year %}
-  
-  {% assign d = i.name | split: ' ' %}
-  {% assign yr = d[0] %}
-  {% assign mo = d[1] %}
-  {% assign curr_yr = yr -%}
-
-  {% assign display_mo = yr | append: '-' | append: mo | append: '-01' | date: '%b' -%}
-
-  {% if curr_yr != prev_yr %}
-  {% unless forloop.first %}</ul>{% endunless %}
+<section class="archive-list padwrap">
   <ul class="datelist">
-    <li class="year"><a href="{{ yr | absolute_url }}">{{ yr }}</a></li>
-  {% endif %}
 
-    <li><a href="{{ yr | append: '/' | append: mo | absolute_url }}">{{ display_mo }}</a></li>
+{% for group in posts_by_year reversed %}
   
-  {% assign prev_yr = curr_yr -%}
-  {% if forloop.last %}</ul>{% endif -%}
+  {% assign d = group.name | split: ' ' -%}
+  {% assign month = d[0] -%}
+  {% assign year = d[1] -%}
+  {% assign mo = year | append: '-' | append: month | append: '-01' | date: '%b' -%}
+
+  {% if curr_year != year %}{% continue %}{% endif -%}
+
+  {% if year != prev_yr %}<li class="year"><a href="{{ year | absolute_url }}">{{ year }}</a></li>{% endif %}
+  <li><a href="{{ year | append: '/' | append: month | absolute_url }}">{{ mo }}</a></li>
+
+  {% assign prev_yr = year -%}
 
 {% endfor -%}
+
+  <li class="more"><a href="{{ 'archive' | absolute_url }}" aria-label="Full archive by year and month">[&hellip;]</a></li>
+
+  </ul>
 </section>

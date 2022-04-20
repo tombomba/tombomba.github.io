@@ -3,43 +3,55 @@
 ---
 
 @charset "utf-8"
-@import reset, font, color, body, banner, figure, article, footer
+@import reset, font, color, body, banner, card, figure, article, footer
 
-article.wide
+article.text
   header
+    h1
+      font-size: var(--hed-size-md)
+      color: #000
+    .byline
+      margin-top: var(--shim-n)
+      p
+        margin: 0
+        display: inline
+        font-size: var(--font-size-sm)
+        line-height: var(--font-lh)
+        color: $mix-color
+        &:nth-of-type(2)::before
+          content: '\0020\/\0020'
+  section
+    margin-top: var(--shim-p)
+    padding-top: 3px
+
+article.micro
+  margin-top: var(--buffer)
+  div.wrap
     h1, p
       display: inline
       font-size: 1em
       line-height: var(--font-lh)
-    h1::after
-      content: '\0020'
+    h1
+      color: #000
+      &::after
+        content: '\0020'
     .punc::after
       content: '.'
+  section
+    margin-top: var(--shim-p)
+    padding-top: 3px
 
-article.narrow
-  header.micro
-    h1, p
-      display: inline
-      font-size: 1em
-      line-height: var(--font-lh)
-    h1::after
-      content: '\00A0\2014\0020'
-      font-weight: normal
-      color: $mix-color
+article.home
+  margin-top: var(--buffer)
 
 article.archive
+  margin-top: var(--buffer)
   &:not(:first-of-type)
     margin-top: var(--shim)
   header
     margin: 0
-    padding: var(--nudge)
-    display: flex
-    align-items: center
-    background-color: $bg-color
-    border-radius: 2px
     h1
       font-size: 1em
-      line-height: var(--hed-lh)
   ul
     margin: var(--shim) 0 0 var(--shim)
     list-style-type: square
@@ -52,70 +64,35 @@ article.error
     line-height: 1
     text-align: center
 
-article.home
-  margin-top: var(--buffer)
-  section
-    margin-top: var(--shim-2x)
-    &:first-of-type
-      margin-top: 0
-    div.text
-      margin-top: var(--shim-n)
-      h1, h2, h3, h4, h5, h6, p
-        margin: 0
-        display: inline
-        font-size: 1em
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 22rem)
+
+  article.text
+    header
+      .byline
+        margin-top: 1em
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30rem)
 
-  article.narrow
-    header.fat
-      padding-top: var(--shim)
+  article.text
+      header
+        .byline
+          margin-top: 0.125em
 
   article.archive
     &:not(:first-of-type)
-      margin-top: var(--shim-2x)
-    header
-      border-radius: 4px
-
-  article.home
-    section
-      margin-top: var(--shim-p)
-      div.image--thumb
-        float: right
-        margin-top: var(--nudge)
-        margin-left: 1em
-      div.text
-        margin: 0
-        h1, h2, h3, h4, h5, h6, p
-          display: block
+      margin-top: var(--buffer)
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40rem)
 
-  article.archive
+  article.text
     header
-      margin: 0 -1em
       h1
-        margin: 0 1em
-
-  article.narrow
-    header.tilt
-      padding-top: var(--shim)
-
-  article.home
-    section
-      display: flex
-      margin-top: var(--buffer)
-      div.image--thumb
-        margin: var(--nudge) 0 0 0
-        &.right
-          margin-left: var(--shim-n)
-          order: 99
-        &.left
-          margin-right: var(--shim-n)
-          order: -1
-
-
+        font-size: var(--hed-size)
+      .byline
+        margin-top: 0.125em

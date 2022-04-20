@@ -1,21 +1,18 @@
-{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y %m'" %}
+{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y %m'" -%}
 
-<ul class="datelist flatlist center">
+<ul class="datelist">
 {% for i in posts_by_year %}
   
   {% assign d = i.name | split: ' ' %}
   {% assign yr = d[0] %}
   {% assign mo = d[1] %}
-  {% assign curr_yr = yr %}
+  {% assign curr_yr = yr -%}
 
-  {% assign display_mo = yr | append: '-' | append: mo | append: '-01' | date: '%b' %}
+  {% assign display_mo = yr | append: '-' | append: mo | append: '-01' | date: '%b' -%}
 
-  {% if curr_yr != prev_yr %}
-    <li class="year"><a href="{{ yr | absolute_url }}">{{ yr }}</a></li>
-  {% endif %}
-  
+  {% if curr_yr != prev_yr %}<li class="year"><a href="{{ yr | absolute_url }}">{{ yr }}</a></li>{% endif %}
   <li><a href="{{ yr | append: '/' | append: mo | absolute_url }}">{{ display_mo }}</a></li>
-  {% assign prev_yr = curr_yr %}
+  {% assign prev_yr = curr_yr -%}
 
 {% endfor -%}
 </ul>

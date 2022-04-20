@@ -1,0 +1,20 @@
+---
+layout: default
+title: "Archive ~~~"
+label: "archive"
+is_archive: true
+permalink: "/archive/"
+---
+
+{% include banner.html %}
+{% assign master_list = site.posts | group_by_exp: "post", "post.date | date: '%b %Y'" %}
+
+<main role="main">
+
+{% for group in master_list %}
+  {% include _dir_list_core.html name=group.name items=group.items %}
+{% endfor -%}
+
+</main>
+
+{% include footer.html %}

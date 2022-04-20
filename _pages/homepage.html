@@ -10,15 +10,11 @@ permalink: /index.html
 <main role="main">
 
   <article class="home">
-  {% for p in site.posts limit:12 %}
-    {% include _section.html title=p.title image=p.image text=p.excerpt url=p.url %}
-  {% endfor -%} 
-  <section>
-    <div class="text">
-      <h1><a href="{{ 'posts' | absolute_url }}">A glorious list of internet victories &#8611;</a></h1>
-      <p>{{ "Also known as the archive. One page. All the posts. Because we both know you're dying to read everything I have written." | smartify }}</p>
-    </div>
-  </section>
+    <ul class="home cards">
+    {% for p in site.posts limit:12 %}
+      {% include _card.html title=p.title image=p.image text=p.excerpt url=p.url is_home=true %}
+    {% endfor -%} 
+    </ul>
   </article>
 
 </main>

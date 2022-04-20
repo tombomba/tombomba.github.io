@@ -1,0 +1,8 @@
+<article class="archive">
+  <header><h1>{{ include.name }}</h1></header>
+  <ul>
+  {% for post in include.items %}
+    <li><a href="{{ post.url | absolute_url }}">{{ post.title | smartify | normalize_whitespace | strip }}</a></li>
+  {% endfor %}
+  </ul>
+</article>

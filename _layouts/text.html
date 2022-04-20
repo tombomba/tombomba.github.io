@@ -9,12 +9,32 @@ layout: default
 
   <article class="{{ page.label | default: page.layout }}">
 
-    <header><h1>{{ titlestring }}</h1></header>
+    <header>
+      <h1>{{ titlestring }}</h1>
+      <div class="byline">
+        <p>{{ page.author | default: site.author }}</p>
+        <p><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date: '%d %b %Y' }}</time></p>
+      </div>
+    </header>
 
+    {% if page.image %}{% include _fignew.html image=page.image %}{% endif %}
+    
     {{ copy }}
+
+    <section class="recents">
+      <div class="hr"></div>
+      <ul class="text cards">
+        {% if page.next %}
+        {% include _card.html title=page.next.title image=page.next.image text=page.next.description url=page.next.url %}
+        {% endif %}
+        {% if page.previous %}
+        {% include _card.html title=page.previous.title image=page.previous.image text=page.previous.description url=page.previous.url %}
+        {% endif -%}
+      </ul>
+    </section>
 
   </article>
 
 </main>
 
-{% include footer-alt.html %}
+{% include footer.html %}

@@ -96,13 +96,14 @@ figure.thumb
       margin: var(--shim-p) 0 var(--nudge) 1em
 
   figure.thumb
-    margin: var(--nudge) 0
     img
       --width: var(--shim-4x)
       --height: var(--shim-4x)
+    &.fat
+      margin: var(--nudge) 0
     &.right
       order: 2
-      margin-left: var(--shim-n)
+      margin-left: var(--shim)
     &.thumb.left
       order: -1
       margin-right: var(--shim-n)

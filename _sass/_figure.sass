@@ -82,10 +82,22 @@ figure.thumb
   figure.video
     margin-bottom: var(--shim-p)
 
-  figure.photo,
-  figure.thumb
+  figure.photo
+    margin-bottom: var(--shim-p)
     img
       --width: 20em
+
+  figure.thumb
+    margin: var(--nudge) 0
+    img
+      --width: var(--shim-4x)
+      --height: var(--shim-4x)
+    &.right
+      order: 2
+      margin-left: 1em
+    &.thumb.left
+      order: -1
+      margin-right: var(--shim-n)
 
 //-----------------------------------------------------------------------------
 
@@ -103,19 +115,6 @@ figure.thumb
       margin: 1em 0 1em 1em
     &.top
       margin-top: var(--nudge)
-
-  figure.thumb
-    img
-      --width: var(--shim-4x)
-      --height: var(--shim-4x)
-    &.fat
-      margin: var(--nudge) 0
-    &.right
-      order: 2
-      margin-left: 1em
-    &.thumb.left
-      order: -1
-      margin-right: var(--shim-n)
 
 //-----------------------------------------------------------------------------
 

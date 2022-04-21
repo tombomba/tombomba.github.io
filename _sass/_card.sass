@@ -1,9 +1,12 @@
+section.recents
+  margin: var(--shim-2x) auto 0 auto
+
 ul.cards
   margin: 0
   list-style-type: none
   li
     .meta
-      margin-top: 1em
+      margin-top: var(--shim)
       h1, h2, h3, h4, h5, h6, p
         display: inline
         margin: 0
@@ -16,10 +19,7 @@ ul.cards.home
       margin: 0
 
 ul.cards.post
-  margin-top: var(--shim-2x)
   padding: var(--shim-p) 0
-  border-top: thin solid $border-dark
-  border-bottom: thin solid $border-dark
   li 
     margin-top: var(--shim-n)
     &:first-of-type

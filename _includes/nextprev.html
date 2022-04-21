@@ -1,4 +1,5 @@
 <section class="recents">
+  <div class="hr"></div>
   <ul class="post cards">
     {% if include.next %}
     {% include _card.html title=include.next.title image=include.next.image text=include.next.description url=include.next.url %}
@@ -7,4 +8,5 @@
     {% include _card.html title=include.previous.title image=include.previous.image text=include.previous.description url=include.previous.url %}
     {% endif -%}
   </ul>
+  <div class="hr"></div>
 </section>

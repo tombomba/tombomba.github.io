@@ -2,7 +2,8 @@ footer
   max-width: var(--page-width)
   margin: var(--shim-p) auto
   padding-top: 3px
-  &.home,
+  &.home
+    margin: var(--shim-2x) auto
   &.archive
     margin-top: var(--buffer)
   &.text,
@@ -23,7 +24,8 @@ footer
         margin-top: var(--shim)
 
   ul.datelist
-    margin: 0
+    margin: 0 
+    padding: 1em 0
     display: flex
     flex-flow: row wrap
     align-items: center
@@ -32,8 +34,8 @@ footer
     li
       margin-right: 0.66em
 
-  section.padwrap
-    padding: 1em
+  section.archive-list
+    margin-bottom: 1em
 
 //-----------------------------------------------------------------------------
 

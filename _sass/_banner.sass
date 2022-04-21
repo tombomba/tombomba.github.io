@@ -4,48 +4,23 @@ header[role="banner"]
   display: flex
   align-items: center
   justify-content: space-between
-  --logo-size: 42px
-  .logo.text
-    margin-right: 1em
-    margin-left: -1px
-    display: flex
-    align-items: center
-    h1
-      font-family: 'Sarina', cursive
-      font-size: var(--hed-size-md)
-      font-weight: 400
-      line-height: 1
-      text-transform: lowercase
-      a:link, a:visited
-        color: $logo-fade
-        text-decoration: none
-        text-shadow: -2px 2px $shock-color
-
-  .logo.icon
-    margin-right: 1em
+  .logo
     svg
-      width: var(--logo-size)
-      height: var(--logo-size)
+      width: var(--buffer)
+      height: var(--buffer)
       fill: $logo-color
+      filter: drop-shadow(0 -1em $shock-color) drop-shadow(0 -2em $shock-fade)
+      transform: rotate(-9deg)
       opacity: 0.8
-      filter: drop-shadow(-3px 3px $shock-color)
-      transform: rotate(-12deg)
-      &:hover
-        opacity: 1
-    a:link, a:visited
-      text-decoration: none
-
   .hr
     flex: 1
-    margin-top: 3px
+    margin-left: 1em
 
-header[role="banner"].home
-  --logo-size: 47px
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 30rem)
+@media screen and (min-width: 40rem)
 
   header[role="banner"]
-    .logo.icon
-      margin-left: -9px
+    .logo
+      margin-left: calc(var(--nudge) * -1)

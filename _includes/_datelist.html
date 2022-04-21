@@ -2,6 +2,7 @@
 {% assign curr_year = site.posts.first.date | date: '%Y' %}
 
 <section class="archive-list padwrap">
+  <div class="hr"></div>
   <ul class="datelist">
 
 {% for group in posts_by_year reversed %}
@@ -23,4 +24,5 @@
   <li class="more"><a href="{{ 'archive' | absolute_url }}" aria-label="Full archive">[&hellip;]</a></li>
 
   </ul>
+  <div class="hr"></div>
 </section>

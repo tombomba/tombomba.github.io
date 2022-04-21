@@ -6,16 +6,17 @@
 @import reset, font, color, body, banner, card, figure, article, footer
 
 article.text
-  header
-    .byline
-      margin-top: 1em
-      p
-        margin: 0
-        display: inline
-        font-size: var(--font-size-sm)
-        color: $mix-color
-        &:nth-of-type(2)::before
-          content: '\0020\/\0020'
+  .byline
+    margin-top: var(--nudge)
+    p
+      margin: 0
+      display: inline
+      font-size: var(--font-size-sm)
+      color: $mix-color
+      &:first-of-type
+        font-weight: bold
+      &:nth-of-type(2)::before
+        content: '\0020\/\0020'
 
 article.micro
   div.wrap
@@ -64,12 +65,22 @@ article.future
 @media screen and (min-width: 30rem)
 
   article.text
-      header
-        .byline.fat
-          margin-top: 1em
-        .byline.thin
-          margin-top: 0
+    header
+      h1
+        font-size: 150%
+      .byline
+        p:first-of-type
+          line-height: var(--hed-lh)
 
   article.archive
     &:not(:first-of-type)
       margin-top: var(--buffer)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50rem)
+
+  article.text
+    header
+      h1
+        font-size: var(--hed-size-md)

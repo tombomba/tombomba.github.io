@@ -4,7 +4,6 @@ layout: default
 {% assign copy = content | strip | normalize_whitespace %}
 {% include widont.html title=page.title %}
 {% include banner.html %}
-{% assign hedlength = page.title | size %}
 
 <main role="main"><!--{{ content | number_of_words }}-->
 
@@ -12,14 +11,15 @@ layout: default
     
     <header>
       <h1>{{ titlestring }}</h1>
-      <div class="byline {% if hedlength > 48 %}fat{% else %}thin{% endif %}">
-        <p>{{ page.author | default: site.author }}</p>
-        <p><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date: '%d %b %Y' }}</time></p>
-      </div>
     </header>
 
     {% if page.image %}{% include fignew.html image=page.image %}{% endif %}
-    
+
+    <div class="byline ">
+      <p>By {{ page.author | default: site.author }}</p>
+      <p><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
+    </div>
+
     {{ copy }}
 
     {% include nextprev.html previous=page.previous next=page.next %}

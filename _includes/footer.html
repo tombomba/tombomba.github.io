@@ -7,7 +7,8 @@
   <div class="hr"></div>
 
   <ul class="socials">
-    <li class="copydate">Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {% unless page.is_about %}<a href="{{ 'about' | absolute_url }}">{{ site.author}}</a>{% else %}{{ site.author }}{% endunless %}</li>
+    <li class="copydate">Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</li> 
+    {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}
     <li><a href="https://twitter.com/{{ site.socials }}" target="_socials">Twitter</a></li>
     <li><a href="{{ 'feed.xml' | absolute_url }}" target="_feed">RSS</a></li>
   </ul>

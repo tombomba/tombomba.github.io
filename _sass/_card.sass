@@ -5,25 +5,17 @@ ul.cards
   margin: 0
   list-style-type: none
   li
+    margin-top: var(--buffer)
+    &:first-of-type
+      margin: 0
     .meta
-      margin-top: var(--shim)
       h1, h2, h3, h4, h5, h6, p
         display: inline
         margin: 0
         font-size: 1em
 
-ul.cards.home 
-  li
-    margin-top: var(--buffer)
-    &:first-of-type
-      margin: 0
-
 ul.cards.post
   padding: var(--shim-p) 0
-  li 
-    margin-top: var(--shim-n)
-    &:first-of-type
-      margin-top: 0
 
 //-----------------------------------------------------------------------------
 
@@ -33,9 +25,14 @@ ul.cards.post
     li
       display: flex
       .meta
-        margin-top: 0
         h1, h2, h3, h4, h5, h6, p
           display: block
+
+  ul.cards.post
+    li
+      margin-top: var(--shim)
+      &:first-of-type
+        margin-top: 0
 
 //-----------------------------------------------------------------------------
 

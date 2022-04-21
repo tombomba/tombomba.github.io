@@ -3,14 +3,14 @@
 <li>
 
   {% if include.image.file %}
-    <figure class="thumb {% if include.is_home %}home {% cycle 'right', 'left' %}{% else %}left{% endif %}"><a href="{{ include.url | absolute_url }}"><img src="{{ include.image.file | prepend: site.img }}" alt="{{ include.image.alt }}"></a></figure>
+    <figure class="thumb {% if include.is_home %}home {% cycle 'right', 'left' %}{% else %}post left{% endif %}"><a href="{{ include.url | absolute_url }}"><img src="{{ include.image.file | prepend: site.img }}" alt="{{ include.image.alt }}"></a></figure>
   {% else %}
-    {% unless include.is_home %}<figure class="thumb left"><a href="{{ include.url | absolute_url }}"><img src="{{ 'bomtomba.jpg' | prepend: site.img }}" alt=""></a></figure>{% endunless %}
+    {% unless include.is_home %}<figure class="thumb post left"><a href="{{ include.url | absolute_url }}"><img src="{{ 'bomtomba.jpg' | prepend: site.img }}" alt=""></a></figure>{% endunless %}
   {% endif -%}
 
   <div class="meta">
-    <{{ h }}><a href="{{ include.url | absolute_url }}">{{ include.title | strip | smartify | truncatewords: 12 }}</a></{{ h }}>
-    <p>{{ include.text | truncatewords: 50 | strip | strip_html | smartify }}{% if include.date %} <span class="daystamp">({{ include.date | date: '%d %b' }})</span>{% endif %}</p>
+    <{{ h }}><a href="{{ include.url | absolute_url }}">{{ include.title | strip | smartify | truncate: 42 }}</a></{{ h }}>
+    <p>{{ include.text | truncate: 280 | strip | strip_html | smartify }}{% if include.date %} <span class="daystamp">({{ include.date | date: '%d %b' }})</span>{% endif %}</p>
   </div>
 
 </li>

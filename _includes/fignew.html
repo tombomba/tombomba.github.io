@@ -25,7 +25,7 @@
 
   {% assign figratio = myfig[1] | default: 'square' | strip -%}
   {% assign figfloat = myfig[2] | default: 'left' | strip -%}
-  {% assign figextra = myfig[3] | default: 'top' | strip -%}
+  {% assign figextra = myfig[3] | default: 'push' | strip -%}
 
   <figure class="photo {{ figfloat }} {{ figextra }}">
     <img src="{{ include.image.file | prepend: site.img }}" class="ratio--{{ figratio }}" alt="{{ include.image.alt }}">

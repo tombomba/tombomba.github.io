@@ -50,6 +50,7 @@ defaults:
       type: "archives"
     values:
       layout: archive-dir
+      label: archive
       is_archive: true
  
 markdown: kramdown

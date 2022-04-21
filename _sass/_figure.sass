@@ -24,7 +24,7 @@ figure.video
     height: 100%
 
 figure.photo
-  margin-bottom: var(--shim)
+  margin: var(--shim-p) 0
   img
     --width: 12em
     --height: var(--width)
@@ -81,6 +81,7 @@ figure.thumb
 
   figure.video
     margin-bottom: var(--shim-p)
+    padding-bottom: var(--nudge)
 
   figure.photo
     margin-bottom: var(--shim-p)
@@ -115,6 +116,8 @@ figure.thumb
       margin: 1em 0 1em 1em
     &.top
       margin-top: var(--nudge)
+    &.push
+      margin-top: var(--shim-p)
   
   figure.thumb.home
     img

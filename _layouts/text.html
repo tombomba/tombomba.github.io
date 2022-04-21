@@ -23,7 +23,7 @@ layout: default
       <h1>{{ titlestring }}</h1><!-- {{ page.title.size }} -->
       <div class="byline {{ bypad | default: 'xo' }}">
         <p><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
-        <p class="author">{{ page.author | default: site.author }}</p>
+        <p class="author"><a href="{{ 'about' | absolute_url }}">{{ page.author | default: site.author }}</a></p>
       </div>
     </header>
 

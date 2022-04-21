@@ -5,20 +5,31 @@ layout: default
 {% include widont.html title=page.title %}
 {% include banner.html %}
 
+{% if page.title.size > 60 %}
+  {% assign bypad = 'lg' %}
+{% elsif page.title.size > 50 %} 
+  {% assign bypad = 'md' %}
+{% elsif page.title.size > 25 %} 
+  {% assign bypad = 'sm' %}
+{% else %}
+  {% assign bypad = 'xs' %}
+{% endif -%}
+
 <main role="main"><!--{{ content | number_of_words }}-->
 
   <article class="{{ page.label | default: page.layout }}">
     
     <header>
-      <h1>{{ titlestring }}</h1>
+      <h1>{{ titlestring }}</h1><!-- {{ page.title.size }} -->
+      <div class="byline {{ bypad | default: 'xo' }}">
+        <p><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
+        <p class="author">{{ page.author | default: site.author }}</p>
+      </div>
     </header>
 
-    {% if page.image %}{% include fignew.html image=page.image %}{% endif %}
-
-    <div class="byline ">
-      <p>By {{ page.author | default: site.author }}</p>
-      <p><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
-    </div>
+    {% if page.image %}
+      {% include fignew.html image=page.image %}
+    {% endif %}
 
     {{ copy }}
 

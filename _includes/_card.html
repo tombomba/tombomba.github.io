@@ -9,8 +9,8 @@
   {% endif -%}
 
   <div class="meta">
-    <{{ h }}><a href="{{ include.url | absolute_url }}">{{ include.title | strip | smartify | truncate: 42 }}</a></{{ h }}>
-    <p>{{ include.text | truncate: 280 | strip | strip_html | smartify }}{% if include.date %} <span class="daystamp">({{ include.date | date: '%d %b' }})</span>{% endif %}</p>
+    <{{ h }}><a href="{{ include.url | absolute_url }}">{{ include.title | strip | smartify | truncate: 50 }}</a></{{ h }}>
+    <p>{{ include.text | truncatewords: 50 | strip | strip_html | smartify }}{% if include.date %} <span class="daystamp">({{ include.date | date: '%d %b' }})</span>{% endif %}</p>
   </div>
 
 </li>

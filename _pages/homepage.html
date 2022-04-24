@@ -10,11 +10,11 @@ permalink: /index.html
 <main role="main">
 
   <article class="home">
-    <ul class="home cards">
-    {% for p in site.posts limit:12 %}
-      {% include _card.html title=p.title image=p.image text=p.excerpt url=p.url is_home=true %}
-    {% endfor -%} 
-    </ul>
+  <ul>
+  {% for p in site.posts limit:12 %}
+    <li><a href="{{ p.url | absolute_url }}">{{ p.title | strip | smartify | normalize_whitespace }}</a></li>
+  {% endfor -%} 
+  </ul>
   </article>
 
 </main>

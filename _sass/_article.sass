@@ -1,5 +1,5 @@
 article
-  margin-top: 4em
+  margin-top: var(--shim-2x)
   @extend .clearfix
 
   header
@@ -20,23 +20,23 @@ article
   
   h2, h3, h4, h5, h6
     max-width: var(--page-width-sm)
-    margin-top: 1.25em
+    margin-top: var(--shim-n)
     font-size: 1em
 
   p
     max-width: var(--page-width-sm)
-    margin-top: 1.25em
+    margin-top: var(--shim-n)
   
   ul, ol
     max-width: var(--page-width-sm)
-    margin: 1.25em 0 0 1.25em
+    margin: var(--shim-n) 0 0 var(--shim-n)
     li
       max-width: var(--page-width-sm)
       margin-top: 0
   
   blockquote
     max-width: var(--page-width-sm)
-    padding-left: 1.25em
+    padding-left: var(--shim-n)
     border-left: thin solid $mix-color
   
   blockquote,
@@ -45,7 +45,7 @@ article
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 30rem)
+@media screen and (min-width: 34rem)
 
   article
     span.widont

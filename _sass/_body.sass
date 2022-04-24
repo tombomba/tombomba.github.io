@@ -1,5 +1,6 @@
 body
 
+  max-width: 90em
   padding: 0 1em
 
   font-family: $serif
@@ -34,18 +35,10 @@ a
   font-style: italic
   color: $mix-color
   a:link, a:visited
+    color: $mix-color
     text-decoration: none
   a:hover
     text-decoration: underline
-
-.hr
-  margin: 0
-  padding: 0
-  border: 0
-  height: 0
-  border-top: thin solid $border-dark
-  border-bottom: medium solid $border-light
-  background-color: $body-color
 
 //-----------------------------------------------------------------------------
 
@@ -59,6 +52,7 @@ a
 @media screen and (min-width: 40rem)
 
   body
+    max-width: 80em
     width: 84%
     margin-left: auto
     margin-right: auto
@@ -73,4 +67,3 @@ a
     width: 87.5%
     padding-left: 12.5%
     padding-right: 0
-    max-width: 1400px

@@ -9,14 +9,16 @@
   {% endif -%}
 
   {% if mw < 600 %}
-    {% assign vidmax = mw | divided_by: 612 | times: 100 | round: 2 %}
+    {% assign vidmax = mw | divided_by: 673 | times: 100 | round: 2 %}
   {% endif %}
 
-  <figure class="video" style="--video-max-width: {{ vidmax | default: '100' }}%">
-    <div class="wrap" style="--percent: {{ percentage | default: '56.25' }}%;">
-      <img src="{{ include.image.file | prepend: site.img }}" class="fixed" alt="{{ include.image.alt }}">
+  <figure class="video">
+    <div class="container" style="--video-max-width:{{ vidmax | default: '100' }}%;">
+      <div class="wrap" style="--percent:{{ percentage | default: '56.25' }}%;">
+        <img src="{{ include.image.file | prepend: site.img }}" class="fixed" alt="{{ include.image.alt }}">
+      </div>
+      {% if include.image.caption %}<figcaption>{{ include.image.caption | smartify | normalize_whitespace | strip }}</figcaption>{% endif %}
     </div>
-    {% if include.image.caption %}<figcaption>{{ include.image.caption | smartify | normalize_whitespace | strip }}</figcaption>{% endif %}
   </figure>
 
 {% endif -%}

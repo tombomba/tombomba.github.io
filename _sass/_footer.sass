@@ -1,7 +1,7 @@
 footer
 
-  margin-top: 6em
-  margin-bottom: 2em
+  margin-top: var(--shim-2x)
+  margin-bottom: var(--shim-p)
 
   ul
     margin: 0
@@ -10,8 +10,8 @@ footer
     align-items: center
     list-style-type: none
     li
-      margin-right: 0.8em
-      font-size: var(--font-size-xx)
+      margin-right: calc(var(--nudge) * 2)
+      font-size: 1em
       line-height: var(--hed-lh)
       font-weight: bold
       text-transform: lowercase
@@ -22,3 +22,10 @@ footer
           content: '.'
       a:hover
         text-decoration: underline
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 25rem)
+
+  footer
+    margin-top: var(--shim-4x)

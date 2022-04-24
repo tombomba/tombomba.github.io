@@ -21,7 +21,13 @@ article.text
         &:not(:first-of-type)::before
           content: '\0020\2022\0020'
   figure.video
-    margin: var(--shim) 0 var(--shim-p) 0
+    margin: var(--shim-p) 0
+
+article.archive
+  header
+    h1
+      font-size: 1em
+      line-height: var(--hed-lh)
 
 article.error
   p
@@ -45,3 +51,5 @@ article.future
         margin-top: calc(var(--nudge) / 2)
       .byline.thin
         margin-top: 0
+    figure.video
+      margin-top: var(--shim)

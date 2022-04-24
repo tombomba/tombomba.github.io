@@ -1,4 +1,7 @@
 body
+
+  padding: 0 1em
+
   font-family: $serif
   font-size: var(--font-size)
   line-height: var(--font-lh)
@@ -9,11 +12,6 @@ body
   text-rendering: optimizeSpeed
   -ms-text-size-adjust: auto
   -webkit-text-size-adjust: auto
-
-  padding: 0 1em
-
-main[role="main"]
-  margin: 0 auto
 
 a
   text-decoration: underline
@@ -51,7 +49,28 @@ a
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 32rem)
+@media screen and (min-width: 20rem)
 
   body
-    padding: 0 var(--shim)
+    padding: 0 2em
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  body
+    width: 84%
+    margin-left: auto
+    margin-right: auto
+    padding-left: 8%
+    padding-right: 8%
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 70rem)
+
+  body
+    width: 87.5%
+    padding-left: 12.5%
+    padding-right: 0
+    max-width: 1400px

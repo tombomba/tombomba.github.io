@@ -1,36 +1,23 @@
 header[role="banner"]
-  max-width: var(--page-width)
-  margin: var(--shim) auto 0 auto
+  margin-top: 2em
   display: flex
   align-items: center
-  justify-content: space-between
-  .logo
-    h1
-      font: 900 var(--hed-size-lg)/1 'Rock 3D', cursive
-      letterspacing: -1px
-      text-transform: uppercase
-      a:link, a:visited
-        color: $logo-color
-        text-shadow: -3px 3px $shock-color, 3px -3px $shock-color
-        text-decoration: none
-    svg
-      width: var(--buffer)
-      height: var(--buffer)
-      fill: $logo-color
-      filter: drop-shadow(0 -1em $shock-color) drop-shadow(0 -2em $shock-fade)
-      transform: rotate(-9deg)
-      opacity: 0.8
-      &:hover
-        opacity: 1
-  .hr
-    flex: 1
-    margin-top: 3px
-    margin-left: 1em
+  h1
+    font-family: $serif
+    font-size: 1em
+    line-height: var(--hed-lh)
+    letter-spacing: -0.125px
+    font-variant-ligatures: common-ligatures
+    text-transform: lowercase
+    color: $logo-color
+    a:link, a:visited
+      color: $logo-color
+      text-decoration: none
+    a:hover
+      text-decoration: underline
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 40rem)
+//@media screen and (min-width: 40rem)
 
-  header[role="banner"]
-    .logo
-      margin-left: -0.33em
+  

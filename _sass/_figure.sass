@@ -1,14 +1,5 @@
-figure
-  img
-    border-radius: 4px
-    background-color: $bg-color
-  figcaption
-    font-size: var(--font-size-xs)
-
 figure.video
   max-width: var(--page-width-md)
-  margin: 1.5em 0 2em 0
-  padding-top: var(--nudge)
   .container
     max-width: var(--video-max-width)
     .wrap
@@ -55,21 +46,6 @@ figure.photo
     &.ratio--square
       --height: var(--width)
 
-figure.thumb
-  margin: var(--nudge) 0 1em 0
-  &.post
-    --width: 12em
-    --height: calc(var(--width) / 1.375)
-  &.home
-    --width: 12em
-    --height: calc(var(--width) / 1.375)
-  img
-    display: block
-    width: var(--width)
-    height: var(--height)
-    object-fit: cover
-    object-position: 50% 50%
-
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 20rem)
@@ -86,22 +62,6 @@ figure.thumb
     img
       --width: 20em
 
-  figure.thumb
-    &.post  
-      margin: var(--nudge) 0 0 0
-      --width: var(--shim-3x)
-      --height: var(--shim-3x)
-    &.home
-      margin-top: var(--nudge)
-      --width: var(--shim-3x)
-      --height: var(--shim-3x)
-    &.right
-      order: 2
-      margin-left: 1em
-    &.thumb.left
-      order: -1
-      margin-right: var(--shim-n)
-
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40rem)
@@ -116,25 +76,4 @@ figure.thumb
     &.right
       float: right
       margin: 1em 0 1em 1em
-    &.top
-      margin-top: var(--nudge)
-    &.push
-      margin-top: var(--shim-p)
-
-  figure.thumb.post
-    margin-top: 0
   
-  figure.thumb.home
-    img
-      --width: var(--shim-4x)
-      --height: var(--shim-4x)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 50rem)
-
-  figure.photo
-    &.left
-      margin-right: var(--shim)
-    &.right
-      margin-left: var(--shim)

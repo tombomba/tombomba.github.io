@@ -3,39 +3,34 @@ article
   @extend .clearfix
 
   header
-    max-width: var(--page-width-lg)
-
-  h1
-    margin: 0
-    max-width: var(--page-width-lg)
-    font-size: var(--hed-size-md)
-    line-height: var(--hed-lh)
-    color: black
-    a:link, a:visited
+    h1
+      margin: 0
       color: black
-      text-decoration: none
-    a:hover
-      text-decoration: underline
+      a:link, a:visited
+        color: black
+        text-decoration: none
+      a:hover
+        text-decoration: underline
   
   h2, h3, h4, h5, h6
-    max-width: var(--page-width-lg)
-    margin-top: 1em
+    max-width: var(--page-width-sm)
+    margin-top: 1.25em
     font-size: 1em
 
   p
     max-width: var(--page-width-sm)
-    margin-top: 1em
+    margin-top: 1.25em
   
   ul, ol
     max-width: var(--page-width-sm)
-    margin: 1em 0 0 1em
+    margin: 1.25em 0 0 1.25em
     li
       max-width: var(--page-width-sm)
       margin-top: 0
   
   blockquote
     max-width: var(--page-width-sm)
-    padding-left: 1em
+    padding-left: 1.25em
     border-left: thin solid $mix-color
   
   blockquote,
@@ -44,7 +39,7 @@ article
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 25rem)
+@media screen and (min-width: 30rem)
 
   article
     span.widont

@@ -1,43 +1,24 @@
 footer
 
-  margin-top: 4em
+  margin-top: 6em
   margin-bottom: 2em
 
-  ul.socials
+  ul
     margin: 0
-    display: flex
-    flex-flow: column
-    align-items: center
-    list-style-type: none
-    li
-      color: $mix-color
-      &.copydate
-        order: 99
-        margin-top: 1em
-
-  ul.datelist
-    margin: 0 
-    padding: 1em 0
     display: flex
     flex-flow: row wrap
     align-items: center
     list-style-type: none
     li
-      margin-right: 0.66em
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 30rem)
-
-  footer
-    ul.socials
-      flex-flow: row wrap
-      li
-        font-size: var(--font-size-sm)
-        line-height: var(--hed-lh)
-        &.copydate
-          order: -1
-          margin: 0
-        &:not(:last-of-type)::after
-          content: '-'
-          padding: 0 0.33em
+      margin-right: 0.8em
+      font-size: var(--font-size-xx)
+      line-height: var(--hed-lh)
+      font-weight: bold
+      text-transform: lowercase
+      a:link, a:visited
+        color: $logo-color
+        text-decoration: none
+        &::after
+          content: '.'
+      a:hover
+        text-decoration: underline

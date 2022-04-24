@@ -4,6 +4,7 @@ layout: default
 
 {% assign copy = content | strip | normalize_whitespace %}
 {% include widont.html title=page.title %}
+{% if page.title.size > 55 %}{% assign bypad = 'fat' %}{% endif %}
 
 {% include banner.html %}
 
@@ -11,13 +12,15 @@ layout: default
 
   <article class="{{ page.label | default: page.layout }}">
 
-    {% if page.image %}
-      {% include fignew.html image=page.image %}
-    {% endif %}
-
     <header>
       <h1>{{ titlestring }}</h1>
+      <div class="byline {{ bypad | default: 'thin' }}">
+        <p><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
+        <p>{{ page.author | default: site.author }}</p>
+      </div>
     </header>
+
+    {% if page.image %}{% include fignew.html image=page.image %}{% endif %}
 
     {{ copy }}
 

@@ -3,76 +3,40 @@
 ---
 
 @charset "utf-8"
-@import reset, font, color, body, banner, card, figure, article, footer
+@import reset, font, color, body, banner, figure, article, footer
 
 article.text
   header
+    max-width: var(--page-width-md)
     h1
-      font-size: var(--hed-size)
-
-article.micro
-  div.wrap
-    h1, p
-      display: inline
-      font-size: 1em
-      line-height: var(--font-lh)
-    h1
-      color: #000
-      &::after
-        content: '\0020'
-    .punc::after
-      content: '.'
-
-article.home
-  margin-top: var(--buffer)
-
-article.archive
-  margin-top: var(--buffer)
-  &:not(:first-of-type)
-    margin-top: var(--shim)
-  header
-    margin: 0
-    h1
-      font-size: 1em
-  ul
-    margin: var(--shim) 0 0 var(--shim)
-    list-style-type: square
-    color: $logo-color
-    li
-      margin: 0
+      font-size: 150%
+      line-height: var(--hed-lh)
+    .byline
+      margin-top: 1em
+      p
+        display: inline
+        margin: 0
+        font-size: var(--font-size-sm)
+        color: $mix-color
+        &:nth-of-type(2)::before
+          content: '\0020\2022\0020'
+          color: $mix-color
 
 article.error
   p
-    margin: var(--nudge)
     text-align: center
 
 article.future
-  margin-top: var(--shim)
+  margin-top: 2em
   p
-    margin-top: var(--nudge)
     text-align: center
+
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30rem)
 
-  article.archive
-    &:not(:first-of-type)
-      margin-top: var(--buffer)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
   article.text
     header
       .byline
-        &.lg
-          margin-top: var(--nudge)
-        &.md
-          margin-top: calc(var(--nudge) / 2)
-        &.sm
-          margin-top: 2px
-        &.xs
-          margin-top: 0
-        
+        margin-top: 0.125em

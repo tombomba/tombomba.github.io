@@ -2,12 +2,9 @@
 
   {% if page.is_home %}
     {% include _datelist.html %}
-  {% endif -%}
-
-  <div class="hr"></div>
+  {% endif %}
 
   <ul class="socials">
-    {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}
     {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}
     <li><a href="https://twitter.com/{{ site.socials }}" target="_socials">Twitter</a></li>
     <li><a href="{{ 'feed.xml' | absolute_url }}" target="_feed">RSS</a></li>

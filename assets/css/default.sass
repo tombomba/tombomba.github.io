@@ -12,15 +12,16 @@ article.text
       font-size: 150%
       line-height: var(--hed-lh)
     .byline
-      margin-top: 1em
+      margin-top: var(--nudge)
       p
         display: inline
         margin: 0
         font-size: var(--font-size-sm)
         color: $mix-color
-        &:nth-of-type(2)::before
+        &:not(:first-of-type)::before
           content: '\0020\2022\0020'
-          color: $mix-color
+  figure.video
+    margin: var(--shim) 0 var(--shim-p) 0
 
 article.error
   p
@@ -38,5 +39,9 @@ article.future
 
   article.text
     header
+      h1  
+        font-size: var(--hed-size-md)
+      .byline.fat
+        margin-top: calc(var(--nudge) / 2)
       .byline.thin
-        margin-top: 0.125em
+        margin-top: 0

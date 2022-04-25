@@ -2,7 +2,7 @@
 layout: default
 ---
 {% assign copy = content | strip | normalize_whitespace %}
-{% include puncf.html title=page.title %}
+{% include _puncf.html title=page.title %}
 {% include banner.html %}
 
 {% capture datef %}<span class="daystamp">&nbsp;(<time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date: '%d %b' }}</time>)</span>{% endcapture -%}

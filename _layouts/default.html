@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <base href="{{ site.url }}">
   {% capture meta_title %}{% if page.is_home %}{{ site.title }}{% else %}{{ page.title | strip }}{% endif %}{% endcapture %}
-  <title>{{ meta_title }}</title>
+  <title>{{ meta_title | strip | strip_html }}</title>
   <meta name="description" content="{{ page.description | default: site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">
   <link rel="author" type="text/plain" href="{{ 'humans.txt' | absolute_url }}">
   {% if page.id %}<link rel="canonical" href="{{ page.url | default: '' | absolute_url }}">{% endif %}

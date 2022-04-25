@@ -5,9 +5,14 @@
 @charset "utf-8"
 @import reset, font, color, body, banner, figure, article, footer
 
-article.text
+article.post
+  h1
+    font-size: var(--hed-size)
+    line-height: var(--hed-lh)
+
+article.newsprint
+  max-width: var(--page-width-sm)
   header
-    max-width: var(--page-width-md)
     h1
       font-size: 150%
       line-height: var(--hed-lh)
@@ -53,12 +58,15 @@ article.future
   p
     text-align: center
 
-
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30rem)
 
-  article.text
+  article.post
+    h1
+      font-size: var(--hed-size-md)
+
+  article.newsprint
     header
       h1  
         font-size: var(--hed-size-md)
@@ -68,7 +76,6 @@ article.future
         margin-top: 0
     figure.video
       margin-top: var(--shim)
-
 
 //-----------------------------------------------------------------------------
 

@@ -12,9 +12,9 @@ footer
     li
       margin-right: 0.6em
       font-size: 1em
-      font-weight: bold
       text-transform: lowercase
       &.byline
+        font-weight: bold
         a:link, a:visited
           color: $logo-color
 
@@ -24,3 +24,10 @@ footer
 
   footer
     margin-top: var(--shim-4x)
+
+  footer.home,
+  footer.archive,
+  footer.about
+    ul
+      li
+        font-size: var(--font-size-xx)

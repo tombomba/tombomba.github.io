@@ -3,51 +3,23 @@
 ---
 
 @charset "utf-8"
-@import reset, font, color, body, banner, figure, article, footer
+@import reset, font-16, font-18, color, body-base, body-tufte, banner, article, footer
 
 article.post
   h1
-    font-size: var(--hed-size)
+    font-size: var(--hed-size-md)
     line-height: var(--hed-lh)
 
-article.newsprint
-  max-width: var(--page-width-sm)
-  header
-    h1
-      font-size: 150%
-      line-height: var(--hed-lh)
-    .byline
-      margin-top: var(--nudge)
-      p
-        display: inline
-        margin: 0
-        font-size: var(--font-size-sm)
-        color: $mix-color
-        &:not(:first-of-type)::before
-          content: '\0020\2022\0020'
-  figure.video
-    margin: var(--shim-p) 0
-
-article.micro
-  max-width: var(--page-width-md)
-  .wrap
-    max-width: var(--page-width-sm)
-    h1, p 
-      display: inline 
-      font-size: 1em
-      line-height: var(--font-lh)
-    p
-      margin-top: var(--shim-n)
-    h1::after
-      content: '\0020'
-    .punc::after
-      content: '.'
-
 article.archive
-  header
-    h1
-      font-size: 1em
-      line-height: var(--hed-lh)
+  &:not(:first-of-type)
+    margin-top: var(--shim)
+  h1
+    font-size: 1em
+    line-height: var(--hed-lh)
+  ul
+    margin-top: var(--shim-n)
+    list-style-type: square
+    color: $logo-color
 
 article.error
   p
@@ -57,30 +29,3 @@ article.future
   margin-top: 2em
   p
     text-align: center
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 30rem)
-
-  article.post
-    h1
-      font-size: var(--hed-size-md)
-
-  article.newsprint
-    header
-      h1  
-        font-size: var(--hed-size-md)
-      .byline.fat
-        margin-top: calc(var(--nudge) / 2)
-      .byline.thin
-        margin-top: 0
-    figure.video
-      margin-top: var(--shim)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 50rem)
-
-  article.micro
-    .wrap
-      padding-top: var(--shim-n)

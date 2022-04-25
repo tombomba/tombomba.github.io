@@ -3,7 +3,7 @@ header[role="banner"]
   display: flex
   align-items: center
   h1
-    font-size: var(--hed-size)
+    font-size: var(--font-size-xx)
     line-height: 1
     letter-spacing: -0.125px
     font-variant-ligatures: common-ligatures
@@ -14,3 +14,12 @@ header[role="banner"]
       text-decoration: none
     a:hover
       text-decoration: underline
+
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30rem)
+
+  header[role="banner"]
+    h1
+      font-size: var(--hed-size)

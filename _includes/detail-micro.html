@@ -1,0 +1,37 @@
+{% assign p = include.page %}
+{% assign copy = include.content | strip | normalize_whitespace %}
+{% include _puncf.html title=p.title url=p.url is_home=include.is_home %}
+
+{% if p.image %}
+
+  {% assign myfig = p.image.ratio | split: ' ' -%}
+  {% assign mw = myfig[0] | default: 640 | strip | times: 1.0 -%}
+  {% assign mh = myfig[1] | default: 480 | strip | times: 1.0 -%}
+
+  {% if mw > 0 and mh > 0 %}
+    {% assign percentage = mh | divided_by: mw | times: 100 | round: 2 %}
+  {% endif -%}
+
+  {% if mw < 720 %}
+    {% assign vidmax = mw | divided_by: 720 | times: 100 | round: 2 %}
+  {% endif %}
+
+  <figure style="--video-max-width:{{ vidmax | default: '100' }}%;">
+    <div class="container" style="--percent:{{ percentage | default: '56.25' }}%;">
+      <img src="{{ p.image.file | prepend: site.img }}" class="fixed" alt="{{ p.image.alt }}">
+    </div>
+    {% if p.image.caption %}<figcaption>{{ p.image.caption | smartify | normalize_whitespace | strip }}</figcaption>{% endif %}
+  </figure>
+
+{% endif -%}
+
+{% unless include.is_home %}
+  {% capture datef %}<span class="daystamp">&nbsp;(<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date: '%d %b' }}</time>)</span>{% endcapture -%}
+  {% assign copysize = copy | size | minus: 4 -%}
+  {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
+{% endunless -%}
+
+{% capture hedbox %}<div class="hed"><h1>{{ titlestring }}</h1><p>{% endcapture -%}
+{% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
+
+{{ copy }}

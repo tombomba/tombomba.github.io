@@ -1,0 +1,29 @@
+{% assign p = include.page %}
+{% assign copy = include.content | strip | normalize_whitespace %}
+{% include _widont.html title=p.title url=p.url is_home=include.is_home %}
+
+{% if p.image %}
+
+  {% assign myfig = p.image.style | split: ' ' -%}
+  {% assign figratio = myfig[0] | default: 'square' | strip -%}
+  {% assign figfloat = myfig[1] | default: 'right' | strip -%}
+  {% assign figextra = myfig[2] | default: 'nofx' | strip -%}
+
+  {% unless include.is_home %}
+    {% if p.image.style contains 'tilt' %}{% assign hedpad = 'fat' %}{% endif -%}
+  {% endunless -%}
+
+  <figure class="float {{ figfloat }} {{ figextra }}">
+    <img src="{{ p.image.file | prepend: site.img }}" class="ratio--{{ figratio }}" alt="{{ p.image.alt }}">
+  </figure>
+
+{% endif -%}
+
+{% capture hedbox %}<div class="hed {{ hedpad | default: 'thin' }}"><h1>{{ titlestring }}</h1><p>{% endcapture -%}
+{% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
+
+{{ copy }}
+
+{% unless include.is_home %}
+  <p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time></p>
+{% endunless -%}

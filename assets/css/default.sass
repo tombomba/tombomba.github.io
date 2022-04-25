@@ -23,6 +23,21 @@ article.text
   figure.video
     margin: var(--shim-p) 0
 
+article.micro
+  max-width: var(--page-width-md)
+  .wrap
+    max-width: var(--page-width-sm)
+    h1, p 
+      display: inline 
+      font-size: 1em
+      line-height: var(--font-lh)
+    p
+      margin-top: var(--shim-n)
+    h1::after
+      content: '\0020'
+    .punc::after
+      content: '.'
+
 article.archive
   header
     h1
@@ -53,3 +68,12 @@ article.future
         margin-top: 0
     figure.video
       margin-top: var(--shim)
+
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50rem)
+
+  article.micro
+    .wrap
+      padding-top: var(--shim-n)

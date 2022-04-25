@@ -72,8 +72,19 @@ figure.photo
       --width: 12em
     &.left
       float: left
-      margin: 1em 1em 1em 0
+      margin: 0 1em 1em 0
     &.right
       float: right
-      margin: 1em 0 1em 1em
+      margin: 0 0 1em 1em
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 60rem)
+
+    figure.photo
+      &.right
+        margin-left: var(--shim)
+        transform: rotate(3deg)
+      img
+        --width: 275px
   

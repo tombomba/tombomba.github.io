@@ -1,0 +1,28 @@
+---
+layout: default
+title: "Posts ~~~"
+label: "archive"
+emoji: "📆"
+is_archive: true
+permalink: "/posts/"
+---
+
+{% include banner.html %}
+{% assign master_list = site.posts | group_by_exp: "post", "post.date | date: '%b %Y'" %}
+
+<main role="main">
+
+{% for group in master_list %}
+  <article class="archive">
+  <h1>{{ group.name }}</h1>
+  <ul>
+  {% for post in group.items %}
+    <li><a href="{{ post.url | absolute_url }}">{{ post.subj | default: post.title | smartify | normalize_whitespace | strip }}</a></li>
+  {% endfor %}
+  </ul>
+</article>
+{% endfor -%}
+
+</main>
+
+{% include footer.html %}

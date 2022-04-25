@@ -3,12 +3,33 @@
 ---
 
 @charset "utf-8"
-@import reset, font-16, font-18, color, body-base, body-tufte, banner, article, footer
+@import reset, font-16, font-18, color, body-base, body-tufte, banner, fig-float, fig-micro, article, footer
 
 article.post
   h1
     font-size: var(--hed-size-md)
     line-height: var(--hed-lh)
+
+article.micro
+  max-width: var(--page-width-md)
+  .hed
+    max-width: var(--page-width-sm)
+    h1, p
+      display: inline
+      font-size: 1em
+      line-height: var(--font-lh)
+    h1::after
+      content: '\0020'
+    .punc::after
+      content: '.'
+
+article.float
+  max-width: var(--page-width-md)
+  .hed
+    max-width: var(--page-width-sm)
+    h1
+      font-size: var(--hed-size)
+      line-height: var(--hed-lh)
 
 article.archive
   &:not(:first-of-type)
@@ -21,6 +42,11 @@ article.archive
     list-style-type: square
     color: $logo-color
 
+article.about
+  h1
+    font-size: var(--hed-size)
+    line-height: var(--hed-lh)
+
 article.error
   p
     text-align: center
@@ -29,3 +55,11 @@ article.future
   margin-top: 2em
   p
     text-align: center
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50rem)
+
+  article.float
+    .hed.fat
+      padding-top: var(--shim)

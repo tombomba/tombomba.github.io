@@ -5,9 +5,11 @@ layout: default
 {% include _puncf.html title=page.title %}
 {% include banner.html %}
 
+{% unless page.is_home %}
 {% capture datef %}<span class="daystamp">&nbsp;(<time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date: '%d %b' }}</time>)</span>{% endcapture -%}
-{% assign copysize = copy | size | minus: 4 %}
+{% assign copysize = copy | size | minus: 4 -%}
 {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
+{% endunless -%}
 
 <main role="main"><!--{{ content | number_of_words }}-->
 

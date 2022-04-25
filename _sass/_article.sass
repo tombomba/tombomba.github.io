@@ -1,17 +1,18 @@
 article
   max-width: var(--page-width-lg)
   margin-top: var(--shim-2x)
+  &.homepage-post
+    margin-top: var(--shim-3x)
   @extend .clearfix
 
-  header
-    h1
-      margin: 0
+  h1
+    margin: 0
+    color: black
+    a:link, a:visited
       color: black
-      a:link, a:visited
-        color: black
-        text-decoration: none
-      a:hover
-        text-decoration: underline
+      text-decoration: none
+    a:hover
+      text-decoration: underline
 
   figure
     img
@@ -50,6 +51,16 @@ article
     color: $mix-color
     a:link, a:visited
       color: $mix-color
+      text-decoration: none
+    a:hover
+      text-decoration: underline
+  
+  .bullet
+    margin-top: var(--shim-n)
+    font-size: 23px
+    line-height: 1
+    a:link, a:visited
+      color: $logo-color
       text-decoration: none
     a:hover
       text-decoration: underline

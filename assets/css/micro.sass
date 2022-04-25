@@ -17,7 +17,6 @@ article
       content: '\0020'
     .punc::after
       content: '.'
-
   figure
     max-width: var(--video-max-width)
     margin-bottom: var(--shim)
@@ -36,3 +35,11 @@ article
       left: 0
       width: 100%
       height: 100%
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30rem)
+
+  header[role="banner"]
+    h1
+      font-size: var(--hed-size)

@@ -6,6 +6,33 @@
 @import reset, font-16, font-18, color, body-base, body-tufte, banner, article, footer
 
 article
-  h1
-    font-size: var(--hed-size-md)
-    line-height: var(--hed-lh)
+  max-width: var(--page-width-md)
+  .hed
+    max-width: var(--page-width-sm)
+    h1, p
+      display: inline
+      font-size: 1em
+      line-height: var(--font-lh)
+    h1::after
+      content: '\0020'
+    .punc::after
+      content: '.'
+
+  figure
+    max-width: var(--video-max-width)
+    margin-bottom: var(--shim)
+    padding-top: var(--nudge)
+    .container
+      position: relative
+      display: block
+      margin: 0 auto
+      width: 100%
+      height: 0
+      overflow: hidden
+      padding-top: var(--percent)
+    .fixed
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%

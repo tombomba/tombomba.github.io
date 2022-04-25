@@ -1,4 +1,5 @@
-<header role="banner" class="{{ page.label | default: page.layout }}">
+
+<header role="banner" class="{% if page.is_home %}{{ site.posts.first.label | default: site.posts.first.layout }}{% else %}{{ page.label | default: page.layout }}{% endif %}">
   <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
 </header>
 

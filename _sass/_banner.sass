@@ -3,7 +3,6 @@ header[role="banner"]
   display: flex
   align-items: center
   h1
-    font-size: var(--font-size-xx)
     line-height: 1
     letter-spacing: -0.125px
     font-variant-ligatures: common-ligatures
@@ -15,12 +14,17 @@ header[role="banner"]
     a:hover
       text-decoration: underline
 
+header[role="banner"].default,
+header[role="banner"].archive,
+header[role="banner"].about
+  h1
+    font-size: var(--hed-size-md)
 
-//-----------------------------------------------------------------------------
+header[role="banner"].micro
+  h1
+    font-size: var(--hed-size-md)
 
-@media screen and (min-width: 30rem)
-
-  header[role="banner"]
-    h1
-      font-size: var(--hed-size)
-
+header[role="banner"].post,
+header[role="banner"].float
+  h1
+    font-size: var(--font-size-xx)

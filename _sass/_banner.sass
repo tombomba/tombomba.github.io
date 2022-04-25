@@ -3,28 +3,14 @@ header[role="banner"]
   display: flex
   align-items: center
   h1
+    font-family: 'Averia Sans Libre', cursive
+    font-size: var(--hed-size-md)
     line-height: 1
-    letter-spacing: -0.125px
-    font-variant-ligatures: common-ligatures
     text-transform: lowercase
     color: $logo-color
     a:link, a:visited
       color: $logo-color
-      text-decoration: none
-    a:hover
-      text-decoration: underline
 
-header[role="banner"].default,
-header[role="banner"].archive,
-header[role="banner"].about
-  h1
-    font-size: var(--hed-size-md)
-
-header[role="banner"].micro
-  h1
-    font-size: var(--hed-size-md)
-
-header[role="banner"].post,
 header[role="banner"].float
   h1
-    font-size: var(--font-size-xx)
+    font-size: var(--hed-size)

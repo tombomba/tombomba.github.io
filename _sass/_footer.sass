@@ -10,11 +10,12 @@ footer
     align-items: baseline
     list-style-type: none
     li
-      margin-right: 0.6em
-      font-size: 1em
+      margin-right: 9px
       text-transform: lowercase
       &.byline
-        font-weight: bold
+        font-family: 'Averia Sans Libre', sans-serif
+        font-size: var(--hed-size)
+        font-weight: 700
         a:link, a:visited
           color: $logo-color
 
@@ -24,10 +25,6 @@ footer
 
   footer
     margin-top: var(--shim-4x)
-
-  footer.home,
-  footer.archive,
-  footer.about
     ul
       li
-        font-size: var(--font-size-xx)
+        margin-right: 12px

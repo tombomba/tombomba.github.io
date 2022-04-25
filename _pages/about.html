@@ -1,8 +1,7 @@
 ---
 layout: default
 title: "About"
-description: "Probably more than you wanted to know"
-emoji: 😊
+description: "Probably more than you want to know"
 label: "about"
 is_about: true
 permalink: /about.html
@@ -15,7 +14,7 @@ The site was made with VS Code and Pixelmator. The skull icon is from Nico at th
 
 <main role="main">
   <article class="about">
-    <header><h1>{{ page.title }}</h1></header>
+    <h1>{{ page.title }}</h1>
     {{ bio | strip | smartify | markdownify | normalize_whitespace }}
   </article>
 </main>

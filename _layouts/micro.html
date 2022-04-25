@@ -1,48 +1,12 @@
 ---
 layout: default
 ---
-{% assign copy = content | strip | normalize_whitespace %}
-{% include _puncf.html title=page.title %}
 {% include banner.html %}
 
-{% unless page.is_home %}
-{% capture datef %}<span class="daystamp">&nbsp;(<time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date: '%d %b' }}</time>)</span>{% endcapture -%}
-{% assign copysize = copy | size | minus: 4 -%}
-{% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
-{% endunless -%}
-
-<main role="main"><!--{{ content | number_of_words }}-->
+<main role="main">
 
   <article class="{{ page.label | default: page.layout }}">
-
-    {% if page.image %}
-
-    {% assign myfig = page.image.ratio | split: ' ' -%}
-    {% assign mw = myfig[0] | default: 640 | strip | times: 1.0 -%}
-    {% assign mh = myfig[1] | default: 480 | strip | times: 1.0 -%}
-
-    {% if mw > 0 and mh > 0 %}
-      {% assign percentage = mh | divided_by: mw | times: 100 | round: 2 %}
-    {% endif -%}
-
-    {% if mw < 720 %}
-      {% assign vidmax = mw | divided_by: 720 | times: 100 | round: 2 %}
-    {% endif %}
-
-    <figure style="--video-max-width:{{ vidmax | default: '100' }}%;">
-      <div class="container" style="--percent:{{ percentage | default: '56.25' }}%;">
-        <img src="{{ page.image.file | prepend: site.img }}" class="fixed" alt="{{ page.image.alt }}">
-      </div>
-      {% if page.image.caption %}<figcaption>{{ page.image.caption | smartify | normalize_whitespace | strip }}</figcaption>{% endif %}
-    </figure>
-
-    {% endif -%}
-
-    {% capture hedbox %}<div class="hed"><h1>{{ titlestring }}</h1><p>{% endcapture -%}
-    {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
-
-    {{ copy }}
-
+    {% include detail-micro.html page=page content=content %}
   </article>
 
 </main>

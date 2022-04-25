@@ -17,7 +17,7 @@ theme: null
 
 excerpt_separator: <!--more-->
 
-permalink: /:title-:y_day:output_ext
+permalink: /:title-:short_year:month:day:output_ext
 timezone: America/Los_Angeles
 
 collections:

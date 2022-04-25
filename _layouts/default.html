@@ -36,7 +36,7 @@
   <meta name="twitter:image:src" content="{{ page.image.file | default: 'bomtomba.jpg' | prepend: site.img }}">
 
   <!-- css -->
-  <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css | append: '.css' }}?v={{ site.time | date: '%T' | remove: ':' }}">
+  <link rel="stylesheet" href="{{ page.style | default: page.layout | prepend: site.css | append: '.css' }}?v={{ site.time | date: '%T' | remove: ':' }}">
 
   <!-- goog
   <link rel="preconnect" href="https://fonts.googleapis.com">

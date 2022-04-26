@@ -36,7 +36,7 @@
   <meta name="twitter:image:src" content="{{ page.image.file | default: 'bomtomba.jpg' | prepend: site.img }}">
 
   <!-- css -->
-  <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css | append: '.css' }}?v={{ site.time | date: '%y%m%d-%H%M%S' }}">
+  <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css | append: '.css' }}?v={{ site.posts.first.date | date: '%j' }}">
 
 </head>
 

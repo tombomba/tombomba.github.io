@@ -6,14 +6,39 @@
 @import reset, font-16, font-18, color, body-base, body-tufte, banner, fig-float, fig-micro, article, footer
 
 article.post
-  h1
-    font-size: var(--hed-size)
-    line-height: var(--hed-lh)
+  header
+    h1
+      font-size: var(--hed-size-md)
+      line-height: var(--hed-lh)
+      font-style: italic
+    .byline
+      margin-top: var(--nudge)
+      p
+        display: inline
+        margin: 0
+        font-size: var(--font-size-sm)
+        color: $mix-color
+        &:nth-of-type(2)::before
+          content: '\2022'
+          padding: 0 0.33em
+
+article.newsprint
+  header
+    h1
+      font-size: var(--hed-size-md)
+      line-height: var(--hed-lh)
+    .byline
+      margin-top: 1em
+      p
+        display: inline
+        margin: 0
+        //font-size: var(--font-size-sm)
+        color: $mix-color
+        &:nth-of-type(2)::before
+          content: '\0020\2022\0020'
 
 article.micro
-  max-width: var(--page-width-md)
   .hed
-    max-width: var(--page-width-sm)
     h1, p
       display: inline
       font-size: 1em
@@ -24,15 +49,12 @@ article.micro
       content: '.'
 
 article.float
-  max-width: var(--page-width-md)
   .hed
-    max-width: var(--page-width-sm)
     h1
       font-size: var(--hed-size)
       line-height: var(--hed-lh)
 
 article.archive
-  max-width: var(--page-width-sm)
   &:not(:first-of-type)
     margin-top: var(--shim)
   h1
@@ -64,9 +86,11 @@ article.future
 
 @media screen and (min-width: 30rem)
 
-  article.post
-    h1
-      font-size: var(--hed-size-md)
+  article.newsprint
+    header
+      h1
+        font-size: var(--hed-size-lg)
+        line-height: 1.3
 
   article.archive
     h1

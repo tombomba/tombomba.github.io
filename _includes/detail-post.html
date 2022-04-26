@@ -2,10 +2,9 @@
 {% assign copy = include.content | strip | normalize_whitespace %}
 {% include _widont.html title=p.title url=p.url is_home=include.is_home %}
 
-<h1>{{ titlestring }}</h1>
+<header>
+  <h1>{{ titlestring }}</h1>
+  <div class="byline"><p><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time></p><p>{{ site.author }}</p></div>
+</header>
 
 {{ copy }}
-
-{% unless include.is_home %}
-  <p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time></p>
-{% endunless -%}

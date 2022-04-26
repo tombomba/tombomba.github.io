@@ -1,9 +1,15 @@
 <footer class="{{ page.label | default: page.layout }}">
 
-  {% include _datelist.html %}
+  <div class="hr"></div>
 
   <ul>
-    {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}
+    <li class="copydate">Copyright &copy; {{ site.author }}</li>
+    {% unless page.is_archive %}
+      <li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>
+    {% endunless -%}
+    {% unless page.is_about %}
+      <li><a href="{{ 'about' | absolute_url }}">About</a></li>
+    {% endunless -%}
     <li><a href="https://twitter.com/{{ site.socials }}" target="_twit">Twitter</a></li>
     <li><a href="{{ 'feed.xml' | absolute_url }}" target="_feed">RSS</a></li>
   </ul>

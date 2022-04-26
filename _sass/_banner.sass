@@ -1,18 +1,27 @@
 header[role="banner"]
-  margin-top: var(--shim)
-  display: flex
-  align-items: center
-  h1
-    font-size: var(--hed-size-md)
-    line-height: 1
-    text-transform: lowercase
-    color: $logo-color
-    a:link, a:visited
-      color: $logo-color
-      &::after
-        content: '.'
-
-header[role="banner"].post,
-header[role="banner"].float
-  h1
-    font-size: var(--hed-size)
+  .logo
+    max-width: var(--page-width)
+    height: var(--shim-2x)
+    margin-left: auto
+    margin-right: auto
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .text
+      display: flex
+      align-items: center
+      h1
+        flex: 1
+        font-size: var(--font-size-xx)
+        line-height: 1
+        text-transform: lowercase
+        a:link, a:visited
+          color: $logo-color
+    .image
+      p
+        margin: 0
+        padding: 0
+        font-size: var(--hed-size)
+        line-height: 0
+  .hr
+    width: 100%

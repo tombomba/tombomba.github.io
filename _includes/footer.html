@@ -1,11 +1,8 @@
 <footer class="{{ page.label | default: page.layout }}">
 
-  <p class="description"><a href="{{ site.url }}">{{ site.description }}</a></p>
-
-  {% include datelist.html %}
+  {% include _datelist.html %}
 
   <ul>
-    {% unless page.is_home %}<li><a href="{{ site_url }}">Home</a></li>{% endunless %}
     {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}
     <li><a href="https://twitter.com/{{ site.socials }}" target="_twit">Twitter</a></li>
     <li><a href="{{ 'feed.xml' | absolute_url }}" target="_feed">RSS</a></li>

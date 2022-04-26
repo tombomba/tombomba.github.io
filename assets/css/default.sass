@@ -32,11 +32,15 @@ article.float
       line-height: var(--hed-lh)
 
 article.archive
+  max-width: var(--page-width-sm)
   &:not(:first-of-type)
     margin-top: var(--shim)
   h1
+    padding: var(--nudge)
     font-size: 1em
-    line-height: var(--hed-lh)
+    line-height: 1
+    background-color: $bg-color
+    border-radius: 4px
   ul
     margin-top: var(--shim-n)
     list-style-type: square
@@ -63,6 +67,12 @@ article.future
   article.post
     h1
       font-size: var(--hed-size-md)
+
+  article.archive
+    h1
+      margin-left: -1em
+      margin-right: -1em
+      padding: var(--nudge) 1em
 
 //-----------------------------------------------------------------------------
 

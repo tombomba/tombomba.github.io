@@ -11,12 +11,21 @@ footer
     list-style-type: none
     li
       margin-right: 9px
+      font-size: 1em
       text-transform: lowercase
-      &.byline
-        font-size: 1em
-        font-weight: 700
-        a:link, a:visited
-          color: $logo-color
+      a:link, a:visited
+        color: $logo-color
+        &::after
+          content: '.'
+  p.description
+    margin: 0
+    font-size: 1em
+    font-weight: 700
+    text-transform: lowercase
+    a:link, a:visited
+      color: $logo-color
+      &::after
+        content: '.'
 
 //-----------------------------------------------------------------------------
 
@@ -24,6 +33,10 @@ footer
 
   footer
     margin-top: var(--shim-4x)
+    &.archive
+      margin-top: var(--shim-2x)
+    &.about
+      margin-top: var(--shim-3x)
     ul
       li
         margin-right: 12px

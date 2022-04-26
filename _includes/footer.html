@@ -1,10 +1,13 @@
 <footer class="{{ page.label | default: page.layout }}">
 
+  <p class="description"><a href="{{ site.url }}">{{ site.description }}</a></p>
+
+  {% include datelist.html %}
+
   <ul>
-    <li class="byline"><a href="{{ site_url }}">By {{ site.author }}</a></li>
-    {% unless page.is_archive %}<li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>{% endunless %}
+    {% unless page.is_home %}<li><a href="{{ site_url }}">Home</a></li>{% endunless %}
     {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}
-    <li><a href="https://twitter.com/{{ site.socials }}" target="_socials">Twitter</a></li>
+    <li><a href="https://twitter.com/{{ site.socials }}" target="_twit">Twitter</a></li>
     <li><a href="{{ 'feed.xml' | absolute_url }}" target="_feed">RSS</a></li>
   </ul>
 

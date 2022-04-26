@@ -1,6 +1,8 @@
 article
-  max-width: var(--page-width-lg)
+  max-width: var(--page-width)
   margin-top: var(--shim-2x)
+  margin-left: auto
+  margin-right: auto
   &.homepage-post
     margin-top: var(--shim-3x)
   @extend .clearfix
@@ -41,18 +43,6 @@ article
   blockquote,
   li + p,
     margin-top: 0
-
-  .daystamp
-    white-space: nowrap
-    font-style: italic
-    color: $mix-color
-    a:link, a:visited
-      color: $mix-color
-  
-  .bullet
-    margin-top: var(--shim-n)
-    font-size: 23px
-    line-height: 1
 
 //-----------------------------------------------------------------------------
 

@@ -9,14 +9,8 @@ layout: default
     {% include detail-post.html page=page content=content %}
   </article>
 
-  <section class="nextprev">
-    <div class="hr buffer"></div>
-    <div class="next">
-    </div>
-    <div class="prev">
-    </div>
-  </section>
-
+  {% include nextprev.html previous=page.previous next=page.next %}
+  
 </main>
 
 {% include footer.html %}

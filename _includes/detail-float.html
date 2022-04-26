@@ -19,11 +19,14 @@
 
 {% endif -%}
 
+{% unless include.is_home %}
+  {% capture datef %}<span class="daystamp">&#32;&mdash;&nbsp;<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date: '%d %b %Y' }}</time></span>{% endcapture -%}
+  {% assign copysize = copy | size | minus: 4 -%}
+  {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
+{% endunless -%}
+
 {% capture hedbox %}<div class="hed {{ hedpad | default: 'thin' }}"><h1>{{ titlestring }}</h1><p>{% endcapture -%}
 {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
 
 {{ copy }}
 
-{% unless include.is_home %}
-  <p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time></p>
-{% endunless -%}

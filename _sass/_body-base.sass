@@ -15,14 +15,20 @@ body
   -webkit-text-size-adjust: auto
 
 a
-  text-decoration: none
+  text-decoration: underline
   text-decoration-skip-ink: auto
   &:link
     color: $link-color
   &:visited
     color: $visited-color
   &:hover
-    text-decoration: underline
+    text-decoration: none
+
+figure
+  img
+    border-radius: 4px
+  figcaption
+    font-size: var(--font-size-sm)
 
 \:-moz-selection
   background: $select-color

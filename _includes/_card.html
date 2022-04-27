@@ -5,8 +5,8 @@
   </figure>
 
   <div class="link">
-    <h2><a href="{{ include.url | absolute_url }}">{{ include.title | strip | smartify | truncate: 50 }}</a></h2>
-    <p>{{ include.text | truncatewords: 50 | strip | strip_html | smartify }}</p>
+    <h2><a href="{{ include.url | absolute_url }}">{{ include.title | strip | smartify }}</a></h2>
+    <p>{{ include.text | truncate: 140 | strip | strip_html | smartify }}</p>
   </div>
 
 </li>

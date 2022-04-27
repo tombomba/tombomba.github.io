@@ -1,16 +1,12 @@
-{% assign h = include.h | default: 'h1' -%}
-
 <li>
+  
+  <figure>
+    <a href="{{ include.url | absolute_url }}"><img src="{{ include.image.file | default: 'bomtomba.jpg' | prepend: site.img }}" alt="{{ include.image.alt }}"></a>
+  </figure>
 
-  {% if include.image.file %}
-    <figure class="thumb {% if include.is_home %}home {% cycle 'right', 'left' %}{% else %}post left{% endif %}"><a href="{{ include.url | absolute_url }}"><img src="{{ include.image.file | prepend: site.img }}" alt="{{ include.image.alt }}"></a></figure>
-  {% else %}
-    {% unless include.is_home %}<figure class="thumb post left"><a href="{{ include.url | absolute_url }}"><img src="{{ 'bomtomba.jpg' | prepend: site.img }}" alt=""></a></figure>{% endunless %}
-  {% endif -%}
-
-  <div class="meta">
-    <{{ h }}><a href="{{ include.url | absolute_url }}">{{ include.title | strip | smartify | truncate: 50 }}</a></{{ h }}>
-    <p>{{ include.text | truncatewords: 50 | strip | strip_html | smartify }}{% if include.date %} <span class="daystamp">({{ include.date | date: '%d %b' }})</span>{% endif %}</p>
+  <div class="link">
+    <h2><a href="{{ include.url | absolute_url }}">{{ include.title | strip | smartify | truncate: 50 }}</a></h2>
+    <p>{{ include.text | truncatewords: 50 | strip | strip_html | smartify }}</p>
   </div>
 
 </li>

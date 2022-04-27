@@ -3,8 +3,8 @@
 {% include _widont.html title=p.title url=p.url is_home=include.is_home %}
 
 <header>
-  <h1>{{ titlestring }}</h1>
-  <div class="byline">
+  <h1>{{ titlestring }}</h1><!-- {{ p.title.size }}c -->
+  <div class="byline {% if p.title.size > 48 %}fat{% else %}thin{% endif %}">
     <p><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time></p>
     <p>{{ site.author }}</p>
   </div>

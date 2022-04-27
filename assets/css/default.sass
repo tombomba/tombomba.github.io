@@ -8,7 +8,7 @@
 article.post
   header
     h1
-      font-size: var(--hed-size-md)
+      font-size: 150%
       line-height: var(--hed-lh)
     .byline
       margin-top: 1em
@@ -20,9 +20,10 @@ article.post
         &:nth-of-type(2)::before
           content: '\0020\2022\0020'
   figure
-    margin: var(--shim) 0 var(--shim-p) 0
+    margin: var(--shim) 0
 
 article.micro
+  margin-top: calc(var(--shim-2x) - 6px)
   .hed
     h1, p
       display: inline
@@ -34,7 +35,7 @@ article.micro
       content: '.'
   figure
     margin: 0 0 var(--shim) 0
-    padding-top: var(--nudge)
+    padding-top: 6px
 
 article.float
   .hed
@@ -46,11 +47,8 @@ article.archive
   &:not(:first-of-type)
     margin-top: var(--shim)
   h1
-    padding: var(--nudge)
     font-size: 1em
     line-height: 1
-    background-color: $bg-color
-    border-radius: 4px
   ul
     margin-top: var(--shim-n)
     list-style-type: square
@@ -72,18 +70,15 @@ article.future
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 30rem)
+@media screen and (min-width: 40rem)
 
-  article.archive
-    h1
-      margin-left: -1em
-      margin-right: -1em
-      padding: var(--nudge) 1em
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 50rem)
+  article.post
+    header
+      .byline.fat
+        margin-top: calc(var(--nudge) / 2)
+      .byline.thin
+        margin-top: 0
 
   article.float
     .hed.fat
-      padding-top: var(--nudge-2x)
+      padding-top: 1em

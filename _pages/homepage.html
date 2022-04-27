@@ -9,14 +9,14 @@ permalink: /index.html
 
 <main role="main">
 
+  <article class="archive">
+  <ul>
   {% for p in site.posts limit:20 %}
-    {% unless forloop.first %}{% assign homeslug = 'homepage-post' %}{% endunless -%}
-    <article class="{{ p.label | default: p.layout }} {{ homeslug }}">
-      {% assign target_file = p.layout | prepend: 'detail-' | append: '.html' %}
-      {% include {{ target_file }} page=p content=p.content is_home=true %}
-      <p class="bullet"><a href="{{ p.url | absolute_url }}" aria-label="permalink">&bull;</a></p>
-    </article>
+    <li><a href="{{ p.url | absolute_url }}">{{ p.title | strip | smartify }}</a></li>
   {% endfor -%}
+  </ul>
+  </article>
+  
 
 </main>
 

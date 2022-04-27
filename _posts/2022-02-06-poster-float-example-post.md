@@ -1,6 +1,6 @@
 ---
 layout: float
-title: "Pack my box with five dozen liquor jugs"
+title: "Lorem ipsum dolor sit amet"
 subj: "A movie title (2022)"
 description: >
   Nunc quis risus aliquam, porttitor turpis ac, auctor massa. Maecenas dapibus mauris purus.

@@ -1,10 +1,6 @@
 article
   max-width: var(--page-width)
-  margin-top: var(--shim-2x)
-  margin-left: auto
-  margin-right: auto
-  &.homepage-post
-    margin-top: var(--shim-3x)
+  margin: var(--buffer) auto
   @extend .clearfix
 
   h1
@@ -12,12 +8,9 @@ article
     color: black
     a:link, a:visited
       color: black
-
-  figure
-    img
-      border-radius: 4px
-    figcaption
-      font-size: var(--font-size-sm)
+      text-decoration: none
+    a:hover
+      text-decoration: underline
   
   h2, h3, h4, h5, h6
     max-width: var(--page-width)

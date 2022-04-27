@@ -69,8 +69,6 @@ article.float
 @media screen and (min-width: 50rem)
 
   article.float
-    .hed.fat
-      padding-top: var(--shim)
     figure.left
       margin-right: var(--shim)
       img
@@ -78,10 +76,12 @@ article.float
       &.tilt
         transform: rotate(-3deg)
     figure.right
+      margin-top: var(--nudge)
       margin-left: var(--shim)
       img
         --width: 14em
       &.tilt
+        margin-top: 0
         transform: rotate(3deg)
 
 //-----------------------------------------------------------------------------
@@ -99,6 +99,6 @@ article.float
   article.float
     figure.left
       margin-left: calc(var(--shim) * -2)
-    figure.right
+    figure.right.tilt
       img
         --width: 15em

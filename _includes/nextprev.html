@@ -10,7 +10,7 @@
     {% endif %}
     {% if include.previous %}
     {% assign ptext = include.previous.description | default: include.previous.excerpt %}
-    {% include _card.html title=include.previous.title image=include.previous.image text=ptext url=include.previous.url has_thumbs=has_thumbs %}
+    {% include _card.html title=include.previous.title image=include.previous.image text=p.text url=include.previous.url has_thumbs=has_thumbs %}
     {% endif -%}
   </ul>
 </section>

@@ -5,13 +5,15 @@
 {% if p.image %}
 
   {% assign myfig = p.image.style | split: ' ' -%}
-  {% assign figratio = myfig[0] | default: 'square' | strip -%}
-  {% assign figfloat = myfig[1] | default: 'right' | strip -%}
-  {% assign figextra = myfig[2] | default: 'nofx' | strip -%}
+  {% assign figratio = myfig[0] | default: 'square' -%}
+  {% assign figfloat = myfig[1] | default: 'right' -%}
+  {% if myfig.size > 2 %}
+    {% assign newfig = myfig | shift | shift | join: ' ' %}
+  {% endif -%}
 
   {% if p.image.style contains 'tilt' %}{% assign hedpad = 'fat' %}{% endif -%}
 
-  <figure class="float {{ figfloat }} {{ figextra }}">
+  <figure class="float {{ figfloat }} {{ newfig | default: 'nofx' }}">
     <img src="{{ p.image.file | prepend: site.img }}" class="ratio--{{ figratio }}" alt="{{ p.image.alt }}">
   </figure>
 

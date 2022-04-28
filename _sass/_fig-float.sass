@@ -1,5 +1,6 @@
-article.float
-  figure
+article
+
+  figure.float
     margin-bottom: var(--shim)
     padding-bottom: var(--nudge)
     img
@@ -33,8 +34,9 @@ article.float
 
 @media screen and (min-width: 20rem)
 
-  article.float
-    figure
+  article
+
+    figure.float
       img
         --width: 15em
 
@@ -42,8 +44,9 @@ article.float
 
 @media screen and (min-width: 30rem)
 
-  article.float
-    figure
+  article
+
+    figure.float
       img
         --width: 20em
 
@@ -51,15 +54,18 @@ article.float
 
 @media screen and (min-width: 40rem)
 
-  article.float
-    figure
+  article
+
+    figure.float
       img
         --width: 12em
-    figure.left
+
+    figure.float.left
       float: left
       margin-right: 1em
       margin-bottom: 1em
-    figure.right
+    
+    figure.float.right
       float: right
       margin-left: 1em
       margin-bottom: 1em
@@ -68,18 +74,26 @@ article.float
 
 @media screen and (min-width: 50rem)
 
-  article.float
-    figure.left
-      margin-right: var(--shim)
+  article
+
+    figure.float
       img
         --width: 13em
-      &.tilt
-        transform: rotate(-3deg)
-    figure.right
-      margin-top: var(--nudge)
-      margin-left: var(--shim)
+
+    figure.float.jumbo
       img
         --width: 14em
+
+    figure.float.left
+      margin-top: var(--nudge)
+      margin-right: var(--shim)
+      &.tilt
+        margin-top: 0
+        transform: rotate(-3deg)
+  
+    figure.float.right
+      margin-top: var(--nudge)
+      margin-left: var(--shim)
       &.tilt
         margin-top: 0
         transform: rotate(3deg)
@@ -88,17 +102,30 @@ article.float
 
 @media screen and (min-width: 60rem)
 
-  article.float
-    figure.left
+  article
+
+    figure.float.jumbo
+        img
+          --width: 15em
+
+    figure.float.left.pull
       margin-left: calc(var(--shim) * -1)
+
+    figure.float.right.pull
+      margin-right: calc(var(--shim) * -1)
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 70rem)
 
-  article.float
-    figure.left
+  article
+
+    figure.float.jumbo
+        img
+          --width: 16em
+
+    figure.float.left.pull
       margin-left: calc(var(--shim) * -2)
-    figure.right.tilt
-      img
-        --width: 15em
+
+    figure.float.right.pull
+      margin-right: calc(var(--shim) * -2)

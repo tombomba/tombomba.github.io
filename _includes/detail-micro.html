@@ -16,11 +16,28 @@
     {% assign vidmax = mw | divided_by: 720 | times: 100 | round: 2 %}
   {% endif %}
 
-  <figure style="--video-max-width:{{ vidmax | default: '100' }}%;">
+  <figure class="video" style="--video-max-width:{{ vidmax | default: '100' }}%;">
     <div class="container" style="--percent:{{ percentage | default: '56.25' }}%;">
       <img src="{{ p.image.file | prepend: site.img }}" class="fixed" alt="{{ p.image.alt }}">
     </div>
     {% if p.image.caption %}<figcaption>{{ p.image.caption | smartify | normalize_whitespace | strip }}</figcaption>{% endif %}
+  </figure>
+
+{% endif -%}
+
+{% if p.image.style %}
+
+  {% assign myfig = p.image.style | split: ' ' -%}
+  {% assign figratio = myfig[0] | default: 'square' -%}
+  {% assign figfloat = myfig[1] | default: 'right' -%}
+  {% if myfig.size > 2 %}
+    {% assign newfig = myfig | shift | shift | join: ' ' %}
+  {% endif -%}
+
+  {% if p.image.style contains 'tilt' %}{% assign hedpad = 'fat' %}{% endif -%}
+
+  <figure class="float {{ figfloat }} {{ newfig | default: 'nofx' }}">
+    <img src="{{ p.image.file | prepend: site.img }}" class="ratio--{{ figratio }}" alt="{{ p.image.alt }}">
   </figure>
 
 {% endif -%}

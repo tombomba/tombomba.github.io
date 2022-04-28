@@ -24,7 +24,7 @@
     {% assign vidmax = mw | divided_by: 720 | times: 100 | round: 2 %}
   {% endif %}
 
-  <figure class="micro" style="--video-max-width:{{ vidmax | default: '100' }}%;">
+  <figure class="video" style="--video-max-width:{{ vidmax | default: '100' }}%;">
     <div class="container" style="--percent:{{ percentage | default: '56.25' }}%;">
       <img src="{{ p.image.file | prepend: site.img }}" class="fixed" alt="{{ p.image.alt }}">
     </div>

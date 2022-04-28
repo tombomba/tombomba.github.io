@@ -1,10 +1,8 @@
 <li>
 
-  {% if include.has_thumbs %}
   <figure>
-    <a href="{{ include.url | absolute_url }}"><img src="{{ include.image.file | default: 'shim.gif' | prepend: site.img }}" alt="{{ include.image.alt }}"></a>
+    <a href="{{ include.url | absolute_url }}"><img src="{{ include.image.file | default: 'bomtomba.jpg' | prepend: site.img }}" alt="{{ include.image.alt }}"></a>
   </figure>
-  {% endif %}
 
   <div class="link">
     <h2><a href="{{ include.url | absolute_url }}">{{ include.title | strip | smartify }}</a></h2>

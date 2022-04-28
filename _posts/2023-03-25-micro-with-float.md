@@ -4,7 +4,7 @@ title: "A micro post with a float!"
 description: "Nunc accumsan faucibus eleifend. Sed a nibh enim."
 image:
   file: thor-love-and-thunder.jpg
-  style: poster right
+  style: academy right jumbo
   alt: "Thor Love and Thunder, by golly!"
 ---
 In feugiat urna non laoreet fermentum. Praesent suscipit lacinia arcu, id laoreet est imperdiet nec. Praesent ac dui risus. Nam at massa sed eros ultrices mollis ac nec nulla. Aenean eros lectus, consequat eget pretium eu, congue ac mauris. Curabitur egestas porttitor erat, vitae facilisis libero pretium consectetur. Fusce malesuada at sem ut posuere. Vivamus eget pulvinar enim. Proin pellentesque venenatis sollicitudin. Etiam a tortor eleifend, feugiat libero id, vehicula nibh. Morbi eleifend nulla non condimentum convallis. In efficitur lacinia mollis. Sed volutpat consequat quam, sed aliquet turpis. Aenean venenatis pellentesque velit, eget interdum sapien interdum sed. Donec placerat venenatis nulla id egestas.

@@ -2,7 +2,7 @@
 {% assign copy = include.content | strip | normalize_whitespace %}
 {% include _puncf.html title=p.title url=p.url is_home=include.is_home %}
 
-{% if p.image %}
+{% if p.image.ratio %}
 
   {% assign myfig = p.image.ratio | split: ' ' -%}
   {% assign mw = myfig[0] | default: 640 | strip | times: 1.0 -%}

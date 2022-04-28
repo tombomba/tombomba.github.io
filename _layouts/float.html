@@ -9,7 +9,11 @@ layout: default
     {% include detail-float.html page=page content=content %}
   </article>
 
-  {% include nextprev.html previous=page.previous next=page.next %}
+  {% if site.posts.first.id == page.id %}
+    {% include previously.html limit=3 %}
+  {% else -%}
+    {% include nextprev.html previous=page.previous next=page.next %}
+  {% endif -%}
 
 </main>
 

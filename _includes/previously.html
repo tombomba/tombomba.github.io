@@ -1,9 +1,14 @@
 {% assign xlimit = include.limit | default: 5 | times: 1.0 %}
 {% assign xoffset = include.offset | default: 1 | times: 1.0 %}
 <section class="previously">
-  <ul class="card blurb">
+  <ul class="card {% if include.is_home %}large{% else %}small{% endif %}">
     {% for x in site.posts limit:xlimit offset:xoffset %}
-      {% include _card.html title=x.title image=x.image text=x.description url=x.url %}
+      {% if include.is_home %}
+        {% assign xtext = x.excerpt | truncatewords: 50 %}
+      {% else %}
+        {% assign xtext = x.description | truncate: 140 %}
+      {% endif -%}
+      {% include _card.html title=x.title image=x.image text=xtext url=x.url is_home=include.is_home %}
     {% endfor -%}
   </ul>
 </section>

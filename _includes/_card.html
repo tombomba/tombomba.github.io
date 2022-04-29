@@ -1,12 +1,12 @@
 <li>
 
-  <figure>
+  <figure class="{% if include.is_home %}right{% else %}left{% endif %} wtf {{ include.is_home | inspect }}">
     <a href="{{ include.url | absolute_url }}"><img src="{{ include.image.file | default: 'bomtomba.jpg' | prepend: site.img }}" alt="{{ include.image.alt }}"></a>
   </figure>
 
   <div class="link">
     <h2><a href="{{ include.url | absolute_url }}">{{ include.title | strip | smartify }}</a></h2>
-    <p>{{ include.text | truncate: 120 | strip | strip_html | smartify }}</p>
+    {% if include.text %}<p>{{ include.text | strip_html | strip | smartify | normalize_whitespace }}</p>{% endif %}
   </div>
 
 </li>

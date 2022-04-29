@@ -1,16 +1,12 @@
-{% if include.next.image and include.previous.image %}
-  {% assign has_thumbs = true %}
-{% endif -%}
-
-<section class="nextprev">
-  <ul class="card blurb {% if has_thumbs %}thumbs{% else %}no-thumbs{% endif %}">
+<section class="recents">
+  <ul class="card small">
     {% if include.next %}
-    {% assign ntext = include.next.description | default: include.next.excerpt %}
-    {% include _card.html title=include.next.title image=include.next.image text=ntext url=include.next.url has_thumbs=has_thumbs %}
+    {% assign nextext = include.next.description | truncate: 140 %}
+    {% include _card.html title=include.next.title image=include.next.image text=nextext url=include.next.url %}
     {% endif %}
     {% if include.previous %}
-    {% assign ptext = include.previous.description | default: include.previous.excerpt %}
-    {% include _card.html title=include.previous.title image=include.previous.image text=p.text url=include.previous.url has_thumbs=has_thumbs %}
+    {% assign prevtext = include.previous.description | truncate: 140 %}
+    {% include _card.html title=include.previous.title image=include.previous.image text=prevtext url=include.previous.url %}
     {% endif -%}
   </ul>
 </section>

@@ -1,6 +1,6 @@
 <li>
 
-  <figure class="{% if include.is_home %}right{% else %}left{% endif %} wtf {{ include.is_home | inspect }}">
+  <figure class="left">
     <a href="{{ include.url | absolute_url }}"><img src="{{ include.image.file | default: 'bomtomba.jpg' | prepend: site.img }}" alt="{{ include.image.alt }}"></a>
   </figure>
 

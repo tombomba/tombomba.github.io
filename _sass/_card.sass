@@ -47,14 +47,14 @@ section
         h1, h2, h3, p
           display: inline
       figure
-        --width: 4em
+        --width: 6em
         --height: var(--width)
 
   ul.card.large
     li
       figure
         --width: 12em
-        --height: calc(var(--width) / 1.375)
+        --height: calc(var(--width) / 1.66)
 
 //-----------------------------------------------------------------------------
 
@@ -74,12 +74,11 @@ section
 
   section
 
-    ul.card.small,
     ul.card.large
       li
         figure
           --width: var(--shim-3x)
-          --height: var(--shim-3x)
+          --height: var(--width)
 
     ul.card.small
       padding: var(--shim) 0
@@ -123,9 +122,3 @@ section
     ul.card.small
       li
         align-items: center
-
-    ul.card.large
-      li
-        figure
-          --width: var(--shim-4x)
-          --height: var(--shim-4x)

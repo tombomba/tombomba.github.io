@@ -4,20 +4,17 @@ label: "home"
 is_home: true
 permalink: /index.html
 ---
-
-{% assign p = site.posts.first %}
-{% assign copy = site.posts.first.content %}
 {% include banner.html %}
 
 <main role="main">
 
-  {% if p.layout == 'micro' %}
-  <article class="micro">
-    {% include detail-micro.html page=site.posts.first content=site.posts.first.content is_home=true %}
+  {% for p in site.posts limit:10 %}
+  {% unless forloop.first %}<div class="buffer"></div>{% endunless %}
+  <article class="{{ p.layout }} home">
+    {% include detail-{{ p.layout }}.html page=p content=p.content is_home=true %}
   </article>
-  {% endif %}
+  {% endfor %}
 
-  {% include previously.html limit=7 offset=1 is_home=true %}
   {% include _datelist.html %}
 
 </main>

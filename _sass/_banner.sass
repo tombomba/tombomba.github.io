@@ -2,7 +2,7 @@ header[role="banner"]
   border-bottom: var(--border-style)
   .logo
     max-width: var(--page-width)
-    margin: 1em auto
+    margin: var(--shim-n) auto
     display: flex
     align-items: center
     justify-content: space-between
@@ -12,27 +12,29 @@ header[role="banner"]
       h1
         margin-top: 2px
         flex: 1
-        font-size: var(--font-size-xx)
-        font-weight: 900
+        font-family: 'Sarina', cursive
+        font-size: var(--hed-size)
+        font-weight: 400
         font-variant-ligatures: common-ligatures
         line-height: 1
-        text-transform: lowercase
         color: $logo-color
         a:link, a:visited
           color: $logo-color
           text-decoration: none
+          text-shadow: -2px 2px 2px $shock-color
+        a:hover
+          text-decoration: underline
     .image
       p
-        margin: 0
+        margin: 2px 0 0 0
         padding: 0
         line-height: 0
-        font-size: 20px
+        font-size: var(--hed-size)
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 30rem)
+//@media screen and (min-width: 40rem)
 
   header[role="banner"]
     .logo
-      margin: 0 auto
-      height: var(--shim-2x)
+      margin: 1em auto

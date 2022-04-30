@@ -11,7 +11,9 @@
     {% assign newfig = myfig | shift | shift | join: ' ' %}
   {% endif -%}
 
-  {% if p.image.style contains 'tilt' %}{% assign hedpad = 'fat' %}{% endif -%}
+  {% unless include.is_home %}
+    {% if p.image.style contains 'tilt' %}{% assign hedpad = 'fat' %}{% endif -%}
+  {% endunless -%}
 
   <figure class="float {{ figfloat }} {{ newfig | default: 'nofx' }}">
     <img src="{{ p.image.file | prepend: site.img }}" class="ratio--{{ figratio }}" alt="{{ p.image.alt }}">

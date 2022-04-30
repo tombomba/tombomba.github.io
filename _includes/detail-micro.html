@@ -12,8 +12,8 @@
     {% assign percentage = mh | divided_by: mw | times: 100 | round: 2 %}
   {% endif -%}
 
-  {% if mw < 720 %}
-    {% assign vidmax = mw | divided_by: 720 | times: 100 | round: 2 %}
+  {% if mw < 673 %}
+    {% assign vidmax = mw | divided_by: 673 | times: 100 | round: 2 %}
   {% endif %}
 
   <figure class="video" style="--video-max-width:{{ vidmax | default: '100' }}%;">

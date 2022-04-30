@@ -4,16 +4,28 @@ label: "home"
 is_home: true
 permalink: /index.html
 ---
+{% assign scope = 2629743 -%}
+{% assign today = site.posts.first.date | date: '%s' -%}
 {% include banner.html %}
 
 <main role="main">
 
-  {% for p in site.posts limit:10 %}
-  {% unless forloop.first %}<div class="buffer"></div>{% endunless %}
-  <article class="{{ p.layout }} home">
-    {% include detail-{{ p.layout }}.html page=p content=p.content is_home=true %}
-  </article>
-  {% endfor %}
+    {% for p in site.posts %}
+
+      {% assign current = p.date | date: '%s' %}
+      {% assign range = today | times: 1 |  minus: current %}
+
+      {% if scope > range %}
+        {% unless forloop.first %}<div class="buffer"></div>{% endunless -%}
+        <article class="{{ p.layout }} home">
+          {% include detail-{{ p.layout }}.html page=p content=p.content is_home=true %}
+        </article>
+
+      {% else -%}
+        {% break %}
+      {% endif -%}
+  
+  {% endfor -%}
 
   {% include _datelist.html %}
 

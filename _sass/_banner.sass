@@ -1,7 +1,6 @@
 header[role="banner"]
   border-bottom: var(--border-style)
   .logo
-    max-width: var(--page-width)
     margin: var(--shim-n) auto
     display: flex
     align-items: center
@@ -25,15 +24,25 @@ header[role="banner"]
           text-decoration: underline
     .image
       p
-        font-size: var(--hed-size)
-        font-size: 1
+        font-size: 20px  
+        line-height: 1
+      &.left 
+        display: none
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40rem)
 
   header[role="banner"]
+    padding: 0 var(--shim)
     height: var(--shim-2x)
     .logo
+      max-width: var(--page-width)
       margin: 0 auto
       height: var(--shim-2x)
+      //order: 1
+      //.image.left
+        display: block
+        order: -1
+      //.image.right
+        order: 2

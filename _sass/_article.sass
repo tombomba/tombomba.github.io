@@ -2,6 +2,9 @@ article
   max-width: var(--page-width)
   margin: var(--shim-2x) auto
   @extend .clearfix
+  &:not(:first-of-type)
+    figure.video
+      padding-top: var(--nudge)
 
   h1
     margin: 0

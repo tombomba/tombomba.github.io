@@ -3,43 +3,9 @@
 {% include _puncf.html title=p.title url=p.url is_home=include.is_home %}
 
 {% if p.image.ratio %}
-
-  {% assign myfig = p.image.ratio | split: ' ' -%}
-  {% assign mw = myfig[0] | default: 640 | strip | times: 1.0 -%}
-  {% assign mh = myfig[1] | default: 480 | strip | times: 1.0 -%}
-
-  {% if mw > 0 and mh > 0 %}
-    {% assign percentage = mh | divided_by: mw | times: 100 | round: 2 %}
-  {% endif -%}
-
-  {% if mw < 673 %}
-    {% assign vidmax = mw | divided_by: 673 | times: 100 | round: 2 %}
-  {% endif %}
-
-  <figure class="video" style="--video-max-width:{{ vidmax | default: '100' }}%;">
-    <div class="container" style="--percent:{{ percentage | default: '56.25' }}%;">
-      <img src="{{ p.image.file | prepend: site.img }}" class="fixed" alt="{{ p.image.alt }}">
-    </div>
-    {% if p.image.caption %}<figcaption>{{ p.image.caption | smartify | normalize_whitespace | strip }}</figcaption>{% endif %}
-  </figure>
-
-{% endif -%}
-
-{% if p.image.style %}
-
-  {% assign myfig = p.image.style | split: ' ' -%}
-  {% assign figratio = myfig[0] | default: 'square' -%}
-  {% assign figfloat = myfig[1] | default: 'right' -%}
-  {% if myfig.size > 2 %}
-    {% assign newfig = myfig | shift | shift | join: ' ' %}
-  {% endif -%}
-
-  {% if p.image.style contains 'tilt' %}{% assign hedpad = 'fat' %}{% endif -%}
-
-  <figure class="float {{ figfloat }} {{ newfig | default: 'nofx' }}">
-    <img src="{{ p.image.file | prepend: site.img }}" class="ratio--{{ figratio }}" alt="{{ p.image.alt }}">
-  </figure>
-
+  {% include _fig-ratio.html image=p.image is_home=include.is_home %}
+{% elsif p.image.style %}
+  {% include _fig-style.html image=p.image is_home=include.is_home %}
 {% endif -%}
 
 {% capture datef %}<span class="daystamp">&nbsp;(<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date: '%d %b' }}</time>)</span>{% endcapture -%}

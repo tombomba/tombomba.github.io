@@ -2,23 +2,8 @@
 {% assign copy = include.content | strip | normalize_whitespace %}
 {% include _widont.html title=p.title url=p.url is_home=include.is_home %}
 
-{% if p.image %}
-
-  {% assign myfig = p.image.style | split: ' ' -%}
-  {% assign figratio = myfig[0] | default: 'square' -%}
-  {% assign figfloat = myfig[1] | default: 'right' -%}
-  {% if myfig.size > 2 %}
-    {% assign newfig = myfig | shift | shift | join: ' ' %}
-  {% endif -%}
-
-  {% unless include.is_home %}
-    {% if p.image.style contains 'tilt' %}{% assign hedpad = 'fat' %}{% endif -%}
-  {% endunless -%}
-
-  <figure class="float {{ figfloat }} {{ newfig | default: 'nofx' }}">
-    <img src="{{ p.image.file | prepend: site.img }}" class="ratio--{{ figratio }}" alt="{{ p.image.alt }}">
-  </figure>
-
+{% if p.image.style %}
+  {% include _fig-style.html image=p.image is_home=include.is_home %}
 {% endif -%}
 
 {% capture datef %}<span class="daystamp">&#32;&mdash;&nbsp;<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date: '%d %b %Y' }}</time></span>{% endcapture -%}

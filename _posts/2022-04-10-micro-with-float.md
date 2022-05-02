@@ -1,5 +1,4 @@
 ---
-layout: micro
 title: "A micro post with a float!"
 description: "Nunc accumsan faucibus eleifend. Sed a nibh enim."
 image:

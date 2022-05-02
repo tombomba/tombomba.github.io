@@ -1,5 +1,4 @@
 ---
-layout: micro
 title: "A micro post with no image attached"
 description: "This is my very good blurb for this post."
 ---

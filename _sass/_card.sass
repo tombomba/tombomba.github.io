@@ -1,5 +1,5 @@
 section.datelist
-  border-top: var(--border-style)
+  border-top: var(--style-border)
   ul
     margin: 1em auto
     display: flex
@@ -9,17 +9,17 @@ section.datelist
     list-style-type: none
     li
       &:not(:last-of-type)
-        margin-right: var(--nudge-2x)
+        margin-right: var(--nudge)
 
 section
-  border-top: var(--border-style)
+  border-top: var(--style-border)
   ul.card
     max-width: var(--page-width)
     margin: 0 auto
-    padding: var(--shim-p) 0
+    padding: var(--shim) 0
     list-style-type: none
     li
-      margin-top: var(--shim-p)
+      margin-top: var(--shim)
       &:first-of-type
         margin-top: 0
       .link
@@ -27,7 +27,7 @@ section
         h1, h2, h3
           font-size: 1em
           font-weight: normal
-          line-height: var(--font-lh)
+          line-height: var(--line-height-body)
         p
           margin: 0
       figure
@@ -38,7 +38,7 @@ section
           height: var(--height)
           object-fit: cover
           object-position: 50% 50%
-          background-color: $bg-color
+          background-color: var(--color-back)
           border-radius: 4px
 
   ul.card.small
@@ -77,23 +77,23 @@ section
     ul.card.large
       li
         figure
-          --width: var(--shim-3x)
+          --width: var(--shim-2x)
           --height: var(--width)
 
     ul.card.small
       padding: var(--shim) 0
       li
-        margin-top: var(--shim-n)
+        margin-top: var(--shim)
         &:first-of-type
           margin-top: 0
         .link
           h1, h2, h3, p
             display: block
         figure
-          margin-right: var(--shim-n)
+          margin-right: var(--shim)
 
     ul.card.large
-      padding: var(--shim-p) 0
+      padding: var(--shim) 0
       li
         margin-top: var(--shim)
         &:first-of-type
@@ -101,7 +101,7 @@ section
         display: flex
         align-items: flex-start
         figure
-          margin: var(--nudge) var(--shim-n) 0 0
+          margin: var(--nudge) var(--shim) 0 0
 
 //-----------------------------------------------------------------------------
 
@@ -112,22 +112,12 @@ section
       li
         figure.right
           order: 99
-          margin-left: var(--shim-n)
+          margin-left: var(--shim)
           margin-right: 0
         figure.left
           order: -1
-          margin: 0 var(--shim-n) 0 0
+          margin: 0 var(--shim) 0 0
 
     ul.card.small
       li
         align-items: center
-
-//-----------------------------------------------------------------------------
-
-//@media screen and (min-width: 60rem)
-
-  section
-    ul.card.small
-      li
-        figure
-          --width: var(--shim-4x)

@@ -1,14 +1,14 @@
 html
-  background-color: $body-color
+  background-color: var(--color-body)
 
 body
 
-  font-family: var(--font-family-serif)
-  font-size: var(--font-size)
-  line-height: var(--font-lh)
+  font-family: var(--fam-serif)
+  font-size: var(--body-size)
+  line-height: var(--line-height-body)
 
-  background-color: $body-color
-  color: $text-color
+  background-color: var(--color-body)
+  color: var(--color-text)
 
   text-rendering: optimizeSpeed
   -ms-text-size-adjust: auto
@@ -18,9 +18,11 @@ a
   text-decoration: underline
   text-decoration-skip-ink: auto
   &:link
-    color: $link-color
+    color: var(--color-link)
   &:visited
-    color: $visited-color
+    color: var(--color-visited)
+  &:active
+    color: var(--color-active)
   &:hover
     text-decoration: none
 
@@ -28,13 +30,7 @@ figure
   img
     border-radius: 4px
   figcaption
-    font-size: var(--font-size-sm)
-
-\:-moz-selection
-  background: $select-color
-
-\::selection
-  background: $select-color
+    font-size: var(--body-size-sm)
 
 .hr
   margin: 0
@@ -42,16 +38,16 @@ figure
   height: 0
   border: 0
   line-height: 1
-  border-top: thin solid $border-dark
-  border-bottom: medium solid $border-light
-  background-color: $body-color
+  border-top: thin solid var(--color-text)
+  border-bottom: medium solid var(--color-half)
+  background-color: var(--body-color)
 
 .buffer
-  border-top: var(--border-style)
+  border-top: var(--style-border)
 
 .daystamp
     white-space: nowrap
     font-style: italic
-    color: $mix-color
+    color: var(--color-half)
     a:link, a:visited
-      color: $mix-color
+      color: var(--color-half)

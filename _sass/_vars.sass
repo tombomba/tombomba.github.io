@@ -1,0 +1,70 @@
+//-----------------------------------------------------------------------------
+
+\:root
+
+  --fam-sans: Verdana, 'Verdana Ref', Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', 'Bitstream Vera Sans', 'Liberation Sans', sans-serif
+
+  --fam-serif: Georgia, Constantia, 'Lucida Bright', Lucidabright, 'Lucida Serif', Lucida, 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', serif
+
+  --fam-black: Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', sans-serif
+
+  --fam-mono: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace
+
+  --fam-system: system, system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif
+
+  --line-height-body: 1.6875
+  --line-height-hed: calc(((var(--line-height-body) - 1) / 2) + 1)
+
+  --body-size: 1rem
+  --body-size-lg: 1.125em
+  --body-size-sm: 0.875em
+
+  --hed-size: 1.25em
+  --hed-size-md: 1.625em
+  --hed-size-lg: 2.0625em
+  --hed-size-xl: 2.625em
+
+  --page-width: 34em 
+
+  --shim: calc(var(--line-height-body) * 1em)
+  --shim-2x: calc(var(--shim) * 2)
+
+  --nudge: calc(((var(--line-height-body) - 1) / 2) * 1em)
+  --nudge-2x: calc((var(--line-height-body) - 1) * 1em)
+
+  --shim-n: calc(var(--shim) - var(--nudge))
+  --shim-p: calc(var(--shim) + var(--nudge))
+  --buffer: calc(var(--shim-n) * 2)
+
+  --color-text: hsl(0, 0%, 15%)
+  --color-back: hsl(0, 0%, 85%)
+  --color-body: hsl(0, 0%, 98%)
+  --color-half: hsl(0, 0%, 49%)
+
+  --color-border: hsl(0, 0%, 75%)
+  --style-border: thin dashed var(--color-border)
+
+  --color-logo: hsl(330, 100%, 40%)
+
+  --color-link: hsl(220, 60%, 50%)
+  --color-visited: hsl(300, 50%, 40%)
+  --color-active: hsl(36, 100%, 50%)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  \:root
+
+    --line-height-body: 1.83
+
+    --body-size: 1.125rem
+    --body-size-lg: 1.11111111111em
+    --body-size-sm: 0.88888888888em
+
+    --hed-size: 1.27777777778em
+    --hed-size-md: 1.61111111111em
+    --hed-size-lg: 2.05555555556em
+    --hed-size-xl: 2.61111111111em
+
+    --page-width: 37.389em 

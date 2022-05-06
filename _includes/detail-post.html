@@ -2,6 +2,10 @@
 {% assign copy = include.content | strip | normalize_whitespace %}
 {% include _widont.html title=p.title url=p.url is_home=include.is_home %}
 
+{% if p.image.ratio %}
+  {% include _fig-ratio.html image=p.image is_home=include.is_home %}
+{% endif -%}
+
 <header>
   <h1>{{ titlestring }}</h1><!-- {{ p.title.size }}c -->
   <div class="byline {% if p.title.size > 48 %}fat{% else %}thin{% endif %}">
@@ -10,8 +14,6 @@
   </div>
 </header>
 
-{% if p.image.ratio %}
-  {% include _fig-ratio.html image=p.image is_home=include.is_home %}
-{% endif -%}
-
-{{ copy }}
+<div class="copy"><!-- {{ include.content | number_of_words }}w -->
+  {{ copy }}
+</div>

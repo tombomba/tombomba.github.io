@@ -7,13 +7,15 @@
   {% assign percentage = mh | divided_by: mw | times: 100 | round: 2 %}
 {% endif -%}
 
-{% if mw < 673 %}
-  {% assign vidmax = mw | divided_by: 673 | times: 100 | round: 2 %}
+{% if mw < 706 %}
+  {% assign vidmax = mw | divided_by: 706 | times: 100 | round: 2 %}
 {% endif %}
 
-<figure class="video" style="--video-max-width:{{ vidmax | default: '100' }}%;">
-  <div class="container" style="--percent:{{ percentage | default: '56.25' }}%;">
-    <img src="{{ img_r.file | prepend: site.img }}" class="fixed" alt="{{ img_r.alt }}">
+<figure class="video">
+  <div class="vidmax" style="--video-max-width:{{ vidmax | default: '100' }}%;">
+    <div class="wrap" style="--percent:{{ percentage | default: '56.25' }}%;">
+      <img src="{{ img_r.file | prepend: site.img }}" class="fixed" alt="{{ img_r.alt }}">
+    </div>
   </div>
   {% if img_r.caption %}<figcaption>{{ img_r.caption | smartify | normalize_whitespace | strip }}</figcaption>{% endif %}
 </figure>

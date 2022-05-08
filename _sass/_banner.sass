@@ -1,7 +1,9 @@
 header[role="banner"]
+  max-width: var(--width-page)
+  margin: 0 auto
   .logo
-    max-width: var(--shim-2x)
-    margin: var(--shim-n) auto var(--buffer) auto
+    width: var(--shim-2x)
+    margin: var(--shim) auto var(--buffer) auto
     display: flex
     align-items: center
     justify-content: center
@@ -18,6 +20,6 @@ header[role="banner"]
       a:hover
         color: var(--color-shock)
         text-shadow: 0.0625em 0.0625em 0 var(--color-logo)
+  
   .hr
-    flex: 1
-    max-width: 25%
+    max-width: 50%

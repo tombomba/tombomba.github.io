@@ -9,6 +9,12 @@ layout: default
     {% include detail-micro.html page=page content=content %}
   </article>
 
+  {% if site.posts.first.id == page.id %}
+    {% include previously.html limit=3 %}
+  {% else -%}
+    {% include nextprev.html previous=page.previous next=page.next %}
+  {% endif -%}
+
 </main>
 
 {% include footer.html %}

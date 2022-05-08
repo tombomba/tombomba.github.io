@@ -1,4 +1,6 @@
 footer
+  max-width: var(--width-page)
+  margin: 0 auto
   ul
     margin: var(--shim) auto
     display: flex
@@ -14,7 +16,7 @@ footer
         margin-top: 1em
 
   .hr
-    max-width: 25%
+    max-width: 50%
   
 //-----------------------------------------------------------------------------
 
@@ -22,7 +24,7 @@ footer
 
   footer
     ul
-      margin: var(--shim-n) auto
+      margin: var(--buffer) auto var(--shim-n) auto
       padding-top: 3px
       flex-flow: row wrap
       align-items: center
@@ -39,11 +41,3 @@ footer
         &:not(:last-of-type)::after
           content: '-'
           padding: 0.33em
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 50rem)
-
-  footer
-    ul
-      margin: var(--shim-n) auto var(--buffer) auto

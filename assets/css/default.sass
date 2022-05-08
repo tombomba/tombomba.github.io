@@ -8,9 +8,11 @@
 article.post
   header
     h1
-      font-size: var(--hed-size-md)
       line-height: var(--line-height-hed)
-      letter-spacing: -0.25px
+      &.lg
+        font-size: var(--hed-size-md)
+      &.sm
+        font-size: var(--hed-size)
     .byline
       margin-top: 1em
       p
@@ -21,7 +23,7 @@ article.post
         &:nth-of-type(2)::before
           content: '\0020\2022\0020'
   figure
-    margin: var(--shim) 0 var(--shim-p) 0
+    margin: 0 0 var(--shim-p) 0
 
 article.micro
   .hed

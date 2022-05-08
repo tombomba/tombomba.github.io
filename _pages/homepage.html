@@ -16,7 +16,7 @@ permalink: /index.html
       {% assign range = today | times: 1 |  minus: current %}
 
       {% if scope > range %}
-        {% unless forloop.first %}<div class="buffer"></div>{% endunless -%}
+        {% unless forloop.first %}<div class="hr"></div>{% endunless -%}
         <article class="{{ p.layout }} home">
           {% include detail-{{ p.layout }}.html page=p content=p.content is_home=true %}
         </article>

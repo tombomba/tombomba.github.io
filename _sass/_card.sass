@@ -1,123 +1,44 @@
-section.datelist
-  ul
-    margin: 1em auto
-    display: flex
-    flex-flow: row wrap
-    align: center
-    justify-content: center
-    list-style-type: none
-    li
-      &:not(:last-of-type)
-        margin-right: var(--nudge)
-
 section
-  .hr
-    max-width: 50%
   ul.card
-    max-width: var(--page-width)
+    max-width: var(--width-page)
     margin: 0 auto
     padding: var(--buffer) 0
     list-style-type: none
     li
-      margin-top: var(--shim)
+      margin-top: var(--shim-p)
       &:first-of-type
         margin-top: 0
-      .link
-        flex: 1
-        h1, h2, h3
-          font-size: 1em
-          font-weight: normal
-          line-height: var(--line-height-body)
-        p
-          margin: 0
       figure
-        margin: var(--nudge) 0 1em 0
+        --width: var(--shim-4x)
         img
-          display: block
           width: var(--width)
-          height: var(--height)
+          height: var(--width)
           object-fit: cover
           object-position: 50% 50%
-          background-color: var(--color-back)
-          border-radius: 4px
-
-  ul.card.small
-    li
-      .link
-        h1, h2, h3, p
+      div
+        margin-top: 1em
+        h1, h2, h3, h4, h5, h6, p
           display: inline
-      figure
-        --width: 4em
-        --height: var(--width)
-
-  ul.card.large
-    li
-      figure
-        --width: 12em
-        --height: calc(var(--width) / 1.66)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 19rem)
-
-  section
-    ul.card.small
-      li
-        display: flex
-        align-items: flex-start
-        figure
-          margin: var(--nudge) 1em 0 0
+          font-size: 1em
+        a
+          font-weight: 400
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30rem)
 
   section
-
-    ul.card.large
-      li
-        figure
-          --width: var(--shim-2x)
-          --height: var(--width)
-
-    ul.card.small
-      padding: var(--shim) 0
-      li
-        margin-top: var(--shim)
-        &:first-of-type
-          margin-top: 0
-        .link
-          h1, h2, h3, p
-            display: block
-        figure
-          margin-right: var(--shim)
-
-    ul.card.large
-      padding: var(--shim) 0
-      li
-        margin-top: var(--shim)
-        &:first-of-type
-          margin-top: 0
-        display: flex
-        align-items: flex-start
-        figure
-          margin: var(--nudge) var(--shim) 0 0
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
-  section
     ul.card
       li
-        figure.right
-          order: 99
-          margin-left: var(--shim-n)
-          margin-right: 0
-        figure.left
-          order: -1
-          margin: 0 var(--shim-n) 0 0
-
-    ul.card.small
-      li
+        margin-top: var(--shim-n)
+        display: flex
         align-items: center
+        justify-content: space-between
+        figure
+          --width: var(--shim-3x)
+        div 
+          flex: 1
+          margin-top: 0
+          margin-left: var(--shim-n)
+          h1, h2, h3, h4, h5, h6, p
+            display: block

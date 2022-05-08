@@ -1,25 +1,36 @@
 header[role="banner"]
+ .logoblock
   max-width: var(--width-page)
-  margin: 0 auto
-  .logo
-    width: var(--shim-2x)
-    margin: var(--shim) auto var(--buffer) auto
+  margin: 1em auto
+  display: flex
+  flex-flow: row wrap
+  align-items: center
+  justify-content: space-between
+  .text
     display: flex
     align-items: center
-    justify-content: center
-    p
-      font-family: var(--fam-emoji)
-      font-size: var(--shim-2x)
-      font-weight: 700
+    h1
+      font-family: var(--fam-black)
+      font-size: var(--body-size-lg)
+      font-weight: 900
       line-height: 1
-      color: var(--color-logo)
+      letter-spacing: -0.125px
+      text-transform: uppercase
       a:link, a:visited
-        color: var(--color-logo)
-        text-shadow: 0.0625em 0.0625em 0 var(--color-shock)
+        color: black
         text-decoration: none
       a:hover
-        color: var(--color-shock)
-        text-shadow: 0.0625em 0.0625em 0 var(--color-logo)
-  
-  .hr
-    max-width: 50%
+        text-decoration: underline
+  .image
+    p
+      font-size: var(--hed-size)
+      line-height: 0
+      a:link, a:visited
+        text-decoration: none
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30rem)
+  header[role="banner"]
+   .logoblock
+      margin: var(--shim-n) auto

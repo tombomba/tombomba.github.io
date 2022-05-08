@@ -1,6 +1,7 @@
 {% assign xlimit = include.limit | default: 5 | times: 1.0 %}
 {% assign xoffset = include.offset | default: 1 | times: 1.0 %}
 <section class="previously">
+  <div class="hr"></div>
   <ul class="card {% if include.is_home %}large{% else %}small{% endif %}">
     {% for x in site.posts limit:xlimit offset:xoffset %}
       {% if include.is_home %}

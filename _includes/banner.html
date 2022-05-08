@@ -1,7 +1,11 @@
 
 <header role="banner" class="{% if page.is_home %}{{ site.posts.first.label | default: site.posts.first.layout }}{% else %}{{ page.label | default: page.layout }}{% endif %}">
 
-  <div class="logo"><p><a href="{{ site.url }}">💣</a></p></div>
+  <div class="logoblock">
+    <div class="text"><h1><a href="{{ site.url }}">{{ site.title }}</a></h1></div>
+    <div class="image"><p><a href="{{ site.url }}">{{ site.emoji }}</a></p></div>
+  </div>
+
   <div class="hr"></div>
 
 </header>

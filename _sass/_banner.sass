@@ -1,12 +1,13 @@
 header[role="banner"]
   .logo
-    margin: 1em auto
-    max-width: 3em
+    max-width: var(--shim-2x)
+    margin: var(--shim-n) auto var(--buffer) auto
     display: flex
     align-items: center
+    justify-content: center
     p
       font-family: var(--fam-emoji)
-      font-size: 3em
+      font-size: var(--shim-2x)
       font-weight: 700
       line-height: 1
       color: var(--color-logo)
@@ -14,3 +15,9 @@ header[role="banner"]
         color: var(--color-logo)
         text-shadow: 0.0625em 0.0625em 0 var(--color-shock)
         text-decoration: none
+      a:hover
+        color: var(--color-shock)
+        text-shadow: 0.0625em 0.0625em 0 var(--color-logo)
+  .hr
+    flex: 1
+    max-width: 25%

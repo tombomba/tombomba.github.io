@@ -35,6 +35,8 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
 
   --shim: calc(var(--line-height-body) * 1em)
   --shim-2x: calc(var(--shim) * 2)
+  --shim-3x: calc(var(--shim) * 3)
+  --shim-4x: calc(var(--shim) * 4)
 
   --nudge: calc(((var(--line-height-body) - 1) / 2) * 1em)
   --nudge-2x: calc((var(--line-height-body) - 1) * 1em)
@@ -74,14 +76,35 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 40rem)
+@media screen and (min-width: 30rem)
+
+  \:root
+
+    --line-height-body: 1.7
+
+    --body-size: 1.063rem
+    --body-size-lg: 1.11764705882em
+    --body-size-sm: 0.88235294117em
+
+    --hed-size: 1.29411764706em
+    --hed-size-md: 1.64705882353em
+    --hed-size-lg: 2.05882352941em
+    --hed-size-xl: 2.64705882353
+
+    --page-width: 42.500rem
+    --width-page: 42.500rem
+
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 60rem)
 
   \:root
 
     --line-height-body: 1.83
 
     --body-size: 1.125rem
-    --body-size-lg: 1.11111111111em
+    --body-size-lg: 1.11111111111rem
     --body-size-sm: 0.88888888888em
 
     --hed-size: 1.27777777778em
@@ -89,27 +112,7 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
     --hed-size-lg: 2.05555555556em
     --hed-size-xl: 2.61111111111em
 
-    --page-width: 37.389em
-    --width-page: 37.389em
+    --page-width: 42.063rem
+    --width-page: 42.063rem
 
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 80rem)
-
-  \:root
-
-    --line-height-body: 1.8
-
-    --body-size: 1.2rem
-    --body-size-lg: 1.16666666667em
-    --body-size-sm: 0.84210526315em
-
-    --hed-size: 1.26315789474em
-    --hed-size-md: 1.63157894737em
-    --hed-size-lg: 2.05263157895em
-    --hed-size-xl: 2.63157894737em
-
-    --page-width: 45.750rem
-    --width-page: 45.750rem
 

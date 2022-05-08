@@ -1,5 +1,4 @@
 footer
-  border-top: var(--style-border)
   ul
     margin: var(--shim) auto
     display: flex
@@ -13,6 +12,9 @@ footer
       &.copydate
         order: 99
         margin-top: 1em
+
+  .hr
+    max-width: 25%
   
 //-----------------------------------------------------------------------------
 
@@ -20,7 +22,7 @@ footer
 
   footer
     ul
-      margin: 1em auto
+      margin: var(--shim-n) auto
       padding-top: 3px
       flex-flow: row wrap
       align-items: center
@@ -29,6 +31,8 @@ footer
         font-size: var(--body-size-sm)
         line-height: var(--line-height-body)
         color: var(--color-half)
+        &.homelink
+          order: -2
         &.copydate
           order: -1
           margin-top: 0
@@ -42,4 +46,4 @@ footer
 
   footer
     ul
-      margin: 1em auto var(--buffer) auto
+      margin: var(--shim-n) auto var(--buffer) auto

@@ -1,49 +1,16 @@
 header[role="banner"]
-  border-bottom: var(--style-border)
   .logo
-    margin: var(--shim) auto
+    margin: 1em auto
+    max-width: 3em
     display: flex
     align-items: center
-    justify-content: space-between
-    .text
-      display: flex
-      align-items: center
-      h1
-        margin-top: 2px
-        flex: 1
-        font-family: 'Sarina', cursive
-        font-size: var(--hed-size)
-        font-weight: 400
-        font-variant-ligatures: common-ligatures
-        line-height: 1
-        a:link, a:visited
-          color: var(--color-logo)
-          text-shadow: -2px 2px 2px var(--color-shock)
-          text-decoration: none
-        a:hover
-          text-decoration: underline
-    .image
-      p
-        margin-top: 2px
-        font-size: 23px  
-        line-height: 1
-      &.left 
-        display: none
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
-  header[role="banner"]
-    padding: 0 var(--shim)
-    height: var(--shim-2x)
-    .logo
-      max-width: var(--page-width)
-      margin: 0 auto
-      height: var(--shim-2x)
-      order: 1
-      .image.left
-        display: block
-        order: -1
-      .image.right
-        order: 2
+    p
+      font-family: var(--fam-emoji)
+      font-size: 3em
+      font-weight: 700
+      line-height: 1
+      color: var(--color-logo)
+      a:link, a:visited
+        color: var(--color-logo)
+        text-shadow: 0.0625em 0.0625em 0 var(--color-shock)
+        text-decoration: none

@@ -14,6 +14,9 @@ $two-color: hsl(180, 100%, 70%), hsl(48, 100%, 50%), hsl(84, 100%, 50%), hsl(48,
 $primary-color: nth($one-color, $key)
 $secondary-color: nth($two-color, $key)
 
+$primary-color-fade: rgba($primary-color, 0.5)
+$secondary-color-fade: rgba($secondary-color, 0.5)
+
 //-----------------------------------------------------------------------------
 
 \:root
@@ -52,6 +55,8 @@ $secondary-color: nth($two-color, $key)
 
   --color-logo: #{$primary-color} 
   --color-shock: #{$secondary-color}
+  --color-logo-fade: #{$primary-color-fade}
+  --color-shock-fade: #{$secondary-color-fade}
 
   --color-link: hsl(220, 60%, 50%)
   --color-visited: hsl(300, 50%, 40%)
@@ -65,6 +70,7 @@ $secondary-color: nth($two-color, $key)
   --fam-black: Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', sans-serif
   --fam-mono: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace
   --fam-system: system, system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif
+  --fam-emoji: 'Noto Emoji', sans-serif
 
 //-----------------------------------------------------------------------------
 

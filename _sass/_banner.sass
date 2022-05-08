@@ -1,18 +1,20 @@
 header[role="banner"]
  .logoblock
-  max-width: var(--width-page)
-  margin: 1em auto
+  margin: 0 auto
+  height: var(--shim-2x)
   display: flex
   flex-flow: row wrap
   align-items: center
   justify-content: space-between
   .text
-    display: flex
-    align-items: center
     h1
-      font-size: var(--hed-size)
+      margin-top: 3px
+      font-family: 'Source Sans 3', var(--fam-system)
+      font-size: var(--shim)
+      font-weight: 900
       line-height: 1
       letter-spacing: -0.125px
+      text-transform: uppercase
       a:link, a:visited
         color: #000
         text-decoration: none
@@ -24,10 +26,11 @@ header[role="banner"]
       line-height: 0
       a:link, a:visited
         text-decoration: none
+    &.left
+      order: -1
+    &.right
+      order: 1
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30rem)
-  header[role="banner"]
-   .logoblock
-      margin: var(--shim-n) auto

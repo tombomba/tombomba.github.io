@@ -1,42 +1,18 @@
 header[role="banner"]
- .logoblock
-  margin: 0 auto
-  height: var(--shim-2x)
+  max-width: var(--width-page)
+  margin: 1em auto 0 auto
   display: flex
   align-items: center
   justify-content: space-between
-  .text
-    margin-top: 6px
+  div.logo
+    margin-left: calc(var(--nudge) * -2)
     h1
-      height: var(--hed-size-md)
-      font-family: 'Source Sans 3', sans-serif
-      font-size: var(--hed-size-lg)
-      font-weight: 900
-      line-height: var(--hed-size-md)
-      text-transform: uppercase
+      font-family: var(--fam-emoji), sans-serif
+      font-size: var(--shim-2x)
+      line-height: 1
       a
         color: var(--color-logo)
+        text-shadow: 2px 2px var(--color-shock)
         text-decoration: none
-        text-shadow: -2px 2px var(--color-shock)
-      a:hover
-        text-decoration: underline
-  .image
-    p
-      font-size: 23px
-      line-height: 23px
-      a:link, a:visited
-        text-decoration: none
-    &.left
-      order: -1
-    &.right
-      order: 1
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
-  header[role="banner"]
-  .logoblock
-      h1
-        a
-          text-shadow: -3px 3px var(--color-shock)
+  div.hr
+    flex: 1

@@ -15,11 +15,10 @@ section
           height: var(--width)
           object-fit: cover
           object-position: 50% 50%
-      div
+      
+      h2
         margin-top: 1em
-        h1, h2, h3, h4, h5, h6, p
-          display: inline
-          font-size: 1em
+        font-size: 1em
         a
           font-weight: 400
 
@@ -35,10 +34,9 @@ section
         align-items: center
         justify-content: space-between
         figure
+          order: -1
+          margin-right: var(--shim-n)
           --width: var(--shim-3x)
-        div 
+        h2 
           flex: 1
           margin-top: 0
-          margin-left: var(--shim-n)
-          h1, h2, h3, h4, h5, h6, p
-            display: block

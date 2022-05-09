@@ -1,12 +1,4 @@
 <li>
-
-  <figure class="left">
-    <a href="{{ include.url | absolute_url }}"><img src="{{ include.image.file | default: 'bomtomba.jpg' | prepend: site.img }}" alt="{{ include.image.alt }}"></a>
-  </figure>
-
-  <div class="link">
-    <h2><a href="{{ include.url | absolute_url }}">{{ include.title | strip | smartify }}</a></h2>
-    {% if include.text %}<p>{{ include.text | strip_html | strip | smartify | normalize_whitespace }}</p>{% endif %}
-  </div>
-
+  <h2><a href="{{ include.url | absolute_url }}">{{ include.title | strip | smartify }}</a></h2>
+  <figure><a href="{{ include.url | absolute_url }}"><img src="{{ include.image.file | default: 'bomtomba.jpg' | prepend: site.img }}" alt="{{ include.image.alt }}"></a></figure>
 </li>

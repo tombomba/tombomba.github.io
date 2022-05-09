@@ -10,11 +10,11 @@ header[role="banner"]
     h1
       height: var(--hed-size-md)
       font-family: 'Source Sans 3', sans-serif
-      font-size: var(--hed-size-md)
+      font-size: var(--hed-size-lg)
       font-weight: 900
       line-height: var(--hed-size-md)
       text-transform: uppercase
-      a:link, a:visited
+      a
         color: var(--color-logo)
         text-decoration: none
         text-shadow: -2px 2px var(--color-shock)
@@ -30,3 +30,13 @@ header[role="banner"]
       order: -1
     &.right
       order: 1
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  header[role="banner"]
+  .logoblock
+      h1
+        a
+          text-shadow: -3px 3px var(--color-shock)

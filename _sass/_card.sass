@@ -2,7 +2,7 @@ section
   ul.card
     max-width: var(--width-page)
     margin: 0 auto
-    padding: var(--buffer) 0
+    padding: var(--shim-p) 0
     list-style-type: none
     li
       margin-top: var(--shim-p)
@@ -15,12 +15,12 @@ section
           height: var(--width)
           object-fit: cover
           object-position: 50% 50%
-      
-      h2
+      div
         margin-top: 1em
-        font-size: 1em
-        a
-          font-weight: 400
+        h2
+          font-size: 1em
+          a
+            font-weight: 400
 
 //-----------------------------------------------------------------------------
 
@@ -37,6 +37,6 @@ section
           order: -1
           margin-right: var(--shim-n)
           --width: var(--shim-3x)
-        h2 
+        div
           flex: 1
-          margin-top: 0
+          margin: 0

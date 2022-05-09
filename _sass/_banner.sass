@@ -1,18 +1,30 @@
 header[role="banner"]
-  max-width: var(--width-page)
-  margin: 1em auto 0 auto
-  display: flex
-  align-items: center
-  justify-content: space-between
   div.logo
-    margin-left: calc(var(--nudge) * -2)
+    margin: 1em auto
+    display: flex
+    align-items: center
+    justify-content: space-between
     h1
-      font-family: var(--fam-emoji), sans-serif
-      font-size: var(--shim-2x)
+      font-family: 'Oswald', sans-serif
+      font-size: var(--hed-size-lg)
+      font-weight: 700
       line-height: 1
+      text-transform: uppercase
+      a:link, a:visited
+        color: var(--color-logo)
+        text-decoration: none
+      a:hover
+        text-decoration: underline
+    p
+      font-family: 'Noto Emoji', sans-serif
+      font-size: var(--hed-size-lg)
+      line-height: 1
+      &.left
+        order: -1
+      &.right
+        order: 1
       a
         color: var(--color-logo)
-        text-shadow: 2px 2px var(--color-shock)
         text-decoration: none
   div.hr
     flex: 1

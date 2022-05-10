@@ -6,21 +6,26 @@ section
     list-style-type: none
     li
       margin-top: var(--shim-p)
+      display: flex
+      flex-flow: column
       &:first-of-type
         margin-top: 0
       figure
-        --width: var(--shim-4x)
+        order: -1
+        --width: 12em
         img
           width: var(--width)
           height: var(--width)
           object-fit: cover
           object-position: 50% 50%
       div
-        margin-top: 1em
+        margin-top: var(--nudge-2x)
         h2
           font-size: 1em
           a
             font-weight: 400
+        h2, p
+          display: inline
 
 //-----------------------------------------------------------------------------
 
@@ -30,7 +35,7 @@ section
     ul.card
       li
         margin-top: var(--shim-n)
-        display: flex
+        flex-flow: row wrap
         align-items: center
         justify-content: space-between
         figure
@@ -40,3 +45,5 @@ section
         div
           flex: 1
           margin: 0
+          h2, p
+            display: block

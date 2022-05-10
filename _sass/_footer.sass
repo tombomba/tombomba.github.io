@@ -1,38 +1,25 @@
 footer
-  ul
+  ul.nav
     margin: var(--shim) auto
-    display: flex
-    flex-flow: column
     align-items: center
     justify-content: center
-    list-style-type: none
-    li
-      font-size: 1em
-      color: var(--color-half)
-      &.copydate
-        order: 99
-        margin-top: 1em
+    li.copydate
+      order: 99
+      margin-top: 1em
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 30rem)
+@media screen and (min-width: 40rem)
 
   footer
-    ul
+    ul.nav
       margin: 1em auto var(--buffer) auto
       padding-top: 3px
       flex-flow: row wrap
-      align-items: center
-      justify-content: center
       li
-        font-size: var(--body-size-sm)
         line-height: var(--line-height-body)
-        color: var(--color-half)
-        &.homelink
-          order: -2
         &.copydate
           order: -1
           margin-top: 0
-        &:not(:last-of-type)::after
-          content: '-'
-          padding: 0.33em
+        &.shift
+          display: none

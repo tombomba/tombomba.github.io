@@ -14,13 +14,14 @@ body
   -ms-text-size-adjust: auto
   -webkit-text-size-adjust: auto
 
-  padding: 0 1em
-
 \::selection
   background-color: var(--color-shock)
 
 \::-moz-selection
   background-color: var(--color-shock)
+
+main[role="main"]
+  padding: 0 1em
 
 a
   text-decoration: underline
@@ -40,6 +41,16 @@ figure
   figcaption
     font-size: var(--body-size-sm)
 
+ul.nav
+  display: flex
+  flex-flow: column
+  align-items: center
+  justify-content: center
+  list-style-type: none
+  li
+    font-size: 1em
+    color: var(--color-half)
+
 .hr
   margin: 0 auto
   padding: 0
@@ -55,3 +66,23 @@ figure
     color: var(--color-half)
     a:link, a:visited
       color: var(--color-half)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  ul.nav
+    flex-flow: row wrap
+    li
+      font-size: var(--body-size-sm)
+      color: var(--color-half)
+      &:not(:last-of-type)::after
+        content: '-'
+        padding: 0.33em
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 48rem)
+
+  main[role="main"]
+    padding: 0

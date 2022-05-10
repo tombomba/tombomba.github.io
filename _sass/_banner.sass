@@ -1,13 +1,15 @@
 header[role="banner"]
-  div.logo
-    max-width: var(--width-page)
+  div.wrap
     margin: 1em auto
+    padding: 0 var(--nudge-2x) 0 1em
     display: flex
+    flex-flow: row wrap
     align-items: center
-    justify-content: space-between
+    justify-content: center
     h1
-      font-family: 'Oswald', sans-serif
-      font-size: var(--hed-size-lg)
+      flex: 1
+      font-family: 'Oswald', var(--fam-system)
+      font-size: var(--hed-size-md)
       font-weight: 700
       line-height: 1
       text-transform: uppercase
@@ -18,10 +20,21 @@ header[role="banner"]
       a:hover
         color: var(--color-shock)
         text-decoration: underline
+    ul.nav
+      margin-top: var(--nudge-2x)
+      flex: 1 1 30%
+      order: 1
+      li
+        line-height: var(--line-height-hed)
+      &.shift
+        display: none
     p
+      flex: 1 1 30%
+      order: 2
       font-family: 'Noto Emoji', sans-serif
-      font-size: var(--hed-size-lg)
+      font-size: var(--hed-size-md)
       line-height: 1
+      text-align: right
       a:link, a:visited
         color: var(--color-logo)
         transition: color .2s ease-in
@@ -31,3 +44,52 @@ header[role="banner"]
         text-decoration: none
   div.hr
     flex: 1
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 20rem)
+
+  header[role="banner"]
+    div.wrap
+      h1, p
+        font-size: var(--hed-size-lg)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 25rem)
+
+  header[role="banner"]
+    div.wrap
+      padding: 0 1em
+      flex-flow: row wrap
+      align-items: center
+      justify-content: space-between
+      h1, p
+        font-size: var(--hed-size-lg)
+      ul.nav
+        margin-top: 0
+        justify-content: flex-end
+  
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  header[role="banner"]
+    div.wrap
+      h1
+        order: 0
+        text-align: center
+      ul.nav.shift
+        display: flex
+        order: 1
+      p
+        order: -1
+        text-align: left
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 48rem)
+
+  header[role="banner"]
+    div.wrap
+      padding: 0 var(--shim) 0 var(--shim-n)

@@ -1,5 +1,6 @@
 header[role="banner"]
   div.logo
+    max-width: var(--width-page)
     margin: 1em auto
     display: flex
     align-items: center
@@ -21,10 +22,6 @@ header[role="banner"]
       font-family: 'Noto Emoji', sans-serif
       font-size: var(--hed-size-lg)
       line-height: 1
-      &.left
-        order: -1
-      &.right
-        order: 1
       a:link, a:visited
         color: var(--color-logo)
         transition: color .2s ease-in

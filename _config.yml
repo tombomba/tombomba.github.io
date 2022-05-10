@@ -2,8 +2,7 @@ title: "Bomtomba"
 description: "A media diary, a small collage, a dumb blog"
 domain: "www.mymoviepage.com"
 
-favicon: "✨"
-ico: ["✌️","💣"]
+emoji: "✌️"
 
 url: "https://www.mymoviepage.com"
 cdn: "https://www.mymoviepage.com/assets/"

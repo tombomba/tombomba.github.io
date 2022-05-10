@@ -9,7 +9,7 @@
       {% else %}
         {% assign xtext = x.description | truncate: 140 %}
       {% endif -%}
-      {% include _card.html title=x.title image=x.image text=xtext url=x.url is_home=include.is_home %}
+      {% include _card.html title=x.title image=x.image text=xtext url=x.url sizer=include.sizer is_home=include.is_home %}
     {% endfor -%}
   </ul>
 </section>

@@ -10,9 +10,9 @@ layout: default
   </article>
 
   {% if site.posts.first.id == page.id %}
-    {% include previously.html limit=3 %}
+    {% include previously.html limit=3 sizer=page.layout %}
   {% else -%}
-    {% include nextprev.html previous=page.previous next=page.next %}
+    {% include nextprev.html previous=page.previous next=page.next sizer=page.layout %}
   {% endif -%}
 
 </main>

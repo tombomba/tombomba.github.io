@@ -2,7 +2,6 @@ article
   figure.video
     max-width: var(--width-page-md)
     .vidmax
-      max-width: var(--video-max-width)
       .wrap
         position: relative
         display: block
@@ -17,3 +16,12 @@ article
         left: 0
         width: 100%
         height: 100%
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 28rem)
+
+  article 
+    figure.video
+      .vidmax
+        max-width: var(--video-max-width)

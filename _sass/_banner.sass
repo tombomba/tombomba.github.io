@@ -21,18 +21,19 @@ header[role="banner"]
         color: var(--color-shock)
         text-decoration: underline
     ul.nav
-      margin-top: var(--nudge-2x)
+      margin-top: 1.5px
       flex: 1 1 30%
       order: 1
       li
-        line-height: var(--line-height-hed)
+        line-height: 1
       &.shift
         display: none
     p
+      margin-top: 3px
       flex: 1 1 30%
       order: 2
       font-family: 'Noto Emoji', sans-serif
-      font-size: var(--hed-size-md)
+      font-size: var(--shim)
       line-height: 1
       text-align: right
       a:link, a:visited
@@ -51,7 +52,7 @@ header[role="banner"]
 
   header[role="banner"]
     div.wrap
-      h1, p
+      h1
         font-size: var(--hed-size-lg)
 
 //-----------------------------------------------------------------------------
@@ -60,15 +61,13 @@ header[role="banner"]
 
   header[role="banner"]
     div.wrap
-      padding: 0 1em
       flex-flow: row wrap
       align-items: center
       justify-content: space-between
-      h1, p
-        font-size: var(--hed-size-lg)
       ul.nav
-        margin-top: 0
         justify-content: flex-end
+      p
+        font-size: var(--hed-size-lg)
   
 //-----------------------------------------------------------------------------
 
@@ -76,6 +75,7 @@ header[role="banner"]
 
   header[role="banner"]
     div.wrap
+      padding: 0 var(--shim) 0 var(--shim-n)
       h1
         order: 0
         text-align: center
@@ -83,13 +83,6 @@ header[role="banner"]
         display: flex
         order: 1
       p
+        margin-top: 1.5px
         order: -1
         text-align: left
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 48rem)
-
-  header[role="banner"]
-    div.wrap
-      padding: 0 var(--shim) 0 var(--shim-n)

@@ -11,15 +11,16 @@ section
       &:first-of-type
         margin-top: 0
       figure
+        padding-top: var(--nudge)
         order: -1
-        --width: 12em
+        --width: 6em
         img
           width: var(--width)
           height: var(--width)
           object-fit: cover
           object-position: 50% 50%
       div
-        margin-top: var(--nudge-2x)
+        margin-top: 1em
         h2
           font-size: 1em
           a
@@ -29,21 +30,49 @@ section
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 30rem)
+@media screen and (min-width: 20rem)
 
   section
     ul.card
       li
         margin-top: var(--shim-n)
         flex-flow: row wrap
-        align-items: center
+        align-items: flex-start
         justify-content: space-between
         figure
           order: -1
-          margin-right: var(--shim-n)
-          --width: var(--shim-3x)
+          margin-right: var(--nudge-2x)
+          --width: var(--shim-2x)
         div
           flex: 1
           margin: 0
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 25rem)
+
+  section
+    ul.card
+      li
+        figure
+          margin-right: 1em
+          --width: var(--shim-3x)
+        div
           h2, p
             display: block
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  section
+    ul.card
+      li
+        align-items: center
+        figure
+          margin-right: var(--shim-n)
+          padding-top: 0
+          &.micro
+            --width: var(--shim-3x)
+          &.post
+            --width: var(--shim-4x)

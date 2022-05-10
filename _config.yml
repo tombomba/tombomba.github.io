@@ -2,7 +2,10 @@ title: "Dead on Main"
 description: "A media diary, a small collage, a dumb blog"
 domain: "www.mymoviepage.com"
 
-emoji: "✨"
+favicon: "✨"
+banicon: 
+  - "✌️"
+  - "💣"
 
 url: "https://www.mymoviepage.com"
 cdn: "https://www.mymoviepage.com/assets/"

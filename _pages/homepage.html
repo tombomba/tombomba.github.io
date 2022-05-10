@@ -10,21 +10,21 @@ permalink: /index.html
 
 <main role="main">
 
-    {% for p in site.posts %}
+  {% for p in site.posts %}
 
-      {% assign current = p.date | date: '%s' %}
-      {% assign range = today | times: 1 |  minus: current %}
+    {% assign current = p.date | date: '%s' %}
+    {% assign range = today | times: 1 |  minus: current -%}
 
-      {% if scope > range %}
-        {% unless forloop.first %}<div class="hr buffer"></div>{% endunless -%}
-        <article class="{{ p.layout }} home">
-          {% include detail-{{ p.layout }}.html page=p content=p.content is_home=true %}
-        </article>
+    {% if scope > range %}
+    {% unless forloop.first %}<div class="hr buffer"></div>{% endunless %}
+    <article class="{{ p.layout }} home">
+      {% include detail-{{ p.layout }}.html page=p content=p.content is_home=true %}
+    </article>
 
-      {% else -%}
-        {% break %}
-      {% endif -%}
-  
+    {% else %}
+      {% break %}
+    {% endif -%}
+
   {% endfor -%}
 
 </main>

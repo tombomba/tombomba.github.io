@@ -1,19 +1,17 @@
-title: "Dead on Main"
+title: "Bomtomba"
 description: "A media diary, a small collage, a dumb blog"
 domain: "www.mymoviepage.com"
 
 favicon: "✨"
-banicon: 
-  - "✌️"
-  - "💣"
+ico: ["✌️","💣"]
 
 url: "https://www.mymoviepage.com"
 cdn: "https://www.mymoviepage.com/assets/"
 img: "https://www.mymoviepage.com/assets/img/"
 css: "https://www.mymoviepage.com/assets/css/"
 
-author: Tom Bomba
-socials: bomtomba
+author: "Tom Bomba"
+socials: "bomtomba"
 
 future: false
 theme: null

@@ -3,13 +3,13 @@ layout: default
 title: "404!"
 description: "404!"
 label: "error"
-emoji: 💥
+emoji: "💥"
 is_404: true
 permalink: /404.html
 ---
 <main role="main">
   <article class="error">
-    <p>💥💥💥</p>
+    <h1 aria-label="{{ page.title }}">{{ page.emoji }}</h1>
     <p><strong>Page not found!</strong></p>
     <p><a href="{{ site.url }}">Home</a></p>
   </article>

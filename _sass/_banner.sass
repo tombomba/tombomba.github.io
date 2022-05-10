@@ -12,8 +12,10 @@ header[role="banner"]
       text-transform: uppercase
       a:link, a:visited
         color: var(--color-logo)
+        transition: color .2s ease-in
         text-decoration: none
       a:hover
+        color: var(--color-shock)
         text-decoration: underline
     p
       font-family: 'Noto Emoji', sans-serif
@@ -23,8 +25,12 @@ header[role="banner"]
         order: -1
       &.right
         order: 1
-      a
+      a:link, a:visited
         color: var(--color-logo)
+        transition: color .2s ease-in
+        text-decoration: none
+      a:hover
+        color: var(--color-shock)
         text-decoration: none
   div.hr
     flex: 1

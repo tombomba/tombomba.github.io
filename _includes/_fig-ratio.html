@@ -1,4 +1,4 @@
-{% assign img_r = include.image %}
+{% assign img_r = include.image -%}
 {% assign myfig = img_r.ratio | split: ' ' -%}
 {% assign mw = myfig[0] | default: 640 | strip | times: 1.0 -%}
 {% assign mh = myfig[1] | default: 480 | strip | times: 1.0 -%}
@@ -7,8 +7,8 @@
   {% assign percentage = mh | divided_by: mw | times: 100 | round: 2 %}
 {% endif -%}
 
-{% if mw < 800 %}
-  {% assign vidmax = mw | divided_by: 800 | times: 100 | round: 2 %}
+{% if mw < 732 %}
+  {% assign vidmax = mw | divided_by: 732 | times: 100 | round: 2 %}
 {% endif %}
 
 <figure class="video">

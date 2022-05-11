@@ -5,7 +5,7 @@
   <ul class="nav">
     <li class="copydate">Copyright &copy; {{ site.author }}</li>
     {% unless page.is_archive %}
-      <li class="shift"><a href="{{ 'archive' | absolute_url }}">Archive</a></li>
+      <li class="shift"><a href="{{ 'posts' | absolute_url }}">Archive</a></li>
     {% endunless -%}
     {% unless page.is_about %}
       <li class="shift"><a href="{{ 'about' | absolute_url }}">About</a></li>

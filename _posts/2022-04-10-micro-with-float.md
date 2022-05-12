@@ -1,6 +1,7 @@
 ---
 title: "A micro post with a float!"
 description: "Nunc accumsan faucibus eleifend. Sed a nibh enim."
+emoji: "🦸"
 image:
   file: thor-love-and-thunder.jpg
   style: square left jumbo flat

@@ -2,8 +2,8 @@
 title: "A micro post with a float!"
 description: "Nunc accumsan faucibus eleifend. Sed a nibh enim."
 emoji: "🦸"
-image:
-  file: thor-love-and-thunder.jpg
+media:
+  image: thor-love-and-thunder.jpg
   style: square left jumbo flat
   alt: "Thor Love and Thunder, by golly!"
 ---

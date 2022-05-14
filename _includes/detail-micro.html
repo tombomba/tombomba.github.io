@@ -2,10 +2,8 @@
 {% assign copy = include.content | strip | normalize_whitespace %}
 {% include _puncf.html title=p.title url=p.url is_home=include.is_home %}
 
-{% if p.image.ratio %}
-  {% include _fig-ratio.html image=p.image is_home=include.is_home %}
-{% elsif p.image.style %}
-  {% include _fig-style.html image=p.image is_home=include.is_home %}
+{% if p.media %}
+  {% include _figure.html media=p.media is_home=include.is_home %}
 {% endif -%}
 
 {% capture datef %}<span class="daystamp">&nbsp;(<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date: '%d %b' }}</time>)</span>{% endcapture -%}

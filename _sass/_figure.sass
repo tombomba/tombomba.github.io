@@ -1,5 +1,23 @@
 article
 
+  figure.wide
+    max-width: var(--width-page-md)
+    .wrap
+      position: relative
+      display: block
+      margin: 0 auto
+      width: 100%
+      height: 0
+      overflow: hidden
+      padding-top: var(--percent)
+      background-color: var(--color-back)
+    .fixed
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+
   figure.float
     margin-top: var(--nudge)
     margin-bottom: var(--shim)
@@ -46,6 +64,10 @@ article
 @media screen and (min-width: 30rem)
 
   article
+
+    figure.wide
+      .vidmax
+        max-width: var(--video-max-width)
 
     figure.float
       img
@@ -106,4 +128,4 @@ article
 
     figure.float.jumbo
       img
-        --width: 14em
+        --width: 15em

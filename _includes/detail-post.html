@@ -1,10 +1,10 @@
 {% assign p = include.page %}
 {% assign copy = include.content | strip | normalize_whitespace %}
-{% if p.image %}{% assign hedsize='sm' %}{% else %}{% assign hedsize='lg' %}{% endif %}
+{% if p.media %}{% assign hedsize='sm' %}{% else %}{% assign hedsize='lg' %}{% endif %}
 {% include _widont.html title=p.title url=p.url is_home=include.is_home %}
 
-{% if p.image.ratio %}
-  {% include _fig-ratio.html image=p.image is_home=include.is_home %}
+{% if p.media %}
+  {% include _figure.html media=p.media is_home=include.is_home %}
 {% endif -%}
 
 <header>

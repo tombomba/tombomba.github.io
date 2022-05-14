@@ -41,7 +41,7 @@
   {% assign figratio = myfig[0] | default: 'square' -%}
   {% assign figfloat = myfig[1] | default: 'right' -%}
   {% if myfig.size > 2 %}
-    {% assign extras = myfig | shift | shift | join: ' ' %}
+    {% assign extras = myfig | shift | shift | join: ' ' | strip | normalize_whitespace %}
   {% endif -%}
 
   <figure class="float {{ figfloat }} {{ extras | default: 'nofx' }}"><img src="{{ include.media.image | prepend: site.img }}" class="ratio--{{ figratio }}" alt="{{ include.media.alt }}"></figure>

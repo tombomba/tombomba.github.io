@@ -1,0 +1,26 @@
+{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%m %Y'" -%}
+{% assign curr_year = site.posts.first.date | date: '%Y' %}
+
+<section class="datelist">
+  <ul>
+
+{% for group in posts_by_year reversed %}
+
+  {% assign d = group.name | split: ' ' -%}
+  {% assign month = d[0] -%}
+  {% assign year = d[1] -%}
+  {% assign short_year = year | slice: -2, 2 %}
+  {% assign mo = year | append: '-' | append: month | append: '-01' | date: '%b' -%}
+
+  {% if curr_year != year %}{% continue %}{% endif -%}
+
+  {% if year != prev_yr %}<li class="year"><a href="{{ short_year | absolute_url }}">{{ year }}</a></li>{% endif %}
+  <li><a href="{{ short_year | append: '/' | append: month | absolute_url }}">{{ mo }}</a></li>
+
+  {% assign prev_yr = year -%}
+
+{% endfor -%}
+
+    <li><a href="{{ 'archive' | absolute_url }}" aria-label="Full archive">&hellip;</a></li>
+  </ul>
+</section>

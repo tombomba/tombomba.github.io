@@ -1,0 +1,45 @@
+---
+layout: default
+---
+{% include banner.html %}
+
+{% assign raw = page.permalink | split: '/' | shift %}
+{% assign raw_yr = raw[0] %}
+{% assign raw_mo = raw[1] %}
+{% assign full_yr = raw_yr | prepend: '20' %}
+
+{% if raw_mo %}
+  {% assign is_month_index = true %}
+  {% assign target_mo = full_yr | append: '-' | append: raw_mo | append: '-' | append: '01' | date: '%b' %}
+{% else %}
+  {% assign is_year_index = true %}
+{% endif %}
+{% assign target_yr = full_yr %}
+
+{% assign posts_by_year_month = site.posts | group_by_exp: "post", "post.date | date:'%b %Y'" %}
+
+<main role="main">
+
+{% for group in posts_by_year_month %}
+    
+  {% if is_month_index and group.name contains target_yr and group.name contains target_mo %}
+    {% include _dirlist.html name=group.name items=group.items %}
+    {% assign print_success = true %}
+  {% endif %}
+
+  {% if is_year_index and group.name contains target_yr %}
+    {% include _dirlist.html name=group.name items=group.items %}
+    {% assign print_success = true %}
+  {% endif %}
+
+{% endfor -%}
+
+  {% unless print_success %}
+  <article class="future">
+    <p><strong>No listings found...yet!</strong></p>
+  </article>
+  {% endunless -%}
+
+</main>
+
+{% include footer.html %}

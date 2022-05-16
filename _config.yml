@@ -53,7 +53,6 @@ defaults:
       layout: archives
       label: archive
       is_archive: true
-      
 
 markdown: kramdown
 kramdown:

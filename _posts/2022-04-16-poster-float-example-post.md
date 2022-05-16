@@ -1,5 +1,5 @@
 ---
-layout: micro
+layout: float
 title: "Nullam ex nulla, aliquet ut nisi vitae, efficitur scelerisque lacus"
 subj: "A movie title (2022)"
 description: >

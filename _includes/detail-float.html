@@ -1,0 +1,18 @@
+{% assign p = include.page %}
+{% assign copy = include.content | strip | normalize_whitespace %}
+{% include _widont.html title=p.title url=p.url is_home=include.is_home %}
+
+{% if p.media %}
+  {% include _figure.html media=p.media is_home=include.is_home %}
+{% endif -%}
+
+{% capture datef %}<span class="daystamp"> &mdash;&nbsp;<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time></span>{% endcapture -%}
+{% assign copysize = copy | size | minus: 4 -%}
+{% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
+
+{% capture hedbox %}<div class="hed"><h1>{{ titlestring }}</h1><p>{% endcapture -%}
+{% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
+
+<div class="copy"><!-- {{ include.content | number_of_words }}w -->
+  {{ copy }}
+</div>

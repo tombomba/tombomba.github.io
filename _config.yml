@@ -34,7 +34,7 @@ collections:
 defaults:
   -
     scope:
-      path: ""
+      path: ""  
       type: posts
     values:
       layout: micro
@@ -50,8 +50,10 @@ defaults:
       path: "_archives"
       type: "archives"
     values:
+      layout: archives
+      label: archive
       is_archive: true
-      is_page: true
+      
 
 markdown: kramdown
 kramdown:

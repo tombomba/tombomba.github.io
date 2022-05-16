@@ -1,8 +1,8 @@
 {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%m %Y'" -%}
 {% assign curr_year = site.posts.first.date | date: '%Y' %}
 
-<section class="datelist">
-  <ul>
+<section>
+  <ul class="datelist">
 
 {% for group in posts_by_year reversed %}
 

@@ -14,13 +14,13 @@
 
   {% if curr_year != year %}{% continue %}{% endif -%}
 
-  {% if year != prev_yr %}<li class="year"><a href="{{ short_year | absolute_url }}">[ {{ year }} ]</a></li>{% endif %}
+  {% if year != prev_yr %}<li class="year"><a href="{{ short_year | absolute_url }}">{{ year }}</a></li>{% endif %}
   <li><a href="{{ short_year | append: '/' | append: month | absolute_url }}">{{ mo }}</a></li>
 
   {% assign prev_yr = year -%}
 
 {% endfor -%}
 
-    <li><a href="{{ 'archive' | absolute_url }}" aria-label="Full archive">&hellip;</a></li>
+    <li><a href="{{ 'archive' | absolute_url }}" aria-label="Full archive">[&hellip;]</a></li>
   </ul>
 </section>

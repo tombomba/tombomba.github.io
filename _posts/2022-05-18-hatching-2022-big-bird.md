@@ -2,7 +2,7 @@
 layout: float
 title: "Big bird"
 subj: "Hatching (2022)"
-description: "A look at a Finnish family horror with a hard psychological bent. It's good, maybe even great." 
+description: "A look at a Finnish family horror with a hard psychological edge. It's good, maybe even great." 
 media: 
   image: hatching-2022-poster.jpg
   style: poster right jumbo pull

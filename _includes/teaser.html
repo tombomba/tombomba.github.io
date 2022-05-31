@@ -1,10 +1,11 @@
+{% assign p = include.page %}
 {% assign copy = include.excerpt | strip_html | normalize_whitespace | strip %}
 
 {% if p.media %}
-  {% include _figure.html media=p.media is_home=include.is_home %}
+  {% include _figure.html media=p.media is_home=true %}
 {% endif -%}
 
-{% capture datef %}<span class="daystamp">&nbsp;(<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date: '%d %b' }}</time>)</span>{% endcapture -%}
+{% capture datef %}<span class="daystamp">&nbsp;(<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished"><a href="{{ p.url | absolute_url }}">{{ p.date | date: '%d %b' }}</a></time>)</span>{% endcapture -%}
 
 <div class="copy"><!-- teaser: {{ include.excerpt | number_of_words }}w -->
   {{ copy | append: datef }}

@@ -18,7 +18,7 @@ permalink: /index.html
     {% if scope > range %}
     {% unless forloop.first %}<div class="hr buffer"></div>{% endunless %}
     <article class="{{ p.layout }} home">
-      {% include detail-{{ p.layout }}.html page=p content=p.content is_home=true %}
+      {% include teaser.html excerpt=p.excerpt %}
     </article>
 
     {% else %}

@@ -3,7 +3,7 @@ title: "The foo"
 media: 
   image: john-ford-with-a-camera.jpg
   ratio: 480 300
-  alt: "This is an alt caption."
+  caption: "This is a caption."
 tweet: "This is the short form description aka tweet field"
 ---
 

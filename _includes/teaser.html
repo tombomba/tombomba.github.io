@@ -5,9 +5,6 @@
   {% include _figure.html media=p.media is_home=true %}
 {% endif -%}
 
-{% capture datef %}<span class="daystamp">&nbsp;(<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished"><a href="{{ p.url | absolute_url }}">{{ p.date | date: '%d %b' }}</a></time>)</span>{% endcapture -%}
-{% assign copy = copy | append: datef -%}
-
 {% if p.hedlink %}{% assign grabsize = p.hedlink %}{% else %}{% assign grabsize = 3 %}{% endif %}
 {% assign oldphrase = copy | truncatewords: grabsize, '' %}
 {% capture newlink %}<a href="{{ p.url | absolute_url }}" class="hedlink">{{ oldphrase }}</a>{% endcapture -%}

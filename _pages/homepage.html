@@ -5,25 +5,17 @@ is_home: true
 permalink: /index.html
 ---
 {% assign scope = 2629743 -%}
-{% assign today = site.posts.first.date | date: '%s' -%}
+{% assign today = site.time | date: '%s' -%}
 {% include banner.html %}
 
 <main role="main">
 
-  {% for p in site.posts %}
+  {% for p in site.posts limit: 10 %}
 
-    {% assign current = p.date | date: '%s' %}
-    {% assign range = today | times: 1 |  minus: current -%}
-
-    {% if scope > range %}
     {% unless forloop.first %}<div class="hr buffer"></div>{% endunless %}
     <article class="teaser home">
       {% include teaser.html page=p excerpt=p.excerpt %}
     </article>
-
-    {% else %}
-      {% break %}
-    {% endif -%}
 
   {% endfor -%}
 

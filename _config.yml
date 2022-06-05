@@ -67,7 +67,6 @@ plugins:
   - jekyll-feed
 
 exclude:
-  - _drafts
   - Gemfile
   - Gemfile.lock
   - .gitignore

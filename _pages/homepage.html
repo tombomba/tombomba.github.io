@@ -13,8 +13,8 @@ permalink: /index.html
   {% for p in site.posts limit: 10 %}
 
     {% unless forloop.first %}<div class="hr buffer"></div>{% endunless %}
-    <article class="teaser home">
-      {% include teaser.html page=p excerpt=p.excerpt %}
+    <article class="{{ p.layout }} home">
+      {% include detail-{{ p.layout  }}.html page=p content=p.content is_home=true %}
     </article>
 
   {% endfor -%}

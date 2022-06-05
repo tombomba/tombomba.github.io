@@ -44,7 +44,7 @@
     {% assign extras = myfig | shift | shift | join: ' ' | strip | normalize_whitespace %}
   {% endif -%}
 
-  <figure class="float {{ figfloat }} {% if include.is_home %}teaser{% elsif extras %}{{ extras }}{% else %}nofx{% endif %}"><img src="{{ include.media.image | prepend: site.img }}" class="ratio--{% if include.is_home %}square{% else %}{{ figratio }}{% endif %}" alt="{{ include.media.alt }}"></figure>
+  <figure class="float {{ figfloat }} {{ extras | default: 'nofx' }}"><img src="{{ include.media.image | prepend: site.img }}" class="ratio--{{ figratio }}" alt="{{ include.media.alt }}"></figure>
 
   {% assign myfig = '' -%}
   {% assign styles = '' -%}

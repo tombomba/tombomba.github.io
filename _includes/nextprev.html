@@ -1,13 +1,11 @@
 <section class="recents">
   <div class="hr"></div>
-  <ul class="card small">
+  <ul class="card">
     {% if include.next %}
-    {% assign nextext = include.next.description | truncate: 120 %}
-    {% include _card.html title=include.next.title media=include.next.media text=nextext url=include.next.url sizer=include.sizer %}
-    {% endif %}
-    {% if include.previous %}
-    {% assign prevtext = include.previous.description | truncate: 120 %}
-    {% include _card.html title=include.previous.title media=include.previous.media text=prevtext url=include.previous.url sizer=include.sizer %}
+      {% include _card.html title=include.next.title media=include.next.media text=include.next.tweet url=include.next.url %}
+    {% endif -%}
+      {% if include.previous %}
+    {% include _card.html title=include.previous.title media=include.previous.media text=include.previous.tweet url=include.previous.url %}
     {% endif -%}
   </ul>
 </section>

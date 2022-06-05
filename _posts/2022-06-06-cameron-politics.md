@@ -1,9 +1,11 @@
 ---
+layout: post
 title: "Cameron, T2, Avatar, twitter bullshit etc"
 media: 
   image: terminator-2-judgement-day-1991.jpg
   ratio: 800 332
   alt: "Robert Patrick as the T-100 in Terminator 2"
+date: 2022-06-06 12:34:00
 ---
 
 The quick brown fox jumps.

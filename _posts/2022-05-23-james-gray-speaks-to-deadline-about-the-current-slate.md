@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "James Gray, the current slate, and the persistent myth of cinema"
-tweet: "I dunno. He's not wrong, but he's still wrong."
-hedlink: 8
+tweet: "I dunno. Gray's not wrong, but he's still wrong."
+date: 2022-05-23 09:34
 ---
 In a [short video](https://deadline.com/video/armageddon-time-james-gray-cannes-film-festival-box-office-streaming/), director James Gray covers box office and streaming content, festivals and awards, and loosely describes why, to paraphrase, "studios should be able to lose money on art specialty divisions." Gray is a major filmmaker who just debuted his latest at an international festival. He is smart and articulate here, and makes good sense. I am writing this in a small apartment while still in my pajamas. I'm in no position to tell James Gray what's what. And yet...he's only ["correct, as always"](https://twitter.com/SeanFennessey/status/1528526055916466176) under the narrowest of terms and the strictest of definitions. I find the viewpoint weirdly insular, another reflection of a twitchy and defensive film culture.<!--more-->
 

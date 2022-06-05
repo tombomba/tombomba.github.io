@@ -14,9 +14,8 @@ author: "Tom Bomba"
 socials: "bomtomba"
 
 future: false
+show_drafts: false
 theme: null
-
-# excerpt_separator: <!--more-->
 
 permalink: /:short_year/:month/:title:output_ext
 timezone: America/Los_Angeles

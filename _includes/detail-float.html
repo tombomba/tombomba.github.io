@@ -1,6 +1,6 @@
-{% assign p = include.page %}
-{% assign copy = include.content | strip | normalize_whitespace %}
-{% include _widont.html title=p.title url=p.url is_home=include.is_home %}
+{% assign p = include.page -%}
+{% assign copy = include.content | strip | normalize_whitespace -%}
+{% include _widont.html title=p.title url=p.url is_home=include.is_home -%}
 
 {% if p.media %}
   {% include _figure.html media=p.media is_home=include.is_home %}

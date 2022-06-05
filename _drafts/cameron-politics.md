@@ -2,6 +2,8 @@
 title: "Cameron, T2, Avatar, twitter bullshit etc"
 ---
 
+The quick brown fox jumps.
+
 > That he made his villain an icon of the LAPD before the Rodney King tape was released, and then pushed it even harder in his script for Strange Days… What happened to blockbuster movies saying fuck the police as hard as James Cameron?
 
 https://twitter.com/somebadideas/status/1532899847048683520

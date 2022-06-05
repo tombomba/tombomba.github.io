@@ -3,7 +3,7 @@ layout: default
 ---
 {% include banner.html %}
 
-<main role="main"><!-- {{ page.content | number_of_words }}w -->
+<main role="main"><!-- {{ page.content | strip | normalize_whitespace | number_of_words }}w -->
 
   <article class="{{ page.label | default: page.layout }}">
     {% include detail-post.html page=page content=content %}

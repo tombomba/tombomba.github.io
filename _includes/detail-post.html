@@ -9,7 +9,7 @@
 
 <header>
   <h1 class="{{ hedsize }}">{{ titlestring }}</h1><!-- {{ p.title.size }}c -->
-  <div class="byline {% if p.title.size > 48 %}fat{% else %}thin{% endif %}">
+  <div class="byline {% if p.title.size > 47 %}fat{% else %}thin{% endif %}">
     <p><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time></p>
     <p>{{ site.author }}</p>
   </div>

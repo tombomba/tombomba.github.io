@@ -6,7 +6,7 @@
   {% include _figure.html media=p.media is_home=include.is_home %}
 {% endif -%}
 
-{% capture datef %}<span class="daystamp"> &mdash;&nbsp;<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time></span>{% endcapture -%}
+{% capture datef %}<span class="daystamp"> &mdash;&nbsp;{{ p.author | default: site.author }}, <time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time></span>{% endcapture -%}
 {% assign copysize = copy | size | minus: 4 -%}
 {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
 

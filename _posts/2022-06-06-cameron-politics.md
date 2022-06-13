@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Cameron, T2, Avatar, twitter bullshit etc"
+title: "Blockbuster politics and Cameron's cops"
 media: 
   image: terminator-2-judgement-day-1991.jpg
   ratio: 800 332
@@ -8,11 +8,14 @@ media:
 date: 2022-06-06 12:34:00
 ---
 
-The quick brown fox jumps.
+James Cameron's [old quote](https://www.snopes.com/fact-check/terminator-2-commentary-policing/) is making the rounds...[again](https://twitter.com/ashdabbath/status/1532839808896094208):
+
+> The 'Terminator' films are not really about the human race getting killed of by future machines. They're about us losing touch with our own humanity and becoming machines, which allows us to kill and brutalize each other. Cops think all non-cops as less than they are, stupid, weak, and evil. They dehumanize the people they are sworn to protect and desensitize themselves in order to do that job.
+
+Aaron Stewart-Ahn [wonders](https://twitter.com/somebadideas/status/1532899847048683520): 
 
 > That he made his villain an icon of the LAPD before the Rodney King tape was released, and then pushed it even harder in his script for Strange Days… What happened to blockbuster movies saying fuck the police as hard as James Cameron?
 
-https://twitter.com/somebadideas/status/1532899847048683520
 
 I mean ... 9/11 happened
 

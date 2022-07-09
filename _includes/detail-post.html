@@ -1,19 +1,18 @@
 {% assign p = include.page %}
 {% assign copy = include.content | strip | normalize_whitespace %}
-{% if p.media %}{% assign hedsize='sm' %}{% else %}{% assign hedsize='lg' %}{% endif %}
 {% include _widont.html title=p.title url=p.url is_home=include.is_home %}
+
+<header>
+  <h1>{{ titlestring }}</h1><!-- {{ p.title.size }}c -->
+  <div class="byline {% if p.title.size > 47 %}fat{% else %}thin{% endif %}">
+    <p>{{ site.author }}</p>
+    <p><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time></p>
+  </div>
+</header>
 
 {% if p.media %}
   {% include _figure.html media=p.media is_home=include.is_home %}
 {% endif -%}
-
-<header>
-  <h1 class="{{ hedsize }}">{{ titlestring }}</h1><!-- {{ p.title.size }}c -->
-  <div class="byline {% if p.title.size > 47 %}fat{% else %}thin{% endif %}">
-    <p><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time></p>
-    <p>{{ site.author }}</p>
-  </div>
-</header>
 
 <div class="copy"><!-- {{ include.content | number_of_words }}w -->
   {{ copy }}

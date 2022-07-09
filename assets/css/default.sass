@@ -8,11 +8,8 @@
 article.post
   header
     h1
+      font-size: var(--hed-size)
       line-height: var(--line-height-hed)
-      &.lg
-        font-size: var(--hed-size-md)
-      &.sm
-        font-size: var(--hed-size-md)
     .byline
       margin-top: 1em
       p
@@ -21,9 +18,9 @@ article.post
         font-size: var(--body-size-sm)
         color: var(--color-half)
         &:nth-of-type(2)::before
-          content: '\0020\2022\0020'
+          content: '\0020\/\0020'
   figure
-    margin-bottom: var(--shim)
+    margin: var(--shim-n) 0 var(--shim-p) 0
 
 article.micro
   .hed

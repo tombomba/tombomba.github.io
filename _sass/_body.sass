@@ -53,6 +53,17 @@ ul.nav
     font-size: 1em
     color: var(--color-half)
 
+.datelist
+  margin: var(--shim-p) auto
+  ul.datelist
+    margin-top: 0
+    display: flex
+    flex-flow: row wrap
+    align-items: center
+    justify-content: center
+    list-style-type: none
+    gap: var(--shim-n) var(--nudge-2x)
+
 .hr
   margin: 0 auto
   padding: 0
@@ -81,8 +92,8 @@ ul.nav
       font-size: var(--body-size-sm)
       color: var(--color-half)
       &:not(:last-of-type)::after
-        content: '-'
-        padding: 0.33em
+        content: '\2022'
+        padding: 0.4em
 
 //-----------------------------------------------------------------------------
 

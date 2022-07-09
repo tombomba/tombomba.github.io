@@ -1,5 +1,5 @@
 ---
-layout: float
+layout: micro
 title: "Big bird"
 subj: "Hatching (2022)"
 tweet: "A look at a Finnish family horror with a hard psychological edge." 

@@ -2,8 +2,8 @@
 layout: post
 title: "Blockbuster politics and Cameron's cops"
 media: 
-  image: terminator-2-judgement-day-1991.jpg
-  ratio: 800 332
+  image: terminator-test.jpg
+  ratio: 640 345
   alt: "Robert Patrick as the T-100 in Terminator 2"
 date: 2022-06-06 12:34:00
 ---

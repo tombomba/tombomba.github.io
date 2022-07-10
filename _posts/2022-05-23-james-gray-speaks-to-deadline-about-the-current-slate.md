@@ -1,6 +1,7 @@
 ---
 layout: micro
-title: "James Gray, the current slate, and the persistent myth of cinema"
+title: >
+  "Theatrical is essential," says James Gray
 tweet: "I dunno. Gray's not wrong, but he's still wrong."
 date: 2022-05-23 09:34
 ---

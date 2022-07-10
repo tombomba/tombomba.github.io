@@ -9,11 +9,10 @@ layout: default
     {% include detail-post.html page=page content=content %}
   </article>
 
-  {% if site.posts.first.id == page.id %}
-    {% include previously.html limit=3 %}
-  {% else -%}
-    {% include nextprev.html previous=page.previous next=page.next %}
-  {% endif -%}
+  <div class="hr"></div>
+  <section class="datelist">
+    {% include _datelist.html %}
+  </section>
 
 </main>
 

@@ -9,7 +9,9 @@ layout: default
     {% include detail-post.html page=page content=content %}
   </article>
 
+  {% if page.previous or page.next %}
   {% include nextprev.html next=page.next previous=page.previous %}
+  {% endif -%}
 
 </main>
 

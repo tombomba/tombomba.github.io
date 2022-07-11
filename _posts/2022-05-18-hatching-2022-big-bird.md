@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pahanhoutoja (2022)"
-tweet: "A look at a Finnish family horror with a hard psychological edge."
+excerpt: "A look at a Finnish family horror with a hard psychological edge."
 emoji: "💀"
 media: 
   image: hatching-2022-poster.jpg

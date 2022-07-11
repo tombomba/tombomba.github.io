@@ -1,13 +1,7 @@
-{% if include.media.image %}
-  {% assign keyart = include.media.image %}
-{% elsif include.media.fbog -%}
-  {% assign keyart = include.media.fbog %}
-{% endif -%}
-
 <li>
   <div>
     <h2><a href="{{ include.url | absolute_url }}">{{ include.title | strip | smartify }}</a></h2>
-    <p>{{ include.text | truncate: 140 | strip | strip_html | smartify }}</p>
+    <p>{{ include.excerpt | truncatewords: 20 | strip | strip_html | smartify }}</p>
   </div>
-  <figure class="{{ include.sizer | default: 'sm' }}"><a href="{{ include.url | absolute_url }}"><img src="{{ keyart | default: 'bomtomba.jpg' | prepend: site.img }}" alt="{{ include.media.alt }}"></a></figure>
+  <figure class="{{ include.sizer | default: 'sm' }}"><a href="{{ include.url | absolute_url }}"><img src="{{ include.media.image | default: 'bomtomba.jpg' | prepend: site.img }}" alt="{{ include.media.alt }}"></a></figure>
 </li>

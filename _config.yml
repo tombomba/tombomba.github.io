@@ -50,6 +50,7 @@ defaults:
       type: "archives"
     values:
       layout: archives
+      excerpt: "A short list of previous articles."
       label: archive
       is_archive: true
 

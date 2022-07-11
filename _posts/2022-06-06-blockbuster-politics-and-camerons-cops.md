@@ -8,7 +8,7 @@ media:
   alt: "Robert Patrick in Terminator 2"
 date: 2022-06-06 12:34:00
 ---
-Aaron Stewart-Ahn [gushes](https://twitter.com/somebadideas/status/1532899847048683520): "That he made his villain an icon of the L.A.P.D before the Rodney King tape was released, and then pushed it even harder in his script for Strange Days...What happened to blockbuster movies saying [fuck the police](https://www.snopes.com/fact-check/terminator-2-commentary-policing/) as hard as James Cameron?"
+Aaron Stewart-Ahn [gushes](https://twitter.com/somebadideas/status/1532899847048683520): "That he made his villain an icon of the L.A.P.D. before the Rodney King tape was released, and then pushed it even harder in his script for Strange Days...What happened to blockbuster movies saying [fuck the police](https://www.snopes.com/fact-check/terminator-2-commentary-policing/) as hard as James Cameron?"
 
 Stewart-Ahn can't seem to recall a time before September, 2001. When the country leaned right, but not hard right. When our system was ugly, but not this ugly. He doesn't remember, or never knew, what happened in Los Angeles when Cameron was making his movies.
 

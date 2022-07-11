@@ -2,10 +2,10 @@
   <div class="hr"></div>
   <ul class="card">
     {% if include.next %}
-      {% include _card.html title=include.next.title media=include.next.media text=include.next.tweet url=include.next.url %}
+      {% include _card.html title=include.next.title media=include.next.media excerpt=include.next.excerpt url=include.next.url %}
     {% endif -%}
       {% if include.previous %}
-    {% include _card.html title=include.previous.title media=include.previous.media text=include.previous.tweet url=include.previous.url %}
+    {% include _card.html title=include.previous.title media=include.previous.media excerpt=include.previous.excerpt url=include.previous.url %}
     {% endif -%}
   </ul>
 </section>

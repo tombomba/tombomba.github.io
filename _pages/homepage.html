@@ -10,17 +10,15 @@ permalink: /index.html
 
 <main role="main">
 
-  {% for p in site.posts limit: 20 %}
-  <article class="home">
-    <div>
-      <p>{{ p.tweet | default: p.excerpt }}</p>
-    </div>
-   <img src="{{ p.media.image | default: 'bomtomba.jpg' | prepend: site.img }}" alt="{{ p.media.alt }}">
+  {% assign p=site.posts.first %}
+  <article class="post">
+    {% include detail-{{ p.layout }}.html page=p content=p.content is_home=true %}
   </article>
-  {% endfor -%}
 
-  <div class="hr buffer"></div>
-  <section class="datelist home">
+  {% include previously.html offset=1 limit=7 %}
+
+  <div class="hr"></div>
+  <section class="datelist">
     {% include _datelist.html %}
   </section>
 

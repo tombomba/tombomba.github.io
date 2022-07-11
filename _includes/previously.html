@@ -1,11 +1,11 @@
 {% assign xlimit = include.limit | default: 5 | times: 1.0 %}
-{% assign xoffset = include.offset | default: 1 | times: 1.0 %}
+{% assign xoffset = include.offset | default: 0 | times: 1.0 %}
 <section class="previously">
   <div class="hr"></div>
   <ul class="card">
     {% for x in site.posts limit:xlimit offset:xoffset %}
-      {% assign xtext = x.tweet | truncate: 140 %}
-      {% include _card.html title=x.title media=x.media text=xtext url=x.url %}
+      {% assign txt = x.tweet | default: x.excerpt %}
+      {% include _card.html title=x.title media=x.media text=txt url=x.url %}
     {% endfor -%}
   </ul>
 </section>

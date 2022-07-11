@@ -9,10 +9,7 @@ layout: default
     {% include detail-post.html page=page content=content %}
   </article>
 
-  <div class="hr"></div>
-  <section class="datelist">
-    {% include _datelist.html %}
-  </section>
+  {% include nextprev.html next=page.next previous=page.previous %}
 
 </main>
 

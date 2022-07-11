@@ -43,16 +43,6 @@ figure
 time
   white-space: nowrap
 
-ul.nav
-  display: flex
-  flex-flow: column
-  align-items: center
-  justify-content: center
-  list-style-type: none
-  li
-    font-size: 1em
-    color: var(--color-half)
-
 .datelist
   margin: var(--shim-p) auto
   ul.datelist
@@ -81,19 +71,6 @@ ul.nav
     text-decoration: none
   a:hover
     text-decoration: underline
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
-  ul.nav
-    flex-flow: row wrap
-    li
-      font-size: var(--body-size-sm)
-      color: var(--color-half)
-      &:not(:last-of-type)::after
-        content: '-'
-        padding: 0.4em
 
 //-----------------------------------------------------------------------------
 

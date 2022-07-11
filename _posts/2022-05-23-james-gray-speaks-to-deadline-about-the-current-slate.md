@@ -1,6 +1,6 @@
 ---
-title: "'Theatrical is essential'"
-excerpt: "James Gray isn't wrong, but he's still wrong."
+title: "'Theatrical is essential,' says James Gray"
+excerpt: "He's not wrong, but he's still wrong."
 emoji: "🍿"
 date: 2022-05-23 11:23
 ---

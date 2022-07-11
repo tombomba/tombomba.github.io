@@ -1,12 +1,12 @@
 header[role="banner"]
   div.wrap
     margin: 1em auto
-    padding: 0 1em
     display: flex
     flex-flow: row wrap
     align-items: center
     justify-content: space-between
     h1, p
+      font-size: var(--shim-p)
       line-height: 1
       color: var(--color-logo)
       a:link, a:visited
@@ -20,17 +20,33 @@ header[role="banner"]
       font-family: 'Oswald', var(--fam-system)
       text-transform: uppercase
     p
+      flex: 0 0 20%
       font-family: 'Noto Emoji', var(--fam-system)
-      font-size: var(--hed-size-lg)
+      text-align: right
+    ul.nav
+      flex: 0 0 20%
+      display: none
 
   div.hr
     flex: 1
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 32rem)
+@media screen and (min-width: 40rem)
 
   header[role="banner"]
     div.wrap
       p
         order: -1
+        text-align: left
+      ul.nav
+        display: flex
+        justify-content: right
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 48rem)
+
+  header[role="banner"]
+    div.wrap
+      padding: 0 1em

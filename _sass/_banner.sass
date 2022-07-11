@@ -1,14 +1,12 @@
 header[role="banner"]
   div.wrap
-    margin: 0 auto
+    margin: 1em auto
     padding: 0 1em
-    height: var(--shim-2x)
     display: flex
     flex-flow: row wrap
     align-items: center
-    justify-content: center
+    justify-content: space-between
     h1, p
-      font-size: var(--shim-p)
       line-height: 1
       color: var(--color-logo)
       a:link, a:visited
@@ -23,6 +21,16 @@ header[role="banner"]
       text-transform: uppercase
     p
       font-family: 'Noto Emoji', var(--fam-system)
+      font-size: var(--hed-size-lg)
 
   div.hr
     flex: 1
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 32rem)
+
+  header[role="banner"]
+    div.wrap
+      p
+        order: -1

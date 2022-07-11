@@ -1,7 +1,7 @@
 ---
 title: >
-  "Theatrical is essential"
-tweet: "James Gray isn't wrong, but he's still wrong."
+  "Theatrical is essential," says James Gray
+tweet: "He's not wrong, but he's still wrong."
 media: 
   fbog: james-gray-2022-deadline.jpg
 date: 2022-05-23 11:23

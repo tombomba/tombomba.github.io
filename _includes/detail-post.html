@@ -4,10 +4,12 @@
 
 <header>
   <h1>{{ titlestring }}</h1><!-- {{ p.title.size }}c -->
+  <!---
   <div class="byline {% if p.title.size > 47 %}fat{% else %}thin{% endif %}">
     <p>{{ site.author }}</p>
     <p><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time></p>
   </div>
+  -->
 </header>
 
 {% if p.media %}
@@ -16,4 +18,5 @@
 
 <div class="copy"><!-- {{ include.content | number_of_words }}w -->
   {{ copy }}
+  <p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ p.date | date_to_long_string }}</a>{% else %}{{ p.date | date_to_long_string }}{% endif %}</time></p>
 </div>

@@ -148,8 +148,32 @@ article
 
 @media screen and (min-width: 70rem)
 
+  article
+
+    figure.float.left
+      &.tilt
+        margin-right: var(--shim-p)
+      &.pull
+        margin-left: calc(var(--shim-n) * -1)
+
+    figure.float.right
+      &.tilt
+        margin-left: var(--shim-p)
+      &.pull
+        margin-right: calc(var(--shim-n) * -1)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 80rem)
+
+  article
+
+    figure.float.jumbo
+      img
+        --width: 14em
+
     figure.float.left.pull
-      margin-left: calc(var(--shim-n) * -1)
+      margin-left: calc(var(--shim-n) * -2)
 
     figure.float.right.pull
-      margin-right: calc(var(--shim-n) * -1)
+      margin-right: calc(var(--shim-n) * -2)

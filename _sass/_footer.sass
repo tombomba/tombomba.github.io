@@ -1,25 +1,15 @@
 footer
-  ul.nav
-    margin: 0 auto var(--shim) auto
-    align-items: center
-    justify-content: center
-    li.copydate
-      order: 99
-      margin-top: 1em
+  p
+    max-width: var(--page-width)
+    margin: 1em auto var(--shim) auto
+    font-size: var(--body-size-sm)
+    color: var(--color-half)
+    text-align: center
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40rem)
 
   footer
-    ul.nav
+    p
       margin: 1em auto var(--buffer) auto
-      padding-top: 3px
-      flex-flow: row wrap
-      li
-        line-height: var(--line-height-body)
-        &.copydate
-          order: 0
-          margin-top: 0
-        &.shift
-          display: none

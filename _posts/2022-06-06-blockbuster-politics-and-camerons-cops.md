@@ -3,7 +3,7 @@ layout: post
 title: "Blockbuster politics and Cameron's cops"
 emoji: "🤖"
 media: 
-  image: terminator-2-1991-b.jpg
+  image: terminator-2-1991.jpg
   ratio: 640 360
   alt: "Robert Patrick in Terminator 2"
 date: 2022-06-06 12:34:00

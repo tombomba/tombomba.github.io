@@ -1,10 +1,12 @@
 ---
 layout: post
 title: "Blockbuster politics and Cameron's cops"
+excerpt: >
+  "Was the T-1000 created as a commentary on policing?"
 emoji: "🤖"
 media: 
-  image: terminator-2-1991.jpg
-  ratio: 640 360
+  image: terminator-2-1991-a.jpg
+  ratio: 640 266
   alt: "Robert Patrick in Terminator 2"
 date: 2022-06-06 12:34:00
 ---

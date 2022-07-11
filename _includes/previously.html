@@ -4,8 +4,7 @@
   <div class="hr"></div>
   <ul class="card">
     {% for x in site.posts limit:xlimit offset:xoffset %}
-      {% assign txt = x.tweet | default: x.excerpt %}
-      {% include _card.html title=x.title media=x.media text=txt url=x.url %}
+      {% include _card.html title=x.title media=x.media excerpt=x.excerpt url=x.url %}
     {% endfor -%}
   </ul>
 </section>

@@ -13,18 +13,10 @@
     {% if vidmax > 100 %}{% assign vidmax = 100 %}{% endif %}
   {% endif -%}
 
-  {% capture media_content %}
-    {% if include.media.youtube %}
-      <iframe class="fixed" src="https://www.youtube-nocookie.com/embed/{{ include.media.youtube | strip }}?rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    {% elsif include.media.image %}
-      <img src="{{ include.media.image | prepend: site.img }}" class="fixed" alt="{{ include.media.alt | normalize_whitespace | strip }}">
-    {% endif -%}
-  {% endcapture %}
-
   <figure class="wide">
     <div class="vidmax" style="--video-max-width:{{ vidmax | default: '100' }}%;">
       <div class="wrap" style="--percent:{{ percentage | default: '56.25' }}%;">
-        {{ media_content }}
+        <img src="{{ include.media.image | prepend: site.img }}" class="fixed" alt="{{ include.media.alt | normalize_whitespace | strip }}">
       </div>
     </div>
     {% if include.media.caption %}<figcaption>{{ incude.media.caption | smartify | normalize_whitespace | strip }}</figcaption>{% endif %}

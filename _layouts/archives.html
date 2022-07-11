@@ -24,12 +24,26 @@ tweet: "testing"
 {% for group in posts_by_year_month %}
     
   {% if is_month_index and group.name contains target_yr and group.name contains target_mo %}
-    {% include _dirlist.html name=group.name items=group.items %}
-    {% assign print_success = true %}
+  <article class="archive">
+    <header><h1>{{ group.name }}</h1></header>
+    <ul>
+    {% for post in group.items %}
+      <li><a href="{{ post.url | absolute_url }}">{{ post.subj | default: post.title | smartify | normalize_whitespace | strip }}</a></li>
+    {% endfor %}
+    </ul>
+  </article>
+  {% assign print_success = true %}
   {% endif %}
 
   {% if is_year_index and group.name contains target_yr %}
-    {% include _dirlist.html name=group.name items=group.items %}
+    <article class="archive">
+      <header><h1>{{ group.name }}</h1></header>
+      <ul>
+      {% for post in group.items %}
+        <li><a href="{{ post.url | absolute_url }}">{{ post.subj | default: post.title | smartify | normalize_whitespace | strip }}</a></li>
+      {% endfor %}
+      </ul>
+    </article>
     {% assign print_success = true %}
   {% endif %}
 

@@ -128,17 +128,11 @@ article
     figure.float.flat
       margin-top: var(--nudge)
 
-    figure.float.left
-      &.pull,
-      &.pull-1x,
-      &.pull-2x
-        margin-left: -1em
+    figure.float.left.pull
+      margin-left: -1em
     
-    figure.float.right
-      &.pull,
-      &.pull-1x,
-      &.pull-2x
-        margin-right: -1em
+    figure.float.right.pull
+      margin-right: -1em
 
 //-----------------------------------------------------------------------------
 
@@ -149,31 +143,9 @@ article
     figure.float.jumbo
       img
         --width: 13em
-
-    figure.float.left
-      &.pull,
-      &.pull-1x,
-      &.pull-2x
-        margin-left: calc(var(--shim) * -1)
     
-    figure.float.right
-      &.pull,
-      &.pull-1x,
-      &.pull-2x
-        margin-right: calc(var(--shim) * -1)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 70rem)
-
-  article
-
-    figure.float.left
-      &.pull,
-      &.pull-2x
-        margin-left: calc(var(--shim) * -2)
+    figure.float.left.pull
+      margin-left: calc(var(--shim-n) * -1)
     
-    figure.float.right
-      &.pull,
-      &.pull-2x
-        margin-right: calc(var(--shim) * -2)
+    figure.float.right.pull
+      margin-right: calc(var(--shim-n) * -1)

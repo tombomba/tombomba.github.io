@@ -2,17 +2,16 @@
 layout: default
 label: "home"
 is_home: true
+is_page: true
 permalink: /index.html
 ---
-{% assign scope = 2629743 -%}
-{% assign today = site.time | date: '%s' -%}
 {% include banner.html %}
 
 <main role="main">
 
-  {% assign p=site.posts.first %}
+  {% assign homepost=site.posts.first %}
   <article class="post">
-    {% include detail-{{ p.layout }}.html page=p content=p.content is_home=true %}
+    {% include detail-{{ homepost.layout }}.html page=homepost content=homepost.content is_home=true %}
   </article>
 
   {% include previously.html offset=1 limit=7 %}

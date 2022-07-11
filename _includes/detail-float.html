@@ -11,5 +11,5 @@
 
 <div class="copy"><!-- {{ include.content | number_of_words }}w -->
   {{ copy }}
-  <p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ p.date | date_to_long_string }}</a>{% else %}{{ p.date | date_to_long_string }}{% endif %}</time></p>
+  <p class="daystamp">{% unless include.is_home %}{{ site.author }} / {% endunless %}<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ p.date | date_to_long_string }}</a>{% else %}{{ p.date | date_to_long_string }}{% endif %}</time></p>
 </div>

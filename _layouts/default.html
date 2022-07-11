@@ -44,7 +44,7 @@
   {% assign all_emoji = page_emoji | concat: post_emoji | uniq | join | strip | remove: ' ' -%}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@700&family=Oswald:wght@700&display=swap&text={{ site.title | upcase | remove: ' ' }}~!{{ site.emoji }}{{ all_emoji }}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@700&display=swap&text={{ site.emoji }}{{ all_emoji }}">
 
 </head>
 

@@ -21,10 +21,6 @@ permalink: /:short_year/:month/:title:output_ext
 timezone: America/Los_Angeles
 
 collections:
-  pages:
-    collections_dir: _pages
-    output: true
-    permalink: "/:path/"
   archives:
     collections_dir: _archives
     output: true

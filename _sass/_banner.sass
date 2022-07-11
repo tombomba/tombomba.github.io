@@ -1,14 +1,16 @@
 header[role="banner"]
   div.wrap
-    margin: 1em auto
+    margin: 0 auto
+    max-width: var(--page-width)
+    height: var(--shim-2x)
     display: flex
     flex-flow: row wrap
     align-items: center
-    justify-content: center
-    p
-      font-family: 'Noto Emoji', sans-serif
+    justify-content: space-between
+    h1, p
       font-size: var(--shim-p)
       line-height: 1
+      color: var(--color-logo)
       a:link, a:visited
         color: var(--color-logo)
         transition: color .2s ease-in
@@ -16,5 +18,11 @@ header[role="banner"]
       a:hover
         color: var(--color-shock)
         text-decoration: none
+    h1
+      font-family: 'Oswald', var(--fam-system)
+      text-transform: uppercase
+    p
+      font-family: 'Noto Emoji', var(--fam-system)
+
   div.hr
     flex: 1

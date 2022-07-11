@@ -6,9 +6,8 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <base href="{{ site.url }}">
-  {% capture meta_title %}{% if page.is_home %}{{ site.title }}{% else %}{{ page.title | strip }}{% endif %}{% endcapture %}
-  <title>{{ meta_title | strip | strip_html }}</title>
-  <meta name="description" content="{{ page.description | default: site.description | strip_html | strip | normalize_whitespace | xml_escape | truncate: 280 }}">
+  <title>{% if page.is_home %}{{ site.title }}{% else %}{{ page.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description | strip_html | strip | truncate: 140 | normalize_whitespace | xml_escape }}">
   <link rel="author" type="text/plain" href="{{ 'humans.txt' | absolute_url }}">
   {% if page.id %}<link rel="canonical" href="{{ page.url | default: '' | absolute_url }}">{% endif %}
 
@@ -20,17 +19,19 @@
 
   <!-- facebook -->
   {% assign ogimage = page.media.fbog | default: page.media.image -%}
-  <meta property="og:title" content="{{ meta_title | strip | strip_html | normalize_whitespace | xml_escape }}">
+  {% if page.is_home %}{% assign ogdescription = site.description %}{% else %}{% assign ogdescription = page.tweet | default: page.excerpt %}{% endif -%}
+  {% if page.is_post or page.is_page %}{% assign ogtweet = page.tweet | default: page.excerpt -%}{% else %}{% assign ogtweet = site.description %}{% endif -%}
+  <meta property="og:title" content="{{ page.title | strip | strip_html | truncate: 120 | normalize_whitespace | xml_escape }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
-  <meta property="og:description" content="{{ page.tweet | default: site.exerpt | strip | strip_html | normalize_whitespace | xml_escape | truncate:140 }}">
+  <meta property="og:description" content="{{ ogdescription | strip | strip_html | truncate: 120 | normalize_whitespace | xml_escape }}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:type" content="blog">
   <meta property="og:image" content="{{ ogimage | default: 'bomtomba.jpg' | prepend: site.img }}">
 
   <!-- twitter  -->
-  <meta name="twitter:title" content="{{ meta_title | strip | strip_html | normalize_whitespace | xml_escape }}">
+  <meta name="twitter:title" content="{{ page.title | strip | strip_html | truncate: 120 | normalize_whitespace | xml_escape }}">
   <meta name="twitter:url" content="{{ page.url | absolute_url }}">
-  <meta name="twitter:description" content="{{ page.tweet | default: site.excerpt | strip | strip_html | normalize_whitespace | xml_escape | truncate:140 }}">
+  <meta name="twitter:description" content="{{ ogdescription | strip | strip_html | truncate: 120 | normalize_whitespace | xml_escape }}">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@{{ site.socials }}">
   <meta name="twitter:creator" content="@{{ site.socials }}">

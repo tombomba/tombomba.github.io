@@ -2,6 +2,10 @@
 {% assign copy = include.content | strip | normalize_whitespace %}
 {% include _widont.html title=p.title url=p.url is_home=include.is_home %}
 
+{% if p.media %}
+  {% include _figure.html media=p.media is_home=include.is_home %}
+{% endif -%}
+
 <header>
   <h1>{{ titlestring }}</h1><!-- {{ p.title.size }}c -->
   <!---
@@ -11,10 +15,6 @@
   </div>
   -->
 </header>
-
-{% if p.media %}
-  {% include _figure.html media=p.media is_home=include.is_home %}
-{% endif -%}
 
 <div class="copy"><!-- {{ include.content | number_of_words }}w -->
   {{ copy }}

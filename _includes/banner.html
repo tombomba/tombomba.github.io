@@ -6,12 +6,12 @@
     <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
 
     <p><a href="{{ site.url }}" aria-label="home" title="{{ site.title }}">{% if page.is_home and site.posts.first.emoji %}{{ site.posts.first.emoji }}{% else %}{{ page.emoji | default: site.emoji }}{% endif %}</a></p>
-
+    
     <ul class="nav">
       <li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>
       <li><a href="{{ 'about' | absolute_url }}">About</a></li>
     </ul>
-   
+
   </div>
   
   <div class="hr"></div>

@@ -5,9 +5,8 @@ header[role="banner"]
     display: flex
     flex-flow: row wrap
     align-items: center
-    justify-content: center
+    justify-content: space-between
     h1, p
-      font-size: var(--buffer)
       font-weight: 700
       line-height: 1
       color: var(--color-logo)
@@ -19,9 +18,12 @@ header[role="banner"]
         color: var(--color-shock)
         text-decoration: none
     h1
+      font-size: var(--shim-p)
       font-family: 'Oswald', var(--fam-system)
       text-transform: uppercase
     p
+      flex: 0 0 20%
+      font-size: var(--shim)
       font-family: 'Noto Emoji', var(--fam-system)
       text-align: right
     ul.nav

@@ -27,7 +27,7 @@ layout: default
     <header><h1>{{ group.name }}</h1></header>
     <ul>
     {% for post in group.items %}
-      <li><a href="{{ post.url | absolute_url }}">{{ post.subj | default: post.title | smartify | normalize_whitespace | strip }}</a></li>
+      <li><a href="{{ post.url | absolute_url }}">{{ post.title | smartify | normalize_whitespace | strip }}</a></li>
     {% endfor %}
     </ul>
   </article>
@@ -39,7 +39,7 @@ layout: default
       <header><h1>{{ group.name }}</h1></header>
       <ul>
       {% for post in group.items %}
-        <li><a href="{{ post.url | absolute_url }}">{{ post.subj | default: post.title | smartify | normalize_whitespace | strip }}</a></li>
+        <li><a href="{{ post.url | absolute_url }}">{{ post.title | smartify | normalize_whitespace | strip }}</a></li>
       {% endfor %}
       </ul>
     </article>

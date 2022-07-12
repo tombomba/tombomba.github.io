@@ -2,7 +2,6 @@
 layout: float 
 title: "Hatching (2022)"
 excerpt: "Finnish horror with a psychological edge."
-emoji: "💀"
 media: 
   image: hatching-2022-poster.jpg
   style: poster right jumbo pull tilt fathed

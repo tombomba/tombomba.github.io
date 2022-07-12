@@ -1,5 +1,5 @@
 ---
-layout: micro
+layout: post
 title: "Cameron's cops"
 excerpt: >
   "Was the T-1000 created as a commentary on policing?"

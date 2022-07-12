@@ -1,5 +1,5 @@
 ---
-layout: micro
+layout: post
 title: "'Theatrical is essential,' says James Gray"
 excerpt: "He's not wrong, but he's still wrong."
 emoji: "🍿"

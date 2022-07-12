@@ -1,5 +1,5 @@
 ---
-layout: micro
+layout: float 
 title: "Hatching (2022)"
 excerpt: "Finnish horror with a psychological edge."
 emoji: "💀"

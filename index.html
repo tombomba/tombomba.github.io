@@ -4,16 +4,18 @@ label: "home"
 is_home: true
 permalink: /index.html
 ---
+{% assign p = site.posts.first %}
 {% include banner.html %}
 
 <main role="main">
 
-  {% for p in site.posts limit: 10 %}
-  {% unless forloop.first %}<div class="hr"></div>{% endunless %}
   <article class="{{ p.layout }}">
     {% include detail-{{ p.layout }}.html page=p content=p.content is_home=true %}
   </article>
-  {% endfor -%}
+
+  {% if site.posts.size > 1 %}
+    {% include previously.html offset=1 limit=7 is_home=true %}
+  {% endif %}
 
   <div class="hr"></div>
   <section class="datelist">

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Cameron's cops"
+title: "Blockbuster politics and Cameron's cops"
 excerpt: >
   "Was the T-1000 created as a commentary on policing?"
 emoji: "🛸"

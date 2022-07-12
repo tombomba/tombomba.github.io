@@ -1,6 +1,10 @@
 <footer class="{{ page.label | default: page.layout }}">
 
   <div class="hr"></div>
-  <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} <a href="https://twitter.com/{{ site.socials }}" target="_twit">{{ site.author }}</a></p>
+  <ul class="nav">
+    <li class="copydate">Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</li>
+    <li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li>
+    <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
+  </ul>
   
 </footer>

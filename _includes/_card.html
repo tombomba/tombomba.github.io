@@ -1,7 +1,14 @@
+{% if include.media.fbog %}
+  {% assign ogimage = include.media.fbog %}
+{% elsif include.media.image -%}
+  {% assign ogimage = include.media.image %}
+{% else -%}
+  {% assign ogimage = 'bomtomba.jpg' %}
+{% endif -%}
 <li>
   <div>
     <h2><a href="{{ include.url | absolute_url }}">{{ include.title | strip | smartify }}</a></h2>
     <p>{{ include.excerpt | truncatewords: 20 | strip | strip_html | smartify }}</p>
   </div>
-  <figure class="{{ include.sizer | default: 'sm' }}"><a href="{{ include.url | absolute_url }}"><img src="{{ include.media.image | default: 'bomtomba.jpg' | prepend: site.img }}" alt="{{ include.media.alt }}"></a></figure>
+  <figure class="{{ include.sizer | default: 'sm' }}"><a href="{{ include.url | absolute_url }}"><img src="{{ ogimage | prepend: site.img }}" alt="{{ include.media.alt }}"></a></figure>
 </li>

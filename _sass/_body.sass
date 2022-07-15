@@ -11,8 +11,9 @@ body
   color: var(--color-text)
 
   text-rendering: optimizeSpeed
-  -ms-text-size-adjust: auto
-  -webkit-text-size-adjust: auto
+  -ms-text-size-adjust: 100%
+  -moz-text-size-adjust: none
+  -webkit-text-size-adjust: 100%
 
   padding: 0 1em
 
@@ -81,14 +82,6 @@ time
     text-decoration: none
   a:hover
     text-decoration: underline
-
-//-----------------------------------------------------------------------------
-
-@media only screen and (min-width : 20rem) and (max-width : 40rem)
-	body
-  -webkit-text-size-adjust: 100%
-  -moz-text-size-adjust: none
-  -ms-text-size-adjust: 100%
 
 //-----------------------------------------------------------------------------
 

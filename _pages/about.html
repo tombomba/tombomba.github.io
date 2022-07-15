@@ -3,13 +3,12 @@ layout: default
 title: "About"
 excerpt: "About the site, etc."
 label: "about"
+is_about: true
 emoji: "🍕"
 permalink: /about
 ---
 {% capture bio %}
-Once upon a time, I said a lot of things here, on this page, to describe myself, because I wanted a lot of things. I wanted to create a movie site that would compete with the more shilly fan blogs. Then an arts site, something akin to a one man _Hyperallergic_ or _Elephant_ or _Bomb._ Or maybe just riff, post long, rambling conversations about old novels and new science fiction. Or spin out into more tagents, about digital life, classic games, hope and rot, _Mondo_ and _Hotwired,_ the failures of cyberpunk, of publishing, of the North American film business... or simply and finally talk about what was good when it was good, back in the day. What's meaningful and real now.
-
-My name is Tom Bomba. Maybe I'll use this space and attempt all those things at once. 
+Once upon a time, I said a lot of things here, on this page, to describe myself, because I wanted a lot of things. I wanted to create a movie site that would compete with the more shilly fan blogs. Then an arts site, something akin to a one man _Hyperallergic_ or _Elephant_ or _Bomb._ Or maybe, I thought, just riff, do a sorta amateur _K-Punk_ for the uninitiated. Post detailed, rambling conversations about old novels and new science fiction. Spin out into more and more tangents, wherever my interest took me. Digital life, dead journalism, classic games, indie work, hope and rot, _Mondo_ and _Hotwired,_ the failures of cyberpunk, of publishing, of Hollywood... Simply talk about what was good when it was good, what's meaningful and real now.
 {% endcapture -%}
 
 {% include banner.html %}
@@ -18,6 +17,7 @@ My name is Tom Bomba. Maybe I'll use this space and attempt all those things at 
   <article class="about">
     <h1>{{ page.title }}</h1>
     {{ bio | strip | smartify | markdownify | normalize_whitespace }}
+    <p><i>&mdash;{{ site.author }}</i></p> 
   </article>
 </main>
 

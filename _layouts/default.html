@@ -36,7 +36,7 @@
   <meta name="twitter:image:src" content="{{ page.media.image | default: 'bomtomba.jpg' | prepend: site.img }}">
 
   <!-- css -->
-  <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css | append: '.css' }}?v={{ site.posts.first.date | date: '%j%H%M%S' }}">
+  <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css | append: '.css' }}?v={{ site.time | date: '%j%H%M%S' }}">
 
   <!-- goog -->
   {% assign page_emoji = site.pages | map: 'emoji' | uniq -%}

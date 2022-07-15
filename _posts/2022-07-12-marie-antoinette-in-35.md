@@ -1,6 +1,11 @@
 ---
-title: "'Marie Antoinette' in 35"
+layout: micro
+title: "'Marie Antoinette' trailer in 35mm"
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+media:
+  youtube: 0wOAj_RrS10
+  ratio: 560 315
+  fbog: marie-antoinette-in-35.jpg
 ---
 
 Integer malesuada, nisi a volutpat convallis, nulla nulla mattis orci, at tincidunt dolor ipsum sit amet lorem. Suspendisse in rutrum purus. Vestibulum nec nunc luctus, faucibus magna a, iaculis nisl. Proin bibendum lectus vel massa varius, et euismod nunc porttitor. Vestibulum imperdiet eget neque quis sollicitudin. Aliquam nulla tortor, hendrerit a erat vitae, pretium bibendum dui. Donec sed est faucibus, ultricies nulla rutrum, bibendum risus.

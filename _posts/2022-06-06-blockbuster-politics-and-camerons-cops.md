@@ -16,7 +16,7 @@ Stewart-Ahn can't seem to recall a time before September, 2001. When the country
 
 Back then, the L.A.P.D. instituted a policy leading to the harrassment and [arrest of some 50,000 people](https://en.wikipedia.org/wiki/Operation_Hammer_(1987)). They also [killed a single mom](https://en.wikipedia.org/wiki/Shooting_of_Eula_Love) in broad daylight. Then there was [May, 1991](https://www.youtube.com/results?search_query=Rodney+King+video). Years later, [Rampart](https://en.wikipedia.org/wiki/Rampart_scandal). Cameron lived and worked in Los Angeles during this period. So when he chose police officers for his villains, it wasn't prescience. It was a reflection what was already in the street and on the news.
 
-Sure, there's a political angle to the choice in "Judgment Day." But the new terminator could have taken a different form without altering the movie's larger story. The character then is nothing more than a costume. A jab that might have been a hook, at least in a film with more serious intentions.
+Sure, there's a political angle in "Judgment Day." But the new terminator could have taken a different form without altering the movie's larger story. The character then is nothing more than a costume. A jab that might have been a hook, at least in a film with more serious intentions.
 
 Bilge Ebiri [replied](https://twitter.com/BilgeEbiri/status/1533295627064451074) to Stewart-Ahn, saying, "It's funny how people have forgotten there was an actual controversy over how Cameron made the U.S. military the bad guys in Avatar."
 

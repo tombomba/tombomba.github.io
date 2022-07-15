@@ -5,6 +5,9 @@ footer
     li
       font-size: var(--body-size-sm)
       color: var(--color-half)
+      &.copydate 
+        order: 99
+        margin-top: 1em
 
 //-----------------------------------------------------------------------------
 
@@ -13,3 +16,8 @@ footer
   footer
     ul.nav
       margin: 1em auto var(--buffer) auto
+      li.copydate
+        order: -1
+        margin: 0
+      li.switch
+        display: none

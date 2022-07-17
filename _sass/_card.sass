@@ -17,10 +17,13 @@ section
         order: -1
         margin: 0 var(--nudge-2x) 0 0
         padding: 0
+        --thumbsize: var(--shim-p)
         img
           margin-top: var(--nudge)
-          width: var(--shim-2x)
-          height: var(--shim-2x)
+          width: var(--thumbsize)
+          height: var(--thumbsize)
+          object-fit: cover
+          object-position: 50% 50%
       div
         flex: 1
         margin: 0
@@ -31,14 +34,36 @@ section
 
 //-----------------------------------------------------------------------------
 
+@media screen and (min-width: 20rem)
+
+  section
+    ul.card
+      li
+        figure
+          --thumbsize: var(--shim-2x)
+
+//-----------------------------------------------------------------------------
+
 @media screen and (min-width: 30rem)
 
   section
     margin-bottom: 3px
     ul.card
       li
+        align-items: center
         figure
           margin-right: 1em
+          --thumbsize: var(--shim-4x)
           img
-            width: var(--shim-3x)
-            height: calc(var(--width) / 1.66)
+            height: calc(var(--thumbsize) / 1.375)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  section
+    ul.card
+      li
+        div
+          h2, p
+            display: block

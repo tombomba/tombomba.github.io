@@ -2,6 +2,10 @@
 {% assign copy = include.content | strip | normalize_whitespace %}
 {% include _widont.html title=p.title url=p.url is_home=include.is_home %}
 
+{% if p.media %}
+  {% include _figure.html media=p.media is_home=include.is_home %}
+{% endif -%}
+
 <header>
   <h1>{{ titlestring }}</h1><!-- {{ p.title.size }}c -->
   <div class="byline {% if p.title.size > 47 %}fat{% else %}thin{% endif %}">
@@ -9,10 +13,6 @@
     <p><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time></p>
   </div>
 </header>
-
-{% if p.media %}
-  {% include _figure.html media=p.media is_home=include.is_home %}
-{% endif -%}
 
 <div class="copy"><!-- {{ include.content | number_of_words }}w -->
   {{ copy }}

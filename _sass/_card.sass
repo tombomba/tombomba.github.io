@@ -6,78 +6,32 @@ section
     list-style-type: none
     li
       margin-top: var(--shim-p)
-      @extend .clearfix
       &:first-of-type
         margin-top: 0
+      display: flex
+      flex-flow: row wrap
+      align-items: flex-start
+      justify-content: space-between
+      margin-top: var(--shim-n)
       figure
-        float: right
-        margin-left: 1em
-        margin-bottom: var(--nudge)
-        padding-top: 0
-        --width: 4em
+        order: -1
+        margin: 0 var(--nudge-2x) 0 0
+        padding: 0
         img
-          width: var(--width)
-          height: var(--width)
-          object-fit: cover
-          object-position: 50% 50%
+          margin-top: var(--nudge)
+          width: var(--shim-2x)
+          height: var(--shim-2x)
       div
-        margin-top: 0
-        h2
+        flex: 1
+        margin: 0
+        h2, p
+          display: inline
           font-size: 1em
-          a
-            font-weight: 400
+          font-weight: 400
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 20rem)
-
-  section
-    ul.card
-      li
-        figure
-          --width: 6em
-          img
-            width: var(--width)
-            height: calc(var(--width) / 1.375)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
-  section
-    ul.card
-      li
-        float: none
-        margin-top: var(--shim-n)
-        display: flex
-        flex-flow: row wrap
-        align-items: flex-start
-        justify-content: space-between
-        figure
-          order: -1
-          margin: var(--nudge) 1em 0 0
-          --width: var(--shim-2x)
-          img
-            height: var(--width)
-        div
-          flex: 1
-          margin: 0
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 50rem)
-
-  section
-    ul.card
-      li
-        align-items: center
-        figure
-          margin-right: 1em
-          --width: var(--shim-3x)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 60rem)
+@media screen and (min-width: 30rem)
 
   section
     margin-bottom: 3px
@@ -85,6 +39,6 @@ section
       li
         figure
           margin-right: 1em
-          padding-top: 0
-          &.home
-            --width: var(--shim-4x)
+          img
+            width: var(--shim-3x)
+            height: calc(var(--width) / 1.66)

@@ -8,9 +8,7 @@ emoji: "🍕"
 permalink: /about
 ---
 {% capture bio %}
-Originally, I wanted to make a movie site as an answer to the more shilly fan blogs. Then a more general audience arts and culture thing, akin to a _Hyperallergic_ or _Elephant._ Or maybe, I thought, just a media diary, a sorta amateur _K-Punk_ for the uninitiated. Rambling posts, spun out into more and more tangents. Digital life, analog westerns, older novels, new science fiction, dead journalism, 8-bit games, indie art... Simply talk about what was good when it was good, what's meaningful now.
-
-I'm not the guy with a fistful of bylines awards. I once flirted with NYU's cinema studies program, but it didn't last. 
+Originally, I wanted a movie site in answer to those shilly fan blogs. Then maybe a more general arts and culture thing, akin to a _Hyperallergic_ or _Elephant._ Or, I thought, a media diary. Sorta amateur _K-Punk,_ written for the uninitiated. Short and quick, spun out into more and more tangents. Digital life, analog westerns, old novels, new science fiction, dead journalism, 8-bit games, indie art... Simply talk about what was good when it was good, what's meaningful now.
 {% endcapture -%}
 
 {% include banner.html %}
@@ -19,7 +17,7 @@ I'm not the guy with a fistful of bylines awards. I once flirted with NYU's cine
   <article class="about">
     <h1>{{ page.title }}</h1>
     {{ bio | strip | smartify | markdownify | normalize_whitespace }}
-    <p><i>&mdash;{{ site.author }}</i></p> 
+    <p>&mdash; {{ site.author }}</p> 
   </article>
 </main>
 

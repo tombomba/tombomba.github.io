@@ -6,9 +6,9 @@
   {% assign ogimage = 'bomtomba.jpg' %}
 {% endif -%}
 <li>
+ <figure class="{% if include.is_home %}home{% else %}post{% endif %}"><a href="{{ include.url | absolute_url }}"><img src="{{ ogimage | prepend: site.img }}" alt="{{ include.media.alt }}"></a></figure>
   <div>
     <h2><a href="{{ include.url | absolute_url }}">{{ include.title | strip | smartify }}</a></h2>
     <p>{{ include.excerpt | truncatewords: 20 | strip | strip_html | smartify }}</p>
   </div>
-  <figure class="{% if include.is_home %}home{% else %}post{% endif %}"><a href="{{ include.url | absolute_url }}"><img src="{{ ogimage | prepend: site.img }}" alt="{{ include.media.alt }}"></a></figure>
 </li>

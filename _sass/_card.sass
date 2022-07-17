@@ -49,11 +49,12 @@ section
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 25rem)
+@media screen and (min-width: 40rem)
 
   section
     ul.card
       li
+        align-items: center
         figure
           margin-right: 1em
           --width: var(--shim-3x)
@@ -66,11 +67,11 @@ section
     margin-bottom: 3px
     ul.card
       li
-        align-items: center
         figure
           margin-right: var(--shim-n)
           padding-top: 0
-          //--width: var(--shim-4x)
+          &.home
+            --width: var(--shim-4x)
         div
           h2, p
             display: block

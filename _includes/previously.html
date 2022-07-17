@@ -4,7 +4,7 @@
   <div class="hr"></div>
   <ul class="card">
     {% for x in site.posts limit:xlimit offset:xoffset %}
-      {% include _card.html title=x.title media=x.media excerpt=x.excerpt url=x.url %}
+      {% include _card.html title=x.title media=x.media excerpt=x.excerpt url=x.url is_home=include.is_home %}
     {% endfor -%}
   </ul>
 </section>

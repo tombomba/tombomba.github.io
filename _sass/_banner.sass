@@ -23,13 +23,14 @@ header[role="banner"]
       font-family: 'Oswald', var(--fam-system)
       text-transform: uppercase
     p
-      flex: 0 0 20%
+      flex: 1 0 20%
+      background: red
       padding-top: 3px
       font-size: var(--shim)
       font-family: 'Noto Emoji', var(--fam-system)
       text-align: right
     ul.nav
-      flex: 0 0 20%
+      flex: 1 0 20%
       display: none
       li
         line-height: 1
@@ -47,9 +48,13 @@ header[role="banner"]
       padding: 0 1em 0 var(--nudge-2x)
       p
         order: -1
-        padding-top: 1.5px
+        padding-top: 2px
         text-align: left
       ul.nav
         display: flex
         justify-content: right
         text-align: right
+        background: red
+        li
+          background: yellow
+          text-align: right

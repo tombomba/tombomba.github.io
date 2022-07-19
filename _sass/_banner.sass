@@ -24,7 +24,6 @@ header[role="banner"]
       text-transform: uppercase
     p
       flex: 1 0 20%
-      background: red
       padding-top: 3px
       font-size: var(--shim)
       font-family: 'Noto Emoji', var(--fam-system)
@@ -52,10 +51,6 @@ header[role="banner"]
         text-align: left
       ul.nav
         display: flex
-        justify-content: right
-        text-align: right
-        background: red
-        li
-          background: yellow
-          justify-self: right
-          text-align: right
+        -webkit-justify-content: flex-end
+        align-items: flex-end
+        -webkit-align-items: flex-end

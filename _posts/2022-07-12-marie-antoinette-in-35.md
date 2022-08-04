@@ -2,7 +2,6 @@
 layout: micro
 title: "'Marie Antoinette' in 35"
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-emoji: "👑"
 media:
   youtube: 0wOAj_RrS10
   ratio: 560 315

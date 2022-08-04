@@ -3,7 +3,6 @@ layout: post
 title: "Blockbuster politics and Cameron's cops"
 excerpt: >
   "Was the T-1000 created as a commentary on policing?"
-emoji: "🛸"
 media: 
   image: terminator-2-1991-a.jpg
   ratio: 640 266

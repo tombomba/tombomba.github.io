@@ -1,5 +1,5 @@
 ---
-layout: micro
+layout: post
 title: "'Marie Antoinette' in 35"
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 media:

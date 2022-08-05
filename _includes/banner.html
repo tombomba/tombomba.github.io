@@ -7,10 +7,12 @@
 
     <p><a href="{{ site.url }}" aria-label="home" title="{{ site.title }}">{% if page.is_home and site.posts.first.emoji %}{{ site.posts.first.emoji }}{% else %}{{ page.emoji | default: site.emoji }}{% endif %}</a></p>
 
+    <!--
     <ul class="nav">
       {% unless page.is_archive %}<li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>{% endunless %}
       {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}
     </ul>
+    -->
 
   </div>
   

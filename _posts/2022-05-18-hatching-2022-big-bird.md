@@ -1,12 +1,12 @@
 ---
-title: "Hatching (2022)"
+title: "Hatching"
 excerpt: "A little Finnish horror with a hard, psychological edge."
 media: 
   image: hatching-2022-poster.jpg
-  style: poster right jumbo pull tilt fathed
+  style: poster right jumbo
   alt: "Finnish poster art: A family wears paper masks during group photo"
 ---
-"Hatching" (orig. "Pahanhoutoja") is Finnish family horror with a hard psychological edge. Story is about a girl who finds a strange bird's egg in the forest, brings it home to suburbia, and watches it grow larger and larger until one evening the egg hatches and a huge, ugly bird-thing emerges. She loves it as you might a child, and the creature transforms under her care, becoming almost recognizably human. It then develops needs of its own, and begins to roam.
+(originally "Pahanhoutoja"). Finnish family horror with a hard psychological edge. Story is about a girl who finds a strange bird's egg in the forest, brings it home to suburbia, and watches it grow larger and larger until one evening the egg hatches and a huge, ugly bird-thing emerges. She loves it as you might a child, and the creature transforms under her care, becoming almost recognizably human. It then develops needs of its own, and begins to roam.
 
 I said story when I shoulda said plot, because the movie's really about the girl's relationship with her mother, and the creature is a gorey metaphor representing that relationship. Mom is an overbearing vlogger who arranges her life Martha Stewart style, with house and kids always insta ready. (The film opens from the perspective of Mom's phone, as she records her next post, naturally involving the whole family.) Dad is, by contrast, shy and gentle, so much so that he doesn't object when his wife renders him a cuckold later in the film. The girl's younger brother is a mean little bastard, resentful of the attention the girl receives. (Like his sister, he is sharply observant, and also like his sister, his observations are ignored.) Both parents are self involved and insipid, and both are oblivious to the pained expressions their children regularly wear.
 

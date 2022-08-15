@@ -3,13 +3,14 @@
   {% assign myfig = include.media.ratio | split: ' ' -%}
   {% assign mw = myfig[0] | default: 640 | strip | times: 1.0 -%}
   {% assign mh = myfig[1] | default: 480 | strip | times: 1.0 -%}
+  {% assign imgstyle = myfig[2] | strip %}
 
   {% if mw > 0 and mh > 0 %}
     {% assign percentage = mh | divided_by: mw | times: 100 | round: 2 %}
   {% endif -%}
 
-  {% if include.media.image and mw <= 612 %}
-    {% assign vidmax = mw | divided_by: 612 | times: 100 | round: 2 %}
+  {% if include.media.image and mw <= 673 %}
+    {% assign vidmax = mw | divided_by: 673 | times: 100 | round: 2 %}
     {% if vidmax > 100 %}{% assign vidmax = 100 %}{% endif %}
   {% endif -%}
 

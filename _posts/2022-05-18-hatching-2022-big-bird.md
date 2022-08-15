@@ -3,7 +3,7 @@ title: "Hatching"
 excerpt: "A little Finnish horror with a hard, psychological edge."
 media: 
   image: hatching-2022-poster.jpg
-  style: poster right jumbo
+  style: poster right jumbo pull tilt fathed
   alt: "Finnish poster art: A family wears paper masks during group photo"
 ---
 (originally "Pahanhoutoja"). Finnish family horror with a hard psychological edge. Story is about a girl who finds a strange bird's egg in the forest, brings it home to suburbia, and watches it grow larger and larger until one evening the egg hatches and a huge, ugly bird-thing emerges. She loves it as you might a child, and the creature transforms under her care, becoming almost recognizably human. It then develops needs of its own, and begins to roam.

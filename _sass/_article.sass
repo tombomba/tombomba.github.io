@@ -1,6 +1,6 @@
 article
   max-width: var(--width-page)
-  margin: calc(var(--buffer) + 3px) auto var(--buffer) auto
+  margin: var(--shim-2x) auto
   &:not(:first-of-type)
     figure.video
       padding-top: var(--nudge)
@@ -43,6 +43,5 @@ article
 @media screen and (min-width: 50rem)
 
   article
-    margin: calc(var(--shim-2x) + 3px) auto var(--shim-2x) auto
     span.widont
       white-space: nowrap

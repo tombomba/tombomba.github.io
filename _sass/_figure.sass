@@ -1,8 +1,14 @@
 article
 
+  figure
+    img
+      border-radius: 4px
+    figcaption
+      font-size: var(--body-size-sm)
+
   figure.wide
     max-width: var(--width-page-md)
-    padding-top: var(--nudge)
+    //padding-top: var(--nudge)
     .wrap
       position: relative
       display: block
@@ -69,6 +75,8 @@ article
     figure.wide
       .vidmax
         max-width: var(--video-max-width)
+        margin-left: auto
+        margin-right: auto
 
     figure.float
       img

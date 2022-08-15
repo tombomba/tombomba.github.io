@@ -1,23 +1,33 @@
 footer
-  ul.nav
-    max-width: var(--page-width)
-    margin: 1em auto var(--shim) auto
+  max-width: var(--page-width)
+  margin: 0 auto var(--shim) auto
+  ul
+    margin-top: 1em
+    display: flex
+    flex-flow: row wrap
+    align-items: center
+    justify-content: center
+    list-style-type: none
+  ul.datelist
+    margin: var(--buffer) auto var(--shim-2x) auto
+    gap: 0.5em
+  ul.feeds 
     li
       font-size: var(--body-size-sm)
       color: var(--color-half)
-      &.copydate 
+      &.copydate
         order: 99
         margin-top: 1em
+      &:not(:last-of-type)::after
+        content: '-'
+        margin: 0 0.33em
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 48rem)
 
   footer
-    ul.nav
-      margin: 1em auto var(--buffer) auto
+    ul.feeds
       li.copydate
         order: -1
         margin: 0
-      li.switch
-        display: none

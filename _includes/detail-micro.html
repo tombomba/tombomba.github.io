@@ -12,7 +12,7 @@
   {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
 {% endunless %}
 
-{% capture hedbox %}<div class="hed"><h1>{{ titlestring }}</h1><p>{% endcapture -%}
+{% capture hedbox %}<div class="hed {% if p.media.style contains 'fathed' %}fat{% else %}thin{% endif %}"><h1>{{ titlestring }}</h1><p>{% endcapture -%}
 {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
 
 <div class="copy"><!-- {{ include.content | number_of_words }}w -->

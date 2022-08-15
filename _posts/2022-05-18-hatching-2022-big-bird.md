@@ -1,5 +1,4 @@
 ---
-layout: float 
 title: "Hatching (2022)"
 excerpt: "A little Finnish horror with a hard, psychological edge."
 media: 

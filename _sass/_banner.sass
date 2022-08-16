@@ -1,20 +1,32 @@
 header[role="banner"]
-  margin: var(--nudge-2x) auto var(--shim-2x) auto
-  max-width: calc(var(--page-width) + var(--shim-4x))
+  margin: var(--shim-n) auto var(--shim-2x) auto
+  max-width: var(--page-width)
   display: flex
-  flex-direction: column
+  flex-flow: row wrap
   align-items: center
+  justify-content: space-between
   gap: var(--nudge)
   h1
+    margin-left: -2px
     font-family: var(--fam-logo)
     font-size: var(--shim-p)
     font-weight: 700
     line-height: 1
     letterspacing: -0.5px
     text-transform: uppercase
-    text-shadow: -2px 2px var(--color-shock), 2px -2px var(--color-shock)
+    text-shadow: -2px 2px 2px var(--color-shock), -2px -16px var(--color-shock), -2px -32px var(--color-shock-fade)
+    transform: rotate(-4deg)
     a:link, a:visited
       color: var(--color-logo)
       text-decoration: none
   div.hr
     width: 100%
+    flex: 1
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+  header[role="banner"]
+    h1
+      margin-left: calc(var(--nudge) * -1)
+      transform: rotate(-6deg)

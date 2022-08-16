@@ -1,33 +1,38 @@
 footer
-  max-width: var(--page-width)
-  margin: 0 auto var(--shim) auto
+  margin: var(--buffer) auto var(--shim-p) auto
+  padding-top: var(--nudge)
+  max-width: calc(var(--page-width) + var(--shim-2x))
   ul
-    margin-top: 1em
+    margin: var(--nudge-2x) auto 0 auto
     display: flex
-    flex-flow: row wrap
+    flex-flow: column
     align-items: center
     justify-content: center
     list-style-type: none
-  ul.datelist
-    margin: var(--buffer) auto var(--shim-2x) auto
-    gap: 0.5em
-  ul.feeds 
     li
-      font-size: var(--body-size-sm)
       color: var(--color-half)
       &.copydate
         order: 99
         margin-top: 1em
-      &:not(:last-of-type)::after
-        content: '-'
-        margin: 0 0.33em
+  p
+    margin: var(--shim-2x) auto
+    font-size: 1em
+    line-height: 1
+    text-align: center
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 48rem)
+@media screen and (min-width: 32rem)
 
   footer
-    ul.feeds
-      li.copydate
-        order: -1
-        margin: 0
+    ul
+      flex-flow: row wrap
+      li
+        font-size: var(--body-size-sm)
+        line-height: 1
+        &.copydate
+          order: -1
+          margin: 0
+        &:not(:last-of-type)::after
+          content: '-'
+          margin: 0 0.33em

@@ -17,16 +17,12 @@ future: false
 show_drafts: false
 theme: null
 
-permalink: /:short_year/:month/:title:output_ext
+permalink: /:title-:year:month:day:output_ext
 timezone: America/Los_Angeles
 
 collections:
   pages:
     collections_dir: _pages
-    output: true
-    permalink: "/:path/"
-  archives:
-    collections_dir: _archives
     output: true
     permalink: "/:path/"
 
@@ -45,15 +41,6 @@ defaults:
     values:
       label: page
       is_page: true
-  -
-    scope:
-      path: "_archives"
-      type: "archives"
-    values:
-      layout: directory
-      excerpt: "A short list of previous articles."
-      label: archive
-      is_archive: true
 
 markdown: kramdown
 kramdown:

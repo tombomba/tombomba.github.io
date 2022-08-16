@@ -2,11 +2,9 @@
 title: "'Marie Antoinette' in 35"
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 media:
-  youtube: 0wOAj_RrS10
   ratio: 560 315
-  fbog: marie-antoinette-in-35.jpg
+  image: marie-antoinette-in-35.jpg
 ---
+Integer fermentum ante in tincidunt aliquet. Morbi suscipit odio id metus ultricies, id tincidunt diam mollis. Cras rhoncus luctus nibh, sit amet tempor ex convallis a. Cras fermentum metus tincidunt felis vestibulum faucibus. Nulla egestas felis urna, vitae feugiat arcu volutpat non. Duis sit amet efficitur mi. Vestibulum in lacinia risus. Vivamus lobortis a sapien quis pellentesque. Sed sed tristique risus. Sed in pellentesque dolor. Aenean aliquam, felis nec vehicula pharetra, augue neque iaculis nisl, vel finibus eros urna et augue. Cras nisl lacus, suscipit et condimentum sit amet, iaculis accumsan felis. Donec eu elementum purus, ac blandit mi. Proin porttitor odio quis urna posuere, nec facilisis ex ornare. Ut vel porttitor dui, at egestas eros.
 
-The quick brown fox jumps over the lazy dog. Integer malesuada, nisi a volutpat convallis, nulla nulla mattis orci, at tincidunt dolor ipsum sit amet lorem. Suspendisse in rutrum purus. Vestibulum nec nunc luctus, faucibus magna a, iaculis nisl. Proin bibendum lectus vel massa varius, et euismod nunc porttitor. Vestibulum imperdiet eget neque quis sollicitudin. Aliquam nulla tortor, hendrerit a erat vitae, pretium bibendum dui. Donec sed est faucibus, ultricies nulla rutrum, bibendum risus.
-
-Nullam pellentesque tellus et elit finibus malesuada. Donec sit amet lectus lacus. Duis sagittis velit id imperdiet euismod. Aliquam feugiat quis urna ut faucibus. Donec feugiat est tortor, a facilisis dui porttitor vel. Morbi ac orci felis. Cras scelerisque, mi id pulvinar facilisis, enim mauris posuere ante, ac commodo nulla purus ac metus. Integer vel quam in sapien laoreet volutpat eu eget felis. Etiam lacinia luctus dictum.
+Etiam eget euismod ante, sed hendrerit ante. Sed vestibulum suscipit enim sit amet porta. Nam tincidunt commodo dolor ac semper. Integer mollis pulvinar urna vitae euismod. In rhoncus nibh sed aliquam interdum. Cras maximus.

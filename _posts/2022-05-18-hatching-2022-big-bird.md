@@ -3,7 +3,7 @@ title: "Hatching"
 excerpt: "A little Finnish horror with a hard, psychological edge."
 media: 
   image: hatching-2022-poster.jpg
-  style: poster right jumbo pull tilt fathed
+  style: poster right jumbo tilt
   alt: "Finnish poster art: A family wears paper masks during group photo"
 ---
 Integer fringilla sagittis est, vitae congue lectus fringilla a. Nullam vehicula odio sed metus euismod consequat. Nulla erat nunc, fermentum ut dapibus vel, semper vitae sapien. Nam mi orci, finibus at nulla ut, rutrum convallis erat. Vivamus porta libero quis rhoncus mollis. Cras vehicula interdum diam quis tincidunt. Maecenas ut aliquet eros. Duis in tortor urna. Ut hendrerit, felis nec luctus sodales, elit nisi ornare sem, nec cursus mi urna nec urna. Nunc neque libero, lacinia ut mattis quis, mattis a eros. Aliquam faucibus quis dui non sollicitudin. Curabitur nunc ligula, feugiat non facilisis eu, finibus in justo. In hendrerit tellus eget felis dictum, rutrum eleifend mi feugiat. Duis finibus felis quam, nec semper nisi mattis in.

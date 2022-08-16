@@ -5,28 +5,31 @@ header[role="banner"]
   flex-flow: row wrap
   align-items: center
   justify-content: space-between
-  gap: var(--nudge)
+  gap: var(--nudge-2x)
   h1
     margin-left: -2px
     font-family: var(--fam-logo)
     font-size: var(--shim-p)
     font-weight: 700
     line-height: 1
-    letterspacing: -0.5px
+    letter-spacing: -1px
     text-transform: uppercase
-    text-shadow: -2px 2px 2px var(--color-shock), -2px -16px var(--color-shock), -2px -32px var(--color-shock-fade), -2px -48px var(--color-shock-fade)
-    transform: rotate(-4deg)
+    text-shadow: -2px 2px 1px var(--color-shock)
     a:link, a:visited
       color: var(--color-logo)
       text-decoration: none
   div.hr
     width: 100%
     flex: 1
+    margin-bottom: 1px
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 40rem)
+@media screen and (min-width: 30rem)
+
   header[role="banner"]
     h1
-      margin-left: -6px
-      transform: rotate(-6deg)
+      margin-left: -4px
+      text-shadow: -4px 4px 2px var(--color-shock)
+
+

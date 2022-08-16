@@ -21,7 +21,7 @@ article.post
           content: '\0020\/\0020'
   figure
     margin: var(--shim) 0 var(--shim-p) 0
-   
+
 article.micro
   .hed
     h1, p
@@ -33,7 +33,7 @@ article.micro
     .punc::after
       content: '.'
   figure
-    margin-bottom: var(--shim-p)
+    margin-bottom: var(--shim)
 
 article.float
   .hed
@@ -53,11 +53,6 @@ article.archive
     margin-top: var(--shim)
     list-style-type: square
     color: var(--color-logo)
-
-article.about
-  h1
-    font-size: var(--hed-size)
-    line-height: var(--line-height-hed)
 
 article.error
   display: flex
@@ -87,4 +82,4 @@ article.error
   article.float,
   article.micro
     .hed.fat
-      padding-top: var(--nudge-2x)
+      padding-top: var(--nudge)

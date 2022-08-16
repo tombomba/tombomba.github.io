@@ -1,11 +1,9 @@
 {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%m %Y'" -%}
 {% assign curr_year = site.posts.first.date | date: '%Y' %}
 
-<section>
-  <ul class="datelist">
+<ul class="datelist">
 
 {% for group in posts_by_year reversed %}
-
   {% assign d = group.name | split: ' ' -%}
   {% assign month = d[0] -%}
   {% assign year = d[1] -%}
@@ -21,6 +19,5 @@
 
 {% endfor -%}
 
-    <li><a href="{{ 'archive' | absolute_url }}" aria-label="Full archive">[&hellip;]</a></li>
-  </ul>
-</section>
+  <li><a href="{{ 'archive' | absolute_url }}" aria-label="Full archive">[&hellip;]</a></li>
+</ul>

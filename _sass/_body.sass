@@ -47,18 +47,23 @@ time
   background-color: var(--color-body)
 
 .pagebreak
-  margin: 0 auto
+  margin: var(--buffer) auto
   paddding: 0
-  width: var(--shim-3x)
   text-align: center
+  display: flex
+  flex-flow: row wrap
+  align-items: center
+  justify-content: center
   &::after
-    content: '*\20*\20*'
-    font-family: 'Sancreek', var(--fam-serif)
-    font-size: 32px
-    line-height: 0
+    content: '!!!'
+    font-family: var(--fam-logo)
+    font-size: var(--shim-n)
+    font-weight: 700
+    line-height: 1
+    letter-spacing: 6px
     text-align: center
     color: var(--color-logo)
-    text-shadow: -2px 2px var(--color-shock)
+    text-shadow: -2px 2px 1px var(--color-shock), 2px -2px 1px var(--color-shock)
 
 .daystamp
   font-style: italic

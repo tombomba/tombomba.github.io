@@ -1,37 +1,16 @@
 footer
-  margin: var(--buffer) auto var(--buffer) auto
+  margin: var(--shim-2x) auto
   max-width: var(--page-width)
   ul
-    margin: 1em auto 0 auto
+    margin: 0 auto
     display: flex
-    flex-flow: column
-    align-items: center
-    justify-content: center
+    flex-flow: row-wrap
+    gap: var(--nudge-2x)
     list-style-type: none
     li
       color: var(--color-half)
-      &.copydate
-        order: 99
-        margin-top: 1em
-  p
-    margin: var(--shim-2x) auto
-    font-size: 1em
-    line-height: 1
-    text-align: center
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 32rem)
-
-  footer
-    ul
-      flex-flow: row wrap
-      li
-        font-size: var(--body-size-sm)
-        line-height: 1
-        &.copydate
-          order: -1
-          margin: 0
-        &:not(:last-of-type)::after
-          content: '-'
-          margin: 0 0.33em
+  .copydate
+    margin-top: var(--shim)
+    p
+      margin: 0
+      color: var(--color-half)

@@ -1,6 +1,6 @@
 ---
 layout: default
-excerpt: "A media journal, a small collage, a dumb blog"
+excerpt: "Short notes about the west"
 is_home: true
 permalink: /index.html
 ---
@@ -11,7 +11,7 @@ permalink: /index.html
 
   {% for p in site.posts limit: 10 %}
   <article class="{{ p.layout }}">
-    {% unless forloop.first %}<div class="hr spacer"></div>{% endunless %}
+    {% unless forloop.first %}<div class="pagebreak"></div>{% endunless %}
     {% include detail-{{ p.layout }}.html page=p content=p.content is_home=true %}
   </article>
   {% endfor -%}

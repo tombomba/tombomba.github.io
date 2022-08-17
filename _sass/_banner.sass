@@ -8,7 +8,10 @@ header[role="banner"]
   gap: var(--nudge)
   h1
     font-family: var(--fam-logo)
-    font-size: var(--shim-p)
+    &.lg
+      font-size: var(--buffer)
+    &.md
+      font-size: var(--shim-p)
     font-weight: 700
     line-height: 1
     letter-spacing: -1px
@@ -27,6 +30,6 @@ header[role="banner"]
 @media screen and (min-width: 40rem)
   header[role="banner"]
     h1
-      margin-left: -2px
+      margin-left: -6px
       transform: rotate(-6deg)
 

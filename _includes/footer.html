@@ -2,7 +2,7 @@
 
   <div class="hr"></div>
   <ul class="feeds">
-    <li class="copydate">Copyright &copy; {{ page.date | default: site.posts.first.date | date: '%Y' }} {{ site.author }}</li>
+    <li class="copydate"><a href="{{ site.url }}">{{ site.title }}</a> Copyright &copy; {{ site.author }}</li>
     <li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li>
     <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
   </ul>

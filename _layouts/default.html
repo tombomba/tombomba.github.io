@@ -8,7 +8,7 @@
 
   <base href="{{ site.url }}">
   <title>{{ page.title | default: site.title | truncate: 140 | replace: '"', "'" | strip | strip_html | normalize_whitespace | xml_escape }}</title>
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip | strip_html | truncate: 120  | xml_escape }}">
+  <meta name="description" content="{{ page.tweet | default: page.excerpt | strip | strip_html | truncate: 120  | xml_escape }}">
   <link rel="author" type="text/plain" href="{{ 'humans.txt' | absolute_url }}">
   {% if page.id %}<link rel="canonical" href="{{ page.url | default: '' | absolute_url }}">{% endif %}
 
@@ -21,7 +21,7 @@
   <!-- facebook -->
   <meta property="og:title" content="{{ page.title | default: site.title | strip | truncate: 120 | xml_escape }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
-  <meta property="og:description" content="{{ page.excerpt | default: site.description | truncate: 280 | replace: '"', "'" | strip | strip_html | normalize_whitespace | xml_escape }}">
+  <meta property="og:description" content="{{ page.tweet | default: page.excerpt | truncate: 280 | replace: '"', "'" | strip | strip_html | normalize_whitespace | xml_escape }}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:type" content="blog">
   <meta property="og:image" content="{{ page.media.image | default: 'bomtomba.jpg' | prepend: site.img }}">
@@ -29,7 +29,7 @@
   <!-- twitter  -->
   <meta name="twitter:title" content="{{ page.title | default: site.title | strip | truncate: 120 | xml_escape }}">
   <meta name="twitter:url" content="{{ page.url | absolute_url }}">
-  <meta name="twitter:description" content="{{ page.excerpt | default: site.description | truncate: 280 | replace: '"', "'" | strip | strip_html | normalize_whitespace | xml_escape }}">
+  <meta name="twitter:description" content="{{ page.tweet | default: page.excerpt | truncate: 280 | replace: '"', "'" | strip | strip_html | normalize_whitespace | xml_escape }}">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@{{ site.socials }}">
   <meta name="twitter:creator" content="@{{ site.socials }}">

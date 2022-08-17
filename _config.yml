@@ -21,10 +21,6 @@ permalink: /:year/:month/:title:output_ext
 timezone: America/Los_Angeles
 
 collections:
-  pages:
-    collections_dir: _pages
-    output: true
-    permalink: "/:path/"
   archives:
     collections_dir: _archives
     output: true
@@ -36,23 +32,15 @@ defaults:
       path: ""  
       type: posts
     values:
-      layout: micro
+      layout: post
       is_post: true
-  -
-    scope:
-      path: "_pages"
-      type: "pages"
-    values:
-      label: page
-      is_page: true
   -
     scope:
       path: "_archives"
       type: "archives"
     values:
-      layout: directory
-      excerpt: "A short list of previous articles"
-      label: archive
+      layout: archives
+      excerpt: "A list of previous articles"
       is_archive: true
 
 markdown: kramdown

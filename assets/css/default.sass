@@ -3,26 +3,9 @@
 ---
 
 @charset "utf-8"
-@import reset, vars, body, banner, article, figure, card, footer
+@import reset, vars, body, banner, article, figure, footer
 
 article.post
-  header
-    h1
-      font-size: var(--hed-size)
-      line-height: var(--line-height-hed)
-    div.byline
-      margin-top: 1em
-      p
-        display: inline
-        margin: 0
-        font-size: var(--body-size-sm)
-        color: var(--color-half)
-        &:nth-of-type(2)::before
-          content: '\0020\/\0020'
-  figure
-    margin: var(--shim) 0 var(--shim-p) 0
-
-article.micro
   .hed
     h1, p
       display: inline
@@ -34,14 +17,6 @@ article.micro
       content: '.'
   figure
     margin-bottom: var(--shim)
-
-article.float
-  .hed
-    h1
-      font-size: var(--hed-size)
-      line-height: var(--line-height-hed)
-  figure
-    margin-bottom: var(--shim-p)
 
 article.archive
   &:not(:first-of-type)
@@ -66,20 +41,8 @@ article.error
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 40rem)
-
-  article.post
-    header
-      div.byline.fat
-        margin-top: var(--shim-n)
-      div.byline.thin
-        margin-top: 0
-
-//-----------------------------------------------------------------------------
-
 @media screen and (min-width: 48rem)
 
-  article.float,
-  article.micro
+  article.post,
     .hed.fat
       padding-top: 1em

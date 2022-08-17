@@ -6,15 +6,14 @@ layout: default
 {% assign raw = page.permalink | split: '/' | shift %}
 {% assign raw_yr = raw[0] %}
 {% assign raw_mo = raw[1] %}
-{% assign full_yr = raw_yr | prepend: '20' %}
 
 {% if raw_mo %}
   {% assign is_month_index = true %}
-  {% assign target_mo = full_yr | append: '-' | append: raw_mo | append: '-' | append: '01' | date: '%b' %}
+  {% assign target_mo = raw_yr | append: '-' | append: raw_mo | append: '-' | append: '01' | date: '%b' %}
 {% else %}
   {% assign is_year_index = true %}
 {% endif %}
-{% assign target_yr = full_yr %}
+{% assign target_yr = raw_yr %}
 
 {% assign posts_by_year_month = site.posts | group_by_exp: "post", "post.date | date:'%b %Y'" %}
 
@@ -23,28 +22,36 @@ layout: default
 {% for group in posts_by_year_month %}
     
   {% if is_month_index and group.name contains target_yr and group.name contains target_mo %}
+
   <article class="archive">
     <header><h1>{{ group.name }}</h1></header>
     <ul>
+    
     {% for post in group.items %}
       <li><a href="{{ post.url | absolute_url }}">{{ post.title | smartify | normalize_whitespace | strip }}</a></li>
-    {% endfor %}
+    {% endfor -%}
+
     </ul>
   </article>
-  {% assign print_success = true %}
-  {% endif %}
+  
+  {% assign print_success = true -%}
+  {% endif -%}
 
   {% if is_year_index and group.name contains target_yr %}
+
     <article class="archive">
       <header><h1>{{ group.name }}</h1></header>
       <ul>
+  
       {% for post in group.items %}
         <li><a href="{{ post.url | absolute_url }}">{{ post.title | smartify | normalize_whitespace | strip }}</a></li>
-      {% endfor %}
+      {% endfor -%}
+  
       </ul>
     </article>
-    {% assign print_success = true %}
-  {% endif %}
+
+    {% assign print_success = true -%}
+  {% endif -%}
 
 {% endfor -%}
 

@@ -1,25 +1,20 @@
 header[role="banner"]
-  margin-top: var(--shim-n)
-  margin-left: auto
-  margin-right: auto
-  margin-bottom: var(--shim-p)
+  margin: var(--shim-2x) auto
   max-width: var(--page-width)
   display: flex
-  flex-flow: row wrap
-  align-items: center
-  justify-content: space-between
-  gap: 1em
+  flex-flow: column
+  gap: var(--shim-2x)
   h1
+    margin-left: -2px
     font-family: var(--fam-logo)
-    font-size: var(--shim-p)
+    font-size: var(--hed-size-lg)
     font-weight: 400
     line-height: 1
-    letter-spacing: -0.125px
-    text-transform: uppercase
     text-shadow: -2px 2px 1px var(--color-shock)
     a:link, a:visited
       color: var(--color-logo)
       text-decoration: none
   div.hr  
     flex: 1
-    width: 100%
+    margin: 0
+    max-width: var(--shim-4x)

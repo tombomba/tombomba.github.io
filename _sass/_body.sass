@@ -38,7 +38,7 @@ time
   white-space: nowrap
 
 .datelist
-  margin: var(--buffer) auto 0 auto
+  margin: var(--shim-2x) auto
   display: flex
   flex-flow: row wrap
   align-items: center
@@ -47,13 +47,16 @@ time
   list-style-type: none
 
 .hr
-  margin: 0 auto
+  margin: 0
   padding: 0
   height: 0
   border: 0
   border-top: thin solid #{hsl(0, 0%, 82%)}
   border-bottom: medium solid #{hsl(0, 0%, 100%)}
   background-color: var(--color-body)
+  &.spacer
+    margin: var(--buffer) 0 
+    max-width: var(--shim-4x)
 
 .pagebreak
   margin: var(--buffer) auto
@@ -66,11 +69,10 @@ time
   &::after
     content: '\273B'
     font-family: var(--fam-logo)
-    font-size: 1em
+    font-size: 20px
     font-weight: 700
     line-height: 1
     text-align: center
-    opacity: 0.75
     color: var(--color-shade)
 
 .daystamp
@@ -91,3 +93,6 @@ time
 
   .pagebreak
     margin: var(--shim-2x) auto
+
+  .hr.spacer
+    margin: var(--shim-2x) 0

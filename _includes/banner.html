@@ -1,11 +1,4 @@
-{% if page.is_home %}
-  {% assign has_media = site.posts.first.media.ratio %}
-{% else -%}
-  {% assign has_media = page.media.ratio %}
-{% endif -%}
-
 <header role="banner">
-  {% if has_media %}<div class="hr"></div>{% endif -%}
   <h1><a href="{{ site.url }}" aria-label="Home">{{ site.title }}</a></h1>
   <div class="hr"></div>
 </header>

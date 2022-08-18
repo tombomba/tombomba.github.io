@@ -1,6 +1,5 @@
 ---
 title: "'Marie Antoinette' in 35"
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 media:
   ratio: 560 315
   image: marie-antoinette-in-35.jpg

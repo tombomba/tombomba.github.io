@@ -1,6 +1,5 @@
 ---
 title: "Hatching"
-excerpt: "A little Finnish horror with a hard, psychological edge."
 media: 
   image: hatching-2022-poster.jpg
   style: poster left pull jumbo tilt fathed

@@ -37,6 +37,22 @@ a
 time
   white-space: nowrap
 
+.related
+  margin-top: var(--shim-2x)
+  ul
+    margin: var(--shim-2x) auto 0 auto
+    max-width: var(--page-width)
+    list-style-type: none
+    li
+      h1, h2, h3
+        font-size: 1em
+        font-weight: 400
+        line-height: var(--line-height-hed)
+      p
+        margin: 0
+      &:not(:first-of-type)
+        margin-top: var(--shim-n)
+
 .hr
   margin: 0
   padding: 0

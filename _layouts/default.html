@@ -39,9 +39,13 @@
   <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css | append: '.css' }}?v={{ site.time | date: '%j%H%M%S' }}">
 
   <!-- goog -->
+  {% assign page_emoji = site.pages | map: 'emoji' | uniq -%}
+  {% assign post_emoji = site.posts | map: 'emoji' | uniq -%}
+  {% assign all_emoji = page_emoji | concat: post_emoji | uniq | join | strip | remove: ' ' -%}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@700&family=Oswald:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Noto+Emoji:wght@700&display=swap&text={{ site.title | remove: ' ' | upcase }}~!{{ site.emoji }}{{ all_emoji }}">
+
 
 </head>
 

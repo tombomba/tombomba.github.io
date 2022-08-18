@@ -1,8 +1,8 @@
 footer
   margin: var(--buffer) auto var(--shim-n) auto
-  max-width: var(--page-width)
   ul
-    margin: 1em auto 0 auto
+    margin: var(--shim-n) auto 0 auto
+    max-width: var(--page-width)
     display: flex
     flex-flow: column
     align-items: center
@@ -19,13 +19,15 @@ footer
 @media screen and (min-width: 40rem)
 
   footer
-    margin: var(--buffer) auto
+    margin: var(--shim-2x) auto var(--shim-p) auto
     ul
       flex-flow: row wrap
       gap: 0.5em
       li
         font-size: var(--body-size-sm)
         line-height: 1
+        &.switch
+          display: none
         &.copydate
           margin: 0
           order: -1

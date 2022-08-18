@@ -1,24 +1,55 @@
 header[role="banner"]
-  margin: var(--shim-2x) auto
-  padding-bottom: 3px
-  max-width: var(--page-width)
-  display: flex
-  flex-flow: row wrap
-  justify-content: space-between
+  margin: 0 auto var(--shim-2x) auto
+  padding-bottom: 5px
   .wrap
+    margin: 0 auto
+    max-width: var(--page-width)
+    height: var(--shim-2x)
+    display: flex
+    flex-flow: row wrap
+    align-items: center
+    justify-content: space-between
+    h1, p
+      margin: 0
+      font-weight: 700
+      line-height: 1
+      text-shadow: -2px 2px var(--color-shock)
+      color: var(--color-logo)
+      a:link, a:visited
+        color: var(--color-logo)
+        text-decoration: none
     h1
       font-family: var(--fam-logo)
-      font-size: 1em
-      line-height: var(--line-height-hed)
-      a:link, a:visited
-        color: var(--color-text)
-        text-decoration: none
+      font-size: var(--shim-p)
+      text-transform: uppercase
     p
-      margin: 0
-      line-height: var(--line-height-hed)
-      text-transform: lowercase
-      color: var(--color-half)
+      font-size: var(--shim)
+      font-family: var(--fam-emoji)
+    ul
+      display: none
   div.hr
     flex: 1
     width: 100%
-    max-width: var(--shim-4x)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  header[role="banner"]
+    .wrap
+      padding: 0 1em 0 var(--nudge-2x)
+      max-width: 100%
+      p
+        flex: 1 0 20%
+        order: -1
+      ul
+        flex: 1 0 20%
+        display: flex
+        flex-flow: row wrap
+        align-items: center
+        justify-content: flex-end
+        gap: 0.5em
+        list-style-type: none
+        li
+          font-size: var(--body-size-sm)
+          line-height: 1

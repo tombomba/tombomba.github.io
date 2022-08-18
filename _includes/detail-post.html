@@ -5,10 +5,11 @@
   {% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', '/>' %}
 {% endif -%}
 
-{% unless page.is_home or page.is_page %}
-  {% capture datef %}&nbsp;<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date: '%d %b' }}</time>{% endcapture -%}
+{% unless p.is_page %}
+  {% capture datef %}<a href="{{ p.date | date: '%Y' {{ p.date | date: '%d %b' }}{% endcapture %}
+  {% capture datetime %}&nbsp;<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date: '%d %b' }}</time>{% endcapture -%}
   {% assign copysize = copy | size | minus: 4 %}
-  {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' %}
+  {% assign copy = copy | slice: 0, copysize | append: datetime | append: '</p>' %}
 {% endunless -%}  
 
 {% capture hedbox %}<div class="hed"><h1>{{ titlestring }}</h1><p>{% endcapture %}

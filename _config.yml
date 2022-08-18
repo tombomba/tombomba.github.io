@@ -1,9 +1,8 @@
-title: "Crash diary"
-description: "A media journal, a small collage, a dumb blog"
+title: "Bomtomba"
+description: "A media diary, a small collage, a dumb blog"
 domain: "www.bomtomba.com"
 
 favicon: "✨"
-emoji: "✌️"
 
 url: "https://www.bomtomba.com"
 cdn: "https://www.bomtomba.com/assets/"
@@ -29,7 +28,7 @@ collections:
 defaults:
   -
     scope:
-      path: ""  
+      path: ""
       type: posts
     values:
       layout: post

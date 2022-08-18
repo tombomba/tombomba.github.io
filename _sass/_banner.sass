@@ -6,16 +6,19 @@ header[role="banner"]
   flex-flow: column
   justify-content: space-between
   gap: var(--shim-2x)
-  h1
-    font-family: var(--fam-logo)
-    font-size: var(--shim)
-    font-weight: 400
-    line-height: 1
-    letter-spacing: -0.125px
-    text-shadow: -2px 2px var(--color-shock)
-    a:link, a:visited
-      color: var(--color-logo)
-      text-decoration: none
+  .wrap
+    h1
+      font-family: var(--fam-logo)
+      font-size: 1em
+      line-height: var(--line-height-hed)
+      a:link, a:visited
+        color: var(--color-text)
+        text-decoration: none
+    p
+      margin: 0
+      line-height: var(--line-height-hed)
+      text-transform: lowercase
+      color: var(--color-half)
   div.hr
     flex: 1
     width: 100%

@@ -25,9 +25,10 @@ article
       height: 100%
 
   figure.float
-    margin: var(--nudge) 0 var(--shim-n) 0
+    margin: 0 0 var(--shim) 0
     img
-      margin: 0 auto
+      margin-left: auto
+      margin-right: auto
       --width: 12em
       --height: var(--width)
       display: block
@@ -35,22 +36,14 @@ article
       height: var(--height)
       object-fit: cover
       object-position: 50% 50%
-    .ratio--tv
-      --height: calc(var(--width) / 1.33)
     .ratio--academy
       --height: calc(var(--width) / 1.375)
     .ratio--poster
       --height: calc(var(--width) * 1.5)
     .ratio--european
       --height: calc(var(--width) / 1.66)
-    .ratio--hd
-      --height: calc(var(--width) / 1.78)
     .ratio--american
       --height: calc(var(--width) / 1.85)
-    .ratio--anamorphic
-      --height: calc(var(--width) / 2.39)
-    .ratio--ultra
-      --height: calc(var(--width) / 2.75)
     .ratio--square
       --height: var(--width)
 
@@ -62,7 +55,7 @@ article
 
     figure.float
       img
-        --width: 15em
+        --width: 13em
 
 //-----------------------------------------------------------------------------
 
@@ -85,21 +78,16 @@ article
     figure.float
       padding: 0
       img
-        --width: 11em
-
-    figure.float.teaser
-      padding-top: var(--nudge)
-      img
-        --width: calc(var(--shim) * 5)
+        --width: 12em
 
     figure.float.left
       float: left
-      margin-right: 1em
+      margin-right: var(--shim-n)
       margin-bottom: 1em
     
     figure.float.right
       float: right
-      margin-left: 1em
+      margin-left: var(--shim-n)
       margin-bottom: 1em
 
 //-----------------------------------------------------------------------------
@@ -109,83 +97,27 @@ article
   article
 
     figure.float
-      margin-top: 0
-      img
-        --width: 12em
+      margin-top: var(--nudge)
 
     figure.float.left
-      margin-right: var(--shim)
+      margin-right: var(--shim-n)
   
     figure.float.right
-      margin-left: var(--shim)
-
-    figure.float.right.tilt
-      transform: rotate(3deg)
-
-    figure.float.left.tilt
-      transform: rotate(-3deg)
-    
-    figure.float.flat
-      margin-top: var(--nudge)
-    
-    figure.float.left.pull
-      margin-left: -1em
-
-    figure.float.right.pull
-      margin-right: -1em
-
+      margin-left: var(--shim-n)
+       
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 60rem)
 
   article
-  
-    figure.float.jumbo
+
+    figure.float.left
+      margin-right: var(--shim)
+      margin-left: calc(var(--shim) * -1)
       img
         --width: 13em
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 70rem)
-
-  article
-
-    figure.float.left
-      &.tilt
-        margin-right: var(--shim-p)
-      &.pull
-        margin-left: calc(var(--shim-n) * -1)
-
+     
     figure.float.right
-      &.tilt
-        margin-left: var(--shim-p)
-      &.pull
-        margin-right: calc(var(--shim-n) * -1)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 80rem)
-
-  article
-
-    figure.float.jumbo
+      margin-left: var(--shim)
       img
-        --width: 14em
-
-    figure.float.left
-      &.pull
-        margin-left: calc(var(--shim-n) * -2)
-
-    figure.float.right
-      &.pull
-        margin-right: calc(var(--shim-n) * -2)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 90rem)
-
-article
-
-  figure.float.jumbo
-    img
-      --width: 15em
+        --width: 13em

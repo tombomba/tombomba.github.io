@@ -27,7 +27,7 @@ article
     &.poster
       aspect-ratio: 1/1.5
     &.top
-      margin-top: var(--nudge)
+      margin-top: 0
       margin-bottom: var(--shim)
     &.middle
       margin-top: var(--shim)
@@ -43,8 +43,6 @@ article
       --width: 50%
     &.third
       --width: 33%
-    &.quarter
-      --width: 25%
     &.center
       margin-left: auto
       margin-right: auto
@@ -54,19 +52,11 @@ article
     &.right
       margin-right: 0
       margin-left: auto
-    &.tilt.left,
-    &.tilt.center
-      transform: rotate(-3deg)
-    &.tilt.right
-      transform: rotate(3deg)
-    &.float.left
-      float: left
-      margin-right: 1em
-      margin-bottom: 1em
-    &.float.right
-      float: right
-      margin-left: 1em
-      margin-bottom: 1em
+    &.float
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: var(--shim-p)
+      --width: 40%
     &.border
       border: thin solid var(--color-text)
 
@@ -76,13 +66,58 @@ article
 
   article img
 
+    &.float
+      margin-top: var(--nudge)
+      margin-bottom: 1em
+    &.float.left
+      float: left
+      margin-right: 1em
+      --width: 33%
+    &.float.right
+      float: right
+      margin-left: 1em
+      --width: 33%
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50rem)
+
+  article img
+
     &.top
       margin-bottom: var(--shim-p)
     &.bottom
       margin-top: var(--shim-p)
+    &.tilt
+      margin-top: calc(var(--nudge) * -1)
+    &.tilt.left,
+    &.tilt.center
+      transform: rotate(-3deg)
+    &.tilt.right
+      transform: rotate(3deg)
     &.float.left
       margin-right: var(--shim)
-      margin-bottom: var(--shim-n)
     &.float.right
       margin-left: var(--shim)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 60rem)
+
+  article img
+
+    &.float
       margin-bottom: var(--shim-n)
+    &.float.left.pull
+      margin-left: calc(var(--shim-n) * -1)
+    &.float.right.pull
+      margin-right: calc(var(--shim-n) * -1)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 70rem)
+
+  article img
+    &.float.left.pull
+      margin-left: calc(var(--shim-n) * -2)
+      --width: 40%

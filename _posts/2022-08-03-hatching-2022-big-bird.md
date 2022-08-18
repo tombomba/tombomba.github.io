@@ -1,7 +1,7 @@
 ---
 title: "Hatching"
 ---
-![A family wears strange paper masks in a group photo]({{ 'img/hatching-2022-poster.jpg' | prepend: site.cdn }}){: .top .poster .third .float .left }
+![A family wears strange paper masks in a group photo]({{ 'img/hatching-2022-poster.jpg' | prepend: site.cdn }}){: .top .poster .float .right }
 
 Integer fringilla sagittis est, vitae congue lectus fringilla a. Nullam vehicula odio sed metus euismod consequat. Nulla erat nunc, fermentum ut dapibus vel, semper vitae sapien. Nam mi orci, finibus at nulla ut, rutrum convallis erat. Vivamus porta libero quis rhoncus mollis. Cras vehicula interdum diam quis tincidunt.
 

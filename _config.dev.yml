@@ -4,8 +4,6 @@ domain: "localhost:4000"
 
 url: "http://localhost:4000"
 cdn: "http://localhost:4000/assets/"
-img: "http://localhost:4000/assets/img/"
-css: "http://localhost:4000/assets/css/"
 
 safe: true
 future: true

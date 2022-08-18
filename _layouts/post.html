@@ -9,6 +9,16 @@ layout: default
     {% include detail-post.html page=page content=content %}
   </article>
 
+  {% if page.previous or page.next %}
+  <div class="related">
+    <div class="hr"></div>
+    <ul>
+      {% if page.previous %}<li><h2><a href="{{ page.previous.url | absolute_url }}">{{ page.previous.title | strip | smartify | normalize_whitespace }}</a>&nbsp;</h2><p>{{ page.previous.excerpt | truncatewords: 20, '...' | smartify | normalize_whitespace }}</p></li>{% endif %}
+      {% if page.next %}<li><h2><a href="{{ page.next.url | absolute_url }}">{{ page.next.title | strip | smartify | normalize_whitespace }}</a>&nbsp;</h2><p>{{ page.next.excerpt | truncatewords: 20, '...' | smartify | normalize_whitespace }}</p></li>{% endif %}
+    </ul>
+  </div>
+  {% endif -%}
+ 
 </main>
 
 {% include footer.html %}

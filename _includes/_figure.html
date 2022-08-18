@@ -9,8 +9,8 @@
     {% assign percentage = mh | divided_by: mw | times: 100 | round: 2 %}
   {% endif -%}
 
-  {% if include.media.image and mw <= 673 %}
-    {% assign vidmax = mw | divided_by: 673 | times: 100 | round: 2 %}
+  {% if include.media.image and mw <= 732 %}
+    {% assign vidmax = mw | divided_by: 732 | times: 100 | round: 2 %}
     {% if vidmax > 100 %}{% assign vidmax = 100 %}{% endif %}
   {% endif -%}
 

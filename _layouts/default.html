@@ -24,7 +24,7 @@
   <meta property="og:description" content="{{ page.tweet | default: page.excerpt | truncate: 280 | replace: '"', "'" | strip | strip_html | normalize_whitespace | xml_escape }}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:type" content="blog">
-  <meta property="og:image" content="{{ page.media.image | default: 'bomtomba.jpg' | prepend: site.img }}">
+  <meta property="og:image" content="{{ page.media.image | default: 'img/bomtomba.jpg' | prepend: site.cdn }}">
 
   <!-- twitter  -->
   <meta name="twitter:title" content="{{ page.title | default: site.title | strip | truncate: 120 | xml_escape }}">
@@ -33,10 +33,10 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@{{ site.socials }}">
   <meta name="twitter:creator" content="@{{ site.socials }}">
-  <meta name="twitter:image:src" content="{{ page.media.image | default: 'bomtomba.jpg' | prepend: site.img }}">
+  <meta name="twitter:image:src" content="{{ page.media.image | default: 'img/bomtomba.jpg' | prepend: site.cdn }}">
 
   <!-- css -->
-  <link rel="stylesheet" href="{{ page.style | default: 'default' | prepend: site.css | append: '.css' }}?v={{ site.time | date: '%j%H%M%S' }}">
+  <link rel="stylesheet" href="{{ 'css/default.css' | prepend: site.cdn }}?v={{ site.time | date: '%j%H%M%S' }}">
 
   <!-- goog -->
   {% assign page_emoji = site.pages | map: 'emoji' | uniq -%}

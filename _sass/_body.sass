@@ -46,10 +46,27 @@ time
   border-bottom: medium solid #{hsl(0, 0%, 100%)}
   background-color: var(--color-body)
   &.spacer
-    margin: var(--buffer) 0 
+    margin: var(--shim-2x) 0
     max-width: var(--shim-4x)
 
 .pagebreak
+  margin: var(--buffer) auto
+  paddding: 0
+  height: var(--shim)
+  max-width: var(--shim-2x)
+  display: flex
+  flex-flow: row wrap
+  align-items: center
+  justify-content: center
+  &::after
+    content: "~~~"
+    font-family: var(--fam-logo)
+    font-size: 1em
+    font-weight: 700
+    line-height: 1
+    text-align: center
+    color: var(--color-logo)
+    text-shadow: -2px 2px var(--color-shock)
 
 .daystamp
   font-style: italic
@@ -66,9 +83,3 @@ time
 
   body
     padding: 0
-
-  .pagebreak
-    margin: var(--shim-2x) auto
-
-  .hr.spacer
-    margin: var(--shim-2x) 0

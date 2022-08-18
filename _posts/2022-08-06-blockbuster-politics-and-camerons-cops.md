@@ -4,13 +4,9 @@ tweet: >
   "Was the T-1000 created as a commentary on policing?"
 emoji: "🤖"
 ---
+![King]({{ 'img/terminator-2-1991-a.jpg' | prepend: site.cdn }}){: .top }
+
 Nam consequat velit elementum arcu iaculis, eget blandit nisi vestibulum. Maecenas vitae quam nibh. In hac habitasse platea dictumst. Quisque ornare dolor ut urna dapibus ultricies. Pellentesque nec eros ut ipsum porttitor consequat vitae vitae tortor. Vestibulum in velit et ligula ultricies facilisis. Proin congue consequat dui vel suscipit. Suspendisse ac orci ut dolor venenatis cursus.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2XPxVr40CTU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-xxx WTH HELLO xxx
-
-![Alt text goes here]({{ 'img/terminator-2-1991-a.jpg' | prepend: site.cdn ){: .half .center }
 
 Quisque luctus nisl nec justo posuere consequat. Fusce id fringilla lacus, vitae bibendum felis. Aliquam erat volutpat. Sed dictum eget est in tristique. Curabitur convallis nibh lorem, ac pharetra velit auctor sed. Maecenas hendrerit ipsum vitae mollis mattis. Curabitur egestas euismod mollis. Nulla facilisi. Quisque tristique vitae orci ut accumsan. Aliquam tristique mauris ac imperdiet pulvinar. Aenean et ligula mollis, convallis lectus at, auctor augue.
 

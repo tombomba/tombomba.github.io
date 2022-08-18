@@ -36,21 +36,12 @@ a
 
 time
   white-space: nowrap
-
-.related
-  margin-top: var(--shim-2x)
-  ul
-    margin: var(--shim-2x) auto 0 auto
-    max-width: var(--page-width)
-    list-style-type: none
-    li
-      h1, h2, h3
-        font-size: 1em
-        font-weight: 400
-      p
-        margin: 0
-      &:not(:first-of-type)
-        margin-top: var(--shim-n)
+  font-style: italic
+  color: var(--color-half)
+  &::before
+    content: '('
+  &::after
+    content: ')'
 
 .hr
   margin: 0
@@ -65,7 +56,7 @@ time
     max-width: var(--shim-4x)
 
 .pagebreak
-  margin: var(--buffer) auto
+  margin: 0 auto
   paddding: 0
   height: var(--shim)
   max-width: var(--shim-2x)
@@ -74,14 +65,13 @@ time
   align-items: center
   justify-content: center
   &::after
-    content: "~~~"
+    content: "\273B"
     font-family: var(--fam-logo)
     font-size: 1em
     font-weight: 700
     line-height: 1
     text-align: center
-    color: var(--color-logo)
-    text-shadow: -2px 2px var(--color-shock)
+    color: var(--color-shade)
 
 .daystamp
   font-style: italic

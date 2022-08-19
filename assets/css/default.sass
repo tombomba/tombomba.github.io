@@ -15,8 +15,6 @@ article.post
       content: '\0020'
     .punc::after
       content: '.'
-  figure
-    margin-bottom: var(--shim)
 
 article.archive
   &:not(:first-of-type)
@@ -39,11 +37,3 @@ article.error
     line-height: var(--line-height-hed)
     color: var(--color-logo)
     text-shadow: -2px 2px 1px var(--color-shock)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 48rem)
-
-  article.post,
-    .hed.fat
-      padding-top: var(--nudge-2x)

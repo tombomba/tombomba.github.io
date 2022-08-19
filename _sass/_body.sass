@@ -38,6 +38,11 @@ time
   white-space: nowrap
   font-style: italic
   color: var(--color-half)
+  a:link, a:visited
+    color: var(--color-half)
+    text-decoration: none
+  a:hover
+    text-decoration: underline
   &::before
     content: '('
   &::after
@@ -51,9 +56,6 @@ time
   border-top: thin solid #{hsl(0, 0%, 82%)}
   border-bottom: medium solid #{hsl(0, 0%, 100%)}
   background-color: var(--color-body)
-  &.spacer
-    margin: var(--shim-2x) 0
-    max-width: var(--shim-4x)
 
 .pagebreak
   margin: 0 auto
@@ -64,8 +66,6 @@ time
   flex-flow: row wrap
   align-items: center
   justify-content: center
-  &.pad
-    padding-bottom: var(--nudge)
   &::after
     content: "\273B"
     font-family: var(--fam-logo)

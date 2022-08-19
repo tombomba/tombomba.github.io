@@ -22,10 +22,3 @@
 {% assign titlef = new_title | join: ' ' %}
 {% assign titlef = titlef | replace: '!!OPENSPAN!!', '<span class="widont">' %}
 {% assign titlef = titlef | replace: '!!CLOSESPAN!!', '</span>' | strip | smartify | normalize_whitespace -%}
-
-
-{% if include.is_home %}
-  {% capture titlestring %}<a href="{{ include.url | absolute_url }}">{{ titlef }}</a>{% endcapture %}
-{% else %}
-  {% assign titlestring = titlef %}
-{% endif -%}

@@ -1,11 +1,12 @@
 {% assign p = include.page %}
-{% assign copy = include.content | strip %}
-{% include _puncf.html title=p.title url=p.url is_home=include.is_home %}
+{% assign copy = include.content | strip -%}
+
+{% include _titlef.html title=p.title -%}
 
 {% if include.is_home and forloop.index > 1 and copy contains 'class="top' %} 
   {% assign copy = copy | replace_first: '<p><img src=', '<div class="figpad"></div><img src=' | replace: '/></p>', '/>' %}
 {% endif -%}
-{% if copy contains '<p><img src=' -%}
+{% if copy contains '<p><img src=' %}
   {% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', '/>' %}
 {% endif -%}
 
@@ -15,7 +16,7 @@
   {% assign copy = copy | slice: 0, copysize | append: timef | append: '</p>' %}
 {% endunless -%}  
 
-{% capture hedbox %}<div class="hed"><h1>{{ titlestring }}</h1><p>{% endcapture %}
+{% capture hedbox %}<div class="hed"><h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif -%}</h1><p>{% endcapture %}
 {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox %}
 
 {{ copy }}

@@ -5,7 +5,7 @@ tweet: >
 emoji: "🤖"
 ---
 <!--fig-->
-![King]({{ 'img/terminator-2-1991-a.jpg' | prepend: site.cdn }}){: .top }
+![King]({{ 'img/terminator-2-1991-a.jpg' | prepend: site.cdn }}){: .top .pad }
 
 Nam consequat velit elementum arcu iaculis, eget blandit nisi vestibulum. Maecenas vitae quam nibh. In hac habitasse platea dictumst. Quisque ornare dolor ut urna dapibus ultricies. Pellentesque nec eros ut ipsum porttitor consequat vitae vitae tortor. Vestibulum in velit et ligula ultricies facilisis. Proin congue consequat dui vel suscipit. Suspendisse ac orci ut dolor venenatis cursus.
 

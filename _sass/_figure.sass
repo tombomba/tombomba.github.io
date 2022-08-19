@@ -1,11 +1,17 @@
 article
 
-  iframe[src*="https://www.youtube.com"]
-    margin: var(--shim) auto
+  iframe[src*="https://www.youtube.com"],
+  iframe[src*="https://www.youtube-nocookie.com"]
     width: 100%
     height: unset
     aspect-ratio: 16/9
+    background-clip: content-box
     background-color: var(--color-back)
+    &.top
+      margin-bottom: var(--shim)
+    &.middle
+      margin-top: var(--shim)
+      padding: var(--nudge) 0
 
   img
     display: block
@@ -48,11 +54,27 @@ article
     &.right
       margin-right: 0
       margin-left: auto
+    &.left
+      margin-right: auto
+      margin-left: 0
+
     &.float
       margin-left: auto
       margin-right: auto
       margin-bottom: var(--shim)
-      --width: 40%
+      --width: 50%
+    
+    &.tilt.top
+      margin-bottom: var(--shim-p)
+    &.tilt.center,
+    &.tilt.left 
+      transform: rotate(-3deg)
+    &.tilt.right
+      transform: rotate(3deg)
+
+  div.figpad
+    width: 100%
+    height: var(--nudge)
 
 //-----------------------------------------------------------------------------
 
@@ -61,9 +83,10 @@ article
   article img
 
     &.float
-      margin-top: var(--nudge)
       margin-bottom: 1em
       --width: 33%
+    &.float.top
+      margin-top: var(--nudge)
     &.float.left
       float: left
       margin-right: 1em

@@ -1,15 +1,18 @@
 {% assign p = include.page %}
 {% assign copy = include.content | strip %}
 {% include _puncf.html title=p.title url=p.url is_home=include.is_home %}
-{% if copy contains '<p><img src=' %}
+
+{% if include.is_home and forloop.index > 1 and copy contains 'class="top' %} 
+  {% assign copy = copy | replace_first: '<p><img src=', '<div class="figpad"></div><img src=' | replace: '/></p>', '/>' %}
+{% endif -%}
+{% if copy contains '<p><img src=' -%}
   {% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', '/>' %}
 {% endif -%}
 
 {% unless p.is_page %}
-  {% capture datef %}<a href="{{ p.date | date: '%Y' {{ p.date | date: '%d %b' }}{% endcapture %}
-  {% capture datetime %}&nbsp;<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date: '%d %b' }}</time>{% endcapture -%}
+  {% capture timef %}&nbsp;<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ p.date | date: '%d %b' }}</a>{% else %}{{ p.date | date: '%d %b %Y' }}</time>{% endif %}{% endcapture -%}
   {% assign copysize = copy | size | minus: 4 %}
-  {% assign copy = copy | slice: 0, copysize | append: datetime | append: '</p>' %}
+  {% assign copy = copy | slice: 0, copysize | append: timef | append: '</p>' %}
 {% endunless -%}  
 
 {% capture hedbox %}<div class="hed"><h1>{{ titlestring }}</h1><p>{% endcapture %}

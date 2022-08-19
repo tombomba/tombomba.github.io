@@ -2,6 +2,7 @@
 title: "'Marie Antoinette' in 35"
 excerpt: >
   Sed sed tristique risus. Sed in pellentesque dolor. Aenean aliquam, felis nec vehicula pharetra, augue neque iaculis nisl, vel finibus eros urna et augue. Cras nisl lacus, suscipit et condimentum sit amet, iaculis accumsan felis.
+image: "/assets/img/marie-antoinette-in-35.jpg"
 ---
 ![Cake]({{ 'img/marie-antoinette-in-35.jpg' | prepend: site.cdn }}){: .top .academy .center .wide .tilt }
 

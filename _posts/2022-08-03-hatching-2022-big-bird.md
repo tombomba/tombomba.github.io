@@ -1,5 +1,7 @@
 ---
 title: "Hatching"
+tweet: "Donec vel venenatis nulla. Sed vitae risus lacinia, sagittis enim vitae, feugiat quam."
+image: "/assets/img/hatching-2022-poster.jpg"
 ---
 ![A family wears strange paper masks in a group photo]({{ 'img/hatching-2022-poster.jpg' | prepend: site.cdn }}){: .top .poster .float .left }
 

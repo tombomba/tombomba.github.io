@@ -2,6 +2,7 @@
 title: "The Stranger Wore a Gun (Columbia, 1953)"
 excerpt: >
   Almost a proto-"Fistful of Dollars." Almost.
+image: "/assets/img/the-stranger-wore-a-gun-columbia-1953.jpg"
 ---
 ![3D! Technicolor! Randolph Scott!]({{ 'img/the-stranger-wore-a-gun-columbia-1953.jpg' | prepend: site.cdn }}){: .top .poster .float .right }
 

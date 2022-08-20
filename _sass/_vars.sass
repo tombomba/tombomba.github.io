@@ -16,8 +16,8 @@ $two-color: hsl(180, 100%, 70%), hsl(48, 100%, 50%), hsl(84, 100%, 50%), hsl(48,
 $primary-color: nth($one-color, $key)
 $secondary-color: nth($two-color, $key)
 
-$primary-color: hsl(216, 100%, 50%)
-$secondary-color: hsl(180, 100%, 70%)
+//$primary-color: hsl(216, 100%, 50%)
+//$secondary-color: hsl(180, 100%, 70%)
 
 $primary-color-fade: rgba($primary-color, 0.5)
 $secondary-color-fade: rgba($secondary-color, 0.5)
@@ -27,9 +27,9 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
 
 \:root
 
-  --fam-logo: 'Rye', sans-serif
-  --fam-emoji: 'Noto Emoji'
   --fam-serif: Georgia, serif
+  --fam-logo: 'Averia Serif Libre', Georgia, serif
+  --fam-emoji: 'Noto Emoji'
 
   --line-height-body: 1.6875
   --line-height-hed: calc(((var(--line-height-body) - 1) / 2) + 1)
@@ -58,8 +58,10 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
   --color-logo: #{$primary-color}
   --color-shock: #{$secondary-color}
 
-  --color-link: hsl(220, 60%, 50%)
-  --color-visited: hsl(300, 50%, 40%)
+  //--color-link: hsl(220, 60%, 50%)
+  //--color-visited: hsl(300, 50%, 40%)
+  --color-link: hsl(240, 100%, 50%)
+  --color-visited: hsl(300, 100%, 25%)
   --color-active: hsl(36, 100%, 50%)
 
   --color-body: hsl(0, 0%, 98%)

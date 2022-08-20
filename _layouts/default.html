@@ -36,15 +36,12 @@
   <meta name="twitter:image:src" content="{{ page.image | default: '/assets/img/bomtomba.jpg' | absolute_url }}">
 
   <!-- css -->
-  <link rel="stylesheet" href="{{ 'css/default.css' | prepend: site.cdn }}?v={{ site.time | date: '%j%H%M%S' }}">
+  <link rel="stylesheet" href="{{ 'css/default.css' | prepend: site.cdn }}?v={{ site.time | date: '%j%H%M' }}">
 
   <!-- goog -->
-  {% assign page_emoji = site.pages | map: 'emoji' | uniq -%}
-  {% assign post_emoji = site.posts | map: 'emoji' | uniq -%}
-  {% assign all_emoji = page_emoji | concat: post_emoji | uniq | join | strip | remove: ' ' -%}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Noto+Emoji:wght@700&display=swap&text={{ site.title | remove: ' ' | upcase }}~!{{ site.emoji }}{{ all_emoji }}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rye&display=swap&text={{ site.title | remove: ' ' | upcase }}~!">
 
 
 </head>

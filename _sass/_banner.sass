@@ -1,6 +1,6 @@
 header[role="banner"]
   margin: 0 auto
-  padding-bottom: 5px
+  //padding-bottom: 3px
   .wrap
     margin: 0 auto
     max-width: var(--page-width)
@@ -11,7 +11,7 @@ header[role="banner"]
     justify-content: space-between
     h1, p
       margin: 0
-      font-weight: 700
+      font-weight: 400
       line-height: 1
       text-shadow: -2px 2px var(--color-shock)
       color: var(--color-logo)
@@ -19,14 +19,20 @@ header[role="banner"]
         color: var(--color-logo)
         text-decoration: none
     h1
+      margin-top: 2px
       font-family: var(--fam-logo)
       font-size: var(--shim-p)
+      letter-spacing: -0.25px
       text-transform: uppercase
-    p
-      font-size: var(--shim)
-      font-family: var(--fam-emoji)
     ul
       display: none
+    .icon
+      margin-bottom: 2px
+      svg
+        width: auto
+        height: var(--shim)
+        fill: var(--color-logo)
+        filter: drop-shadow( -2px 2px var(--color-shock))
   div.hr
     flex: 1
     width: 100%
@@ -37,11 +43,12 @@ header[role="banner"]
 
   header[role="banner"]
     .wrap
-      padding: 0 1em 0 var(--nudge-2x)
+      padding: 0 1em
       max-width: 100%
-      p
+      .icon
         flex: 1 0 20%
         order: -1
+        margin-bottom: 3px
       ul
         flex: 1 0 20%
         display: flex

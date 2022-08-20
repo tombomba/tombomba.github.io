@@ -1,0 +1,10 @@
+---
+layout: post
+title: 'About'
+is_about: true
+is_page: true
+permalink: "/about/"
+---
+{% capture bio %}
+My name is Tom Bomba. I'm a rando on the internet who likes movies, novels, comics, and video games with a sense of place. Give me Lone Pine or Warsong Gulch. Give me the Salinas Valley. Monument Valley. Locations you can live in and dream in and come back to. Then I want story and more story. A protagonist with values, good or bad. Art or trash. High culture or low. Doesn't matter. I want to talk about something with something to say.{% endcapture %}
+{{ bio | strip | smartify | markdownify }}

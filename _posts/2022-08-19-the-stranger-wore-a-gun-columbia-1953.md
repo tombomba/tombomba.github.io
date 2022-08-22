@@ -1,5 +1,5 @@
 ---
-title: "The Stranger Wore a Gun (Columbia Pictures, 1953)"
+title: "The Stranger Wore a Gun (1953)"
 excerpt: >
   Almost a proto-"Fistful of Dollars." Almost.
 image: "/assets/img/the-stranger-wore-a-gun-columbia-1953.jpg"

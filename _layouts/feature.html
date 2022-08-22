@@ -1,0 +1,14 @@
+---
+layout: default
+---
+{% include banner.html %}
+
+<main role="main">
+
+  <article class="{{ page.layout }}"><!-- {{ content | number_of_words }}w -->
+    {% include detail-post.html page=page content=content %}
+  </article>
+  
+</main>
+
+{% include footer.html %}

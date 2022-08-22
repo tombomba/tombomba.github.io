@@ -16,6 +16,17 @@ article.post
     .punc::after
       content: '.'
 
+article.feature
+  header
+    h1 
+      font-size: var(--hed-size)
+      line-height: var(--line-height-hed)
+    .byline
+      p
+        display: inline
+        margin: 0
+        color: var(--color-half)
+
 article.archive
   &:not(:first-of-type)
     margin-top: var(--shim-2x)

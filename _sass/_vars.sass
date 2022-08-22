@@ -24,6 +24,13 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
 
 //-----------------------------------------------------------------------------
 
+@font-face
+  font-family: 'rock_3dregular'
+  src: url('/assets/fonts/rock3d-regular-webfont.woff2') format('woff2'), url('assets/fonts/rock3d-regular-webfont.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+
+//-----------------------------------------------------------------------------
 
 \:root
 
@@ -31,7 +38,7 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
   --fam-mono: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace
   --fam-system: system, system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif
 
-  --fam-logo: 'Oswald', var(--fam-system)
+  --fam-logo: 'Averia Sans Libre', sans-serif
   --fam-emoji: 'Noto Emoji', var(--fam-system)
 
   --line-height-body: 1.6875
@@ -61,10 +68,10 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
   --color-logo: #{$primary-color}
   --color-shock: #{$secondary-color}
 
-  --color-link: hsl(220, 60%, 50%)
-  --color-visited: hsl(300, 50%, 40%)
-  //--color-link: hsl(240, 100%, 50%)
-  //--color-visited: hsl(300, 100%, 25%)
+  //--color-link: hsl(220, 60%, 50%)
+  //--color-visited: hsl(300, 50%, 40%)
+  --color-link: hsl(240, 100%, 50%)
+  --color-visited: hsl(300, 100%, 25%)
   --color-active: hsl(36, 100%, 50%)
 
   --color-body: hsl(0, 0%, 98%)

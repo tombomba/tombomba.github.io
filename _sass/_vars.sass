@@ -8,39 +8,11 @@
 
 //-----------------------------------------------------------------------------
 
-$key: random(6)
-
-$one-color: hsl(216, 100%, 50%), hsl(330, 100%, 40%), hsl(120, 50%, 40%), hsl(12, 100%, 50%), hsl(204, 100%, 50%), hsl(180, 100%, 30%)
-$two-color: hsl(180, 100%, 70%), hsl(48, 100%, 50%), hsl(84, 100%, 50%), hsl(48, 100%, 50%), hsl(90, 100%, 60%), hsl(48, 100%, 50%)
-
-$primary-color: nth($one-color, $key)
-$secondary-color: nth($two-color, $key)
-
-//$primary-color: hsl(216, 100%, 50%)
-//$secondary-color: hsl(180, 100%, 70%)
-
-$primary-color-fade: rgba($primary-color, 0.5)
-$secondary-color-fade: rgba($secondary-color, 0.5)
-
-//-----------------------------------------------------------------------------
-
-@font-face
-  font-family: 'rock_3dregular'
-  src: url('/assets/fonts/rock3d-regular-webfont.woff2') format('woff2'), url('assets/fonts/rock3d-regular-webfont.woff') format('woff')
-  font-weight: normal
-  font-style: normal
-
-//-----------------------------------------------------------------------------
-
 \:root
 
-  --fam-serif: Georgia, Constantia, 'Lucida Bright', Lucidabright, 'Lucida Serif', Lucida, 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', serif
-  --fam-mono: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace
-  --fam-system: system, system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif
-
   --fam-logo: 'Averia Sans Libre', sans-serif
-  --fam-emoji: 'Noto Emoji', var(--fam-system)
-
+  --fam-serif: Georgia, Constantia, 'Lucida Bright', Lucidabright, 'Lucida Serif', Lucida, 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', serif
+ 
   --line-height-body: 1.6875
   --line-height-hed: calc(((var(--line-height-body) - 1) / 2) + 1)
 
@@ -65,11 +37,9 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
 
   --page-width: 34rem
 
-  --color-logo: #{$primary-color}
-  --color-shock: #{$secondary-color}
+  --color-logo: black
+  --color-shock: white
 
-  //--color-link: hsl(220, 60%, 50%)
-  //--color-visited: hsl(300, 50%, 40%)
   --color-link: hsl(240, 100%, 50%)
   --color-visited: hsl(300, 100%, 25%)
   --color-active: hsl(36, 100%, 50%)
@@ -117,22 +87,3 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
     --hed-size-xl: 2.61111111111em
 
     --page-width: 42.063rem
-
-//-----------------------------------------------------------------------------
-
-//@media screen and (min-width: 80rem) // 19px
-
-  \:root
-
-    --line-height-body: 1.8
-
-    --body-size: 1.188rem
-    --body-size-lg: 1.105em
-    --body-size-sm: 0.895em
-
-    --hed-size: 1.26315789474em
-    --hed-size-md: 1.63157894737em
-    --hed-size-lg: 2.05263157895em
-    --hed-size-xl: 2.63157894737em
-
-    --page-width: 45.750rem

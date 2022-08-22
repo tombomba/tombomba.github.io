@@ -3,9 +3,15 @@
 
 {% include _titlef.html title=p.title -%}
 
-{% if include.is_home and forloop.index > 1 and copy contains 'class="top' %} 
-  {% assign copy = copy | replace_first: '<p><img src=', '<div class="figpad"></div><img src=' | replace: '/></p>', '/>' %}
+{% if include.is_home and forloop.index > 1 %}
+  {% if copy contains '<iframe ' %} 
+    {% assign copy = copy | replace_first: '<iframe ', '<div class="figpad"></div><iframe ' %}
+  {% endif -%}  
+  {% if copy contains 'class="top' %} 
+    {% assign copy = copy | replace_first: '<p><img src=', '<div class="figpad"></div><img src=' | replace: '/></p>', '/>' %}
+  {% endif -%}
 {% endif -%}
+
 {% if copy contains '<p><img src=' %}
   {% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', '/>' %}
 {% endif -%}

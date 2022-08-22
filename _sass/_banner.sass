@@ -16,52 +16,18 @@ header[role="banner"]
       text-transform: uppercase
       a:link, a:visited
         color: black
-        text-decoration: none     
+        text-decoration: none
     ul
       display: none
     .icon
       svg
         width: auto
-        height: var(--shim-p)
-        fill: white
-        background-color: black
-        padding: 7px
-        border-radius: 4px
+        height: var(--shim)
+        fill: var(--color-link)
   div.hr
     flex: 1
     width: 100%
 
 //-----------------------------------------------------------------------------
 
-//@media screen and (min-width: 40rem)
-
-  header[role="banner"]
-    .wrap
-      padding: 0 1em
-      max-width: 100%
-      .icon
-        flex: 1 0 20%
-        order: -1
-        svg
-          padding: 8px
-      ul
-        flex: 1 0 20%
-        display: flex
-        flex-flow: row wrap
-        align-items: center
-        justify-content: flex-end
-        gap: 0.5em
-        list-style-type: none
-        li
-          font-size: var(--body-size-sm)
-          line-height: 1
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 50rem)
-
-  header[role="banner"]
-    .wrap
-      .icon
-        svg
-          padding: 9px
+//@media screen and (min-width: 50rem)

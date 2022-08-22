@@ -1,4 +1,5 @@
 ---
+layout: feature
 title: "Vengeance (Focus Features, 2022)"
 tweet: "Ugh."
 image: "/assets/img/vengeance-focus-2022.jpg"

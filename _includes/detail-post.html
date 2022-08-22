@@ -1,7 +1,7 @@
 {% assign p = include.page %}
 {% assign copy = include.content | strip -%}
 
-{% include _titlef.html title=p.title -%}
+{% include _titlef-punc.html title=p.title -%}
 
 {% if include.is_home and forloop.index > 1 %}
   {% if copy contains '<iframe ' %} 

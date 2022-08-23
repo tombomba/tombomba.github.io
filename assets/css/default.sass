@@ -6,19 +6,22 @@
 @import reset, vars, body, banner, article, figure, footer
 
 article.post
-  header
-    h1
-      font-size: var(--hed-size)
-      line-height: var(--line-height-hed)
-    div.byline
-      p
-        display: inline
-        margin: 0
-        font-size: var(--body-size-sm)
-        line-height: var(--line-height-hed)
-        color: var(--color-half)
-        &:nth-of-type(2)::before
-          content: '\0020\/\0020'
+  .hed
+    h1, p
+      display: inline
+      font-size: 1em
+    h1::after
+      content: "\0020"
+    .punc::after
+      content: '.'
+  .daystamp
+    font-style: italic
+    color: var(--color-half)
+    a:link, a:visited
+      color: var(--color-half)
+      text-decoration: none
+    a:hover
+      text-decoration: underline
 
 article.archive
   &:not(:first-of-type)

@@ -3,11 +3,12 @@
 
 {% include _titlef-punc.html title=p.title -%}
 
+{% assign imagepoke = copy | slice: 0, 300 -%}
 {% if include.is_home and forloop.index > 1 %}
-  {% if copy contains '<iframe ' %} 
+  {% if imagepoke contains '<iframe ' %} 
     {% assign copy = copy | replace_first: '<iframe ', '<div class="figpad"></div><iframe ' %}
   {% endif -%}  
-  {% if copy contains 'class="top' %} 
+  {% if imagepoke contains 'class="top' %} 
     {% assign copy = copy | replace_first: '<p><img src=', '<div class="figpad"></div><img src=' | replace: '/></p>', '/>' %}
   {% endif -%}
 {% endif -%}

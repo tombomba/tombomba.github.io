@@ -36,17 +36,12 @@ a
 
 time
   white-space: nowrap
-  font-style: italic
   color: var(--color-half)
   a:link, a:visited
     color: var(--color-half)
     text-decoration: none
   a:hover
     text-decoration: underline
-  &::before
-    content: '('
-  &::after
-    content: ')'
 
 .hr
   margin: 0
@@ -56,24 +51,6 @@ time
   border-top: thin solid #{hsl(0, 0%, 82%)}
   border-bottom: medium solid #{hsl(0, 0%, 100%)}
   background-color: var(--color-body)
-
-.pagebreak
-  margin: 0 auto
-  paddding: 0
-  height: var(--shim)
-  max-width: var(--shim-2x)
-  display: flex
-  flex-flow: row wrap
-  align-items: center
-  justify-content: center
-  &::after
-    content: "\273B"
-    font-family: var(--fam-logo)
-    font-size: 1em
-    font-weight: 700
-    line-height: 1
-    text-align: center
-    color: var(--color-shade)
 
 .daystamp
   font-style: italic

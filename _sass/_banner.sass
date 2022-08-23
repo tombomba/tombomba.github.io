@@ -1,7 +1,7 @@
 header[role="banner"]
   margin: 0 auto
   .wrap
-    margin: 0 auto
+    margin: 2px auto 0 auto
     max-width: var(--page-width)
     height: var(--shim-2x)
     display: flex
@@ -11,22 +11,30 @@ header[role="banner"]
     h1
       font-family: var(--fam-logo)
       font-size: var(--shim)
-      font-weight: 700
+      font-weight: 400
       line-height: 1
       text-transform: uppercase
       a:link, a:visited
         color: black
         text-decoration: none
     .icon
-      margin-top: 2px 
       svg
         width: auto
-        height: var(--shim)
-        fill: var(--color-link)
+        height: var(--shim-p)
+        padding: 6px
+        fill: white
+        border-radius: 4px
+        background-color: black
   div.hr
     flex: 1
     width: 100%
 
 //-----------------------------------------------------------------------------
 
-//@media screen and (min-width: 50rem)
+@media screen and (min-width: 50rem)
+
+  header[role="banner"] 
+    .wrap 
+      .icon
+        svg
+          padding: 9px

@@ -1,5 +1,5 @@
 ---
-title: "Vengeance (2022)"
+title: "Vengeance"
 tweet: "Ugh."
 image: "/assets/img/vengeance-focus-2022.jpg"
 ---

@@ -15,27 +15,6 @@ article.post
       content: '\0020'
     .punc::after
       content: '.'
-  time
-    font-style: italic
-    &::before
-      content: '('
-    &::after
-      content: ')'
-
-article.feature
-  header
-    h1 
-      font-size: var(--body-size-lg)
-      line-height: var(--line-height-hed)
-    .byline
-      p
-        display: inline
-        margin: 0
-        font-size: var(--body-size-sm)
-        line-height: var(--line-height-body)
-        color: var(--color-half)
-        &:nth-of-type(2)::before
-          content: '\0020\/\0020'
 
 article.archive
   &:not(:first-of-type)
@@ -63,9 +42,8 @@ article.error
   display: flex
   align-items: center
   flex-direction: column
-  h1
-    font-family: var(--fam-emoji)
-    font-size: var(--shim-p)
-    line-height: var(--line-height-hed)
-    color: var(--color-logo)
-    text-shadow: -2px 2px 1px var(--color-shock)
+  .icon
+    svg
+      width: auto
+      height: var(--shim-p)
+      fill: var(--color-link)

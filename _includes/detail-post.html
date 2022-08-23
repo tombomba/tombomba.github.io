@@ -18,7 +18,7 @@
 {% endif -%}
 
 {% unless p.is_page %}
-  {% capture timef %}&nbsp;<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ p.date | date: '%d %b' }}</a>{% else %}{{ p.date | date: '%d %b %Y' }}</time>{% endif %}{% endcapture -%}
+  {% capture timef %}&nbsp;<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished"><span class="daystamp">{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ p.date | date: '%d %b' }}</a>{% else %}{{ p.date | date: '%d %b %Y' }}{% endif %}</span></time>{% endcapture -%}
   {% assign copysize = copy | size | minus: 4 %}
   {% assign copy = copy | slice: 0, copysize | append: timef | append: '</p>' %}
 {% endunless -%}  

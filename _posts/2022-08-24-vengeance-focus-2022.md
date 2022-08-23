@@ -1,11 +1,10 @@
 ---
-layout: feature
-title: "Vengeance (Focus Features, 2022)"
+title: "Vengeance (2022)"
 tweet: "Ugh."
 image: "/assets/img/vengeance-focus-2022.jpg"
 ---
 
-![Two men at a makeshift grave in an oil field]({{ 'img/vengeance-focus-2022.jpg' | prepend: site.cdn }}){: .middle }
+![Two men at a makeshift grave in an oil field]({{ 'img/vengeance-focus-2022.jpg' | prepend: site.cdn }}){: .top }
 
 Phaselus mollis velit felis, vitae mollis nulla tempus at. Aenean eget lacinia sapien. Nulla id semper urna. Praesent vel risus quis diam tempus placerat sed malesuada enim. Cras nec interdum felis. Pellentesque eleifend, erat vel porta eleifend, libero ex commodo enim, vitae sollicitudin diam eros a ex. Morbi lacus lacus, interdum non orci et, vehicula auctor purus. Pellentesque non ligula non nisi vestibulum auctor et a justo. In lacinia erat libero, a pellentesque nibh lacinia eu. Donec diam mi, scelerisque sit amet pellentesque at, tempus at dui. Suspendisse cursus augue urna, non ultrices nibh fringilla a. Nam rutrum feugiat felis maximus semper. Curabitur posuere feugiat consequat.
 

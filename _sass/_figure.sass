@@ -62,18 +62,11 @@ article
       margin-right: auto
       margin-bottom: var(--shim)
       --width: 50%
-    
-    &.tilt.top
-      margin-bottom: var(--shim-p)
-    &.tilt.center,
-    &.tilt.left 
-      transform: rotate(-3deg)
-    &.tilt.right
-      transform: rotate(3deg)
 
   div.figpad
     width: 100%
     height: var(--nudge)
+    //background-color: red
 
 //-----------------------------------------------------------------------------
 
@@ -103,3 +96,21 @@ article
       margin-right: var(--shim-n)
     &.float.right
       margin-left: var(--shim-n)
+
+    &.tilt.left
+      margin-right: var(--shim)
+      transform: rotate(-3deg)
+    &.tilt.right
+      transform: rotate(3deg)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 60rem)
+
+  article img
+
+    &.tilt.left
+      margin-left: calc(var(--shim-n) * -1)
+    &.tilt.right
+      margin-right: -1em
+      --width: 35%

@@ -6,19 +6,19 @@ article
     width: 100%
     height: unset
     aspect-ratio: 16/9
-    margin-bottom: var(--shim)
+    margin-top: var(--shim)
+    margin-bottom: var(--nudge)
     background-clip: content-box
     background-color: var(--color-back)
     &.tv
       aspect-ratio: 1.33
-    &.middle
-      margin-top: var(--shim)
 
   img
     display: block
     width: var(--width)
     aspect-ratio: 16/9
     object-fit: cover
+    margin-top: var(--shim)
     border-radius: 4px
     background-color: var(--color-back)
     --width: 100%
@@ -35,11 +35,7 @@ article
     &.poster
       aspect-ratio: 1/1.5
 
-    &.top
-      margin-top: 0
-      margin-bottom: var(--shim)
     &.middle
-      margin-top: var(--shim)
       margin-bottom: var(--shim)
 
     &.wide
@@ -80,7 +76,7 @@ article
       margin-bottom: 1em
       --width: 33%
     &.float.top
-      margin-top: var(--nudge)
+      margin-top: var(--shim)
     &.float.left
       float: left
       margin-right: 1em

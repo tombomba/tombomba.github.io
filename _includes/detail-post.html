@@ -3,16 +3,6 @@
 
 {% include _titlef-widont.html title=p.title -%}
 
-{% assign imagepoke = copy | slice: 0, 300 -%}
-{% if include.is_home and forloop.index > 1 %}
-  {% if imagepoke contains '<iframe ' %} 
-    {% assign copy = copy | replace_first: '<iframe ', '<div class="figpad"></div><iframe ' %}
-  {% endif -%}  
-  {% if imagepoke contains 'class="top' %} 
-    {% assign copy = copy | replace_first: '<p><img src=', '<div class="figpad"></div><img src=' | replace: '/></p>', '/>' %}
-  {% endif -%}
-{% endif -%}
-
 {% if copy contains '<p><img src=' %}
   {% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', '/>' %}
 {% endif -%}
@@ -20,8 +10,8 @@
 <header>
   <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif -%}</h1>
   <div class="byline">
-    <p>{{ site.author }}</p>
-    <p><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ p.date | date: '%d %b' }}</a>{% else %}{{ p.date | date: '%d %b %Y' }}{% endif %}</time></p>
+    {% if forloop.index < 2 or forloop.index == nil %}<p>{{ site.author }}</p>{% endif %}
+    <p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date: '%d %b %Y' }}</time></p>
   </div>
 </header>
 

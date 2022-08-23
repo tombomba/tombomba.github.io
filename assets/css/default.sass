@@ -15,17 +15,27 @@ article.post
       content: '\0020'
     .punc::after
       content: '.'
+  time
+    font-style: italic
+    &::before
+      content: '('
+    &::after
+      content: ')'
 
 article.feature
   header
     h1 
-      font-size: var(--hed-size)
+      font-size: var(--body-size-lg)
       line-height: var(--line-height-hed)
     .byline
       p
         display: inline
         margin: 0
+        font-size: var(--body-size-sm)
+        line-height: var(--line-height-body)
         color: var(--color-half)
+        &:nth-of-type(2)::before
+          content: '\0020\/\0020'
 
 article.archive
   &:not(:first-of-type)

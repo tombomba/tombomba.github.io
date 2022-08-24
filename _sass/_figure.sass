@@ -32,11 +32,16 @@ article
       aspect-ratio: 1.85
     &.poster
       aspect-ratio: 1/1.5
+    &.square
+      aspect-ratio: 1
 
+    &.marquee
+      margin-bottom: var(--shim)
     &.top
-      margin-top: 0
-      margin-bottom: var(--shim-p)
-    &.middle
+      margin-top: var(--nudge)
+      margin-bottom: var(--shim)
+    &.filler
+      margin-top: var(--shim)
       margin-bottom: var(--shim)
 
     &.wide
@@ -64,8 +69,7 @@ article
 
   div.figpad
     width: 100%
-    height: var(--nudge)
-    //background-color: red
+    padding-top: var(--nudge-hr)
 
 //-----------------------------------------------------------------------------
 
@@ -77,7 +81,7 @@ article
       margin-bottom: 1em
       --width: 33%
     &.float.top
-      margin-top: var(--nudge)
+      margin-top: 0
     &.float.left
       float: left
       margin-right: 1em

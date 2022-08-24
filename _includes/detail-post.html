@@ -3,6 +3,14 @@
 
 {% include _titlef-punc.html title=p.title -%}
 
+{% assign peek = copy | slice: 0, 300 %}
+{% if forloop.index > 1 and peek contains 'class="marquee' %}
+  {% assign copy = copy | replace_first: '<p><img src=', '<div class="figpad"><img src=' | replace: '/></p>', '/></div>' %}
+{% endif %}
+{% if forloop.index > 1 and peek contains '<iframe ' %}
+  {% assign copy = copy | replace_first: '<iframe ', '<div class="figpad"><iframe ' | replace_first: '</iframe>', '</iframe></div>' %}
+{% endif %}
+
 {% if copy contains '<p><img src=' %}
   {% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', '/>' %}
 {% endif -%}

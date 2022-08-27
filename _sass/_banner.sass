@@ -9,10 +9,10 @@ header[role="banner"]
     align-items: center
     justify-content: space-between
     h1
-      margin-top: 2px
+      margin-top: 3px
       font-family: var(--fam-logo)
       font-size: var(--shim)
-      font-weight: 700
+      font-weight: 400
       line-height: 1
       a:link, a:visited
         color: black
@@ -20,8 +20,11 @@ header[role="banner"]
     .icon
       svg
         width: auto
-        height: var(--shim)
-        fill: var(--color-link)
+        height: var(--shim-p)
+        padding: 6px
+        fill: var(--color-white)
+        background-color: var(--color-black)
+        border-radius: 4px
 
   div.hr
     flex: 1
@@ -29,7 +32,9 @@ header[role="banner"]
 
 //-----------------------------------------------------------------------------
 
-//@media screen and (min-width: 50rem)
+@media screen and (min-width: 50rem)
 
   header[role="banner"] 
     .wrap
+      .icon svg
+        padding: 8px

@@ -77,6 +77,16 @@ article
 
 //-----------------------------------------------------------------------------
 
+@media (prefers-color-scheme: dark)
+  
+  article img
+    opacity: .75
+    transition: opacity .5s ease-in-out
+    &:hover
+      opacity: 1
+
+//-----------------------------------------------------------------------------
+
 @media screen and (min-width: 40rem)
 
   article img

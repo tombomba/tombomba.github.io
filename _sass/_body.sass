@@ -42,10 +42,21 @@ time
   padding: 0
   height: 0
   border: 0
-  border-top: thin solid #{hsl(0, 0%, 82%)}
-  border-bottom: medium solid #{hsl(0, 0%, 100%)}
+  border-top: thin solid var(--color-hr-top-light)
+  border-bottom: medium solid var(--color-hr-bottom-light)
   background-color: var(--color-body)
- 
+
+//-----------------------------------------------------------------------------
+
+@media (prefers-color-scheme: dark)
+
+  body
+    background-color: var(--color-body-dark)
+
+  .hr
+    border-top: thin solid var(--color-hr-top-dark)
+    border-bottom: medium solid var(--color-hr-bottom-dark)
+
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40rem)

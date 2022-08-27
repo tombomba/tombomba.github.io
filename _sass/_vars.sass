@@ -8,6 +8,11 @@
 
 //-----------------------------------------------------------------------------
 
+@font-face
+  font-family: 'MyWebFont'
+  src: url('WebFont.eot')
+  src: url('WebFont.eot?#iefix') format('embedded-opentype'),url('WebFont.woff') format('woff'),url('WebFont.ttf') format('truetype'),url('WebFont.svg#webfont') format('svg')
+
 \:root
 
   --fam-logo: 'Averia Sans Libre', sans-serif
@@ -30,7 +35,7 @@
 
   --nudge: calc(((var(--line-height-body) - 1) / 2) * 1em)
   --nudge-2x: calc((var(--line-height-body) - 1) * 1em)
-  --nudge-hr: calc(var(--nudge) + 3px)
+  --nudge-hr: calc(var(--nudge) + 4px)
 
   --shim-n: calc(var(--shim) - var(--nudge))
   --shim-p: calc(var(--shim) + var(--nudge))

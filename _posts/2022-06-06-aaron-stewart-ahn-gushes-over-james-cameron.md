@@ -3,6 +3,7 @@ title: "Screenwriter Aaron Stewart-Aahn gushes over James Cameron"
 excerpt: >
   "Was the T-1000 created as a commentary on policing?"
 source: https://twitter.com/somebadideas/status/1532899847048683520
+image: "/assets/img/terminator-2-judgment-day-1991.jpg"
 ---
 
 ![Robert Patrick in Terminator 2]({{ 'img/terminator-2-judgment-day-1991.jpg' | prepend: site.cdn }}){: .marquee .anamorphic }

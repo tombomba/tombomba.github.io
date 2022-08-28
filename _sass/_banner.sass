@@ -13,15 +13,17 @@ header[role="banner"]
       font-family: var(--fam-logo)
       font-size: var(--shim)
       line-height: 1
-      text-transform: uppercase
       a:link, a:visited
         color: black
         text-decoration: none
     .icon
       svg
         width: auto
-        height: var(--shim)
-        fill: var(--color-link)
+        height: var(--shim-p)
+        padding: 6px
+        fill: var(--color-white)
+        background-color: var(--color-black)
+        border-radius: 4px
 
   div.hr
     flex: 1
@@ -31,9 +33,10 @@ header[role="banner"]
 
 @media screen and (min-width: 50rem)
 
-  header[role="banner"] 
+  header[role="banner"]
     .wrap
       h1
-        margin-top: 4px
-      //.icon svg
+        margin-top: 3px
+      .icon svg
         padding: 8px
+  

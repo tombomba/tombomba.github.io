@@ -1,7 +1,7 @@
 ---
 title: "The Stranger Wore a Gun"
 excerpt: >
-  Almost a proto-"Fistful of Dollars." Almost.
+  Almost a proto-"Fistful of Dollars." Almost. Best reserved for superfans of director and star.
 image: "/assets/img/the-stranger-wore-a-gun-1953.jpg"
 ---
 ![3D! Technicolor! Randolph Scott!]({{ 'img/the-stranger-wore-a-gun-1953.jpg' | prepend: site.cdn }}){: .top .poster .float .right .tilt }

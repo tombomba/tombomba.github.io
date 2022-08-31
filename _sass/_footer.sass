@@ -26,8 +26,15 @@ footer
       li
         font-size: var(--body-size-sm)
         line-height: 1
-        &.switch
-          display: none
         &.copydate
           margin: 0
           order: -1
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50rem)
+
+  footer
+    ul
+      li.switch
+        display: none

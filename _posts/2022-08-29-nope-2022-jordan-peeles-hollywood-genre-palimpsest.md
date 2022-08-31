@@ -7,6 +7,8 @@ image: "/assets/img/nope-2022.jpg"
 ---
 ![Eadweard Muybridge, 1878]({{ 'img/nope-2022.jpg' | prepend: site.cdn }}){: .marquee }
 
+I could go back and forth on "Nope" forever. But the core idea, mostly seen in the film's climax, is fresh and exiting. 
+
 "Nope" has a little bit of everything, from film history and tv culture to western motifs and U.F.O conspiracies. 
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a lectus sit amet purus sodales luctus non eget ante. Maecenas sodales arcu vitae augue volutpat, ut feugiat mi molestie. Praesent aliquam sollicitudin diam, eget aliquet dolor ultrices et. Integer posuere nisl vel mauris gravida commodo. Curabitur pellentesque lectus nec elit commodo, molestie fringilla risus ullamcorper. Phasellus ac interdum lacus. Aenean tempus et lectus nec interdum. Quisque aliquam ultricies lectus, eget dictum eros cursus non. Fusce at cursus nisl. Phasellus ornare eu erat dapibus lacinia. Morbi nibh magna, vehicula at augue convallis, faucibus tempus magna.

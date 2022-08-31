@@ -112,6 +112,11 @@ article
     &.tilt.right
       transform: rotate(3deg)
 
+    &.pull.left
+      margin-left: -1em
+    &.pull.right
+      margin-right: -1em
+
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 60rem)
@@ -123,3 +128,15 @@ article
     &.tilt.right
       margin-right: -1em
       --width: 35%
+
+    &.pull.left
+      margin-left: calc(var(--shim-n) * -1)
+    &.pull.right
+      margin-right: calc(var(--shim-n) * -1)
+
+    &.jumbo
+      --width: 40%
+    &.jumbo.left
+      margin-left: calc(var(--shim-n) * -2)
+    &.jumbo.right
+      margin-right: calc(var(--shim-n) * -2)

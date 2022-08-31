@@ -4,7 +4,7 @@ tweet: "Can't I just go to the movies?"
 source: "https://deadline.com/video/armageddon-time-james-gray-cannes-film-festival-box-office-streaming/"
 ---
 
-![James Gray]({{ 'img/james-gray-2022.jpg' | prepend: site.cdn }}){: .top .float .left .square .flat .pull }
+![James Gray]({{ 'img/james-gray-2022.jpg' | prepend: site.cdn }}){: .top .float .left .square .flat }
 
 Two seconds into a four minute [video](https://deadline.com/video/armageddon-time-james-gray-cannes-film-festival-box-office-streaming/) and I want to stop him right there. Essential to whom, exactly? It can't be the vaguely theater-going public of our collective imagination. Their failure to show up is the whole problem, right? The underlying idea at play---that the theatrical experience is core to the medium---is often expressed by insiders. Industry (directors!) and adjacent (critics!) who only see films at studio previews and press screenings, or between hobnobs at international festivals. 
 

@@ -7,3 +7,4 @@ cdn: "http://localhost:4000/assets/"
 
 safe: true
 future: true
+show_drafts: true

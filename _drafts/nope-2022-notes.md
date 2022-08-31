@@ -1,8 +1,8 @@
 ---
-title: "Jordan Peel's bad miracle"
+title: "Jordan Peele's bad miracle"
 subj: "Nope (2022)"
 tweet: >
-  The quick brown fox jumps over the lazy dog.
+  The quick brown fox jumps over the lazy dog
 image: "/assets/img/horse-in-motion-1879.jpg"
 ---
 

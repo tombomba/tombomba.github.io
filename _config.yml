@@ -2,13 +2,11 @@ title: "Bomtomba"
 description: "A western (ish) movie blog"
 domain: "www.bomtomba.com"
 
-favicon: "👾"
-
 url: "https://www.bomtomba.com"
 cdn: "https://www.bomtomba.com/assets/"
 
 author: "Tom Bomba"
-socials: "bomtomba"
+socials: "bunkhouseblog"
 
 future: false
 show_drafts: false

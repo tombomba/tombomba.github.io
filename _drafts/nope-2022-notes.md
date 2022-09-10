@@ -4,8 +4,13 @@ subj: "Nope (2022)"
 tweet: >
   The quick brown fox jumps over the lazy dog
 image: "/assets/img/horse-in-motion-1879.jpg"
+date: 2022-09-05 09:34
 ---
 
 ![Horse in Motion, 1879]({{ 'img/horse-in-motion-1879.jpg' | prepend: site.cdn }}){: .marquee .european }
 
 I could go back and forth forever on "Nope," and I probably will. It's film as sketchbook, the images on one page violently different than those on the next. A weird mishmash of sci-fi and western tropes. Almost more anthology than single narrative. Its elements fascinate, even when they don't cohere. 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend non leo et maximus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla enim lacus, feugiat vel suscipit a, volutpat eget leo. In congue tortor vel lorem tincidunt, nec porta nunc vestibulum. Fusce et lacinia turpis. Cras tincidunt dolor eu felis faucibus finibus. Aliquam erat volutpat. Pellentesque mattis nibh id ornare maximus. Phasellus vel consequat sapien, vel vestibulum dui. Mauris in nunc vitae massa cursus placerat in vitae lorem. Duis tempus sodales libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+
+Maecenas fringilla nisi erat, eget eleifend tellus finibus id. Sed dapibus eros ut lacus facilisis luctus. Integer convallis tortor nisl, vehicula aliquet nunc rhoncus id. Cras odio eros, facilisis eu posuere non, dapibus at urna. Nulla venenatis tincidunt neque, vel feugiat metus. Maecenas mauris nulla, condimentum non hendrerit in, rutrum id felis. Duis a sagittis magna, eu mattis enim. Integer eget cursus sapien. Phasellus hendrerit nisl vitae diam pulvinar maximus. Nulla nulla elit, lacinia sit amet facilisis sit amet, elementum sed neque. Praesent cursus vehicula massa, in dignissim lectus scelerisque at. Aliquam dapibus massa at maximus laoreet. Duis vitae viverra.

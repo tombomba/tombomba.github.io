@@ -7,12 +7,13 @@
 
 article.post
   .hed
-    h1, p
-      display: inline
-      font-size: 1em
     h1
       font-family: var(--fam-system)
+      font-size: var(--hed-size-lg)
+      line-height: 1
+      letter-spacing: -0.25px
       text-transform: uppercase
+      text-rendering: optimizeLegibility
     h1::after
       content: "\0020"
     .punc::after

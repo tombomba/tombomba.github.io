@@ -16,6 +16,8 @@ article
     display: block
     width: var(--width)
     aspect-ratio: 16/9
+    margin-top: var(--shim)
+    margin-bottom: var(--shim)
     object-fit: cover
     border-radius: 4px
     background-color: var(--color-back)
@@ -40,10 +42,7 @@ article
       aspect-ratio: 1
 
     &.marquee
-      margin-bottom: var(--shim)
-    &.top
-      margin-top: var(--nudge)
-      margin-bottom: var(--shim)
+      margin-bottom: var(--shim)      
     &.filler
       margin-top: var(--shim)
       margin-bottom: var(--shim)
@@ -84,10 +83,6 @@ article
     &.float
       margin-bottom: 1em
       --width: 33%
-    &.float.top
-      margin-top: 0
-    &.float.flat
-      margin-top: var(--nudge)
     &.float.left
       float: left
       margin-right: 1em

@@ -54,6 +54,8 @@ article
     &.third
       --width: 33%
 
+    &.top
+      margin-top: 0
     &.center
       margin-left: auto
       margin-right: auto
@@ -119,19 +121,29 @@ article
   article img
 
     &.tilt.left
-      margin-left: calc(var(--shim-n) * -1)
+      margin-left: calc(var(--shim) * -1)
     &.tilt.right
       margin-right: -1em
       --width: 35%
 
     &.pull.left
-      margin-left: calc(var(--shim-n) * -1)
+      margin-left: calc(var(--shim) * -1)
     &.pull.right
-      margin-right: calc(var(--shim-n) * -1)
+      margin-right: calc(var(--shim) * -1)
+
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 60rem)
+
+  article img
 
     &.jumbo
-      --width: 40%
-    &.jumbo.left
-      margin-left: calc(var(--shim-n) * -2)
-    &.jumbo.right
-      margin-right: calc(var(--shim-n) * -2)
+      --width: 37%
+
+    &.pull.left
+      margin-left: calc(var(--shim) * -2)
+      margin-right: var(--shim)
+    &.pull.right
+      margin-right: calc(var(--shim) * -2)
+      margin-left: var(--shim)

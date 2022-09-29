@@ -1,57 +1,9 @@
 header[role="banner"]
-  .wrap
-    max-width: var(--page-width)
-    margin: var(--shim-n) auto var(--shim) auto
-    height: var(--buffer)
-    display: flex
-    flex-flow: row wrap
-    align-items: center
-    justify-content: space-between
-    gap: 1em
-    h1
-      margin-top: 3px
-      font-family: var(--fam-logo)
-      font-size: var(--hed-size)
-      font-weight: 400
-      line-height: 1
-      letter-spacing: -0.125px
-      text-rendering: optimizeLegibility
-      a:link, a:visited
-        color: var(--color-link)
-        text-decoration: none
-    .icon
-      svg
-        width: auto
-        height: var(--shim)
-        fill: var(--color-link)
-    .nav
-      display: none
-
-  div.hr
-    flex: 1
-    width: 100%
-
-//-----------------------------------------------------------------------------
-
-//@media screen and (min-width: 50rem)
-
-  header[role="banner"]
-    .wrap
-      max-width: 100%
-      padding: 0 1em
-      .icon
-        flex: 1 0 20%
-        order: -1
-      .nav
-        display: block
-        flex: 1 0 20%
-        ul
-          display: flex
-          align-content: center
-          justify-content: flex-end
-          list-style-type: none
-          flex-flow: row wrap
-          gap: 0.5em
-          li
-            font-size: var(--body-size-sm)
-            line-height: 1
+  margin: var(--shim) auto 0 auto
+  max-width: var(--page-width)
+  h1
+    font-size: var(--hed-size)
+    line-height: var(--line-height-hed)
+    text-transform: lowercase
+    a:link, a:visited
+      color: var(--color-link)

@@ -6,7 +6,7 @@ tweet: >
 image: "/assets/img/vengeance-2022.jpg"
 ---
 
-![Vengeance, 2022]({{ 'img/vengeance-2022.jpg' | prepend: site.cdn }}){: .top .poster .float .right .flat }
+![Vengeance, 2022]({{ 'img/vengeance-2022.jpg' | prepend: site.cdn }}){: .top .poster .float .right .pull }
 
 Writer-director-star B.J. Novak played tourist in Texas a few years back and the result is "Vengeance," a light comedy without good jokes, believable characters, or strong locations. 
 

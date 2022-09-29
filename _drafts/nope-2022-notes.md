@@ -1,4 +1,5 @@
 ---
+layout: photo
 title: "Jordan Peele's bad miracle"
 subj: "Nope (2022)"
 tweet: >

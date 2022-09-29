@@ -36,13 +36,7 @@
   <meta name="twitter:image:src" content="{{ page.image | default: '/assets/img/default-social.png' | absolute_url }}">
 
   <!-- css -->
-  <link rel="stylesheet" href="{{ 'css/default.css' | prepend: site.cdn }}?v={{ site.time | date: '%j%H%M' }}">
-
-  <!-- goog -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sarina&display=swap&text={{ site.title | remove: ' ' }}~!">
-
+  <link rel="stylesheet" href="{{ page.layout | default: 'default' | append: '.css' | prepend: 'css/' | prepend: site.cdn }}">
 
 </head>
 

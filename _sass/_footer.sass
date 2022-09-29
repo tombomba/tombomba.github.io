@@ -1,19 +1,23 @@
 footer
-  margin: 0 auto
-  padding-bottom: var(--shim-p)
+  margin-top: calc(var(--shim-2x) + 3px)
+  margin-left: auto
+  margin-right: auto
+  padding-bottom: var(--shim-2x)
+  max-width: var(--page-width)
   ul
-    margin: var(--shim-n) auto 0 auto
+    margin-top: var(--shim-2x)
     max-width: var(--page-width)
     display: flex
     flex-flow: column
     align-items: center
-    justify-content: center
     list-style-type: none
-    li
-      color: var(--color-half)
-      &.copydate
-        order: 99
-        margin-top: 1em
+  p
+    font-size: var(--body-size-sm)
+    color: var(--color-half)
+    &:first-of-type
+      margin-top: var(--shim)
+  div.hr
+    max-width: var(--shim-4x)
 
 //-----------------------------------------------------------------------------
 
@@ -22,19 +26,6 @@ footer
   footer
     ul
       flex-flow: row wrap
-      gap: 0.5em
+      gap: var(--nudge-2x)
       li
-        font-size: var(--body-size-sm)
         line-height: 1
-        &.copydate
-          margin: 0
-          order: -1
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 50rem)
-
-  footer
-    ul
-      li.switch
-        display: none

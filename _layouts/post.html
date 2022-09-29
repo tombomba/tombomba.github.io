@@ -2,11 +2,12 @@
 layout: default
 ---
 {% include banner.html %}
+
 {% assign copy = content | strip -%}
 {% include _titlef-widont.html title=page.title -%}
 
 {% if copy contains '<p><img src=' %}
-  {% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', '>' %}
+  {% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', '/>' %}
 {% endif -%}
 
 <main role="main"><!-- {{ content | number_of_words }} -->
@@ -17,10 +18,10 @@ layout: default
 
     {{ copy }}
 
+    <!-- <p><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date: '%d %b %Y' }}</time></p> -->
+
   </article>
   
 </main>
 
 {% include footer.html %}
-
-<!-- <p><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ p.date | date: '%d %b' }}</a>{% else %}{{ p.date | date: '%d %b %Y' }}{% endif %}</time></p> -->

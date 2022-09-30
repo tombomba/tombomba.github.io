@@ -32,7 +32,8 @@ article
 footer
   margin: 0 auto
   ul
-    margin-top: var(--shim-2x)
+    &:first-of-type
+      margin-top: var(--shim-2x)
   p
     color: var(--color-half)
     &:first-of-type
@@ -45,5 +46,15 @@ footer
 @media screen and (min-width: 40rem)
 
   footer
+    ul
+      gap: var(--nudge-2x)
     p
       font-size: var(--body-size-sm)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50rem)
+
+  header[role="banner"]
+    svg
+      height: var(--shim-p)

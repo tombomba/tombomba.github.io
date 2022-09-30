@@ -1,0 +1,53 @@
+header[role="banner"]
+  max-width: var(--page-width)
+  h1
+    a:link, a:visited
+      color: var(--color-logo)
+      text-decoration: none
+
+article
+  max-width: var(--page-width)
+  @extend .clearfix
+  h2, h3, h4, h5, h6
+    margin-top: var(--shim)
+    font-size: 1em
+  p
+    margin-top: var(--shim)
+  ul, ol
+    margin: var(--shim) 0 0 var(--shim)
+    li
+      max-width: var(--page-width)
+      margin-top: 0
+  blockquote
+    padding-left: var(--shim)
+    border-left: thin solid var(--color-half)
+  blockquote,
+  li + p,
+    margin-top: 0
+
+footer
+  max-width: var(--page-width)
+  ul
+    display: flex
+    flex-flow: column
+    align-items: center
+    list-style-type: none
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  footer
+    ul
+      flex-flow: row wrap
+      gap: var(--nudge-2x)
+      li
+        line-height: 1
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50rem)
+
+  article
+    span.widont
+      white-space: nowrap

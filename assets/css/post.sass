@@ -3,25 +3,17 @@
 ---
 
 @charset "utf-8"
-@import reset, vars, body, article, figure
+@import reset, vars, body, main, figure
 
 header[role="banner"]
   margin: var(--shim) auto 0 auto
-  max-width: var(--page-width)
-  display: flex
-  flex-flow: row wrap
-  align-items: center
-  justify-content: space-between
   h1
     font-size: var(--body-size-lg)
     line-height: var(--line-height-hed)
     text-transform: lowercase
-    a:link, a:visited
-      color: var(--color-logo)
-      text-decoration: none
 
 article
-  margin: 0 auto var(--shim-2x) auto
+  margin: 0 auto
   header
     margin-bottom: var(--shim-2x)
     h1
@@ -29,15 +21,10 @@ article
       line-height: var(--line-height-hed)
 
 footer
-  max-width: var(--page-width)
-  margin: 0 auto
-  padding-bottom: var(--shim-2x)
+  margin: var(--shim-2x) auto 0 auto
+  padding-bottom: var(--shim)
   ul
     margin-top: var(--shim-2x)
-    display: flex
-    flex-flow: column
-    align-items: center
-    list-style-type: none
   p
     color: var(--color-half)
     &:first-of-type
@@ -50,10 +37,5 @@ footer
 @media screen and (min-width: 40rem)
 
   footer
-    ul
-      flex-flow: row wrap
-      gap: var(--nudge-2x)
-      li
-        line-height: 1
     p
       font-size: var(--body-size-sm)

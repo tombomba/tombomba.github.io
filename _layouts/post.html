@@ -34,9 +34,11 @@ layout: default
   </ul>
 
   {% if page.is_post %}
-  <p>This page published <time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
+    <p>This page published <time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
+
   {% else -%}
-  <p>Last updated <time datetime="{{ site.posts.first.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ site.posts.first.date | date_to_long_string }}</time></p>
+    <p>Last updated <time datetime="{{ site.posts.first.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ site.posts.first.date | date_to_long_string }}</time></p>
+
   {% endif -%}
 
   <p>Copyright &copy; {{ site.author }}</p>

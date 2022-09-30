@@ -7,20 +7,26 @@
 
 header[role="banner"]
   margin: 0 auto
-  h1
-    font-family: 'Silkscreen', monospace
-    font-size: 1em
-    font-weight: 400
-    line-height: var(--line-height-hed)
-    text-transform: uppercase
+  svg
+    width: auto
+    height: var(--buffer)
+    fill: var(--color-logo)
+  div.hr
+    margin-top: var(--shim)
+    max-width: var(--shim-4x)
 
 article
-  margin: 0 auto var(--shim-2x) auto
-  header
-    margin-bottom: var(--shim-2x)
+  margin: var(--shim-2x) auto
+  section
+    margin-top: var(--shim)
     h1
-      font-size: var(--hed-size-md)
-      line-height: var(--line-height-hed)
+      font-size: 1em
+    p
+      margin: 0
+    &:first-of-type 
+      margin-top: 0
+      h1
+        font-size: var(--hed-size)
 
 footer
   margin: 0 auto

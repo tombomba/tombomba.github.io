@@ -36,8 +36,20 @@
   <meta name="twitter:image:src" content="{{ page.image | default: '/assets/img/default-social.png' | absolute_url }}">
 
   <!-- css -->
-  <link rel="stylesheet" href="{{ page.layout | default: 'default' | append: '.css' | prepend: 'css/' | prepend: site.cdn }}">
+  <link rel="stylesheet" href="{{ page.style | default: page.layout | append: '.css' | prepend: 'css/' | prepend: site.cdn }}">
 
+   <!-- goog -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  {% if page.is_home -%}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sarina&display=swap&text={{ site.title | remove: ' ' }}~!">
+  {% endif -%}
+  {% if page.layout == 'post' -%}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap&text={{ site.title | remove: ' ' | upcase }}~!">
+  {% endif -%}
+  {% if page.layout == 'micro' -%}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap&text={{ site.name | upcase }}~!">
+  {% endif %}
 </head>
 
 <body>

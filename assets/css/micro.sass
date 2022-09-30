@@ -1,0 +1,73 @@
+---
+# DEFAULT STYLES
+---
+
+@charset "utf-8"
+@import reset, vars, body, main, figure
+
+header[role="banner"]
+  margin: 0 auto
+  max-width: var(--page-width)
+  display: flex
+  flex-flow: row wrap
+  align-items: center
+  justify-content: space-between
+  gap: 1em
+  h1
+    margin-left: -3px
+    font-family: 'Bungee Shade', sans-serif
+    font-size: var(--shim)
+    font-weight: 700
+    line-height: 1
+    text-transform: uppercase
+    a:link, a:visited
+      color: var(--color-logo)
+      text-decoration: none
+  div.hr
+    flex: 1
+    width: 100%
+
+article
+  margin: var(--shim) auto var(--shim-p) auto
+  header
+    h1, p
+      display: inline
+    h1
+      font-size: 1em
+      line-height: var(--line-height-body)
+      &::after
+        content: '\0020'
+    .punc::after
+      content: '.'
+  .daystamp
+    font-style: italic
+    color: var(--color-half)
+
+footer
+  margin: 0 auto
+  ul
+    margin-top: var(--shim)
+    align-items: center
+    li.copydate
+      order: 99
+      margin-top: 1em
+  div.hr
+    width: 100%
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  footer
+    ul
+      margin-top: 1em
+      flex-flow: row wrap
+      justify-content: center
+      gap: 0.5em
+      li
+        font-size: var(--body-size-sm)
+        line-height: 1
+        color: var(--color-half)
+        &.copydate
+          order: -1
+          margin-top: 0

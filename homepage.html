@@ -1,31 +1,31 @@
 ---
 layout: default
 excerpt: "A small collage, a dumb blog"
+style: homepage
 is_home: true
 permalink: /index.html
 ---
-{% include banner.html %}
+<header role="banner">
+  <a href="{{ site.url }}">{% include icon-monster.svg %}</a>
+  <div class="hr"></div>
+</header>
 
 <main role="main">
-
-  {% for p in site.posts limit: 10 %}
-  {% unless forloop.first %}<div class="hr spacer"></div>{% endunless %}
-
-
-  <article class="{{ p.layout }}"><!-- {{ p.content | number_of_words }}-->
-
-    <h1><a href="{{ p.url | absolute_url }}">{{ p.title }}</a></h1>
-
-    {% comment %}{% include detail-{{ p.layout }}.html page=p content=p.content is_home=true %}{% endcomment %}
   
-  </article>
+  <article>
+    {% for p in site.posts limit: 10 %}
+    <section>
+      <h1><a href="{{ p.url | absolute_url }}">{{ p.title | strip | strip_html | smartify | normalize_whitespace }}</a></h1>
+      <p>{{ p.excerpt | strip | strip_html | smartify | normalize_whitespace | truncatewords: 50 }}</p>
+    </section>
+    {% endfor -%}
+  
+    <div class="hr spacer"></div>
 
+    <section class="datelist">
+      {% include _datelist.html %}
+    </section>
 
-  {% endfor -%}
-
-  <div class="hr spacer"></div>
-  <article class="datelist">
-    {% include _datelist.html %}
   </article>
 
 </main>

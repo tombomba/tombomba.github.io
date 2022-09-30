@@ -1,8 +1,8 @@
 ---
 title: "Marfa, Marfa, Marfa!"
 subj: "Vengeance (2022)"
-tweet: >
-  Writer-director-star plays tourist in Texas
+excerpt: >
+  Writer-director-star B.J. Novak played tourist in Texas and the result is "Vengeance," a comedy without good jokes, believable characters, or strong locations. 
 image: "/assets/img/vengeance-2022.jpg"
 ---
 

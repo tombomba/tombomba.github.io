@@ -14,7 +14,7 @@
   {% endif -%}
 
   {% if year != prev_yr %}
-    <li class="year"><a href="{{ year | absolute_url }}"><b>{{ year }}</b></a></li>
+    <li class="year"><a href="{{ year | absolute_url }}">{{ year }}</a></li>
   {% endif -%}
 
   <li><a href="{{ year | append: '/' | append: month | absolute_url }}">{{ mo }}</a></li>

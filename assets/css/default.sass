@@ -5,39 +5,67 @@
 @charset "utf-8"
 @import reset, vars, body, main, figure
 
+header[role="banner"]
+  margin: 0 auto
+  svg
+    width: auto
+    height: var(--buffer)
+    fill: #F30
+    filter: drop-shadow(-1px 1px 1px rgba(255, 204, 0, 1))
+  div.hr
+    margin-top: calc(var(--shim) + 2px)
+    max-width: var(--shim-4x)
+
 article.post
+  margin: var(--shim-2x) auto
   header
-    margin-bottom: var(--shim-2x)
     h1
-      font-size: var(--hed-size-md)
+      font-size: var(--hed-size)
       line-height: var(--line-height-hed)
+  section.subj
+    margin-top: var(--shim)
+    h2, p
+      margin: 0
+      font-size: var(--body-size-sm)
 
 article.archive
-  h1
-    font-size: 1em
-  ul
-    margin-top: 0
-    list-style-type: square
-    color: var(--color-half)
+  margin: var(--shim-2x) auto
+  section
+    margin-top: var(--shim)
+    &:first-of-type
+      margin-top: 0
+    h1
+      font-size: 1em
+    ul
+      margin-top: 0
+      list-style-type: square
+      color: var(--color-half)
 
-article.datelist
+footer
+  margin: 0 auto
   ul
-    margin: 0
-    display: flex
-    align-items: center
-    justify-content: center
-    gap: 0.5em
-    list-style-type: none
-    li
-      line-height: 1
-      
-article.error
-  margin-top: var(--shim-2x)
-  display: flex
-  align-items: center
-  flex-direction: column
-  .icon
+    margin-top: var(--shim-2x)
+  p
+    color: var(--color-half)
+    &:first-of-type
+      margin-top: var(--shim)
+  div.hr
+    max-width: var(--shim-4x)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  footer
+    ul
+      gap: var(--nudge-2x)
+    p
+      font-size: var(--body-size-sm)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50rem)
+
+  header[role="banner"]
     svg
-      width: auto
       height: var(--shim-p)
-      fill: var(--color-link)

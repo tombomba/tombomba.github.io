@@ -1,15 +1,17 @@
 ---
 layout: default
 title: "404!"
-excerpt: "Something went wrong"
+excerpt: "Error: Page not found"
 is_404: true
-is_page: true
 permalink: /404.html
 ---
-<main role="main">
-  <article class="error">
-    <div class="icon"><a href="{{ site.url }}">{% include icon-alien-monster.svg %}</a></div>
-    <p><strong>Page not found!</strong></p>
-    <p><a href="{{ site.url }}">Home</a></p>
-  </article>
-</main>
+<article class="error">
+  <h1>Page not found</h1>
+  <p>Try one of these?</p>
+  <ul>
+  {% for p in site.posts limit: 5 -%}
+    <li><a href="{{ p.url }}">{{ p.subj | default: p.title | strip | strip_html | smartify | normalize_whitespace }}</a></li>
+  {% endfor -%}
+  </ul>
+  <p>If you're looking for a specific destination on <i>{{ site.title }},</i> try checking the <a href="{{ site.url }}">homepage</a> or the <a href="{{ 'archive' | absolute_url }}">archive</a>.</p>
+</article>

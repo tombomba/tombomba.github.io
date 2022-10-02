@@ -5,39 +5,12 @@ style: homepage
 is_home: true
 permalink: /index.html
 ---
-<header role="banner">
-  <a href="{{ site.url }}" title="{{ site.title }}">{% include icon-jack-o-lantern.svg %}</a>
-  <div class="hr"></div>
-</header>
+<article>
+  {% for p in site.posts limit: 10 %}
+  <section>
+    <h1><a href="{{ p.url | absolute_url }}">{{ p.title | strip | strip_html | smartify | normalize_whitespace }}</a></h1>
+    <p>{{ p.excerpt | strip | strip_html | smartify | normalize_whitespace | truncatewords: 50 }}</p>
+  </section>
+  {% endfor -%}
 
-<main role="main">
-  
-  <article>
-    {% for p in site.posts limit: 10 %}
-    <section>
-      <h1><a href="{{ p.url | absolute_url }}">{{ p.title | strip | strip_html | smartify | normalize_whitespace }}</a></h1>
-      <p>{{ p.excerpt | strip | strip_html | smartify | normalize_whitespace | truncatewords: 50 }}</p>
-    </section>
-    {% endfor -%}
-
-  </article>
-
-</main>
-
-
-<footer>
-
-  <div class="hr"></div>
-
-  <ul class="feeds">
-  {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}
-  {% unless page.is_about %}<li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>{% endunless %}
-  {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}
-  <li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li>
-  <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
-  </ul>
-
-  <p>Last updated {{ site.posts.first.date | date_to_long_string }}</p>
-  <p>Copyright &copy; {{ site.author }}</p>
-  
-</footer>
+</article>

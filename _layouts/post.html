@@ -1,46 +1,12 @@
 ---
 layout: default
 ---
-{% assign copy = content | strip -%}
 {% include _titlef-widont.html title=page.title -%}
-{% if copy contains '<p><img src=' %}
-  {% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', '/>' %}
-{% endif -%}
 
-<header role="banner">
-  <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
-</header>
+<article class="{{ page.layout }}"><!-- {{ page.layout }}: {{ page.content | number_of_words }}w -->
 
-<main role="main">
+  <header><h1>{{ titlef }}</h1></header>
 
-  <article><!-- {{ page.layout }}: {{ content | number_of_words }}w -->
+  {{ content }}
 
-    <header><h1>{{ titlef }}</h1></header>
-
-    {{ copy }}
-
-  </article>
-  
-</main>
-
-<footer>
-
-  <div class="hr"></div>
-
-  <ul class="feeds">
-    {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}
-    <li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li>
-    <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
-  </ul>
-
-  {% if page.is_post %}
-    <p>This page published <time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
-
-  {% else -%}
-    <p>Last updated <time datetime="{{ site.posts.first.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ site.posts.first.date | date_to_long_string }}</time></p>
-
-  {% endif -%}
-
-  <p>Copyright &copy; {{ site.author }}</p>
-  
-</footer>
+</article>

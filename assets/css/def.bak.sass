@@ -1,0 +1,43 @@
+---
+# DEFAULT STYLES
+---
+
+@charset "utf-8"
+@import reset, vars, body, main, figure
+
+article.post
+  header
+    margin-bottom: var(--shim-2x)
+    h1
+      font-size: var(--hed-size-md)
+      line-height: var(--line-height-hed)
+
+article.archive
+  h1
+    font-size: 1em
+  ul
+    margin-top: 0
+    list-style-type: square
+    color: var(--color-half)
+
+article.datelist
+  ul
+    margin: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 0.5em
+    list-style-type: none
+    li
+      line-height: 1
+      
+article.error
+  margin-top: var(--shim-2x)
+  display: flex
+  align-items: center
+  flex-direction: column
+  .icon
+    svg
+      width: auto
+      height: var(--shim-p)
+      fill: var(--color-link)

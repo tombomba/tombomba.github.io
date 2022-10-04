@@ -15,6 +15,12 @@ theme: null
 permalink: /p/:title:output_ext
 timezone: America/Los_Angeles
 
+collections:
+  pages:
+    collections_dir: _pages
+    output: true
+    permalink: "/:path/"
+
 defaults:
   -
     scope:
@@ -23,6 +29,12 @@ defaults:
     values:
       layout: post
       is_post: true
+  -
+    scope:
+      path: "_pages"
+      type: "pages"
+    values:
+      layout: post
 
 markdown: kramdown
 kramdown:

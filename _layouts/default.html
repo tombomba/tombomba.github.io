@@ -57,7 +57,7 @@
 
   <ul class="feeds">
   {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}
-  {% unless page.is_archive %}<li><a href="{{ 'p' | absolute_url }}">Archive</a></li>{% endunless %}
+  {% unless page.is_archive %}<li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>{% endunless %}
   <li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li>
   <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
   </ul>

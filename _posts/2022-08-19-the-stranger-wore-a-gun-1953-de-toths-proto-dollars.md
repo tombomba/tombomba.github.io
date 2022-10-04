@@ -1,5 +1,5 @@
 ---
-title: "de Toth's proto-'Dollars'"
+title: "The Stranger Wore a Gun (1953)"
 subj: "The Stranger Wore a Gun (1953)"
 ---
 Randolph Scott plays bandits off against one another in a small Arizona town just after the Civil War. It's almost a proto-"Fistful of Dollars." Almost. 

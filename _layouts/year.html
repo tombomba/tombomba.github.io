@@ -1,16 +1,21 @@
 ---
 layout: default
-title: "Archive ~~~"
 excerpt: "A list of previous entries"
-is_archive: true
-permalink: "/archive/"
 ---
-{% assign master_list = site.posts | group_by_exp: "post", "post.date | date: '%b %Y'" -%}
+{% assign raw = page.permalink | split: '/' | shift %}
+{% assign raw_yr = raw[0] %}
+{% assign full_yr = raw_yr | prepend: '20' %}
+{% assign target_yr = full_yr %}
+
+{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date:'%b %Y'" %}
+
 <article class="archive">
-{% for group in master_list %}
+{% for group in posts_by_year %}
+  {% if group.name contains target_yr %}
   <section>
     <h1>{{ group.name }}</h1>
     <ul>{% for item in group.items %}<li><a href="{{ item.url | absolute_url }}">{{ item.subj | default: item.title | smartify | normalize_whitespace | strip }}</a></li>{% endfor %}</ul>
   </section>
+  {% endif -%}
 {% endfor -%}
 </article>

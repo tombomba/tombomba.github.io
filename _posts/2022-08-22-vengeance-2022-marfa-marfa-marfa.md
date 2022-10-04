@@ -1,13 +1,8 @@
 ---
 title: "Marfa, Marfa, Marfa!"
 subj: "Vengeance (2022)"
-excerpt: >
-  Writer-director-star B.J. Novak played tourist in Texas and the result is "Vengeance," a comedy without good jokes, believable characters, or strong locations. 
 image: "/assets/img/vengeance-2022.jpg"
 ---
-
-![Vengeance, 2022]({{ 'img/vengeance-2022.jpg' | prepend: site.cdn }}){: .top .poster .float .right .pull }
-
 Writer-director-star B.J. Novak played tourist in Texas a few years back and the result is "Vengeance," a light comedy without good jokes, believable characters, or strong locations. 
 
 His alter-ego Ben Manalowitz is a cynical writer who travels from New York to Texas for the funeral of a half-remembered fling, a woman curiously named Abilene. Meeting her family, Ben seizes on the idea of turning her death into a "Serial"-style podcast event. He thinks it'll boost his career. It probably will.

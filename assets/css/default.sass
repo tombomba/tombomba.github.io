@@ -7,17 +7,14 @@
 
 header[role="banner"]
   margin: 0 auto
-  svg
-    width: auto
-    height: var(--buffer)
-    fill: #F30
-    filter: drop-shadow(-1px 1px 1px rgba(255, 204, 0, 1))
-  div.hr
-    margin-top: calc(var(--shim) + 2px)
-    max-width: var(--shim-4x)
+  div.icon
+    svg
+      width: auto
+      height: var(--buffer)
+      fill: var(--color-link)
 
 article.post
-  margin: var(--shim-2x) auto
+  margin: var(--buffer) auto var(--shim-2x) auto
   header
     h1, p
       display: inline
@@ -67,11 +64,3 @@ footer
       gap: var(--nudge-2x)
     p
       font-size: var(--body-size-sm)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 50rem)
-
-  header[role="banner"]
-    svg
-      height: var(--shim-p)

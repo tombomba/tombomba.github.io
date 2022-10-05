@@ -37,12 +37,16 @@
   <!-- css -->
   <link rel="stylesheet" href="{{ page.style | default: 'default' | append: '.css' | prepend: 'css/' | prepend: site.cdn }}">
 
+  <!-- goog -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Slackey&display=swap&text={{ site.name | upcase }}">
 </head> 
 
 <body>
 
 <header role="banner">
-  <a href="{{ site.url }}" title="{{ site.title }}">{% include icon-jack-o-lantern.svg %}</a>
+  <div class="icon"><a href="{{ site.url }}" title="{{ site.title }}">{% include icon-alien-monster.svg %}</a></div>
 </header>
 
 <main role="main">

@@ -7,23 +7,20 @@
 
 header[role="banner"]
   margin: 0 auto
-  div.icon
-    svg
-      width: auto
-      height: var(--buffer)
-      fill: var(--color-link)
+  h1
+    font-size: var(--hed-size)
+    line-height: var(--line-height-hed)
+    text-transform: lowercase
+    a:hover
+      text-decoration: underline
 
 article.post
-  margin: var(--buffer) auto var(--shim-2x) auto
+  margin: 0 auto var(--shim-2x) auto
   header
-    h1, p
-      display: inline
-      font-size: 1em
-      line-height: var(--line-height-body)
-    h1::after
-      content: '\00A0\2014\0020'
-      font-weight: normal
-      color: var(--color-half)
+    margin: 0 auto var(--shim-2x) auto
+    h1
+      font-size: var(--hed-size-md)
+      line-height: var(--line-height-hed)
 
 article.archive
   margin: var(--shim-2x) auto

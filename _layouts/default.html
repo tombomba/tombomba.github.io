@@ -37,12 +37,17 @@
   <!-- css -->
   <link rel="stylesheet" href="{{ page.style | default: 'default' | append: '.css' | prepend: 'css/' | prepend: site.cdn }}">
 
+  <!-- goog -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Slackey&display=swap&text={{ site.name | default: site.title | remove: ' ' | upcase }}~!">
+
 </head> 
 
 <body>
 
 <header role="banner">
-  <h1><a href="{{ site.url }}" title="{{ site.title }}">{{ site.title }}</a></div>
+  <h1><a href="{{ site.url }}">{{ site.name | default: site.title }}</a></h1></div>
 </header>
 
 <main role="main">

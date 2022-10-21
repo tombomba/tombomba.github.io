@@ -8,18 +8,25 @@
 header[role="banner"]
   margin: 0 auto
   h1
-    font-size: var(--hed-size)
+    margin-left: -3px
+    font-family:  var(--fam-logo)
+    font-size: var(--buffer)
     line-height: var(--line-height-hed)
-    text-transform: lowercase
+    text-transform: uppercase
+    transform: rotate(-3deg)
+    a
+      text-shadow: -3px 3px var(--color-shade)
+      &::after
+        content: '!'
     a:hover
       text-decoration: underline
 
 article.post
-  margin: 0 auto var(--shim-2x) auto
+  margin: var(--shim-2x) auto
   header
-    margin: 0 auto var(--shim-2x) auto
+    margin: 0 auto
     h1
-      font-size: var(--hed-size-md)
+      font-size: var(--hed-size)
       line-height: var(--line-height-hed)
 
 article.archive

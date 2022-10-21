@@ -7,10 +7,12 @@
 
 header[role="banner"]
   margin: 0 auto
+  display: flex
+  flex-flow: row wrap
   h1
     margin-left: -3px
     font-family:  var(--fam-logo)
-    font-size: var(--buffer)
+    font-size: var(--hed-size-xl)
     line-height: var(--line-height-hed)
     text-transform: uppercase
     transform: rotate(-3deg)
@@ -22,7 +24,7 @@ header[role="banner"]
       text-decoration: underline
 
 article.post
-  margin: var(--shim-2x) auto
+  margin: var(--buffer) auto var(--shim-2x) auto
   header
     margin: 0 auto
     h1

@@ -22,9 +22,12 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
 //-----------------------------------------------------------------------------
 
 @font-face
-  font-family: 'MyWebFont'
-  src: url('WebFont.eot')
-  src: url('WebFont.eot?#iefix') format('embedded-opentype'),url('WebFont.woff') format('woff'),url('WebFont.ttf') format('truetype'),url('WebFont.svg#webfont') format('svg')
+  font-family: 'rock_3dregular'
+  src: url('/assets/fonts/rock3d-regular-webfont.woff2') format('woff2'), url('assets/fonts/rock3d-regular-webfont.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+
+//-----------------------------------------------------------------------------
 
 \:root
 
@@ -59,11 +62,11 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
 
   --page-width: 34rem
 
-  --color-logo: hsl(180, 100%, 30%)
+  --color-logo: #{$primary-color}
   --color-shock: #{$secondary-color}
 
-  --color-link: hsl(220, 60%, 50%)
-  --color-visited: hsl(300, 50%, 40%)
+  --color-link: hsl(240, 100%, 50%)
+  --color-visited: hsl(300, 100%, 25%)
 
   --color-active: hsl(36, 100%, 50%)
   --color-select: #{$secondary-color}
@@ -79,8 +82,8 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
   --color-white: hsl(0, 0%, 100%)
   --color-black: hsl(0, 0%, 0%)
 
-  --color-hr-top: hsl(0, 0%, 75%)
-  --color-hr-bottom: hsl(0, 0%, 99%)
+  --color-hr-top: hsl(0, 0%, 82%)
+  --color-hr-bottom: hsl(0, 0%, 98%)
 
   --color-hr-top-darkmode: hsl(0, 0%, 78%)
   --color-hr-bottom-darkmode: hsl(0, 0%, 95%)

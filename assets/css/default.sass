@@ -7,24 +7,25 @@
 
 header[role="banner"]
   margin: 0 auto
-  display: flex
-  flex-flow: row wrap
-  h1
-    margin-left: -3px
-    font-family:  var(--fam-logo)
-    font-size: var(--hed-size-xl)
-    line-height: var(--line-height-hed)
-    text-transform: uppercase
-    transform: rotate(-3deg)
-    a
-      text-shadow: -3px 3px var(--color-shade)
-      &::after
-        content: '!'
-    a:hover
-      text-decoration: underline
+  div.icon
+    display: flex
+    align-items: center
+    justify-content: center
+    width: var(--shim-2x)
+    height: var(--shim-2x)
+    background-color: var(--color-logo)
+    border-radius: 50%
+    overflow: hidden
+    svg
+      width: auto
+      height: var(--shim)
+      fill: var(--color-shock)
+  div.hr
+    margin-top: calc(var(--shim-2x) - 3px)
+    max-width: var(--shim-4x)
 
 article.post
-  margin: var(--buffer) auto var(--shim-2x) auto
+  margin: var(--shim-2x) auto
   header
     margin: 0 auto
     h1
@@ -52,7 +53,7 @@ article.error
 
 footer
   margin: 0 auto
-  ul
+  ul:first-of-type
     margin-top: var(--shim-2x)
   p
     color: var(--color-half)
@@ -67,6 +68,6 @@ footer
 
   footer
     ul
-      gap: var(--nudge-2x)
+      gap: 0.5em
     p
       font-size: var(--body-size-sm)

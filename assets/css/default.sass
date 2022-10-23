@@ -47,6 +47,24 @@ article.post
         &.daystamp::before
           content: '\0020\/\0020'
 
+article.home
+  margin: var(--shim-2x) auto
+  ul
+    margin: 0 auto
+    list-style-type: none
+    li
+      &:not(:first-of-type)
+        margin-top: var(--shim)
+      h1, p
+        display: inline
+        margin: 0
+        font-size: 1em
+        font-weight: 400
+      h1::after
+        content: "\00A0\2014\0020"
+        font-weight: 400
+        color: var(--color-half)
+
 article.archive
   margin: var(--shim-2x) auto
   section

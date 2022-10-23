@@ -1,16 +1,13 @@
 ---
 layout: default
 excerpt: "A small collage, a dumb blog"
-style: homepage
 is_home: true
 permalink: /index.html
 ---
-<article>
+<article class="home">
+  <ul class="plain">
   {% for p in site.posts limit: 10 %}
-  <section>
-    <h1><a href="{{ p.url | absolute_url }}">{{ p.title | strip | strip_html | smartify | normalize_whitespace }}</a></h1>
-    <p>{{ p.excerpt | strip | strip_html | smartify | normalize_whitespace | truncatewords: 50 }}</p>
-  </section>
-  {% endfor -%}
-
+    <li><h1><a href="{{ p.url | absolute_url }}">{{ p.title | strip | strip_html | smartify }}</a></h1><p>{{ p.excerpt | strip | strip_html | smartify | truncatewords: 50 }}</p></li>
+  {% endfor %}
+  </ul>
 </article>

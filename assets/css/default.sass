@@ -36,6 +36,16 @@ article.post
     h1
       font-size: var(--hed-size)
       line-height: var(--line-height-hed)
+    div.byline
+      p
+        display: inline
+        margin-top: 0
+        font-size: var(--body-size-sm)
+        color: var(--color-half)
+        //&.author
+          text-transform: uppercase
+        &.daystamp::before
+          content: '\0020\/\0020'
 
 article.archive
   margin: var(--shim-2x) auto

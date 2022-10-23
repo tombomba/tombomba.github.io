@@ -8,7 +8,12 @@ layout: default
 
   <header>
     <h1>{{ titlef }}</h1>
-    <p></p>
+    {% if page.is_post and page.date %} 
+    <div class="byline">
+      <p class="author">{{ page.author | default: site.author }}</p>
+      <p class="daystamp"><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_string }}</time></p>
+    </div>
+    {% endif -%}
   </header>
 
   {{ copy }}

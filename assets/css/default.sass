@@ -42,8 +42,6 @@ article.post
         margin-top: 0
         font-size: var(--body-size-sm)
         color: var(--color-half)
-        //&.author
-          text-transform: uppercase
         &.daystamp::before
           content: '\0020\/\0020'
 
@@ -86,12 +84,13 @@ article.error
 
 footer
   margin: 0 auto
-  ul:first-of-type
+  ul
     margin-top: var(--shim-2x)
   p
-    color: var(--color-half)
     &:first-of-type
       margin-top: var(--shim)
+    font-size: var(--body-size-sm)
+    color: var(--color-half)
   div.hr
     max-width: var(--shim-4x)
 
@@ -102,5 +101,3 @@ footer
   footer
     ul
       gap: 0.5em
-    p
-      font-size: var(--body-size-sm)

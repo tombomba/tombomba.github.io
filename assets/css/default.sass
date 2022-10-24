@@ -14,18 +14,23 @@ header[role="banner"]
     svg
       width: auto
       height: var(--shim-p)
-      fill: #FF0033
+      fill: var(--color-link)
   div.hr
     margin-top: calc(var(--shim-2x) - 3px)
     max-width: var(--shim-4x)
 
 article.post
-  margin: var(--shim-2x) auto
+  margin: var(--shim-2x) auto 0 auto
   header
     margin: 0 auto
     h1
       font-size: var(--hed-size)
       line-height: var(--line-height-hed)
+      a:link, a:visited
+        text-decoration: none
+        color: var(--color-text)
+      a:hover
+        text-decoration: underline
     div.byline
       p
         display: inline
@@ -34,25 +39,7 @@ article.post
         color: var(--color-half)
         &.daystamp::before
           content: '\0020\/\0020'
-
-article.home
-  margin: var(--shim-2x) auto
-  ul
-    margin: 0 auto
-    list-style-type: none
-    li
-      &:not(:first-of-type)
-        margin-top: var(--shim)
-      h1, p
-        display: inline
-        margin: 0
-        font-size: 1em
-        font-weight: 400
-      h1::after
-        content: "\00A0\2014\0020"
-        font-weight: 400
-        color: var(--color-half)
-
+          
 article.archive
   margin: var(--shim-2x) auto
   section
@@ -73,7 +60,7 @@ article.error
     line-height: var(--line-height-hed)
 
 footer
-  margin: 0 auto
+  margin: var(--shim-2x) auto 0 auto
   ul
     margin-top: var(--shim-2x)
   p

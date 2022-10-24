@@ -1,14 +1,17 @@
-{% assign copy = content | strip %}
-{% include _titlef-widont.html title=page.title -%}
+{% assign p = include.page %}
+{% assign copy = include.content | strip %}
+{% include _titlef-widont.html title=p.title -%}
 
 <header>
-  <h1>{{ titlef }}</h1>
+
+  <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
   {% if p.date %} 
   <div class="byline">
     <p class="author">{{ p.author | default: site.author }}</p>
-    <p class="daystamp"><time datetime="{{ p`.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_string }}</time></p>
+    <p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_string }}</time></p>
   </div>
   {% endif -%}
+
 </header>
 
 {{ copy }}

@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <base href="{{ site.url }}">
   <title>{{ page.title | default: site.title | truncate: 140 | replace: '"', "'" | strip | strip_html | normalize_whitespace | xml_escape }}</title>
@@ -42,7 +43,7 @@
 <body>
 
 <header role="banner">
-  <div class="icon"><a href="{{ site.url }}">{% include icon-jack-o-lantern.svg %}</a></div>
+  <div class="icon"><a href="{{ site.url }}"><img src="{{ 'img/icon-crossbones.svg' | prepend: site.cdn }}" width="100%" height="100%" alt="{{ site.title }}"></a></div>
   <div class="hr"></div>
 </header>
 

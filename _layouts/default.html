@@ -43,11 +43,11 @@
 <body>
 
 <header role="banner">
-  <div class="icon"><a href="{{ site.url }}"><img src="{{ 'img/icon-crossbones.svg' | prepend: site.cdn }}" width="100%" height="100%" alt="{{ site.title }}"></a></div>
+  <div class="icon"><a href="{{ site.url }}" title="{{ site.title }}">{% include icon-crossbones.svg %}</a></div>
   <div class="hr"></div>
 </header>
 
-<main role="main"><!-- foo -->
+<main role="main">
 
   {{ content }}
 

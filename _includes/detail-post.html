@@ -14,4 +14,6 @@
 
 </header>
 
+{% if p.image %}<img class="{{ p.image.style | default: "marquee american" }}" src="{{ p.image.file | prepend: 'img/' | prepend: site.cdn }}" alt="{{ p.image.alt }}">{% endif %}
+
 {{ copy }}

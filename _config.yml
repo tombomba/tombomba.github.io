@@ -20,10 +20,6 @@ collections:
     collections_dir: _pages
     output: true
     permalink: "/:path/"
- archives:
-    collections_dir: _archives
-    output: true
-    permalink: "/:path/"
 
 defaults:
   -
@@ -39,7 +35,7 @@ defaults:
       type: "pages"
     values:
       layout: post
-
+ 
 markdown: kramdown
 kramdown:
   auto_ids: false

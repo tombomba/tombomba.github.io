@@ -1,6 +1,5 @@
 ---
 layout: default
-excerpt: "A list of previous entries"
 ---
 {% assign raw = page.permalink | split: '/' | shift %}
 {% assign raw_yr = raw[0] %}
@@ -14,7 +13,7 @@ excerpt: "A list of previous entries"
   {% if group.name contains target_yr %}
   <section>
     <h1>{{ group.name }}</h1>
-    <ul>{% for item in group.items %}<li><a href="{{ item.url | absolute_url }}">{{ item.subj | default: item.title | smartify | normalize_whitespace | strip }}</a></li>{% endfor %}</ul>
+    <ul>{% for item in group.items %}<li><a href="{{ item.url | absolute_url }}">{{ item.subj | default: item.title | smartify | strip }}</a></li>{% endfor %}</ul>
   </section>
   {% endif -%}
 {% endfor -%}

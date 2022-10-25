@@ -4,6 +4,10 @@ layout: default
 {% assign copy = content | strip %}
 {% include _titlef-widont.html title=page.title -%}
 
+{% if copy contains '<p><img src=' %}
+  {% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', '/>' %}
+{% endif -%}
+
 <article class="{{ page.layout }}"><!-- {{ page.layout }}: {{ page.content | number_of_words }}w -->
 
   <header>

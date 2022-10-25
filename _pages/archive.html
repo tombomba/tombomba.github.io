@@ -10,7 +10,7 @@ permalink: "/archive/"
 {% for group in master_list %}
   <section>
     <h1>{{ group.name }}</h1>
-    <ul>{% for item in group.items %}<li><a href="{{ item.url | absolute_url }}">{{ item.subj | default: item.title | smartify | normalize_whitespace | strip }}</a></li>{% endfor %}</ul>
+    <ul>{% for item in group.items %}<li><a href="{{ item.url | absolute_url }}">{{ item.subj | default: item.title | smartify | strip }}</a></li>{% endfor %}</ul>
   </section>
 {% endfor -%}
 </article>

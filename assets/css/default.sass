@@ -3,7 +3,7 @@
 ---
 
 @charset "utf-8"
-@import reset, vars, body, banner, article, figure
+@import reset, vars, body, banner, article, figure, footer
 
 article.post
   margin: var(--shim-2x) auto
@@ -21,6 +21,7 @@ article.post
       p
         display: inline
         margin-top: 0
+        font-size: var(--body-size-sm)
         color: var(--color-half)
         &:nth-of-type(2)::before
           content: '\0020\/\0020'
@@ -43,28 +44,3 @@ article.error
   h1
     font-size: var(--hed-size)
     line-height: var(--line-height-hed)
-
-footer
-  margin: var(--shim-2x) auto 0 auto
-  ul
-    margin-top: var(--shim-2x)
-  p
-    &:first-of-type
-      margin-top: var(--shim)
-    font-size: var(--body-size-sm)
-    color: var(--color-half)
-  div.hr
-    max-width: var(--shim-4x)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
-  article.post
-    header
-      div.byline p
-        font-size: var(--body-size-sm)
-
-  footer
-    ul
-      gap: 0.5em

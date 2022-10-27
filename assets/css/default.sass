@@ -6,31 +6,30 @@
 @import reset, vars, body, main, figure
 
 header[role="banner"]
-  display: flex
-  align-items: center
-  justify-content: center
-  margin: 0 auto
-  gap: 1em
-  div.logo
+  div.wrap
+    height: var(--shim-2x)
     display: flex
-    h1
-      font-family: var(--fam-logo)
-      font-size: var(--shim-p)
-      line-height: 1
-      text-transform: uppercase
-      a:link, a:visited
-        color: #F03
-  div.icon
-    display: flex
-    width: auto
-    height: var(--shim-p)
-    svg
+    flex-flow: row wrap
+    align-items: center
+    justify-content: space-between
+    border: 1px solid green
+    div.logo
+      h1
+        font-family: var(--fam-logo)
+        font-size: var(--shim-p)
+        line-height: 1
+        text-transform: uppercase
+        a:link, a:visited
+          color: #F03
+    div.icon
       width: auto
-      height: var(--shim-p)
-      fill: #F03
+      height: var(--shim)
+      svg
+        width: auto
+        height: var(--shim)
+        fill: #F03
   div.hr
-    flex: 1
-    max-width: 100%
+    width: 100%
 
 article.post
   margin: var(--shim-2x) auto
@@ -48,7 +47,6 @@ article.post
       p
         display: inline
         margin-top: 0
-        font-size: var(--body-size-sm)
         color: var(--color-half)
         &:nth-of-type(2)::before
           content: '\0020\/\0020'
@@ -87,6 +85,11 @@ footer
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40rem)
+
+  article.post
+    header
+      div.byline p
+        font-size: var(--body-size-sm)
 
   footer
     ul

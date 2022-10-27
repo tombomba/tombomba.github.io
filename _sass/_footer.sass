@@ -4,7 +4,8 @@ footer
   ul
     margin-top: var(--shim-2x)
     display: flex
-    flex-flow: column
+    flex-flow: row wrap
+    gap: 0.5em
     list-style-type: none
     li 
       color: var(--color-half)
@@ -15,12 +16,3 @@ footer
     color: var(--color-half)
   div.hr
     max-width: var(--shim-4x)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
-  footer
-    ul
-      flex-flow: row wrap
-      gap: 0.5em

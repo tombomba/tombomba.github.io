@@ -3,21 +3,22 @@ header[role="banner"]
   max-width: var(--page-width)
   display: flex
   flex-direction: column
-  h1
-    font-family: var(--fam-logo)
-    font-size: var(--shim-p)
-    line-height: 1
-    text-transform: uppercase
-    a:link, a:visited
-      color: var(--color-logo)
-      text-decoration: none
+  div.logo
+    
   div.icon
-    width: auto
-    height: var(--shim-p)
     svg
       width: auto
-      height: var(--shim-p)
+      height: var(--shim)
       fill: var(--color-logo)
   div.hr
-    margin-top: calc(var(--shim-2x) - 3px)
+    margin-top: var(--shim-2x)
     max-width: var(--shim-4x)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  header[role="banner"]
+    div.icon
+      svg
+        height: var(--shim)

@@ -1,7 +1,7 @@
 {% assign p = include.page %}
 {% assign copy = include.content | strip %}
 {% include _titlef-widont.html title=p.title -%}
-  
+
 <header>
 
   <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>

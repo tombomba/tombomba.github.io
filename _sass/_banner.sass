@@ -1,0 +1,48 @@
+header[role="banner"]
+  div.wrap
+    margin: 0 auto
+    height: var(--shim-2x)
+    max-width: var(--page-width)
+    display: flex
+    flex-flow: row wrap
+    align-items: center
+    justify-content: space-between
+    h1
+      font-family: var(--fam-logo)
+      font-size: var(--shim-p)
+      font-weight: 700
+      line-height: 1
+      text-transform: uppercase
+      a:link, a:visited
+        color: var(--color-link)
+        text-decoration: none
+    .icon
+      svg
+        width: auto
+        height: var(--shim)
+        fill: var(--color-link)
+    ul
+      display: none
+  div.hr
+    width: 100%
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 48rem)
+
+  header[role="banner"]
+    div.wrap
+      max-width: 100%
+      .icon
+        flex: 1 0 20% 
+        order: -1
+      ul
+        flex: 1 0 20%
+        display: flex
+        -webkit-justify-content: flex-end
+        align-items: flex-end
+        -webkit-align-items: flex-end
+        gap: 0.5em
+        list-style-type: none
+        li
+          line-height: 1

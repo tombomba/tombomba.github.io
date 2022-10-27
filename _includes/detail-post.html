@@ -2,8 +2,11 @@
 {% assign copy = include.content | strip %}
 {% include _titlef-widont.html title=p.title -%}
 
-<header>
+
+{% if p.image %}<img class="{{ p.image.style | default: "marquee american top" }}" src="{{ p.image.file | prepend: 'img/' | prepend: site.cdn }}" alt="{{ p.image.alt }}">{% endif %}
   
+<header>
+
   <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
   {% if p.date %} 
   <div class="byline">
@@ -13,7 +16,5 @@
   {% endif -%}
 
 </header>
-
- {% if p.image %}<img class="{{ p.image.style | default: "marquee american" }}" src="{{ p.image.file | prepend: 'img/' | prepend: site.cdn }}" alt="{{ p.image.alt }}">{% endif %}
 
 {{ copy }}

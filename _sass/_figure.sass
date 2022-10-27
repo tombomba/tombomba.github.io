@@ -12,7 +12,7 @@ article
     &.tv
       aspect-ratio: 1.33
 
-  & > img
+  img
     display: block
     width: var(--width)
     aspect-ratio: 16/9
@@ -42,6 +42,7 @@ article
       aspect-ratio: 1
 
     &.marquee
+      margin-top: var(--nudge)
       margin-bottom: var(--shim)
     &.filler
       margin-top: var(--shim)
@@ -80,7 +81,7 @@ article
 
 @media screen and (min-width: 40rem)
 
-  article > img
+  article img
 
     &.marquee,
     &.filler
@@ -100,7 +101,7 @@ article
 
 @media screen and (min-width: 50rem)
 
-  article > img
+  article img
 
     &.float.left
       margin-right: var(--shim-n)
@@ -117,7 +118,7 @@ article
 
 @media screen and (min-width: 60rem)
 
-  article > img
+  article img
 
     &.tilt.right
       --width: 35%
@@ -131,7 +132,7 @@ article
 
 @media screen and (min-width: 70rem)
 
-  article > img
+  article img
 
     &.jumbo
       --width: 40%
@@ -145,7 +146,7 @@ article
 
 @media screen and (min-width: 80rem)
 
-  article > img
+  article img
 
     &.pull.left
       margin-left: calc(var(--shim) * -2)

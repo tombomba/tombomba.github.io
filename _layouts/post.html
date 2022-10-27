@@ -1,25 +1,6 @@
 ---
 layout: default
 ---
-{% assign copy = content | strip %}
-{% include _titlef-widont.html title=page.title -%}
-
-<article class="{{ page.layout }}"><!-- {{ page.layout }}: {{ page.content | number_of_words }}w -->
-
-  <header>
-    <h1>{{ titlef }}</h1>
-    {% if page.is_post and page.date %} 
-    <div class="byline">
-      <p class="author">{{ page.author | default: site.author }}</p>
-      <p class="daystamp"><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_string }}</time></p>
-    </div>
-    {% endif -%}
-  </header>
-
-  {% if page.image %}
-    <img class="{{ page.image.style | default: "marquee american" }}" src="{{ page.image.file | prepend: 'img/' | prepend: site.cdn }}" alt="{{ page.image.alt }}">
-  {% endif %}
-
-  {{ copy }}
-
+<article class="{{ page.layout }}"><!-- {{ page.content | number_of_words }}w -->
+  {% include detail-{{ page.layout }}.html page=page content=content %}
 </article>

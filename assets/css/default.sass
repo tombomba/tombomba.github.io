@@ -3,7 +3,26 @@
 ---
 
 @charset "utf-8"
-@import reset, vars, body, banner, article, figure, footer
+@import reset, vars, body, article, figure
+
+header[role="banner"]
+  margin: 0 auto
+  max-width: var(--page-width)
+  display: flex
+  flex-direction: column
+  div.logo
+    display: flex
+    h1
+      font-family: var(--fam-logo)
+      font-size: var(--hed-size-lg)
+      line-height: 1
+      text-transform: uppercase
+      a:link, a:visited
+        color: var(--color-logo)
+        text-decoration: none
+  div.hr
+    margin-top: calc(var(--shim-2x) - 2px)
+    max-width: var(--shim-4x)
 
 article.post
   margin: var(--shim-2x ) auto
@@ -71,3 +90,22 @@ article.error
   h1
     font-size: var(--hed-size)
     line-height: var(--line-height-hed)
+
+footer
+  max-width: var(--page-width)
+  margin: var(--shim-2x) auto 0 auto
+  ul
+    margin-top: var(--shim-2x)
+    display: flex
+    flex-flow: row wrap
+    gap: 0.5em
+    list-style-type: none
+    li 
+      color: var(--color-half)
+  p
+    &:first-of-type
+      margin-top: var(--shim)
+    font-size: var(--body-size-sm)
+    color: var(--color-half)
+  div.hr
+    max-width: var(--shim-4x)

@@ -2,6 +2,11 @@
 {% assign copy = include.content | strip %}
 {% include _titlef-widont.html title=p.title -%}
 
+{% if p.image %}
+  {% capture this_image %}<img class="{{ p.image.style | default: "marquee american top" }}" src="{{ p.image.file | prepend: 'img/' | prepend: site.cdn }}" alt="{{ p.image.alt }}">{% endcapture %}
+  {% if page.image.style contains 'marquee' or page.image.style == nil %}<div class="figpad">{{ this_image }}</div>{% else %}{{ this_image }}{% endif %}
+{% endif -%}
+
 <div class="hed">
 
   <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
@@ -13,10 +18,5 @@
   {% endif -%}
 
 </div>
-
-{% if p.image %}
-  {% capture this_image %}<img class="{{ p.image.style | default: "marquee american" }}" src="{{ p.image.file | prepend: 'img/' | prepend: site.cdn }}" alt="{{ p.image.alt }}">{% endcapture %}
-  {% if page.image.style contains 'marquee' or page.image.style == nil %}<div class="figpad">{{ this_image }}</div>{% else %}{{ this_image }}{% endif %}
-{% endif -%}
 
 {{ copy }}

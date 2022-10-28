@@ -2,7 +2,7 @@
 {% assign copy = include.content | strip %}
 {% include _titlef-widont.html title=p.title -%}
 
-<header>
+<div class="hedbox">
 
   <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
   {% if p.date %} 
@@ -12,7 +12,7 @@
   </div>
   {% endif -%}
 
-</header>
+</div>
 
 {% if p.image %}
   {% capture this_image %}<img class="{{ p.image.style | default: "marquee american" }}" src="{{ p.image.file | prepend: 'img/' | prepend: site.cdn }}" alt="{{ p.image.alt }}">{% endcapture %}

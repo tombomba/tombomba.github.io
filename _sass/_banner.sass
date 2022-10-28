@@ -4,21 +4,19 @@ header[role="banner"]
   display: flex
   flex-direction: column
   div.logo
-    
+    h1
+      font-family: var(--fam-logo)
+      font-size: var(--shim-p)
+      line-height: 1
+      text-transform: uppercase
+      a:link, a:visited
+        color: var(--color-link)
+        text-decoration: none
   div.icon
     svg
       width: auto
-      height: var(--shim)
-      fill: var(--color-logo)
+      height: var(--shim-p)
+      fill: var(--color-link)
   div.hr
-    margin-top: var(--shim-2x)
+    margin-top: calc(var(--shim-2x) - 3px)
     max-width: var(--shim-4x)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
-  header[role="banner"]
-    div.icon
-      svg
-        height: var(--shim)

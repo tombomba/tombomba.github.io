@@ -1,0 +1,19 @@
+{% assign p = include.page %}
+{% assign copy = include.content | strip -%}
+
+{% include _titlef-punc.html title=p.title -%}
+
+{% if copy contains '<p><img src=' %}
+  {% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', '/>' %}
+{% endif -%}
+
+{% capture datef %}<span class="daystamp">&nbsp;(<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ p.date | date: '%d %b' }}</a>{% else %}{{ p.date | date: '%d %b %Y' }}{% endif %}</time>)</span>{% endcapture -%}
+{% assign copysize = copy | size | minus: 4 -%}
+{% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
+
+{% capture hedbox %}<div class="hed"><h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif -%}</h1><p>{% endcapture -%}
+{% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
+
+
+
+{{ copy }}

@@ -7,13 +7,16 @@
   {% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', '/>' %}
 {% endif -%}
 
-{% capture datef %}<span class="daystamp">&nbsp;(<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ p.date | date: '%d %b' }}</a>{% else %}{{ p.date | date: '%d %b %Y' }}{% endif %}</time>)</span>{% endcapture -%}
+{% capture datef %}<span class="daystamp">(<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ p.date | date: '%d %b' }}</a>{% else %}{{ p.date | date: '%d %b %Y' }}{% endif %}</time>)</span>{% endcapture -%}
 {% assign copysize = copy | size | minus: 4 -%}
 {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
 
 {% capture hedbox %}<div class="hed"><h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif -%}</h1><p>{% endcapture -%}
 {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
 
-
+{% if p.image %}
+  {% capture this_image %}<img class="{{ p.image.style | default: "marquee american" }}" src="{{ p.image.file | prepend: 'img/' | prepend: site.cdn }}" alt="{{ p.image.alt }}">{% endcapture %}
+  {% if page.image.style contains 'marquee' or page.image.style == nil %}<div class="figpad">{{ this_image }}</div>{% else %}{{ this_image }}{% endif %}
+{% endif -%}
 
 {{ copy }}

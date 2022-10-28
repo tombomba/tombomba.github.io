@@ -6,15 +6,15 @@ permalink: /index.html
 ---
 {% for p in site.posts limit: 10 %}
 
-  {% unless forloop.first %}<div class="pagebreak"><div class="hr"></div></div>{% endunless %}
-
-  <article class="{{ p.layout }}"><!-- {{ p.content | number_of_words }}w-->
+  {% unless forloop.first %}<div class="pagebreak"><div class="hr"></div></div>{% endunless -%}
   
   {% assign wc = p.content | number_of_words %}
   {% if wc < 200 or p.image.style contains 'float' %}
+  <article class="micro">
     {% include detail-micro.html page=p content=p.content is_home=true %}
   
-  {% else %}
+  {% else -%}
+  <article class="post">
     {% include detail-post.html page=p content=p.content is_home=true %}
 
   {% endif -%}

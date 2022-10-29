@@ -6,7 +6,7 @@ permalink: /index.html
 ---
 {% for p in site.posts limit: 10 %}
 
-  {% unless forloop.first %}<div class="pagebreak"><div class="hr"></div></div>{% endunless -%}
+  {% unless forloop.first %}<div class="hr"></div>{% endunless -%}
   
   {% assign wc = p.content | number_of_words %}
   {% if wc < 200 or p.image.style contains 'float' %}

@@ -6,31 +6,30 @@
 @import reset, vars, body, article, figure
 
 header[role="banner"]
+ 
   margin: 0 auto
-  .wrap
-    margin: 0 auto
-    max-width: var(--page-width)
-    height: var(--shim-2x)
-    display: flex
-    flex-flow: row wrap
-    align-items: center
-    justify-content: center
-    h1
-      margin-top: -2px
-      font-family: var(--fam-logo)
-      font-size: var(--shim-p)
-      line-height: 0.85
-      a:link, a:visited
-        color: orange
-        text-decoration: none
-    .icon
-      svg
-        width: auto
-        height: var(--shim-p)
-        padding: 6px
-        fill: var(--color-white)
-        background-color: var(--color-black)
-        border-radius: 4px
+  max-width: var(--page-width)
+  height: var(--shim-2x)
+  display: flex
+  flex-flow: row wrap
+  align-items: center
+  justify-content: center
+  h1
+    margin-top: -2px
+    font-family: var(--fam-logo)
+    font-size: var(--shim-p)
+    line-height: 0.85
+    a:link, a:visited
+      color: orange
+      text-decoration: none
+  .icon
+    svg
+      width: auto
+      height: var(--shim-p)
+      padding: 6px
+      fill: var(--color-white)
+      background-color: var(--color-black)
+      border-radius: 4px
   .hr
     flex: 1
     width: 100%
@@ -75,8 +74,6 @@ article.micro
       a:link, a:visited
         text-decoration: none
         color: var(--color-text)
-      a:hover
-        text-decoration: underline
       &::after
         content: '\00A0\2014\0020'
         font-weight: 400
@@ -110,20 +107,13 @@ article.error
     line-height: var(--line-height-hed)
 
 footer
+  margin: 0 auto
+  padding-bottom: var(--shim-p)
   max-width: var(--page-width)
-  margin: var(--shim-2x) auto 0 auto
-  ul
-    margin-top: var(--shim-2x)
-    display: flex
-    flex-flow: row wrap
-    gap: 0.5em
-    list-style-type: none
-    li 
-      color: var(--color-half)
   p
-    &:first-of-type
-      margin-top: var(--shim)
-    font-size: var(--body-size-sm)
+    margin-top: 1em
+    font-family: var(--fam-sans)
+    font-size: var(--body-size-xs)
+    text-align: center
     color: var(--color-half)
-  div.hr
-    max-width: var(--shim-4x)
+ 

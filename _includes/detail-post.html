@@ -16,6 +16,6 @@
     {% unless forloop.index > 1 %}<p class="author">By {{ p.author | default: site.author }}</p>{% endunless %}
     <p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_string }}</time></p>
   </div>
-  {% endif %}
+{% endif %}
 
 {{ copy }}

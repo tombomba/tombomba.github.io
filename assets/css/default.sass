@@ -31,25 +31,26 @@ header[role="banner"]
         fill: var(--color-white)
         background-color: var(--color-black)
         border-radius: 4px
-  div.hr
+  .hr
     flex: 1
     width: 100%
 
 article.post
   margin: var(--shim-2x ) auto
-  div.hed
+  .hed
     margin: 0 auto
     h1
-      font-family: var(--fam-plain-sans)
+      font-family: var(--fam-sans)
       font-size: var(--hed-size-md)
       line-height: 1.2
       letter-spacing: -0.25px
       text-transform: uppercase
       text-rendering: optimizeLegibility
       a:link, a:visited
+        text-decoration: none
         color: var(--color-text)
-  div.byline
-    margin-top: var(--shim)
+  .byline
+    margin-top: var(--shim-n)
     p
       display: inline
       margin-top: 0
@@ -62,13 +63,15 @@ article.post
 
 article.micro
   margin: var(--shim-2x) auto
-  div.hed
-    margin: 0 auto
+  .hed
+    margin: auto
     h1, p
       display: inline
       font-size: 1em
       line-height: var(--line-height-body)
     h1
+      font-family: var(--fam-sans)
+      text-transform: uppercase
       a:link, a:visited
         text-decoration: none
         color: var(--color-text)
@@ -78,7 +81,7 @@ article.micro
         content: '\00A0\2014\0020'
         font-weight: 400
         color: var(--color-half)
-  span.daystamp
+  .daystamp
     font-style: italic
     color: var(--color-half)
     a:link, a:visited

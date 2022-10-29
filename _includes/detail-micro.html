@@ -7,7 +7,7 @@
   {% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', '/>' %}
 {% endif -%}
 
-{% capture datef %}<span class="daystamp">(<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{% if include.is_home %}{{ p.date | date: '%d %b' }}{% else %}{{ p.date | date: '%d %b %Y' }}{% endif %}</time>)</span>{% endcapture -%}
+{% capture datef %}&#032;<span class="daystamp">(<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{% if include.is_home %}{{ p.date | date: '%d %b' }}{% else %}{{ p.date | date: '%d %b %Y' }}{% endif %}</time>)</span>{% endcapture -%}
 {% assign copysize = copy | size | minus: 4 -%}
 {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
 

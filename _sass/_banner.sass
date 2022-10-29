@@ -20,3 +20,36 @@ header[role="banner"]
   div.hr
     margin-top: calc(var(--shim-2x) - 3px)
     max-width: var(--shim-4x)
+
+// -- 
+
+header[role="banner"]
+  margin: 0 auto
+  .wrap
+    margin: 0 auto
+    max-width: var(--page-width)
+    height: var(--shim-2x)
+    display: flex
+    flex-flow: row wrap
+    align-items: center
+    justify-content: space-between
+    h1
+      margin-top: 2px
+      font-family: var(--fam-logo)
+      font-size: var(--shim)
+      line-height: 1
+      a:link, a:visited
+        color: black
+        text-decoration: none
+    .icon
+      svg
+        width: auto
+        height: var(--shim-p)
+        padding: 6px
+        fill: var(--color-white)
+        background-color: var(--color-black)
+        border-radius: 4px
+
+  div.hr
+    flex: 1
+    width: 100%

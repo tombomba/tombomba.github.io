@@ -24,13 +24,12 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
 \:root
 
   --fam-sans: Verdana, 'Verdana Ref', Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', 'Bitstream Vera Sans', 'Liberation Sans', sans-serif
-  --fam-black: Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', sans-serif
-  --fam-mono: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace
   --fam-serif: Georgia, Constantia, 'Lucida Bright', Lucidabright, 'Lucida Serif', Lucida, 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', serif
   --fam-system: system, system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif
   --fam-plain-sans: Arial, sans-serif
-  --fam-plain-serif: George, serif  
+  --fam-plain-serif: Georgia, serif  
   --fam-logo: 'Nabla', var(--fam-sans)
+  --fam-emoji: 'Noto Color Emoji', var(--fam-system)
 
   --line-height-body: 1.6875
   --line-height-hed: calc(((var(--line-height-body) - 1) / 2) + 1)
@@ -60,27 +59,27 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
 
   --page-width: 34rem
 
-  --color-logo: #{$primary-color}
-  --color-shock: #{$secondary-color}
+  --color-logo: hsl(348, 100%, 50%)
+  --color-shock: hsl(48, 100%, 50%)
 
   --color-link: hsl(240, 100%, 50%)
   --color-visited: hsl(300, 100%, 25%)
 
   --color-active: hsl(36, 100%, 50%)
-  --color-select: hsl(48, 100%, 50%)
+  --color-select: hsl(60, 100%, 90%)
 
-  --color-body: hsl(0, 0%, 95%)
+  --color-body: hsl(0, 0%, 98%)
 
-  --color-back: hsl(0, 0%, 88%)
-  --color-shade: hsl(0, 0%, 79%)
+  --color-back: hsl(0, 0%, 92%)
+  --color-shade: hsl(0, 0%, 82%)
   --color-half: hsl(0, 0%, 49%)
   --color-text: hsl(0, 0%, 15%)
 
   --color-white: hsl(0, 0%, 100%)
   --color-black: hsl(0, 0%, 0%)
 
-  --color-hr-top: hsl(0, 0%, 85%)
-  --color-hr-bottom: hsl(0, 0%, 98%)
+  --color-hr-top: hsl(0, 0%, 88%)
+  --color-hr-bottom: hsl(0, 0%, 100%)
 
 //-----------------------------------------------------------------------------
 
@@ -130,7 +129,7 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
 
     --line-height-body: 1.8
 
-    --body-size: 1.188rem
+    --body-size: 1.2rem
     --body-size-lg: 1.158em
     --body-size-sm: 0.895em
     --body-size-xs: 0.789em

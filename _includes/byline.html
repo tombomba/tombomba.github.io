@@ -1,0 +1,10 @@
+
+{% if p.date %} 
+  <div class="byline">
+    {% unless forloop.index > 1 %}
+      <img class="avatar" src="{{ 'img/bomtomba-av.png' | prepend: site.cdn }}" alt="">
+      <p class="author">By {{ p.author | default: site.author }}</p>
+    {% endunless %}
+    <p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_string }}</time></p>
+  </div>
+{% endif %}

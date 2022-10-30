@@ -3,62 +3,29 @@
 ---
 
 @charset "utf-8"
-@import reset, vars, body, article, figure
-
-header[role="banner"]
- 
-  margin: 0 auto
-  max-width: var(--page-width)
-  height: var(--shim-2x)
-  display: flex
-  flex-flow: row wrap
-  align-items: center
-  justify-content: center
-  h1
-    margin-top: -2px
-    font-family: var(--fam-logo)
-    font-size: var(--shim-p)
-    line-height: 0.85
-    a:link, a:visited
-      color: orange
-      text-decoration: none
-  .icon
-    svg
-      width: auto
-      height: var(--shim-p)
-      padding: 6px
-      fill: var(--color-white)
-      background-color: var(--color-black)
-      border-radius: 4px
-  .hr
-    flex: 1
-    width: 100%
+@import reset, vars, body, banner, article, figure
 
 article.post
   margin: var(--shim-2x ) auto
   .hed
-    margin: 0 auto
+    margin: 0
     h1
       font-family: var(--fam-sans)
       font-size: var(--hed-size-md)
-      line-height: 1.2
-      letter-spacing: -0.25px
+      line-height: 1.1
+      letter-spacing: -0.125px
       text-transform: uppercase
       text-rendering: optimizeLegibility
       a:link, a:visited
-        text-decoration: none
         color: var(--color-text)
-  .byline
-    margin-top: var(--shim-n)
-    p
-      display: inline
-      margin-top: 0
-      font-size: var(--body-size-sm)
+  .daystamp
+    font-style: italic
+    color: var(--color-half)
+    a:link, a:visited
+      text-decoration: none
       color: var(--color-half)
-      &.author
-        text-transform: uppercase
-      &:nth-of-type(2)::before
-        content: '\0020\/\0020'
+    a:hover
+      text-decoration: underline
 
 article.micro
   margin: var(--shim-2x) auto
@@ -74,18 +41,17 @@ article.micro
       a:link, a:visited
         text-decoration: none
         color: var(--color-text)
+      a:hover
+        text-decoration: underline
       &::after
-        content: '\00A0\2014\0020'
-        font-weight: 400
-        color: var(--color-half)
+        content: '\0020'
+    .punc::after
+      content: '.'
   .daystamp
     font-style: italic
     color: var(--color-half)
     a:link, a:visited
       color: var(--color-half)
-      text-decoration: none
-    a:hover
-      text-decoration: underline
 
 article.archive
   margin: var(--shim-2x) auto
@@ -112,8 +78,7 @@ footer
   max-width: var(--page-width)
   p
     margin-top: 1em
-    font-family: var(--fam-sans)
-    font-size: var(--body-size-xs)
+    font-size: var(--body-size-sm)
     text-align: center
     color: var(--color-half)
  

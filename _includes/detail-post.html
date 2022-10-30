@@ -11,11 +11,8 @@
   {% if page.image.style contains 'marquee' or page.image.style == nil %}<div class="figpad">{{ this_image }}</div>{% else %}{{ this_image }}{% endif %}
 {% endif -%}
 
-{% if p.date %} 
-  <div class="byline">
-    {% unless forloop.index > 1 %}<p class="author">By {{ p.author | default: site.author }}</p>{% endunless %}
-    <p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_string }}</time></p>
-  </div>
-{% endif %}
-
 {{ copy }}
+
+{% if p.date %} 
+  <p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{% if page.is_home %}<a href="{{ p.url | absolute_url }}">{{ p.date | date_to_string }}</a>{% else %}{{ p.date | date_to_string }}{% endif %}</time></p>
+{% endif %}

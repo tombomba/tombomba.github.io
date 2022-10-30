@@ -1,55 +1,55 @@
 header[role="banner"]
   margin: 0 auto
+  height: var(--shim-2x)
   max-width: var(--page-width)
   display: flex
-  flex-direction: column
-  div.logo
-    h1
-      font-family: var(--fam-logo)
-      font-size: var(--hed-size-lg)
-      line-height: 1
-      text-transform: uppercase
-      a:link, a:visited
-        color: var(--color-logo)
-        text-decoration: none
-  div.icon
-    svg
-      width: auto
-      height: var(--shim-p)
-      fill: var(--color-link)
-  div.hr
-    margin-top: calc(var(--shim-2x) - 3px)
-    max-width: var(--shim-4x)
-
-// -- 
-
-header[role="banner"]
-  margin: 0 auto
-  .wrap
-    margin: 0 auto
-    max-width: var(--page-width)
-    height: var(--shim-2x)
-    display: flex
-    flex-flow: row wrap
-    align-items: center
-    justify-content: space-between
-    h1
-      margin-top: 2px
-      //font-family: var(--fam-logo)
-      font-size: var(--shim)
-      line-height: 1
-      a:link, a:visited
-        color: yellow
-        text-decoration: none
-    .icon
-      svg
-        width: auto
-        height: var(--shim-p)
-        padding: 6px
-        fill: var(--color-white)
-        background-color: var(--color-black)
-        border-radius: 4px
-
-  div.hr
+  flex-flow: row wrap
+  align-items: center
+  justify-content: space-between
+  h1
+    flex: 1
+    margin-top: -2px
+    font-family: var(--fam-logo)
+    font-size: var(--shim-p)
+    line-height: 0.85
+    a:link, a:visited
+      color: orange
+      text-decoration: none
+  p
+    margin-block-start: 0
+    margin-block-end: 0
+    font-family: var(--fam-emoji)
+    font-size: var(--shim)
+    line-height: 0.85
+    a:link, a:visited
+      color: var(--color-link)
+      text-decoration: none
+  ul
+    display: none
+  .hr
     flex: 1
     width: 100%
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  header[role="banner"]
+    max-width: 100%
+    padding: 0 1em
+    h1
+      flex: auto
+      text-align: center
+    p
+      order: -1
+      flex: 1 0 20%
+    ul
+      flex: 1 0 20%
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      gap: 0.5em
+      list-style-type: none
+      li
+        line-height: 1
+   

@@ -8,24 +8,27 @@
 article.post
   margin: var(--shim-2x ) auto
   .hed
-    margin: 0
     h1
-      font-family: var(--fam-sans)
       font-size: var(--hed-size-md)
-      line-height: 1.1
-      letter-spacing: -0.125px
-      text-transform: uppercase
-      text-rendering: optimizeLegibility
+      line-height: var(--line-height-hed)
       a:link, a:visited
+        text-decoration: none
         color: var(--color-text)
-  .daystamp
-    font-style: italic
-    color: var(--color-half)
-    a:link, a:visited
-      text-decoration: none
-      color: var(--color-half)
-    a:hover
-      text-decoration: underline
+    .byline
+      margin-top: var(--nudge)
+      display: flex
+      flex-flow: row wrap
+      align-items: center
+      gap: var(--nudge)
+      p
+        margin: 0
+        font-size: var(--body-size-sm)
+        line-height: 1
+        color: var(--color-half)
+        &.author
+          text-transform: uppercase
+        &:nth-of-type(2)::before
+          content: '\/\0020'
 
 article.micro
   margin: var(--shim-2x) auto
@@ -36,13 +39,9 @@ article.micro
       font-size: 1em
       line-height: var(--line-height-body)
     h1
-      font-family: var(--fam-sans)
-      text-transform: uppercase
       a:link, a:visited
         text-decoration: none
         color: var(--color-text)
-      a:hover
-        text-decoration: underline
       &::after
         content: '\0020'
     .punc::after

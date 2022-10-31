@@ -4,21 +4,9 @@ excerpt: "A small collage, a dumb blog"
 is_home: true
 permalink: /index.html
 ---
-{% for p in site.posts limit: 10 %}
-
-  {% unless forloop.first %}<div class="hr"></div>{% endunless -%}
-  
-  {% assign wc = p.content | number_of_words %}
-  {% if wc < 200 or p.image.style contains 'float' %}
-  <article class="micro home">
-    {% include detail-micro.html page=p content=p.content is_home=true %}
-  
-  {% else -%}
-  <article class="post home">
-    {% include detail-post.html page=p content=p.content is_home=true %}
-
-  {% endif -%}
-  
+{% for p in site.posts limit: 20 %}
+  {% unless forloop.first %}{% assign homeslug = ' home' %}{% endunless %}
+  <article class="{{ p.layout }}{{ p.homeslug }}">
+    {% include detail-{{ p.layout }}.html page=p content=p.content is_home=true %}
   </article>
-
 {% endfor -%}

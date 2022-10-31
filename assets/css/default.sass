@@ -12,9 +12,6 @@ article.post
       font-size: var(--hed-size-md)
       line-height: 1.1
       text-transform: uppercase
-      a:link, a:visited
-        text-decoration: none
-        color: var(--color-text)
     .byline
       margin-top: var(--shim)
       display: flex
@@ -33,17 +30,13 @@ article.post
 
 article.micro
   .hed
-    margin: auto
+    max-width: var(--page-width)
     h1, p
       display: inline
       font-size: 1em
       line-height: var(--line-height-body)
-    h1
-      a:link, a:visited
-        text-decoration: none
-        color: var(--color-text)
-      &::after
-        content: '\0020'
+    h1::after
+      content: '\0020'
     .punc::after
       content: '.'
   .daystamp

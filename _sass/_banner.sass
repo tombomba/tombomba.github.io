@@ -1,9 +1,15 @@
 header[role="banner"]
-  margin: 0 auto
   display: flex
   h1
     font-size: var(--hed-size-md)
     line-height: 1
+    text-transform: lowercase
     a:link, a:visited
       color: var(--color-logo)
-      text-decoration: none
+      &::after
+        content: '.'
+
+header[role="banner"].post,
+header[role="banner"].float
+  h1
+    font-size: var(--hed-size)

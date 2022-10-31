@@ -6,7 +6,7 @@ permalink: /index.html
 ---
 {% for p in site.posts limit: 20 %}
   {% unless forloop.first %}{% assign homeslug = ' home' %}{% endunless %}
-  <article class="{{ p.layout }}{{ p.homeslug }}">
+  <article class="{{ p.layout }}{{ homeslug }}">
     {% include detail-{{ p.layout }}.html page=p content=p.content is_home=true %}
   </article>
 {% endfor -%}

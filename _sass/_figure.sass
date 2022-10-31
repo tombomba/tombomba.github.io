@@ -15,7 +15,7 @@ article
   img
     display: block
     width: var(--width)
-    aspect-ratio: 16/9
+    aspect-ratio: var(--ratio)
     margin-top: var(--shim)
     margin-bottom: var(--shim)
     object-fit: cover
@@ -64,6 +64,8 @@ article
 
     &.top
       margin-top: 0
+    &.flat
+      margin-top: var(--nudge)
     &.center
       margin-left: auto
       margin-right: auto
@@ -81,7 +83,7 @@ article
       --width: 50%
 
   div.figpad
-    max-width: calc(var(--page-width) + var(--shim))
+    max-width: var(--video-max-width)
 
 //-----------------------------------------------------------------------------
 
@@ -139,20 +141,7 @@ article
 
   article img
 
-    &.jumbo
-      --width: 40%
-
     &.pull.left
       margin-left: calc(var(--shim) * -1)
     &.pull.right
       margin-right: calc(var(--shim) * -1)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 80rem)
-
-  article img
-
-    &.pull.left
-      margin-left: calc(var(--shim) * -2)
-      margin-right: var(--shim)

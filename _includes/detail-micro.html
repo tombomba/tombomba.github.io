@@ -19,7 +19,7 @@
 {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
 
 {% if p.image %}
-  {% capture this_image %}<img class="{{ p.image.style | default: "marquee american" }}" src="{{ p.image.file | prepend: 'img/' | prepend: site.cdn }}" alt="{{ p.image.alt }}">{% endcapture %}
+  {% capture this_image %}<img class="{{ p.image.style | default: "marquee american" }}"{% if p.image.ratio %} style="--aspect-ratio:{{ p.ratio }}" {% endif %} src="{{ p.image.file | prepend: 'img/' | prepend: site.cdn }}" alt="{{ p.image.alt }}">{% endcapture %}
   {% if page.image.style contains 'marquee' or page.image.style == nil %}<div class="figpad">{{ this_image }}</div>{% else %}{{ this_image }}{% endif %}
 {% endif -%}
 

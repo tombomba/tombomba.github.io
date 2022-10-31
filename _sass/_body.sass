@@ -17,7 +17,7 @@ body
   -moz-text-size-adjust: none
   -webkit-text-size-adjust: 100%
 
-  padding: 0 1em
+  padding: 1em
 
 \::selection
   background-color: var(--color-select)
@@ -53,11 +53,11 @@ time
   max-width: var(--page-width)
   margin: var(--shim-2x) auto 0 auto
   .hr
-    max-width: var(--shim-4x)
+    width: 100%
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40rem)
 
   body
-    padding: 0
+    padding: var(--shim)

@@ -18,7 +18,6 @@ body
   -moz-text-size-adjust: none
   -webkit-text-size-adjust: 100%
 
-  max-width: 90em
   padding: 1em
 
 \::selection
@@ -26,6 +25,11 @@ body
 
 \::-moz-selection
   background-color: var(--color-select)
+
+main
+  max-width: var(--page-width-xl)
+  margin-left: auto
+  margin-right: auto
 
 a
   text-decoration: underline
@@ -44,35 +48,7 @@ time
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 25rem)
+@media screen and (min-width: 30rem)
 
   body
     padding: var(--shim)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 48rem)
-
-  body
-    padding: var(--shim) var(--shim-2x)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 64rem)
-
-  body
-    max-width: 80em
-    width: 84%
-    margin-left: auto
-    margin-right: auto
-    padding-left: 8%
-    padding-right: 8%
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 80rem)
-
-  body
-    width: 87.5%
-    padding-left: 12.5%
-    padding-right: 0

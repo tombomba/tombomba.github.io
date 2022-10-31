@@ -1,14 +1,16 @@
 header[role="banner"]
   display: flex
   h1
-    font-family: var(--fam-logo)
-    font-size: var(--shim-p)
-    line-height: 0.85
-    text-transform: uppercase
+    font-size: var(--hed-size-md)
+    line-height: 1
+    text-transform: lowercase
     a:link, a:visited
+      text-decoration: none
       color: var(--color-logo)
+      &::after
+        content: '.'
 
 header[role="banner"].post,
 header[role="banner"].float
   h1
-    font-size: var(--shim-n)
+    font-size: var(--hed-size)

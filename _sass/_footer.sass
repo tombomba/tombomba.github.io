@@ -1,18 +1,19 @@
 footer
+  margin-top: var(--shim-4x)
+  &.home
+    margin-top: var(--shim-3x)
   max-width: var(--page-width)
-  margin: var(--shim-2x) auto 0 auto
   ul
-    margin-top: var(--shim-2x)
     display: flex
-    flex-flow: row wrap
+    flex-flow: row wrap 
+    align: center
     gap: 0.5em
     list-style-type: none
-    li 
-      color: var(--color-half)
-  p
-    &:first-of-type
-      margin-top: var(--shim)
-    font-size: var(--body-size-sm)
-    color: var(--color-half)
-  div.hr
-    max-width: var(--shim-4x)
+    li
+      font-weight: 700
+      text-transform: lowercase
+      a:link, a:visited
+        text-decoration: none
+        color: var(--color-logo)
+        &::after
+          content: '.'

@@ -1,13 +1,17 @@
 article
   @extend .clearfix
   margin-top: var(--shim-2x)
+  max-width: var(--page-width-lg)
   &.home
     margin-top: var(--shim-3x)
 
   h1
     color: var(--color-black)
     a:link, a:visited
+      text-decoration: none
       color: var(--color-black)
+    a:hover
+      text-decoration: underline
 
   h2, h3, h4, h5, h6
     max-width: var(--page-width)
@@ -34,9 +38,23 @@ article
   li + p,
     margin-top: 0
 
+  .daystamp
+    font-style: italic
+    color: var(--color-half)
+    a:link, a:visited
+      text-decoration: none
+      color: var(--color-half)
+    a:hover
+      text-decoration: underline
+
   .permalink
     font-size: var(--shim-n)
     line-height: 0.5
+    a:link, a:visited
+      text-decoration: none
+      color: var(--color-logo)
+    a:hover
+      text-decoration: none
 
 //-----------------------------------------------------------------------------
 

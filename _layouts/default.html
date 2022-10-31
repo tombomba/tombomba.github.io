@@ -39,11 +39,6 @@
   <!-- css -->
   <link rel="stylesheet" href="{{ page.style | default: 'default' | append: '.css' | prepend: 'css/' | prepend: site.cdn }}">
 
-  <!-- goog -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nabla&display=swap&text={{ site.title | remove: ' ' | upcase }}~!.*">
-
 </head> 
 
 <body>
@@ -58,9 +53,13 @@
 
 </main>
 
-<div class="hr"></div>  
-<footer>
-  <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} <a href="https://twitter.com/{{ site.socials }}">{{ site.author }}</a></p>
+<footer class="{% if page.is_home %}home{% else %}{{ page.layout }}{% endif %}">
+  {% include _datelist.html %}
+  <ul class="feeds">
+    <li><a href="{{ 'about' | absolute_url }}">About</a></li>
+    <li><a href="https://twitter.com/{{ site.socials }}">Twitter</a></li>
+    <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
+  </ul>
 </footer>
 
 </body>

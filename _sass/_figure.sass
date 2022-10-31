@@ -64,18 +64,9 @@ article
     &.center
       margin-left: auto
       margin-right: auto
-    &.right
-      margin-right: 0
-      margin-left: auto
-    &.left
-      margin-right: auto
-      margin-left: 0
 
     &.float
-      margin-left: auto
-      margin-right: auto
       margin-bottom: var(--shim)
-      --width: 50%
 
   div.figpad
     max-width: var(--video-max-width)
@@ -88,7 +79,8 @@ article
 
     &.wide
       --width: 66%
-    &.half
+    &.half,
+    &.float
       --width: 50%
     &.third
       --width: 33%
@@ -161,4 +153,3 @@ article
 
     &.pull.left
       margin-left: calc(var(--shim) * -2)
-      --width: 35%

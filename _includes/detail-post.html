@@ -2,22 +2,6 @@
 {% assign copy = include.content | strip %}
 {% include _titlef-widont.html title=p.title -%}
 
-{% if p.image %}
-  {% capture this_image %}<img class="{{ p.image.style | default: "marquee american" }}" src="{{ p.image.file | prepend: 'img/' | prepend: site.cdn }}" alt="{{ p.image.alt }}">{% endcapture %}
-  {% if page.image.style contains 'marquee' or page.image.style == nil %}<div class="figpad">{{ this_image }}</div>{% else %}{{ this_image }}{% endif %}
-{% endif -%}
-
-<div class="hed">
-  <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
-  {% if p.date %} 
-  <div class="byline">
-    {% unless forloop.index > 1 %}
-    <!-- <img class="avatar" src="{{ 'img/bomtomba-av.png' | prepend: site.cdn }}" alt=""> -->
-    <p class="author">By {{ p.author | default: site.author }}</p>
-    {% endunless %}
-    <p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_string }}</time></p>
-  </div>
-  {% endif %}
-</div>
-
+<h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
+  
 {{ copy }}

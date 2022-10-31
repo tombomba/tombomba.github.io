@@ -6,27 +6,10 @@
 @import reset, vars, body, banner, article, figure
 
 article.post
-  .hed
-    h1
-      font-family: var(--fam-sans)
-      font-size: var(--hed-size-md)
-      line-height: 1.1
-      text-transform: uppercase
-    .byline
-      margin-top: var(--shim)
-      display: flex
-      flex-flow: row wrap
-      align-items: center
-      gap: var(--nudge)
-      p
-        margin: 0
-        font-size: var(--body-size-sm)
-        line-height: 1
-        color: var(--color-half)
-        &.author
-          text-transform: uppercase
-        &:nth-of-type(2)::before
-          content: '\/\0020'
+  max-width: var(--page-width-lg)
+  h1
+    font-size: var(--hed-size-md)
+    line-height: var(--line-height-hed)
 
 article.micro
   .hed
@@ -39,11 +22,6 @@ article.micro
       content: '\0020'
     .punc::after
       content: '.'
-  .daystamp
-    font-style: italic
-    color: var(--color-half)
-    a:link, a:visited
-      color: var(--color-half)
 
 article.archive
   section

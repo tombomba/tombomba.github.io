@@ -37,7 +37,7 @@
   <meta name="twitter:image:src" content="{{ page.image.file | default: '/assets/img/default-social.png' | absolute_url }}">
 
   <!-- css -->
-  <link rel="stylesheet" href="{{ page.style | default: 'default' | append: '.css' | prepend: 'css/' | prepend: site.cdn }}">
+  <link rel="stylesheet" href="{{ page.style | default: 'default' | append: '.css' | prepend: 'css/' | prepend: site.cdn }}?v={{ site.time | date: '%y%m%d%H%M%S' }}">
 
 </head> 
 

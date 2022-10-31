@@ -17,6 +17,7 @@ body
   -moz-text-size-adjust: none
   -webkit-text-size-adjust: 100%
 
+  max-width: 90em
   padding: 1em
 
 \::selection
@@ -40,24 +41,37 @@ a
 time
   white-space: nowrap
 
-.hr
-  margin: 0
-  padding: 0
-  height: 0
-  border: 0
-  border-top: thin solid var(--color-hr-top)
-  border-bottom: medium solid var(--color-hr-bottom)
-  background-color: var(--color-body)
-
-.pagebreak
-  max-width: var(--page-width)
-  margin: var(--shim-2x) auto 0 auto
-  .hr
-    width: 100%
-
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 40rem)
+@media screen and (min-width: 25rem)
 
   body
     padding: var(--shim)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 48rem)
+
+  body
+    padding: var(--shim) var(--shim-2x)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 64rem)
+
+  body
+    max-width: 80em
+    width: 84%
+    margin-left: auto
+    margin-right: auto
+    padding-left: 8%
+    padding-right: 8%
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 80rem)
+
+  body
+    width: 87.5%
+    padding-left: 12.5%
+    padding-right: 0

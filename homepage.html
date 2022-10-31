@@ -10,11 +10,11 @@ permalink: /index.html
   
   {% assign wc = p.content | number_of_words %}
   {% if wc < 200 or p.image.style contains 'float' %}
-  <article class="micro">
+  <article class="micro home">
     {% include detail-micro.html page=p content=p.content is_home=true %}
   
   {% else -%}
-  <article class="post">
+  <article class="post home">
     {% include detail-post.html page=p content=p.content is_home=true %}
 
   {% endif -%}

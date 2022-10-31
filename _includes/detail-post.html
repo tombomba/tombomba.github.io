@@ -5,3 +5,7 @@
 <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
   
 {{ copy }}
+
+{% unless include.is_home %}
+<p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time>
+{% endunless %}

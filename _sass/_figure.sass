@@ -15,7 +15,7 @@ article
   img
     display: block
     width: var(--width)
-    aspect-ratio: var(--ratio)
+    aspect-ratio: 16/9
     margin-top: var(--shim)
     margin-bottom: var(--shim)
     object-fit: cover
@@ -40,6 +40,8 @@ article
       aspect-ratio: 1/1.5
     &.square
       aspect-ratio: 1
+    &.fixed
+      aspect-ratio: var(--fixed-ratio)
 
     &.marquee
       margin-top: 0
@@ -54,13 +56,6 @@ article
       width: var(--shim-p)
       height: var(--shim-p)
       border-radius: 50%
-
-    &.wide
-      --width: 66%
-    &.half
-      --width: 50%
-    &.third
-      --width: 33%
 
     &.top
       margin-top: 0
@@ -86,6 +81,18 @@ article
     max-width: var(--video-max-width)
 
 //-----------------------------------------------------------------------------
+
+@media screen and (min-width: 25rem)
+
+  article img
+
+    &.wide
+      --width: 66%
+    &.half
+      --width: 50%
+    &.third
+      --width: 33%
+
 
 @media screen and (min-width: 40rem)
 

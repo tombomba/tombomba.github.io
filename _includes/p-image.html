@@ -1,0 +1,15 @@
+
+{% if p.image %}
+  {% if p.image.ratio %}{% capture new_ratio %} style="--fixed-ratio:{{ p.image.ratio }}"{% endcapture %}{% endif -%}
+  <img class="{{ p.image.style | default: "american marquee" }}"{{ new_ratio }} src="{{ p.image.file | prepend: 'img/' | prepend: site.cdn }}" alt="{{ p.image.alt }}">
+{% endif -%}
+
+{% if p.image %}
+  {% capture this_image %}<img class="{{ p.image.style | default: "american marquee" }}"{% if p.image.ratio %} style="--fixed-ratio:{{ p.image.ratio }}" {% endif %} src="{{ p.image.file | prepend: 'img/' | prepend: site.cdn }}" alt="{{ p.image.alt }}">{% endcapture %}
+  {% if page.image.style contains 'marquee' or page.image.style contains 'fixed' or page.image.style == nil %}<div class="figpad">{{ this_image }}</div>{% else %}{{ this_image }}{% endif %}
+{% endif -%}
+
+
+{% if copy contains '<p><img src=' %}
+  {% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', '/>' %}
+{% endif -%}

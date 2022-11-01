@@ -6,6 +6,8 @@
   
 {{ copy }}
 
-{% unless include.is_home %}
-<p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time>
-{% endunless %}
+{% unless include.is_home %}<p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time></p>{% endunless %}
+
+{% assign p = '' -%}
+{% assign copy = '' -%}
+{% assign titlef = '' -%}

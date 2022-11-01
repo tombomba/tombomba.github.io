@@ -10,6 +10,11 @@
 {% endif -%}
 
 
+{% if p.image %}
+  <img class="{{ p.image.style | default: "top square float right" }}" src="{{ p.image.file | prepend: 'img/' | prepend: site.cdn }}" alt="{{ p.image.alt }}">
+{% endif -%}
+
+
 {% if copy contains '<p><img src=' %}
   {% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', '/>' %}
 {% endif -%}

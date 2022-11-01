@@ -8,7 +8,6 @@ body
   font-family: var(--fam-serif)
   font-size: var(--body-size)
   line-height: var(--line-height-body)
-  word-break: break-word
 
   background-color: var(--color-body)
   color: var(--color-text)
@@ -18,18 +17,11 @@ body
   -moz-text-size-adjust: none
   -webkit-text-size-adjust: 100%
 
-  padding: 1em
-
 \::selection
   background-color: var(--color-select)
 
 \::-moz-selection
   background-color: var(--color-select)
-
-main
-  max-width: var(--page-width-xl)
-  margin-left: auto
-  margin-right: auto
 
 a
   text-decoration: underline
@@ -48,7 +40,7 @@ time
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 30rem)
+//@media screen and (min-width: 30rem)
 
   body
-    padding: var(--shim)
+    padding: 0

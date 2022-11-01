@@ -2,14 +2,19 @@
 {% assign copy = include.content | strip -%}
 {% include _titlef-punc.html title=p.title -%}
 
+{% if p.image %}
+  {% capture this_image %}<img class="{{ p.image.style | default: "american marquee" }}"{% if p.image.ratio %} style="--fixed-ratio:{{ p.image.ratio }}"{% endif %} src="{{ p.image.file | prepend: 'img/' | prepend: site.cdn }}" alt="{{ p.image.alt }}">{% endcapture -%}
+  {% if p.image.style contains 'marquee' or p.image.style contains 'fixed' or p.image.style == nil %}<div class="figpad">{{ this_image }}</div>{% else %}{{ this_image }}{% endif %}
+{% endif -%}
+
 {% capture hedbox %}<div class="hed"><h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif -%}</h1><p>{% endcapture -%}
 {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
 
-{% if p.image %}
-  {% if p.image.ratio %}{% capture new_ratio %} style="--fixed-ratio:{{ p.image.ratio }}"{% endcapture %}{% endif -%}
-  <img class="{{ p.image.style | default: "american marquee" }}"{{ new_ratio }} src="{{ p.image.file | prepend: 'img/' | prepend: site.cdn }}" alt="{{ p.image.alt }}">
-{% endif -%}
-
 {{ copy }}
 
-{% unless include.is_home %}<p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_string }}</time>{% endunless %}
+{% unless include.is_home %}<p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_string }}</time></p>{% endunless %}
+
+{% assign p = '' %}
+{% assign copy = '' -%}
+{% assign titlef = '' %}
+{% assign this_image = '' -%}

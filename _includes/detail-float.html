@@ -3,8 +3,8 @@
 {% include _titlef-widont.html title=p.title -%}
 
 {% if p.image %}
-  {% capture this_image %}<img class="{{ p.image.style | default: "top square float left" }}"{% if p.image.ratio %} style="--fixed-ratio:{{ p.image.ratio }}"{% endif %} src="{{ p.image.file | prepend: 'img/' | prepend: site.cdn }}" alt="{{ p.image.alt }}">{% endcapture -%}
-  {% if p.image.style contains 'marquee' or p.image.style contains 'fixed' or p.image.style == nil %}<div class="figpad">{{ this_image }}</div>{% else %}{{ this_image }}{% endif %}
+  {% capture this_image %}<img class="{{ p.image.style | default: "top square float left" }}" src="{{ p.image.file | prepend: 'img/' | prepend: site.cdn }}" alt="{{ p.image.alt }}">{% endcapture -%}
+  {% if p.image.style contains 'marquee' or p.image.style == nil %}<div class="figpad">{{ this_image }}</div>{% else %}{{ this_image }}{% endif %}
 {% endif -%}
 
 <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif -%}</h1>

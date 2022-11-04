@@ -2,11 +2,12 @@
 {% assign copy = include.content | strip %}
 {% include _titlef-widont.html title=p.title -%}
 
-<h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
-  
-{{ copy }}
+<header>
+  <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
+  {% if p.date %}<p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_string }}</time></p>{% endif %}
+</header>
 
-{% unless include.is_home %}<p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time></p>{% endunless %}
+{{ copy }}
 
 {% assign p = '' -%}
 {% assign copy = '' -%}

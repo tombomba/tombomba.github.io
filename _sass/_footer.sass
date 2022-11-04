@@ -1,18 +1,19 @@
 footer
-  margin: var(--shim-3x) auto 0 auto
+  margin: var(--shim-2x) auto 0 auto
+  padding: var(--shim) 0
   max-width: var(--page-width-xl)
+  border-top: thick solid var(--color-black)
   ul
     display: flex
     flex-direction: column 
     list-style-type: none
     li
       font-weight: 700
-      text-transform: lowercase
+      font-size: var(--nudge-2x)
+      text-transform: uppercase
       a:link, a:visited
         text-decoration: none
-        color: var(--color-logo)
-        &::after
-          content: '.'
+        color: var(--color-black)
       a:hover
         text-decoration: underline
 

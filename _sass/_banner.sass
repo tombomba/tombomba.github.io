@@ -1,20 +1,27 @@
 header[role="banner"]
-  margin: 0 auto
-  max-width: var(--page-width-xl)
   display: flex
-  h1
-    font-size: var(--hed-size-md)
-    line-height: 1
-    text-transform: lowercase
-    a:link, a:visited
-      text-decoration: none
-      color: var(--color-logo)
-      &::after
-        content: '.'
-    a:hover
-      text-decoration: underline
-
-header[role="banner"].post,
-header[role="banner"].float
-  h1
-    font-size: var(--hed-size)
+  flex-flow: row wrap
+  align-items: center
+  gap: 1em
+  margin: 0 auto
+  padding: var(--shim) 0
+  max-width: var(--page-width-xl)
+  border-bottom: thin solid var(--color-black)
+  .wrap
+    h1
+      font-size: var(--body-size-sm)
+      line-height: var(--line-height-hed)
+      a:link, a:visited
+        text-decoration: none
+        color: var(--color-black)
+      a:hover
+        text-decoration: underline
+    p
+      font-size: var(--body-size-sm)
+      line-height: var(--line-height-hed)
+  img
+    width: auto
+    height: var(--buffer)
+    border-radius: 4px
+  
+  

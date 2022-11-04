@@ -2,26 +2,23 @@ header[role="banner"]
   display: flex
   flex-flow: row wrap
   align-items: center
-  gap: 1em
+  justify-content: space-between
+  gap: var(--nudge)
   margin: 0 auto
-  padding: var(--shim) 0
+  height: var(--shim-3x)
   max-width: var(--page-width-xl)
   border-bottom: thin solid var(--color-black)
-  .wrap
-    h1
-      font-size: var(--body-size-sm)
-      line-height: var(--line-height-hed)
-      a:link, a:visited
-        text-decoration: none
-        color: var(--color-black)
-      a:hover
-        text-decoration: underline
-    p
-      font-size: var(--body-size-sm)
-      line-height: var(--line-height-hed)
-  img
-    width: auto
-    height: var(--buffer)
-    border-radius: 4px
+  h1
+    flex: 1
+    font-family: 'Arial Black', var(--fam-system)
+    font-weight: 900
+    font-size: var(--shim-p)
+    line-height: 1
+    text-transform: uppercase
+    a:link, a:visited
+      text-decoration: none
+      color: var(--color-black)
+    a:hover
+      text-decoration: underline
   
   

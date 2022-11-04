@@ -1,22 +1,22 @@
 footer
-  margin: var(--shim-2x) auto 0 auto
+  margin: var(--buffer) auto 0 auto
   padding: var(--shim) 0
   max-width: var(--page-width-xl)
-  border-top: thick solid var(--color-black)
+  border-top: thin solid var(--color-black)
   ul
     display: flex
     flex-direction: column 
     list-style-type: none
     li
-      font-weight: 700
-      font-size: var(--nudge-2x)
+      font-family: 'Arial Black', var(--fam-system)
+      font-weight: 900
       text-transform: uppercase
+      color: var(--color-half)
       a:link, a:visited
         text-decoration: none
         color: var(--color-black)
       a:hover
         text-decoration: underline
-
 
 //-----------------------------------------------------------------------------
 
@@ -25,5 +25,10 @@ footer
   footer
     ul
       flex-flow: row wrap
-      gap: 0.5em
+      li
+        font-size: var(--body-size-xs)
+        &:not(:last-of-type)::after
+          content: '\/'
+          padding: 0 0.66em
+          color: var(--color-half)
 

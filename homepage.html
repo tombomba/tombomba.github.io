@@ -5,9 +5,8 @@ is_home: true
 permalink: /index.html
 ---
 {% for p in site.posts limit: 20 %}
-  {% unless forloop.first %}{% assign homeslug = ' home' %}{% endunless %}
-  <article class="{{ p.layout }}{{ homeslug }}">
-    {% include detail-{{ p.layout }}.html page=p content=p.content is_home=true %}
-    <p class="permalink"><a href="{{ p.url | absolute_url }}" title="permanent link to this entry">&bull;</a></p>
+  <article class="home">
+    <h1><a href="{{ p.url | absolute_url }}">{{ p.title | smartify | strip_html | strip }}</a></h1>
+    <p>{{ p.excerpt | truncatewords: 25 | smartify | strip_html | strip }}</p>
   </article>
 {% endfor -%}

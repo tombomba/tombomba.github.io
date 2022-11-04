@@ -10,11 +10,14 @@ article.post
     h1
       font-size: var(--hed-size)
       line-height: var(--line-height-hed)
-    p
+    .byline p
+      display: inline
       margin: 0
       font-size: var(--body-size-sm)
       color: var(--color-half)
-          
+      &:nth-of-type(2)::before
+        content: '\0020\/\0020'
+
 article.micro
   .hed
     max-width: var(--page-width)
@@ -27,10 +30,18 @@ article.micro
     .punc::after
       content: '.'
 
-article.float
+article.home
+  margin: var(--shim) auto 0 auto
+  &:first-of-type
+    margin: var(--shim-2x) auto 0 auto
   h1
-    font-size: var(--hed-size)
+    font-family: 'Arial Black', var(--fam-system)
+    font-size: 1em
+    font-weight: 900
     line-height: var(--line-height-hed)
+    text-transform: uppercase
+  p
+    margin-top: var(--nudge)
 
 article.archive
   section
@@ -48,4 +59,12 @@ article.error
   h1
     font-size: var(--hed-size)
     line-height: var(--line-height-hed)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  article.home
+    p
+      margin-top: 0
  

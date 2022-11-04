@@ -1,6 +1,6 @@
 ---
 layout: micro
-title: "The Stranger Wore a Gun (1953)"
+title: "De Toth's proto-'Dollars'"
 image: 
   file: the-stranger-wore-a-gun-1953-poster.jpg
   style: flat tv float left

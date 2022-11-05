@@ -8,11 +8,11 @@ permalink: /index.html
 {% for p in site.posts limit: 20 %}
 <section>
   <div class="keyart">
-    <img src="{{ p.image.file | default: 'default-social.png' | prepend: 'img/' | prepend: site.cdn }}" alt="">
+    <img src="{{ p.image.file | default: 'mouse-test.jpg' | prepend: 'img/' | prepend: site.cdn }}" alt="">
   </div>
   <div class="description">
     <h1><a href="{{ p.url | absolute_url }}">{{ p.title | smartify | strip_html | strip }}</a></h1>
-    <p>{{ p.excerpt | truncate: 280 | smartify | strip_html | strip }}</p>
+    <p>{{ p.excerpt | truncate: 140 | smartify | strip_html | strip }}</p>
   </div>
 </section>
 {% endfor -%}

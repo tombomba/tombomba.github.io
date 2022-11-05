@@ -3,8 +3,10 @@
 {% include _titlef-widont.html title=p.title -%}
 
 {% if p.image %}
-  <figure><img class="{{ p.image.style }}" src="{{ p.image.file | prepend: 'img/' | prepend: site.cdn }}" alt="{{ p.image.alt }}"></figure>
-{% endif -%}
+  <figure>
+    <img src="{{ p.image.file | prepend: 'img/' | prepend: site.cdn }}" alt="{{ p.image.alt }}">
+  </figure>
+{% endif %}
 
 <header>
   <h1>{{ titlef }}</h1>

@@ -1,6 +1,6 @@
 article
   margin: var(--shim-2x) auto 0 auto
-  max-width: var(--page-width-xl)
+  max-width: var(--page-width)
 
   h1
     color: var(--color-black)
@@ -11,23 +11,18 @@ article
       text-decoration: underline
 
   h2, h3, h4, h5, h6
-    max-width: var(--page-width)
     margin-top: var(--shim-n)
     font-size: 1em
 
   p
-    max-width: var(--page-width)
     margin-top: var(--shim-n)
 
   ul, ol
-    max-width: var(--page-width)
     margin: var(--shim-n) 0 0 var(--shim-n)
     li
-      max-width: var(--page-width)
       margin-top: 0
 
   blockquote
-    max-width: var(--page-width)
     padding-left: var(--shim-n)
     border-left: thin solid var(--color-half)
 
@@ -35,9 +30,9 @@ article
   li + p,
     margin-top: 0
 
-  iframe[src*="https://www.youtube.com"],
-  iframe[src*="https://www.youtube-nocookie.com"],
-  iframe[src*="https://player.vimeo.com"]
+  //iframe[src*="https://www.youtube.com"],
+  //iframe[src*="https://www.youtube-nocookie.com"],
+  //iframe[src*="https://player.vimeo.com"]
     width: 100%
     height: unset
     aspect-ratio: 16/9
@@ -51,9 +46,9 @@ article
     border-radius: 4px
     background-color: var(--color-back)
 
-  figure
+  //figure
     margin-bottom: var(--shim)
-    max-width: var(--page-width-lg)
+    max-width: var(--page-width)
     img
       width: 100%
       aspect-ratio: 16/9

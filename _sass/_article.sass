@@ -1,6 +1,6 @@
 article
-  margin: var(--shim-2x) auto 0 auto
-  max-width: var(--page-width)
+  margin: var(--buffer) auto 0 auto
+  max-width: var(--page-width-xl)
 
   h1
     color: var(--color-black)
@@ -30,29 +30,24 @@ article
   li + p,
     margin-top: 0
 
-  //iframe[src*="https://www.youtube.com"],
-  //iframe[src*="https://www.youtube-nocookie.com"],
-  //iframe[src*="https://player.vimeo.com"]
-    width: 100%
-    height: unset
-    aspect-ratio: 16/9
-    margin-bottom: var(--shim)
-    background-clip: content-box
-    background-color: var(--color-back)
-    &.tv
-      aspect-ratio: 4/3
-
   img
     border-radius: 4px
     background-color: var(--color-back)
 
   figure
-    margin-bottom: var(--shim)
-    max-width: var(--page-width)
+    margin-top: var(--shim)
+    padding-bottom: var(--nudge)
+    max-width: var(--page-width-xl)
     img
       width: 100%
       aspect-ratio: 16/9
       object-fit: cover
+
+  div.hed
+    max-width: var(--page-width-xl)
+  div.hed p,
+  div.copy
+    max-width: var(--page-width)
 
 //-----------------------------------------------------------------------------
 

@@ -13,16 +13,12 @@ article
       aspect-ratio: 1.33
 
   img
-    display: block
     width: var(--width)
     aspect-ratio: 16/9
-    margin-top: var(--shim)
-    margin-bottom: var(--shim)
     object-fit: cover
     border-radius: 4px
     background-color: var(--color-back)
     --width: 100%
-    @extend .clearfix
     
     &.academy
       aspect-ratio: 1.375
@@ -47,13 +43,6 @@ article
     &.filler
       margin-top: var(--shim)
       margin-bottom: var(--shim)
-
-    &.avatar
-      display: block
-      margin: 0
-      width: var(--shim-p)
-      height: var(--shim-p)
-      border-radius: 50%
 
     &.top
       margin-top: 0

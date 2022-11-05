@@ -3,7 +3,7 @@
 ---
 
 @charset "utf-8"
-@import reset, vars, body, banner, article, figure, footer
+@import reset, vars, body, banner, article, footer
 
 article.post
   header
@@ -41,7 +41,7 @@ article.home
       margin: var(--shim-2x) auto 0 auto
     .description
       flex: 1
-      padding-left: var(--shim-n)
+      padding-right: var(--shim-n)
       h1
         font-family: 'Arial Black', var(--fam-system)
         font-size: var(--hed-size) 
@@ -53,9 +53,12 @@ article.home
         font-size: var(--body-size-sm)
         line-height: 1.66
     .keyart
+      overflow: hidden
       img
         margin: 0
-        --width: 12em
+        width: 12em
+        aspect-ratio: 1.375
+        object-fit: cover
 
 article.archive
   section

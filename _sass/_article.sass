@@ -37,7 +37,7 @@ article
   figure
     margin-top: var(--shim)
     padding-bottom: var(--nudge)
-    max-width: var(--page-width-xl)
+    max-width: var(--page-width-lg)
     img
       width: 100%
       aspect-ratio: 16/9
@@ -54,5 +54,15 @@ article
 @media screen and (min-width: 40rem)
 
   article
+
     .widont
       white-space: nowrap
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 60rem)
+
+  article
+    
+    figure
+      max-width: var(--page-width-xl)

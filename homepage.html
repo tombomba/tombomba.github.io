@@ -8,7 +8,7 @@ permalink: /index.html
 {% for p in site.posts limit: 20 %}
 <section>
   <div class="keyart">
-    <img src="{{ p.image.file | default: 'mouse-test.jpg' | prepend: 'img/' | prepend: site.cdn }}" alt="">
+    <img src="{{ p.image.file | default: 'default-social.jpg' | prepend: 'img/' | prepend: site.cdn }}" alt="">
   </div>
   <div class="description">
     <h1><a href="{{ p.url | absolute_url }}">{{ p.title | smartify | strip_html | strip }}</a></h1>

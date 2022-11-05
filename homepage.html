@@ -4,14 +4,16 @@ excerpt: "A media diary, a small collage, a dumb blog"
 is_home: true
 permalink: /index.html
 ---
-{% for p in site.posts limit: 20 %}
 <article class="home">
+{% for p in site.posts limit: 20 %}
+<section>
   <div class="keyart">
-    <img class="top academy" src="{{ p.image.file | default: 'default-social.png' | prepend: 'img/' | prepend: site.cdn }}" alt="">
+    <img class="academy" src="{{ p.image.file | default: 'default-social.png' | prepend: 'img/' | prepend: site.cdn }}" alt="">
   </div>
   <div class="description">
     <h1><a href="{{ p.url | absolute_url }}">{{ p.title | smartify | strip_html | strip }}</a></h1>
     <p>{{ p.excerpt | truncate: 280 | smartify | strip_html | strip }}</p>
   </div>
-</article>
+</section>
 {% endfor -%}
+</article>

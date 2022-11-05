@@ -31,30 +31,31 @@ article.micro
       content: '.'
 
 article.home
-  display: flex
-  flex-flow: row wrap
-  align-items: center
-  justify-content: space-between
-  margin: var(--shim) auto 0 auto
-  &:first-of-type
-    margin: var(--shim-2x) auto 0 auto
-  .description
-    flex: 1
-    padding-left: var(--shim-n)
-    h1
-      font-family: 'Arial Black', var(--fam-system)
-      font-size: var(--hed-size) 
-      font-weight: 900
-      line-height: 1.2
-      text-transform: uppercase
-    p
-      margin-top: var(--nudge)
-      font-size: var(--body-size-sm)
-      line-height: 1.66
-  .keyart
-    img
-      margin: 0
-      --width: 12em
+  section
+    display: flex
+    flex-flow: row wrap
+    align-items: flex-start
+    justify-content: space-between
+    margin: var(--shim) auto 0 auto
+    &:first-of-type
+      margin: var(--shim-2x) auto 0 auto
+    .description
+      flex: 1
+      padding-left: var(--shim-n)
+      h1
+        font-family: 'Arial Black', var(--fam-system)
+        font-size: var(--hed-size) 
+        font-weight: 900
+        line-height: 1.2
+        text-transform: uppercase
+      p
+        margin-top: var(--nudge)
+        font-size: var(--body-size-sm)
+        line-height: 1.66
+    .keyart
+      img
+        margin: 0
+        --width: 12em
 
 article.archive
   section

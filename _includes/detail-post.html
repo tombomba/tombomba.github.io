@@ -9,7 +9,7 @@
 {% endif %}
 
 <header>
-  <h1>{{ titlef }}</h1>
+  <h1 class="{% if p.image %}main{% else %}alt{% endif %}">{{ titlef }}</h1>
   {% if p.date %} 
   <div class="byline">
     <p class="author">{{ p.author | default: site.author }}</p>

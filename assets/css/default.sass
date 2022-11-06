@@ -8,15 +8,18 @@
 article.post
   header
     h1
+      font-weight: 600
       font-size: var(--hed-size)
       line-height: var(--line-height-hed)
-    .byline p
-      display: inline
-      margin: 0
-      font-size: var(--body-size-sm)
-      color: var(--color-half)
-      &:nth-of-type(2)::before
-        content: '\0020\/\0020'
+    .byline 
+      margin-top: 0
+      p
+        display: inline
+        margin: 0
+        font-size: var(--body-size-sm )
+        color: var(--color-half)
+        &:nth-of-type(2)::before
+          content: '\0020\/\0020'
 
 article.micro
   .hed
@@ -43,15 +46,15 @@ article.home
       flex: 1
       padding-left: var(--shim-n)
       h1
-        font-family: 'Arial Black', var(--fam-system)
+        font-family: var(--fam-logo)
         font-size: var(--hed-size) 
-        font-weight: 900
-        line-height: 1.1
+        font-weight: 800
+        line-height: 1.2
         text-transform: uppercase
       p
         margin-top: var(--nudge)
         font-size: var(--body-size-sm)
-        line-height: 1.66
+        line-height: 1.5
     .keyart
       overflow: hidden
       img
@@ -80,11 +83,11 @@ article.error
 
 //-----------------------------------------------------------------------------
 
-//@media screen and (min-width: 40rem)
+@media screen and (min-width: 40rem)
 
   article.home
     section
       .description 
         p
-          margin-top: 0
+          margin-top: calc(var(--nudge) / 2)
  

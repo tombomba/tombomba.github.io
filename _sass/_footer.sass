@@ -1,6 +1,6 @@
 footer
   margin: var(--buffer) auto 0 auto
-  padding: var(--shim-n) 0
+  padding: var(--shim-n) 0 var(--shim-n) 0
   max-width: var(--page-width-xl)
   border-top: thin solid var(--color-black)
   ul
@@ -8,8 +8,8 @@ footer
     flex-direction: column 
     list-style-type: none
     li
-      font-family: 'Arial Black', var(--fam-system)
-      font-weight: 900
+      font-family: var(--fam-logo)
+      font-weight: 800
       text-transform: uppercase
       color: var(--color-half)
       a:link, a:visited
@@ -28,6 +28,7 @@ footer
       justify-content: center
       li:not(:last-of-type)::after
         content: '\/'
+        font-weight: 600
         padding: 0 0.66em
         color: var(--color-half)
 

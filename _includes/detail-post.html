@@ -2,6 +2,12 @@
 {% assign copy = include.content | strip %}
 {% include _titlef-widont.html title=p.title -%}
 
+{% if p.image %}
+  <figure>
+    <img src="{{ p.image.file | prepend: 'img/' | prepend: site.cdn }}" alt="{{ p.image.alt }}">
+  </figure>
+{% endif %}
+
 <header>
   <h1>{{ titlef }}</h1>
   {% if p.date %} 
@@ -11,12 +17,6 @@
   </div>
   {% endif %}
 </header>
-
-{% if p.image %}
-  <figure>
-    <img src="{{ p.image.file | prepend: 'img/' | prepend: site.cdn }}" alt="{{ p.image.alt }}">
-  </figure>
-{% endif %}
 
 <div class="copy">
   {{ copy }}

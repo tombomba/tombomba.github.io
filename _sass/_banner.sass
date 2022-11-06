@@ -3,27 +3,22 @@ header[role="banner"]
   flex-flow: row wrap
   align-items: center
   justify-content: space-between
-  gap: var(--nudge)
   margin: 0 auto
   height: var(--shim-2x)
   max-width: var(--page-width-xl)
   border-bottom: thin solid var(--color-black)
   h1, p
-    flex: 1
-    font-family: 'Arial Black', var(--fam-system)
-    font-weight: 900
-    font-size: var(--shim-n)
+    font-family: var(--fam-logo)
+    font-weight: 800
     line-height: 1
     text-transform: uppercase
+    &.lg
+      font-size: var(--shim-p)
+    &.sm
+      font-size: var(--shim)
     a:link, a:visited
       text-decoration: none
       color: var(--color-black)
     a:hover
       text-decoration: underline
-  .icon
-    svg
-      width: auto
-      height: var(--shim-p)
-      fill: red
-  
   

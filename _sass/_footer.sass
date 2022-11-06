@@ -14,6 +14,10 @@ footer
       line-height: var(--line-height-hed)
       text-transform: uppercase
       color: var(--color-half)
+      &.logo
+        order: -2
+      &.copydate
+        order: 99
       a:link, a:visited
         text-decoration: none
         color: var(--color-black)
@@ -30,4 +34,8 @@ footer
       flex-flow: row wrap
       align-items: center
       justify-content: center
-      gap: 1em
+      gap: 0.5em
+      li
+        font-size: 1em
+        &.copydate
+          order: -1

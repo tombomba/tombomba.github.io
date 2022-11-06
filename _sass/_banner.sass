@@ -1,14 +1,17 @@
 header[role="banner"]
   display: flex
   align-items: center
+  justify-content: flex-start
+  flex-flow: row wrap
   margin: 0 auto
-  padding-top: 0.25em
   height: var(--shim-2x)
   max-width: var(--page-width)
   border-bottom: thin solid var(--color-black)
   h1
+    flex: 1
+    margin-top: 4px
     font-family: var(--fam-logo)
-    font-size: var(--shim-p)
+    font-size: var(--shim)
     font-weight: 900
     line-height: 0.85
     text-transform: uppercase 
@@ -17,10 +20,9 @@ header[role="banner"]
       color: var(--color-black)
     a:hover
       text-decoration: none
-  
-//-----------------------------------------------------------------------------
-
-  @media screen and (min-width: 40rem)
-
-  header[role="banner"]
-    height: var(--shim-3x)
+  img
+    display: block
+    margin-right: 0.5em
+    width: var(--shim)
+    height: var(--shim)
+    border-radius: 4px

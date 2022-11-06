@@ -12,7 +12,7 @@ permalink: /index.html
   </div>
   <div class="description">
     <h1><a href="{{ p.url | absolute_url }}">{{ p.title | smartify | strip_html | strip }}</a></h1>
-    <p>{{ p.tease | default: p.excerpt | truncate: 120 | smartify | strip_html | strip }}</p>
+    <p>{{ p.tease | default: p.excerpt | truncate: 140 | smartify | strip_html | strip }}</p>
   </div>
 </section>
 {% endfor -%}

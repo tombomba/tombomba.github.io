@@ -25,15 +25,9 @@ footer
 @media screen and (min-width: 40rem)
 
   footer
+    padding-top: var(--nudge-2x)
     ul
       flex-flow: row wrap
+      align-items: center
       justify-content: center
-      li
-        font-size: 1em
-        &:not(:last-of-type)::after
-          content: '\/'
-          font-family: var(--fam-plain-sans)
-          font-weight: 400
-          padding: 0 0.66em
-          color: var(--color-half)
-
+      gap: 1em

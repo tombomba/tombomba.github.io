@@ -43,21 +43,27 @@ article.home
       margin: 0 auto
     .description
       flex: 1
-      padding-left: var(--shim-n)
       h1
         font-size: 1em
         line-height: 1.2
-        //text-transform: uppercase
       p
         margin-top: 0.2em
         font-size: var(--body-size-sm)
-        line-height: 1.6
+        line-height: 1.66
+        .daystamp
+          font-style: italic
+          color: var(--color-half)
     .keyart
+      --thumb-width: 10em
+      --thumb-height: 7.2727em
+      margin-left: 1em
+      width: var(--thumb-width)
+      height: var(--thumb-height)
       overflow: hidden
+      background-color: var(--color-body)
       img
-        --thumbsize: 10em
-        width: var(--thumbsize)
-        height: calc(var(--thumbsize) / 1.375)
+        width: var(--thumb-width)
+        height: var(--thumb-height)
         object-fit: cover
         object-position: 50% 50%
 

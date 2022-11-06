@@ -36,7 +36,7 @@ article.home
   section
     display: flex
     flex-flow: row wrap
-    align-items: center
+    align-items: flex-start
     justify-content: space-between
     margin: var(--shim) auto 0 auto
     &:first-of-type
@@ -54,8 +54,8 @@ article.home
           font-style: italic
           color: var(--color-half)
     .keyart
-      --thumb-width: 10em
-      --thumb-height: 7.2727em
+      --thumb-width: 8em
+      --thumb-height: 5.8181em
       margin-left: 1em
       width: var(--thumb-width)
       height: var(--thumb-height)
@@ -83,14 +83,3 @@ article.error
   h1
     font-size: var(--hed-size)
     line-height: var(--line-height-hed)
-
-//-----------------------------------------------------------------------------
-
-//@media screen and (min-width: 40rem)
-
-  article.home
-    section
-      .description 
-        p
-          margin-top: calc(var(--nudge) / 2)
- 

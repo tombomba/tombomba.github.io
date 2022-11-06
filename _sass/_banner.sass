@@ -1,17 +1,17 @@
 header[role="banner"]
   display: flex
-  align-items: center
+  align-items: flex-end
   justify-content: flex-start
-  flex-flow: row wrap
   margin: 0 auto
+  padding-bottom: var(--nudge)
   height: var(--shim-2x)
   max-width: var(--page-width)
   border-bottom: thin solid var(--color-black)
   h1
     flex: 1
-    margin-top: 4px
+    margin-top: 2px
     font-family: var(--fam-logo)
-    font-size: var(--shim-p)
+    font-size: var(--shim)
     font-weight: 900
     line-height: 0.85
     text-transform: uppercase 
@@ -21,6 +21,8 @@ header[role="banner"]
     a:hover
       text-decoration: none
   img
+    display: none
+    margin-right: var(--nudge)
     display: block
     width: var(--shim-p)
     height: var(--shim-p)

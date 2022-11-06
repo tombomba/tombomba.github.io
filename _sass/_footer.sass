@@ -1,6 +1,6 @@
 footer
   margin: var(--buffer) auto 0 auto
-  padding: var(--shim-n) 0 var(--shim-n) 0
+  padding: var(--shim-n) 0 var(--shim) 0
   max-width: var(--page-width-xl)
   border-top: thin solid var(--color-black)
   ul
@@ -9,6 +9,7 @@ footer
     list-style-type: none
     li
       font-family: var(--fam-logo)
+      font-size: var(--body-size-lg)
       font-weight: 800
       text-transform: uppercase
       color: var(--color-half)
@@ -26,9 +27,11 @@ footer
     ul
       flex-flow: row wrap
       justify-content: center
-      li:not(:last-of-type)::after
-        content: '\/'
-        font-weight: 600
-        padding: 0 0.66em
-        color: var(--color-half)
+      li
+        font-size: var(--body-size)
+        &:not(:last-of-type)::after
+          content: '\/'
+          font-weight: 400
+          padding: 0 0.66em
+          color: var(--color-half)
 

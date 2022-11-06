@@ -1,13 +1,11 @@
 header[role="banner"]
   display: flex
-  flex-flow: row wrap
   align-items: center
-  justify-content: space-between
   margin: 0 auto
-  height: var(--shim-3x)
+  height: var(--shim-2x)
   max-width: var(--page-width-xl)
   border-bottom: thin solid var(--color-black)
-  h1, p
+  h1
     font-family: var(--fam-logo)
     font-weight: 900
     line-height: 0.85
@@ -20,5 +18,11 @@ header[role="banner"]
       text-decoration: none
       color: var(--color-black)
     a:hover
-      text-decoration: underline
+      text-decoration: none
   
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  header[role="banner"]
+    height: var(--shim-3x)

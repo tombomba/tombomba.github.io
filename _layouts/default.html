@@ -46,7 +46,13 @@
 <header role="banner">
   <div class="wrap">
     <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
-    <img src="{{ 'img/bomtomba.gif' | prepend: site.cdn }}" alt="{{ site.title }}">
+    <ul>
+      <li><a href="">Foo</a></li>
+      <li><a href="">Bar</a></li>
+    </ul>
+    <div class="icon">
+      <a href="{{ site.url }}"><img src="{{ 'img/bomtomba.gif' | prepend: site.cdn }}" alt="{{ site.title }}"></a>
+    </div>
   </div>
 </header>
 
@@ -57,9 +63,7 @@
 </main>
 
 <footer>
-  <ul class="feeds">
-    <li>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</li>
-  </ul>
+  <div class="wrap"><p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</p></div>
 </footer> 
 
 </body>

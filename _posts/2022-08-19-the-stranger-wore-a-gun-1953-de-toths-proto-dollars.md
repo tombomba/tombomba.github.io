@@ -1,5 +1,5 @@
 ---
-#layout: micro
+layout: micro
 title: "De Toth's proto-'Dollars'"
 ---
 

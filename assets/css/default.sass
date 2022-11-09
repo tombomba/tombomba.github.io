@@ -83,3 +83,15 @@ article.error
   h1
     font-size: var(--hed-size)
     line-height: var(--line-height-hed)
+
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  article.micro
+    div.hed
+      .punc::after
+        content: '\00A0\2014\0020'
+        font-weight: 400
+        color: var(--color-half)

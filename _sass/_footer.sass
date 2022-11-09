@@ -1,32 +1,17 @@
 footer
-  margin: var(--buffer) auto 0 auto
-  padding: var(--shim-n) 0 var(--shim) 0
-  max-width: var(--page-width)
-  border-top: thick solid var(--color-black)
-  ul
+  border-top: thin dotted var(--color-hr-top)
+  .wrap
     display: flex
-    flex-direction: column 
-    list-style-type: none
-    li
-      line-height: var(--line-height-hed)
+    align-items: center
+    justify-content: center
+    margin: 0 auto
+    padding: var(--shim-n) 0 var(--shim-p)
+    max-width: var(--page-width)
+    p
+      font-size: var(--body-size-sm)
       color: var(--color-half)
-      &.logo
-        order: -2
-      &.copydate
-        order: 99
-
+      text-align: center
+      
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 40rem)
-
-  footer
-    padding-top: var(--nudge-2x)
-    ul
-      flex-flow: row wrap
-      align-items: center
-      justify-content: center
-      gap: 0.5em
-      li
-        font-size: var(--body-size-sm)
-        &.copydate
-          order: -1
+// @media screen and (min-width: 40rem)

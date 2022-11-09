@@ -31,6 +31,14 @@ article.micro
       content: '\0020'
     .punc::after
       content: '.'
+  .daystamp
+    font-style: italic
+    color: var(--color-half)
+    a:link, a:visited
+      color: var(--color-half)
+      text-decoration: none
+    a:hover
+      text-decoration: underline
 
 article.home
   section
@@ -83,15 +91,3 @@ article.error
   h1
     font-size: var(--hed-size)
     line-height: var(--line-height-hed)
-
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
-  article.micro
-    div.hed
-      .punc::after
-        content: '\00A0\2014\0020'
-        font-weight: 400
-        color: var(--color-half)

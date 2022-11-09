@@ -26,23 +26,13 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
 \:root
   --fam-serif: Georgia, Constantia, 'Lucida Bright', Lucidabright, 'Lucida Serif', Lucida, 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', serif
   --fam-system: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
-  --fam-logo: 'Oswald', sans-serif
-
-  --fam-emoji: 'Noto Emoji', Helvetica, Arial, sans-serif
-  --fam-system-alt: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji
 
   --line-height-body: 1.6875
   --line-height-hed: calc(((var(--line-height-body) - 1) / 2) + 1)
 
   --body-size: 1em
-  --body-size-lg: 1.125em
   --body-size-sm: 0.875em
-  --body-size-xs: 0.8125em
-
   --hed-size: 1.25em
-  --hed-size-md: 1.625em
-  --hed-size-lg: 2.0625em
-  --hed-size-xl: 2.625em
 
   --shim: calc(var(--line-height-body) * 1em)
   --shim-2x: calc(var(--shim) * 2)
@@ -57,7 +47,7 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
   --shim-p: calc(var(--shim) + var(--nudge))
   --buffer: calc(var(--shim-n) * 2)
 
-  --page-width: 40.500rem
+  --page-width: 45.750rem
 
   --color-logo: #{$primary-color}
   --color-shock: #{$secondary-color}
@@ -83,56 +73,37 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 30rem) // 17px
+@media screen and (min-width: 20rem) // 17px
 
   \:root
 
     --line-height-body: 1.70588235294
 
     --body-size: 1.063rem
-    --body-size-lg: 1.11764705882em
     --body-size-sm: 0.88235294117em
-    --body-size-xs: 0.76470588235em
-
     --hed-size: 1.29411764706em
-    --hed-size-md: 1.64705882353em
-    --hed-size-lg: 2.05882352941em
-    --hed-size-xl: 2.64705882353em
-
+    
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 50rem) // 18px VF
+@media screen and (min-width: 48rem) // 18px VF
 
   \:root
 
-    --line-height-body: 1.66666666667
+    --line-height-body: 1.83
 
     --body-size: 1.125rem
-    --body-size-lg: 1.111em
     --body-size-sm: 0.889em
-    --body-size-xs: 0.778em
-
     --hed-size: 1.278em
-    --hed-size-md: 1.611em
-    --hed-size-lg: 2.056em
-    --hed-size-xl: 2.611em
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 70rem) // 19px Gawk
+@media screen and (min-width: 72rem) // 19px Gawk
 
   \:root
 
-    --line-height-body: 1.68421052632
+    --line-height-body: 1.8
 
     --body-size: 1.1875rem
-    --body-size-lg: 1.158em
     --body-size-sm: 0.895em
-    --body-size-xs: 0.789em
-
     --hed-size: 1.263em
-    --hed-size-md: 1.632em
-    --hed-size-lg: 2.053em
-    --hed-size-xl: 2.632em
-
-    --page-width: 732px
+   

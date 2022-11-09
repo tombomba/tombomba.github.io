@@ -6,7 +6,7 @@
 {% assign copysize = copy | size | minus: 4 -%}
 {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
 
-{% if copy contains '<p><img src=' %}{% assign copy = copy | replace: '<p><img src=', '<div class="figpad"><img src=' | replace: '/></p>', '></div>' %}{% endif -%}
+{% if copy contains '<p><img src=' %}{% assign copy = copy | replace: '<p><img src=', '<div class="figpad"><img src=' | replace: '/></p>', 'style="height:auto;" /></div>' %}{% endif -%}
 
 {% capture hedbox %}<div class="hed"><h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif -%}</h1><p>{% endcapture -%}
 {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}

@@ -42,17 +42,15 @@
   <!-- goog -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap&text={{ site.title | upcase }}">
 </head> 
 
 <body>
 
 <header role="banner">
   <div class="wrap">
-    <img src="{{ 'img/bomtomba.gif' | prepend: site.cdn }}" alt="{{ site.title }}">
+    <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
   </div>
-  <div class="hr"></div>
 </header>
 
 <main role="main">

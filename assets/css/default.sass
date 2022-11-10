@@ -10,14 +10,14 @@ article.post
     margin-bottom: var(--shim-n)
     h1
       font-size: var(--hed-size)
-      line-height: var(--line-height-hed)
+      line-height: 1.3
     .byline 
       margin-top: 0
       p
         display: inline
         margin: 0
         font-size: var(--body-size-sm)
-        line-height: var(--line-height-hed)
+        line-height: 1.3
         color: var(--color-half)
         &:nth-of-type(2)::before
           content: '\0020\/\0020'
@@ -41,41 +41,6 @@ article.micro
     a:hover
       text-decoration: underline
 
-article.xxx
-  section
-    display: flex
-    flex-flow: row wrap
-    align-items: flex-start
-    justify-content: space-between
-    margin: var(--shim) auto 0 auto
-    &:first-of-type
-      margin: 0 auto
-    .description
-      flex: 1
-      h1
-        font-size: 1em
-        line-height: 1.2
-      p
-        margin-top: 0.2em
-        font-size: var(--body-size-sm)
-        line-height: 1.66
-        .daystamp
-          font-style: italic
-          color: var(--color-half)
-    .keyart
-      --thumb-width: 8em
-      --thumb-height: 5.8181em
-      margin-left: 1em
-      width: var(--thumb-width)
-      height: var(--thumb-height)
-      overflow: hidden
-      background-color: var(--color-body)
-      img
-        width: var(--thumb-width)
-        height: var(--thumb-height)
-        object-fit: cover
-        object-position: 50% 50%
-
 article.archive
   section
     margin-top: var(--shim)
@@ -92,18 +57,3 @@ article.error
   h1
     font-size: var(--hed-size)
     line-height: var(--line-height-hed)
-
-aside.prev
-  border-top: thin dotted var(--color-half)
-  padding: var(--shim-p) 0 var(--shim) 0
-  .wrap
-    max-width: var(--page-width)
-    margin: 0 auto
-    display: flex
-    flex-flow: row wrap
-    align-items: center
-    justify-content: flex-start
-    gap: 0.5em
-    h2, p
-      font-size: 1em
-      line-height: var(--line-height-hed)

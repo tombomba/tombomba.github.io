@@ -1,8 +1,8 @@
 ---
-layout: micro
 title: "De Toth's proto-'Dollars'"
 excerpt: > 
   Director André de Toth delivers his usual flair on an obviously low budget, staging action sequences with a good, dangerous energy, but the characters are never much more than archetypes.
+image: the-stranger-wore-a-gun-1953-poster.jpg
 ---
 
 ![Testing alt text]({{ 'img/the-stranger-wore-a-gun-1953-poster.jpg' | prepend: site.cdn }}){: width="400" height="313" }

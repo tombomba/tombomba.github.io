@@ -4,17 +4,17 @@
 
 {% if copy contains '<p><img src=' %}{% assign copy = copy | replace: '<p><img src=', '<div class="figpad"><img src=' | replace: '/></p>', '></div>' %}{% endif -%}
 
-<header>
-  <h1>{{ titlef }}</h1>
-  {% if p.date %} 
-  <div class="byline">
-    {% unless forloop.first %}<p class="author">{{ p.author | default: site.author }}</p>{% endunless %}
-    <p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_string }}</time></p>
-  </div>
-  {% endif %}
-</header>
+<div class="wrap">
+  <header>
+    <h1>{% if include.is_home %}<a href="{{ p.url | absolute_url }}">{{ titlef }}</a>{% else %}{{ titlef }}{% endif %}</h1>
+    {% if p.date %} 
+    <div class="byline">
+      {% unless forloop.index > 1 %}<p class="author">{{ p.author | default: site.author }}</p>{% endunless %}
+      <p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_string }}</time></p>
+    </div>
+    {% endif %}
+  </header>
 
-<div class="copy">
   {{ copy }}
 </div>
 

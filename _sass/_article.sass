@@ -1,7 +1,8 @@
 article
   margin: var(--shim-2x) auto
-  max-width: var(--page-width)
-
+  &:not(:first-of-type)
+    padding-top: var(--shim-2x)
+    border-top: thin dashed var(--color-hr-top)
   h1
     color: var(--color-black)
     a:link, a:visited
@@ -30,8 +31,12 @@ article
   li + p,
     margin-top: 0
 
+  .wrap
+    max-width: var(--page-width)
+    margin: 0 auto
+
   .figpad
-    margin: 0 0 var(--shim)
+    margin: 0 0 var(--shim-n)
 
   img
     max-width: 100%
@@ -48,15 +53,5 @@ article
 @media screen and (min-width: 40rem)
 
   article
-
     .widont
       white-space: nowrap
-
-//-----------------------------------------------------------------------------
-
-//@media screen and (min-width: 60rem)
-
-  article
-    
-    figure
-      max-width: var(--page-width-xl)

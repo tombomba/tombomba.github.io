@@ -4,18 +4,8 @@ excerpt: "A media diary, a small collage, a dumb blog"
 is_home: true
 permalink: /index.html
 ---
-<article class="home">
 {% for p in site.posts limit: 20 %}
-<section>
-  <div class="description">
-    <h1><a href="{{ p.url | absolute_url }}">{{ p.title | smartify | strip_html | strip }}</a></h1>
-    <p>{{ p.tease | default: p.excerpt | truncate: 180 | smartify | strip_html | strip }} <span class="daystamp">({{ p.date | date: '%d %b' }})</span></p>
-  </div>
-   <div class="keyart">
-    {% if p.image.file %}
-    <img src="{{ p.image.file | default: 'default-social.jpg' | prepend: 'img/' | prepend: site.cdn }}" alt="">
-    {% endif %}
-  </div>
-</section>
-{% endfor -%}
+<article class="home {{ p.layout }}"><!-- {{ p.content | number_of_words }} -->
+  {% include detail-{{ p.layout }}.html page=p content=p.content is_home=true %}
 </article>
+{% endfor -%}

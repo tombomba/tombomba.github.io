@@ -7,6 +7,7 @@
 
 article.post
   header
+    margin-bottom: var(--shim-n)
     h1
       font-size: var(--hed-size)
       line-height: var(--line-height-hed)
@@ -22,7 +23,6 @@ article.post
 
 article.micro
   .hed
-    max-width: var(--page-width)
     h1, p
       display: inline
       font-size: 1em
@@ -40,7 +40,7 @@ article.micro
     a:hover
       text-decoration: underline
 
-article.home
+article.xxx
   section
     display: flex
     flex-flow: row wrap
@@ -91,3 +91,18 @@ article.error
   h1
     font-size: var(--hed-size)
     line-height: var(--line-height-hed)
+
+aside.prev
+  border-top: thin dotted var(--color-half)
+  padding: var(--shim-p) 0 var(--shim) 0
+  .wrap
+    max-width: var(--page-width)
+    margin: 0 auto
+    display: flex
+    flex-flow: row wrap
+    align-items: center
+    justify-content: flex-start
+    gap: 0.5em
+    h2, p
+      font-size: 1em
+      line-height: var(--line-height-hed)

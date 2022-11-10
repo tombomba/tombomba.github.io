@@ -18,7 +18,7 @@ header[role="banner"]
       a:link, a:visited
         color: var(--color-black)
         text-decoration: none
-    ul
+    p
       display: none
     .icon
       img
@@ -41,15 +41,10 @@ header[role="banner"]
       .icon
         flex: 1 1 25%
         order: -1
-      ul
+      p
+        display: block
         flex: 1 1 25%
-        display: flex
         order: 2
-        align-items: center
-        justify-content: flex-end
-        flex-flow: row wrap
-        gap: 0.5em
-        list-style-type: none
-        li
-          font-size: var(--body-size-sm)
-          line-height: 0.95
+        font-size: var(--body-size-sm)
+        line-height: 1
+        text-align: right

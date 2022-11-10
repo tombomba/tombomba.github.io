@@ -39,18 +39,18 @@
   <!-- css -->
   <link rel="stylesheet" href="{{ page.style | default: 'default' | append: '.css' | prepend: 'css/' | prepend: site.cdn }}">
 
+  <!-- goog -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
+
 </head> 
 
 <body>
 
 <header role="banner">
-  <div class="wrap">
-    <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
-    <p><a href={{ site.posts.first.date | date: '%Y' | absolute_url }}">{{ site.posts.first.date | date: '%Y' }}</a></p>
-    <div class="icon">
-      <a href="{{ site.url }}"><img src="{{ 'img/bomtomba.gif' | prepend: site.cdn }}" alt="{{ site.title }}"></a>
-    </div>
-  </div>
+  <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+  <div class="spacer"></div>    
 </header>
 
 <main role="main">
@@ -60,7 +60,15 @@
 </main>
 
 <footer>
-  <div class="wrap"><p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</p></div>
+  <div class="spacer"></div>
+  <ul>
+    <li><a href="">Home</a></li>
+    <li><a href="">Archive</a></li>
+    <li><a href="">About</a></li>
+    <li><a href="">RSS</a></li>
+    <li>Copyright &copy; {{ site.posts.first.date | date: '%Y' }}</li>
+
+  </ul>
 </footer> 
 
 </body>

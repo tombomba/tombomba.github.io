@@ -1,8 +1,7 @@
 article
-  margin: var(--shim-2x) auto
-  &:not(:first-of-type)
-    padding-top: var(--shim-2x)
-    border-top: thin dashed var(--color-hr-top)
+  max-width: var(--page-width)
+  margin: 0 auto var(--shim-2x)
+ 
   h1
     color: var(--color-black)
     a:link, a:visited
@@ -31,13 +30,6 @@ article
   li + p,
     margin-top: 0
 
-  .wrap
-    max-width: var(--page-width)
-    margin: 0 auto
-
-  .figpad
-    margin: 0 0 var(--shim-n)
-
   img
     max-width: 100%
     max-height: 500px
@@ -45,6 +37,21 @@ article
     height: auto
     border-radius: 4px
     background-color: var(--color-back)
+
+  .wrap
+    max-width: var(--page-width)
+    margin: 0 auto
+
+  .figpad
+    margin: var(--shim-n) 0
+
+  .daystamp
+    color: var(--color-half)
+    a:link, a:visited
+      text-decoration: none
+      color: var(--color-half)
+    a:hover
+      text-decoration: underline
 
 //-----------------------------------------------------------------------------
 

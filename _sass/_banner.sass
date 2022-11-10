@@ -1,50 +1,21 @@
 header[role="banner"]
-  border-bottom: thin dashed var(--color-hr-top)
-  .wrap
-    display: flex
-    align-items: center
-    justify-content: space-between
-    margin: 0 auto
-    height: var(--shim-2x)
-    max-width: var(--page-width)
-    h1
-      flex: 1
-      margin-top: 2px
-      font-family: 'Arial Black', var(--fam-system)
-      font-size: var(--shim)
-      font-weight: 900
-      line-height: 0.95
-      text-transform: uppercase
-      a:link, a:visited
-        color: var(--color-black)
-        text-decoration: none
-    p
-      display: none
-    .icon
-      img
-        display: none
-        display: block
-        width: var(--shim-p)
-        height: var(--shim-p)
-        border-radius: 4px
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
-  header[role="banner"]
-    .wrap
-      max-width: 100%
-      h1
-        flex: 2 1 50%
-        text-align: center
-      .icon
-        flex: 1 1 25%
-        order: -1
-      p
-        display: block
-        flex: 1 1 25%
-        order: 2
-        font-size: var(--body-size-sm)
-        line-height: 1
-        text-align: right
+  display: flex
+  flex-direction: column
+  margin: 0 auto var(--shim-2x)
+  max-width: var(--page-width)
+  h1
+    font-family: 'Open Sans', var(--fam-system)
+    font-size: var(--shim)
+    font-weight: 800
+    line-height: 0.95
+    letter-spacing: -0.25px
+    text-transform: uppercase
+    a:link, a:visited
+      color: var(--color-black)
+      text-decoration: none
+  div.spacer
+    margin-top: var(--shim)
+    height: var(--nudge)
+    width: var(--shim-2x)
+    background-color: var(--color-black)
+ 

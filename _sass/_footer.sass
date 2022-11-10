@@ -1,17 +1,37 @@
 footer
-  border-top: thin dashed var(--color-hr-top)
-  .wrap
-    display: flex
-    align-items: center
-    justify-content: center
-    margin: 0 auto
-    padding: 1em 0 var(--shim-n)
-    max-width: var(--page-width)
-    p
-      font-size: var(--body-size-sm)
-      text-align: center
-      color: var(--color-half)
-      
+  margin: 0 auto
+  max-width: var(--page-width)
+  ul
+    list-style-type: none
+    li
+      font-family: 'Open Sans', var(--fam-system)
+      font-weight: 800
+      text-transform: uppercase
+      color: var(--color-hr-top)
+      a:link, a:visited
+        text-decoration: none
+        color: var(--color-black)
+      a:hover
+        text-decoration: underline
+  div.spacer
+    margin-bottom: var(--shim)
+    height: var(--nudge)
+    width: 100%
+    background-color: var(--color-black)
+
 //-----------------------------------------------------------------------------
 
-// @media screen and (min-width: 40rem)
+@media screen and (min-width: 40rem)
+
+  footer
+    ul
+      display: flex
+      flex-flow: row wrap
+      align-items: center
+      li
+        font-size: var(--body-size-sm)
+        line-height: var(--line-height-hed)
+        &:not(:last-of-type)::after
+          content: '\/'
+          font-weight: 400
+          padding: 0 0.5em

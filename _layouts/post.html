@@ -1,6 +1,18 @@
 ---
 layout: default
 ---
-<article class="{{ page.layout }}"><!-- {{ content | number_of_words }} -->
-{% include detail-{{ page.layout }}.html page=page content=content %}
+{% assign copy = content | strip %}
+{% include _titlef-widont.html title=page.title -%}
+
+{% if copy contains '<p><img src=' %}{% assign copy = copy | replace: '<p><img src=', '<div class="figpad"><img src=' | replace: '/></p>', 'style="height:auto;" /></div>' %}{% endif -%}
+
+<article class="post">
+
+  <header>
+    <h1>{{ titlef }}</h1>
+    {% if page.date %}<p class="daystamp"><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_string }}</time></p>{% endif %}
+  </header>
+
+  {{ copy }}
+
 </article>

@@ -30,20 +30,24 @@ article
   li + p,
     margin-top: 0
 
-  img
-    max-width: 100%
-    max-height: 500px
-    width: auto
-    height: auto
-    border-radius: 4px
-    background-color: var(--color-back)
-
-  .wrap
-    max-width: var(--page-width)
-    margin: 0 auto
-
-  .figpad
-    margin: var(--shim-n) 0
+  figure
+    max-width: var(--width-page-md)
+    padding-top: var(--nudge)
+    .wrap
+      position: relative
+      display: block
+      margin: 0 auto
+      width: 100%
+      height: 0
+      overflow: hidden
+      padding-top: var(--percent)
+      background-color: var(--color-back)
+    .fixed
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
 
   .daystamp
     color: var(--color-half)

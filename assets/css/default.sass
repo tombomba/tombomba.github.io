@@ -57,6 +57,10 @@ article.quote
       font-weight: 700
     p
       margin: 0
+      &::before
+        content: '\0020\2014\00A0'
+        font-weight: 400
+        color: var(--color-half)
 
 article.home
   ul

@@ -62,11 +62,11 @@
 <footer>
   <div class="spacer"></div>
   <ul>
-    <li><a href="{{ site.url }}">Home</a></li>
-    <li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>
-    <li><a href="{{ 'about' | absolute_url }}">About</a></li>
+    {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}
+    {% unless page.is_archive %}<li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>{% endunless %}
+    {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}
     <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
-    {% if page.is_home or page.is_page %}<li>&copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</li>{% endif %}
+    <li>&copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</li>
   </ul>
 </footer> 
 

@@ -2,6 +2,7 @@ header[role="banner"]
   display: flex
   flex-direction: column
   margin: var(--shim) auto var(--shim-2x)
+  padding: 0 1em
   max-width: var(--page-width)
   h1
     font-family: var(--fam-logo)
@@ -19,3 +20,9 @@ header[role="banner"]
     width: var(--shim-2x)
     background-color: var(--color-logo)
  
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  header[role="banner"]
+    padding: 0

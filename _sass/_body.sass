@@ -14,16 +14,9 @@ body
   -moz-text-size-adjust: none
   -webkit-text-size-adjust: 100%
 
-  padding: var(--shim) 1em
-
 main
+  padding: 0 1em
   background-color: var(--color-body)
-
-\::selection
-  background-color: var(--color-select)
-
-\::-moz-selection
-  background-color: var(--color-select)
 
 a
   text-decoration: underline
@@ -44,5 +37,5 @@ time
 
 @media screen and (min-width: 40rem)
 
-  body
-    padding: var(--shim)
+  main
+    padding: 0 var(--shim) 

@@ -16,12 +16,21 @@ article.post
       flex-flow: row wrap
       align-items: baseline
       p
-        margin-top: 0
+        margin-bottom: 0
         font-family: var(--fam-hed)
         font-size: var(--body-size-sm)
         color: var(--color-half)
         &:nth-of-type(2)::before
           content: '\00A0\/\0020'
+
+article.text
+  header
+    margin-bottom: var(--shim-n)
+    h1
+      font-size: var(--hed-size)
+      line-height: var(--line-height-hed)
+  p.daystamp
+    font-style: italic
 
 article.home
   ul
@@ -57,19 +66,7 @@ article.error
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 25rem)
-
-  //article.post
-    header .byline
-      margin-top: var(--nudge)
-
-//-----------------------------------------------------------------------------
-
 @media screen and (min-width: 30rem)
-
-  //article.post
-    header .byline p
-      font-size: var(--body-size-xs)
 
   article.home 
     ul li p

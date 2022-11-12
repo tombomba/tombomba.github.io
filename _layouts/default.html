@@ -66,7 +66,7 @@
     {% unless page.is_archive %}<li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>{% endunless %}
     {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}
     <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
-    <li>&copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</li>
+    {% if page.is_home or page.is_page %}<li>&copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</li>{% endif %}
   </ul>
 </footer> 
 

@@ -6,6 +6,8 @@ layout: default
 
 <article class="post">
 
+  {% if page.image %}{% include _figure.html image=page.image %}{% endif %}
+  
   <header>
     <h1>{{ titlef }}</h1>
     <div class="byline">
@@ -13,8 +15,6 @@ layout: default
       {% if page.date %}<p><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_string }}</time></p>{% endif %}
     </div>
   </header>
-
-  {% if page.image %}{% include _figure.html image=page.image %}{% endif %}
 
   {{ copy }}
 

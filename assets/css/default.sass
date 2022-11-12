@@ -9,7 +9,7 @@ article.post
   header
     margin-bottom: var(--shim)
     h1
-      font-size: var(--hed-size-md)
+      font-size: var(--hed-size)
       line-height: var(--line-height-hed)
     .byline
       display: flex
@@ -18,7 +18,7 @@ article.post
       p
         margin-top: var(--nudge)
         font-family: var(--fam-hed)
-        font-size: var(--body-size-xs)
+        font-size: var(--body-size-sm)
         line-height: var(--line-height-hed)
         color: var(--color-half)
         &:first-of-type
@@ -61,7 +61,10 @@ article.error
 
 @media screen and (min-width: 30rem)
 
-  article.home
-    ul li
-      p
-        margin-top: 0.1em
+  article.post
+    header .byline p
+      font-size: var(--body-size-xs)
+
+  article.home 
+    ul li p
+      margin-top: 0.1em

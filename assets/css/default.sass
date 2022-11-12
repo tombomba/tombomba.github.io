@@ -7,7 +7,7 @@
 
 article.post
   header
-    margin-bottom: var(--shim)
+    margin-bottom: var(--shim-n)
     h1
       font-size: var(--hed-size)
       line-height: var(--line-height-hed)
@@ -16,13 +16,10 @@ article.post
       flex-flow: row wrap
       align-items: baseline
       p
-        margin-top: var(--nudge)
+        margin-top: 0
         font-family: var(--fam-hed)
         font-size: var(--body-size-sm)
-        line-height: var(--line-height-hed)
         color: var(--color-half)
-        &:first-of-type
-          text-transform: uppercase
         &:nth-of-type(2)::before
           content: '\00A0\/\0020'
 
@@ -57,11 +54,20 @@ article.error
     font-size: var(--hed-size)
     line-height: var(--line-height-hed)
 
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 25rem)
+
+  //article.post
+    header .byline
+      margin-top: var(--nudge)
+
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30rem)
 
-  article.post
+  //article.post
     header .byline p
       font-size: var(--body-size-xs)
 

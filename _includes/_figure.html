@@ -1,7 +1,3 @@
-<hr>
-{{ include | inspect }}
-<hr>
-
 {% assign myfig = include.image.ratio | split: ' ' -%}
 {% assign mw = myfig[0] | default: 640 | strip | times: 1.0 -%}
 {% assign mh = myfig[1] | default: 480 | strip | times: 1.0 -%}
@@ -16,15 +12,14 @@
 {% endif -%}
 
 <figure>
-  <div class="videbox" style="--video-max-width:{{ vidmax | default: '100' }}%;">
+  <div class="vidbox" style="--video-max-width:{{ vidmax | default: '100' }}%;">
     <div class="wrap" style="--percent:{{ percentage | default: '56.25' }}%;">
-      <img src="{{ include.media.file | prepend: 'img/' | prepend: site.cdn }}" class="fixed" alt="{{ include.media.alt | normalize_whitespace | strip }}">
+      <img src="{{ include.image.file | prepend: 'img/' | prepend: site.cdn }}" class="fixed" alt="{{ include.image.alt | normalize_whitespace | strip }}">
     </div>
   </div>
-  {% if include.media.caption %}<figcaption>{{ incude.media.caption | smartify | normalize_whitespace | strip }}</figcaption>{% endif %}
+  {% if include.image.caption %}<figcaption><p>{{ include.image.caption | smartify | normalize_whitespace | strip }}</p></figcaption>{% endif %}
 </figure>
 
-{% assign media_content = '' %}
 {% assign myfig = '' -%}
-{% assign vidmax = '' -%}
+{% assign vidmax = '' -%} 
 {% assign percentage = '' -%}

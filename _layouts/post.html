@@ -6,12 +6,12 @@ layout: default
 
 <article class="post">
 
-  {% if page.image.file %}{% include _figure.html image=image %}{% endif %}
-
   <header>
     <h1>{{ titlef }}</h1>
     {% if page.date %}<p class="daystamp"><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_string }}</time></p>{% endif %}
   </header>
+
+  {% if page.image %}{% include _figure.html image=page.image %}{% endif %}
 
   {{ copy }}
 

@@ -48,13 +48,14 @@ article.quote
       font-size: 1.125em
       line-height: 1.66666666667
       display: inline
-      font-weight: 400
-    h1::before
-      content: '\201C'
+    h1
       font-weight: 700
-    h1::after
-      content: '\201D'
-      font-weight: 700
+      &::before
+        content: '\201C'
+        font-weight: 700
+      &::after
+        content: '\201D'
+        font-weight: 700
     p
       margin: 0
       &::before
@@ -112,6 +113,8 @@ article.error
       h1, p
         font-size: 1.11111111111em
         line-height: 1.65
+      h1
+        font-weight: 400
 
 //-----------------------------------------------------------------------------
 

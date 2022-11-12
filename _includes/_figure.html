@@ -1,52 +1,26 @@
-{% if include.media.ratio %}
+{% assign myfig = include.image.ratio | split: 'x' -%}
+{% assign mw = myfig[0] | default: 640 | strip | times: 1.0 -%}
+{% assign mh = myfig[1] | default: 480 | strip | times: 1.0 -%}
 
-  {% assign myfig = include.media.ratio | split: ' ' -%}
-  {% assign mw = myfig[0] | default: 640 | strip | times: 1.0 -%}
-  {% assign mh = myfig[1] | default: 480 | strip | times: 1.0 -%}
-
-  {% if mw > 0 and mh > 0 %}
-    {% assign percentage = mh | divided_by: mw | times: 100 | round: 2 %}
-  {% endif -%}
-
-  {% if include.media.image and mw < 732 %}
-    {% assign vidmax = mw | divided_by: 732 | times: 100 | round: 2 %}
-    {% if vidmax > 100 %}{% assign vidmax = 100 %}{% endif %}
-  {% endif -%}
-
-  {% capture media_content %}
-    {% if include.media.youtube %}
-      <iframe class="fixed" src="https://www.youtube-nocookie.com/embed/{{ include.media.youtube | strip }}?rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    {% elsif include.media.image %}
-      <img src="{{ include.media.image | prepend: site.img }}" class="fixed" alt="{{ include.media.alt | normalize_whitespace | strip }}">
-    {% endif -%}
-  {% endcapture %}
-
-  <figure class="wide">
-    <div class="vidmax" style="--video-max-width:{{ vidmax | default: '100' }}%;">
-      <div class="wrap" style="--percent:{{ percentage | default: '56.25' }}%;">
-        {{ media_content }}
-      </div>
-    </div>
-    {% if include.media.caption %}<figcaption>{{ incude.media.caption | smartify | normalize_whitespace | strip }}</figcaption>{% endif %}
-  </figure>
-
-  {% assign media_content = '' %}
-  {% assign myfig = '' -%}
-  {% assign vidmax = '' -%}
-  {% assign percentage = '' -%}
-
-{% elsif include.media.style -%}
-
-  {% assign myfig = include.media.style | split: ' ' -%}
-  {% assign figratio = myfig[0] | default: 'square' -%}
-  {% assign figfloat = myfig[1] | default: 'right' -%}
-  {% if myfig.size > 2 %}
-    {% assign extras = myfig | shift | shift | join: ' ' | strip | normalize_whitespace %}
-  {% endif -%}
-
-  <figure class="float {{ figfloat }} {{ extras | default: 'nofx' }}"><img src="{{ include.media.image | prepend: site.img }}" class="ratio--{{ figratio }}" alt="{{ include.media.alt }}"></figure>
-
-  {% assign myfig = '' -%}
-  {% assign styles = '' -%}
-
+{% if mw > 0 and mh > 0 %}
+  {% assign percentage = mh | divided_by: mw | times: 100 | round: 2 %}
 {% endif -%}
+
+{% if mw < 732 %}
+  {% assign vidmax = mw | divided_by: 732 | times: 100 | round: 2 %}
+  {% if vidmax > 100 %}{% assign vidmax = 100 %}{% endif %}
+{% endif -%}
+
+<figure class="wide">
+  <div class="vidmax" style="--video-max-width:{{ vidmax | default: '100' }}%;">
+    <div class="wrap" style="--percent:{{ percentage | default: '56.25' }}%;">
+      <img src="{{ include.media.image | prepend: site.img }}" class="fixed" alt="{{ include.media.alt | normalize_whitespace | strip }}">
+    </div>
+  </div>
+  {% if include.media.caption %}<figcaption>{{ incude.media.caption | smartify | normalize_whitespace | strip }}</figcaption>{% endif %}
+</figure>
+
+{% assign media_content = '' %}
+{% assign myfig = '' -%}
+{% assign vidmax = '' -%}
+{% assign percentage = '' -%}

@@ -12,6 +12,6 @@ layout: default
 
   {{ copy }}
 
-  <p class="daystamp"><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_string }}</time></p>
-
+  {% include _daystamp.html date=page.date %}
+  
 </article>

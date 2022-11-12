@@ -1,0 +1,15 @@
+---
+layout: default
+---
+{% assign copy = content | strip %}
+
+{% assign copy = copy | replace_first: '<h1>', '<div class="hed"><h1>' -%}
+{% assign copy = copy | replace_first: '</p>', '</p></div>' -%}
+
+<article class="quote">
+
+  {{ copy }}
+
+  <p class="daystamp"><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_string }}</time></p>
+
+</article>

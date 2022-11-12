@@ -1,0 +1,18 @@
+---
+layout: default
+---
+{% assign copy = content | strip %}
+{% include _titlef-punc.html title=page.title -%}
+
+<article class="photo">
+
+  {% if page.image %}{% include _figure.html image=page.image %}{% endif %}
+
+  {% capture hedbox %}<div class="hed"><h1>{{ titlef }}</h1><p>{% endcapture -%}
+  {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
+
+  {{ copy }}
+
+  <p class="daystamp"><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_string }}</time></p>
+
+</article>

@@ -29,8 +29,34 @@ article.text
     h1
       font-size: var(--hed-size)
       line-height: var(--line-height-hed)
-  p.daystamp
-    font-style: italic
+
+article.photo
+  div.hed
+    margin-bottom: var(--shim-n)
+    h1, p
+      display: inline
+      font-size: 1em
+    h1::after
+      content: '\0020'
+    span.punc::after
+      content: '.'
+
+article.quote
+  div.hed
+    margin-bottom: var(--shim-n)
+    h1, p
+      font-size: 1.125em
+      line-height: 1.66666666667
+      display: inline
+      font-weight: 400
+    h1::before
+      content: '\201C'
+      font-weight: 700
+    h1::after
+      content: '\201D'
+      font-weight: 700
+    p
+      margin: 0
 
 article.home
   ul
@@ -63,11 +89,32 @@ article.error
     font-size: var(--hed-size)
     line-height: var(--line-height-hed)
 
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 25rem)
+
+  article.quote
+    div.hed
+      h1, p
+        font-size: 1.11764705882em
+        line-height: 1.63157894737
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 30rem)
+@media screen and (min-width: 50rem)
 
-  article.home 
-    ul li p
-      margin-top: 0.1em
+  article.quote
+    div.hed
+      h1, p
+        font-size: 1.11111111111em
+        line-height: 1.65
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50rem)
+
+  article.quote
+    div.hed
+      h1, p
+        font-size: 1.15789473684em
+        line-height: 1.63636363636

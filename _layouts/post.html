@@ -8,7 +8,10 @@ layout: default
 
   <header>
     <h1>{{ titlef }}</h1>
-    {% if page.date %}<p class="daystamp"><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_string }}</time></p>{% endif %}
+    <div class="byline">
+      <p>{{ page.author | default: site.author }}</p>
+      {% if page.date %}<p><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_string }}</time></p>{% endif %}
+    </div>
   </header>
 
   {% if page.image %}{% include _figure.html image=page.image %}{% endif %}

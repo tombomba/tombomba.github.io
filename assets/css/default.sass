@@ -9,31 +9,36 @@ article.post
   header
     margin-bottom: var(--shim)
     h1
-      font-size: var(--hed-size)
+      font-size: var(--hed-size-md)
       line-height: var(--line-height-hed)
-    p
-      margin-top: 0.1em
-      font-size: var(--body-size-sm)
-      line-height: var(--line-height-hed)
+    .byline
+      display: flex
+      flex-flow: row wrap
+      align-items: baseline
+      p
+        margin-top: var(--nudge)
+        font-family: var(--fam-hed)
+        font-size: var(--body-size-xs)
+        line-height: var(--line-height-hed)
+        color: var(--color-half)
+        &:first-of-type
+          text-transform: uppercase
+        &:nth-of-type(2)::before
+          content: '\00A0\/\0020'
 
-article.micro
-  .hed
-    h1, p
-      display: inline
-      font-size: 1em
-      line-height: var(--line-height-body)
-    h1::after
-      content: '\0020'
-    .punc::after
-      content: '.'
-  .daystamp
-    font-style: italic
-    color: var(--color-half)
-    a:link, a:visited
-      color: var(--color-half)
-      text-decoration: none
-    a:hover
-      text-decoration: underline
+article.home
+  ul
+    margin: 0
+    list-style-type: none
+    li
+      margin-top: var(--shim)
+      &:first-of-type
+        margin-top: 0
+      h1
+        font-size: var(--body-size-lg)
+        line-height: var(--line-height-hed)
+      p
+        margin-top: 0.2em
 
 article.archive
   section
@@ -51,3 +56,12 @@ article.error
   h1
     font-size: var(--hed-size)
     line-height: var(--line-height-hed)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30rem)
+
+  article.home
+    ul li
+      p
+        margin-top: 0.1em

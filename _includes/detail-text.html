@@ -8,6 +8,8 @@
     <h1>{{ titlef }}</h1>
   </header>
 
+  {% if p.image %}{% include _figure.html image=p.image %}{% endif -%}
+
   {{ copy }}
 
   {% include _daystamp.html date=p.date url=p.url is_home=include.is_home %}

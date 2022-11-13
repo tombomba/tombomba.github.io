@@ -31,7 +31,7 @@ article
     --percent: 56.25%
     max-width: var(--page-width)
     margin-bottom: var(--shim-n)
-    padding: var(--nudge) 0
+    padding: 0 0 var(--nudge) 0
     border-radius: 4px
     img
       border-radius: 4px
@@ -40,7 +40,7 @@ article
       margin-top: var(--nudge-2x)
       p
         margin: 0
-        font-size: var(--body-size-sm)
+        font-size: var(--body-size-xs)
         line-height: var(--line-height-hed)
     .wrap
       position: relative
@@ -60,26 +60,16 @@ article
 
   .daystamp
     margin-bottom: 0
-    line-height: var(--line-height-hed)
-    color: var(--color-half)
+    font-family: Verdana, sans-serif
+    font-size: var(--body-size-xs)
+    font-weight: 700
+    text-transform: uppercase
+    color: var(--color-stamp)
     a:link, a:visited
       text-decoration: none
       color: var(--color-half)
     a:hover
       text-decoration: underline
-    
-  .dotstamp
-    margin-bottom: 0
-    font-family: 'Arial', sans-serif
-    font-size: var(--hed-size)
-    font-weight: 900
-    line-height: 0.95
-    a:link, a:visited
-      text-decoration: none
-      color: var(--color-logo)
-    a:hover
-      text-decoration: underline
-      color: inherit
 
 //-----------------------------------------------------------------------------
 

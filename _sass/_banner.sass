@@ -1,13 +1,15 @@
 header[role="banner"]
   display: flex
-  flex-direction: column
-  margin: var(--shim) auto var(--shim-3x)
-  padding: 0 1em
+  flex-flow: row wrap
+  align-items: center
+  justify-content: space-between
+  margin: var(--shim) auto var(--shim-2x)
   max-width: var(--page-width)
   div.text
+    flex: 1
     h1
       font-family: var(--fam-logo)
-      font-size: var(--buffer)
+      font-size: var(--shim)
       font-weight: 900
       line-height: 0.95
       letter-spacing: -0.25px
@@ -16,18 +18,17 @@ header[role="banner"]
         color: var(--color-black)
         text-decoration: none
   div.icon
-    width: auto
-    height: var(--shim-2x)
-    overflow: hidden
-    svg
-      width: auto
-      height: var(--shim)
-      fill: var(--color-black)
-  //div.spacer
-    margin-top: var(--shim)
-    height: var(--nudge-2x)
-    width: var(--shim-2x)
-    background-color: var(--color-logo)
+    display: flex
+    align-items: center
+    justify-content: center
+    width: var(--buffer)
+    height: var(--buffer)
+    background-color: var(--color-back)
+    border-radius: 4px
+    span.emoji
+      font-size: var(--shim)
+      line-height: 0.95
+      vertical-align: middle
  
 //-----------------------------------------------------------------------------
 
@@ -37,11 +38,3 @@ header[role="banner"]
     padding: 0
     div.text
       margin-left: calc(var(--shim) * -1)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 60rem)
-
-header[role="banner"]
-    div.text
-      margin-left: calc(var(--shim) * -2)

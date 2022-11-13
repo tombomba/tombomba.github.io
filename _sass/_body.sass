@@ -14,7 +14,6 @@ body
   -moz-text-size-adjust: none
   -webkit-text-size-adjust: 100%
 
-main
   padding: 0 1em
 
 a
@@ -32,9 +31,16 @@ a
 time
   white-space: nowrap
 
+.emoji
+  vertical-align: middle
+  font-size: 1em
+  line-height: var(--line-height-body)
+  a:link, a:visited
+    text-decoration: none
+
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40rem)
 
-  main
+  body
     padding: 0

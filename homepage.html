@@ -4,13 +4,8 @@ excerpt: "A media diary, a small collage, a dumb blog"
 is_home: true
 permalink: /index.html
 ---
-<article class="home">
-  <ul>
-  {% for p in site.posts limit: 10 %}
-    <li>
-      <h1><a href="{{ p.url | absolute_url }}">{{ p.title | smartify | strip }}</a></h1>
-      <p>{{ p.excerpt | truncatewords: 50 | smartify | strip_html | strip }} <span class="daystamp"><a href="{{ p.url | absolute_url }}">{{ page.date | date: '%d %b' }}</a></span></p>
-    </li>
-  {% endfor -%}
-  </ul>
-</article>
+{% for p in site.posts limit: 10 %}
+
+  {% include detail-{{ p.layout }}}.html page=p content=p.content is_home=true %}
+
+{% endfor -%}

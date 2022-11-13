@@ -1,0 +1,15 @@
+{% assign p = include.page %}
+{% assign copy = include.content | strip %}
+{% include _titlef-widont.html title=p.title -%}
+
+<article class="text">
+
+  <header>
+    <h1>{{ titlef }}</h1>
+  </header>
+
+  {{ copy }}
+
+  {% include _daystamp.html date=p.date %}
+  
+</article>

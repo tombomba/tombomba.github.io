@@ -1,17 +1,4 @@
 ---
 layout: default
 ---
-{% assign copy = content | strip %}
-{% include _titlef-widont.html title=page.title -%}
-
-<article class="text">
-
-  <header>
-    <h1>{{ titlef }}</h1>
-  </header>
-
-  {{ copy }}
-
-  {% include _daystamp.html date=page.date %}
-  
-</article>
+{% include detail-text.html page=page content=content %}

@@ -27,8 +27,10 @@ article.text
   header
     margin-bottom: var(--shim-n)
     h1
-      font-size: var(--hed-size)
-      line-height: var(--line-height-hed)
+      font-family: Arial, sans-serif
+      font-size: var(--hed-size-lg)
+      line-height: 0.95
+      text-transform: uppercase
 
 article.photo
   div.hed
@@ -36,10 +38,16 @@ article.photo
     h1, p
       display: inline
       font-size: 1em
-    h1::after
-      content: '\0020'
+    h1
+      font-family: Arial, sans-serif
+      text-transform: uppercase
+      &::after
+        content: '\0020'
+    p 
+      margin-top: var(--nudge)
     span.punc::after
       content: '.'
+      font-family: Arial, sans-serif
 
 article.quote
   div.hed

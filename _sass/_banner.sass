@@ -4,16 +4,17 @@ header[role="banner"]
   margin: var(--shim) auto var(--shim-3x)
   padding: 0 1em
   max-width: var(--page-width)
-  h1
-    font-family: var(--fam-logo)
-    font-size: var(--shim)
-    font-weight: 900
-    line-height: 0.95
-    letter-spacing: -0.25px
-    text-transform: uppercase
-    a:link, a:visited
-      color: var(--color-black)
-      text-decoration: none
+  div.text
+    h1
+      font-family: var(--fam-logo)
+      font-size: var(--buffer)
+      font-weight: 900
+      line-height: 0.95
+      letter-spacing: -0.25px
+      text-transform: uppercase
+      a:link, a:visited
+        color: var(--color-black)
+        text-decoration: none
   div.icon
     width: auto
     height: var(--shim-2x)
@@ -22,7 +23,7 @@ header[role="banner"]
       width: auto
       height: var(--shim)
       fill: var(--color-black)
-  div.spacer
+  //div.spacer
     margin-top: var(--shim)
     height: var(--nudge-2x)
     width: var(--shim-2x)
@@ -34,3 +35,13 @@ header[role="banner"]
 
   header[role="banner"]
     padding: 0
+    div.text
+      margin-left: calc(var(--shim) * -1)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 60rem)
+
+header[role="banner"]
+    div.text
+      margin-left: calc(var(--shim) * -2)

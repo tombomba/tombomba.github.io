@@ -23,7 +23,7 @@
 {% assign titlef = titlef | replace: '!!OPENSPAN!!', '<span class="widont">' %}
 {% assign titlef = titlef | replace: '!!CLOSESPAN!!', '</span>' | strip | smartify | normalize_whitespace -%}
 
-{% if include.url %}
+{% if include.is_home %}
   {% capture titlef %}<a href="{{ include.url | absolute_url }}">{{ titlef }}</a>{% endcapture %}
 {% else %}
   {% assign titlef = titlef %}

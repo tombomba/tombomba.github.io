@@ -1,6 +1,6 @@
 {% assign p = include.page %}
 {% assign copy = include.content | strip %}
-{% include _titlef-punc.html title=p.title url=p.url -%}
+{% include _titlef-widont.html title=p.title url=p.url is_home=include.is_home -%}
 
 <article class="photo">
 

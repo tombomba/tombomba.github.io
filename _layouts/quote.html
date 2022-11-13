@@ -1,15 +1,4 @@
 ---
 layout: default
 ---
-{% assign copy = content | strip %}
-
-{% assign copy = copy | replace_first: '<h1>', '<div class="hed"><h1>' -%}
-{% assign copy = copy | replace_first: '</p>', '</p></div>' -%}
-
-<article class="quote">
-
-  {{ copy }}
-
-  {% include _daystamp.html date=page.date %}
-
-</article>
+{% include detail-quote.html page=page content=content %}

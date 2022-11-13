@@ -1,18 +1,4 @@
 ---
 layout: default
 ---
-{% assign copy = content | strip %}
-{% include _titlef-punc.html title=page.title -%}
-
-<article class="photo">
-
-  {% if page.image %}{% include _figure.html image=page.image %}{% endif %}
-
-  {% capture hedbox %}<div class="hed"><h1>{{ titlef }}</h1><p>{% endcapture -%}
-  {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
-
-  {{ copy }}
-
-  {% include _daystamp.html date=page.date %}
-  
-</article>
+{% include detail-photo.html page=page content=content %}

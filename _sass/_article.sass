@@ -33,7 +33,7 @@ article
   figure
     --percent: 56.25%
     max-width: var(--page-width)
-    margin-bottom: var(--shim)
+    margin-bottom: var(--shim-n)
     padding: var(--nudge) 0
     border-radius: 4px
     img
@@ -62,6 +62,8 @@ article
       height: 100%
 
   .daystamp
+    margin-bottom: 0
+    line-height: var(--line-height-hed)
     color: var(--color-half)
     a:link, a:visited
       text-decoration: none
@@ -70,13 +72,16 @@ article
       text-decoration: underline
     
   .dotstamp
+    margin-bottom: 0
     font-size: var(--hed-size)
-    font-weight: 900
+    font-weight: 800
     line-height: 0.95
     a:link, a:visited
       text-decoration: none
+      color: var(--color-logo)
     a:hover
       text-decoration: underline
+      color: inherit
 
 //-----------------------------------------------------------------------------
 

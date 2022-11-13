@@ -1,6 +1,6 @@
 {% assign p = include.page %}
 {% assign copy = include.content | strip %}
-{% include _titlef-widont.html title=p.title -%}
+{% include _titlef-widont.html title=p.title url=p.url is_home=include.is_home -%}
 
 <article class="text">
 
@@ -10,6 +10,6 @@
 
   {{ copy }}
 
-  {% include _daystamp.html date=p.date url=p.url is_home=true %}
+  {% include _daystamp.html date=p.date url=p.url is_home=include.is_home %}
   
 </article>

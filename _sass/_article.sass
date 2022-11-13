@@ -1,7 +1,7 @@
 article
   max-width: var(--page-width)
-  margin: 0 auto var(--shim-3x)
- 
+  margin: 0 auto var(--shim-3x) auto
+
   h1
     color: var(--color-black)
     a:link, a:visited
@@ -33,7 +33,7 @@ article
   figure
     --percent: 56.25%
     max-width: var(--page-width)
-    margin-bottom: var(--shim-n)
+    margin-bottom: var(--shim)
     padding: var(--nudge) 0
     border-radius: 4px
     img
@@ -66,6 +66,16 @@ article
     a:link, a:visited
       text-decoration: none
       color: var(--color-half)
+    a:hover
+      text-decoration: underline
+    
+  .dotstamp
+    font-size: var(--hed-size)
+    font-weight: 900
+    line-height: 0.95
+    a:link, a:visited
+      text-decoration: none
+      color: var(--color-logo)
     a:hover
       text-decoration: underline
 

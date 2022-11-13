@@ -1,0 +1,16 @@
+{% assign p = include.page %}
+{% assign copy = include.content | strip %}
+{% include _titlef-punc.html title=p.title -%}
+
+<article class="photo">
+
+  {% if p.image %}{% include _figure.html image=p.image %}{% endif -%}
+
+  {% capture hedbox %}<div class="hed"><h1>{{ titlef }}</h1><p>{% endcapture -%}
+  {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
+
+  {{ copy }}
+
+  {% include _daystamp.html date=p.date url=p.url is_home=true %}
+  
+</article>

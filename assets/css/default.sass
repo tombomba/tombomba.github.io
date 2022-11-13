@@ -36,14 +36,23 @@ article.home
   section.more
     margin-top: var(--shim-2x)
     ul
+      margin: 0
       list-style-type: none
-      li
+      li  
         margin-top: var(--shim-n)
         &:first-of-type
           margin-top: 0
         h2
-          font-size: var(--hed-size-lg)
-          
+          margin: 0
+          font-family: Arial, sans-serif
+          font-size: var(--hed-size-md)
+          line-height: 0.95
+          text-transform: uppercase
+          a:link, a:visited
+            text-decoration underline
+            color: var(--color-black)
+          a:hover
+            text-decoration: none
 
 
 article.archive

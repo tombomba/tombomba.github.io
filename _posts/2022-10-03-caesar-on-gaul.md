@@ -1,5 +1,4 @@
 ---
-layout: quote
 title: "Caesar on Gaul" 
 ---
 

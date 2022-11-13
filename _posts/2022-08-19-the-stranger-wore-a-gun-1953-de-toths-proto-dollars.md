@@ -1,5 +1,4 @@
 ---
-layout: text
 title: "Another, shorter text"
 #image: 
 #  file: the-stranger-wore-a-gun-1953-poster.jpg

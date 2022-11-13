@@ -4,7 +4,29 @@ excerpt: "A media diary, a small collage, a dumb blog"
 is_home: true
 permalink: /index.html
 ---
+{% assign feature = site.posts.first %}
+{% include _titlef-widont.html title=feature.title url=feature.url is_home=true %}
 
-{% include detail-text.html page=site.posts.first content=site.posts.first.content is_home=true %}
+<article class="home post">
 
-<div class="spacer"><div class="hr"></div></div>
+  <section class="teaser">
+
+    <header><h1>{{ titlef }}</h1></header>
+    
+    {% if feature.image %}{% include _figure.html image=feature.image %}{% endif -%}
+    
+    {{ feature.excerpt | smartify | strip }} 
+
+  </section>
+
+  <div class="hr spacer"></div>
+
+  <section class="more">
+    <ul>
+    {% for p in site.posts limit: 7 offset: 1 %}
+      <li>{{ p.title | smartify | strip }}</li>
+    {% endfor %}
+    </ul>
+  </section>
+
+</article>

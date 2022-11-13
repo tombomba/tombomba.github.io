@@ -5,7 +5,7 @@
 @charset "utf-8"
 @import reset, vars, body, banner, article, footer
 
-article.post
+article.postxxxxxxxx
   header
     margin-bottom: var(--shim-n)
     h1
@@ -23,7 +23,7 @@ article.post
         &:nth-of-type(2)::before
           content: '\00A0\/\0020'
 
-article.text
+article.post
   header
     margin-bottom: var(--shim-n)
     h1
@@ -32,56 +32,19 @@ article.text
       line-height: 0.95
       text-transform: uppercase
 
-article.photo
-  div.hed
-    margin-bottom: var(--shim-n)
-    h1, p
-      display: inline
-      font-size: 1em
-    h1
-      font-family: Arial, sans-serif
-      text-transform: uppercase
-      &::after
-        content: '\0020'
-    p 
-      margin-top: var(--nudge)
-    span.punc::after
-      content: '.'
-      font-family: Arial, sans-serif
-
-article.quote
-  div.hed
-    margin-bottom: var(--shim-n)
-    h1, p
-      font-size: 1.125em
-      font-weight: 400
-      line-height: 1.66666666667
-      display: inline
-    h1::before
-      content: '\201C'
-      font-weight: 700
-    h1::after
-      content: '\201D'
-      font-weight: 700
-    p
-      margin: 0
-      &::before
-        content: '\0020\2014\00A0'
-        color: var(--color-half)
-
 article.home
-  ul
-    margin: 0
-    list-style-type: none
-    li
-      margin-top: var(--shim)
-      &:first-of-type
-        margin-top: 0
-      h1
-        font-size: var(--body-size-lg)
-        line-height: var(--line-height-hed)
-      p
-        margin-top: 0.2em
+  section.more
+    margin-top: var(--shim-2x)
+    ul
+      list-style-type: none
+      li
+        margin-top: var(--shim-n)
+        &:first-of-type
+          margin-top: 0
+        h2
+          font-size: var(--hed-size-lg)
+          
+
 
 article.archive
   section
@@ -99,33 +62,3 @@ article.error
   h1
     font-size: var(--hed-size)
     line-height: var(--line-height-hed)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 25rem)
-
-  article.quote
-    div.hed
-      h1, p
-        font-size: 1.11764705882em
-        line-height: 1.63157894737
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 50rem)
-
-  article.quote
-    div.hed
-      h1, p
-        font-size: 1.11111111111em
-        line-height: 1.65
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 50rem)
-
-  article.quote
-    div.hed
-      h1, p
-        font-size: 1.15789473684em
-        line-height: 1.63636363636

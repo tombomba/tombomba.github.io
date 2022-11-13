@@ -1,0 +1,16 @@
+{% assign p = include.page %}
+{% assign copy = include.content | strip %}
+{% include _titlef-widont.html title=p.title url=p.url is_home=include.is_home -%}
+
+<header>
+  <h1>{{ titlef }}</h1>
+</header>
+
+{% if p.image %}{% include _figure.html image=p.image %}{% endif -%}
+
+{% if include.is_home %}
+  {{ p.excerpt }}
+{% else %}
+  {{ copy }}
+{% endif %}
+  

@@ -4,8 +4,7 @@ excerpt: "A media diary, a small collage, a dumb blog"
 is_home: true
 permalink: /index.html
 ---
-{% for p in site.posts limit: 10 %}
 
-  {% include detail-{{ p.layout }}.html page=p content=p.content is_home=true %}
+{% include detail-text.html page=site.posts.first content=site.posts.first.content is_home=true %}
 
-{% endfor -%}
+<div class="spacer"><div class="hr"></div></div>

@@ -60,12 +60,8 @@
 </main>
 
 <footer>
-  <ul class="feeds">
-    <li><a href="{{ site.url }}">Home</a></li>
-    <li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>
-    <li><a href="{{ 'about' | absolute_url }}">About</a></li>
-    <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
-  </ul>
+  {% include _datelist.html %}
+  <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</p>
 </footer> 
 
 </body>

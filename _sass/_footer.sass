@@ -3,6 +3,10 @@ footer
   max-width: var(--page-width)
   ul
     margin: 0
+    display: flex
+    flex-flow: row wrap
+    align-items: center
+    gap: 0.5em
     list-style-type: none
     li
       font-family: Arial, san-serif
@@ -12,15 +16,20 @@ footer
       color: var(--color-half)
       a:link, a:visited
         color: var(--color-black)
+  p
+    font-family: Arial, san-serif
+    font-size: 1em
+    font-weight: 900
+    text-transform: uppercase
+    color: var(--color-half)
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 20rem)
 
   footer
-    ul
-      li
-        font-size: var(--shim-n)
+    ul li, p
+      font-size: var(--shim-n)
 
 //-----------------------------------------------------------------------------
 
@@ -28,18 +37,5 @@ footer
 
   footer
     margin-top: var(--shim-3x)
-    ul
-      display: flex
-      flex-flow: row wrap
-      align-items: center
-      gap: 0.5em
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 75rem)
-
-  footer
-    ul
-      li
-        font-size: var(--shim)
-        line-height: 1
+    ul li, p
+      line-height: 1.2

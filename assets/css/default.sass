@@ -5,55 +5,14 @@
 @charset "utf-8"
 @import reset, vars, body, banner, article, footer
 
-article.postxxxxxxxx
-  header
-    margin-bottom: var(--shim-n)
-    h1
-      font-size: var(--hed-size)
-      line-height: var(--line-height-hed)
-    .byline
-      display: flex
-      flex-flow: row wrap
-      align-items: baseline
-      p
-        margin-bottom: 0
-        font-family: var(--fam-hed)
-        font-size: var(--body-size-sm)
-        color: var(--color-half)
-        &:nth-of-type(2)::before
-          content: '\00A0\/\0020'
-
 article.post
   header
     margin-bottom: var(--shim-n)
     h1
       font-family: Arial, sans-serif
-      font-size: var(--hed-size-lg)
-      line-height: 0.95
+      font-size: var(--hed-size)
+      line-height: 1.2
       text-transform: uppercase
-
-article.home
-  section.more
-    margin-top: var(--shim-2x)
-    ul
-      margin: 0
-      list-style-type: none
-      li  
-        margin-top: var(--shim-n)
-        &:first-of-type
-          margin-top: 0
-        h2
-          margin: 0
-          font-family: Arial, sans-serif
-          font-size: var(--hed-size-md)
-          line-height: 0.95
-          text-transform: uppercase
-          a:link, a:visited
-            text-decoration underline
-            color: var(--color-black)
-          a:hover
-            text-decoration: none
-
 
 article.archive
   section
@@ -71,3 +30,23 @@ article.error
   h1
     font-size: var(--hed-size)
     line-height: var(--line-height-hed)
+
+//----------------------------------------------------------------------------
+
+@media screen and (min-width: 20rem)
+
+  article.post
+    header
+      h1
+        font-size: var(--shim)
+        line-height: 1.1
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 75rem)
+
+  article.post
+    header
+      h1
+        font-size: var(--shim-p)
+        line-height: 1

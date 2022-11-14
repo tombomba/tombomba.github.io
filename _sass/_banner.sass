@@ -9,7 +9,7 @@ header[role="banner"]
     flex: 1
     h1
       font-family: var(--fam-logo)
-      font-size: var(--shim)
+      font-size: var(--shim-n)
       font-weight: 900
       line-height: 0.95
       letter-spacing: -0.25px
@@ -27,14 +27,24 @@ header[role="banner"]
     border-radius: 4px
     span.emoji
       font-size: var(--shim)
-      line-height: 0.95
+      line-height: 1
       vertical-align: middle
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 20rem)
+
+  header[role="banner"]
+    div.text
+      h1
+        font-size: var(--shim-p)
  
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40rem)
 
   header[role="banner"]
-    padding: 0
     div.text
       margin-left: calc(var(--shim) * -1)
+      h1
+        font-size: var(--shim)

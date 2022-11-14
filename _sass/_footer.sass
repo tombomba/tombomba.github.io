@@ -1,12 +1,12 @@
 footer
-  margin: var(--shim-3x) auto var(--shim-p)
+  margin: var(--shim-2x) auto var(--shim-p)
   max-width: var(--page-width)
   ul
     margin: 0
     list-style-type: none
     li
       font-family: Arial, san-serif
-      font-size: var(--hed-size)
+      font-size: 1em
       font-weight: 900
       line-height: var(--line-height-hed)
       text-transform: uppercase
@@ -16,13 +16,22 @@ footer
 
 //-----------------------------------------------------------------------------
 
+@media screen and (min-width: 20rem)
+
+  footer
+    ul
+      li
+        font-size: var(--shim-n)
+        line-height: 1
+
+//-----------------------------------------------------------------------------
+
 @media screen and (min-width: 40rem)
 
   footer
-    padding: 0
+    margin-top: var(--shim-3x)
     ul
       display: flex
       flex-flow: row wrap
       align-items: center
       gap: 0.5em
-      li

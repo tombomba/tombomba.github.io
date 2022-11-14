@@ -1,25 +1,18 @@
 footer
-  margin: var(--shim-3x) auto var(--shim)
-  padding: 0 1em
+  margin: var(--shim-3x) auto var(--shim-p)
   max-width: var(--page-width)
   ul
+    margin: 0
     list-style-type: none
     li
-      font-family: var(--fam-logo)
-      font-size: var(--shim)
+      font-family: Arial, san-serif
+      font-size: var(--hed-size)
       font-weight: 900
+      line-height: var(--line-height-hed)
       text-transform: uppercase
-      color: var(--color-stamp)
+      color: var(--color-half)
       a:link, a:visited
-        text-decoration: none
         color: var(--color-black)
-      a:hover
-        text-decoration: underline
-  //div.spacer
-    margin-bottom: var(--shim)
-    height: var(--nudge-2x)
-    width: 100%
-    background-color: var(--color-logo)
 
 //-----------------------------------------------------------------------------
 
@@ -31,9 +24,5 @@ footer
       display: flex
       flex-flow: row wrap
       align-items: center
+      gap: 0.5em
       li
-        line-height: var(--line-height-hed)
-        &:not(:last-of-type)::after
-          content: '\/'
-          font-weight: 400
-          padding: 0 0.5em

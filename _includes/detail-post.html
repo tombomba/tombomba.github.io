@@ -8,9 +8,8 @@
 
 {% if p.image %}{% include _figure.html image=p.image %}{% endif -%}
 
+{{ copy }}
+
 {% if include.is_home %}
-  {{ p.excerpt }}
-{% else %}
-  {{ copy }}
+  {% include _daystamp.html date=p.date url=p.url is_home=true %}
 {% endif %}
-  

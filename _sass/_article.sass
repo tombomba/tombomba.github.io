@@ -1,6 +1,6 @@
 article
   max-width: var(--page-width)
-  margin: var(--shim-2x) auto 0
+  margin: var(--shim-2x) auto 0 
 
   h1
     color: var(--color-black)
@@ -85,5 +85,7 @@ article
 @media screen and (min-width: 40rem)
 
   article
+    &:not(:first-of-type)
+      margin-top: var(--shim-3x)
     .widont
       white-space: nowrap

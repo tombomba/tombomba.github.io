@@ -14,6 +14,21 @@ article.post
       line-height: 1.2
       text-transform: uppercase
 
+article.home
+  ul
+    margin: 0
+    list-style-type: none
+    li
+      &:not(:first-of-type)
+        margin-top: var(--shim)
+      h1
+        font-family: Arial, sans-serif
+        font-size: var(--hed-size-md)
+        font-weight: 900
+        line-height: 1
+        text-transform: uppercase
+        color: var(--color-half)
+
 article.archive
   section
     margin-top: var(--shim)
@@ -48,5 +63,5 @@ article.error
   article.post
     header
       h1
-        font-size: var(--shim-p)
-        line-height: 0.95
+        font-size: var(--hed-size-md)
+        line-height: 1

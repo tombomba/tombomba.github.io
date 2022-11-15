@@ -4,11 +4,9 @@ excerpt: "A media diary, a small collage, a dumb blog"
 is_home: true
 permalink: /index.html
 ---
-<article class="home">
-  <ul>
 {% for p in site.posts limit: 10 %}
-    {% include _titlef-widont.html title=p.title url=p.url is_home=include.is_home -%}
-    <li><h1><a href="{{ p.url | absolute_url }}">{{ titlef }}</a></h1></li>
+  <article class="post">
+    {% include detail-post.html page=p content=p.content is_home=true %}
+  </article>
 {% endfor -%}
-  </ul>
-</article>
+

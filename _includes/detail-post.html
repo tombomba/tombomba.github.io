@@ -4,6 +4,10 @@
 
 <header>
   <h1>{{ titlef }}</h1>
+  <div class="byline">
+    <p class="author">{{ p.author | default: site.author }}</p>
+    <p class="daystamp"><time datetime="{{ include.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished"><a href="{{ include.url | absolute_url }}" aria-label="Permanent link to this entry">{{ p.date | date_to_string }}</a></time></p>
+  </div>
 </header>
 
 {% if p.image %}{% include _figure.html image=p.image %}{% endif -%}

@@ -4,9 +4,7 @@ footer
   ul
     margin: 0
     display: flex
-    flex-flow: row wrap
-    align-items: center
-    gap: 0.5em
+    flex-direction: column
     list-style-type: none
   ul li, p
     font-family: Arial, san-serif
@@ -16,21 +14,23 @@ footer
     text-transform: uppercase
     color: var(--color-half)
     a:link, a:visited 
+      text-decoration: none
       color: var(--color-black)
+    a:hover
+      text-decoration: underline
 
-//-----------------------------------------------------------------------------
+  //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 20rem)
 
   footer
     ul li, p
-      font-size: var(--shim-n)
+      font-size: var(--shim)
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40rem)
 
   footer
-    margin-top: var(--shim-3x)
     ul li
-      line-height: 1.2
+      line-height: 1.1

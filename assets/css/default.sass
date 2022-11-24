@@ -12,18 +12,18 @@ article.post
       font-size: var(--shim-n)
       line-height: 1.2
       text-transform: uppercase
-    div.byline
-      margin-top: var(--shim-n)
-      color: var(--color-half)
-      p
-        margin: 0
-        display: inline
-        font-size: var(--body-size-sm)
-        line-height: var(--line-height-hed)
-        &.author
-          text-transform: uppercase
-        &:nth-of-type(2)::before
-          content: '\0020\/\0020'
+  div.byline
+    margin-top: var(--shim)
+    color: var(--color-half)
+    p
+      margin: 0
+      display: inline
+      font-size: var(--body-size-sm)
+      line-height: 1
+      &.author
+        text-transform: uppercase
+      &:nth-of-type(2)::before
+        content: '\0020\/\0020'
 
 article.archive
   section

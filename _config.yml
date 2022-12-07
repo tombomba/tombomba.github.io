@@ -1,6 +1,5 @@
 title: "Salt"
 description: "A media diary, a small collage, a dumb blog"
-domain: "www.bomtomba.com"
 
 url: "https://www.bomtomba.com"
 cdn: "https://www.bomtomba.com/assets/"
@@ -12,7 +11,7 @@ future: false
 show_drafts: false
 theme: null
 
-permalink: /:short_year/:month/:title:output_ext
+permalink: /:short_year/:title:output_ext
 timezone: America/Los_Angeles
 
 excerpt_separator: <!--more-->
@@ -20,10 +19,6 @@ excerpt_separator: <!--more-->
 collections:
   pages:
     collections_dir: _pages
-    output: true
-    permalink: "/:path/"
-  archives:
-    collections_dir: _archives
     output: true
     permalink: "/:path/"
 
@@ -41,13 +36,6 @@ defaults:
       type: "pages"
     values:
       is_page: true
-  -
-    scope:
-      path: "_archives"
-      type: "archives"
-    values:
-      excerpt: "A list of previous entries"
-      is_archive: true
 
 markdown: kramdown
 kramdown:

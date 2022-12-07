@@ -1,0 +1,18 @@
+---
+layout: default
+title: "Archive ~~~"
+excerpt: "A short list of previous entries"
+is_archive: true
+permalink: "/archive/"
+---
+{% assign master_list = site.posts | group_by_exp: "post", "post.date | date: '%b %Y'" -%}
+<article class="archive">
+  <div class="wrap">
+{% for group in master_list %}
+  <section>
+    <h1>{{ group.name }}</h1>
+    <ul>{% for item in group.items %}<li><a href="{{ item.url | absolute_url }}">{{ item.title | smartify | strip }}</a></li>{% endfor %}</ul>
+  </section>
+{% endfor -%}
+  </div>
+</article>

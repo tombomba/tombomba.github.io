@@ -5,3 +5,5 @@ _site
 .s3_website.yml
 .DS_Store
 .vscode
+Gemfile
+Gemfile.lock

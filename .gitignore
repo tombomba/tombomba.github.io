@@ -4,7 +4,6 @@
 .sass-cache
 .s3_website.yml
 .vscode
-_config.dev.yml
 _drafts
 _site
 Gemfile

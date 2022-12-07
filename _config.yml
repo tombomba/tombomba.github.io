@@ -40,7 +40,6 @@ defaults:
       path: "_pages"
       type: "pages"
     values:
-      layout: post
       is_page: true
   -
     scope:
@@ -49,7 +48,7 @@ defaults:
     values:
       excerpt: "A list of previous entries"
       is_archive: true
- 
+
 markdown: kramdown
 kramdown:
   auto_ids: false

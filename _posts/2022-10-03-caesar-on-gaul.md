@@ -1,5 +1,5 @@
 ---
-title: "'Cobra' is as bad as everyone said and it is glorious" 
+title: "'Cobra' is as bad as everyone said and it is glorious"
 ---
 
 Phasellus tincidunt gravida erat sed dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam quis imperdiet diam. Praesent et maximus velit, quis luctus nunc. Aliquam imperdiet tellus eget diam porttitor ultrices. Duis semper tortor a tincidunt auctor. Sed sagittis varius dolor vitae volutpat.

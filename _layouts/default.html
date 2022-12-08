@@ -39,13 +39,18 @@
   <!-- css -->
   <link rel="stylesheet" href="{{ page.style | default: 'default' | append: '.css' | prepend: 'css/' | prepend: site.cdn }}">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
 <header role="banner">
-  <div class="icon"><a href="{{ site.url }}">{% include boom-black.svg %}</a></div>
-  <div class="text"><h1><a href="{{ site.url }}">{{ site.title }}</a></h1></div>
+  <a href="{{ site.url }}"><img src="{{ 'img/bomtomba-2.png' | prepend: site.cdn }}"></a>
+  <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+  <p>{{ site.description }}</p>
 </header>
 
 <main role="main">

@@ -1,4 +1,5 @@
 ---
+layout: micro
 title: "A photo of five dozen liquor jugs. Pack em!"
 image:
   file: devil-thumbs-a-ride-1947.jpg

@@ -1,6 +1,6 @@
 ---
-title: "Another, shorter text"
-#image: 
+title: "The Stranger Wore A Gun (1953)"
+#image:
 #  file: the-stranger-wore-a-gun-1953-poster.jpg
 #  ratio: 400 313
 ---

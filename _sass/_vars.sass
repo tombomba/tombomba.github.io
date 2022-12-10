@@ -25,7 +25,9 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
 
 \:root
   --fam-serif: Georgia, Constantia, 'Lucida Bright', Lucidabright, 'Lucida Serif', Lucida, 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', serif
-  --fam-system: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+  --fam-system: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif
+  --fam-sys-aapl: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji
+  --fam-sys-msft: Arial, sans-serif
   --fam-logo: 'Open Sans', sans-serif
 
   --line-height-body: 1.6875
@@ -73,7 +75,7 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
   --color-wgray: hsl(0, 0%, 73.3%)
   --color-stamp: hsl(0, 0%, 60%)
   --color-half: hsl(0, 0%, 50%)
-  --color-text: hsl(0, 0%, 20%)
+  --color-text: hsl(0, 0%, 13.3%)
 
   --color-white: hsl(0, 0%, 100%)
   --color-black: hsl(0, 0%, 0%)
@@ -83,7 +85,7 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 25rem) // 17px
+@media screen and (min-width: 20rem) // 17px
 
   \:root
 
@@ -103,11 +105,11 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 50rem) // 18px VF
+//@media screen and (min-width: 50rem) // 18px VF
 
   \:root
 
-    --line-height-body: 1.666666666666667
+    //--line-height-body: 1.666666666666667
     --line-height-body: 1.83
 
     --body-size: 1.125rem
@@ -120,11 +122,11 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
     --hed-size-lg: 2.056em
     --hed-size-xl: 2.611em
 
-    //--page-width: 37.389em
+    --page-width: 37.389em
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 75rem) // 19px Gawk
+//@media screen and (min-width: 75rem) // 19px Gawk
 
   \:root
 
@@ -141,4 +143,4 @@ $secondary-color-fade: rgba($secondary-color, 0.5)
     --hed-size-lg: 2.053em
     --hed-size-xl: 2.632em
 
-    //--page-width: 38.526em
+//--page-width: 38.526em

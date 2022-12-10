@@ -1,29 +1,30 @@
 header[role="banner"]
   display: flex
-  flex-direction: flex flow
+  flex-flow: column
   align-items: center
-  gap: 0.5em
-  margin: var(--shim-p) auto 0
-  max-width: calc(var(--page-width) + var(--shim-4x))
-  h1
-    font-family: var(--fam-system)
-    font-size: 1em
-    a:link, a:visited
-      text-decoration: none
-      color: var(--fam-black)
-  p
-    font-family: var(--fam-system)
-    text-transform: lowercase
-    color: var(--color-half)
-  img
-    display: block
-    width: auto
+  padding: 0 1em
+  div.wrap
+    display: flex
+    align-items: center
+    margin: 3px auto 0 auto
+    max-width: var(--page-width)
     height: var(--shim-2x)
-    border-radius: 50%
+    h1
+      font-family: var(--fam-hed)
+      font-size: var(--shim)
+      font-weight: 900
+      line-height: 1
+      text-transform: uppercase
+      a:link, a:visited
+        text-decoration: none
+        color: var(--fam-black)
+  div.hr
+    flex: 1
+    width: 100%
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 40rem)
+//@media screen and (min-width: 40rem)
 
   header[role="banner"]
     div.icon

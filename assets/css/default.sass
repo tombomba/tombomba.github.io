@@ -3,13 +3,27 @@
 ---
 
 @charset "utf-8"
-@import reset, vars, body, banner, article, footer
+@import reset, body-font-msft, shim, color, body, banner, article, footer
 
 article.post
   header
+    margin-bottom: var(--shim-n )
     h1
-      font-size: var(--hed-size)
+      font-family: var(--fam-hed)
+      font-size: var(--hed-size-md)
+      font-weight: 600
       line-height: var(--line-height-hed)
+  div.byline
+    margin-top: var(--nudge)
+    p
+      display: inline
+      margin: 0
+      font-family: var(--fam-hed)
+      font-size: var(--body-size-sm)
+      font-weight: 400
+      color: var(--color-half)
+      &:nth-of-type(2)::before
+        content: '\0020\/\0020'
 
 article.micro
   div.hed
@@ -17,11 +31,16 @@ article.micro
     h1, p
       display: inline
       font-size: 1em
-      line-height: var(--line-height-body)
-    h1::after
-      content: '\0020'
+      line-height: 1.6
+    h1
+      font-family: var(--fam-hed)
+      &::after
+        content: '\0020'
     .punc::after
         content: '.'
+  p
+    font-family: var(--fam-hed)
+    line-height: 1.6
 
 article.archive
   section
@@ -39,3 +58,21 @@ article.error
   h1
     font-size: var(--hed-size)
     line-height: var(--line-height-hed)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 25rem)
+
+  article.post
+    div.byline
+      margin-top: 0
+
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50rem)
+
+  article.post
+    header
+      h1
+        font-size: var(--hed-size-lg)

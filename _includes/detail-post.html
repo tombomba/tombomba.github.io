@@ -1,13 +1,22 @@
-{% assign p = include.page %}
-{% assign copy = include.content | strip %}
+{% assign p = include.page -%}
+{% assign copy = include.content | strip -%}
 {% include _titlef-widont.html title=p.title url=p.url is_home=include.is_home -%}
 
+{% if copy contains '<p><img' %}
+  {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
+{% endif -%}
 
-{% if p.image %}{% include _figure.html image=p.image %}{% endif -%}
+{% assign hedlen = p.title | size -%}
+{% if hedlen > 39 %}{% assign hedpad = 'fat' %}{% else %}{% assign hedpad = 'thin' %}{% endif -%}
 
 <header>
   <h1>{{ titlef }}</h1>
+  <div class="byline {{ hedpad }}">
+    <p class="author">{{ p.author | default: site.author }}</p>
+    <p class="date">{{ p.date | date_to_string }}</p>
+  </div>
 </header>
 
+{% if p.image %}{% include _figure.html image=p.image %}{% endif -%}
 
 {{ copy }}

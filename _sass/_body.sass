@@ -2,7 +2,7 @@ html
   background-color: var(--color-body)
 
 body
-  font-family: var(--fam-serif)
+  font-family: var(--fam-check)
   font-size: var(--body-size)
   line-height: var(--line-height-body)
 
@@ -15,7 +15,8 @@ body
   -webkit-text-size-adjust: 100%
   text-size-adjust: 100%
 
-  padding: 0 1em
+main
+  margin: 0 1em
 
 a
   text-decoration: underline
@@ -33,7 +34,6 @@ time
   white-space: nowrap
 
 .hr
-  max-width: var(--page-width)
   margin: 0 auto
   padding: 0
   height: 0
@@ -42,10 +42,6 @@ time
   border-top: thin solid var(--color-hr-top)
   border-bottom: medium solid var(--color-hr-bottom)
   background-color: var(--color-body)
-
-.spacer
-  max-width: var(--page-width)
-  margin: 0 auto
 
 .emoji
   vertical-align: middle
@@ -56,10 +52,5 @@ time
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 40rem)
+//@media screen and (min-width: 40rem)
 
-  body
-    padding: 0
-
-  .emoji
-    font-size: 1em

@@ -1,37 +1,22 @@
 footer
-  margin: var(--shim-2x) auto var(--shim-p)
-  max-width: var(--page-width)
+  margin: var(--shim-2x) 1em var(--shim)
   ul
-    margin: 0
+    margin: 1em auto 0 auto
+    max-width: var(--page-width)
     display: flex
-    flex-direction: column
+    align-items: center
+    justify-content: center
+    gap: 0.5em
     list-style-type: none
-  ul li, p
-    font-family: Arial, san-serif
-    font-size: 1em
-    font-weight: 900
-    line-height: var(--line-height-hed)
-    text-transform: uppercase
-    color: var(--color-half)
-    a:link, a:visited 
-      text-decoration: none
-      color: var(--color-black)
-    a:hover
-      text-decoration: underline
-
-  //-----------------------------------------------------------------------------
-
-@media screen and (min-width: 20rem)
-
-  footer
-    ul li, p
-      font-size: var(--shim)
+    li
+      font-family: var(--fam-hed)
+      color: var(--color-half)
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40rem)
 
   footer
-    ul li
-      margin-left: calc(var(--shim) * -1)
-      line-height: 1.1
+    ul
+      li
+        font-size: var(--body-size-sm)

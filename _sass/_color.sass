@@ -1,0 +1,39 @@
+$key: random(6)
+
+$one-color: hsl(216, 100%, 50%), hsl(330, 100%, 40%), hsl(120, 50%, 40%), hsl(12, 100%, 50%), hsl(204, 100%, 50%), hsl(180, 100%, 30%)
+$two-color: hsl(180, 100%, 70%), hsl(48, 100%, 50%), hsl(84, 100%, 50%), hsl(48, 100%, 50%), hsl(90, 100%, 60%), hsl(48, 100%, 50%)
+
+$primary-color: nth($one-color, $key)
+$secondary-color: nth($two-color, $key)
+
+$primary-color-fade: rgba($primary-color, 0.5)
+$secondary-color-fade: rgba($secondary-color, 0.5)
+
+//-----------------------------------------------------------------------------
+
+\:root
+
+    --color-logo: #{$primary-color}
+    --color-shock: #{$secondary-color}
+
+    --color-link: hsl(220, 60%, 50%)
+    --color-visited: hsl(300, 50%, 40%)
+
+    --color-active: hsl(36, 100%, 50%)
+    --color-select: #{$secondary-color}
+    --color-select-classic: hsl(60, 100%, 90%)
+
+    --color-body: hsl(0, 0%, 96.7%)
+
+    --color-back: hsl(0, 0%, 90%)
+    --color-shade: hsl(0, 0%, 80%)
+    --color-wgray: hsl(0, 0%, 73.3%)
+    --color-stamp: hsl(0, 0%, 60%)
+    --color-half: hsl(0, 0%, 40%)
+    --color-text: hsl(0, 0%, 13.3%)
+
+    --color-white: hsl(0, 0%, 100%)
+    --color-black: hsl(0, 0%, 0%)
+
+    --color-hr-top: hsl(0, 0%, 80%)
+    --color-hr-bottom: hsl(0, 0%, 100%)

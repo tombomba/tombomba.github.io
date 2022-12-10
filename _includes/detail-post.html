@@ -4,19 +4,21 @@
 
 {% if copy contains '<p><img' %}
   {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
-  {% assign hedsize = 'lg' %}
+{% endif -%}
+
+{% assign hedlen = p.title | normalize_whitespace | strip | size -%}
+{% if hedlen > 36 %}
+  {% assign hedpad = 'fat' %}
 {% else -%}
-  {% assign hedsize = 'sm' %}
+  {% assign hedpad = 'thin' %}
 {% endif -%}
 
 <header>
-  <h1 class="{{ hedsize }}">{{ titlef }}</h1>
+  <h1>{{ titlef }}</h1>
   <div class="byline {{ hedpad }}">
     {% if forloop.index0 < 1 or forloop.index0 == nil %}<p class="author">{{ p.author | default: site.author }}</p>{% endif -%}
     <p class="date">{{ p.date | date_to_string }}</p>
   </div>
 </header>
-
-{% if p.image %}{% include _figure.html image=p.image %}{% endif -%}
 
 {{ copy }}

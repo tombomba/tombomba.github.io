@@ -8,6 +8,6 @@ permalink: /index.html
   <article class="{{ p.layout }}">
     {% include detail-{{ p.layout }}.html page=p content=p.content is_home=true %}
   </article>
-  <div class="hr"></div>
+  {% unless forloop.last %}<div class="hr"></div>{% endunless -%}
 {% endfor -%}
 

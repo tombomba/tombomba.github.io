@@ -7,16 +7,12 @@
 
 article.post
   header
-    margin-bottom: var(--shim-n)
     h1
       font-family: var(--fam-hed)
+      font-size: var(--hed-size-md)
       font-weight: 600
-      line-height: var(--line-height-hed)
-      &.lg
-        font-size: var(--hed-size-md)
-      &.sm
-        font-size: var(--hed-size-sm)
-    div.byline
+      line-height: 1.2
+    .byline
       margin-top: var(--nudge)
       p
         display: inline
@@ -24,9 +20,12 @@ article.post
         font-family: var(--fam-hed)
         font-size: var(--body-size-sm)
         font-weight: 400
+        line-height: var(--line-height-hed)
         color: var(--color-half)
         &:nth-of-type(2)::before
           content: '\0020\/\0020'
+  img:first-of-type
+    margin-top: var(--shim)
 
 article.archive
   section
@@ -47,13 +46,13 @@ article.error
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 30rem)
+@media screen and (min-width: 40rem)
 
   article.post
     header
-      div.byline
-        margin-top: 0
-
+      h1
+        font-size: var(--hed-size-lg)
+        //line-height: 1.1
 
 //-----------------------------------------------------------------------------
 
@@ -61,7 +60,5 @@ article.error
 
   article.post
     header
-      h1.lg
-        font-size: var(--hed-size-lg)
-      h1.sm
-        font-size: var(--hed-size-md)
+      .byline.thin
+        margin-top: 0

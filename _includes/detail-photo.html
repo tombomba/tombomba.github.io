@@ -1,0 +1,15 @@
+{% assign p = include.page -%}
+{% assign copy = include.content | strip -%}
+{% include _titlef-widont.html title=p.title url=p.url is_home=include.is_home -%}
+
+{% if copy contains '<p><img' %}
+  {% assign copy = copy | replace: '<p><img', '<img' | replace: ' /></p>', '>' -%}
+{% endif -%}
+
+{% capture hedbox %}<header><h1>{{ titlef }}</h1>!!BYLINE!!<p>{% endcapture -%}
+{% capture bybox %}<div class="byline">{% if forloop.index0 < 1 or forloop.index0 == nil %}<p class="author">{{ p.author | default: site.author }}</p>{% endif -%}<p class="date">{{ p.date | date_to_string }}</p></div>{% endcapture -%}
+
+{% assign copy = copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hedbox -%}
+{% assign copy = copy | replace: '!!BYLINE!!', bybox -%}
+
+{{ copy }}

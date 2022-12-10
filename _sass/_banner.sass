@@ -6,26 +6,60 @@ header[role="banner"]
   div.wrap
     display: flex
     align-items: center
-    margin: 3px auto 0 auto
+    justify-content: space-between
+    margin: 0 auto
     max-width: var(--page-width)
+    width: 100%
     height: var(--shim-2x)
     h1
+      flex: 1
+      margin-top: 3px
       font-family: var(--fam-hed)
-      font-size: var(--shim)
+      font-size: var(--shim-n)
       font-weight: 900
-      line-height: 1
+      line-height: 0.95
       text-transform: uppercase
       a:link, a:visited
         text-decoration: none
         color: var(--fam-black)
+    ul
+      display: none
+    .icon
+      img
+        display: block
+        max-width: 100%
+        max-height: var(--shim)
+        width: auto
+        height: auto
+      svg
+        width: var(--shim)
+        height: var(--shim)
+        fill: var(--color-logo)
   div.hr
     flex: 1
     width: 100%
 
 //-----------------------------------------------------------------------------
 
-//@media screen and (min-width: 40rem)
+@media screen and (min-width: 40rem)
 
   header[role="banner"]
-    div.icon
-      margin-left: calc((var(--shim-n) * -1) - 0.5em)
+    div.wrap
+      max-width: 100%
+      h1
+        text-align: center
+      ul
+        flex: 1 0 20%
+        display: flex
+        flex-flow: row wrap
+        align-items: center
+        justify-content: flex-end
+        gap: 0.5em
+        list-style-type: none
+        li
+          font-family: var(--fam-hed)
+          font-size: var(--body-size-sm)
+          line-height: 0.95
+      .icon
+        flex: 1 0 20%
+        order: -1

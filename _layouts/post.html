@@ -2,6 +2,6 @@
 layout: default
 ---
 
-<article class="post">
-  {% include detail-post.html page=page content=content %}
+<article class="{{ page.layout }}">
+  {% include detail-{{ page.layout }}.html page=page content=content %}
 </article>

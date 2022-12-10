@@ -4,10 +4,10 @@
 
 {% for word in title_arr %}
 
-  {% if forloop.rindex == 2 and tsize > 2 %}
+  {% if forloop.rindex == 2 and tsize > 3 %}
     {% assign wordf = word | prepend: '!!OPENSPAN!!' -%}
 
-  {% elsif forloop.rindex == 1 and tsize > 2 %}
+  {% elsif forloop.rindex == 1 and tsize > 3 %}
     {% assign wordf = word | append: '!!CLOSESPAN!!' -%}
 
   {% else %}

@@ -4,5 +4,6 @@
 .sass-cache
 .s3_website.yml
 .vscode
+.nova
 _site
 Gemfile.lock

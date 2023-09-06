@@ -1,5 +1,5 @@
 ---
-title: A test post from Nova"
+title: A test post from Nova and then VS Code Mac"
 ---
 
 ![Sample text]({{ 'img/example-2.jpg' | prepend: site.cdn }}){: width="800" height="533" .foo .bar  }

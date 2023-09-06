@@ -1,5 +1,5 @@
 ---
-title: "Pic: The quick brown fox jumps over the lazy dog"
+title: A test post from Nova"
 ---
 
 ![Sample text]({{ 'img/example-2.jpg' | prepend: site.cdn }}){: width="800" height="533" .foo .bar  }

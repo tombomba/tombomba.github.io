@@ -65,7 +65,7 @@
     {% unless page.is_post %}<li><a href="/feed.xml">RSS</a></li>{% endunless %}
   </ul>
   <div class="coda">
-    <p>{% if page.date %}This page published {% else %}Site last updated {% endif %} {{ page.date | default: site.posts.first.date | date: '%d %B %Y' }}</p>
+    <p>{% if page.date %}This page published {% else %}Last updated {% endif %} {{ page.date | default: site.posts.first.date | date: '%d %B %Y' }}</p>
     <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</p>
   </div>
 </footer>

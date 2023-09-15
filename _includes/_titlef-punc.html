@@ -10,7 +10,7 @@
   {% else %}
     {% assign titlef = raw | append: '!!PUNC!!' %}
 {% endcase -%}
-  
+
 {% assign titlef = titlef | replace: '!!PUNC!!', '<span class="punc"></span>' | strip | smartify | normalize_whitespace -%}
 
 {% if include.url %}

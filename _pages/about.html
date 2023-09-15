@@ -1,0 +1,16 @@
+---
+layout: micro
+title: "About"
+excerpt: "A little more about me, and me, and also *me*"
+is_about: true
+permalink: "/about/"
+---
+{% capture bio %}
+This website is my puzzle on the dining room table, my model kit in the den, my canoe in the garage. I began working on it years ago, to join what seemed vital online conversation, and return now in fits and starts.
+
+My name is Tom Bomba. I once flirted with NYU's cinema studies program but words like _filmic_ and _split diopter_ killed the romance. My interest in the movies remains with writing, with story and character, and not with _mise-en-scène._
+
+_{{ site.title }}_ is intentionally basic, the design a mental note to myself not to write as if I'm submitting for publication. It was made using VS Code and Pixemator while listening to KCRW Los Angeles.
+{% endcapture %}
+
+{{ bio | markdownify | smartify }}

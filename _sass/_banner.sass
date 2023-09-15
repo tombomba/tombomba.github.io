@@ -1,65 +1,22 @@
 header[role="banner"]
-  display: flex
-  flex-flow: column
-  align-items: center
-  padding: 0 1em
-  div.wrap
-    display: flex
-    align-items: center
-    justify-content: space-between
-    margin: 0 auto
-    max-width: var(--page-width)
-    width: 100%
-    height: var(--shim-2x)
-    h1
-      flex: 1
-      margin-top: 3px
-      font-family: var(--fam-hed)
-      font-size: var(--shim-n)
-      font-weight: 900
-      line-height: 0.95
-      text-transform: uppercase
-      a:link, a:visited
-        text-decoration: none
-        color: var(--fam-black)
-    ul
-      display: none
-    .icon
-      img
-        display: block
-        max-width: 100%
-        max-height: 1em
-        width: auto
-        height: auto
-      svg
-        width: var(--shim)
-        height: var(--shim)
-        fill: var(--color-logo)
+  max-width: var(--page-width)
+  margin: var(--buffer) auto 0 auto
+  h1
+    font-family: Sarina, cursive
+    font-size: var(--shim-p)
+    font-weight: 400
+    line-height: 1
+    text-shadow: -2px 2px var(--color-shock)
+    a:link, a:visited
+      text-decoration: none
+      color: var(--color-logo)
+  div.icon
+    svg
+      width: auto
+      height: var(--shim-2x)
+      fill: var(--color-logo)
+      filter: drop-shadow(-2px 2px var(--color-shock))
   div.hr
-    flex: 1
+    margin: var(--buffer) 0 0
+    max-width: var(--shim-4x)
     width: 100%
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
-  header[role="banner"]
-    div.wrap
-      max-width: 100%
-      h1
-        text-align: center
-      ul
-        flex: 1 0 20%
-        display: flex
-        flex-flow: row wrap
-        align-items: center
-        justify-content: flex-end
-        gap: 0.5em
-        list-style-type: none
-        li
-          font-family: var(--fam-hed)
-          font-size: var(--body-size-sm)
-          line-height: 0.95
-      .icon
-        flex: 1 0 20%
-        order: -1

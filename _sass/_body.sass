@@ -5,18 +5,20 @@ body
   font-family: var(--fam-check)
   font-size: var(--body-size)
   line-height: var(--line-height-body)
+  text-rendering: optimizeLegibility
 
   background-color: var(--color-body)
   color: var(--color-text)
 
-  text-rendering: optimizeSpeed
   -ms-text-size-adjust: 100%
   -moz-text-size-adjust: 100%
   -webkit-text-size-adjust: 100%
   text-size-adjust: 100%
 
-main
-  margin: 0 1em
+  -webkit-font-smoothing: auto
+  -moz-osx-font-smoothing: auto
+
+  padding: 0 1em
 
 a
   text-decoration: underline
@@ -54,6 +56,6 @@ time
 
 @media screen and (min-width: 40rem)
 
-  main
+  body
     padding: 0
 

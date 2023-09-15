@@ -4,12 +4,8 @@
 
 {% if p.image %}{% include _figure.html image=p.image %}{% endif -%}
 
-{% capture datef %}<span class="daystamp">&nbsp;(<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date: '%d %b' }}</time>)</span>{% endcapture -%}
-{% assign copysize = copy | size | minus: 4 -%}
-{% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
 
 {% capture hedbox %}<div class="hed"><h1>{{ titlef }}</h1><p>{% endcapture -%}
 {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
 
 {{ copy }}
-

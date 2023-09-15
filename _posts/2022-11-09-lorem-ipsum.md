@@ -1,7 +1,6 @@
 ---
 title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
 ---
-![Other alt text]({{ 'img/example-poster-2.jpg' | prepend: site.cdn }}){: width="400" height="313" }
 
 Donec at leo sit amet leo consequat mattis. In gravida est dolor, ut ultricies nisl placerat a. Quisque elementum turpis sagittis ante porttitor, eget interdum sem iaculis. Curabitur arcu lacus, sollicitudin at mi at, faucibus aliquet eros. Nunc rhoncus mauris nec eros egestas ultricies. Etiam malesuada metus purus, quis tincidunt nibh vulputate id. Phasellus tristique aliquet magna, id aliquet felis. Cras placerat lorem lorem, eu molestie massa elementum vitae. Etiam dignissim diam eu consectetur hendrerit. In in metus sit amet sem placerat fringilla. Nullam porta lectus augue, in pulvinar quam commodo sed. Ut non blandit libero. Aliquam augue orci, mattis.
 

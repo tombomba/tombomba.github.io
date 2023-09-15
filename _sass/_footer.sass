@@ -1,14 +1,18 @@
 footer
-  margin: var(--shim-2x) 1em var(--shim)
-  ul
-    margin: 1em auto 0 auto
-    max-width: var(--page-width)
+  margin: calc(var(--nudge) + var(--buffer)) auto
+  max-width: var(--page-width)
+  ul.nav
+    margin-top: var(--buffer)
     display: flex
-    align-items: center
-    justify-content: center
-    gap: 0.5em
+    flex-flow: row wrap
+    gap: var(--nudge-2x)
     list-style-type: none
-    li
-      font-family: var(--fam-hed)
-      font-size: var(--body-size-sm)
+  div.coda
+    margin-top: var(--shim-n)
+    p
+      margin: 0
       color: var(--color-half)
+  div.hr
+    margin: 0
+    width: 100%
+    max-width: var(--shim-4x)

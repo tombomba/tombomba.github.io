@@ -2,10 +2,13 @@
 {% assign copy = include.content | strip | normalize_whitespace %}
 {% include _titlef-punc.html title=p.title url=p.url is_home=include.is_home %}
 
-{% if p.image %}{% include _figure.html image=p.image %}{% endif -%}
+{% if p.image %}
+	<div class="media-wrap">
+		<img class="{{ p.image.style | default: 'basic' }}" src="{{ p.image.file | prepend: 'img/' | prepend: site.cdn }}" alt="{{ p.image.alt }}">
+	</div>
+{% endif -%}
 
-
-{% capture hedbox %}<div class="hed"><h1>{{ titlef }}</h1><p>{% endcapture -%}
+{% capture hedbox %}<div class="lede"><h1>{{ titlef }}</h1><p>{% endcapture -%}
 {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
 
 {{ copy }}

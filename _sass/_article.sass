@@ -38,6 +38,11 @@ article
     height: auto
     background-color: var(--color-back)
     border-radius: 4px
+    &.basic
+      margin-bottom: var(--shim-n)
+
+  .media-wrap
+    padding-top: var(--nudge)
 
   .daystamp
     color: var(--color-half)
@@ -46,15 +51,6 @@ article
       color: var(--color-half)
     a:hover
       text-decoration: underline
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 25rem)
-
-  article
-    figure
-      .vidbox
-        max-width: var(--video-max-width)
 
 //-----------------------------------------------------------------------------
 

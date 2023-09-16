@@ -1,5 +1,9 @@
 ---
 title: "Omnes Gallia est divisia tres partes"
+image:
+  file: default-social.jpg
+  path: assets/img/default-social.jpg
+  alt: "The quick brown fox jumps over the lazy dog"
 ---
 All Gaul is divided into three parts, one of which the Belgae inhabit, the Aquitani another, those who in their own language are called Celts, in our Gauls, the third. All these differ from each other in language, customs and laws. The river Garonne separates the Gauls from the Aquitani; the Marne and the Seine separate them from the Belgae.
 

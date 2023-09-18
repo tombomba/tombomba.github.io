@@ -1,8 +1,10 @@
-title: "Trash diary"
-description: "A small collage, a dumb blog"
+title: "Bomtomba"
+description: "A media diary, a small collage, a dumb blog"
 
 url: "https://www.bomtomba.com"
-cdn: "https://www.bomtomba.com/assets/"
+cdn:
+  css: "https://www.bomtomba.com/assets/css/"
+  img: "https://www.bomtomba.com/assets/img/"
 
 author: "Tom Bomba"
 socials: "bomtomba"
@@ -14,15 +16,32 @@ theme: null
 permalink: /:short_year/:title:output_ext
 timezone: America/Los_Angeles
 
-excerpt_separator: <!--more-->
-
 collections:
+  archives:
+    collections_dir: _archives
+    output: true
+    permalink: "/:path/"
   pages:
     collections_dir: _pages
     output: true
     permalink: "/:path/"
 
+
 defaults:
+  -
+    scope:
+      path: "_archives"
+      type: "archives"
+    values:
+      layout: year
+      excerpt: "A short list of previous posts"
+      is_archive: true
+  -
+    scope:
+      path: "_pages"
+      type: "pages"
+    values:
+      is_page: true
   -
     scope:
       path: ""
@@ -30,12 +49,7 @@ defaults:
     values:
       layout: micro
       is_post: true
-  -
-    scope:
-      path: "_pages"
-      type: "pages"
-    values:
-      is_page: true
+
 
 markdown: kramdown
 kramdown:

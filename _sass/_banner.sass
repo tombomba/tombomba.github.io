@@ -10,7 +10,7 @@ header[role="banner"]
     a:link, a:visited
       text-decoration: none
       color: var(--color-logo)
-  div.icon
+  div.icon.circ
     display: flex
     align-items: center
     justify-content: center
@@ -22,11 +22,12 @@ header[role="banner"]
       width: auto
       height: var(--shim-2x)
       border-radius: 50%
+  div.icon.vect
     svg
       width: auto
-      height: var(--shim-n)
-      fill: var(--color-shock)
-      //filter: drop-shadow(-2px 2px var(--color-shock))
+      height: var(--buffer)
+      fill: var(--color-logo)
+      filter: drop-shadow(-2px 2px var(--color-shock))
   div.hr
     margin: var(--buffer) 0 0
     max-width: var(--shim-4x)

@@ -1,5 +1,5 @@
 ---
-layout: micro
+layout: default
 title: "About"
 excerpt: "A little more about me, and me, and also *me*"
 date: 2023-09-15
@@ -8,13 +8,16 @@ is_about: true
 permalink: "/about/"
 ---
 {% capture bio %}
-This website is a thousand-piece puzzle on my dining room table, a model kit in my den, a handmade canoe in my garage. I began working on it years ago, to join what seemed vital online conversation, and return now in fits and starts.
+This website is my thousand-piece puzzle on the dining room table, my model kit in the den, my handmade canoe in the garage. I began working on it years ago, to join what seemed vital online conversation, and return now in fits and starts.
 
-My name is Tom Bomba. I once flirted with NYU's cinema studies program but ran when I heard words like _filmic_ and _split diopter_ around campus. My interest in movies remains with writing, with story and character, and not with _mise-en-scène._
+My name is Tom Bomba. I once flirted with NYU's cinema studies program but ran once I heard words like _filmic_ and _split diopter_ around campus. My interest in movies remains with writing, with story and character, and not with _mise-en-scène._
 
-_{{ site.title }}_ is intentionally basic, the design a mental note to myself not to write as if I'm submitting for publication. The title is a loose reference to essays by Pauline Kael and Jeffrey Sconce.
+_{{ site.title }}_ is intentionally basic, the design a mental note to myself not to write as if I'm submitting for publication. The name is a loose reference to Mark Fisher's old blog _K-Punk._ The icon is a riff on James Rosenquist's painting _Pink Condition._
 
-Everything here was built on an old Macintosh, using VS Code and Pixemator, while listening to KCRW Los Angeles.
+Everything here was made using Nova and Pixelmator, while listening to KCRW Los Angeles.
 {% endcapture %}
 
+<article class="about">
+<h1>About {{ site.title }}</h1>
 {{ bio | markdownify | smartify }}
+</article>

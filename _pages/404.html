@@ -1,10 +1,15 @@
 ---
-layout: micro
+layout: default
 title: "404!"
 excerpt: "404: page not found"
 is_404: true
 permalink: /404.html
 ---
 <article class="error">
-  <p>I don't know what to tell you. Try one of the links below.</p>
+<h1>{{ page.title }}</h1>
+<p>That page was no good. Try another?</p>
+<ul>
+  {% for p in site.posts limit: 5 %}<li><a href="{{ p.url | absolute_url }}">{{ p.title }}</a></li>{% endfor %}
+</ul>
+<p>If you're having trouble locating a destination,</i> try visiting the <a href="{{ site.url }}">homepage</a>.
 </article>

@@ -58,7 +58,7 @@
   </ul>
   {% endif -%}
   <div class="coda">
-    <p>{% if page.date %}This page published {% else %}{{ site.title }} last updated{% endif %} {{ page.date | default: site.posts.first.date | date_to_long_string }}</p>
+    <p>{% if page.is_post %}This page published {% else %}{{ site.title }} last updated{% endif %} {{ page.date | default: site.posts.first.date | date_to_long_string }}</p>
     <p>Copyright &copy; {{ site.author }}</p>
   </div>
 </footer>

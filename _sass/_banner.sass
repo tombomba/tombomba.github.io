@@ -3,7 +3,7 @@ header[role="banner"]
   margin: var(--buffer) auto 0 auto
   h1
     font-family: Sarina, cursive
-    font-size: var(--shim)
+    font-size: var(--shim-p)
     font-weight: 400
     line-height: 1
     text-shadow: -2px 2px var(--color-shock)
@@ -11,11 +11,22 @@ header[role="banner"]
       text-decoration: none
       color: var(--color-logo)
   div.icon
+    display: flex
+    align-items: center
+    justify-content: center
+    width: var(--shim-2x)
+    height: var(--shim-2x)
+    background-color: var(--color-logo)
+    border-radius: 50%
+    img
+      width: auto
+      height: var(--shim-2x)
+      border-radius: 50%
     svg
       width: auto
-      height: var(--buffer)
-      fill: var(--color-logo)
-      filter: drop-shadow(-2px 2px var(--color-shock))
+      height: var(--shim-n)
+      fill: var(--color-shock)
+      //filter: drop-shadow(-2px 2px var(--color-shock))
   div.hr
     margin: var(--buffer) 0 0
     max-width: var(--shim-4x)

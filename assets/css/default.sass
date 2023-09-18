@@ -5,19 +5,28 @@
 @charset "utf-8"
 @import reset, font, shim, color, body, banner, article, footer
 
+
+article.home
+  section
+    margin-top: var(--buffer)
+    div.lede
+      h1, p
+        display: inline
+        font-size: 1em
+      h1::after
+        content: '\20'
+      span.punc::after
+        content: '.'
+
 article.micro
   div.lede
     h1, p
       display: inline
       font-size: 1em
-
     h1::after
       content: '\20'
     span.punc::after
       content: '.'
-  span.daystamp
-    font-style: italic
-    font-face: var(--fam-wtf)
 
 article.archive
   section
@@ -31,7 +40,12 @@ article.archive
       list-style-type: square
       color: var(--color-logo)
 
+article.about,
 article.error
   h1
     font-size: var(--hed-size)
     line-height: var(--line-height-hed)
+  ul
+    margin-top: var(--shim-n)
+    list-style-type: square
+    color: var(--color-logo)

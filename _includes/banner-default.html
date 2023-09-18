@@ -1,0 +1,10 @@
+<header role="banner">
+  {% capture banner-title %}<h1><a href="{{ site.url }}">{{ site.title }}</a></h1>{% endcapture %}
+  {% capture banner-icon %}<div class="icon"><a href="{{ site.url }}">{% include icon-pizza.svg %}</a></div>{% endcapture -%}
+
+  {% if page.is_home and site.posts.first.image.path %}{% assign true-image = true %}{% endif -%}
+  {% if page.is_post and page.image.path %}{% assign true-image = true %}{% endif -%}
+  {% if true-image %}{{ banner-title }}{% else %}{{ banner-icon }}{% endif -%}
+
+  <div class="hr"></div>
+</header>

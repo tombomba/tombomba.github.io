@@ -24,10 +24,10 @@
   <meta property="og:description" content="{{ page.tweet | default: page.excerpt | truncate: 280 | replace: '"', "'" | strip_html | normalize_whitespace | strip | xml_escape }}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:type" content="blog">
-  <meta property="og:image" content="{{ page.image.file | default: 'img/default-social.png' | prepend: site.cdn }}">
+  <meta property="og:image" content="{{ page.image.file | default: 'default-social.png' | prepend: site.cdn.img }}">
 
   <!-- css -->
-  <link rel="stylesheet" href="{{ page.style | default: 'default' | append: '.css' | prepend: 'css/' | prepend: site.cdn }}">
+  <link rel="stylesheet" href="{{ page.style | default: 'default' | append: '.css' | prepend: site.cdn.css }}">
 
   <!-- goog -->
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sarina&display=swap" rel="stylesheet">
@@ -37,13 +37,7 @@
 <body>
 
 <header role="banner">
-  {% capture banner-title %}<h1><a href="{{ site.url }}">{{ site.title }}</a></h1>{% endcapture %}
-  {% capture banner-icon %}<div class="icon"><a href="{{ site.url }}">{% include icon-pizza.svg %}</a></div>{% endcapture -%}
-
-  {% if page.is_home and site.posts.first.image.path %}{% assign true-image = true %}{% endif -%}
-  {% if page.is_post and page.image.path %}{% assign true-image = true %}{% endif -%}
-  {% if true-image %}{{ banner-title }}{% else %}{{ banner-icon }}{% endif -%}
-
+  <div class="icon"><a href="{{ site.url }}"><img src="{{ 'pink-condition.png' | prepend: site.cdn.img }}" alt="{{ site.title }}"></a></div>
   <div class="hr"></div>
 </header>
 
@@ -54,16 +48,18 @@
 </main>
 
 <footer>
+
   <div class="hr"></div>
+  {% if page.is_post or page.is_home %}
   <ul class="nav">
-    {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}
-    {% unless page.is_archive %}<li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>{% endunless %}
-    {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}
-    {% unless page.is_post %}<li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>{% endunless %}
+    <li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>
+    <li><a href="{{ 'about' | absolute_url }}">About</a></li>
+    <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
   </ul>
+  {% endif -%}
   <div class="coda">
-    <p>{% if page.date %}Published {% else %}Updated {% endif %} {{ page.date | default: site.posts.first.date | date_to_long_string }}</p>
-    <p>{{ site.url | remove: 'https' | remove: 'http' | remove: '://' | remove: 'www.' | capitalize }} Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</p>
+    <p>{% if page.date %}This page published {% else %}{{ site.title }} last updated{% endif %} {{ page.date | default: site.posts.first.date | date_to_long_string }}</p>
+    <p>Copyright &copy; {{ site.author }}</p>
   </div>
 </footer>
 

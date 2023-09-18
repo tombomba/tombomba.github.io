@@ -3,10 +3,20 @@ layout: default
 is_home: true
 permalink: /index.html
 ---
+<article class="home">
 {% for p in site.posts limit: 7 %}
-  <article class="{{ p.layout }}">
-    {% include detail-{{ p.layout }}.html page=p content=p.content is_home=true %}
-    {% unless forloop.last %}<div class="hr pagebreak"></div>{% endunless %}
-  </article>
-{% endfor -%}
+    <section>
+
+    {% assign copy = p.excerpt | strip | normalize_whitespace -%}
+    {% include _titlef-punc.html title=p.title url=p.url is_home=true -%}
+
+    {% capture hedbox %}<div class="lede"><h1>{{ titlef }}</h1><p>{% endcapture -%}
+    {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
+
+    {{ copy }}
+
+    </section>
+{% endfor %}
+</article>
+
 

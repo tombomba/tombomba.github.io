@@ -1,43 +1,52 @@
+//-----------------------------------------------------------------------------
+// font-18
+//-----------------------------------------------------------------------------
+
 \:root
 
-  --fam-check: Georgia, serif
-
-  --line-height-body: 1.6875
-  --line-height-hed: calc(((var(--line-height-body) - 1) / 2) + 1)
+  --fam-serif: Georgia, serif
+  --fam-system: system-ui, "Segoe UI", Roboto, Helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
 
   --body-size: 1em
-  --body-size-sm: 0.8125em
+  --body-size-sm: 0.778em
 
-  --hed-size: 1.25em
+  --line-height-body: 1.625
+  --line-height-hed: calc(((var(--line-height-body) - 1) / 2) + 1)
 
-  --page-width: 34em
+  --hed-size-sm: 1.250em
+  --hed-size-md: 1.625em
+  --hed-size-lg: 2.063em
+
+  --page-width: 30em
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 20rem) // 17px NYT
+@media screen and (min-width: 30rem)
 
   \:root
 
-    --line-height-body: 1.66
-
-    --body-size: 1.063rem
-    --body-size-sm: 0.882em
-
-    --hed-size: 1.29411764706em
-
-    --page-width: 33.882em
+    --line-height-body: 1.6875
+    --page-width: 34em
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 40rem) // 18px VF
+@media screen and (min-width: 40rem)
+
+  \:root
+
+    --body-size: 1.125rem
+    --body-size-sm: 0.778em
+    --line-height-body: 1.667
+
+    --hed-size-sm: 1.277em
+    --hed-size-md: 1.611em
+    --hed-size-lg: 2.055em
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 60rem)
 
   \:root
 
     --line-height-body: 1.83
-
-    --body-size: 1.125rem
-    --body-size-sm: 0.889em
-
-    --hed-size: 1.27777777778em
-
     --page-width: 37.389em

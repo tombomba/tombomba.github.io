@@ -37,7 +37,9 @@
 <body>
 
 <header role="banner">
-  <div class="icon circ"><a href="{{ site.url }}"><img src="{{ 'pink-condition.png' | prepend: site.cdn.img }}" alt="{{ site.title }}"></a></div>
+  <div class="wrap">
+    <div class="icon vect"><a href="{{ site.url }}">{% include icon-crossbones.svg %}</a></div>
+  </div>
   <div class="hr"></div>
 </header>
 
@@ -48,19 +50,8 @@
 </main>
 
 <footer>
-
   <div class="hr"></div>
-  {% if page.is_post or page.is_home %}
-  <ul class="nav">
-    <li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>
-    <li><a href="{{ 'about' | absolute_url }}">About</a></li>
-    <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
-  </ul>
-  {% endif -%}
-  <div class="coda">
-    <p>Last updated {{ page.date | default: site.posts.first.date | date_to_long_string }}</p>
-    <p>Copyright &copy; {{ site.author }}</p>
-  </div>
+  <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.url | remove: 'http' | remove: 'https' | remove: '://' | remove: 'www.' | capitalize }}</p>
 </footer>
 
 </body>

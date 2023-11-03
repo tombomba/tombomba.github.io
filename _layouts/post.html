@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<article class="{{ page.layout }}">
+
+{% assign copy = content | strip | normalize_whitespace -%}
+{% include _titlef-widont.html title=page.title -%}
+{% if copy contains '<p><img src=' %}{% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', '/>' %}{% endif -%}
+
+{% capture hedbox %}
+<header>
+<h1>{{ titlef }}</h1>
+    <div class="byline">
+        <p>{{ page.date | date_to_long_string }}</p>
+        <p>{{ page.author | default: site.author }}</p>
+    </div>
+</header><p>
+{% endcapture -%}
+
+{% assign copy = copy | replace_first: '</p>', '</p></header>' | replace_first: '<p>', hedbox -%}
+
+{{ copy }}
+
+</article>

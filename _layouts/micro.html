@@ -5,6 +5,7 @@ layout: default
 
  {% assign copy = content | strip | normalize_whitespace -%}
  {% include _titlef-punc.html title=page.title -%}
+ {% if copy contains '<p><img src=' %}{% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', '/>' %}{% endif -%}
 
  {% capture hedbox %}<div class="lede"><h1>{{ titlef }}</h1><p>{% endcapture -%}
  {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}

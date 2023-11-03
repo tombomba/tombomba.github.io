@@ -1,4 +1,5 @@
 ---
+layout: micro
 title: Messing around with Panic's Nova
 ---
 

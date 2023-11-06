@@ -3,7 +3,7 @@ layout: post
 excerpt: "Nulla ac viverra nisi, sed imperdiet felis. Donec ullamcorper eu turpis id finibus."
 title: "Another picture post without a picture"
 ---
-![alt text here]({{ 'example-2.jpg' | prepend: site.cdn.img }}){: .marquee }
+![alt text here]({{ 'example-3.jpg' | prepend: site.cdn.img }}){: .marquee }
 
 Quisque maximus malesuada ex nec varius. Mauris ac placerat orci, nec pretium leo. Nam tristique mauris sit amet orci elementum dignissim. Aliquam ornare sit amet nisi a pulvinar. Proin leo urna, condimentum vitae.
 

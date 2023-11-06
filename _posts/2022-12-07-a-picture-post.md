@@ -3,8 +3,6 @@ layout: post
 excerpt: "Nulla ac viverra nisi, sed imperdiet felis. Donec ullamcorper eu turpis id finibus."
 title: "Another picture post without a picture"
 ---
-![alt text here]({{ 'example-poster.jpg' | prepend: site.cdn.img }}){: .poster .float .right .tilt }
-
 Quisque maximus malesuada ex nec varius. Mauris ac placerat orci, nec pretium leo. Nam tristique mauris sit amet orci elementum dignissim. Aliquam ornare sit amet nisi a pulvinar. Proin leo urna, condimentum vitae.
 
 Nulla ac viverra nisi, sed imperdiet felis. Donec ullamcorper eu turpis id finibus. Donec pretium nisi eget enim viverra, quis malesuada nibh consectetur. Sed quis neque eleifend, malesuada orci et, aliquet magna. In tristique felis sed leo vehicula, ut aliquet est accumsan. Sed sed odio ac diam condimentum volutpat. Morbi congue, justo vitae efficitur imperdiet, purus elit elementum lectus, et condimentum purus lacus viverra neque.

@@ -3,12 +3,11 @@ layout: default
 is_home: true
 permalink: /index.html
 ---
-<article class="home">
-<ul>
+
 {% for p in site.posts limit: 7 %}
-    <li><a href="{{ p.url | absolute_url }}">{{ p.title | strip | strip_html | normalize_whitespace | smartify }}</a> &mdash; {{ p.excerpt | strip | strip_html | normalize_whitespace | smartify }}</li>
+   {% include detail-{{ p.layout }}.html page=p content=p.content is_home=true %}
+   {% unless forloop.last %}<div class="hr"></div>{% endunless %}
 {% endfor %}
-</ul>
-</article>
+
 
 

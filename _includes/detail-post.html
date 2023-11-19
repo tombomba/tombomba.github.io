@@ -1,0 +1,19 @@
+{% assign p = include.page %}
+{% assign copy = include.content | strip | normalize_whitespace %}
+
+<article class="{{ p.layout }}">
+
+{% include _titlef-widont.html title=p.title url=p.url is_home=include.is_home -%}
+{% if copy contains '<p><img src=' %}{% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', '/>' %}{% endif -%}
+
+<header>
+    <h1>{{ titlef }}</h1>
+    <div class="byline">
+        <p><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time></p>
+        {% if forloop.first or include.is_home==nil %}<p><a href="{{ 'about' | absolute_url }}">{{ p.author | default: site.author }}</a></p>{% endif %}
+    </div>
+</header>
+
+{{ copy }}
+
+</article>

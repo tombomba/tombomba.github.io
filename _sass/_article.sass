@@ -2,6 +2,13 @@ article
   max-width: var(--page-width)
   margin: var(--buffer) auto
 
+  h1
+    a:link, a:visited
+      color: black
+      text-decoration: none
+    a:hover
+      text-decoration: underline
+
   h2, h3, h4, h5, h6
     margin-top: var(--shim-n)
     font-size: 1em
@@ -22,27 +29,32 @@ article
   li + p,
     margin-top: 0
 
-  //img
-    //display: block
-    //max-width: 100%
-    //max-height: 360px
-    //width: auto
-    //height: auto
-    //background-color: var(--color-back)
-    //border-radius: 4px
-    //&.basic
-      //margin-bottom: var(--shim-n)
+  img
+      display: block
+      margin: var(--shim) 0
+      width: auto
+      height: auto
+      max-width: 100%
+      max-height: 360px
+      object-fit: cover
+      background-color: var(--color-back)
+      border-radius: 4px
+      @extend .clearfix
 
-  .media-wrap
-    padding-top: var(--nudge)
+  iframe[src*="https://www.youtube.com"],
+  iframe[src*="https://www.youtube-nocookie.com"],
+  iframe[src*="https://player.vimeo.com"]
+    width: 100%
+    height: unset
+    aspect-ratio: 16/9
+    margin-bottom: var(--shim)
+    background-clip: content-box
+    background-color: var(--color-back)
 
   .daystamp
     color: var(--color-half)
     a:link, a:visited
-      text-decoration: none
       color: var(--color-half)
-    a:hover
-      text-decoration: underline
 
 //-----------------------------------------------------------------------------
 

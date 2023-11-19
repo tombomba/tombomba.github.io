@@ -13,7 +13,7 @@
 
 {% assign titlef = titlef | replace: '!!PUNC!!', '<span class="punc"></span>' | strip | smartify | normalize_whitespace -%}
 
-{% if include.url -%}
+{% if include.is_home and include.url -%}
   {% capture titlef %}<a href="{{ include.url | absolute_url }}">{{ titlef }}</a>{% endcapture %}
 {% else %}
   {% assign titlef = titlef %}

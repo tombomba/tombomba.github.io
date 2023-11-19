@@ -20,6 +20,10 @@ body
 
   padding: 0 1em
 
+main[role="main"]
+  margin: 0 auto
+  max-width: var(--page-width)
+
 a
   text-decoration: underline
   text-decoration-skip-ink: auto
@@ -44,8 +48,6 @@ time
   border-top: thin solid var(--color-hr-top)
   border-bottom: 2px solid var(--color-hr-bottom)
   background-color: var(--color-body)
-
-.pagebreak
-  margin: var(--buffer) 0 0
-  max-width: var(--shim-4x)
-  width: 100%
+  &.break
+    margin: 0
+    max-width: var(--shim-4x)

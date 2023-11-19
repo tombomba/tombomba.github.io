@@ -1,23 +1,12 @@
 header[role="banner"]
   margin: 0 auto
-  div.wrap
-    position: relative
+  max-width: var(--page-width)
+  div.logo
+    margin: var(--buffer) 0
+    width: var(--buffer)
     height: var(--buffer)
-    margin: 0 auto
-    max-width: var(--page-width)
-    div.icon.vect
-      position: absolute
-      top: calc(var(--shim-n) * var(--line-height-hed))
-      left: -1.25em
-      padding: 0 1em
-      background-color: var(--color-body)
-      svg
-        width: auto
-        height: var(--shim-p)
-        fill: var(--color-logo)
-        transform: translateZ(0)
-        filter: drop-shadow(-2px 2px 1px var(--color-shock))
-  div.hr
-    flex: 1
-    margin: 3px 0 0
-    max-width: 100%
+    background-color: var(--color-logo)
+    border-radius: 50%
+    img
+      height: var(--buffer)
+      border-radius: 50%

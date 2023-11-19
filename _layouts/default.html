@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width">
-
   <base href="{{ site.url }}">
+
   <title>{{ page.title | default: site.title | truncate: 140 | replace: '"', "'" | strip | strip_html | normalize_whitespace | xml_escape }}</title>
   <meta name="author" content="{{ site.author }}">
   <meta name="description" content="{{ page.tweet | default: page.excerpt | strip_html | strip | truncate: 140  | xml_escape }}">
@@ -34,10 +34,8 @@
 <body>
 
 <header role="banner">
-  <div class="wrap">
-    <div class="icon vect"><a href="{{ site.url }}">{% include icon-crossbones.svg %}</a></div>
-  </div>
-  <div class="hr"></div>
+  <div class="logo"><a href="{{ site.url }}"><img src="{{ 'bang.png' | prepend: site.cdn.img }}" alt="{{ site.title }}"></a></div>
+  <div class="hr break"></div>
 </header>
 
 <main role="main">

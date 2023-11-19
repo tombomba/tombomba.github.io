@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: micro
 excerpt: "Nulla ac viverra nisi, sed imperdiet felis. Donec ullamcorper eu turpis id finibus."
 title: "Another picture post without a picture"
 ---

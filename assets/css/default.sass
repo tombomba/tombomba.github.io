@@ -16,19 +16,18 @@ article.home
 article.post
   header
     h1
-      font-size: 1em
-      line-height: 1.2
-      //font-style: italic
-    div.byline
-      margin-top: 0
-      p
-        margin: 0
-        display: inline
-        font-size: var(--body-size-sm)
-        line-height: 1.2
-        color: var(--color-half)
-        &:nth-child(2)::before
-          content: '\20\/\20'
+      font-size: var(--hed-size-md)
+      line-height: var(--line-height-hed)
+  div.byline
+    margin: 0
+    p
+      margin: 0
+      display: inline
+      font-size: var(--body-size-sm)
+      line-height: var(--line-height-hed)
+      color: var(--color-half)
+      &:nth-child(2)::before
+        content: '\20\/\20'
 
 article.micro
   div.lede

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: micro
 title: "Omnes Gallia est divisia tres partes"
 excerpt: "One part of these, which it has been said that the Gauls occupy, takes its beginning at the river Rhone; it is bounded by the river Garonne, the ocean, and the territories of the Belgae; it borders, too, on the side of the Sequani and the Helvetii, upon the river Rhine, and stretches toward the north."
 image:
@@ -7,6 +7,8 @@ image:
   path: assets/img/default-social.jpg
   alt: "The quick brown fox jumps over the lazy dog"
 ---
+
+![alt text here]({{ 'example.jpg' | prepend: site.cdn.img }}){: .foo }
 
 All Gaul is divided into three parts, one of which the Belgae inhabit, the Aquitani another, those who in their own language are called Celts, in our Gauls, the third. All these differ from each other in language, customs and laws. The river Garonne separates the Gauls from the Aquitani; the Marne and the Seine separate them from the Belgae.<!--more-->
 

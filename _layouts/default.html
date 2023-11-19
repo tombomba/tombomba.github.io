@@ -51,7 +51,9 @@
 
 <footer>
   <div class="hr"></div>
-  <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.url | remove: 'http' | remove: 'https' | remove: '://' | remove: 'www.' | capitalize }}</p>
+  {% include _datelist.html %}
+  <div class="hr"></div>
+  <p>{{ site.url | remove: 'http' | remove: 'https' | remove: '://' | remove: 'www.' | capitalize }} Copyright &copy; {{ site.posts.first.date | date: '%Y' }} <a href="{{ 'about' | absolute_url }}">{{ site.author }}</a></p>
 </footer>
 
 </body>

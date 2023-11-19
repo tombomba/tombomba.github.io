@@ -14,13 +14,14 @@ article
 
   img
     display: block
-    width: var(--width)
-    aspect-ratio: 16/9
-    margin-top: var(--shim)
-    margin-bottom: var(--shim)
+    margin: var(--shim) 0
+    width: auto
+    height: auto
+    max-width: 100%
+    max-height: 360px
     object-fit: cover
+    background-color: var(--color-back)
     border-radius: 4px
-    --width: 100%
     @extend .clearfix
 
     &.academy
@@ -40,6 +41,8 @@ article
     &.square
       aspect-ratio: 1
 
+    //&.marquee
+      //margin-top: var(--shim-n)
     &.filler
       margin-top: var(--shim)
       margin-bottom: var(--shim)
@@ -58,6 +61,7 @@ article
     &.center
       margin-left: auto
       margin-right: auto
+      max-height: 480px
     &.right
       margin-right: 0
       margin-left: auto
@@ -66,7 +70,7 @@ article
       margin-left: 0
 
     &.float
-      max-height: 220px
+      max-height: 320px
       margin-left: auto
       margin-right: auto
       margin-bottom: 1em

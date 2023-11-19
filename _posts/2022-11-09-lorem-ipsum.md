@@ -1,5 +1,5 @@
 ---
-layout: micro
+layout: post
 title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
 excerpt: "Sed rhoncus tellus eget massa efficitur, vitae tincidunt arcu tempor. Mauris aliquet quam at lacus molestie dignissim. Integer efficitur pulvinar quam, in pharetra purus commodo sed. Integer vestibulum urna id condimentum auctor. Nam consectetur tellus nunc, eget vulputate turpis tincidunt in."
 ---

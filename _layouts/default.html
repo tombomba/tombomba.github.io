@@ -9,7 +9,7 @@
 
   <title>{{ page.title | default: site.title | truncate: 140 | replace: '"', "'" | strip | strip_html | normalize_whitespace | xml_escape }}</title>
   <meta name="author" content="{{ site.author }}">
-  <meta name="description" content="{{ page.tweet | default: page.excerpt | strip_html | strip | truncate: 140  | xml_escape }}">
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip | truncate: 140  | xml_escape }}">
   {% if page.id %}<link rel="canonical" href="{{ page.url | default: '' | absolute_url }}">{% endif -%}
 
   <!-- icons -->
@@ -21,7 +21,7 @@
   <!-- opengraph -->
   <meta property="og:title" content="{{ page.title | default: site.title | strip | truncate: 140 | xml_escape }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
-  <meta property="og:description" content="{{ page.tweet | default: page.excerpt | truncate: 280 | replace: '"', "'" | strip_html | normalize_whitespace | strip | xml_escape }}">
+  <meta property="og:description" content="{{ page.excerpt | default: site.description | truncate: 280 | replace: '"', "'" | strip_html | normalize_whitespace | strip | xml_escape }}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:type" content="blog">
   <meta property="og:image" content="{{ page.image.file | default: 'default-social.png' | prepend: site.cdn.img }}">

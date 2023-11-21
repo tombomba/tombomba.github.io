@@ -1,24 +1,16 @@
 footer
-  margin: 0 auto var(--shim-p) auto
-  ul.datelist
-    padding: 1em
+  margin: 0 auto var(--buffer) auto
+  max-width: var(--page-width)
+  ul
+    margin-top: calc(var(--buffer) - 3px)
     display: flex
     flex-flow: row wrap
     align-items: center
-    justify-content: center
     gap: 0.66em
     list-style-type: none
-    li
-      &.year
-        font-weight: bold
-  p
-    margin-top: 1em
-    font-size: var(--body-size-sm)
-    font-style: italic
-    text-align: center
-    color: var(--color-half)
-    a:link, a:visited
+  div.copydate
+    margin-top: var(--shim-n)
+    p
+      margin: 0
+      font-size: 1rem
       color: var(--color-half)
-  div.hr
-    margin: 0
-    width: 100%

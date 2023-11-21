@@ -34,7 +34,6 @@
 <body>
 
 <header role="banner">
-  <!-- <div class="logo"><a href="{{ site.url }}"><img src="{{ 'shim.gif' | prepend: site.cdn.img }}" alt="{{ site.title }}"></a></div> -->
   <div class="logo"><a href="{{ site.url }}">{% include icon-crossbones.svg %}</a></div>
   <div class="hr break"></div>
 </header>
@@ -48,7 +47,7 @@
 <footer>
 
   <div class="hr break"></div>
-  <ul>{% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_archive %}<li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>{% endunless %}{% unless page.is_bio %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}<li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li></ul>
+  <ul>{% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_archive %}<li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>{% endunless %}{% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}<li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li></ul>
   <div class="copydate">
     {% if page.is_post -%}
       <p>This page published {{ page.date | date_to_long_string }}</p>

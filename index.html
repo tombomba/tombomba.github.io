@@ -10,8 +10,7 @@ permalink: /index.html
    <div class="hr break"></div>
    <ul>
    {% for p in site.posts offset:1 limit:7 %}
-      {% include _titlef-punc.html title=p.title url=p.url is_home=true %}
-      <li><h2>{{ titlef }}</h2><p>{{ p.excerpt }} <a href="{{ p.url | absolute_url }}" title="Continued">[&hellip;]</a></p></li>
+      <li><h1><a href="{{ p.url | absolute_url }}">{{ p.title | strip_html | strip | normalize_whitespace }}</a></h1><p>{{ p.excerpt }}</p></li>
    {% endfor -%}
    </ul>
 </aside>

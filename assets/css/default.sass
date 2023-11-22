@@ -73,17 +73,11 @@ aside.extras
     li
       &:not(:first-of-type)
         margin-top: var(--shim-n)
-      h2, p
+      h1, p
         display: inline
         font-size: 1em
-      h2
-        font-weight: 700
-        a:link, a:visited
-          text-decoration: none
-          color: var(--color-text)
-        a:hover
-          text-decoration: underline
+      h1
+        font-weight: 400
         &::after
-          content: '\20'
-      span.punc::after
-        content: '.'
+          content: '\00A0\2014\00A0'
+          color: var(--color-half)

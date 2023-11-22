@@ -4,10 +4,14 @@ is_home: true
 permalink: /index.html
 ---
 
-{% for p in site.posts limit: 7 %}
-   {% include detail-{{ p.layout }}.html page=p content=p.content is_home=true %}
-   {% unless forloop.last %}<div class="hr break"></div>{% endunless %}
-{% endfor %}
+{% include detail-micro.html page=site.posts.first content=site.posts.first.content is_home=true %}
 
-
-
+<aside class="extras">
+   <div class="hr break"></div>
+   <ul>
+   {% for p in site.posts offset:1 limit:7 %}
+      {% include _titlef-punc.html title=p.title url=p.url is_home=true %}
+      <li><h2>{{ titlef }}</h2><p>{{ p.excerpt }} <a href="{{ p.url | absolute_url }}" title="Continued">[&hellip;]</a></p></li>
+   {% endfor -%}
+   </ul>
+</aside>

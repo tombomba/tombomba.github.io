@@ -16,7 +16,7 @@ article.home
 article.post
   header
     h1
-      font-size: var(--hed-size-sm)
+      font-size: 1em
       line-height: var(--line-height-hed)
   div.byline
     margin-top: 2px
@@ -38,8 +38,10 @@ article.micro
       content: '\20'
     span.punc::after
       content: '.'
-  .daystamp
+  .daystamp,
+  .byline
     font-style: italic
+    color: var(--color-half)
 
 article.archive
   section
@@ -62,3 +64,26 @@ article.error
     margin-top: var(--shim-n)
     list-style-type: square
     color: var(--color-logo)
+
+aside.extras
+  margin-top: var(--buffer)
+  ul
+    margin: calc(var(--buffer) - 3px) 0 0
+    list-style-type: none
+    li
+      &:not(:first-of-type)
+        margin-top: var(--shim-n)
+      h2, p
+        display: inline
+        font-size: 1em
+      h2
+        font-weight: 700
+        a:link, a:visited
+          text-decoration: none
+          color: var(--color-text)
+        a:hover
+          text-decoration: underline
+        &::after
+          content: '\20'
+      span.punc::after
+        content: '.'

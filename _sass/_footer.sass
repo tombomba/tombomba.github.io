@@ -1,16 +1,18 @@
 footer
-  margin: 0 auto var(--shim-p) auto
+  margin: var(--buffer) auto
   max-width: var(--page-width)
-  ul
+  div.nav
     margin-top: calc(var(--buffer) - 3px)
-    display: flex
-    flex-flow: row wrap
-    align-items: center
-    gap: 0.66em
-    list-style-type: none
-  div.copydate
-    margin-top: var(--shim-n)
-    p
+    ul
       margin: 0
-      font-size: var(--body-size-sm)
+      display: flex
+      flex-flow: row wrap
+      align-items: center
+      gap: 0.6em
+      list-style-type: none
+  div.copydate
+    margin-top: 1em
+    p
+      font-size: 1rem
+      line-height: 1.625
       color: var(--color-half)

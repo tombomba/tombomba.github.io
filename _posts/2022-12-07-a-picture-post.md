@@ -1,9 +1,8 @@
 ---
 excerpt: "Nulla ac viverra nisi, sed imperdiet felis. Donec ullamcorper eu turpis id finibus."
 title: "Another picture post without a picture"
+# ![alt text here]({{ 'example.jpg' | prepend: site.cdn.img }}){: width="800" height="450" loading="lazy" }
 ---
-
-![alt text here]({{ 'example.jpg' | prepend: site.cdn.img }}){: width="800" height="450" loading="lazy" }
 
 Quisque maximus malesuada ex nec varius. Mauris ac placerat orci, nec pretium leo. Nam tristique mauris sit amet orci elementum dignissim. Aliquam ornare sit amet nisi a pulvinar. Proin leo urna, condimentum vitae. Foo!
 

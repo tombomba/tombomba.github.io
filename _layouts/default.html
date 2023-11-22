@@ -34,7 +34,6 @@
 
 <header role="banner">
   <div class="logo"><a href="{{ site.url }}">{% include icon-crossbones.svg %}</a></div>
-  <div class="hr break"></div>
 </header>
 
 <main role="main">
@@ -46,15 +45,14 @@
 <footer>
 
   <div class="hr break"></div>
-  <ul>{% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_archive %}<li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>{% endunless %}{% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}<li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li></ul>
+
+  <div class="nav">
+    {% include _datelist.html %}
+  </div>
+
   <div class="copydate">
-    {% if page.is_post -%}
-      <p>This page published {{ page.date | date_to_long_string }}</p>
-      <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</p>
-    {% else -%}
-      <p>Last updated {{ site.posts.first.date | date_to_long_string }}</p>
-      <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</p>
-    {% endif -%}
+    <p>{{ site.url | remove: 'https' | remove: 'http' | remove: '://' | remove: 'www.' | capitalize }} written by {{ site.author }}
+    <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }}</p>
   </div>
 
 </footer>

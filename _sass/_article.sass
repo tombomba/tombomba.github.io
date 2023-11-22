@@ -1,10 +1,10 @@
 article
-  margin: calc(var(--buffer) - 3px) auto var(--buffer) auto
+  margin: calc(var(--buffer) - var(--nudge)) auto 0 auto
 
   h1
     a:link, a:visited
-      color: black
       text-decoration: none
+      color: black
     a:hover
       text-decoration: underline
 
@@ -48,11 +48,6 @@ article
     aspect-ratio: 16/9
     background-clip: content-box
     background-color: var(--color-back)
-
-  .daystamp
-    color: var(--color-half)
-    a:link, a:visited
-      color: var(--color-half)
 
 //-----------------------------------------------------------------------------
 

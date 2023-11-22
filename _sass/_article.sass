@@ -29,24 +29,23 @@ article
     margin-top: 0
 
   img
-      display: block
-      margin: var(--shim) 0
-      width: auto
-      height: auto
-      max-width: 100%
-      max-height: 360px
-      object-fit: cover
-      background-color: var(--color-back)
-      border-radius: 4px
-      @extend .clearfix
+    display: block
+    margin: var(--shim) 0
+    width: auto
+    height: auto
+    max-width: 100%
+    max-height: 480px
+    background-color: var(--color-back)
+    border-radius: 4px
+    @extend .clearfix
 
   iframe[src*="https://www.youtube.com"],
   iframe[src*="https://www.youtube-nocookie.com"],
   iframe[src*="https://player.vimeo.com"]
+    margin: var(--shim) 0
     width: 100%
     height: unset
     aspect-ratio: 16/9
-    margin-bottom: var(--shim)
     background-clip: content-box
     background-color: var(--color-back)
 

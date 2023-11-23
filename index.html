@@ -4,8 +4,12 @@ is_home: true
 permalink: /index.html
 ---
 
-{% include detail-micro.html page=site.posts.first content=site.posts.first.content is_home=true %}
+{% for p in site.posts limit:7 %}
+   {% include detail-{{ p.layout }}.html page=p content=p.content is_home=true %}
+   {% unless forloop.last %}<div class="hr break"></div>{% endunless %}
+{% endfor -%}
 
+{% comment %}
 <aside class="extras">
    <div class="hr break"></div>
    <ul>
@@ -14,3 +18,4 @@ permalink: /index.html
    {% endfor -%}
    </ul>
 </aside>
+{% endcomment -%}

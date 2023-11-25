@@ -51,8 +51,7 @@
   </div>
 
   <div class="copydate">
-    <p>{{ site.url | remove: 'https' | remove: 'http' | remove: '://' | remove: 'www.' | capitalize }} written by {{ site.author }}
-    <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }}</p>
+    <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.url | remove: 'https' | remove: 'http' | remove: '://' | remove: 'www.' | capitalize }}</p>
   </div>
 
 </footer>

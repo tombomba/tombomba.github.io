@@ -1,20 +1,18 @@
 footer
-  margin: var(--buffer) auto
+  margin: calc(var(--buffer) + 3px) auto var(--buffer) auto
+  max-width: var(--page-width)
   div.nav
-    padding: calc(var(--shim-n) - 3px) 0
+    margin: var(--buffer) 0 var(--shim-n)
+    padding-top: 3px
     ul
       margin: 0
       display: flex
       flex-flow: row wrap
       align-items: center
-      justify-content: center
       gap: 0.6em
       list-style-type: none
   div.copydate
     margin-top: 1em
     p
       font-size: var(--body-size-sm)
-      font-style: italic
-      line-height: var(--line-height-hed)
-      text-align: center
       color: var(--color-half)

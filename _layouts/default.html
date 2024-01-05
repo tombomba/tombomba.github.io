@@ -29,18 +29,13 @@
   <!-- css -->
   <link rel="stylesheet" href="{{ page.style | default: 'default' | append: '.css' | prepend: site.cdn.css }}">
 
-  <!-- goog -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
 <header role="banner">
-  <div class="wrap"><div class="logo"><a href="{{ site.url }}">{% include icon-crossbones.svg %}</a></div></div>
-  <div class="hr"></div>
+  <div class="logo"><a href="{{ site.url }}">{% include icon-crossbones.svg %}</a></div>
+  <div class="hr break"></div>
 </header>
 
 <main role="main">
@@ -51,16 +46,14 @@
 
 <footer>
 
-  <div class="hr"></div>
+  <div class="hr break"></div>
 
   <div class="nav">
     {% include _datelist.html %}
   </div>
 
-  <div class="hr"></div>
-
   <div class="copydate">
-    <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.url | remove: 'https' | remove: 'http' | remove: '://' | remove: 'www.' | capitalize }}</p>
+    <p>{{ site.url | remove: 'https' | remove: 'http' | remove: '://' | remove: 'www.' | capitalize }} Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</p>
   </div>
 
 </footer>

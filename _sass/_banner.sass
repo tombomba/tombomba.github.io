@@ -1,23 +1,14 @@
 header[role="banner"]
-  div.wrap
-    position: relative
-    margin: 0 auto
-    max-width: var(--page-width)
-    height: var(--buffer)
-    div.logo
-      position: absolute
-      top: var(--shim)
-      left: -1.1em
-      padding: 0 1em
-      display: flex
-      flex-flow: row wrap
-      align-items: center
-      background-color: var(--color-body)
-      svg
-        width: auto
-        height: 40px
-        fill: var(--color-logo)
-        filter: drop-shadow(-2px 2px var(--color-shock))
+  margin: var(--shim) auto 0 auto
+  max-width: var(--page-width)
+  div.logo
+    margin-left: -2px
+    background-color: var(--color-body)
+    svg
+      width: auto
+      height: var(--shim-p)
+      fill: var(--color-logo)
+      filter: drop-shadow(-2px 2px var(--color-shock))
   div.hr
-    margin: 0
-    width: 100%
+    flex: 1
+    margin: var(--buffer) 0 0

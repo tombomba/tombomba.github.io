@@ -8,6 +8,9 @@ cdn:
 
 author: "Tom Bomba"
 socials: "bomtomba"
+byline:
+  first: "Tom"
+  last: "Bomba"
 
 future: false
 show_drafts: false

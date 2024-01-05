@@ -1,5 +1,6 @@
 article
-  margin: var(--buffer) auto
+  margin: var(--shim-2x) auto
+  max-width: var(--page-width)
 
   h1
     a:link, a:visited
@@ -34,10 +35,12 @@ article
     width: auto
     height: auto
     max-width: 100%
-    max-height: 480px
+    max-height: 360px
     background-color: var(--color-back)
     border-radius: 4px
     @extend .clearfix
+    &.first
+      margin-top: var(--shim-n)
 
   iframe[src*="https://www.youtube.com"],
   iframe[src*="https://www.youtube-nocookie.com"],

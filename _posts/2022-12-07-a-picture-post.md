@@ -1,5 +1,4 @@
 ---
-layout: post
 excerpt: "Nulla ac viverra nisi, sed imperdiet felis. Donec ullamcorper eu turpis id finibus."
 title: "Another picture post without a picture"
 # ![alt text here]({{ 'example.jpg' | prepend: site.cdn.img }}){: width="800" height="450" loading="lazy" .first }

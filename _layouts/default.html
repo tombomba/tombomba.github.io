@@ -34,8 +34,8 @@
 <body>
 
 <header role="banner">
-  {% assign tagline = site.description | split: ", " | trim %}
-  <div class="wrap"><div class="byline"><h1><a href="{{ site.url }}">{{ tagline | sample | capitalize }}</a></h1><p><a href="{{ site.url }}">by {{ site.author }}</a></p></div></div>
+  <div class="icon"><a href="{{ site.url }}">{% include icon-crossbones.svg %}</a></div>
+  <div class="hr break"></div>
 </header>
 
 <main role="main">

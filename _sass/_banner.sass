@@ -1,21 +1,8 @@
 header[role="banner"]
-  order: 1
-  padding: 0 1em
-  div.wrap
-    margin: 0 auto var(--shim-n) auto
-    padding-top: var(--shim-n)
-    max-width: var(--page-width)
-    border-top: 1em solid var(--color-logo)
-    div.byline
-      h1, p
-        display: inline
-        font-size: 1em
-        margin: 0
-        line-height: 0.95
-      h1
-        a:link, a:visited
-          color: var(--color-text)
-        &::after
-          content: '\0020'
-      p
-        color: var(--color-half)
+  margin: var(--shim) auto
+  max-width: var(--page-width)
+  div.icon
+    svg
+      fill: var(--color-logo)
+  div.hr
+    margin-top: var(--buffer)

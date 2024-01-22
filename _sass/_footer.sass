@@ -1,26 +1,34 @@
 footer
+  order: -1
   padding: 0 1em
+  position: relative
+  background-color: var(--color-shock)
   div.wrap
-    margin: var(--shim-n) auto
-    padding-top: var(--shim-n)
+    margin: 0 auto
+    height: var(--shim-2x)
     max-width: var(--page-width)
-    border-top: 1em solid var(--color-logo)
-  div.byline
-    h1, p
-      display: inline
-      margin: 0
-      font-size: 1em
-      line-height: 1
-    h1
-      a:link, a:visited
-        color: var(--color-text)
-    p
-      color: var(--color-half)
-      a:link, a:visited
-        color: var(--color-half)
-  div.archive
-    ul
-      display: flex
-      flex-flow: row wrap
-      gap: var(--nudge)
-      list-style-type: none
+    display: flex
+    flex-flow: row wrap
+    align-items: flex-end
+    div.block
+      width: var(--shim-2x)
+      height: 1em
+      background-color: var(--color-logo)
+  span.link
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    z-index: 1
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  footer
+    background-color: #fff
+    transition: background-color 1000ms linear
+    &:hover
+      background-color: var(--color-shock)
+      transition: background-color 1000ms linear

@@ -34,7 +34,7 @@
 <body>
 
 <header role="banner">
-  <div class="wrap"><div class="byline"><h1><a href="{{ site.url }}">{{ site.title }}</a></h1><p><a href="{{ 'all' | absolute_url }}">by {{ site.author }}</a></p></div></div>
+  <div class="wrap"><div class="byline"><h1><a href="{{ site.url }}">{{ site.description | smartify }}</a></h1><p><a href="{{ 'all' | absolute_url }}">by {{ site.author }}</a></p></div></div>
 </header>
 
 <main role="main">

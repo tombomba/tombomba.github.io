@@ -1,23 +1,34 @@
 header[role="banner"]
+  padding: 0 1em
+  position: relative
+  background-color: var(--color-shock)
   div.wrap
-    position: relative
     margin: 0 auto
+    height: var(--shim-2x)
     max-width: var(--page-width)
-    height: 80px
-    div.logo
-      position: absolute
-      top: 60px
-      left: -1em
-      padding: 0 1em
-      display: flex
-      flex-flow: row wrap
-      align-items: center
-      background-color: var(--color-body)
-      svg
-        width: auto
-        height: 40px
-        fill: var(--color-logo)
-        filter: drop-shadow(-3px 3px var(--color-shock))
-  div.hr
-    margin: 0
+    display: flex
+    flex-flow: row wrap
+    align-items: flex-end
+    div.block
+      top: var(--shim)
+      width: var(--shim-2x)
+      height: 1em
+      background-color: var(--color-logo)
+  span.link
+    position: absolute
     width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    z-index: 1
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  header[role="banner"]
+    background-color: #fff
+    transition: background-color 1000ms linear
+    &:hover
+      background-color: var(--color-shock)
+      transition: background-color 1000ms linear

@@ -18,13 +18,11 @@ body
   -webkit-font-smoothing: auto
   -moz-osx-font-smoothing: auto
 
-  padding: 0 1em
-
 main[role="main"]
-  margin: 0 auto
+  margin: 0 1em
 
 a
-  text-decoration: underline
+  text-decoration: none
   text-decoration-skip-ink: auto
   &:link
     color: var(--color-link)
@@ -33,7 +31,7 @@ a
   &:active
     color: var(--color-active)
   &:hover
-    text-decoration: none
+    text-decoration: underline
 
 time
   white-space: nowrap

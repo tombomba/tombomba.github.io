@@ -34,8 +34,7 @@
 <body>
 
 <header role="banner">
-  <div class="wrap"><div class="logo"><a href="{{ site.url }}">{% include icon-crossbones.svg %}</a></div></div>
-  <div class="hr"></div>
+  <div class="wrap"><div class="block"><a href="{{ site.url }}"><span class="link"></span></a></div></div>
 </header>
 
 <main role="main">
@@ -46,15 +45,13 @@
 
 <footer>
 
-  <div class="hr break"></div>
+  <div class="wrap">
 
-  <div class="nav">
-    {% include _datelist.html %}
-  </div>
+    <div class="byline">
+      <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+      <p>by <a href="{{ 'about' | absolute_url }}">{{ site.author }}</a></p>
+    </div>
 
-  <div class="copydate">
-    <p>Posted by {{ page.author | default: site.author }} on {{ page.date | date_to_long_string }}</p>
-    <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.url | remove: 'https' | remove: 'http' | remove: '://' | remove: 'www.' | capitalize }}</p>
   </div>
 
 </footer>

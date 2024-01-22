@@ -1,17 +1,26 @@
 footer
-  margin: calc(var(--buffer) + 3px) auto var(--buffer) auto
-  max-width: var(--page-width)
-  div.nav
-    margin: var(--buffer) 0 0
-    ul
+  padding: 0 1em
+  div.wrap
+    margin: var(--shim-n) auto
+    padding-top: var(--shim-n)
+    max-width: var(--page-width)
+    border-top: 1em solid var(--color-logo)
+  div.byline
+    h1, p
+      display: inline
       margin: 0
+      font-size: 1em
+      line-height: 1
+    h1
+      a:link, a:visited
+        color: var(--color-text)
+    p
+      color: var(--color-half)
+      a:link, a:visited
+        color: var(--color-half)
+  div.archive
+    ul
       display: flex
       flex-flow: row wrap
-      align-items: center
-      gap: 0.6em
+      gap: var(--nudge)
       list-style-type: none
-  div.copydate
-    margin-top: var(--shim-n)
-    p
-      font-size: 16px
-      color: var(--color-half)

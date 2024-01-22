@@ -34,7 +34,8 @@
 <body>
 
 <header role="banner">
-  <div class="wrap"><div class="byline"><h1><a href="{{ site.url }}">{{ site.description | smartify }}</a></h1><p><a href="{{ 'all' | absolute_url }}">by {{ site.author }}</a></p></div></div>
+  {% assign tagline = site.description | split: ", " | trim %}
+  <div class="wrap"><div class="byline"><h1><a href="{{ site.url }}">{{ tagline | sample | capitalize }}</a></h1><p><a href="{{ site.url }}">by {{ site.author }}</a></p></div></div>
 </header>
 
 <main role="main">

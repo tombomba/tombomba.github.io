@@ -8,10 +8,9 @@
 
 <header>
     <h1>{{ titlef }}</h1>
+    <p><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_string }}</time></p>
 </header>
 
 {{ copy }}
-
-<p class="daystamp"><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_string }}</time></p>
 
 </article>

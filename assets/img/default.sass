@@ -16,16 +16,18 @@ article.home
 article.post
   header
     h1
-      font-size: 1em
+      font-size: var(--hed-size-xs)
       line-height: var(--line-height-hed)
-    div.byline
-      p
-        display: inline
-        margin-top: 0
-        font-size: var(--body-size-sm)
-        color: var(--color-half)
-        &:nth-child(2)::before
-          content: '\00A0\/\00A0'
+  div.byline
+    margin: 0
+    display: flex
+    flex-flow: row wrap
+    p
+      margin: 0
+      font-size: var(--body-size-sm)
+      &:nth-child(2)::before
+        content: '\00A0\/\00A0'
+      color: var(--color-half)
 
 article.micro
   div.lede
@@ -36,6 +38,8 @@ article.micro
       content: '\20'
     span.punc::after
       content: '.'
+  .daystamp
+    font-style: italic
 
 article.archive
   section
@@ -47,7 +51,7 @@ article.archive
     ul
       margin-bottom: 0
       list-style-type: square
-      color: var(--color-half)
+      color: var(--color-logo)
 
 article.about,
 article.error
@@ -58,20 +62,3 @@ article.error
     margin-top: var(--shim-n)
     list-style-type: square
     color: var(--color-logo)
-
-aside.extras
-  margin-top: var(--buffer)
-  ul
-    margin: calc(var(--buffer) - 3px) 0 0
-    list-style-type: none
-    li
-      &:not(:first-of-type)
-        margin-top: var(--shim-n)
-      h1, p
-        display: inline
-        font-size: 1em
-      h1
-        font-weight: 400
-        &::after
-          content: '\00A0\2014\00A0'
-          color: var(--color-half)

@@ -12,20 +12,30 @@ footer
       list-style-type: none
       li
         line-height: var(--line-height-hed)
-  div.copydate
-    margin-top: 1em
-    p
-      margin: 0
-      font-size: var(--body-size-sm)
-      text-align: center
+  div.coda
+    margin-top: var(--shim-n)
+    div.byline
+      h1, p
+        margin: 0
+        font-size: var(--body-size-sm)
+        color: var(--color-half)
+        text-align: center
+    div.copydate
+      p
+        margin: 0
+        font-size: var(--body-size-sm)
+        text-align: center
+        color: var(--color-half)
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 40rem)
 
   footer
-    div.credits
-      h1, p
-        display: inline
-      h1::after
-        content: ':\00A0'
+    div.coda
+      div.byline
+        display: flex
+        flex-flow: row-wrap
+        justify-content: center
+        h1::after
+          content: ':\00A0'

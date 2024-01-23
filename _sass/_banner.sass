@@ -1,22 +1,21 @@
 header[role="banner"]
-  margin-top: var(--shim-n)
   div.wrap
     position: relative
     margin: 0 auto
     max-width: var(--page-width)
-    height: 37px
+    height: var(--buffer)
     display: flex
     align-items: center
     justify-content: flex-start
     div.icon
       position: absolute
-      top: 18px
+      top: calc(var(--buffer) * 0.5)
       left: -1.1em
       padding: 0 1em
       background-color: var(--color-body)
       svg
         width: auto
-        height: 37px
+        height: var(--buffer)
         fill: var(--color-logo)
         transform: translateZ(0)
         filter: drop-shadow(-2px 2px var(--color-shock))

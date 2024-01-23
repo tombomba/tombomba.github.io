@@ -4,7 +4,7 @@
 <article class="{{ p.layout }}">
 
 {% include _titlef-widont.html title=p.title url=p.url is_home=include.is_home -%}
-{% if copy contains '<p><img src=' %}{% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', '/>' %}{% endif -%}
+{% if copy contains '<p><img src=' %}{% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', ' />' %}{% endif -%}
 
 <header>
     <h1>{{ titlef }}</h1>

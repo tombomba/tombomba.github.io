@@ -2,13 +2,16 @@
 {% assign copy = include.content | strip | normalize_whitespace %}
 {% include _titlef-punc.html title=p.title url=p.url is_home=include.is_home %}
 
-{% if copy contains '<p><img src' %}
-    {% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', '/>' %}
+{% assign peek = copy | slice: 0, 50 -%}
+{% if peek contains '<p><img src=' %}
+  {% assign copy = copy | replace_first: '<p><img src=', '<div class="figpad"><img src=' | replace: ' /></p>', ' /></div>' %}
+{% endif -%}
+{% if peek contains '<iframe ' %}
+  {% assign copy = copy | replace_first: '<iframe ', '<div class="figpad"><iframe ' | replace_first: '</iframe>', '</iframe></div>' %}
 {% endif -%}
 
-{% assign poke = copy | slice: 0, 100 %}
-{% if poke contains '<img src' %}
-    {% assign copy | replace_first: '<img src', '<div class="imgpad"><img src=' | replace_first: '/>', '</></div>' %}
+{% if copy contains '<p><img src=' %}
+  {% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', '/>' %}
 {% endif -%}
 
 {% if p.date %}

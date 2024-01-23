@@ -8,7 +8,7 @@
 
 <header>
     <h1>{{ titlef }}</h1>
-    <div class="byline"><p><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_string }}</time></p><p>{{ p.author | default: site.author }}</p></div>
+    <div class="byline"><p><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time></p>{% if forloop.first or include.is_home==nil %}<p>{{ p.author | default: site.author }}</p>{% endif %}</div>
 </header>
 
 {{ copy }}

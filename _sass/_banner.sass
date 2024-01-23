@@ -3,20 +3,20 @@ header[role="banner"]
     position: relative
     margin: 0 auto
     max-width: var(--page-width)
-    height: 50px
+    height: var(--buffer)
     display: flex
     align-items: center
     justify-content: flex-start
     div.icon
       position: absolute
-      top: 30px
+      top: calc(var(--buffer) / 2)
       left: -1.1em
       padding: 0 1em
       background-color: var(--color-body)
       svg
         width: auto
-        height: 40px
+        height: var(--buffer)
         fill: var(--color-logo)
   div.hr
-    //margin-top: 1px
+    margin-top: 1px
     width: 100%

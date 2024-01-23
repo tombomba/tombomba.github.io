@@ -6,7 +6,7 @@ title: "Another picture post without a picture"
 
 Quisque maximus malesuada ex nec varius. Mauris ac placerat orci, nec pretium leo. Nam tristique mauris sit amet orci elementum dignissim. Aliquam ornare sit amet nisi a pulvinar. Proin leo urna, condimentum vitae. Foo!
 
-![alt text here]({{ 'example-3.jpg' | prepend: site.cdn.img }}){: width="480" height="271" loading="lazy" }
+![alt text here]({{ 'example-3.jpg' | prepend: site.cdn.img }}){: width="480" height="271" }
 
 Nulla ac viverra nisi, sed imperdiet felis. Donec ullamcorper eu turpis id finibus. Donec pretium nisi eget enim viverra, quis malesuada nibh consectetur. Sed quis neque eleifend, malesuada orci et, aliquet magna. In tristique felis sed leo vehicula, ut aliquet est accumsan. Sed sed odio ac diam condimentum volutpat. Morbi congue, justo vitae efficitur imperdiet, purus elit elementum lectus, et condimentum purus lacus viverra neque.
 

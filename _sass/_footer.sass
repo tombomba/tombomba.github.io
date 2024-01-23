@@ -14,18 +14,12 @@ footer
         line-height: var(--line-height-hed)
   div.coda
     margin-top: var(--shim-n)
-    div.byline
+    div.byline,
+    div.copydate
       h1, p
         margin: 0
         font-size: var(--body-size-sm)
-        color: var(--color-half)
         text-align: center
-    div.copydate
-      p
-        margin: 0
-        font-size: var(--body-size-sm)
-        text-align: center
-        color: var(--color-half)
 
 //-----------------------------------------------------------------------------
 
@@ -37,5 +31,6 @@ footer
         display: flex
         flex-flow: row-wrap
         justify-content: center
+        text-align: left
         h1::after
           content: ':\00A0'

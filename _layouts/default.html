@@ -34,8 +34,11 @@
 <body>
 
 <header role="banner">
-  <div class="icon"><a href="{{ site.url }}">{% include icon-crossbones.svg %}</a></div>
-  <div class="hr break"></div>
+  {% assign tagline = site.description | split: ', ' %}
+  <div class="wrap">
+    <div class="icon"><a href="{{ site.url }}">{% include icon-crossbones.svg %}</a></div>
+  </div>
+  <div class="hr"></div>
 </header>
 
 <main role="main">
@@ -45,18 +48,20 @@
 </main>
 
 <footer>
-  <div class="hr break"></div>
   <nav>
+    <div class="hr"></div>
     <ul>
       {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_archive %}<li><a href="{{ 'all' | absolute_url }}">Archive</a></li>{% endunless %}{% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}<li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
     </ul>
+    <div class="hr"></div>
   </nav>
+
   <div class="credits">
     {% assign tagline = site.description | split: ', ' %}
-    <h1>{{ site.url | remove: 'http://' | remove: 'https://' | remove: 'www.' | trim | capitalize }}:</h1><p>{{ tagline | sample | trim | capitalize }} by {{ site.author }}</p>
+    <h1>{{ site. title}}</h1><p>{{ tagline | sample | trim | capitalize }} by {{ site.author }}</p>
   </div>
   <div class="copydate">
-    {% if page.date %}
+    {% if page.is_post %}
     <p>Published <time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
     {% else %}
     <p>Updated <time datetime="{{ site.posts.first.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ site.posts.first.date | date_to_long_string }}</time></p>

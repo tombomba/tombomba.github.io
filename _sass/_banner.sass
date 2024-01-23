@@ -1,12 +1,22 @@
 header[role="banner"]
-  margin: var(--buffer) auto
-  max-width: var(--page-width)
-  div.icon
+  div.wrap
+    position: relative
+    margin: 0 auto
+    max-width: var(--page-width)
+    height: 50px
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    div.icon
+      position: absolute
+      top: 30px
+      left: -1.1em
+      padding: 0 1em
+      background-color: var(--color-body)
       svg
         width: auto
-        height: var(--buffer)
+        height: 40px
         fill: var(--color-logo)
-        //transform: translateZ(0)
-        //filter: drop-shadow(-2px 2px var(--color-shock))
   div.hr
-    margin-top: var(--buffer)
+    //margin-top: 1px
+    width: 100%

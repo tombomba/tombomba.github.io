@@ -1,25 +1,35 @@
 footer
   margin: 0 auto var(--buffer) auto
-  max-width: var(--page-width)
   nav
-    margin-top: calc(var(--buffer) - 3px)
     ul
-      margin: 0
+      margin: 0 auto
+      padding: 1em 0
       display: flex
+      align-items: center
       flex-flow: row wrap
       gap: var(--nudge-2x)
       list-style-type: none
+      li
+        align-items: center
   div.credits
     margin-top: var(--shim-n)
     h1, p
       margin: 0
-      display: inline
-      font-size: var(--body-size-sm)
+      font-size: 16px
       color: var(--color-half)
-    h1::after
-      content: '\00A0'
   div.copydate
     p
       margin: 0
-      font-size: var(--body-size-sm)
+      font-size: 16px
       color: var(--color-half)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  footer
+    div.credits
+      h1, p
+        display: inline
+      h1::after
+        content: ':\00A0'

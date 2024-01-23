@@ -56,13 +56,8 @@
     <div class="hr"></div>
   </nav>
   <div class="coda">
-    <div class="byline">
-      {% assign tagline = site.description | split: ', ' %}
-      <h1>{{ site.title }}</h1>
-      <p>{{ tagline | sample | capitalize | trim }} by {{ site.author }}</p>
-    </div>
     <div class="copydate">
-      <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }}</p>
+      <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</p>
     </div>
   </div>
 </footer>

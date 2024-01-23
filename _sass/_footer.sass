@@ -14,24 +14,9 @@ footer
         line-height: var(--line-height-hed)
   div.coda
     margin-top: 1em
-    div.byline,
     div.copydate
-      h1, p
+      p
         margin: 0
         font-size: var(--body-size-sm)
+        font-style: italic
         text-align: center
-        color: var(--color-half)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
-  footer
-    div.coda
-      div.byline
-        display: flex
-        flex-flow: row-wrap
-        justify-content: center
-        text-align: left
-        h1::after
-          content: ':\00A0'

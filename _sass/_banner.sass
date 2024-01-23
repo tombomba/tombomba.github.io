@@ -1,8 +1,12 @@
 header[role="banner"]
-  margin: var(--shim) auto
+  margin: var(--buffer) auto
   max-width: var(--page-width)
   div.icon
-    svg
-      fill: var(--color-logo)
+      svg
+        width: auto
+        height: var(--buffer)
+        fill: var(--color-logo)
+        transform: translateZ(0)
+        filter: drop-shadow(-2px 2px var(--color-shock))
   div.hr
     margin-top: var(--buffer)

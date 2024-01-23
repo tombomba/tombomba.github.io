@@ -40,12 +40,28 @@
 
 <main role="main">
 
-  {{ content }}
+  {{ content }}<!-- copyright &copy; tom bomba {{ site.posts.first.date | date: '%Y' }} -->
 
 </main>
 
 <footer>
-  <div class="wrap"><div class="block"><a href="{{ site.url }}"><span class="link"></span></a></div></div>
+  <div class="hr break"></div>
+  <nav>
+    <ul>
+      {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_archive %}<li><a href="{{ 'all' | absolute_url }}">Archive</a></li>{% endunless %}{% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}<li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
+    </ul>
+  </nav>
+  <div class="credits">
+    {% assign tagline = site.description | split: ', ' %}
+    <h1>{{ site.url | remove: 'http://' | remove: 'https://' | remove: 'www.' | trim | capitalize }}:</h1><p>{{ tagline | sample | trim | capitalize }} by {{ site.author }}</p>
+  </div>
+  <div class="copydate">
+    {% if page.date %}
+    <p>Published <time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
+    {% else %}
+    <p>Updated <time datetime="{{ site.posts.first.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ site.posts.first.date | date_to_long_string }}</time></p>
+    {% endif %}
+  </div>
 </footer>
 
 </body>

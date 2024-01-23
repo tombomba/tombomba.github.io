@@ -8,7 +8,7 @@
 
 <header>
     <h1>{{ titlef }}</h1>
-    <p><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time></p>
+    <div class="byline"><p><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_string }}</time></p><p>{{ p.author | default: site.author }}</p></div>
 </header>
 
 {{ copy }}

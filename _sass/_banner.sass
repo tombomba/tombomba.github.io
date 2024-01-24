@@ -8,27 +8,28 @@ header[role="banner"]
     flex-flow: row wrap
     align-items: center
     justify-content: space-between
-    h1
+    div.text
       margin-top: 3px
-      font-family: 'Oswald', var(--fam-system)
-      font-size: var(--shim)
-      line-height: 0.95
-      text-transform: uppercase
-      color: black
-      a:link, a:visited
-        text-decoration: none
-        color: black
+      max-width: var(--page-width)
+      text-align: center
+      h1
+        font-family: 'Oswald', var(--fam-system)
+        font-size: var(--shim)
+        line-height: 0.95
+        text-transform: uppercase
+        a:link, a:visited
+          text-decoration: none
+          color: black
     p
       display: none
       font-size: var(--body-size-sm)
       line-height: 0.95
     div.icon
-      margin-top: 3px
-      img
-        display: block
-        width: auto
-        height: var(--shim-p)
+      div.shape
+        width: var(--shim)
+        height: var(--shim)
         border-radius: 50%
+        background-color: var(--color-logo)
 
 //-----------------------------------------------------------------------------
 
@@ -37,6 +38,8 @@ header[role="banner"]
   header[role="banner"]
     div.wrap
       max-width: 100%
+      div.logo
+        flex: 1 0 60%
       div.icon
         flex: 1 0 20%
         order: -1

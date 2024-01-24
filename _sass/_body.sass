@@ -54,5 +54,12 @@ time
   //border-bottom: 2px solid var(--color-hr-bottom)
   background-color: var(--color-body)
   &.break
-    margin: 0
-    max-width: 80px
+    margin: 0 auto
+    max-width: var(--page-width)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50rem)
+
+  .hr.break
+    max-width: 100%

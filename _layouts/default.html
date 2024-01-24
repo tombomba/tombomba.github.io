@@ -56,7 +56,7 @@
 
 <footer>
   <nav>
-    {% include _datelist.html %}
+    <ul>{% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_archive %}<li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>{% endunless %}{% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}<li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li></ul>
   </nav>
   <div class="copydate">
     <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</p>

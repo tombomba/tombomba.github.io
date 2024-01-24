@@ -3,7 +3,7 @@ layout: default
 title: "Archive ~~~"
 excerpt: "A short list of previous entries"
 is_archive: true
-permalink: "/all/"
+permalink: "/archive/"
 ---
 {% assign master_list = site.posts | group_by_exp: "post", "post.date | date: '%b %Y'" -%}
 <article class="archive">

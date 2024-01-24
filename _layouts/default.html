@@ -54,8 +54,7 @@
     {% include _datelist.html %}
   </nav>
   <div class="copydate">
-    <p>{{ site.title }} written by {{ site.author }}</p>
-    <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }}</p>
+    <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</p>
   </div>
 </footer>
 

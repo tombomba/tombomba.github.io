@@ -51,13 +51,12 @@
 
 <footer>
   <nav>
-    <ul>
-      {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_archive %}<li><a href="{{ 'all' | absolute_url }}">Archive</a></li>{% endunless %}{% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}<li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
-    </ul>
+    {% include _datelist.html %}
   </nav>
   <div class="coda">
     <div class="copydate">
-      <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</p>
+      <p>{{ site.title }} written by {{ site.author }}</p>
+      <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }}</p>
     </div>
   </div>
 </footer>

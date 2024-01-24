@@ -18,8 +18,24 @@ header[role="banner"]
       a:link, a:visited
         text-decoration: none
         color: black
+    p
+      display: none
+      font-size: var(--body-size-sm)
+      line-height: 0.95
     div.icon
       width: var(--shim-p)
       height: var(--shim-p)
       border-radius: 50%
-      background-color: #c06
+      background-color: var(--color-logo)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50rem)
+
+  header[role="banner"]
+    div.wrap
+      max-width: 100%
+      p
+        display: block
+      div.icon
+        order: -1

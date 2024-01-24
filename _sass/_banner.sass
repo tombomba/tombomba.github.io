@@ -1,8 +1,9 @@
 header[role="banner"]
   border-bottom: thin solid var(--color-hr-top)
+  margin: 0 auto
+  max-width: var(--page-width)
   div.wrap
     margin: 0 auto
-    max-width: var(--page-width)
     height: var(--shim-2x)
     display: flex
     flex-flow: row wrap
@@ -12,8 +13,9 @@ header[role="banner"]
       max-width: var(--page-width)
       text-align: center
       h1
+        margin-top: 1px
         font-family: 'Oswald', var(--fam-system)
-        font-size: var(--hed-size-lg)
+        font-size: var(--shim)
         line-height: 0.95
         text-transform: uppercase
         a:link, a:visited
@@ -24,7 +26,6 @@ header[role="banner"]
       font-size: var(--body-size-sm)
       line-height: 0.95
     div.icon
-      margin-top: 2px
       div.shape
         width: var(--shim-p)
         height: var(--shim-p)
@@ -36,8 +37,13 @@ header[role="banner"]
 @media screen and (min-width: 50rem)
 
   header[role="banner"]
+    max-width: 100%
     div.wrap
       max-width: 100%
+      div.text
+        h1
+          margin-top: 2px
+          font-size: var(--shim-p)
       div.logo
         flex: 1 0 60%
       div.icon

@@ -1,5 +1,6 @@
 footer
-  margin-bottom: var(--shim)
+  margin: 0 auto var(--shim) auto
+  max-width: var(--page-width)
   border-top: thin solid var(--color-hr-top)
   nav
     border-bottom: thin solid var(--color-hr-top)
@@ -15,10 +16,17 @@ footer
       li
         line-height: var(--line-height-hed)
   div.copydate
-    margin-top: 1em
+    margin-top: var(--nudge-2x)
     padding: 0 1em
     p
       margin: 0
       font-size: var(--body-size-sm)
       line-height: var(--line-height-hed)
       text-align: center
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 50rem)
+
+  footer
+    max-width: 100%

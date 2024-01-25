@@ -11,7 +11,7 @@
 
         <header>
             <h1>{{ titlef }}</h1>
-            <div class="byline {{ hedpad | default: 'md' }}"><p><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished"> {{ hedcount }} {{ p.date | date_to_long_string }}</time></p>{% if forloop.first or include.is_home==nil %}<p>{{ p.author | default: site.author.name }} </p>{% endif %}</div>
+            <div class="byline {{ hedpad | default: 'md' }}"><p><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time></p>{% if forloop.first or include.is_home==nil %}<p>{{ p.author | default: site.author.name }} </p>{% endif %}</div>
         </header>
 
         {{ copy }}

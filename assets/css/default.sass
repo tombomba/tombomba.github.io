@@ -19,12 +19,12 @@ article.post
       font-size: var(--hed-size-sm)
       line-height: var(--line-height-hed)
     .byline
-      margin-top: 0
+      margin-top: 2px
       display: flex
       flex-flow: row-wrap
       &.lg,
       &.xl
-        margin-top: var(--nudge)
+        margin-top: var(--nudge-2x)
       p
         margin: 0
         font-size: var(--body-size-sm)
@@ -66,12 +66,14 @@ article.error
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 30rem)
+@media screen and (min-width: 27rem)
 
   article.post
     header
-      .byline.lg
+      .byline
         margin-top: 0
+        &.lg
+          margin-top: 0
 
 //-----------------------------------------------------------------------------
 
@@ -79,5 +81,7 @@ article.error
 
   article.post
     header
-      .byline.xl
+      .byline
         margin-top: 0
+        &.xl
+          margin-top: 0

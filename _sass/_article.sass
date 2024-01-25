@@ -7,9 +7,11 @@ article
   h1
     a:link, a:visited
       text-decoration: none
+      border-bottom: thin solid var(--color-shock)
+      box-shadow: 0px -5px 0px var(--color-shock) inset
       color: black
     a:hover
-      text-decoration: underline
+      text-decoration: none
 
   h2, h3, h4, h5, h6
     margin-top: var(--shim-n)
@@ -63,7 +65,7 @@ article
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 30rem)
+@media screen and (min-width: 27rem)
 
     .widont
       white-space: nowrap

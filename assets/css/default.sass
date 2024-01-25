@@ -21,6 +21,8 @@ article.post
     .byline
       display: flex
       flex-flow: row-wrap
+      &.lg
+        margin-top: var(--nudge)
       p
         margin: 0
         font-size: var(--body-size-sm)
@@ -59,3 +61,12 @@ article.error
     margin-top: var(--shim-n)
     list-style-type: disc
     color: var(--color-logo)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 27rem)
+
+  article.post
+    header
+      .byline.lg
+        margin-top: 0

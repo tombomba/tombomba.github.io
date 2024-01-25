@@ -16,15 +16,11 @@ article.home
 article.post
   header
     h1
-      font-size: var(--hed-size-sm)
+      font-size: 1em
       line-height: var(--line-height-hed)
     .byline
-      margin-top: 2px
       display: flex
       flex-flow: row-wrap
-      &.lg,
-      &.xl
-        margin-top: var(--nudge-2x)
       p
         margin: 0
         font-size: var(--body-size-sm)
@@ -63,25 +59,3 @@ article.error
     margin-top: var(--shim-n)
     list-style-type: disc
     color: var(--color-logo)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 27rem)
-
-  article.post
-    header
-      .byline
-        margin-top: 0
-        &.lg
-          margin-top: 0
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 60rem)
-
-  article.post
-    header
-      .byline
-        margin-top: 0
-        &.xl
-          margin-top: 0

@@ -16,13 +16,14 @@ article.home
 article.post
   header
     h1
-      font-size: 1em
+      font-size: var(--hed-size-sm)
       line-height: var(--line-height-hed)
     .byline
       margin-top: 0
       display: flex
       flex-flow: row-wrap
-      &.lg
+      &.lg,
+      &.xl
         margin-top: var(--nudge)
       p
         margin: 0
@@ -65,9 +66,18 @@ article.error
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 28rem)
+@media screen and (min-width: 30rem)
 
   article.post
     header
       .byline.lg
+        margin-top: 0
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 60rem)
+
+  article.post
+    header
+      .byline.xl
         margin-top: 0

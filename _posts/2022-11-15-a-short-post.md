@@ -1,5 +1,5 @@
 ---
-title: "A short post?"
+title: "Pack my box with five dozen liquor jugs"
 excerpt: "I don't have much to say right now"
 ---
 

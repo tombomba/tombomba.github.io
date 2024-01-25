@@ -2,15 +2,15 @@ title: "Bomtomba"
 description: "A media diary, a small collage, a dumb blog"
 
 url: "https://www.bomtomba.com"
+
 cdn:
   css: "https://www.bomtomba.com/assets/css/"
   img: "https://www.bomtomba.com/assets/img/"
 
-author: "Tom Bomba"
-socials: "bomtomba"
-byline:
-  first: "Tom"
-  last: "Bomba"
+author:
+  name: "Tom Bomba"
+  nick: "Tom"
+  socials: "bomtomba"
 
 future: false
 show_drafts: false

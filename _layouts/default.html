@@ -8,7 +8,7 @@
   <base href="{{ site.url }}">
 
   <title>{{ page.title | default: site.title | truncate: 140 | replace: '"', "'" | strip | strip_html | normalize_whitespace | xml_escape }}</title>
-  <meta name="author" content="{{ site.author }}">
+  <meta name="author" content="{{ site.author.name }}">
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip | truncate: 140  | xml_escape }}">
   {% if page.id %}<link rel="canonical" href="{{ page.url | default: '' | absolute_url }}">{% endif -%}
 
@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="{{ page.style | default: 'default' | append: '.css' | prepend: site.cdn.css }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap&text={{ site.title | remove: ' ' | upcase | trim }}" rel="stylesheet">
 
 </head>
 
@@ -39,7 +39,7 @@
 <header role="banner">
   <div class="wrap">
     <div class="text"><h1><a href="{{ site.url }}">{{ site.title }}</a></h1></div>
-    <div class="icon"><div class="shape"><span><a href="{{ site.url }}"></a></span></div></div>
+    <div class="icon"><div class="shape"><a href="{{ site.url }}"><span></span></a></div></div>
   </div>
 </header>
 

@@ -3,12 +3,15 @@
 {% include _titlef-widont.html title=p.title url=p.url is_home=include.is_home -%}
 {% if copy contains '<p><img src=' %}{% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', ' />' %}{% endif -%}
 
+{% assign hedcount = p.title | trim | strip | strip_html | size | times: 1 %}
+{% if hedcount > 40 %}{% assign hedpad = "lg" %}{% endif -%}
+
 <article class="{{ p.layout }}">
     <div class="copy">
 
         <header>
             <h1>{{ titlef }}</h1>
-            <div class="byline"><p><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date_to_long_string }}</time></p>{% if forloop.first or include.is_home==nil %}<p>{{ p.author | default: site.author.name }}</p>{% endif %}</div>
+            <div class="byline {{ hedpad | default: 'md' }}"><p><time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished"> {{ hedcount }} {{ p.date | date_to_long_string }}</time></p>{% if forloop.first or include.is_home==nil %}<p>{{ p.author | default: site.author.name }} </p>{% endif %}</div>
         </header>
 
         {{ copy }}

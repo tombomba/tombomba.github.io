@@ -40,11 +40,6 @@
   <div class="wrap">
     <div class="text"><h1><a href="{{ site.url }}">{{ site.title }}</a></h1></div>
     <div class="icon"><div class="shape"><span><a href="{{ site.url }}"></a></span></div></div>
-    {% if page.date %}
-      <p><a href="{{ page.date | date: '%y' | absolute_url }}">{{ page.date | date: '%Y' }}</a></p>
-    {% else %}
-      <p><a href="{{ site.posts.first.date | date: '%y' | absolute_url }}">{{ site.posts.first.date | date: '%Y' }}</a></p>
-    {% endif -%}
   </div>
 </header>
 
@@ -59,7 +54,7 @@
     <ul>{% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_archive %}<li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>{% endunless %}{% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}<li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li></ul>
   </nav>
   <div class="copydate">
-    <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author }}</p>
+    <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.url | remove: 'https://' | remove: 'http://' | remove: 'www.' | capitalize | trim }}</p>
   </div>
 </footer>
 

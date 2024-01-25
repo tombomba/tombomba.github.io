@@ -3,6 +3,7 @@ header[role="banner"]
   div.wrap
     margin: 0 auto
     height: var(--shim-2x)
+    max-width: var(--page-width)
     display: flex
     flex-flow: row wrap
     align-items: center
@@ -18,10 +19,6 @@ header[role="banner"]
         a:link, a:visited
           text-decoration: none
           color: black
-    p
-      display: none
-      font-size: var(--body-size-sm)
-      line-height: 0.90
     div.icon
       div.shape
         width: var(--shim-p)
@@ -35,16 +32,6 @@ header[role="banner"]
 
   header[role="banner"]
     div.wrap
-      max-width: 100%
       div.text
         h1
           font-size: var(--shim-p)
-      div.logo
-        flex: 1 0 60%
-      div.icon
-        flex: 1 0 20%
-        order: -1
-      p
-        flex: 1 0 20%
-        display: block
-        text-align: right

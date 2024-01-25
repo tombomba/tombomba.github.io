@@ -1,5 +1,4 @@
 ---
-layout: micro
 title: "A short post?"
 excerpt: "I don't have much to say right now"
 ---

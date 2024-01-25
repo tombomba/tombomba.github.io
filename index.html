@@ -6,5 +6,4 @@ permalink: /index.html
 
 {% for p in site.posts limit:7 %}
    {% include detail-{{ p.layout | default: micro }}.html page=p content=p.content is_home=true %}
-   {% unless forloop.last %}<div class="hr break"></div>{% endunless %}
 {% endfor -%}

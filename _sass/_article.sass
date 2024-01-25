@@ -1,6 +1,8 @@
 article
-  margin: var(--buffer) auto
-  max-width: var(--page-width)
+  margin-top: var(--buffer)
+  padding-bottom: var(--buffer)
+  &:not(:last-of-type)
+    border-bottom: thin solid var(--color-hr-top)
 
   h1
     a:link, a:visited
@@ -49,6 +51,10 @@ article
     aspect-ratio: 16/9
     background-clip: content-box
     background-color: var(--color-back)
+
+.copy
+  margin: 0 auto
+  max-width: var(--page-width)
 
 .figpad
     padding-top: var(--nudge)

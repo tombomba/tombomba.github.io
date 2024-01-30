@@ -1,5 +1,5 @@
 ---
-title: "Oppemheimer (2023)"
+title: "Sample Movie Review (2023)"
 ---
 
 The quick brown fox jumps over the lazy dog. Donec ultrices ligula eget quam venenatis, sit amet elementum neque ornare. Nam tincidunt ante eu arcu rhoncus, nec laoreet sem pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut ultrices elit a arcu euismod egestas. Donec maximus ipsum vitae turpis pretium pharetra. Vivamus dignissim vulputate ligula hendrerit vehicula. Sed ac sapien est. Pellentesque nec viverra odio. Praesent ultricies vel leo in porttitor.

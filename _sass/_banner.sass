@@ -12,8 +12,9 @@ header[role="banner"]
       max-width: var(--page-width)
       text-align: center
       h1
-        font-family: 'Oswald', var(--fam-system)
-        font-size: var(--shim-p)
+        font-family: 'Arial Black', var(--fam-system)
+        font-size: var(--shim)
+        font-weight: 900
         line-height: 0.90
         text-transform: uppercase
         a:link, a:visited
@@ -33,13 +34,3 @@ header[role="banner"]
           top: 0
           left: 0
           z-index: 1
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
-  header[role="banner"]
-    div.wrap
-      div.text
-        h1
-          font-size: var(--shim-p)

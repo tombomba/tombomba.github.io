@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Omnes Gallia est divisia tres partes"
 excerpt: "One part of these, which it has been said that the Gauls occupy, takes its beginning at the river Rhone; it is bounded by the river Garonne, the ocean, and the territories of the Belgae; it borders, too, on the side of the Sequani and the Helvetii, upon the river Rhine, and stretches toward the north."
 image:

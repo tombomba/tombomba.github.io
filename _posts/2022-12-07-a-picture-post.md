@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Another picture post without a picture"
 excerpt: "Nulla ac viverra nisi, sed imperdiet felis. Donec ullamcorper eu turpis id finibus."
 ---

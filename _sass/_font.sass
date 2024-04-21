@@ -1,54 +1,14 @@
-//-----------------------------------------------------------------------------
-// font-18
-//-----------------------------------------------------------------------------
-
 \:root
 
-  --fam-serif: Georgia, serif
-  --fam-system: Arial, sans-serif
-  //BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emojibody"
+  --fam-base: sans-serif
+  --fam-system: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"
 
-  --body-size: 1em
-  --body-size-sm: 0.778em
+  --line-height-body: 1.6667
+  --line-height-hed: 1.3333
 
-  --line-height-body: 1.625
-  --line-height-hed: calc(((var(--line-height-body) - 1) / 2) + 1)
+  --body-size: clamp(1rem, 0.8571rem + 0.7143vw, 1.5rem)
+  --body-size-lg: clamp(1.5rem, 1.0714rem + 2.1429vw, 3rem)
+  --body-size-md: clamp(1.125rem, 0.9821rem + 0.7143vw, 1.625rem)
+  --body-size-sm: clamp(0.875rem, 0.7411rem + 0.6696vw, 1.0625rem)
 
-  --hed-size-xs: 1.125em
-  --hed-size-sm: 1.250em
-  --hed-size-md: 1.625em
-  --hed-size-lg: 2.063em
-
-  --page-width: 34em
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 30rem)
-
-  \:root
-
-    --line-height-body: 1.6875
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
-  \:root
-
-    --body-size: 1.125rem
-    --body-size-sm: 0.778em
-    --line-height-body: 1.667
-
-    --hed-size-xs: 1.111em
-    --hed-size-sm: 1.277em
-    --hed-size-md: 1.611em
-    --hed-size-lg: 2.055em
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 60rem)
-
-  \:root
-
-    --line-height-body: 1.83
-    --page-width: 37.389em
+  --page-width: 100%

@@ -1,15 +1,5 @@
 article
-  margin-top: var(--buffer)
-  padding-bottom: var(--buffer)
-  &:not(:last-of-type)
-    border-bottom: thin solid var(--color-hr-top)
-
-  h1
-    a:link, a:visited
-      text-decoration: none
-      color: black
-    a:hover
-      text-decoration: underline
+  max-width: var(--page-width)
 
   h2, h3, h4, h5, h6
     margin-top: var(--shim-n)
@@ -37,9 +27,9 @@ article
     width: auto
     height: auto
     max-width: 100%
-    max-height: 400px
+    max-height: 500px
     background-color: var(--color-back)
-    border-radius: 3px
+    border-radius: 4px
     @extend .clearfix
 
   iframe[src*="https://www.youtube.com"],
@@ -51,10 +41,6 @@ article
     aspect-ratio: 16/9
     background-clip: content-box
     background-color: var(--color-back)
-
-.copy
-  margin: 0 auto
-  max-width: var(--page-width)
 
 .figpad
     padding-top: var(--nudge)

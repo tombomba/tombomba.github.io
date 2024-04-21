@@ -4,6 +4,10 @@ is_home: true
 permalink: /index.html
 ---
 
-{% for p in site.posts limit:7 %}
-   {% include detail-{{ p.layout | default: micro }}.html page=p content=p.content is_home=true %}
-{% endfor -%}
+<article class="home">
+   <ul>
+   {% for p in site.posts limit:7 %}
+      <li><h1><a href="{{ p.url | absolute_url }}">{{ p.title }}</a></h1><p>{{ p.excerpt | strip | strip_html | chop }}</p></li>
+   {% endfor -%}
+   </ul>
+</article>

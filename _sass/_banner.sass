@@ -1,32 +1,29 @@
 header[role="banner"]
-  border-bottom: thin solid var(--color-hr-top)
+  margin-top: var(--buffer)
+  order: 2
   div.wrap
-    margin: 0 auto
-    height: var(--shim-2x)
     max-width: var(--page-width)
-    display: flex
-    flex-flow: row wrap
-    align-items: center
-    justify-content: space-between
-    div.text
-      max-width: var(--page-width)
-      text-align: center
-      h1
-        font-family: 'Arial Black', var(--fam-system)
-        font-size: var(--shim)
-        font-weight: 900
-        line-height: 0.90
-        text-transform: uppercase
-        a:link, a:visited
-          text-decoration: none
-          color: black
+    margin: 0 auto
     div.icon
       position: relative
+      margin-left: -3px
       div.shape
-        width: var(--shim-p)
-        height: var(--shim-p)
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        width: var(--buffer)
+        height: var(--buffer)
         border-radius: 50%
-        background-color: var(--color-logo)
+        background: var(--color-logo)
+        img
+          width: auto
+          height: var(--shim-2x)
+          border-radius: 50%
+        svg
+          width: var(--shim)
+          height: var(--shim)
+          fill: var(--color-shock)
         span
           position: absolute
           width: 100%
@@ -34,3 +31,12 @@ header[role="banner"]
           top: 0
           left: 0
           z-index: 1
+    ul.datelist
+      display: flex
+      list-style-type: none
+      gap: 0.66em
+      margin-top: 1em
+      li
+        font-size: var(--body-size-sm)
+        &.year
+          font-weight: 700

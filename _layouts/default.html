@@ -38,8 +38,7 @@
 
 <header role="banner">
   <div class="wrap">
-    <div class="text"><h1><a href="{{ site.url }}">{{ site.title }}</a></h1></div>
-    <div class="icon"><div class="shape"><a href="{{ site.url }}"><span></span></a></div></div>
+    <div class="icon"><div class="shape"><a href="{{ site.url }}">{% include icon-crossbones-alt.svg %}<span></span></a></div></div>
   </div>
 </header>
 
@@ -48,15 +47,6 @@
   {{ content }}<!-- Copyright {{ site.posts.first.date | date: '%Y' }} {{ site.author.name }} -->
 
 </main>
-
-<footer>
-  <nav>
-    <ul>{% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}{% unless page.is_archive %}<li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>{% endunless %}{% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}<li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li></ul>
-  </nav>
-  <div class="copydate">
-    <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.url | remove: 'https://' | remove: 'http://' | remove: 'www.' | capitalize | trim }}</p>
-  </div>
-</footer>
 
 </body>
 </html>

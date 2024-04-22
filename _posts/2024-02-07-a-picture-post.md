@@ -6,7 +6,7 @@ excerpt: "Nulla ac viverra nisi, sed imperdiet felis. Donec ullamcorper eu turpi
 
 Quisque maximus malesuada ex nec varius. Mauris ac placerat orci, nec pretium leo. Nam tristique mauris sit amet orci elementum dignissim. Aliquam ornare sit amet nisi a pulvinar. Proin leo urna, condimentum vitae.
 
-![alt text here]({{ 'example-4.jpg' | prepend: site.cdn.img }}){: height="400" }
+![alt text here]({{ 'example-4.jpg' | prepend: site.cdn.img }}){: height="500" }
 
 Nulla ac viverra nisi, sed imperdiet felis. Donec ullamcorper eu turpis id finibus. Donec pretium nisi eget enim viverra, quis malesuada nibh consectetur. Sed quis neque eleifend, malesuada orci et, aliquet magna. In tristique felis sed leo vehicula, ut aliquet est accumsan. Sed sed odio ac diam condimentum volutpat. Morbi congue, justo vitae efficitur imperdiet, purus elit elementum lectus, et condimentum purus lacus viverra neque.
 

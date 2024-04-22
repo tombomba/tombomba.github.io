@@ -6,17 +6,25 @@
   --line-height-body: 1.6667
   --line-height-hed: 1.3333
 
-  --body-size: clamp(1rem, 0.8864rem + 0.5682vw, 1.25rem)
-  --body-size-lg: clamp(1.5rem, 0.8182rem + 3.4091vw, 3rem)
-  --body-size-sm: clamp(0.875rem, 0.7614rem + 0.5682vw, 1.125rem)
-  --body-size-xs: clamp(0.875rem, 0.8182rem + 0.2841vw, 1rem)
+  --body-size: clamp(1rem, 0.8661rem + 0.6696vw, 1.1875rem)
+  --body-size-lg: clamp(1.5rem, 0.8304rem + 3.3482vw, 2.4375rem)
+  --body-size-sm: clamp(0.875rem, 0.7411rem + 0.6696vw, 1.0625rem)
+  --body-size-xs: clamp(0.75rem, 0.6161rem + 0.6696vw, 0.9375rem)
 
-  --page-width: 60rem
+  --page-width: 48rem
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  \:root
+    --line-height-body: 1.7
+    --line-height-hed: 1.35
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 48rem)
 
   \:root
-    --line-height-body: 1.7
-    --line-height-hed: 1.35
+    --line-height-body: 1.8
+    --line-height-hed: 1.4

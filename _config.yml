@@ -16,7 +16,7 @@ future: false
 show_drafts: false
 theme: null
 
-permalink: /:short_year/:title:output_ext
+permalink: /:short_year/:month/:title:output_ext
 timezone: America/Los_Angeles
 
 collections:

@@ -6,7 +6,7 @@ permalink: /index.html
 
 <article class="home">
    <ul>
-   {% for p in site.posts limit:7 %}
+   {% for p in site.posts limit:12 %}
       <li><h1><a href="{{ p.url | absolute_url }}">{{ p.title }}</a></h1><p>{{ p.excerpt | strip | strip_html | chop }}</p></li>
    {% endfor -%}
    </ul>

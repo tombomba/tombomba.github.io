@@ -1,4 +1,5 @@
 ---
+layout: micro
 title: "This short post very much yes"
 excerpt: "Pack my box with five dozen liquor jugs"
 ---

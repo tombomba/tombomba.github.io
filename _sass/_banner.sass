@@ -15,10 +15,6 @@ header[role="banner"]
         height: var(--buffer)
         border-radius: 50%
         background: var(--color-logo)
-        img
-          width: auto
-          height: var(--shim-2x)
-          border-radius: 50%
         svg
           width: var(--shim)
           height: var(--shim)
@@ -34,8 +30,11 @@ header[role="banner"]
       display: flex
       list-style-type: none
       gap: 0.66em
-      margin-top: 1em
+      margin-top: var(--shim-n)
       li
+        padding: 0 6px
         font-size: var(--body-size-sm)
-        &.year
-          font-weight: 700
+        border-radius: 6px
+        background-color: var(--color-shade)
+        a:link, a:visited
+          color: var(--color-half)

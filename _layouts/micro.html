@@ -16,6 +16,10 @@ layout: default
   {% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', '/>' %}
 {% endif -%}
 
+{% if copy contains 'https://www.youtube.com' %}
+  {% assign copy = copy | replace: 'https://www.youtube.com', 'https://www.youtube-nocookie.com' %}
+{% endif -%}
+
 {% if page.date %}
   {% capture datef %}<span class="daystamp">&nbsp;(<time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date: '%d %b' }}</time>)</span>{% endcapture -%}
   {% assign copysize = copy | size | minus: 4 -%}
@@ -27,6 +31,6 @@ layout: default
 
 <article class="micro">
 
-    <div class="copy">{{ copy }}</div>
+ {{ copy }}
 
 </article>

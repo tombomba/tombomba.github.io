@@ -30,9 +30,10 @@ article
     max-height: 500px
     background-color: var(--color-back)
     border-radius: 4px
-    @extend .clearfix
     &.first
       margin-top: 0
+    @extend .clearfix
+
 
   iframe[src*="https://www.youtube.com"],
   iframe[src*="https://www.youtube-nocookie.com"],
@@ -43,9 +44,15 @@ article
     aspect-ratio: 16/9
     background-clip: content-box
     background-color: var(--color-back)
+    &.first
+      margin-top: 0
 
 .figpad
     padding-top: var(--nudge)
+    iframe[src*="https://www.youtube.com"],
+    iframe[src*="https://www.youtube-nocookie.com"],
+    iframe[src*="https://player.vimeo.com"]
+      margin-top: 0
     img
       margin-top: 0
 

@@ -1,6 +1,8 @@
-{% assign p = include.page %}
+---
+layout: default
+---
 {% assign copy = include.content | strip | normalize_whitespace %}
-{% include _titlef-punc.html title=p.title url=p.url is_home=include.is_home %}
+{% include _titlef-punc.html title=page.title url=page.url %}
 
 {% assign peek = copy | slice: 0, 50 -%}
 {% if peek contains '<p><img src=' %}
@@ -14,8 +16,8 @@
   {% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', '/>' %}
 {% endif -%}
 
-{% if p.date %}
-  {% capture datef %}<span class="daystamp">&nbsp;({% if forloop.first or include.is_home==nil %}{{ site.author.nick }}, {% endif %}<time datetime="{{ p.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ p.date | date: '%d %b' }}</time>)</span>{% endcapture -%}
+{% if page.date %}
+  {% capture datef %}<span class="daystamp">&nbsp;(<time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date: '%d %b' }}</time>)</span>{% endcapture -%}
   {% assign copysize = copy | size | minus: 4 -%}
   {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
 {% endif -%}
@@ -23,8 +25,8 @@
 {% capture hedbox %}<div class="lede"><h1>{{ titlef }}</h1><p>{% endcapture -%}
 {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
 
-<article class="{{ p.layout }}">
+<article class="micro">
 
-<div class="copy">{{ copy }}</div>
+    <div class="copy">{{ copy }}</div>
 
 </article>

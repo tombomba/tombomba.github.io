@@ -28,11 +28,9 @@
 
   <!-- css -->
   <link rel="stylesheet" href="{{ page.style | default: 'default' | append: '.css' | prepend: site.cdn.css }}">
-  {% if page.is_home %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap&text={{ site.title | strip | normalize_whitespace | capitalize | remove: ' ' }}" rel="stylesheet">
-  {% endif -%}
+  <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">
 
 </head>
 

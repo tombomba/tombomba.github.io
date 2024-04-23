@@ -21,6 +21,20 @@ article.post
         &:nth-child(2)::before
           content: '\00A0\/\00A0'
 
+article.micro
+  div.lede
+    h1, p
+      display: inline
+      font-size: 1em
+    h1::after
+      content: '\20'
+    span.punc::after
+      content: '.'
+  .daystamp,
+  .byline
+    font-style: italic
+    color: var(--color-half)
+
 article.home
   ul.posts
     margin: 0

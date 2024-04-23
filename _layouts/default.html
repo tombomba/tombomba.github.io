@@ -51,7 +51,7 @@
 
 <footer class="{% if page.is_home %}home{% elsif page.is_post %}post{% else %}page{% endif %}">
   {% if page.is_home %}
-  <p>TKTK</p>
+  {% include _datelist.html %}
   {% else -%}
   <div class="icon"><div class="shape"><a href="{{ site.url }}">{% include icon-crossbones-alt.svg %}<span></span></a></div></div>
   {% endif %}

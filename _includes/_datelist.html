@@ -2,7 +2,6 @@
 {% assign curr_year = site.posts.first.date | date: '%Y' %}
 
 <ul class="datelist">
-  <li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>
 {% for group in posts_by_year reversed %}
   {% assign d = group.name | split: ' ' -%}
   {% assign month = d[0] -%}

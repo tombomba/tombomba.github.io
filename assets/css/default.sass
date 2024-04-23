@@ -3,26 +3,7 @@
 ---
 
 @charset "utf-8"
-@import reset, font, shim, color, body, banner, article
-
-article.home
-  ul.posts
-    margin: 0
-    list-style-type: none
-    li
-      margin: 0
-      h1, p
-        display: inline
-      h1
-        font-size: 1em
-        line-height: var(--line-height-hed)
-        &::after
-          content: "\00A0\2014\00A0"
-          color: var(--color-half)
-      p
-        margin: 0
-      &:not(:first-of-type)
-        margin-top: var(--shim)
+@import reset, font, shim, color, body, banner, article, footer
 
 article.post
   header
@@ -39,6 +20,25 @@ article.post
         color: var(--color-half)
         &:nth-child(2)::before
           content: '\00A0\/\00A0'
+
+article.home
+  ul.posts
+    margin: calc(var(--buffer) - var(--nudge)) 0 0
+    list-style-type: none
+    li
+      margin: 0
+      h1, p
+        display: inline
+      h1
+        font-size: 1em
+        line-height: var(--line-height-hed)
+        &::after
+          content: "\00A0\2014\00A0"
+          color: var(--color-half)
+      p
+        margin: 0
+      &:not(:first-of-type)
+        margin-top: var(--shim)
 
 article.archive
   section

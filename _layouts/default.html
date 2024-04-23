@@ -36,15 +36,26 @@
 
 <body>
 
+{% if page.is_home %}
 <header role="banner">
+  <div class="text"><h1>{{ site.title }}</h1></div>
   <div class="icon"><div class="shape"><a href="{{ site.url }}">{% include icon-crossbones-alt.svg %}<span></span></a></div></div>
 </header>
+{% endif -%}
 
 <main role="main">
 
   {{ content }}<!-- Copyright {{ site.posts.first.date | date: '%Y' }} {{ site.author.name }} -->
 
 </main>
+
+<footer class="{% if page.is_home %}home{% elsif page.is_post %}post{% else %}page{% endif %}">
+  {% if page.is_home %}
+  <p>TKTK</p>
+  {% else -%}
+  <div class="icon"><div class="shape"><a href="{{ site.url }}">{% include icon-crossbones-alt.svg %}<span></span></a></div></div>
+  {% endif %}
+</footer>
 
 </body>
 </html>

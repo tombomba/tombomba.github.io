@@ -28,9 +28,11 @@
 
   <!-- css -->
   <link rel="stylesheet" href="{{ page.style | default: 'default' | append: '.css' | prepend: site.cdn.css }}">
+  {% if page.is_home %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap&text={{ site.title | strip | normalize_whitespace | capitalize | remove: ' ' }}" rel="stylesheet">
+  {% endif -%}
 
 </head>
 
@@ -39,7 +41,7 @@
 <header role="banner">
   <div class="wrap">
   {% if page.is_home %}
-  <div class="text"><h1><a href="{{ site.url }}">All You Zombies</a></h1></div>
+  <div class="text"><h1><a href="{{ site.url }}">{{ site.title }}</a></h1></div>
   {% include _datelist.html %}
   {% else -%}
   <div class="icon"><div class="shape"><a href="{{ site.url }}">{% include icon-crossbones-alt.svg %}<span></span></a></div></div>

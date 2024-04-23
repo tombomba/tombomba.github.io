@@ -1,0 +1,7 @@
+{% assign peek = copy | slice: 0, 50 -%}
+{% if peek contains '<p><img src=' %}
+  {% assign copy = copy | replace_first: '<p><img src=', '<div class="figpad"><img src=' | replace: ' /></p>', ' /></div>' %}
+{% endif -%}
+{% if peek contains '<iframe ' %}
+  {% assign copy = copy | replace_first: '<iframe ', '<div class="figpad"><iframe ' | replace_first: '</iframe>', '</iframe></div>' %}
+{% endif -%}

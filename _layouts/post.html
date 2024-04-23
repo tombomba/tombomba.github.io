@@ -1,4 +1,21 @@
 ---
 layout: default
 ---
-wtf
+{% assign copy = content | strip | normalize_whitespace %}
+{% include _titlef-widont.html title=page.title -%}
+{% if copy contains '<p><img src=' %}{% assign copy = copy | replace: '<p><img src=', '<img src=' | replace: '/></p>', ' />' %}{% endif -%}
+
+<article class="post">
+
+    <header>
+        <h1>{{ titlef }}</h1>
+        <div class="byline">
+            <p><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
+            <p>{{ page.author | default: site.author.name }}</p>
+        </div>
+    </header>
+
+    {{ copy }}
+
+</article>
+

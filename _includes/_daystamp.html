@@ -1,1 +1,0 @@
-<p class="{% if include.is_home %}dotstamp{% else %}daystamp{% endif %}"><time datetime="{{ include.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{% if include.is_home %}<span class="emoji"><a href="{{ include.url | absolute_url }}" aria-label="Permanent link to this entry">🔗</span></a>{% else %}{{ include.date | date_to_string }}{% endif %}</time></p>

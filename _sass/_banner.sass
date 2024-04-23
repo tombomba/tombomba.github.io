@@ -1,53 +1,80 @@
 header[role="banner"]
-  display: flex
-  align-items: center
-  justify-content: flex-start
-  gap: 0.66em
-  div.text
-    h1
-      font-family: 'Jacquard 24', cursive
-      font-size: var(--body-size-xl)
-      font-weight: 400
-      line-height: 0.95
-      letter-spacing: -1px
-      color: var(--color-logo)
-      text-shadow: -2px 2px var(--color-shock)
-  div.icon
-    order: -1
-    position: relative
-    margin-left: -3px
-    div.shape
+  order: 2
+  div.wrap
+    margin-top: var(--buffer)
+    div.text
+      h1
+        font-family: 'Jacquard 24', cursive
+        font-size: var(--body-size-xl)
+        font-weight: 400
+        line-height: 0.95
+        letter-spacing: -1px
+        color: var(--color-logo)
+        a:link, a:visited
+          color: var(--color-logo)
+          text-shadow: -2px 2px var(--color-shock)
+        a:hover
+          text-decoration: none
+    div.icon
+      position: relative
+      margin-left: -3px
+      div.shape
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        width: var(--buffer)
+        height: var(--buffer)
+        border-radius: 50%
+        background: var(--color-logo)
+        svg
+          width: var(--shim)
+          height: var(--shim)
+          fill: var(--color-shock)
+        span
+          position: absolute
+          width: 100%
+          height: 100%
+          top: 0
+          left: 0
+          z-index: 1
+    ul.datelist
+      margin: 1em 0 0
       display: flex
-      flex-direction: column
       align-items: center
-      justify-content: center
-      width: var(--buffer)
-      height: var(--buffer)
-      border-radius: 50%
-      background: var(--color-logo)
-      svg
-        width: var(--shim)
-        height: var(--shim)
-        fill: var(--color-shock)
-      span
-        position: absolute
-        width: 100%
-        height: 100%
-        top: 0
-        left: 0
-        z-index: 1
+      justify-content: flex-start
+      gap: 0.66em
+      list-style-type: none
+      color: var(--color-half)
+      li
+        padding: 0 var(--nudge)
+        font-size: var(--body-size)
+        border-radius: 6px
+        a:link, a:visited
+          text-decoration: none
+          color: var(--color-half)
+        a:hover
+          text-decoration: underline
+        background-color: var(--color-shade)
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 30rem)
 
   header[role="banner"]
-    div.icon
-      margin-left: -3px
+    div.wrap
+      div.text,
+      div.icon
+        margin-left: -3px
 
 //-----------------------------------------------------------------------------
 
 @media screen and (min-width: 50rem)
+
   header[role="banner"]
-    div.icon
-      margin-left: -6px
+    div.wrap
+      div.icon
+        margin-left: -6px
+      ul.datelist
+        li
+          font-size: var(--body-size-sm)

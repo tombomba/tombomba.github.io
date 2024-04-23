@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="{{ page.style | default: 'default' | append: '.css' | prepend: site.cdn.css }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap&text={{ site.title | remove: ' ' | upcase | trim }}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">
 
 </head>
 
@@ -38,8 +38,7 @@
 
 {% if page.is_home %}
 <header role="banner">
-  <div class="text"><h1>{{ site.title }}</h1></div>
-  <div class="icon"><div class="shape"><a href="{{ site.url }}">{% include icon-crossbones-alt.svg %}<span></span></a></div></div>
+  <div class="text"><h1>All You Zombies</h1></div>
 </header>
 {% endif -%}
 

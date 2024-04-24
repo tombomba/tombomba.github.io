@@ -45,8 +45,10 @@ article.home
         display: inline
       h1
         font-size: 1em
+        line-height: var(--line-height-hed)
         &::after
-          content: '\0020'
+          content: "\00A0\2014\00A0"
+          color: var(--color-half)
       p
         margin: 0
       &:not(:first-of-type)
@@ -73,13 +75,3 @@ article.error
     margin-top: var(--shim-n)
     list-style-type: disc
     color: var(--color-half)
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 30rem)
-
-  article.home
-    ul.posts
-      li
-        h1, p
-          display: block

@@ -45,6 +45,24 @@ article.home
         margin: 0
         font-size: var(--body-size-xx)
         line-height: 1.666666666666667
+  ul.datelist
+    margin: var(--shim) 0 0
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    gap: 0.66em
+    list-style-type: none
+    color: var(--color-half)
+    li
+      padding: 0 var(--nudge)
+      font-size: var(--body-size)
+      border-radius: 6px
+      a:link, a:visited
+        text-decoration: none
+        color: var(--color-half)
+      a:hover
+        text-decoration: underline
+      background-color: var(--color-shade)
 
 article.archive
   section

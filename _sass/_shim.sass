@@ -1,14 +1,5 @@
 \:root
 
-    --shim: calc(var(--line-height-body) * 1em)
-    --shim-2x: calc(var(--shim) * 2)
-    --shim-3x: calc(var(--shim) * 3)
-    --shim-4x: calc(var(--shim) * 4)
-
-    --nudge: calc(((var(--line-height-body) - 1) / 2) * 1em)
-    --nudge-2x: calc((var(--line-height-body) - 1) * 1em)
-
-    --shim-n: calc(var(--shim) - var(--nudge))
-    --shim-p: calc(var(--shim) + var(--nudge))
-    --buffer: calc(var(--shim-n) * 2)
-    --buffer-2x: calc(var(--shim-n) * 4)
+    --shim: calc(1em + 0.75rem)
+    --buffer: calc(var(--shim) * 2)
+    --nudge: calc(var(--shim) / 2)

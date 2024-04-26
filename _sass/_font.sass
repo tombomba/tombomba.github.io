@@ -2,12 +2,18 @@
 
   --fam-base: Georgia, serif
 
+  --body-size: 1rem
+
+  --shim: calc(1em + 0.75rem)
+  --buffer: calc(var(--shim) * 2)
+  --nudge: calc(var(--shim) / 4)
+
   --line-height-body: 1.6875
   --line-height-hed: 1.34375
 
-  --body-size: 1rem
-  --body-size-lg: clamp(1.5rem, 1.125rem + 1.875vw, 2.25rem)
-  --body-size-sm: 0.875em
+  --body-size-xx: clamp(1.25rem, 1.1rem + 0.6667vw, 1.5rem)
+  --body-size-lg: clamp(1.5rem, 0.8934rem + 2.6961vw, 2.1875rem)
+  --body-size-sm: 0.875rem
 
   --page-width: 34rem
 
@@ -17,11 +23,11 @@
 
   \:root
 
-    --line-height-body: 1.66
-    --line-height-hed: 1.33
-
     --body-size: 1.0625rem
     --body-size-sm: 0.9375rem
+
+    --line-height-body: 1.705882352941176
+    --line-height-hed: 1.352941176470588
 
     --page-width: 36rem
 
@@ -32,24 +38,21 @@
 
   \:root
 
-    --line-height-body: 1.83
-    --line-height-hed: 1.415
+    --body-size: 1.1125rem
+    --body-size-sm: 0.9375rem
 
-    --body-size: 1.125rem
-    --body-size-sm: 1rem
+    --line-height-body: 1.8
+    --line-height-hed: 1.4
 
     --page-width: 42.0625rem
 
 //-----------------------------------------------------------------------------
 
-@media screen and (min-width: 60rem) // 19
+@media screen and (min-width: 64rem) // 19
 
   \:root
 
-    --line-height-body: 1.8
-    --line-height-hed: 1.4
-
     --body-size: 1.1875rem
-    --body-size-sm: 1.0625rem
+    --body-size-sm: 1.125rem
 
     --page-width: 45.75rem

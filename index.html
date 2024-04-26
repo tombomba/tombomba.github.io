@@ -7,8 +7,16 @@ permalink: /index.html
 <article class="home">
    <ul class="posts">
    {% for p in site.posts limit:12 %}
-   <li><h1><a href="{{ p.url | absolute_url }}">{{ p.title }}</a></h1><p>{{ p.excerpt | strip | strip_html | chop }}</p></li>
-   {% endfor -%}
-   <li><h1><a href="{{ 'archive' | absolute_url }}">Archive</a></h1><p>A short list of previous entries.</p></li>
+      <li>
+      {% assign blurb = p.excerpt | strip | strip_html | normalize_whitespace -%}
+      {% if p.linkwords %}
+        {% assign keyphrase = p.linkwords | strip | strip_html | normalize_whitespace %}
+      {% else -%}
+        {% assign keyphrase = blurb | truncatewords: 3, '' %}
+      {% endif -%}
+      {% capture link %}<a href="{{ p.url | prepend: site.url }}">{{ keyphrase }}</a>{% endcapture %}
+      <p>{{ blurb | replace_first: keyphrase, link | smartify }}</p>
+      </li>
+   {% endfor %}
    </ul>
 </article>

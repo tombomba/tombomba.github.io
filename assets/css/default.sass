@@ -13,7 +13,7 @@ article.post
     .byline
       display: flex
       flex-flow: row-wrap
-      margin-top: 1.3em
+      margin-top: var(--shim)
       p
         margin: 0
         font-size: var(--body-size-sm)
@@ -30,29 +30,21 @@ article.micro
       content: '\20'
     span.punc::after
       content: '.'
-  .daystamp,
   .byline
-    font-style: italic
     color: var(--color-half)
 
 article.home
+  --page-width: 60rem
   ul.posts
     margin: 0
     list-style-type: none
     li
-      margin: 0
-      h1, p
-        display: inline
-      h1
-        font-size: 1em
-        line-height: var(--line-height-hed)
-        &::after
-          content: "\00A0\2014\00A0"
-          color: var(--color-half)
+      &:not(:first-of-type)
+        margin-top: var(--shim)
       p
         margin: 0
-      &:not(:first-of-type)
-        margin-top: var(--shim-n)
+        font-size: var(--body-size-xx)
+        line-height: 1.666666666666667
 
 article.archive
   section

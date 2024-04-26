@@ -2,7 +2,7 @@
 layout: micro
 title: "Star Wars trailer thing"
 excerpt: "The Acolyte starring Blah, Blah, and Blah."
-linkwords: "and Blah"
+linkwords: "starring Blah"
 ---
 
 <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/8AbtCE-sePc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

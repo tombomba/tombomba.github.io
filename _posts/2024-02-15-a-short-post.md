@@ -1,7 +1,8 @@
 ---
 layout: micro
 title: "This short post very much yes"
-excerpt: "Pack my box with five dozen liquor jugs"
+excerpt: "Pack my box with five dozen \"liquor jugs\"!"
+linkwords: "my box"
 ---
 ![alt text here]({{ 'example-3.jpg' | prepend: site.cdn.img }}){: height="500" .first }
 

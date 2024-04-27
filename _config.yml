@@ -16,6 +16,29 @@ future: false
 show_drafts: false
 theme: null
 
+plugins:
+  - jekyll-optional-front-matter
+  - jekyll-titles-from-headings
+  - jekyll-sitemap
+  - jekyll-feed
+
+optional_front_matter:
+  remove_originals: true
+
+titles_from_headings:
+  enabled:     true
+  strip_title: false
+  collections: false
+
+sass:
+  style: compressed
+  sass_dir: _sass
+
+markdown: kramdown
+kramdown:
+  auto_ids: false
+  smart_quotes: [lsquo,rsquo,ldquo,rdquo]
+
 permalink: /:short_year/:title:output_ext
 timezone: America/Los_Angeles
 
@@ -28,7 +51,6 @@ collections:
     collections_dir: _pages
     output: true
     permalink: "/:path/"
-
 
 defaults:
   -
@@ -52,20 +74,6 @@ defaults:
     values:
       layout: post
       is_post: true
-
-
-markdown: kramdown
-kramdown:
-  auto_ids: false
-  smart_quotes: [lsquo,rsquo,ldquo,rdquo]
-
-sass:
-  style: compressed
-  sass_dir: _sass
-
-plugins:
-  - jekyll-sitemap
-  - jekyll-feed
 
 exclude:
   - Gemfile

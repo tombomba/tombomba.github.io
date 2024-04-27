@@ -15,7 +15,7 @@ permalink: /index.html
         {% assign keyphrase = blurb | truncatewords: 3, '' %}
       {% endif -%}
       {% capture link %}<a href="{{ p.url | prepend: site.url }}">{{ keyphrase }}</a>{% endcapture %}
-      <p>{{ blurb | replace_first: keyphrase, link | smartify }}</p>
+      <p>{{ blurb | replace_first: keyphrase, link | smartify }} [{{ p.title }}]</p>
       </li>
    {% endfor %}
    </ul>

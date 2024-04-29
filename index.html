@@ -8,15 +8,8 @@ permalink: /index.html
    <ul class="posts">
    {% for p in site.posts limit:12 %}
       <li>
-      {% assign blurb = p.excerpt | strip | strip_html | normalize_whitespace -%}
-      {% if p.linkwords %}
-        {% assign keyphrase = p.linkwords | strip | strip_html | normalize_whitespace %}
-      {% else -%}
-        {% assign keyphrase = blurb | truncatewords: 3, '' %}
-      {% endif -%}
-      {% capture link %}<a href="{{ p.url | prepend: site.url }}">{{ keyphrase }}</a>{% endcapture %}
-      <p class="dstamp">{{ p.date | date_to_string }}</p>
-      <p>{{ blurb | replace_first: keyphrase, link | smartify }}</p>
+      <h1><a href="{{ p.url | absolute_url }}">{{ p.title | strip | strip_html | normalize_whitespace | smartify }}</a></h1>
+      <p>{{ p.excerpt | strip | strip_html | normalize_whitespace | smartify }}</p>
       </li>
    {% endfor %}
    </ul>

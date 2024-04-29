@@ -11,7 +11,6 @@ article.post
     flex-direction: column
     h1
       font-size: var(--body-size-lg)
-      font-weight: 400
       line-height: var(--line-height-hed)
     .byline
       order: -1
@@ -19,22 +18,11 @@ article.post
       flex-flow: row-wrap
       p
         margin: 0
+        font-family: var(--fam-system)
         font-size: var(--body-size-sm)
         color: var(--color-half)
         &:nth-child(2)::before
           content: '\00A0\/\0020'
-
-article.micro
-  div.lede
-    h1, p
-      display: inline
-      font-size: 1em
-    h1::after
-      content: '\20'
-    span.punc::after
-      content: '.'
-  .byline
-    color: var(--color-half)
 
 article.home
   ul.posts
@@ -44,12 +32,11 @@ article.home
       margin-top: var(--shim)
       &:first-of-type
         margin: 0
+      h1
+        font-size: 1em
       p
         margin: 0
-        &.dstamp
-          font-size: var(--body-size-sm)
-          text-transform: uppercase
-          color: var(--color-half)
+
 
 article.archive
   section

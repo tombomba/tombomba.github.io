@@ -1,12 +1,10 @@
 source "https://rubygems.org"
 gem "github-pages", group: :jekyll_plugins
 group :jekyll_plugins do
-    gem "webrick"
-    gem "jekyll-sitemap", "~> 1.2"
+    gem 'webrick', '~> 1.8', '>= 1.8.1'
+    gem 'jekyll-titles-from-headings'
     gem "jekyll-feed", "~> 0.12"
-    gem "nokogiri", ">= 1.12.5"
-    gem "jekyll-optional-front-matter"
-    gem "jekyll-titles-from-headings"
+    gem "jekyll-sitemap"
 end
 platforms :mingw, :x64_mingw, :mswin, :jruby do
     gem "tzinfo", ">= 1", "< 3"

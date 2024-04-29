@@ -39,7 +39,6 @@
     {% if page.is_home or page.is_page %}
     <div class="text">
       <div class="logotype"><h1><a href="{{ site.url }}">{{ site.url | remove: 'https' | remove: 'http' | remove: 'www.' | remove: '://' | capitalize }}</a></h1><p>&ldquo;{{ site.description }}&rdquo;</p></div>
-      <p>By {{ site.author.name }}</p>
       <p>Last updated {{ site.posts.first.date | date_to_long_string }}</p>
     </div>
     {% endif %}

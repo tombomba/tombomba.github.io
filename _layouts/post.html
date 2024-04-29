@@ -11,7 +11,7 @@ layout: default
     <header>
         <h1>{{ titlef }}</h1>
         <div class="byline">
-            <p><time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
+            <p><time datetime="{{ page.date | date: " %FT%T%:z" }}">{{ page.date | date_to_string }}</time></p>
             <p>{{ page.author | default: site.author.name }}</p>
         </div>
     </header>

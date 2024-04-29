@@ -7,19 +7,22 @@
 
 article.post
   header
+    display: flex
+    flex-direction: column
     h1
       font-size: var(--body-size-lg)
+      font-weight: 400
       line-height: var(--line-height-hed)
     .byline
+      order: -1
       display: flex
       flex-flow: row-wrap
-      margin-top: var(--shim)
       p
         margin: 0
         font-size: var(--body-size-sm)
         color: var(--color-half)
         &:nth-child(2)::before
-          content: '\00A0\/\00A0'
+          content: '\00A0\/\0020'
 
 article.micro
   div.lede
@@ -34,17 +37,15 @@ article.micro
     color: var(--color-half)
 
 article.home
-  --page-width: 60rem
   ul.posts
     margin: 0
     list-style-type: none
     li
-      &:not(:first-of-type)
-        margin-top: var(--shim)
+      margin-top: var(--shim)
+      &:first-of-type
+        margin: 0
       p
         margin: 0
-        font-size: var(--body-size-xx)
-        line-height: 1.666666666666667
 
 article.archive
   section

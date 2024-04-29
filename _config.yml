@@ -17,7 +17,6 @@ show_drafts: false
 theme: null
 
 plugins:
-  - jekyll-optional-front-matter
   - jekyll-titles-from-headings
   - jekyll-sitemap
   - jekyll-feed
@@ -28,7 +27,7 @@ optional_front_matter:
 titles_from_headings:
   enabled:     true
   strip_title: false
-  collections: false
+  collections: true
 
 sass:
   style: compressed
@@ -73,6 +72,7 @@ defaults:
       type: posts
     values:
       layout: post
+      strip_title: true
       is_post: true
 
 exclude:

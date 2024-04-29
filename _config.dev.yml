@@ -7,6 +7,3 @@ cdn:
   css: "http://localhost:4000/assets/css/"
   img: "http://localhost:4000/assets/img/"
 
-safe: true
-future: true
-show_drafts: false

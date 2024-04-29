@@ -11,11 +11,6 @@ header[role="banner"]
         a:link, a:visited
           text-decoration: none
           color: var(--color-half)
-      div.logotype
-        h1, p
-          display: inline
-        h1::after
-          content: ':\0020'
     div.icon
       position: relative
       margin-left: -2px
@@ -39,3 +34,16 @@ header[role="banner"]
           top: 0
           left: 0
           z-index: 1
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  header[role="banner"]
+    div.wrap
+      div.text
+        div.logotype
+          h1, p
+            display: inline
+          h1::after
+            content: ':\0020'

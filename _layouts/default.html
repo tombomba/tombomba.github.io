@@ -36,10 +36,12 @@
 <header role="banner">
   <div class="wrap">
     <div class="icon"><div class="shape"><a href="{{ site.url }}">{% include icon-crossbones-alt.svg %}<span></span></a></div></div>
+    {% if page.is_home or page.is_page %}
     <div class="text">
-      <h1><a href="{{ site.url }}">{{ site.url | remove: 'https' | remove: 'http' | remove: 'www.' | remove: '://' | capitalize }}:</a> &ldquo;{{ site.description }}&rdquo;</h1>
+      <div class="logotype"><h1><a href="{{ site.url }}">{{ site.url | remove: 'https' | remove: 'http' | remove: 'www.' | remove: '://' | capitalize }}</a></h1><p>&ldquo;{{ site.description }}&rdquo;</p></div>
       <p>Last updated {{ site.posts.first.date | date_to_long_string }}</p>
     </div>
+    {% endif %}
   </div>
 </header>
 
@@ -52,9 +54,9 @@
 {% if page.is_home or page.is_page %}
 <footer>
   <ul>
+    <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
     {% unless page.is_archive %}<li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>{% endunless %}
     {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}
-    <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
   </ul>
 </footer>
 {% endif %}

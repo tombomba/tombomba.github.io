@@ -7,12 +7,18 @@ header[role="banner"]
       margin-top: var(--shim)
       h1, p
         font-size: var(--body-size-sm)
-        font-weight: 400
         color: var(--color-half)
         a:link, a:visited
+          text-decoration: none
           color: var(--color-half)
+      div.logotype
+        h1, p
+          display: inline
+        h1::after
+          content: ':\0020'
     div.icon
       position: relative
+      margin-left: -2px
       div.shape
         display: flex
         flex-direction: column

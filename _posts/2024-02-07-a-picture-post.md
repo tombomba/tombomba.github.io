@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Another picture post with a picture"
 ---
 

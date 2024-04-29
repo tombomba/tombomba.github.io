@@ -36,6 +36,10 @@
 <header role="banner">
   <div class="wrap">
     <div class="icon"><div class="shape"><a href="{{ site.url }}">{% include icon-crossbones-alt.svg %}<span></span></a></div></div>
+    <div class="text">
+      <h1><a href="{{ site.url }}">{{ site.url | remove: 'https' | remove: 'http' | remove: 'www.' | remove: '://' | capitalize }}:</a> &ldquo;{{ site.description }}&rdquo;</h1>
+      <p>Last updated {{ site.posts.first.date | date_to_long_string }}</p>
+    </div>
   </div>
 </header>
 
@@ -47,10 +51,6 @@
 
 {% if page.is_home or page.is_page %}
 <footer>
-  <div class="text">
-    <h1><a href="{{ site.url }}">{{ site.url | remove: 'https' | remove: 'http' | remove: 'www.' | remove: '://' | capitalize }}:</a> &ldquo;{{ site.description }}&rdquo;</h1>
-    <p>Last updated {{ site.posts.first.date | date_to_long_string }}</p>
-  </div>
   <ul>
     {% unless page.is_archive %}<li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>{% endunless %}
     {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}

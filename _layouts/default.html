@@ -45,9 +45,10 @@
 
 </main>
 
+{% if page.is_home or page.is_page %}
 <footer>
   <div class="text">
-    <h1><a href="{{ site.url }}">{{ site.url | remove: 'https' | remove: 'http' | remove: 'www' | remove: '://' | capitalize }}:</a> &ldquo;{{ site.description }}&rdquo;</h1>
+    <h1><a href="{{ site.url }}">{{ site.url | remove: 'https' | remove: 'http' | remove: 'www.' | remove: '://' | capitalize }}:</a> &ldquo;{{ site.description }}&rdquo;</h1>
     <p>Last updated {{ site.posts.first.date | date_to_long_string }}</p>
   </div>
   <ul>
@@ -56,6 +57,7 @@
     <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
   </ul>
 </footer>
+{% endif %}
 
 </body>
 </html>

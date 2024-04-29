@@ -1,7 +1,8 @@
 header[role="banner"]
+  order: 1
   margin-top: var(--buffer)
-  order: 2
   div.wrap
+    margin-left: -3px
     div.icon
       position: relative
       div.shape
@@ -24,13 +25,3 @@ header[role="banner"]
           top: 0
           left: 0
           z-index: 1
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
-  header[role="banner"]
-    div.wrap
-      ul.datelist
-        li
-          font-size: var(--body-size-sm)

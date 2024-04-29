@@ -1,44 +1,23 @@
 footer
-  margin-top: var(--buffer)
-  div.icon
-  position: relative
-  margin-left: -3px
-  div.shape
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: center
-    width: var(--buffer)
-    height: var(--buffer)
-    border-radius: 50%
-    background: var(--color-logo)
-    svg
-      width: var(--shim)
-      height: var(--shim)
-      fill: var(--color-shock)
-    span
-      position: absolute
-      width: 100%
-      height: 100%
-      top: 0
-      left: 0
-      z-index: 1
-  ul.datelist
+  order: 2
+  margin-top: var(--shim)
+  ul
     &:not(:first-of-type)
       margin-top: 1em
     display: flex
     align-items: center
     justify-content: flex-start
-    gap: 0.66em
+    gap: 0.8em
+    margin: 0
     list-style-type: none
     color: var(--color-half)
     li
       padding: 0 var(--nudge)
-      font-size: var(--body-size)
+      font-size: var(--body-size-sm)
       border-radius: 6px
+      background-color: var(--color-shade)
       a:link, a:visited
         text-decoration: none
         color: var(--color-half)
       a:hover
         text-decoration: underline
-      background-color: var(--color-shade)

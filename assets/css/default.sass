@@ -34,6 +34,7 @@ article.home
         margin: 0
         font-size: 1em
         font-weight: 400
+        color: var(--color-text)
       h1::after
         content: '\0020'
 
@@ -65,8 +66,9 @@ article.error
 @media screen and (min-width: 40rem)
 
   article.home
-    ul.posts li
-      h1::after
-        content: '\00A0\2014\00A0'
-        font-weight: 100
-        color: var(--color-half)
+    ul.posts
+      li
+        h1::after
+          content: '\00A0\2014\00A0'
+          font-weight: 100
+          color: var(--color-half)

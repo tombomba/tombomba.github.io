@@ -7,18 +7,15 @@
 
 article.post
   header
-    display: flex
-    flex-direction: column
     h1
       font-size: var(--body-size-lg)
       line-height: var(--line-height-hed)
     .byline
-      order: -1
       display: flex
       flex-flow: row-wrap
+      margin-top: var(--shim)
       p
         margin: 0
-        font-family: var(--fam-system)
         font-size: var(--body-size-sm)
         color: var(--color-half)
         &:nth-child(2)::before
@@ -32,10 +29,13 @@ article.home
       margin-top: var(--shim)
       &:first-of-type
         margin: 0
-      h1
-        font-size: 1em
-      p
+      h1, p
+        display: inline
         margin: 0
+        font-size: 1em
+        font-weight: 400
+      h1::after
+        content: '\0020'
 
 
 article.archive
@@ -59,3 +59,14 @@ article.error
     margin-top: var(--shim-n)
     list-style-type: disc
     color: var(--color-half)
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 40rem)
+
+  article.home
+    ul.posts li
+      h1::after
+        content: '\00A0\2014\00A0'
+        font-weight: 100
+        color: var(--color-half)

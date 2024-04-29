@@ -6,14 +6,24 @@
   --buffer: calc(var(--shim) * 2)
   --nudge: calc(var(--shim) / 4)
 
-  --body-size: 1.0625rem
+  --body-size: 1rem
   --body-size-lg: clamp(1.5rem, 1.114rem + 1.7157vw, 1.9375rem)
   --body-size-sm: clamp(0.8125rem, 0.7022rem + 0.4902vw, 0.9375rem)
 
-  --line-height-body: 1.647058823529412
-  --line-height-hed: 1.323529411764706
+  --line-height-body: 1.625
+  --line-height-hed: 1.3125
 
   --page-width: 48rem
+
+//-----------------------------------------------------------------------------
+
+@media screen and (min-width: 30rem) // 17
+
+  \:root
+
+    --body-size: 1.0625rem
+    --line-height-body: 1.647058823529412
+    --line-height-hed: 1.323529411764706
 
 //-----------------------------------------------------------------------------
 

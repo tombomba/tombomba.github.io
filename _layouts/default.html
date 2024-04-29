@@ -28,6 +28,9 @@
 
   <!-- css -->
   <link rel="stylesheet" href="{{ page.style | default: 'default' | append: '.css' | prepend: site.cdn.css }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">
 
 </head>
 
@@ -36,7 +39,6 @@
 <header role="banner">
   <div class="wrap">
     <div class="icon"><div class="shape"><a href="{{ site.url }}">{% include icon-crossbones-alt.svg %}<span></span></a></div></div>
-    {% if page.is_home %}{% include _datelist.html %}{% endif %}
   </div>
 </header>
 

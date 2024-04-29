@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Lorem ipsum dolor sit amet, consec tetur adipiscing elit"
 linkwords: "In gravida est dolor"
 ---

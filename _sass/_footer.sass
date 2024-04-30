@@ -3,10 +3,16 @@ footer
   margin-top: var(--shim)
   ul
     display: flex
-    gap: 0.8em
+    gap: var(--nudge)
     list-style-type: none
     color: var(--color-half)
     li
+      padding: 0 var(--spacer)
       font-size: var(--body-size-sm)
+      background-color: var(--color-shade)
+      border-radius: 6px
       a:link, a:visited
+        text-decoration: none
         color: var(--color-half)
+      a:hover
+        text-decoration: underline

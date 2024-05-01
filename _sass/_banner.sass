@@ -1,48 +1,14 @@
 header[role="banner"]
-  order: 1
-  margin-top: var(--buffer)
-  div.wrap
-    div.text
-      margin-top: var(--nudge)
-      h1, p
-        font-size: var(--body-size-sm)
-        color: var(--color-half)
-        a:link, a:visited
-          text-decoration: none
-          color: var(--color-half)
-    div.icon
-      position: relative
-      margin-left: -3px
-      div.shape
-        display: flex
-        flex-direction: column
-        align-items: center
-        justify-content: center
-        width: var(--buffer)
-        height: var(--buffer)
-        border-radius: 50%
-        background: var(--color-logo)
-        svg
-          width: var(--shim)
-          height: var(--shim)
-          fill: var(--color-shock)
-        span
-          position: absolute
-          width: 100%
-          height: 100%
-          top: 0
-          left: 0
-          z-index: 1
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem)
-
-  header[role="banner"]
-    div.wrap
-      div.text
-        div.logotype
-          h1, p
-            display: inline
-          h1::after
-            content: ':\0020'
+  margin: 0 auto
+  width: 100%
+  max-width: var(--page-width)
+  h1
+    font-size: var(--logo-size)
+    line-height: 0.95
+    letter-spacing: -0.32px
+    text-transform: lowercase
+    a:link, a:visited
+      text-decoration: none
+      color: var(--color-logo)
+      &::after
+        content: '.'

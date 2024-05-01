@@ -8,15 +8,11 @@ layout: default
 
 <article class="post">
 
-    <header>
-        <h1>{{ titlef }}</h1>
-        <div class="byline">
-            <p class="datestamp"><time datetime="{{ page.date | date: " %FT%T%:z" }}">{{ page.date | date_to_string }}</time></p>
-            <p class="author">{{ page.author | default: site.author.name }}</p>
-        </div>
-    </header>
+    <h1>{{ titlef }}</h1>
 
     {{ copy }}
+
+    <p class="datestamp"><time datetime="{{ page.date | date: " %FT%T%:z" }}">{{ page.date | date_to_long_string }}</time></p>
 
 </article>
 

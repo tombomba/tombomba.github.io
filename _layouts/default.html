@@ -34,15 +34,7 @@
 <body>
 
 <header role="banner">
-  <div class="wrap">
-    <div class="icon"><div class="shape"><a href="{{ site.url }}">{% include icon-crossbones-alt.svg %}<span></span></a></div></div>
-    {% if page.is_home or page.is_page %}
-    <div class="text">
-      <div class="logotype"><h1><a href="{{ site.url }}">{{ site.url | remove: 'https' | remove: 'http' | remove: 'www.' | remove: '://' | capitalize }}</a></h1><p>&ldquo;{{ site.description }}&rdquo;</p></div>
-      <p>Last updated {{ site.posts.first.date | date_to_long_string }}</p>
-    </div>
-    {% endif %}
-  </div>
+  <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
 </header>
 
 <main role="main">

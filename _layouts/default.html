@@ -34,7 +34,7 @@
 <body>
 
 <header role="banner">
-  <div class="icon"><a href="{{ site.url }}">{% include icon-bug.svg %}<span></span></a></div>
+  <div class="icon"><a href="{{ site.url }}">{% include icon-crossbones-alt.svg %}<span></span></a></div>
   <div class="hr"></div>
 </header>
 
@@ -44,15 +44,26 @@
 
 </main>
 
-{% if page.is_home or page.is_page %}
 <footer>
+  <div class="hr"></div>
   <ul>
-    <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
+    {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}
     {% unless page.is_archive %}<li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>{% endunless %}
     {% unless page.is_about %}<li><a href="{{ 'about' | absolute_url }}">About</a></li>{% endunless %}
+    <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
+
   </ul>
+
+  <div class="copydate">
+    {% if page.is_post %}
+      <p>This page published <time datetime="{{ page.date | date: " %FT%T%:z" }}">{{ page.date | date_to_long_string }}</time></p>
+    {% else %}
+      <p>Last updated {{ site.posts.first.date | date_to_long_string }}</p>
+    {% endif %}
+    <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author.name }}</p>
+  </div>
+
 </footer>
-{% endif %}
 
 </body>
 </html>

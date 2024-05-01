@@ -1,21 +1,21 @@
 article
-  margin: var(--buffer) auto 0 auto
+  margin: calc(var(--shim-2x) - 3px) auto 0 auto
   max-width: var(--page-width)
 
   h2, h3, h4, h5, h6
-    margin-top: var(--shim)
+    margin-top: var(--shim-n)
     font-size: 1em
 
   p
     margin-top: var(--shim-n)
 
   ul, ol
-    margin: 0 0 var(--shim) var(--shim)
+    margin: 0 0 var(--shim-n) var(--shim-n)
     li
       margin-top: 0
 
   blockquote
-    padding-left: var(--shim)
+    padding-left: var(--shim-n)
     border-left: medium solid var(--color-half)
 
   blockquote,
@@ -28,7 +28,7 @@ article
     width: auto
     height: auto
     max-width: 100%
-    max-height: 480px
+    max-height: 360px
     background-color: var(--color-back)
     border-radius: 4px
     &.first

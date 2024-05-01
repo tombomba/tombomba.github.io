@@ -1,14 +1,30 @@
 footer
-  order: 2
-  margin-top: var(--nudge)
+  margin: var(--shim-2x) auto var(--shim-p) auto
+  width: 100%
+  max-width: var(--page-width)
   ul
+    margin-top: calc(var(--shim) + 3px)
     display: flex
-    gap: var(--nudge)
+    gap: var(--nudge-2x)
     list-style-type: none
     color: var(--color-half)
-    &:not(:first-of-type)
-      margin-top: var(--nudge)
-    li
-      font-size: var(--body-size-sm)
-      a:link, a:visited
+  div.copydate
+    margin-top: var(--shim-n)
+    div.byline
+      display: flex
+      gap: var(--nudge)
+      h1
+        font-size: var(--body-size-sm)
         color: var(--color-half)
+        a:link, a:visited
+          text-decoration: none
+          color: var(--color-half)
+        &::after
+          content: ':'
+    p
+      margin: 0
+      font-size: var(--body-size-sm)
+      color: var(--color-half)
+  div.hr
+    margin: 0
+    max-width: var(--shim-4x)

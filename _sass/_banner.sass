@@ -3,11 +3,19 @@ header[role="banner"]
   width: 100%
   max-width: var(--page-width)
   div.icon
+    display: flex
+    align-items: center
+    justify-content: center
+    width: var(--shim-2x)
+    height: var(--shim-2x)
+    background-color: var(--color-logo)
+    border-radius: 50%
     svg
       width: auto
       height: var(--shim)
-      fill: var(--color-logo)
-      transform: translateZ(0)
-      filter: drop-shadow(-2px 2px 1px var(--color-shock))
+      fill: var(--color-shock)
+      //transform: translateZ(0)
+      //filter: drop-shadow(-2px 2px 2px var(--color-shock))
   div.hr
-    max-width: var(--shim-2x)
+    margin: var(--shim) 0 0
+    max-width: var(--shim-4x)

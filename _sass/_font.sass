@@ -2,15 +2,9 @@
 
   --fam-base: Georgia, serif
 
-  --shim: calc(var(--line-height-body) * 1em)
-  --shim-n: calc(((var(--line-height-body) - 1) / 2) + 1em)
-  --buffer: calc(var(--shim) * 2)
-  --nudge: calc(((var(--line-height-body) - 1) / 2) * 1em)
-
   --body-size: 1rem
-  --body-size-lg: 1.25rem
-  --body-size-sm: 0.9375rem
-  --logo-size: clamp(1.5rem, -0.0726rem + 6.9892vw, 3.125rem)
+  --body-size-lg: clamp(1.4375rem, 1.0062rem + 1.9169vw, 1.8125rem)
+  --body-size-sm: clamp(0.875rem, 0.7312rem + 0.639vw, 1rem)
 
   --line-height-body: 1.625
   --line-height-hed: 1.3125
@@ -24,7 +18,6 @@
   \:root
 
     --body-size: 1.0625rem
-    --body-size-lg: 1.375rem
 
     --line-height-body: 1.647058823529412
     --line-height-hed: 1.323529411764706
@@ -38,22 +31,8 @@
   \:root
 
     --body-size: 1.125rem
-    --body-size-lg: 1.4375rem
 
     --line-height-body: 1.83
     --line-height-hed: 1.415
 
     --page-width: 42.0625rem
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 40rem) // 19 @ 732
-
-  \:root
-
-    --body-size: 1.1875rem
-
-    --line-height-body: 1.8
-    --line-height-hed: 1.4
-
-    --page-width: 45.75rem

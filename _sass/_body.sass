@@ -20,7 +20,7 @@ body
   -webkit-text-size-adjust: 100%
   text-size-adjust: 100%
 
-  padding: 1em
+  padding: 0 1em
 
 a
   text-decoration: underline
@@ -37,16 +37,18 @@ a
 time
   white-space: nowrap
 
+.hr
+  margin: 0 auto
+  padding: 0
+  height: 0
+  border: 0
+  line-height: 1
+  border-top: 1px solid var(--color-hr-top)
+  border-bottom: 2px solid var(--color-hr-bottom)
+  background-color: var(--color-body)
+
 .daystamp
   font-style: italic
   color: var(--color-half)
   a:link, a:visited
     color: var(--color-half)
-
-
-//-----------------------------------------------------------------------------
-
-@media screen and (min-width: 30rem)
-
-  body
-    padding: var(--shim)

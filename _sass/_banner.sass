@@ -1,14 +1,13 @@
 header[role="banner"]
-  margin: 0 auto
+  margin: var(--shim) auto 0 auto
   width: 100%
   max-width: var(--page-width)
-  h1
-    font-size: var(--logo-size)
-    line-height: 0.95
-    letter-spacing: -0.32px
-    text-transform: lowercase
-    a:link, a:visited
-      text-decoration: none
-      color: var(--color-logo)
-      &::after
-        content: '.'
+  div.icon
+    svg
+      width: auto
+      height: var(--shim)
+      fill: var(--color-logo)
+      transform: translateZ(0)
+      filter: drop-shadow(-2px 2px 1px var(--color-shock))
+  div.hr
+    max-width: var(--shim-2x)

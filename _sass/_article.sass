@@ -52,6 +52,16 @@ article
   width: 100%
   max-width: var(--shim-4x)
 
+.byline
+  margin-top: var(--shim-n)
+  h1, p
+    display: inline
+    color: var(--color-half)
+  p
+    margin: 0
+    &:nth-child(2)::before
+      content: '\00A0\/\00A0'
+
 .figpad
     padding-top: var(--nudge)
     iframe[src*="https://www.youtube.com"],

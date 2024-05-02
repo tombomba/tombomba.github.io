@@ -8,9 +8,13 @@ layout: default
 
 <article class="post">
 
-    <h1>{{ titlef }}</h1>
+    <header>
+        <h1>{{ titlef }}</h1>
+        <div class="byline"><p>{{ page.author | default: site.author.name }}</p><p><time datetime="{{ page.date | date: " %FT%T%:z" }}">{{ page.date | date_to_long_string }}</time></p></div>
+    </header>
 
     {{ copy }}
+
 
 </article>
 

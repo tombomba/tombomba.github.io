@@ -7,19 +7,12 @@
 
 article.post
   h1
-    font-size: 1.4375rem
+    font-size: var(--body-size-lg)
     line-height: var(--line-height-hed)
-  div.byline
-    margin-top: var(--nudge)
-    h1, p
-      display: inline
-      font-size: var(--body-size-sm)
-      color: var(--color-half)
+  .byline
+    margin-top: calc(var(--nudge) / 2)
     p
-      margin: 0
-      &:nth-child(2)::before
-        content: '\00A0\/\00A0'
-
+      font-size: var(--body-size-sm)
 
 article.micro
   div.lede

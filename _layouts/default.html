@@ -45,7 +45,9 @@
 </main>
 
 <footer>
+
   <div class="hr"></div>
+
   <ul>
     {% unless page.is_home %}<li><a href="{{ site.url }}">Home</a></li>{% endunless %}
     {% unless page.is_archive %}<li><a href="{{ 'archive' | absolute_url }}">Archive</a></li>{% endunless %}
@@ -53,15 +55,6 @@
     <li><a href="{{ 'feed.xml' | absolute_url }}">RSS</a></li>
 
   </ul>
-
-  <div class="copydate">
-    {% if page.is_post %}
-      <p>This page published <time datetime="{{ page.date | date: " %FT%T%:z" }}">{{ page.date | date_to_long_string }}</time></p>
-    {% else %}
-      <p>Last updated {{ site.posts.first.date | date_to_long_string }}</p>
-    {% endif %}
-    <p>Copyright &copy; {{ site.posts.first.date | date: '%Y' }} {{ site.author.name }}</p>
-  </div>
 
 </footer>
 

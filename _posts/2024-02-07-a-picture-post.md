@@ -1,12 +1,14 @@
 ---
+layout: micro
 title: "Another picture post with a picture"
+excerpt: "Quisque maximus malesuada ex nec varius. Mauris ac placerat orci, nec pretium leo."
 ---
 
 Quisque maximus malesuada ex nec varius. Mauris ac placerat orci, nec pretium leo. Nam tristique mauris sit amet orci elementum dignissim. Aliquam ornare sit amet nisi a pulvinar. Proin leo urna, condimentum vitae.
 
-![alt text here]({{ 'example-4.jpg' | prepend: site.cdn.img }}){: height="500" }
-
 Nulla ac viverra nisi, sed imperdiet felis. Donec ullamcorper eu turpis id finibus. Donec pretium nisi eget enim viverra, quis malesuada nibh consectetur. Sed quis neque eleifend, malesuada orci et, aliquet magna. In tristique felis sed leo vehicula, ut aliquet est accumsan. Sed sed odio ac diam condimentum volutpat. Morbi congue, justo vitae efficitur imperdiet, purus elit elementum lectus, et condimentum purus lacus viverra neque.
+
+![alt text here]({{ 'example-4.jpg' | prepend: site.cdn.img }}){: height="360" }
 
 
 Aliquam enim dolor, posuere vitae ligula at, gravida tempus libero. Maecenas eleifend finibus nibh a suscipit. Mauris tristique odio sed velit consectetur, a imperdiet elit mattis. Nam mattis fringilla nulla. Nulla ultricies a ligula a posuere. Nunc luctus in tortor a sodales. Integer euismod scelerisque commodo. Praesent sollicitudin, nisl nec consectetur efficitur, risus mi rhoncus nibh, vel tristique augue leo in risus. Fusce iaculis nibh hendrerit nulla accumsan, eu dignissim leo vestibulum. Cras mollis erat non velit ornare pellentesque. Mauris sollicitudin sagittis scelerisque. Nullam viverra turpis in sem feugiat, eget ullamcorper risus varius.

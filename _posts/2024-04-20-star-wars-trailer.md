@@ -1,4 +1,6 @@
-# What is happening now
+---
+title: What is happening now
+---
 
 Foo bar barish what the fuck Suspendisse sit amet gravida leo, vitae porttitor elit. Quisque rhoncus velit quis dolor elementum, id venenatis enim semper. Integer tortor massa, ullamcorper ac semper et, luctus vitae nisi. Ut sit amet libero sed enim iaculis dictum. Donec fermentum feugiat feugiat.
 

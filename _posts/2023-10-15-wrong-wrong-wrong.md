@@ -1,4 +1,6 @@
-# This is my new page heading
+---
+title: This is my new page heading
+---
 
 Ut tempus turpis ac **justo ornare,** sed aliquam nisi condimentum. Vivamus nec est tortor. Aenean pharetra ligula quis risus vulputate consequat. Vivamus eget ligula non leo tempor pellentesque non in ipsum.
 

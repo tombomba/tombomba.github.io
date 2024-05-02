@@ -20,17 +20,15 @@ layout: default
   {% assign copy = copy | replace: 'https://www.youtube.com', 'https://www.youtube-nocookie.com' %}
 {% endif -%}
 
-{% if page.date %}
-  {% capture datef %}<span class="daystamp">&nbsp;&mdash;&nbsp;{{ site.author.nick }}, <time datetime="{{ page.date | date: " %FT%T%:z" }}" pubdate itemprop="datePublished">{{ page.date | date: '%d %b' }}</time></span>{% endcapture -%}
-  {% assign copysize = copy | size | minus: 4 -%}
-  {% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
-{% endif -%}
+{% capture datef %}<span class="daystamp">&nbsp;(<time datetime="{{ page.date | date: " %FT%T%:z" }}">{{ page.date | date: '%d %b' }}</time>)</span>{% endcapture -%}
+{% assign copysize = copy | size | minus: 4 -%}
+{% assign copy = copy | slice: 0, copysize | append: datef | append: '</p>' -%}
 
 {% capture hedbox %}<div class="lede"><h1>{{ titlef }}</h1><p>{% endcapture -%}
 {% assign copy = copy | replace_first: '</p>', '</p></div>' | replace_first: '<p>', hedbox -%}
 
 <article class="micro">
 
- {{ copy }}
+  {{ copy }}
 
 </article>

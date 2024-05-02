@@ -1,30 +1,27 @@
 footer
-  margin: var(--buffer) auto var(--shim-p) auto
+  margin: 0 auto var(--shim) auto
   width: 100%
   max-width: var(--page-width)
   ul
-    margin-top: calc(var(--buffer) - var(--nudge))
+    margin-top: var(--shim)
     display: flex
     gap: var(--nudge-2x)
     list-style-type: none
-    color: var(--color-half)
-  div.copydate
+  div.meta
     margin-top: var(--shim-n)
-    div.byline
-      display: flex
-      gap: var(--nudge)
-      h1
-        font-size: var(--body-size-sm)
-        color: var(--color-half)
-        a:link, a:visited
-          text-decoration: none
-          color: var(--color-half)
-        &::after
-          content: ':'
-    p
-      margin: 0
+    h1, p
       font-size: var(--body-size-sm)
       color: var(--color-half)
+    h1
+      a:link, a:visited
+        text-decoration: none
+      &::after
+        content: ':'
+    p
+      margin: 0
+    div.text
+      display: flex
+      gap: var(--nudge)
   div.hr
     margin: 0
     max-width: var(--shim-4x)

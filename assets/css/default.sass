@@ -10,6 +10,16 @@ article.post
     font-size: var(--body-size-lg)
     line-height: var(--line-height-hed)
 
+article.micro
+  div.lede
+    h1, p
+      display: inline
+      font-size: 1em
+    h1::after
+      content: '\20'
+    span.punc::after
+      content: '.'
+
 article.home
   ul.posts
     margin: 0

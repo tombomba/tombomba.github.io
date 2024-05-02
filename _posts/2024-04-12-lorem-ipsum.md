@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: micro
 title: "Lorem ipsum dolor sit amet, consec tetur adipiscing elit"
 ---
 

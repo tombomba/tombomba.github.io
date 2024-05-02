@@ -1,5 +1,5 @@
 ---
-layout: micro
+layout: post
 title: "Another picture post with a picture"
 excerpt: "Quisque maximus malesuada ex nec varius. Mauris ac placerat orci, nec pretium leo."
 ---

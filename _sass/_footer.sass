@@ -3,24 +3,15 @@ footer
   width: 100%
   max-width: var(--page-width)
   ul
-    margin: 0
-    padding: 1em 0
+    margin: var(--shim) 0 0 0
     display: flex
     gap: var(--nudge-2x)
     list-style-type: none
-  div.meta
+  div.byline
     margin-top: var(--shim)
-    h1, p
-      font-size: var(--body-size-sm)
-      color: var(--color-half)
-    h1, b
-      a:link, a:visited
-        color: var(--color-half)
-        text-decoration: none
-      &::after
-        content: ':'
-    p
+    P
       margin: 0
+      color: var(--color-half)
   div.hr
     margin: 0
     max-width: var(--shim-4x)

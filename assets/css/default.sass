@@ -14,6 +14,11 @@ article.post
     h1, p
       display: inline
       font-size: var(--body-size-sm)
+      color: var(--color-half)
+    p
+      margin: 0
+      &:nth-child(2)::before
+        content: '\00A0\/\00A0'
 
 
 article.micro

@@ -7,10 +7,8 @@
 
 article.post
   h1
-    font-size: 1.5em
+    font-size: var(--body-size-lg)
     line-height: var(--line-height-hed)
-  p.byline
-    font-style: italic
 
 article.home
   ul.posts
@@ -21,14 +19,10 @@ article.home
       &:first-of-type
         margin: 0
       h1, p
-        display: inline
         margin: 0
         font-size: 1em
         font-weight: 400
         color: var(--color-text)
-      h1::after
-        content: '\0020'
-
 
 article.archive
   section
@@ -59,6 +53,8 @@ article.error
   article.home
     ul.posts
       li
+        h1, p
+          display: inline
         h1::after
           content: '\00A0\2014\00A0'
           font-weight: 100

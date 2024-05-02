@@ -3,6 +3,7 @@ header[role="banner"]
   width: 100%
   max-width: var(--page-width)
   div.icon
+    position: relative
     display: flex
     align-items: center
     justify-content: center
@@ -16,6 +17,13 @@ header[role="banner"]
       fill: var(--color-shock)
       //transform: translateZ(0)
       //filter: drop-shadow(-2px 2px 2px var(--color-shock))
+    span
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      z-index: 1
   div.hr
     margin: var(--shim) 0 0
     max-width: var(--shim-4x)

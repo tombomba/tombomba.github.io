@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: micro
 title: "Omnes Gallia est divisia tres partes"
 linkwords: "the Belgae inhabit"
 ---
